@@ -18,6 +18,22 @@ set(lxqt-archiver_HDRS
 )
 
 set(CORE_SRCS
+    # actions.c
+    # dlg-add-files.c
+    # dlg-add-folder.c
+    # dlg-ask-password.c
+    # dlg-batch-add.c
+    # dlg-delete.c
+    # dlg-extract.c
+    # dlg-new.c
+    # dlg-open-with.c
+    # dlg-package-installer.c
+    # dlg-password.c
+    # dlg-prop.c
+    # dlg-update.c
+    # eggfileformatchooser.c
+    # eggtreemultidnd.c
+
     file-data.c
     file-utils.c
     fr-archive.c
