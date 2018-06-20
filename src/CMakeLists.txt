@@ -73,13 +73,6 @@ set(CORE_SRCS
     # preferences.c
     rar-utils.c
     # server.c
-
-    # copy-n-paste/eggdesktopfile.c
-    # copy-n-paste/eggdesktopfile.h
-    # copy-n-paste/eggsmclient.c
-    # copy-n-paste/eggsmclient.h
-    # copy-n-paste/eggsmclient-private.h
-    # copy-n-paste/eggsmclient-xsmp.c
 )
 
 set(lxqt-archiver_SRCS
