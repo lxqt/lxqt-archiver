@@ -20,301 +20,359 @@
  *  Foundation, Inc., 59 Temple Street #330, Boston, MA 02110-1301, USA.
  */
 
-#ifndef FR_WINDOW_H
-#define FR_WINDOW_H
+#ifndef H
+#define H
+
+#include <QMainWindow>
 
 #include <gio/gio.h>
-// #include <gtk/gtk.h>
+
 #include "typedefs.h"
 #include "fr-archive.h"
 
 
 enum {
-	COLUMN_FILE_DATA,
-	COLUMN_ICON,
-	COLUMN_NAME,
-	COLUMN_EMBLEM,
-	COLUMN_SIZE,
-	COLUMN_TYPE,
-	COLUMN_TIME,
-	COLUMN_PATH,
-	NUMBER_OF_COLUMNS
+    COLUMN_FILE_DATA,
+    COLUMN_ICON,
+    COLUMN_NAME,
+    COLUMN_EMBLEM,
+    COLUMN_SIZE,
+    COLUMN_TYPE,
+    COLUMN_TIME,
+    COLUMN_PATH,
+    NUMBER_OF_COLUMNS
 };
 
 enum {
-	TREE_COLUMN_PATH,
-	TREE_COLUMN_ICON,
-	TREE_COLUMN_NAME,
-	TREE_COLUMN_WEIGHT,
-	TREE_NUMBER_OF_COLUMNS
+    TREE_COLUMN_PATH,
+    TREE_COLUMN_ICON,
+    TREE_COLUMN_NAME,
+    TREE_COLUMN_WEIGHT,
+    TREE_NUMBER_OF_COLUMNS
 };
 
 typedef enum {
-	FR_BATCH_ACTION_NONE,
-	FR_BATCH_ACTION_LOAD,
-	FR_BATCH_ACTION_OPEN,
-	FR_BATCH_ACTION_ADD,
-	FR_BATCH_ACTION_EXTRACT,
-	FR_BATCH_ACTION_EXTRACT_HERE,
-	FR_BATCH_ACTION_EXTRACT_INTERACT,
-	FR_BATCH_ACTION_RENAME,
-	FR_BATCH_ACTION_PASTE,
-	FR_BATCH_ACTION_OPEN_FILES,
-	FR_BATCH_ACTION_SAVE_AS,
-	FR_BATCH_ACTION_TEST,
-	FR_BATCH_ACTION_CLOSE,
-	FR_BATCH_ACTION_QUIT,
-	FR_BATCH_ACTIONS
+    FR_BATCH_ACTION_NONE,
+    FR_BATCH_ACTION_LOAD,
+    FR_BATCH_ACTION_OPEN,
+    FR_BATCH_ACTION_ADD,
+    FR_BATCH_ACTION_EXTRACT,
+    FR_BATCH_ACTION_EXTRACT_HERE,
+    FR_BATCH_ACTION_EXTRACT_INTERACT,
+    FR_BATCH_ACTION_RENAME,
+    FR_BATCH_ACTION_PASTE,
+    FR_BATCH_ACTION_OPEN_FILES,
+    FR_BATCH_ACTION_SAVE_AS,
+    FR_BATCH_ACTION_TEST,
+    FR_BATCH_ACTION_CLOSE,
+    FR_BATCH_ACTION_QUIT,
+    FR_BATCH_ACTIONS
 } FrBatchActionType;
 
 /* -- FrWindow -- */
 
-#define FR_TYPE_WINDOW              (fr_window_get_type ())
-#define FR_WINDOW(obj)              (G_TYPE_CHECK_INSTANCE_CAST ((obj), FR_TYPE_WINDOW, FrWindow))
-#define FR_WINDOW_CLASS(klass)      (G_TYPE_CHECK_CLASS_CAST ((klass), FR_WINDOW_TYPE, FrWindowClass))
-#define FR_IS_WINDOW(obj)           (G_TYPE_CHECK_INSTANCE_TYPE ((obj), FR_TYPE_WINDOW))
-#define FR_IS_WINDOW_CLASS(klass)   (G_TYPE_CHECK_CLASS_TYPE ((klass), FR_TYPE_WINDOW))
-#define FR_WINDOW_GET_CLASS(obj)    (G_TYPE_INSTANCE_GET_CLASS((obj), FR_TYPE_WINDOW, FrWindowClass))
+struct FrWindowPrivateData;
+struct FrClipboardData;
+struct OverwriteData;
+struct ExtractData;
 
-typedef struct _FrWindow            FrWindow;
-typedef struct _FrWindowClass       FrWindowClass;
-typedef struct _FrWindowPrivateData FrWindowPrivateData;
+class FrWindow: public QMainWindow {
+    Q_OBJECT
+public:
+    FrArchive* archive;
+    FrWindowPrivateData* priv;
 
-struct _FrWindow
-{
-	GtkApplicationWindow __parent;
-	FrArchive *archive;
-	FrWindowPrivateData *priv;
+    FrWindow();
+    virtual ~FrWindow();
+
+Q_SIGNALS:
+    void archive_loaded(gboolean    success);
+    void progress(double      fraction, const char* msg);
+    void ready(GError*     error);
+
+
+public:
+    void        close();
+
+    /* archive operations */
+
+    gboolean    archive_new(
+        const char*    uri);
+    FrWindow*   archive_open(const char*    uri, QWidget*     parent);
+    void        archive_close();
+    const char* get_archive_uri();
+    const char* get_paste_archive_uri();
+    gboolean    archive_is_present();
+    void        archive_save_as(
+        const char*    filename,
+        const char*    password,
+        gboolean       encrypt_header,
+        guint          volume_size);
+    void        archive_reload();
+    void        archive_add_files(
+        GList*         file_list, /* GFile list */
+        gboolean       update);
+    void        archive_add_with_wildcard(
+        const char*    include_files,
+        const char*    exclude_files,
+        const char*    exclude_folders,
+        const char*    base_dir,
+        const char*    dest_dir,
+        gboolean       update,
+        gboolean       follow_links);
+    void        archive_add_directory(
+        const char*    directory,
+        const char*    base_dir,
+        const char*    dest_dir,
+        gboolean       update);
+    void        archive_add_items(
+        GList*         dir_list,
+        const char*    base_dir,
+        const char*    dest_dir,
+        gboolean       update);
+    void        archive_add_dropped_items(
+        GList*         item_list,
+        gboolean       update);
+    void        archive_remove(
+        GList*         file_list);
+    void        archive_extract(
+        GList*         file_list,
+        const char*    extract_to_dir,
+        const char*    base_dir,
+        gboolean       skip_older,
+        FrOverwrite    overwrite,
+        gboolean       junk_paths,
+        gboolean       ask_to_open_destination);
+    void        archive_extract_here(
+        gboolean       skip_older,
+        gboolean       overwrite,
+        gboolean       junk_paths);
+    void        archive_test();
+
+    /**/
+
+    void        set_password(
+        const char*    password);
+    void        set_password_for_paste(
+        const char*    password);
+    const char* get_password();
+    void        set_encrypt_header(
+        gboolean       encrypt_header);
+    gboolean    get_encrypt_header();
+    void        set_compression(
+        FrCompression  compression);
+    FrCompression get_compression();
+    void        set_volume_size(
+        guint          volume_size);
+    guint       get_volume_size();
+
+    /**/
+
+    void       go_to_location(
+        const char*     path,
+        gboolean        force_update);
+    const char* get_current_location();
+    void       go_up_one_level();
+    void       go_back();
+    void       go_forward();
+    void       current_folder_activated(
+        gboolean        from_sidebar);
+    void       set_list_mode(
+        FrWindowListMode  list_mode);
+
+    /**/
+
+    void       update_list_order();
+    GList*     get_file_list_selection(
+        gboolean     recursive,
+        gboolean*    has_dirs);
+    GList*     get_file_list_from_path_list(
+        GList*       path_list,
+        gboolean*    has_dirs);
+    GList*     get_file_list_pattern(
+        const char*  pattern);
+    int        get_n_selected_files();
+    GList*     get_folder_tree_selection(
+        gboolean     recursive,
+        gboolean*    has_dirs);
+    GList*     get_selection(
+        gboolean     from_sidebar,
+        char**       return_base_dir);
+
+    /*
+    GtkTreeModel* get_list_store();
+    */
+
+    void       find();
+    void       select_all();
+    void       unselect_all();
+
+    /*
+    void       set_sort_type(GtkSortType  sort_type);
+    */
+
+
+    void       rename_selection(
+        gboolean     from_sidebar);
+    void       cut_selection(
+        gboolean     from_sidebar);
+    void       copy_selection(
+        gboolean     from_sidebar);
+    void       paste_selection(
+        gboolean     from_sidebar);
+
+    /**/
+
+    void       stop();
+    void       start_activity_mode();
+    void       stop_activity_mode();
+
+    /**/
+
+    void        view_last_output(
+        const char* title);
+
+    void        open_files(
+        GList*      file_list,
+        gboolean    ask_application);
+    void        open_files_with_command(
+        GList*      file_list,
+        char*       command);
+    void        open_files_with_application(
+        GList*      file_list,
+        GAppInfo*   app);
+    gboolean    update_files(
+        GList*      file_list);
+    void        update_columns_visibility();
+    void        update_history_list();
+    void        set_default_dir(
+        const char* default_dir,
+        gboolean    freeze);
+    void        set_open_default_dir(
+        const char* default_dir);
+    const char* get_open_default_dir();
+    void        set_add_default_dir(
+        const char* default_dir);
+    const char* get_add_default_dir();
+    void        set_extract_default_dir(
+        const char* default_dir,
+        gboolean    freeze);
+    const char* get_extract_default_dir();
+    void        push_message(
+        const char* msg);
+    void        pop_message();
+    void        set_toolbar_visibility(
+        gboolean    value);
+    void        set_statusbar_visibility(
+        gboolean    value);
+    void        set_folders_visibility(
+        gboolean    value);
+    void        use_progress_dialog(
+        gboolean    value);
+
+    /* batch mode procedures. */
+
+    void       new_batch(
+        const char*    title);
+    void       set_current_batch_action(
+        FrBatchActionType  action,
+        void*          data,
+        GFreeFunc      free_func);
+    void       reset_current_batch_action();
+    void       restart_current_batch_action();
+    void       append_batch_action(
+        FrBatchActionType  action,
+        void*          data,
+        GFreeFunc      free_func);
+    void       start_batch();
+    void       stop_batch();
+    void       resume_batch();
+    gboolean   is_batch_mode();
+    void       set_batch__extract(
+        const char*    filename,
+        const char*    dest_dir);
+    void       set_batch__extract_here(
+        const char*    filename);
+    void       set_batch__add(
+        const char*    archive,
+        GList*         file_list);
+    void       destroy_with_error_dialog();
+
+
+    /*
+    gboolean   file_list_drag_data_get(
+        GdkDragContext*   context,
+        GtkSelectionData* selection_data,
+        GList*            path_list);
+    */
+
+    void       update_dialog_closed();
+
+private:
+    void free_batch_data();
+    void clipboard_remove_file_list(GList* file_list);
+    void history_clear();
+    void free_open_files();
+    void convert_data_free(gboolean all);
+    void free_private_data();
+    void history_add(const char* path);
+    void history_pop();
+    GPtrArray* get_current_dir_list();
+    guint64 get_dir_size(const char* current_dir, const char* name);
+    gboolean file_data_respects_filter(FileData* fdata);
+    gboolean compute_file_list_name(FileData* fdata, const char* current_dir, int current_dir_len, GHashTable* names_hash, gboolean* different_name);
+    void compute_list_names(GPtrArray* files);
+    gboolean dir_exists_in_archive(const char* dir_name);
+    void convert__action_performed(FrArchive* archive, FrAction action, FrProcError* error, gpointer data);
+    void action_performed(FrArchive* archive, FrAction action, FrProcError* error, gpointer data);
+    GList* get_dir_list_from_path(char* path);
+    GList* get_file_list();
+    FileData* get_selected_item_from_file_list();
+    char* get_selected_folder_in_tree_view();
+    FrClipboardData* get_clipboard_data_from_selection_data(const char* data);
+    gboolean handle_errors(FrArchive *archive, FrAction action, FrProcError *error);
+    void close_progress_dialog(gboolean close_now);
+    void update_dir_tree();
+    void update_filter_bar_visibility();
+    void update_file_list(gboolean update_view);
+    void update_title();
+    void update_sensitivity();
+    void action_started(FrArchive *archive, FrAction action, gpointer data);
+    void progress_dialog_update_action_description();
+    gboolean working_archive_cb(FrCommand *command, const char *archive_filename, FrWindow *window);
+    gboolean message_cb(FrCommand *command, const char *msg, FrWindow *window);
+    void create_the_progress_dialog();
+    gboolean display_progress_dialog(gpointer data);
+    void open_progress_dialog(gboolean open_now);
+    gboolean progress_cb(FrArchive *archive, double fraction);
+    void open_progress_dialog_with_open_destination();
+    void open_progress_dialog_with_open_archive();
+    void add_to_recent_list(char *uri);
+    void remove_from_recent_list(char *filename);
+    GList *get_selection_as_fd();
+    void update_statusbar_list_info();
+    void populate_file_list(GPtrArray *files);
+    void update_current_location();
+    void exec_next_batch_action();
+    void exec_current_batch_action();
+    GList *get_dir_list_from_file_data(FileData *fdata);
+    char *get_selection_data_from_clipboard_data(FrClipboardData *data);
+    void deactivate_filter();
+    void pref_history_len_changed(GSettings *settings, const char *key, gpointer user_data);
+    void pref_view_toolbar_changed(GSettings *settings, const char *key, gpointer user_data);
+    gboolean fake_load(FrArchive *archive, gpointer data);
+    void activate_filter();
+    void construct();
+    void set_archive_uri(const char *uri);
+    gboolean archive_is_encrypted(GList *file_list);
+    void archive_extract_here(gboolean skip_older, FrOverwrite overwrite, gboolean junk_paths);
+    void archive_extract_from_edata(ExtractData *edata);
+    void ask_overwrite_dialog(OverwriteData *odata);
+    int activity_cb(gpointer data);
+    // FIXME: void copy_or_cut_selection(FRClipboardOp op, gboolean from_sidebar);
+    gboolean name_is_present(const char *current_dir, const char *new_name, char **reason);
+    void add_pasted_files(FrClipboardData *data);
+    void copy_from_archive_action_performed_cb(FrArchive *archive, FrAction action, FrProcError *error, gpointer data);
 };
 
-struct _FrWindowClass
-{
-	GtkApplicationWindowClass __parent_class;
-
-	/*<signals>*/
-
-	void (*archive_loaded) (FrWindow   *window,
-				gboolean    success);
-	void (*progress)       (FrWindow   *window,
-			        double      fraction,
-			        const char *msg);
-	void (*ready)          (FrWindow   *window,
-				GError     *error);
-};
-
-GType       fr_window_get_type                  (void);
-GtkWidget * fr_window_new                       (void);
-void        fr_window_close                     (FrWindow      *window);
-
-/* archive operations */
-
-gboolean    fr_window_archive_new               (FrWindow      *window,
-						 const char    *uri);
-FrWindow *  fr_window_archive_open              (FrWindow      *window,
-						 const char    *uri,
-						 GtkWindow     *parent);
-void        fr_window_archive_close             (FrWindow      *window);
-const char *fr_window_get_archive_uri           (FrWindow      *window);
-const char *fr_window_get_paste_archive_uri     (FrWindow      *window);
-gboolean    fr_window_archive_is_present        (FrWindow      *window);
-void        fr_window_archive_save_as           (FrWindow      *window,
-						 const char    *filename,
-						 const char    *password,
-						 gboolean       encrypt_header,
-						 guint          volume_size);
-void        fr_window_archive_reload            (FrWindow      *window);
-void        fr_window_archive_add_files         (FrWindow      *window,
-						 GList         *file_list, /* GFile list */
-						 gboolean       update);
-void        fr_window_archive_add_with_wildcard (FrWindow      *window,
-						 const char    *include_files,
-						 const char    *exclude_files,
-						 const char    *exclude_folders,
-						 const char    *base_dir,
-						 const char    *dest_dir,
-						 gboolean       update,
-						 gboolean       follow_links);
-void        fr_window_archive_add_directory     (FrWindow      *window,
-						 const char    *directory,
-						 const char    *base_dir,
-						 const char    *dest_dir,
-						 gboolean       update);
-void        fr_window_archive_add_items         (FrWindow      *window,
-						 GList         *dir_list,
-						 const char    *base_dir,
-						 const char    *dest_dir,
-						 gboolean       update);
-void        fr_window_archive_add_dropped_items (FrWindow      *window,
-						 GList         *item_list,
-						 gboolean       update);
-void        fr_window_archive_remove            (FrWindow      *window,
-						 GList         *file_list);
-void        fr_window_archive_extract           (FrWindow      *window,
-						 GList         *file_list,
-						 const char    *extract_to_dir,
-						 const char    *base_dir,
-						 gboolean       skip_older,
-						 FrOverwrite    overwrite,
-						 gboolean       junk_paths,
-						 gboolean       ask_to_open_destination);
-void        fr_window_archive_extract_here      (FrWindow      *window,
-						 gboolean       skip_older,
-						 gboolean       overwrite,
-						 gboolean       junk_paths);
-void        fr_window_archive_test	        (FrWindow      *window);
-
-/**/
-
-void        fr_window_set_password              (FrWindow      *window,
-						 const char    *password);
-void        fr_window_set_password_for_paste    (FrWindow      *window,
-					         const char    *password);
-const char *fr_window_get_password              (FrWindow      *window);
-void        fr_window_set_encrypt_header        (FrWindow      *window,
-						 gboolean       encrypt_header);
-gboolean    fr_window_get_encrypt_header        (FrWindow      *window);
-void        fr_window_set_compression 	        (FrWindow      *window,
-						 FrCompression  compression);
-FrCompression fr_window_get_compression 	(FrWindow      *window);
-void        fr_window_set_volume_size 	        (FrWindow      *window,
-						 guint          volume_size);
-guint       fr_window_get_volume_size 	        (FrWindow      *window);
-
-/**/
-
-void       fr_window_go_to_location             (FrWindow       *window,
-					 	 const char     *path,
-					 	 gboolean        force_update);
-const char*fr_window_get_current_location       (FrWindow       *window);
-void       fr_window_go_up_one_level            (FrWindow       *window);
-void       fr_window_go_back                    (FrWindow       *window);
-void       fr_window_go_forward                 (FrWindow       *window);
-void       fr_window_current_folder_activated   (FrWindow       *window,
-						 gboolean        from_sidebar);
-void       fr_window_set_list_mode              (FrWindow       *window,
-						 FrWindowListMode  list_mode);
-
-/**/
-
-void       fr_window_update_list_order            (FrWindow    *window);
-GList *    fr_window_get_file_list_selection      (FrWindow    *window,
-						   gboolean     recursive,
-						   gboolean    *has_dirs);
-GList *    fr_window_get_file_list_from_path_list (FrWindow    *window,
-						   GList       *path_list,
-						   gboolean    *has_dirs);
-GList *    fr_window_get_file_list_pattern        (FrWindow    *window,
-						   const char  *pattern);
-int        fr_window_get_n_selected_files         (FrWindow    *window);
-GList *    fr_window_get_folder_tree_selection    (FrWindow    *window,
-				     		   gboolean     recursive,
-				     		   gboolean    *has_dirs);
-GList *    fr_window_get_selection                (FrWindow    *window,
-		  	 			   gboolean     from_sidebar,
-		  	 			   char       **return_base_dir);
-GtkTreeModel *
-	   fr_window_get_list_store               (FrWindow    *window);
-void       fr_window_find                         (FrWindow    *window);
-void       fr_window_select_all                   (FrWindow    *window);
-void       fr_window_unselect_all                 (FrWindow    *window);
-void       fr_window_set_sort_type                (FrWindow    *window,
-						   GtkSortType  sort_type);
-
-/**/
-
-void       fr_window_rename_selection             (FrWindow    *window,
-						   gboolean     from_sidebar);
-void       fr_window_cut_selection                (FrWindow    *window,
-						   gboolean     from_sidebar);
-void       fr_window_copy_selection               (FrWindow    *window,
-						   gboolean     from_sidebar);
-void       fr_window_paste_selection              (FrWindow    *window,
-						   gboolean     from_sidebar);
-
-/**/
-
-void       fr_window_stop                         (FrWindow    *window);
-void       fr_window_start_activity_mode          (FrWindow    *window);
-void       fr_window_stop_activity_mode           (FrWindow    *window);
-
-/**/
-
-void        fr_window_view_last_output            (FrWindow   *window,
-						   const char *title);
-
-void        fr_window_open_files                  (FrWindow   *window,
-						   GList      *file_list,
-						   gboolean    ask_application);
-void        fr_window_open_files_with_command     (FrWindow   *window,
-						   GList      *file_list,
-						   char       *command);
-void        fr_window_open_files_with_application (FrWindow   *window,
-						   GList      *file_list,
-						   GAppInfo   *app);
-gboolean    fr_window_update_files                (FrWindow   *window,
-						   GList      *file_list);
-void        fr_window_update_columns_visibility   (FrWindow   *window);
-void        fr_window_update_history_list         (FrWindow   *window);
-void        fr_window_set_default_dir             (FrWindow   *window,
-						   const char *default_dir,
-						   gboolean    freeze);
-void        fr_window_set_open_default_dir        (FrWindow   *window,
-						   const char *default_dir);
-const char *fr_window_get_open_default_dir        (FrWindow   *window);
-void        fr_window_set_add_default_dir         (FrWindow   *window,
-						   const char *default_dir);
-const char *fr_window_get_add_default_dir         (FrWindow   *window);
-void        fr_window_set_extract_default_dir     (FrWindow   *window,
-						   const char *default_dir,
-						   gboolean    freeze);
-const char *fr_window_get_extract_default_dir     (FrWindow   *window);
-void        fr_window_push_message                (FrWindow   *window,
-						   const char *msg);
-void        fr_window_pop_message                 (FrWindow   *window);
-void        fr_window_set_toolbar_visibility      (FrWindow   *window,
-						   gboolean    value);
-void        fr_window_set_statusbar_visibility    (FrWindow   *window,
-						   gboolean    value);
-void        fr_window_set_folders_visibility      (FrWindow   *window,
-						   gboolean    value);
-void        fr_window_use_progress_dialog         (FrWindow   *window,
-						   gboolean    value);
-
-/* batch mode procedures. */
-
-void       fr_window_new_batch                    (FrWindow      *window,
-						   const char    *title);
-void       fr_window_set_current_batch_action     (FrWindow      *window,
-						   FrBatchActionType  action,
-						   void          *data,
-						   GFreeFunc      free_func);
-void       fr_window_reset_current_batch_action   (FrWindow      *window);
-void       fr_window_restart_current_batch_action (FrWindow      *window);
-void       fr_window_append_batch_action          (FrWindow      *window,
-						   FrBatchActionType  action,
-						   void          *data,
-						   GFreeFunc      free_func);
-void       fr_window_start_batch                  (FrWindow      *window);
-void       fr_window_stop_batch                   (FrWindow      *window);
-void       fr_window_resume_batch                 (FrWindow      *window);
-gboolean   fr_window_is_batch_mode                (FrWindow      *window);
-void       fr_window_set_batch__extract           (FrWindow      *window,
-						   const char    *filename,
-						   const char    *dest_dir);
-void       fr_window_set_batch__extract_here      (FrWindow      *window,
-						   const char    *filename);
-void       fr_window_set_batch__add               (FrWindow      *window,
-						   const char    *archive,
-						   GList         *file_list);
-void       fr_window_destroy_with_error_dialog    (FrWindow      *window);
-
-/**/
-
-gboolean   fr_window_file_list_drag_data_get (FrWindow         *window,
-					      GdkDragContext   *context,
-					      GtkSelectionData *selection_data,
-					      GList            *path_list);
-
-void       fr_window_update_dialog_closed    (FrWindow *window);
-
-#endif /* FR_WINDOW_H */
+#endif /* H */

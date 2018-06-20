@@ -77,8 +77,8 @@ set(CORE_SRCS
 
 set(lxqt-archiver_SRCS
     main.cpp
-    # fr-window.cpp
     ${CORE_SRCS}
+    fr-window.cpp
 )
 
 set(lxqt-archiver_UI
