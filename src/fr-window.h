@@ -29,7 +29,7 @@
 
 #include "typedefs.h"
 #include "fr-archive.h"
-
+#include "open-file.h"
 
 enum {
     COLUMN_FILE_DATA,
@@ -71,10 +71,19 @@ typedef enum {
 
 /* -- FrWindow -- */
 
+typedef enum {
+    FR_CLIPBOARD_OP_CUT,
+    FR_CLIPBOARD_OP_COPY
+} FRClipboardOp;
+
+
 struct FrWindowPrivateData;
 struct FrClipboardData;
 struct OverwriteData;
 struct ExtractData;
+struct OpenFilesData;
+struct FRBatchAction;
+
 
 class FrWindow: public QMainWindow {
     Q_OBJECT
@@ -330,49 +339,58 @@ private:
     FileData* get_selected_item_from_file_list();
     char* get_selected_folder_in_tree_view();
     FrClipboardData* get_clipboard_data_from_selection_data(const char* data);
-    gboolean handle_errors(FrArchive *archive, FrAction action, FrProcError *error);
+    gboolean handle_errors(FrArchive* archive, FrAction action, FrProcError* error);
     void close_progress_dialog(gboolean close_now);
     void update_dir_tree();
     void update_filter_bar_visibility();
     void update_file_list(gboolean update_view);
     void update_title();
     void update_sensitivity();
-    void action_started(FrArchive *archive, FrAction action, gpointer data);
+    void action_started(FrArchive* archive, FrAction action, gpointer data);
     void progress_dialog_update_action_description();
-    gboolean working_archive_cb(FrCommand *command, const char *archive_filename, FrWindow *window);
-    gboolean message_cb(FrCommand *command, const char *msg, FrWindow *window);
+    gboolean working_archive_cb(FrCommand* command, const char* archive_filename, FrWindow* window);
+    gboolean message_cb(FrCommand* command, const char* msg, FrWindow* window);
     void create_the_progress_dialog();
     gboolean display_progress_dialog(gpointer data);
     void open_progress_dialog(gboolean open_now);
-    gboolean progress_cb(FrArchive *archive, double fraction);
+    gboolean progress_cb(FrArchive* archive, double fraction);
     void open_progress_dialog_with_open_destination();
     void open_progress_dialog_with_open_archive();
-    void add_to_recent_list(char *uri);
-    void remove_from_recent_list(char *filename);
-    GList *get_selection_as_fd();
+    void add_to_recent_list(char* uri);
+    void remove_from_recent_list(char* filename);
+    GList* get_selection_as_fd();
     void update_statusbar_list_info();
-    void populate_file_list(GPtrArray *files);
+    void populate_file_list(GPtrArray* files);
     void update_current_location();
     void exec_next_batch_action();
     void exec_current_batch_action();
-    GList *get_dir_list_from_file_data(FileData *fdata);
-    char *get_selection_data_from_clipboard_data(FrClipboardData *data);
+    GList* get_dir_list_from_file_data(FileData* fdata);
+    char* get_selection_data_from_clipboard_data(FrClipboardData* data);
     void deactivate_filter();
-    void pref_history_len_changed(GSettings *settings, const char *key, gpointer user_data);
-    void pref_view_toolbar_changed(GSettings *settings, const char *key, gpointer user_data);
-    gboolean fake_load(FrArchive *archive, gpointer data);
+    void pref_history_len_changed(GSettings* settings, const char* key, gpointer user_data);
+    void pref_view_toolbar_changed(GSettings* settings, const char* key, gpointer user_data);
+    gboolean fake_load(FrArchive* archive, gpointer data);
     void activate_filter();
     void construct();
-    void set_archive_uri(const char *uri);
-    gboolean archive_is_encrypted(GList *file_list);
+    void set_archive_uri(const char* uri);
+    gboolean archive_is_encrypted(GList* file_list);
     void archive_extract_here(gboolean skip_older, FrOverwrite overwrite, gboolean junk_paths);
-    void archive_extract_from_edata(ExtractData *edata);
-    void ask_overwrite_dialog(OverwriteData *odata);
+    void archive_extract_from_edata(ExtractData* edata);
+    void ask_overwrite_dialog(OverwriteData* odata);
     int activity_cb(gpointer data);
     // FIXME: void copy_or_cut_selection(FRClipboardOp op, gboolean from_sidebar);
-    gboolean name_is_present(const char *current_dir, const char *new_name, char **reason);
-    void add_pasted_files(FrClipboardData *data);
-    void copy_from_archive_action_performed_cb(FrArchive *archive, FrAction action, FrProcError *error, gpointer data);
+    gboolean name_is_present(const char* current_dir, const char* new_name, char** reason);
+    void add_pasted_files(FrClipboardData* data);
+    void copy_from_archive_action_performed_cb(FrArchive* archive, FrAction action, FrProcError* error, gpointer data);
+    void copy_or_cut_selection(FRClipboardOp op, gboolean from_sidebar);
+    void paste_from_clipboard_data(FrClipboardData* data);
+    void paste_selection_to(const char* current_dir);
+    void open_file_modified_cb(GFileMonitor* monitor, GFile* monitor_file, GFile* other_file, GFileMonitorEvent event_type, gpointer user_data);
+    void monitor_open_file(OpenFile* file);
+    void monitor_extracted_files(OpenFilesData* odata);
+    gboolean open_extracted_files(OpenFilesData* odata);
+    void open_files__extract_done_cb(FrArchive* archive, FrAction action, FrProcError* error, gpointer callback_data);
+    void exec_batch_action(FRBatchAction* action);
 };
 
 #endif /* H */

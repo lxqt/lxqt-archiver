@@ -28,7 +28,7 @@
 #include <gio/gio.h>
 #include <time.h>
 
-typedef struct {
+typedef struct _OpenFile {
 	char         *path;
 	char         *extracted_uri;
 	char         *temp_dir;

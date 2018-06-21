@@ -25,6 +25,7 @@
 
 #include <glib/gi18n.h>
 #include <gio/gio.h>
+#include <QMessageBox>
 
 /*
 #include "actions.h"
@@ -117,11 +118,11 @@ static GtkTargetEntry folder_tree_targets[] = {
 
 #endif
 
-typedef struct {
+struct FRBatchAction {
     FrBatchActionType type;
     void*             data;
     GFreeFunc         free_func;
-} FRBatchAction;
+};
 
 
 typedef struct {
@@ -135,13 +136,9 @@ typedef struct {
 } FRConvertData;
 
 
-typedef enum {
-    FR_CLIPBOARD_OP_CUT,
-    FR_CLIPBOARD_OP_COPY
-} FRClipboardOp;
 
 
-struct ExtractData{
+struct ExtractData {
     GList*       file_list;
     char*        extract_to_dir;
     char*        base_dir;
@@ -1983,7 +1980,7 @@ void FrWindow::update_title() {
         char* title;
         char* name;
 
-        name = g_uri_display_basename(get_archive_uri ());
+        name = g_uri_display_basename(get_archive_uri());
         title = g_strdup_printf("%s %s",
                                 name,
                                 archive->read_only ? _("[read only]") : "");
@@ -2406,8 +2403,8 @@ void FrWindow::progress_dialog_update_action_description() {
 }
 
 gboolean FrWindow::working_archive_cb(FrCommand*  command,
-                             const char* archive_filename,
-                             FrWindow*   window) {
+                                      const char* archive_filename,
+                                      FrWindow*   window) {
     g_free(priv->working_archive);
     priv->working_archive = NULL;
     if(archive_filename != NULL) {
@@ -2420,8 +2417,8 @@ gboolean FrWindow::working_archive_cb(FrCommand*  command,
 
 
 gboolean FrWindow::message_cb(FrCommand*  command,
-                     const char* msg,
-                     FrWindow*   window) {
+                              const char* msg,
+                              FrWindow*   window) {
 #if 0
     if(priv->pd_last_message != msg) {
         g_free(priv->pd_last_message);
@@ -2677,7 +2674,7 @@ void FrWindow::open_progress_dialog(gboolean  open_now) {
 }
 
 gboolean FrWindow::progress_cb(FrArchive* archive,
-                      double     fraction) {
+                               double     fraction) {
 
 #if 0
     priv->progress_pulse = (fraction < 0.0);
@@ -2802,8 +2799,8 @@ void FrWindow::pop_message() {
 }
 
 void FrWindow::action_started(FrArchive* archive,
-               FrAction   action,
-               gpointer   data) {
+                              FrAction   action,
+                              gpointer   data) {
     char*     message;
 
     priv->action = action;
@@ -5053,8 +5050,8 @@ FrWindow::show_cb(GtkWidget* widget,
 
 
 void FrWindow::pref_history_len_changed(GSettings* settings,
-                         const char* key,
-                         gpointer user_data) {
+                                        const char* key,
+                                        gpointer user_data) {
     int        limit;
 #if 0
     GtkAction* action;
@@ -5071,16 +5068,16 @@ void FrWindow::pref_history_len_changed(GSettings* settings,
 
 #if 0
 void FrWindow::pref_view_toolbar_changed(GSettings* settings,
-                          const char* key,
-                          gpointer user_data) {
+        const char* key,
+        gpointer user_data) {
     set_toolbar_visibility(g_settings_get_boolean(settings, key));
 }
 
 
 void
 FrWindow::pref_view_statusbar_changed(GSettings* settings,
-                            const char* key,
-                            gpointer user_data) {
+                                      const char* key,
+                                      gpointer user_data) {
     set_statusbar_visibility(g_settings_get_boolean(settings, key));
 }
 
@@ -6646,7 +6643,10 @@ void FrWindow::archive_extract_here(
                              (GFreeFunc) extract_data_free);
 
     if(archive_is_encrypted(NULL) && (priv->password == NULL)) {
-        dlg_ask_password();
+#if 0
+        // FIXME:
+        // dlg_ask_password();
+#endif
         return;
     }
 
@@ -6666,7 +6666,7 @@ void FrWindow::archive_extract_here(
 /* -- FrWindow::archive_extract -- */
 
 
-struct OverwriteData{
+struct OverwriteData {
     FrWindow*    window;
     ExtractData* edata;
     GList*       current_file;
@@ -6977,8 +6977,7 @@ FrWindow::archive_extract(
 
 void
 FrWindow::archive_test() {
-    set_current_batch_action(,
-                             FR_BATCH_ACTION_TEST,
+    set_current_batch_action(FR_BATCH_ACTION_TEST,
                              NULL,
                              NULL);
     fr_archive_test(archive, priv->password);
@@ -7003,8 +7002,6 @@ FrWindow::set_password(
 void
 FrWindow::set_password_for_paste(
     const char* password) {
-
-
     if(priv->password_for_paste != NULL) {
         g_free(priv->password_for_paste);
         priv->password_for_paste = NULL;
@@ -7017,8 +7014,6 @@ FrWindow::set_password_for_paste(
 
 const char*
 FrWindow::get_password() {
-
-
     return priv->password;
 }
 
@@ -7026,8 +7021,6 @@ FrWindow::get_password() {
 void
 FrWindow::set_encrypt_header(
     gboolean  encrypt_header) {
-
-
     priv->encrypt_header = encrypt_header;
 }
 
@@ -7118,7 +7111,7 @@ FrWindow::get_current_location() {
 void
 FrWindow::go_up_one_level() {
     char* parent_dir;
-    parent_dir = get_parent_dir());
+    parent_dir = get_parent_dir(get_current_location());
     go_to_location(parent_dir, FALSE);
     g_free(parent_dir);
 }
@@ -7139,7 +7132,7 @@ FrWindow::go_back() {
     }
     priv->history_current = priv->history_current->next;
 
-    go_to_location(priv->history_current->data, FALSE);
+    go_to_location((char*)priv->history_current->data, FALSE);
 }
 
 
@@ -7158,7 +7151,7 @@ FrWindow::go_forward() {
     }
     priv->history_current = priv->history_current->prev;
 
-    go_to_location(priv->history_current->data, FALSE);
+    go_to_location((char*)priv->history_current->data, FALSE);
 }
 
 
@@ -7303,13 +7296,14 @@ FrWindow::stop_activity_mode() {
 #endif
 }
 
-
+#if 0
 static gboolean
 last_output_window__unrealize_cb(GtkWidget*  widget,
                                  gpointer    data) {
     pref_util_save_window_geometry(GTK_WINDOW(widget), LAST_OUTPUT_DIALOG_NAME);
     return FALSE;
 }
+#endif
 
 
 void
@@ -8022,9 +8016,9 @@ void FrWindow::add_pasted_files(
 
 
 void FrWindow::copy_from_archive_action_performed_cb(FrArchive*   archive,
-                                      FrAction     action,
-                                      FrProcError* error,
-                                      gpointer     data) {
+        FrAction     action,
+        FrProcError* error,
+        gpointer     data) {
     gboolean  UNUSED_VARIABLE continue_batch = FALSE;
 
 #ifdef DEBUG
@@ -8036,8 +8030,10 @@ void FrWindow::copy_from_archive_action_performed_cb(FrArchive*   archive,
     close_progress_dialog(FALSE);
 
     if(error->type == FR_PROC_ERROR_ASK_PASSWORD) {
+#if 0
         // FIXME
         dlg_ask_password_for_paste_operation();
+#endif
         return;
     }
 
@@ -8160,15 +8156,16 @@ void FrWindow::paste_from_clipboard_data(
     fr_archive_load_local(priv->copy_from_archive,
                           data->archive_filename,
                           data->archive_password);
-    timeout: # 5s
-}
+timeout:
+# 5s
 #endif
+}
 
 
 void
 FrWindow::paste_selection_to(
     const char* current_dir) {
-
+#if 0
     GtkClipboard*     clipboard;
     GtkSelectionData* selection_data;
     FrClipboardData*  paste_data;
@@ -8184,6 +8181,7 @@ FrWindow::paste_selection_to(
     paste_from_clipboard_data(paste_data);
 
     gtk_selection_data_free(selection_data);
+#endif
 }
 
 
@@ -8198,7 +8196,7 @@ FrWindow::paste_selection(
     }
 
     /**/
-
+#if 0
     utf8_old_path = g_filename_to_utf8(), -1, NULL, NULL, NULL);
     utf8_path = _gtk_request_dialog_run(GTK_WINDOW(),
                                         (GTK_DIALOG_DESTROY_WITH_PARENT
@@ -8210,6 +8208,7 @@ FrWindow::paste_selection(
                                         "gtk-cancel",
                                         "gtk-paste");
     g_free(utf8_old_path);
+
     if(utf8_path == NULL) {
     return;
 }
@@ -8228,6 +8227,7 @@ if(destination[0] != '/') {
     paste_selection_to(current_dir);
 
     g_free(current_dir);
+#endif
 }
 
 
@@ -8243,10 +8243,8 @@ FrWindow::open_files_with_command(
 
     app = g_app_info_create_from_commandline(command, NULL, G_APP_INFO_CREATE_NONE, &error);
     if(error != NULL) {
-        _gtk_error_dialog_run(GTK_WINDOW(),
-                              _("Could not perform the operation"),
-                              "%s",
-                              error->message);
+        QMessageBox::critical(this, tr("Error"),
+                              tr("Could not perform the operation") + QString::fromUtf8(error->message));
         g_clear_error(&error);
         return;
     }
@@ -8259,6 +8257,7 @@ void
 FrWindow::open_files_with_application(
     GList*    file_list,
     GAppInfo* app) {
+#if 0
     GList*               uris;
     GList*               scan;
     GdkAppLaunchContext* context;
@@ -8289,15 +8288,16 @@ FrWindow::open_files_with_application(
 
     g_object_unref(context);
     path_list_free(uris);
+#endif
 }
 
 
-typedef struct {
+struct OpenFilesData {
     FrWindow*    window;
     GList*       file_list;
     gboolean     ask_application;
     CommandData* cdata;
-} OpenFilesData;
+};
 
 
 static OpenFilesData*
@@ -8308,7 +8308,7 @@ open_files_data_new(
 {
     OpenFilesData* odata;
     GList*         scan;
-
+#if 0
     odata = g_new0(OpenFilesData, 1);
     odata->window = window;
     odata->file_list = path_list_dup(file_list);
@@ -8329,7 +8329,7 @@ open_files_data_new(
 
     /* Add to CommandList so the cdata is released on exit. */
     CommandList = g_list_prepend(CommandList, odata->cdata);
-
+#endif
     return odata;
 }
 
@@ -8365,7 +8365,7 @@ FrWindow::update_files(
     fr_process_clear(archive->process);
 
     for(scan = file_list; scan; scan = scan->next) {
-        OpenFile* file = scan->data;
+        OpenFile* file = (OpenFile*)scan->data;
         GList*    local_file_list;
 
         local_file_list = g_list_append(NULL, file->path);
@@ -8388,12 +8388,13 @@ FrWindow::update_files(
 }
 
 
-static void
-open_file_modified_cb(GFileMonitor*     monitor,
-                      GFile*            monitor_file,
-                      GFile*            other_file,
-                      GFileMonitorEvent event_type,
-                      gpointer          user_data) {
+void
+FrWindow::open_file_modified_cb(GFileMonitor*     monitor,
+                                GFile*            monitor_file,
+                                GFile*            other_file,
+                                GFileMonitorEvent event_type,
+                                gpointer          user_data) {
+#if 0
     FrWindow* window = user_data;
     char*     monitor_uri;
     OpenFile* file;
@@ -8421,27 +8422,29 @@ open_file_modified_cb(GFileMonitor*     monitor,
         priv->update_dialog = dlg_update();
     }
     dlg_update_add_file(priv->update_dialog, file);
+#endif
 }
 
 
-static void
+void
 FrWindow::monitor_open_file(
     OpenFile* file) {
     GFile* f;
-
+#if 0
     priv->open_files = g_list_prepend(priv->open_files, file);
     f = g_file_new_for_uri(file->extracted_uri);
-    file->monitor = g_file_monitor_file(f, 0, NULL, NULL);
+    file->monitor = g_file_monitor_file(f, G_FILE_MONITOR_NONE, NULL, NULL);
     g_signal_connect(file->monitor,
                      "changed",
                      G_CALLBACK(open_file_modified_cb),
                      window);
     g_object_unref(f);
+#endif
 }
 
 
-static void
-monitor_extracted_files(OpenFilesData* odata) {
+void
+FrWindow::monitor_extracted_files(OpenFilesData* odata) {
     FrWindow* window = odata->window;
     GList*    scan1, *scan2;
 
@@ -8449,8 +8452,8 @@ monitor_extracted_files(OpenFilesData* odata) {
             scan1 && scan2;
             scan1 = scan1->next, scan2 = scan2->next) {
         OpenFile*   ofile;
-        const char* file = scan1->data;
-        const char* extracted_path = scan2->data;
+        const char* file = (const char*)scan1->data;
+        const char* extracted_path = (const char*)scan2->data;
 
         ofile = open_file_new(file, extracted_path, odata->cdata->temp_dir);
         if(ofile != NULL) {
@@ -8460,15 +8463,16 @@ monitor_extracted_files(OpenFilesData* odata) {
 }
 
 
-static gboolean
+gboolean
 FrWindow::open_extracted_files(OpenFilesData* odata) {
+    gboolean             result;
+#if 0
     GList*               file_list = odata->cdata->file_list;
     const char*          first_file;
     const char*          first_mime_type;
     GAppInfo*            app;
     GList*               files_to_open = NULL;
     GdkAppLaunchContext* context;
-    gboolean             result;
     GError*              error = NULL;
 
     g_return_val_if_fail(file_list != NULL, FALSE);
@@ -8539,17 +8543,17 @@ FrWindow::open_extracted_files(OpenFilesData* odata) {
     g_object_unref(context);
     g_object_unref(app);
     path_list_free(files_to_open);
-
+#endif
     return result;
 }
 
 
-static void
+void
 FrWindow::open_files__extract_done_cb(FrArchive*   archive,
                                       FrAction     action,
                                       FrProcError* error,
                                       gpointer     callback_data) {
-    OpenFilesData* odata = callback_data;
+    OpenFilesData* odata = (OpenFilesData*)callback_data;
 
     g_signal_handlers_disconnect_matched(G_OBJECT(archive),
                                          G_SIGNAL_MATCH_DATA,
@@ -8569,7 +8573,7 @@ FrWindow::open_files(
     GList*    file_list,
     gboolean  ask_application) {
     OpenFilesData* odata;
-
+#if 0
     if(priv->activity_ref > 0) {
         return;
     }
@@ -8582,7 +8586,7 @@ FrWindow::open_files(
 
     g_signal_connect(G_OBJECT(archive),
                      "done",
-                     G_CALLBACK(FrWindow::open_files__extract_done_cb),
+                     G_CALLBACK(open_files__extract_done_cb),
                      odata);
 
     fr_process_clear(archive->process);
@@ -8595,6 +8599,7 @@ FrWindow::open_files(
                                 FALSE,
                                 priv->password);
     fr_process_start(archive->process);
+#endif
 }
 
 
@@ -8710,6 +8715,7 @@ FrWindow::set_default_dir(
 
 void
 FrWindow::update_columns_visibility() {
+#if 0
     GtkTreeView*       tree_view = GTK_TREE_VIEW(priv->list_view);
     GtkTreeViewColumn* column;
 
@@ -8724,13 +8730,14 @@ FrWindow::update_columns_visibility() {
 
     column = gtk_tree_view_get_column(tree_view, 4);
     gtk_tree_view_column_set_visible(column, g_settings_get_boolean(priv->settings_listing, PREF_LISTING_SHOW_PATH));
+#endif
 }
 
 
 void
 FrWindow::set_toolbar_visibility(
     gboolean  visible) {
-
+#if 0
 
     if(visible) {
         gtk_widget_show(priv->toolbar);
@@ -8738,8 +8745,8 @@ FrWindow::set_toolbar_visibility(
     else {
         gtk_widget_hide(priv->toolbar);
     }
-
     set_active("ViewToolbar", visible);
+#endif
 }
 
 
@@ -8747,7 +8754,7 @@ void
 FrWindow::set_statusbar_visibility(
     gboolean  visible) {
 
-
+#if 0
     if(visible) {
         gtk_widget_show(priv->statusbar);
     }
@@ -8756,18 +8763,20 @@ FrWindow::set_statusbar_visibility(
     }
 
     set_active("ViewStatusbar", visible);
+#endif
 }
 
 
 void
 FrWindow::set_folders_visibility(
     gboolean    value) {
-
+#if 0
 
     priv->view_folders = value;
     update_dir_tree();
 
     set_active("ViewFolders", priv->view_folders);
+#endif
 }
 
 
@@ -8780,14 +8789,14 @@ FrWindow::use_progress_dialog(
 
 /* -- batch mode procedures -- */
 
-static void
+void
 FrWindow::exec_batch_action(
     FRBatchAction* action) {
     ExtractData*   edata;
     RenameData*    rdata;
     OpenFilesData* odata;
     SaveAsData*    sdata;
-
+#if 0
     switch(action->type) {
     case FR_BATCH_ACTION_LOAD:
         debug(DEBUG_INFO, "[BATCH] LOAD\n");
@@ -8924,6 +8933,7 @@ FrWindow::exec_batch_action(
     default:
         break;
     }
+#endif
 }
 
 
@@ -9015,11 +9025,11 @@ FrWindow::start_batch() {
     if(priv->batch_action_list == NULL) {
         return;
     }
-
+#if 0
     if(priv->progress_dialog != NULL)
         gtk_window_set_title(GTK_WINDOW(priv->progress_dialog),
                              priv->batch_title);
-
+#endif
     priv->batch_mode = TRUE;
     priv->batch_action = priv->batch_action_list;
     archive->can_create_compressed_file = priv->batch_adding_one_file;
@@ -9039,7 +9049,9 @@ FrWindow::stop_batch() {
 
     if(priv->batch_mode) {
         if(! priv->showing_error_dialog) {
+#if 0
             gtk_widget_destroy(GTK_WIDGET());
+#endif
             return;
         }
     }
@@ -9080,16 +9092,13 @@ FrWindow::set_batch__extract_here(
 
     g_return_if_fail(filename != NULL);
 
-    append_batch_action(,
-                        FR_BATCH_ACTION_LOAD,
+    append_batch_action(FR_BATCH_ACTION_LOAD,
                         g_strdup(filename),
                         (GFreeFunc) g_free);
-    append_batch_action(,
-                        FR_BATCH_ACTION_EXTRACT_HERE,
+    append_batch_action(FR_BATCH_ACTION_EXTRACT_HERE,
                         extract_to_data_new(NULL),
                         (GFreeFunc) extract_data_free);
-    append_batch_action(,
-                        FR_BATCH_ACTION_CLOSE,
+    append_batch_action(FR_BATCH_ACTION_CLOSE,
                         NULL,
                         NULL);
 }
@@ -9102,22 +9111,18 @@ FrWindow::set_batch__extract(
 
     g_return_if_fail(filename != NULL);
 
-    append_batch_action(,
-                        FR_BATCH_ACTION_LOAD,
+    append_batch_action(FR_BATCH_ACTION_LOAD,
                         g_strdup(filename),
                         (GFreeFunc) g_free);
     if(dest_dir != NULL)
-        append_batch_action(,
-                            FR_BATCH_ACTION_EXTRACT,
+        append_batch_action(FR_BATCH_ACTION_EXTRACT,
                             extract_to_data_new(dest_dir),
                             (GFreeFunc) extract_data_free);
     else
-        append_batch_action(,
-                            FR_BATCH_ACTION_EXTRACT_INTERACT,
+        append_batch_action(FR_BATCH_ACTION_EXTRACT_INTERACT,
                             NULL,
                             NULL);
-    append_batch_action(,
-                        FR_BATCH_ACTION_CLOSE,
+    append_batch_action(FR_BATCH_ACTION_CLOSE,
                         NULL,
                         NULL);
 }
@@ -9127,24 +9132,20 @@ void
 FrWindow::set_batch__add(
     const char* archive,
     GList*      file_list) {
-    priv->batch_adding_one_file = (file_list->next == NULL) && (uri_is_file(file_list->data));
+    priv->batch_adding_one_file = (file_list->next == NULL) && (uri_is_file((char*)file_list->data));
 
     if(archive != NULL)
-        append_batch_action(,
-                            FR_BATCH_ACTION_LOAD,
+        append_batch_action(FR_BATCH_ACTION_LOAD,
                             g_strdup(archive),
                             (GFreeFunc) g_free);
     else
-        append_batch_action(,
-                            FR_BATCH_ACTION_OPEN,
+        append_batch_action(FR_BATCH_ACTION_OPEN,
                             file_list,
                             NULL);
-    append_batch_action(,
-                        FR_BATCH_ACTION_ADD,
+    append_batch_action(FR_BATCH_ACTION_ADD,
                         file_list,
                         NULL);
-    append_batch_action(,
-                        FR_BATCH_ACTION_CLOSE,
+    append_batch_action(FR_BATCH_ACTION_CLOSE,
                         NULL,
                         NULL);
 }

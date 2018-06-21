@@ -5,13 +5,13 @@ endif()
 include_directories(
     # copy-n-paste
     ${GLIB_INCLUDE_DIRS}
-    -DSHDIR=""
 )
 
 add_definitions(
     # FIXME: how to set these dirs
     -DSHDIR=\"?\"
     -DPRIVEXECDIR=\"?\"
+    -DQT_NO_KEYWORDS
 )
 
 set(lxqt-archiver_HDRS
