@@ -1,16 +1,20 @@
 #ifndef ARCHIVE_H
 #define ARCHIVE_H
 
-#include <QObject>
-#include <QUrl>
-#include <vector>
-#include <string>
-
-#include <libfm-qt/core/filepath.h>
-
 #include "core/fr-archive.h"
 #include "archivererror.h"
 
+#include <libfm-qt/core/filepath.h>
+
+#include <QObject>
+#include <QUrl>
+
+#include <vector>
+#include <unordered_map>
+#include <memory>
+
+
+class ArchiverItem;
 
 class Archiver : public QObject {
     Q_OBJECT
@@ -32,7 +36,7 @@ public:
 
     bool isLoaded() const;
 
-    bool isActionInProgress() const;
+    bool isBusy() const;
 
     void stopCurrentAction();
 
@@ -44,9 +48,17 @@ public:
 
     ArchiverError lastError() const;
 
-    unsigned int fileCount() const;
+    std::vector<const ArchiverItem *> flatFileList() const;
 
-    const FileData* file(unsigned int index) const;
+    const ArchiverItem* dirTreeRoot() const;
+
+    const ArchiverItem* dirByPath(const char* path) const;
+
+    const ArchiverItem* itemByPath(const char* fullPath) const;
+
+    bool isDir(const FileData* file) const;
+
+    const FileData* fileDataByOriginalPath(const char* fullPath);
 
     void addFiles(GList* relativeFileNames, const char* srcDirUri, const char* destDirPath,
                   bool onlyIfNewer, const char* password, bool encrypt_header, FrCompression compression, unsigned int volume_size);
@@ -85,6 +97,8 @@ public:
 
 Q_SIGNALS:
 
+    void invalidateContent();  // after receiving this signal, all old FileData* pointers are invalidated
+
     void start(FrAction action);
 
     void finish(FrAction action, ArchiverError error);
@@ -101,7 +115,11 @@ public Q_SLOTS:
 
 private:
 
+    static std::string stripTrailingSlash(std::string dirPath);
+
     static void freeStrsGList(GList* strs);
+
+    void rebuildDirTree();
 
 private:
     // GObject signal callbacks
@@ -118,7 +136,11 @@ private:
     static void onWorkingArchive(FrCommand* comm, const char* filename, Archiver* _this);
 
 private:
-    FrArchive* impl_;
+    FrArchive* frArchive_;
+    std::unordered_map<std::string, ArchiverItem*> dirMap_;
+    std::vector<std::unique_ptr<ArchiverItem>> items_;
+    ArchiverItem* rootItem_;
+    bool busy_;
 };
 
 Q_DECLARE_METATYPE(FrAction)

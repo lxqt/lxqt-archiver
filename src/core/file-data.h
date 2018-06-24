@@ -27,6 +27,8 @@
 #include <glib-object.h>
 #include <time.h>
 
+G_BEGIN_DECLS
+
 typedef struct {
 	char       *original_path;    /* path read from command line. */
 	char       *full_path;        /* "/" + original_path. */
@@ -68,5 +70,7 @@ int  file_data_compare_by_path                (gconstpointer  a,
 				               gconstpointer  b);
 int  find_path_in_file_data_array             (GPtrArray     *array,
 				               const char    *path);
+
+G_END_DECLS
 
 #endif /* FILE_DATA_H */
