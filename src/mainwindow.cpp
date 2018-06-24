@@ -17,7 +17,7 @@
 #include <libfm-qt/core/iconinfo.h>
 #include <libfm-qt/utilities.h>
 
-#include "archive.h"
+#include "archiver.h"
 
 
 MainWindow::MainWindow(QWidget* parent):
