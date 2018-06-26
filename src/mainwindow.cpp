@@ -541,7 +541,8 @@ std::vector<const FileData*> MainWindow::selectedFiles() {
 
 const ArchiverItem *MainWindow::itemFromIndex(const QModelIndex &index) {
     if(index.isValid()) {
-        auto firstCol = index.siblingAtColumn(0);
+        // get first column of the current row
+        auto firstCol = index.sibling(index.row(), 0);
         return firstCol.data(ArchiverItemRole).value<const ArchiverItem*>();
     }
     return nullptr;
