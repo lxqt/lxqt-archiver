@@ -118,20 +118,30 @@ void MainWindow::setFileName(const QString &fileName) {
 }
 
 void MainWindow::on_actionCreateNew_triggered(bool checked) {
-    QFileDialog dlg;
-    QUrl url = QFileDialog::getSaveFileUrl(this);
-    if(!url.isEmpty()) {
-        archiver_->createNewArchive(url);
+    QFileDialog dlg{this};
+    // dlg.setMimeTypeFilters(Archiver::supportedCreateMimeTypes());
+    dlg.setNameFilters(Archiver::supportedCreateNameFilters() << tr("All files (*)"));
+    dlg.setAcceptMode(QFileDialog::AcceptSave);
+    if(dlg.exec() == QDialog::Accepted) {
+        auto url = dlg.selectedUrls()[0];
+        if(!url.isEmpty()) {
+            archiver_->createNewArchive(url);
+        }
     }
 }
 
 void MainWindow::on_actionOpen_triggered(bool checked) {
     qDebug("open");
     QFileDialog dlg;
-    QUrl url = QFileDialog::getOpenFileUrl(this);
-    if(!url.isEmpty()) {
-        auto uri = url.toString().toUtf8();
-        archiver_->openArchive(uri.constData(), nullptr);
+    dlg.setNameFilters(Archiver::supportedOpenNameFilters() << tr("All files (*)"));
+    qDebug() << Archiver::supportedOpenMimeTypes();
+    dlg.setAcceptMode(QFileDialog::AcceptOpen);
+    if(dlg.exec() == QDialog::Accepted) {
+        auto url = dlg.selectedUrls()[0];
+        if(!url.isEmpty()) {
+            auto uri = url.toString().toUtf8();
+            archiver_->openArchive(uri.constData(), nullptr);
+        }
     }
 }
 

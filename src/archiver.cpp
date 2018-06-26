@@ -4,6 +4,7 @@
 extern "C" {
 #include "core/fr-command.h"
 #include "core/file-utils.h"
+#include "core/fr-init.h"
 }
 
 #include <glib.h>
@@ -188,6 +189,76 @@ const char* Archiver::lastExtractionDestination() const {
 
 void Archiver::testArchiveIntegrity(const char* password) {
     fr_archive_test(frArchive_, password);
+}
+
+QStringList Archiver::supportedCreateMimeTypes() {
+    QStringList types;
+    for(auto p = create_type; *p != -1; ++p) {
+        types << mime_type_desc[*p].mime_type;
+    }
+    return types;
+}
+
+QStringList Archiver::supportedCreateNameFilters() {
+    QStringList types;
+    for(auto p = create_type; *p != -1; ++p) {
+        const auto name = mime_type_desc[*p].name;
+        if(name) {
+            types << name;
+        }
+        else {
+            types << tr("%1 files").arg(mime_type_desc[*p].default_ext);
+        }
+        // types << mime_type_desc[*p].mime_type;
+    }
+    return types;
+}
+
+QStringList Archiver::supportedOpenMimeTypes() {
+    QStringList types;
+    for(auto p = open_type; *p != -1; ++p) {
+        types << mime_type_desc[*p].mime_type;
+    }
+    return types;
+
+}
+
+QStringList Archiver::supportedOpenNameFilters() {
+    QStringList types;
+    for(auto p = open_type; *p != -1; ++p) {
+        const auto name = mime_type_desc[*p].name;
+        if(name) {
+            types << name;
+        }
+        else {
+            types << tr("%1 files").arg(mime_type_desc[*p].default_ext);
+        }
+        // types << mime_type_desc[*p].mime_type;
+    }
+    return types;
+}
+
+QStringList Archiver::supportedSaveMimeTypes() {
+    QStringList types;
+    for(auto p = save_type; *p != -1; ++p) {
+        types << mime_type_desc[*p].mime_type;
+    }
+    return types;
+}
+
+QStringList Archiver::supportedSaveNameFilters() {
+    QStringList types;
+    for(auto p = save_type; *p != -1; ++p) {
+        const auto name = mime_type_desc[*p].name;
+        if(name) {
+            types << name;
+        }
+        else {
+            types << tr("%1 files").arg(mime_type_desc[*p].default_ext);
+        }
+        // types << mime_type_desc[*p].mime_type;
+    }
+    return types;
 }
 
 std::string Archiver::stripTrailingSlash(std::string dirPath) {

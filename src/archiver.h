@@ -101,6 +101,18 @@ public:
 
     void testArchiveIntegrity(const char* password);
 
+    static QStringList supportedCreateMimeTypes();
+
+    static QStringList supportedCreateNameFilters();
+
+    static QStringList supportedOpenMimeTypes();
+
+    static QStringList supportedOpenNameFilters();
+
+    static QStringList supportedSaveMimeTypes();
+
+    static QStringList supportedSaveNameFilters();
+
 Q_SIGNALS:
 
     void invalidateContent();  // after receiving this signal, all old FileData* pointers are invalidated
