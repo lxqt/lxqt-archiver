@@ -8,6 +8,7 @@
 #include <QFileDialog>
 #include <QUrl>
 #include <QStandardItemModel>
+#include <QSortFilterProxyModel>
 #include <QIcon>
 #include <QCursor>
 #include <QHeaderView>
@@ -69,10 +70,17 @@ MainWindow::MainWindow(QWidget* parent):
     popupMenu_->addAction(ui_->actionExtract);
     popupMenu_->addAction(ui_->actionDelete);
 
-    ui_->fileListView->setContextMenuPolicy(Qt::CustomContextMenu);
-
-    connect(ui_->fileListView, &QAbstractItemView::customContextMenuRequested, this, &MainWindow::onFileListContextMenu);
+    // proxy model used to filter and sort the items
+    proxyModel_ = new QSortFilterProxyModel{this};
+    proxyModel_->setSortLocaleAware(true);
+    proxyModel_->setSortCaseSensitivity(Qt::CaseInsensitive);
+    ui_->fileListView->setModel(proxyModel_);
+    connect(ui_->fileListView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &MainWindow::onFileListSelectionChanged);
     connect(ui_->fileListView, &QAbstractItemView::activated, this, &MainWindow::onFileListActivated);
+
+    // show context menu
+    ui_->fileListView->setContextMenuPolicy(Qt::CustomContextMenu);
+    connect(ui_->fileListView, &QAbstractItemView::customContextMenuRequested, this, &MainWindow::onFileListContextMenu);
 
     connect(archiver_.get(), &Archiver::invalidateContent, this, &MainWindow::onInvalidateContent);
     connect(archiver_.get(), &Archiver::start, this, &MainWindow::onActionStarted);
@@ -259,8 +267,8 @@ void MainWindow::onFileListActivated(const QModelIndex &index) {
 
 void MainWindow::onInvalidateContent() {
     // clear all models and make sure we don't cache any FileData pointers
-    auto oldModel = ui_->fileListView->model();
-    ui_->fileListView->setModel(nullptr);
+    auto oldModel = proxyModel_->sourceModel();
+    proxyModel_->setSourceModel(nullptr);
     if(oldModel) {
         delete oldModel;
     }
@@ -386,9 +394,47 @@ void MainWindow::onStoppableChanged(bool stoppable) {
     ui_->actionStop->setEnabled(stoppable);
 }
 
+QList<QStandardItem *> MainWindow::createFileListRow(const ArchiverItem *file) {
+    QIcon icon;
+    QString desc;
+    // get mime type, icon, and description
+    auto typeName = file->contentType();
+    auto mimeType = Fm::MimeType::fromName(typeName);
+    if(mimeType) {
+        auto iconInfo = mimeType->icon();
+        desc = QString::fromUtf8(mimeType->desc());
+        if(iconInfo) {
+            icon = iconInfo->qicon();
+        }
+    }
+
+    // mtime
+    auto mtime = QDateTime::fromMSecsSinceEpoch(file->modifiedTime() * 1000);
+
+    // FIXME: filename might not be UTF-8
+    QString name = viewMode_ == ViewMode::FlatList ? file->fullPath() : file->name();
+    auto nameItem = new QStandardItem{icon, name};
+    nameItem->setData(QVariant::fromValue(file), ArchiverItemRole); // store the item pointer on the first column
+    nameItem->setEditable(false);
+
+    auto descItem = new QStandardItem{desc};
+    descItem->setEditable(false);
+
+    auto sizeItem = new QStandardItem{Fm::formatFileSize(file->size())};
+    sizeItem->setEditable(false);
+
+    auto mtimeItem = new QStandardItem{mtime.toString(Qt::SystemLocaleShortDate)};
+    mtimeItem->setEditable(false);
+
+    auto encryptedItem = new QStandardItem{file->isEncrypted() ? QStringLiteral("*") : QString{}};
+    encryptedItem->setEditable(false);
+
+    return QList<QStandardItem*>() << nameItem << descItem << sizeItem << mtimeItem << encryptedItem;
+}
+
 // show all files including files in subdirs in a flat list
 void MainWindow::showFileList(const std::vector<const ArchiverItem *> &files) {
-    auto oldModel = ui_->fileListView->model();
+    auto oldModel = proxyModel_->sourceModel();
 
     QStandardItemModel* model = new QStandardItemModel{this};
     model->setHorizontalHeaderLabels(QStringList()
@@ -399,52 +445,32 @@ void MainWindow::showFileList(const std::vector<const ArchiverItem *> &files) {
                                      << tr("*")
     );
 
-    for(const auto& file: files) {
-        QIcon icon;
-        QString desc;
-        // get mime type, icon, and description
-        auto typeName = file->contentType();
-        auto mimeType = Fm::MimeType::fromName(typeName);
-        if(mimeType) {
-            auto iconInfo = mimeType->icon();
-            desc = QString::fromUtf8(mimeType->desc());
-            if(iconInfo) {
-                icon = iconInfo->qicon();
+    if(viewMode_ == ViewMode::DirTree) {
+        // add ".." for the parent dir if it's not roots
+        if(currentDirItem_) {
+            auto parent = archiver_->parentDir(currentDirItem_);
+            if(parent) {
+                qDebug("parent: %s", parent ? parent->fullPath() : "null");
+                auto parentRow = createFileListRow(parent);
+                parentRow[0]->setText("..");
+                model->appendRow(parentRow);
             }
         }
-
-        // mtime
-        auto mtime = QDateTime::fromMSecsSinceEpoch(file->modifiedTime() * 1000);
-
-        // FIXME: filename might not be UTF-8
-        QString name = viewMode_ == ViewMode::FlatList ? file->fullPath() : file->name();
-        auto nameItem = new QStandardItem{icon, name};
-        nameItem->setData(QVariant::fromValue(file), ArchiverItemRole); // store the item pointer on the first column
-        nameItem->setEditable(false);
-
-        auto descItem = new QStandardItem{desc};
-        descItem->setEditable(false);
-
-        auto sizeItem = new QStandardItem{Fm::formatFileSize(file->size())};
-        sizeItem->setEditable(false);
-
-        auto mtimeItem = new QStandardItem{mtime.toString(Qt::SystemLocaleShortDate)};
-        mtimeItem->setEditable(false);
-
-        auto encryptedItem = new QStandardItem{file->isEncrypted() ? QStringLiteral("*") : QString{}};
-        encryptedItem->setEditable(false);
-
-        model->appendRow(QList<QStandardItem*>()
-                         << nameItem << descItem << sizeItem << mtimeItem << encryptedItem);
     }
 
-    ui_->fileListView->setModel(model);
+    for(const auto& file: files) {
+        model->appendRow(createFileListRow(file));
+    }
 
     if(oldModel) {
+        // Workaround for Qt 5.11 QSortFilterProxyModel bug: https://bugreports.qt.io/browse/QTBUG-68581
+#if QT_VERSION == QT_VERSION_CHECK(5, 11, 0)
+        oldModel->disconnect(this);
+#endif
         delete oldModel;
     }
 
-    connect(ui_->fileListView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &MainWindow::onFileListSelectionChanged);
+    proxyModel_->setSourceModel(model);
 
     ui_->statusBar->showMessage(tr("%1 files").arg(files.size()));
     // ui_->fileListView->header()->setSectionResizeMode(0, QHeaderView::Stretch);

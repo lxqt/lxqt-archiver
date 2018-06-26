@@ -58,6 +58,8 @@ public:
 
     const ArchiverItem* dirByPath(const char* path) const;
 
+    const ArchiverItem* parentDir(const ArchiverItem* file) const;
+
     const ArchiverItem* itemByPath(const char* fullPath) const;
 
     bool isDir(const FileData* file) const;

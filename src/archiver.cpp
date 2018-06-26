@@ -367,6 +367,14 @@ const ArchiverItem *Archiver::dirByPath(const char *path) const {
     return it != dirMap_.end() ? it->second : nullptr;
 }
 
+const ArchiverItem *Archiver::parentDir(const ArchiverItem *file) const {
+    if(file && strcmp(file->fullPath(), "/")) {
+        auto parentPath = Fm::CStrPtr{g_path_get_dirname(stripTrailingSlash(file->fullPath()).c_str())};
+        return dirByPath(parentPath.get());
+    }
+    return nullptr;
+}
+
 bool Archiver::isDir(const FileData *file) const {
     return file_data_is_dir(const_cast<FileData*>(file));
 }

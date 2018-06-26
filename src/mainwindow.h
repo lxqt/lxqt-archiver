@@ -20,6 +20,7 @@ class QStandardItem;
 class QItemSelection;
 class QLineEdit;
 class QMenu;
+class QSortFilterProxyModel;
 
 
 class MainWindow : public QMainWindow {
@@ -107,6 +108,8 @@ private Q_SLOTS:
 private:
     void setFileName(const QString& fileName);
 
+    QList<QStandardItem*> createFileListRow(const ArchiverItem* file);
+
     void showFileList(const std::vector<const ArchiverItem *>& files);
 
     void showFlatFileList();
@@ -131,9 +134,9 @@ private:
     std::unique_ptr<Ui::MainWindow> ui_;
     std::shared_ptr<Archiver> archiver_;
     QProgressBar* progressBar_;
-    QComboBox* encodingComboBox_;
     QLineEdit* currentPathEdit_;
     QMenu* popupMenu_;
+    QSortFilterProxyModel* proxyModel_;
 
     std::string currentDirPath_;
     ViewMode viewMode_;
