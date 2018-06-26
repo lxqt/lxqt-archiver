@@ -18,8 +18,9 @@ set(lxqt-archiver_SRCS
     main.cpp
     mainwindow.cpp
     archiver.cpp
-    archiveritem.cpp
     archivererror.cpp
+    archiveritem.cpp
+    archiverproxymodel.cpp
 )
 
 set(lxqt-archiver_UI

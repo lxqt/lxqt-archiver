@@ -20,7 +20,7 @@ class QStandardItem;
 class QItemSelection;
 class QLineEdit;
 class QMenu;
-class QSortFilterProxyModel;
+class ArchiverProxyModel;
 
 
 class MainWindow : public QMainWindow {
@@ -136,7 +136,7 @@ private:
     QProgressBar* progressBar_;
     QLineEdit* currentPathEdit_;
     QMenu* popupMenu_;
-    QSortFilterProxyModel* proxyModel_;
+    ArchiverProxyModel* proxyModel_;
 
     std::string currentDirPath_;
     ViewMode viewMode_;

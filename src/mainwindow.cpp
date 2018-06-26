@@ -3,12 +3,12 @@
 
 #include "archiver.h"
 #include "archiveritem.h"
+#include "archiverproxymodel.h"
 #include "core/file-utils.h"
 
 #include <QFileDialog>
 #include <QUrl>
 #include <QStandardItemModel>
-#include <QSortFilterProxyModel>
 #include <QIcon>
 #include <QCursor>
 #include <QHeaderView>
@@ -71,9 +71,13 @@ MainWindow::MainWindow(QWidget* parent):
     popupMenu_->addAction(ui_->actionDelete);
 
     // proxy model used to filter and sort the items
-    proxyModel_ = new QSortFilterProxyModel{this};
+    proxyModel_ = new ArchiverProxyModel{this};
+    proxyModel_->setFolderFirst(true);
     proxyModel_->setSortLocaleAware(true);
     proxyModel_->setSortCaseSensitivity(Qt::CaseInsensitive);
+    proxyModel_->setSortRole(Qt::DisplayRole);
+    proxyModel_->sort(0, Qt::AscendingOrder);
+
     ui_->fileListView->setModel(proxyModel_);
     connect(ui_->fileListView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &MainWindow::onFileListSelectionChanged);
     connect(ui_->fileListView, &QAbstractItemView::activated, this, &MainWindow::onFileListActivated);
