@@ -139,6 +139,8 @@ private:
 
     void rebuildDirTree();
 
+    static QStringList mimeDescToNameFilters(int *mimeDescIndexes);
+
 private:
     // GObject signal callbacks
     static void onStart(FrArchive*, FrAction action, Archiver* _this);

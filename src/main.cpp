@@ -1,4 +1,6 @@
-/* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
+// LXQt Archiver
+// Copyright (C) 2018 The LXQt team
+// Some of the following code is derived from Engrampa and File Roller
 
 /*
  *  Engrampa

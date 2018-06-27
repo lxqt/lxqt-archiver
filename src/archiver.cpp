@@ -10,6 +10,9 @@ extern "C" {
 #include <glib.h>
 #include <gobject/gobject.h>
 
+#include <QMimeDatabase>
+#include <QMimeType>
+
 #include <unordered_map>
 
 
@@ -199,19 +202,39 @@ QStringList Archiver::supportedCreateMimeTypes() {
     return types;
 }
 
-QStringList Archiver::supportedCreateNameFilters() {
-    QStringList types;
-    for(auto p = create_type; *p != -1; ++p) {
+QStringList Archiver::mimeDescToNameFilters(int* mimeDescIndexes) {
+    QStringList filters;
+    QMimeDatabase mimeDb;
+    for(auto p = mimeDescIndexes; *p != -1; ++p) {
         const auto name = mime_type_desc[*p].name;
-        if(name) {
-            types << name;
+        auto mimeType = mimeDb.mimeTypeForName(mime_type_desc[*p].mime_type);
+        QString filter;
+        if(mimeType.isValid()) {
+            filter = mimeType.comment();
+            filter += " (";
+            auto suffixes = mimeType.suffixes();
+            if(suffixes.empty()) {
+                suffixes.append(mime_type_desc[*p].default_ext);
+            }
+            for(const auto& suffix: suffixes) {
+                if(filter.back() != '(') {
+                    filter += ',';
+                }
+                filter += "*.";
+                filter += suffix;
+            }
+            filter += ")";
         }
         else {
-            types << tr("%1 files").arg(mime_type_desc[*p].default_ext);
+            filter = tr("*%1 files (*%1)").arg(mime_type_desc[*p].default_ext);
         }
-        // types << mime_type_desc[*p].mime_type;
+        filters << filter;
     }
-    return types;
+    return filters;
+}
+
+QStringList Archiver::supportedCreateNameFilters() {
+    return mimeDescToNameFilters(create_type);
 }
 
 QStringList Archiver::supportedOpenMimeTypes() {
@@ -224,18 +247,7 @@ QStringList Archiver::supportedOpenMimeTypes() {
 }
 
 QStringList Archiver::supportedOpenNameFilters() {
-    QStringList types;
-    for(auto p = open_type; *p != -1; ++p) {
-        const auto name = mime_type_desc[*p].name;
-        if(name) {
-            types << name;
-        }
-        else {
-            types << tr("%1 files").arg(mime_type_desc[*p].default_ext);
-        }
-        // types << mime_type_desc[*p].mime_type;
-    }
-    return types;
+    return mimeDescToNameFilters(open_type);
 }
 
 QStringList Archiver::supportedSaveMimeTypes() {
@@ -247,18 +259,7 @@ QStringList Archiver::supportedSaveMimeTypes() {
 }
 
 QStringList Archiver::supportedSaveNameFilters() {
-    QStringList types;
-    for(auto p = save_type; *p != -1; ++p) {
-        const auto name = mime_type_desc[*p].name;
-        if(name) {
-            types << name;
-        }
-        else {
-            types << tr("%1 files").arg(mime_type_desc[*p].default_ext);
-        }
-        // types << mime_type_desc[*p].mime_type;
-    }
-    return types;
+    return mimeDescToNameFilters(save_type);
 }
 
 std::string Archiver::stripTrailingSlash(std::string dirPath) {
