@@ -202,34 +202,41 @@ QStringList Archiver::supportedCreateMimeTypes() {
     return types;
 }
 
+static QString suffixesToNameFilter(QString name, const QStringList& suffixes) {
+    QString filter = std::move(name);
+    filter += " (";
+    for(const auto& suffix: suffixes) {
+        if(filter.back() != '(') {
+            filter += ' ';
+        }
+        filter += "*.";
+        filter += suffix;
+    }
+    filter += ")";
+    return filter;
+}
+
 QStringList Archiver::mimeDescToNameFilters(int* mimeDescIndexes) {
     QStringList filters;
+    QStringList allSuffixes;
     QMimeDatabase mimeDb;
     for(auto p = mimeDescIndexes; *p != -1; ++p) {
-        const auto name = mime_type_desc[*p].name;
         auto mimeType = mimeDb.mimeTypeForName(mime_type_desc[*p].mime_type);
         QString filter;
         if(mimeType.isValid()) {
-            filter = mimeType.comment();
-            filter += " (";
             auto suffixes = mimeType.suffixes();
             if(suffixes.empty()) {
                 suffixes.append(mime_type_desc[*p].default_ext);
             }
-            for(const auto& suffix: suffixes) {
-                if(filter.back() != '(') {
-                    filter += ',';
-                }
-                filter += "*.";
-                filter += suffix;
-            }
-            filter += ")";
+            filter = suffixesToNameFilter(mimeType.comment(), suffixes);
+            allSuffixes += suffixes;
         }
         else {
             filter = tr("*%1 files (*%1)").arg(mime_type_desc[*p].default_ext);
         }
         filters << filter;
     }
+    filters.insert(0, suffixesToNameFilter(tr("All supported formats"), allSuffixes));
     return filters;
 }
 
