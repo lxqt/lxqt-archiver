@@ -34,9 +34,13 @@
 #include <libfm-qt/libfmqt.h>
 
 #include <QApplication>
+#include <QFileDialog>
+#include <QMessageBox>
 
 #include "core/fr-init.h"
 #include "mainwindow.h"
+#include "progressdialog.h"
+#include "archiver.h"
 
 gint          ForceDirectoryCreation;
 
@@ -115,84 +119,137 @@ static char* get_uri_from_command_line(const char* path) {
     return uri;
 }
 
-static void prepareApp(void) {
+static int runApp(int argc, char** argv) {
     char*        extract_to_uri = NULL;
     char*        add_to_uri = NULL;
+
+    QApplication app(argc, argv);
+    app.setQuitOnLastWindowClosed(true);
 
     if(remaining_args == NULL) {  /* No archive specified. */
         auto mainWin = new MainWindow();
         mainWin->show();
-        return;
+        return app.exec();
     }
 
     if(extract_to != NULL) {
         extract_to_uri = get_uri_from_command_line(extract_to);
     }
+    else {
+        // if we want to extract files but dest dir is not specified, choose one
+        if(extract && !extract_here) {
+            if(!extract_to_uri) {
+                QFileDialog dlg;
+                QUrl dirUrl = QFileDialog::getExistingDirectoryUrl(nullptr, QString(),
+                                                                   default_url ? QUrl() : QUrl::fromEncoded(default_url),
+                                                                   (QFileDialog::ShowDirsOnly | QFileDialog::DontUseNativeDialog));
+                if(dirUrl.isEmpty()) {
+                    return 1;
+                }
+                extract_to_uri = g_strdup(dirUrl.toEncoded().constData());
+            }
+        }
+    }
 
     if(add_to != NULL) {
         add_to_uri = get_uri_from_command_line(add_to);
     }
-
-    if((add_to != NULL) || (add == 1)) {  /* Add files to an archive */
-#if 0
-        GtkWidget*   window;
-        GList*       file_list = NULL;
-        const char*  filename;
-        int          i = 0;
-
-        window = fr_window_new();
-        if(default_url != NULL) {
-            fr_window_set_default_dir(FR_WINDOW(window), default_url, TRUE);
+    else {
+        // if we want to add files but archive path is not specified, choose one
+        if(add) {
+            QFileDialog dlg;
+            if(default_url) {
+                dlg.setDirectoryUrl(QUrl::fromEncoded(default_url));
+            }
+            dlg.setNameFilters(Archiver::supportedCreateNameFilters() << QObject::tr("All files (*)"));
+            dlg.setAcceptMode(QFileDialog::AcceptSave);
+            if(dlg.exec() == QDialog::Accepted) {
+                auto url = dlg.selectedUrls()[0];
+                if(url.isEmpty()) {
+                    return 1;
+                }
+                add_to_uri = g_strdup(url.toEncoded().constData());
+            }
+            else {
+                return 1;
+            }
         }
+    }
 
+    if((add_to != NULL) || (add == 1)) {
+        /* Add files to an archive */
+        const char* filename = NULL;
+        int i = 0;
+
+        Fm::FilePathList filePaths;
         while((filename = remaining_args[i++]) != NULL) {
-            file_list = g_list_prepend(file_list, get_uri_from_command_line(filename));
+            filePaths.emplace_back(Fm::FilePath::fromPathStr(filename));
         }
-        file_list = g_list_reverse(file_list);
 
-        fr_window_new_batch(FR_WINDOW(window), _("Compress"));
-        fr_window_set_batch__add(FR_WINDOW(window), add_to_uri, file_list);
-        fr_window_append_batch_action(FR_WINDOW(window),
-                                      FR_BATCH_ACTION_QUIT,
-                                      NULL,
-                                      NULL);
-        fr_window_start_batch(FR_WINDOW(window));
-#endif
+        Archiver archiver;
+        ProgressDialog dlg;
+
+        dlg.setArchiver(&archiver);
+        archiver.createNewArchive(add_to_uri);
+
+        // we can only add files after the archive is fully created
+        QObject::connect(&archiver, &Archiver::finish, &dlg, [&](FrAction action, ArchiverError err) {
+            if(err.hasError()) {
+                QMessageBox::critical(&dlg, dlg.tr("Error"), err.message());
+                dlg.reject();
+                return;
+            }
+            switch(action) {
+            case FR_ACTION_CREATING_NEW_ARCHIVE:
+                // FIXME: need to traverse all subdirs here to collect all files :-(
+                archiver.addFiles(filePaths, "/", false, nullptr, false, FR_COMPRESSION_NORMAL, 0);
+                break;
+            case FR_ACTION_ADDING_FILES:
+                dlg.accept();
+                break;
+            };
+        });
+        dlg.exec();
+        return 0;
     }
     else if((extract_to != NULL) || (extract == 1) || (extract_here == 1)) {
-#if 0
+        const char* filename = NULL;
+        int i = 0;
         /* Extract all archives. */
+        while((filename = remaining_args[i++]) != NULL) {
+            auto archive_uri = Fm::CStrPtr{get_uri_from_command_line(filename)};
 
-        GtkWidget*  window;
-        const char* archive;
-        int         i = 0;
+            Archiver archiver;
+            ProgressDialog dlg;
 
-        window = fr_window_new();
-        if(default_url != NULL) {
-            fr_window_set_default_dir(FR_WINDOW(window), default_url, TRUE);
+            dlg.setArchiver(&archiver);
+            archiver.openArchive(archive_uri.get(), nullptr);
+
+            // we can only start archive extraction after its content is fully loaded
+            QObject::connect(&archiver, &Archiver::finish, &dlg, [&](FrAction action, ArchiverError err) {
+                if(err.hasError()) {
+                    QMessageBox::critical(&dlg, dlg.tr("Error"), err.message());
+                    dlg.reject();
+                    return;
+                }
+                switch(action) {
+                case FR_ACTION_LISTING_CONTENT:            /* loading the archive from a remote location */
+                    if(extract_here) {
+                        archiver.extractHere(false, false, false, nullptr);
+                    }
+                    else {
+                        // a target dir is specified
+                        archiver.extractAll(extract_to_uri, false, false, false, nullptr);
+                    }
+                    break;
+                case FR_ACTION_EXTRACTING_FILES:
+                    dlg.accept();
+                    break;
+                };
+            });
+            dlg.exec();
+            return 0;
         }
-
-        fr_window_new_batch(FR_WINDOW(window), _("Extract archive"));
-        while((archive = remaining_args[i++]) != NULL) {
-            char* archive_uri;
-
-            archive_uri = get_uri_from_command_line(archive);
-            if(extract_here == 1)
-                fr_window_set_batch__extract_here(FR_WINDOW(window),
-                                                  archive_uri);
-            else
-                fr_window_set_batch__extract(FR_WINDOW(window),
-                                             archive_uri,
-                                             extract_to_uri);
-            g_free(archive_uri);
-        }
-        fr_window_append_batch_action(FR_WINDOW(window),
-                                      FR_BATCH_ACTION_QUIT,
-                                      NULL,
-                                      NULL);
-
-        fr_window_start_batch(FR_WINDOW(window));
-#endif
     }
     else { /* Open each archive in a window */
         const char* filename = NULL;
@@ -206,6 +263,7 @@ static void prepareApp(void) {
     }
     g_free(add_to_uri);
     g_free(extract_to_uri);
+    return app.exec();
 }
 
 
@@ -238,13 +296,8 @@ int main(int argc, char** argv) {
     Fm::LibFmQt libfmQt;
 
     // FIXME: port command line parsing to Qt
-    QApplication app(argc, argv);
-    app.setQuitOnLastWindowClosed(true);
-
     initialize_data(); // initialize the file-roller core
-    prepareApp();
-
-    status = app.exec();
+    status = runApp(argc, argv);
     release_data();
 
     return status;

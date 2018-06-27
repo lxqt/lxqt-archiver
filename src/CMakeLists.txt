@@ -21,10 +21,12 @@ set(lxqt-archiver_SRCS
     archivererror.cpp
     archiveritem.cpp
     archiverproxymodel.cpp
+    progressdialog.cpp
 )
 
 set(lxqt-archiver_UI
     mainwindow.ui
+    progressdialog.ui
 )
 
 # Translations

@@ -287,6 +287,10 @@ void Archiver::rebuildDirTree() {
     items_.clear();
     dirMap_.clear();
 
+    if(!frArchive_->command || !frArchive_->command->files) {
+        return;
+    }
+
     auto n_files = frArchive_->command->files->len;
 
     // create one ArchiverItem per file and build dir_path => ArchiverItem mappings
@@ -514,5 +518,5 @@ void Archiver::onStoppable(FrArchive*, gboolean value, Archiver* _this) {
 
 void Archiver::onWorkingArchive(FrCommand* comm, const char* filename, Archiver* _this) {
     // FIXME: why the first param is comm?
-    // Q_EMIT _this->workingArchive(comm, filename);
+    Q_EMIT _this->workingArchive(filename);
 }

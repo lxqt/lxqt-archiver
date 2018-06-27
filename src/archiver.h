@@ -127,7 +127,7 @@ Q_SIGNALS:
 
     void stoppableChanged(bool value);
 
-    void workingArchive(FrCommand* comm, QString filename);
+    void workingArchive(QString filename);
 
 public Q_SLOTS:
 

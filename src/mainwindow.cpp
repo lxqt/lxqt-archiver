@@ -123,7 +123,6 @@ void MainWindow::setFileName(const QString &fileName) {
 
 void MainWindow::on_actionCreateNew_triggered(bool checked) {
     QFileDialog dlg{this};
-    // dlg.setMimeTypeFilters(Archiver::supportedCreateMimeTypes());
     dlg.setNameFilters(Archiver::supportedCreateNameFilters() << tr("All files (*)"));
     dlg.setAcceptMode(QFileDialog::AcceptSave);
     if(dlg.exec() == QDialog::Accepted) {
