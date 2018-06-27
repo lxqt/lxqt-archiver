@@ -40,6 +40,8 @@ public:
 
     ~MainWindow();
 
+    void loadFile(const Fm::FilePath& file);
+
     std::shared_ptr<Archiver> archiver() const;
 
     ViewMode viewMode() const;

@@ -109,6 +109,10 @@ MainWindow::MainWindow(QWidget* parent):
 MainWindow::~MainWindow() {
 }
 
+void MainWindow::loadFile(const Fm::FilePath &file) {
+    archiver_->openArchive(file.uri().get(), nullptr);
+}
+
 void MainWindow::setFileName(const QString &fileName) {
     QString title = tr("File Archiver");
     if(!fileName.isEmpty()) {
@@ -139,8 +143,7 @@ void MainWindow::on_actionOpen_triggered(bool checked) {
     if(dlg.exec() == QDialog::Accepted) {
         auto url = dlg.selectedUrls()[0];
         if(!url.isEmpty()) {
-            auto uri = url.toString().toUtf8();
-            archiver_->openArchive(uri.constData(), nullptr);
+            loadFile(Fm::FilePath::fromUri(url.toEncoded()));
         }
     }
 }

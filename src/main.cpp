@@ -113,13 +113,13 @@ static char* get_uri_from_command_line(const char* path) {
     return uri;
 }
 
-static void prepare_app(void) {
+static void prepareApp(void) {
     char*        extract_to_uri = NULL;
     char*        add_to_uri = NULL;
 
-#if 0
     if(remaining_args == NULL) {  /* No archive specified. */
-        fr_window_new();
+        auto mainWin = new MainWindow();
+        mainWin->show();
         return;
     }
 
@@ -132,6 +132,7 @@ static void prepare_app(void) {
     }
 
     if((add_to != NULL) || (add == 1)) {  /* Add files to an archive */
+#if 0
         GtkWidget*   window;
         GList*       file_list = NULL;
         const char*  filename;
@@ -154,9 +155,10 @@ static void prepare_app(void) {
                                       NULL,
                                       NULL);
         fr_window_start_batch(FR_WINDOW(window));
+#endif
     }
     else if((extract_to != NULL) || (extract == 1) || (extract_here == 1)) {
-
+#if 0
         /* Extract all archives. */
 
         GtkWidget*  window;
@@ -188,86 +190,21 @@ static void prepare_app(void) {
                                       NULL);
 
         fr_window_start_batch(FR_WINDOW(window));
+#endif
     }
     else { /* Open each archive in a window */
         const char* filename = NULL;
-
         int i = 0;
         while((filename = remaining_args[i++]) != NULL) {
-            GtkWidget* window;
-            GFile*     file;
-            char*      uri;
-
-            window = fr_window_new();
-
-            file = g_file_new_for_commandline_arg(filename);
-            uri = g_file_get_uri(file);
-            fr_window_archive_open(FR_WINDOW(window), uri, GTK_WINDOW(window));
-            g_free(uri);
-            g_object_unref(file);
+            auto mainWindow = new MainWindow();
+            auto file = Fm::FilePath::fromPathStr(filename);
+            mainWindow->loadFile(file);
+            mainWindow->show();
         }
     }
-#endif
     g_free(add_to_uri);
     g_free(extract_to_uri);
 }
-
-
-static void activate_cb(GApplication* application) {
-    GList* link;
-#if 0
-    for(link = gtk_application_get_windows(GTK_APPLICATION(application));
-            link != NULL;
-            link = link->next) {
-        if(! fr_window_is_batch_mode(FR_WINDOW(link->data))) {
-            gtk_widget_show(GTK_WIDGET(link->data));
-        }
-    }
-#endif
-}
-
-#if 0
-static void fr_save_state(EggSMClient* client, GKeyFile* state, gpointer user_data) {
-    /* discard command is automatically set by EggSMClient */
-    const char*   argv[2] = { NULL };
-    GApplication* application;
-    guint         i = 0;
-
-    /* restart command */
-    argv[0] = program_argv0;
-    argv[1] = NULL;
-
-    egg_sm_client_set_restart_command(client, 1, argv);
-
-    /* state */
-    application = g_application_get_default();
-    if(application != NULL) {
-        GList* window;
-
-        for(window = gtk_application_get_windows(GTK_APPLICATION(application)), i = 0;
-                window != NULL;
-                window = window->next, i++) {
-            FrWindow* session = window->data;
-            gchar* key;
-
-            key = g_strdup_printf("archive%d", i);
-            if((session->archive == NULL) || (session->archive->file == NULL)) {
-                g_key_file_set_string(state, "Session", key, "");
-            }
-            else {
-                gchar* uri;
-
-                uri = g_file_get_uri(session->archive->file);
-                g_key_file_set_string(state, "Session", key, uri);
-                g_free(uri);
-            }
-            g_free(key);
-        }
-    }
-
-    g_key_file_set_integer(state, "Session", "archives", i);
-}
-#endif
 
 
 int main(int argc, char** argv) {
@@ -300,12 +237,10 @@ int main(int argc, char** argv) {
 
     // FIXME: port command line parsing to Qt
     QApplication app(argc, argv);
+    app.setQuitOnLastWindowClosed(true);
 
-    initialize_data();
-    prepare_app();
-
-    MainWindow mainWin;
-    mainWin.show();
+    initialize_data(); // initialize the file-roller core
+    prepareApp();
 
     status = app.exec();
     release_data();
