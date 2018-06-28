@@ -12,6 +12,7 @@
 #include <vector>
 #include <unordered_map>
 #include <memory>
+#include <cstdint>
 
 
 class ArchiverItem;
@@ -117,6 +118,10 @@ public:
 
     static QStringList supportedSaveNameFilters();
 
+    bool isEncrypted() const;
+    
+    std::uint64_t compressedSize() const;
+
 Q_SIGNALS:
 
     void invalidateContent();  // after receiving this signal, all old FileData* pointers are invalidated
@@ -165,6 +170,8 @@ private:
     std::vector<std::unique_ptr<ArchiverItem>> items_;
     ArchiverItem* rootItem_;
     bool busy_;
+    bool isEncrypted_;
+    std::uint64_t compressedSize_;
 };
 
 Q_DECLARE_METATYPE(FrAction)
