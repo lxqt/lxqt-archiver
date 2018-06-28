@@ -119,7 +119,7 @@ public:
     static QStringList supportedSaveNameFilters();
 
     bool isEncrypted() const;
-    
+
     std::uint64_t compressedSize() const;
 
 Q_SIGNALS:

@@ -22,11 +22,13 @@ set(lxqt-archiver_SRCS
     archiveritem.cpp
     archiverproxymodel.cpp
     progressdialog.cpp
+    passworddialog.cpp
 )
 
 set(lxqt-archiver_UI
     mainwindow.ui
     progressdialog.ui
+    passworddialog.ui
 )
 
 # Translations

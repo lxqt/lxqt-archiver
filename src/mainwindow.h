@@ -74,6 +74,8 @@ private Q_SLOTS:
 
     void on_actionTest_triggered(bool checked);
 
+    void on_actionPassword_triggered(bool checked);
+    
     void on_actionDirTree_toggled(bool checked);
 
     void on_actionDirTreeMode_toggled(bool checked);
@@ -143,6 +145,8 @@ private:
     std::string currentDirPath_;
     ViewMode viewMode_;
     const ArchiverItem* currentDirItem_;
+    std::string password_;
+    bool encryptHeader_;
 };
 
 #endif // MAINWINDOW_H

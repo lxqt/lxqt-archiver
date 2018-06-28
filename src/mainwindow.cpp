@@ -4,6 +4,7 @@
 #include "archiver.h"
 #include "archiveritem.h"
 #include "archiverproxymodel.h"
+#include "passworddialog.h"
 #include "core/file-utils.h"
 
 #include <QFileDialog>
@@ -39,7 +40,8 @@ MainWindow::MainWindow(QWidget* parent):
     ui_{new Ui::MainWindow()},
     archiver_{std::make_shared<Archiver>()},
     viewMode_{ViewMode::DirTree},
-    currentDirItem_{nullptr} {
+    currentDirItem_{nullptr},
+    encryptHeader_{false} {
 
     ui_->setupUi(this);
 
@@ -103,7 +105,6 @@ MainWindow::MainWindow(QWidget* parent):
     ui_->actionPaste->deleteLater();
     ui_->actionRename->deleteLater();
     ui_->actionFind->deleteLater();
-    ui_->actionPassword->deleteLater(); // FIXME: need to implement first
 }
 
 MainWindow::~MainWindow() {
@@ -162,8 +163,8 @@ void MainWindow::on_actionAddFiles_triggered(bool checked) {
         else {
             baseDir = "/";
         }
-        archiver_->addFiles(srcPaths, baseDir,
-                            false, nullptr, false, FR_COMPRESSION_NORMAL, 0);
+        archiver_->addFiles(srcPaths, baseDir, false,
+                            password_.empty() ? nullptr : password_.c_str(), encryptHeader_, FR_COMPRESSION_NORMAL, 0);
     }
 }
 
@@ -206,7 +207,8 @@ void MainWindow::on_actionExtract_triggered(bool checked) {
     if(!dirUrl.isEmpty()) {
         auto files = selectedFiles();
         if(files.empty()) {
-            archiver_->extractAll(dirUrl.toEncoded().constData(), false, false, false, nullptr);
+            archiver_->extractAll(dirUrl.toEncoded().constData(), false, false, false,
+                                  password_.empty() ? nullptr : password_.c_str());
         }
         else {
             // TODO: refer to fr_window_get_selection() in fr-window.c of engrampa to see how this is implemented.
@@ -216,7 +218,9 @@ void MainWindow::on_actionExtract_triggered(bool checked) {
             if(baseDir.empty() || baseDir.back() != '/') {
                 baseDir += '/';
             }
-            archiver_->extractFiles(files, destDir, currentDirPath_.c_str(), false, false, false, nullptr);
+            archiver_->extractFiles(files, destDir, currentDirPath_.c_str(), false, false, false,
+                                    password_.empty() ? nullptr : password_.c_str()
+            );
         }
     }
 }
@@ -224,6 +228,16 @@ void MainWindow::on_actionExtract_triggered(bool checked) {
 void MainWindow::on_actionTest_triggered(bool checked) {
     if(archiver_->isLoaded()) {
         archiver_->testArchiveIntegrity(nullptr);
+    }
+}
+
+void MainWindow::on_actionPassword_triggered(bool checked) {
+    PasswordDialog dlg{this};
+    dlg.setEncryptFileList(encryptHeader_);
+    dlg.setPassword(QString::fromStdString(password_));
+    if(dlg.exec() == QDialog::Accepted) {
+        password_ = dlg.password().toStdString();
+        encryptHeader_ = dlg.encryptFileList();
     }
 }
 
@@ -530,6 +544,7 @@ void MainWindow::updateUiStates() {
     // ui_->actionSaveAs->setEnabled(canEdit);
 
     ui_->actionSelectAll->setEnabled(canEdit);
+    ui_->actionPassword->setEnabled(canEdit);
 
     ui_->actionAddFiles->setEnabled(canEdit);
     ui_->actionAddFolder->setEnabled(canEdit);
