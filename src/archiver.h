@@ -85,6 +85,10 @@ public:
 
     */
 
+    void addDroppedItems(GList *item_list, const char *base_dir, const char *dest_dir, bool update, const char *password, bool encrypt_header, FrCompression compression, unsigned int volume_size);
+
+    void addDroppedItems(const Fm::FilePathList& srcPaths, const char *base_dir, const char *dest_dir, bool update, const char *password, bool encrypt_header, FrCompression compression, unsigned int volume_size);
+
     void removeFiles(GList* fileNames, FrCompression compression);
 
     void removeFiles(const std::vector<const FileData *> &files, FrCompression compression);

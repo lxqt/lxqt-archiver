@@ -201,8 +201,7 @@ static int runApp(int argc, char** argv) {
             }
             switch(action) {
             case FR_ACTION_CREATING_NEW_ARCHIVE:
-                // FIXME: need to traverse all subdirs here to collect all files :-(
-                archiver.addFiles(filePaths, "/", false, nullptr, false, FR_COMPRESSION_NORMAL, 0);
+                archiver.addDroppedItems(filePaths, nullptr, default_url, false, nullptr, false, FR_COMPRESSION_NORMAL, 0);
                 break;
             case FR_ACTION_ADDING_FILES:
                 dlg.accept();

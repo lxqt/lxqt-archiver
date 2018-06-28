@@ -137,6 +137,21 @@ void Archiver::addDirectory(const Fm::FilePath& directory, const char* destDirPa
                  onlyIfNewer, password, encrypt_header, compression, volume_size);
 }
 
+void Archiver::addDroppedItems(GList *item_list, const char *base_dir, const char *dest_dir, bool update, const char *password, bool encrypt_header, FrCompression compression, unsigned int volume_size) {
+    fr_archive_add_dropped_items(frArchive_, item_list, base_dir, dest_dir, update, password, encrypt_header, compression, volume_size);
+}
+
+void Archiver::addDroppedItems(const Fm::FilePathList &srcPaths, const char *base_dir, const char *dest_dir, bool update, const char *password, bool encrypt_header, FrCompression compression, unsigned int volume_size) {
+    GList* itemGList = nullptr;
+    for(int i = srcPaths.size() - 1; i >= 0; --i) {
+        const auto& path = srcPaths[i];
+        itemGList = g_list_prepend(itemGList,
+                                  g_strdup(path.uri().get()));
+    }
+    addDroppedItems(itemGList, base_dir, dest_dir, update, password, encrypt_header, compression, volume_size);
+    freeStrsGList(itemGList);
+}
+
 /*
 void Archive::addWithWildcard(const char* include_files, const char* exclude_files, const char* exclude_folders, const char* base_dir, const char* dest_dir, bool update, bool follow_links, const char* password, bool encrypt_header, FrCompression compression, unsigned int volume_size) {
     return fr_archive_add_with_wildcard(impl_, include_files, exclude_files, exclude_folders, base_dir, dest_dir, update, follow_links, password, encrypt_header, compression, volume_size);
