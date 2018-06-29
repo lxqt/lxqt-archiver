@@ -169,14 +169,7 @@ void MainWindow::on_actionAddFiles_triggered(bool checked) {
     auto fileUrls = QFileDialog::getOpenFileUrls(this);
     if(!fileUrls.isEmpty()) {
         auto srcPaths = Fm::pathListFromQUrls(fileUrls);
-        const char* baseDir;
-        if(viewMode_ == ViewMode::DirTree && currentDirItem_) {
-            baseDir = currentDirItem_->originalPath();
-        }
-        else {
-            baseDir = "/";
-        }
-        archiver_->addFiles(srcPaths, baseDir, false,
+        archiver_->addFiles(srcPaths, currentDirPath_.c_str(), false,
                             password_.empty() ? nullptr : password_.c_str(), encryptHeader_, FR_COMPRESSION_NORMAL, 0);
     }
 }
@@ -186,14 +179,7 @@ void MainWindow::on_actionAddFolder_triggered(bool checked) {
     QUrl dirUrl = QFileDialog::getExistingDirectoryUrl(this, QString(), QUrl(), (QFileDialog::ShowDirsOnly | QFileDialog::DontUseNativeDialog));
     if(!dirUrl.isEmpty()) {
         auto path = Fm::FilePath::fromUri(dirUrl.toEncoded().constData());
-        const char* baseDir;
-        if(viewMode_ == ViewMode::DirTree && currentDirItem_) {
-            baseDir = currentDirItem_->originalPath();
-        }
-        else {
-            baseDir = "/";
-        }
-        archiver_->addDirectory(path, baseDir,
+        archiver_->addDirectory(path, currentDirPath_.c_str(),
                                 false, password_.empty() ? nullptr : password_.c_str(), encryptHeader_, FR_COMPRESSION_NORMAL, 0);
     }
 }
