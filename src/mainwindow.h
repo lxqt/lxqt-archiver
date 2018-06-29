@@ -109,6 +109,8 @@ private Q_SLOTS:
 
     void onStoppableChanged(bool stoppable);
 
+    void onPropertiesFileInfoJobFinished();
+
 private:
     void setFileName(const QString& fileName);
 

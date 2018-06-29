@@ -120,7 +120,7 @@ public:
 
     bool isEncrypted() const;
 
-    std::uint64_t compressedSize() const;
+    std::uint64_t uncompressedSize() const;
 
 Q_SIGNALS:
 
@@ -171,7 +171,7 @@ private:
     ArchiverItem* rootItem_;
     bool busy_;
     bool isEncrypted_;
-    std::uint64_t compressedSize_;
+    std::uint64_t uncompressedSize_;
 };
 
 Q_DECLARE_METATYPE(FrAction)

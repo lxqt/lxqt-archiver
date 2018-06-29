@@ -24,13 +24,16 @@
 #include <QToolBar>
 #include <QMenu>
 #include <QInputDialog>
+#include <QFormLayout>
 
 #include <QDebug>
 
 #include <libfm-qt/core/mimetype.h>
 #include <libfm-qt/core/iconinfo.h>
 #include <libfm-qt/core/gioptrs.h>
+#include <libfm-qt/core/fileinfojob.h>
 #include <libfm-qt/utilities.h>
+#include <libfm-qt/filepropsdialog.h>
 // #include <libfm-qt/pathbar.h>
 
 #include <map>
@@ -100,7 +103,6 @@ MainWindow::MainWindow(QWidget* parent):
     // hide stuff we don't support yet
     // FIXME: implement the missing features
     ui_->actionSaveAs->deleteLater();
-    ui_->actionArchiveProperties->deleteLater();
     ui_->actionCut->deleteLater();
     ui_->actionCopy->deleteLater();
     ui_->actionPaste->deleteLater();
@@ -150,7 +152,16 @@ void MainWindow::on_actionOpen_triggered(bool checked) {
 }
 
 void MainWindow::on_actionArchiveProperties_triggered(bool checked) {
-    // TODO: show file properties
+    // query the info of the file
+    Fm::FilePathList paths;
+    paths.emplace_back(Fm::FilePath::fromUri(archiver_->archiveUrl().toEncoded().constData()));
+    auto job = new Fm::FileInfoJob{std::move(paths)};
+    job->setAutoDelete(true);
+
+    // show file properties dialog when the job is finished
+    // FIXME: there is no way to cancel this
+    connect(job, &Fm::Job::finished, this, &MainWindow::onPropertiesFileInfoJobFinished);
+    job->runAsync();
 }
 
 void MainWindow::on_actionAddFiles_triggered(bool checked) {
@@ -429,6 +440,37 @@ void MainWindow::onStoppableChanged(bool stoppable) {
     ui_->actionStop->setEnabled(stoppable);
 }
 
+void MainWindow::onPropertiesFileInfoJobFinished() {
+    auto job = static_cast<Fm::FileInfoJob*>(sender());
+    auto infos = job->files();
+    if(!infos.empty()) {
+        auto dlg = new Fm::FilePropsDialog{infos, this};
+        // FIXME: this relies on libfm-qt internals.
+        // We need to add APIs to libfm-qt to let callers customize the file properties dialog.
+        QWidget* generalPage = dlg->findChild<QWidget*>("generalPage");
+        if(generalPage) {
+            auto fullSize = archiver_->uncompressedSize(); // actual uncompressed file size
+            auto compSize = infos[0]->size(); // compressed file size
+            QString compRatioText;
+            if(compSize > 0) {
+                compRatioText = QString::number(double(fullSize) / double(compSize));
+            }
+            else {
+                compRatioText = tr("N/A");
+            }
+
+            if(auto layout = qobject_cast<QFormLayout*>(generalPage->layout())) {
+                layout->addRow(new QLabel{tr("Uncompressed Size:"), generalPage},
+                               new QLabel{Fm::formatFileSize(fullSize), generalPage});
+                layout->addRow(new QLabel{tr("Compression Ratio:"), generalPage},
+                               new QLabel{compRatioText, generalPage});
+            }
+        }
+        dlg->exec();
+        // dlg will delete itself (inside libfm-qt) so don't delete it manually
+    }
+}
+
 QList<QStandardItem *> MainWindow::createFileListRow(const ArchiverItem *file) {
     QIcon icon;
     QString desc;
@@ -547,6 +589,9 @@ void MainWindow::updateUiStates() {
     ui_->dirTreeView->setEnabled(canEdit);
     // FIXME support this later
     // ui_->actionSaveAs->setEnabled(canEdit);
+
+    ui_->actionTest->setEnabled(canEdit);
+    ui_->actionArchiveProperties->setEnabled(canEdit);
 
     ui_->actionSelectAll->setEnabled(canEdit);
     ui_->actionPassword->setEnabled(canEdit);

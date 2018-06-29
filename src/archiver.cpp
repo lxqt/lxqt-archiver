@@ -22,7 +22,7 @@ Archiver::Archiver(QObject* parent):
     rootItem_{nullptr},
     busy_{false},
     isEncrypted_{false},
-    compressedSize_{0} {
+    uncompressedSize_{0} {
 
     g_signal_connect(frArchive_, "start", G_CALLBACK(&onStart), this);
     g_signal_connect(frArchive_, "done", G_CALLBACK(&onDone), this);
@@ -54,7 +54,7 @@ const char *Archiver::currentArchiveContentType() const {
 bool Archiver::createNewArchive(const char* uri) {
     Q_EMIT invalidateContent();
     isEncrypted_ = false;
-    compressedSize_ = 0;
+    uncompressedSize_ = 0;
 
     if(!fr_archive_create(frArchive_, uri)) {
         // this will trigger a queued finished() signal
@@ -80,7 +80,7 @@ bool Archiver::createNewArchive(const QUrl& uri) {
 bool Archiver::openArchive(const char* uri, const char* password) {
     Q_EMIT invalidateContent();
     isEncrypted_ = false;
-    compressedSize_ = 0;
+    uncompressedSize_ = 0;
 
     return fr_archive_load(frArchive_, uri, password);
 }
@@ -92,7 +92,7 @@ bool Archiver::openArchive(const QUrl& uri, const char* password) {
 void Archiver::reloadArchive(const char* password) {
     Q_EMIT invalidateContent();
     isEncrypted_ = false;
-    compressedSize_ = 0;
+    uncompressedSize_ = 0;
 
     fr_archive_reload(frArchive_, password);
 }
@@ -244,8 +244,8 @@ bool Archiver::isEncrypted() const {
 }
 
 
-std::uint64_t Archiver::compressedSize() const {
-    return compressedSize_;
+std::uint64_t Archiver::uncompressedSize() const {
+    return uncompressedSize_;
 }
 
 QStringList Archiver::mimeDescToNameFilters(int* mimeDescIndexes) {
@@ -320,7 +320,7 @@ void Archiver::rebuildDirTree() {
     dirMap_.clear();
 
     isEncrypted_ = false;
-    compressedSize_ = 0;
+    uncompressedSize_ = 0;
 
     if(!frArchive_->command || !frArchive_->command->files) {
         return;
@@ -343,7 +343,7 @@ void Archiver::rebuildDirTree() {
             isEncrypted_ = true;
         }
 
-        compressedSize_ += fileData->size;
+        uncompressedSize_ += fileData->size;
     }
 
     // By default, file-roller FrArchive does not creates FileData for some parent dirs.
