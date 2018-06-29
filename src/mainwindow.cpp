@@ -138,7 +138,7 @@ void MainWindow::setFileName(const QString &fileName) {
     setWindowTitle(title);
 }
 
-void MainWindow::on_actionCreateNew_triggered(bool checked) {
+void MainWindow::on_actionCreateNew_triggered(bool /*checked*/) {
     Fm::FileDialog dlg{this};
     dlg.setAcceptMode(QFileDialog::AcceptSave);
     dlg.setNameFilters(Archiver::supportedCreateNameFilters() << tr("All files (*)"));
@@ -165,7 +165,7 @@ void MainWindow::on_actionCreateNew_triggered(bool checked) {
     }
 }
 
-void MainWindow::on_actionOpen_triggered(bool checked) {
+void MainWindow::on_actionOpen_triggered(bool /*checked*/) {
     qDebug("open");
     Fm::FileDialog dlg{this};
     dlg.setFileMode(QFileDialog::ExistingFile);
@@ -180,7 +180,7 @@ void MainWindow::on_actionOpen_triggered(bool checked) {
     }
 }
 
-void MainWindow::on_actionArchiveProperties_triggered(bool checked) {
+void MainWindow::on_actionArchiveProperties_triggered(bool /*checked*/) {
     // query the info of the file
     Fm::FilePathList paths;
     paths.emplace_back(Fm::FilePath::fromUri(archiver_->archiveUrl().toEncoded().constData()));
@@ -193,7 +193,7 @@ void MainWindow::on_actionArchiveProperties_triggered(bool checked) {
     job->runAsync();
 }
 
-void MainWindow::on_actionAddFiles_triggered(bool checked) {
+void MainWindow::on_actionAddFiles_triggered(bool /*checked*/) {
     Fm::FileDialog dlg{this};
     dlg.setFileMode(QFileDialog::ExistingFiles);
     dlg.setNameFilters(QStringList{} << tr("All files (*)"));
@@ -222,7 +222,7 @@ void MainWindow::on_actionAddFiles_triggered(bool checked) {
     }
 }
 
-void MainWindow::on_actionAddFolder_triggered(bool checked) {
+void MainWindow::on_actionAddFolder_triggered(bool /*checked*/) {
     Fm::FileDialog dlg{this};
     dlg.setOptions(QFileDialog::ShowDirsOnly | QFileDialog::HideNameFilterDetails);
     dlg.setFileMode(QFileDialog::Directory);
@@ -251,7 +251,7 @@ void MainWindow::on_actionAddFolder_triggered(bool checked) {
     }
 }
 
-void MainWindow::on_actionDelete_triggered(bool checked) {
+void MainWindow::on_actionDelete_triggered(bool /*checked*/) {
     if(QMessageBox::question(this, tr("Confirm"), tr("Are you sure you want to delete selected files?"), QMessageBox::Yes|QMessageBox::No) != QMessageBox::Yes) {
         return;
     }
@@ -262,11 +262,11 @@ void MainWindow::on_actionDelete_triggered(bool checked) {
     }
 }
 
-void MainWindow::on_actionSelectAll_triggered(bool checked) {
+void MainWindow::on_actionSelectAll_triggered(bool /*checked*/) {
     ui_->fileListView->selectAll();
 }
 
-void MainWindow::on_actionExtract_triggered(bool checked) {
+void MainWindow::on_actionExtract_triggered(bool /*checked*/) {
     qDebug("extract");
     Fm::FileDialog dlg{this};
     dlg.setOptions(QFileDialog::ShowDirsOnly | QFileDialog::HideNameFilterDetails);
@@ -336,13 +336,13 @@ void MainWindow::on_actionExtract_triggered(bool checked) {
     }
 }
 
-void MainWindow::on_actionTest_triggered(bool checked) {
+void MainWindow::on_actionTest_triggered(bool /*checked*/) {
     if(archiver_->isLoaded()) {
         archiver_->testArchiveIntegrity(nullptr);
     }
 }
 
-void MainWindow::on_actionPassword_triggered(bool checked) {
+void MainWindow::on_actionPassword_triggered(bool /*checked*/) {
     PasswordDialog dlg{this};
     dlg.setEncryptFileList(encryptHeader_);
     dlg.setPassword(QString::fromStdString(password_));
@@ -357,21 +357,21 @@ void MainWindow::on_actionDirTree_toggled(bool checked) {
     ui_->dirTreeView->setVisible(visible);
 }
 
-void MainWindow::on_actionDirTreeMode_toggled(bool checked) {
+void MainWindow::on_actionDirTreeMode_toggled(bool /*checked*/) {
     setViewMode(ViewMode::DirTree);
 }
 
-void MainWindow::on_actionFlatListMode_toggled(bool checked) {
+void MainWindow::on_actionFlatListMode_toggled(bool /*checked*/) {
     setViewMode(ViewMode::FlatList);
 }
 
-void MainWindow::on_actionReload_triggered(bool checked) {
+void MainWindow::on_actionReload_triggered(bool /*checked*/) {
     if(archiver_->isLoaded()) {
         archiver_->reloadArchive(nullptr);
     }
 }
 
-void MainWindow::on_actionAbout_triggered(bool checked) {
+void MainWindow::on_actionAbout_triggered(bool /*checked*/) {
     QDialog dlg{this};
     Ui::AboutDialog ui;
     ui.setupUi(&dlg);
@@ -379,7 +379,7 @@ void MainWindow::on_actionAbout_triggered(bool checked) {
     dlg.exec();
 }
 
-void MainWindow::onDirTreeSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected) {
+void MainWindow::onDirTreeSelectionChanged(const QItemSelection& /*selected*/, const QItemSelection& /*deselected*/) {
     auto selModel = ui_->dirTreeView->selectionModel();
     auto selectedRows = selModel->selectedRows();
     if(!selectedRows.isEmpty()) {
@@ -394,7 +394,7 @@ void MainWindow::onDirTreeSelectionChanged(const QItemSelection &selected, const
     }
 }
 
-void MainWindow::onFileListSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected) {
+void MainWindow::onFileListSelectionChanged(const QItemSelection& /*selected*/, const QItemSelection& /*deselected*/) {
 }
 
 void MainWindow::onFileListContextMenu(const QPoint &pos) {
@@ -710,7 +710,6 @@ std::vector<const FileData*> MainWindow::selectedFiles() {
         auto selIndexes = selModel->selectedRows();
         for(const auto& idx: selIndexes) {
             auto item = itemFromIndex(idx);
-            qDebug("selected item: %p", item);
             if(item && item->data()) {
                 files.emplace_back(item->data());
             }
