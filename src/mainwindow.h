@@ -133,7 +133,7 @@ private:
     const ArchiverItem* itemFromIndex(const QModelIndex& index);
 
     QModelIndex indexFromItem(const QModelIndex& parent, const ArchiverItem* item);
-
+    
 private:
     std::unique_ptr<Ui::MainWindow> ui_;
     std::shared_ptr<Archiver> archiver_;

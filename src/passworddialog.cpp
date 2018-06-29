@@ -19,6 +19,8 @@
 
 #include "passworddialog.h"
 #include "ui_passworddialog.h"
+#include <QInputDialog>
+
 
 PasswordDialog::PasswordDialog(QWidget* parent):
     QDialog{parent},
@@ -51,3 +53,10 @@ bool PasswordDialog::encryptFileList() const {
 void PasswordDialog::onTogglePassword(bool toggled) {
     ui_->passwordEdit->setEchoMode(toggled ? QLineEdit::Normal : QLineEdit::Password);
 }
+
+// static
+QString PasswordDialog::askPassword(QWidget* parent) {
+    QInputDialog dlg;
+    return QInputDialog::getText(parent, tr("Password"), tr("Password:"), QLineEdit::Password);
+}
+

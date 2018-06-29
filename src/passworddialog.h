@@ -47,6 +47,8 @@ public:
 
     bool encryptFileList() const;
 
+    static QString askPassword(QWidget* parent = nullptr);
+
 private Q_SLOTS:
     void onTogglePassword(bool toggled);
     

@@ -22,7 +22,14 @@
  *  Foundation, Inc., 59 Temple Street #330, Boston, MA 02110-1301, USA.
  */
 
+#include "mainwindow.h"
+#include "progressdialog.h"
+#include "archiver.h"
+#include "passworddialog.h"
+#include "core/fr-init.h"
+
 #include "core/config.h"
+
 #include <string.h>
 #include <sys/types.h>
 #include <signal.h>
@@ -36,11 +43,6 @@
 #include <QApplication>
 #include <QFileDialog>
 #include <QMessageBox>
-
-#include "core/fr-init.h"
-#include "mainwindow.h"
-#include "progressdialog.h"
-#include "archiver.h"
 
 gint          ForceDirectoryCreation;
 
@@ -232,17 +234,25 @@ static int runApp(int argc, char** argv) {
                     return;
                 }
                 switch(action) {
-                case FR_ACTION_LISTING_CONTENT:            /* loading the archive from a remote location */
+                case FR_ACTION_LISTING_CONTENT: {            /* loading the archive from a remote location */
+                    std::string password_;
+                    if(archiver.isEncrypted()) {
+                        password_ = PasswordDialog::askPassword().toStdString();
+                    }
+
                     if(extract_here) {
-                        archiver.extractHere(false, false, false, nullptr);
+                        archiver.extractHere(false, false, false, password_.empty() ? nullptr : password_.c_str());
                     }
                     else {
                         // a target dir is specified
-                        archiver.extractAll(extract_to_uri, false, false, false, nullptr);
+                        archiver.extractAll(extract_to_uri, false, false, false, password_.empty() ? nullptr : password_.c_str());
                     }
                     break;
+                }
                 case FR_ACTION_EXTRACTING_FILES:
                     dlg.accept();
+                    break;
+                default:
                     break;
                 };
             });

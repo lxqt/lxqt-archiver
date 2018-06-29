@@ -23,6 +23,7 @@
 #include <QLineEdit>
 #include <QToolBar>
 #include <QMenu>
+#include <QInputDialog>
 
 #include <QDebug>
 
@@ -181,7 +182,7 @@ void MainWindow::on_actionAddFolder_triggered(bool checked) {
             baseDir = "/";
         }
         archiver_->addDirectory(path, baseDir,
-                                false, nullptr, false, FR_COMPRESSION_NORMAL, 0);
+                                false, password_.empty() ? nullptr : password_.c_str(), encryptHeader_, FR_COMPRESSION_NORMAL, 0);
     }
 }
 
@@ -205,6 +206,10 @@ void MainWindow::on_actionExtract_triggered(bool checked) {
     QFileDialog dlg;
     QUrl dirUrl = QFileDialog::getExistingDirectoryUrl(this, QString(), QUrl(), (QFileDialog::ShowDirsOnly | QFileDialog::DontUseNativeDialog));
     if(!dirUrl.isEmpty()) {
+        if(archiver_->isEncrypted() && password_.empty()) {
+            password_ = PasswordDialog::askPassword(this).toStdString();
+        }
+
         auto files = selectedFiles();
         if(files.empty()) {
             archiver_->extractAll(dirUrl.toEncoded().constData(), false, false, false,
@@ -472,7 +477,7 @@ void MainWindow::showFileList(const std::vector<const ArchiverItem *> &files) {
                                      << tr("File Type")
                                      << tr("File Size")
                                      << tr("Modified")
-                                     << tr("*")
+                                     << tr("Encrypted")
     );
 
     if(viewMode_ == ViewMode::DirTree) {
@@ -601,6 +606,7 @@ QModelIndex MainWindow::indexFromItem(const QModelIndex &parent, const ArchiverI
     }
     return index;
 }
+
 
 void MainWindow::updateDirTree() {
     // update the dir tree view at left pane
