@@ -23,6 +23,8 @@ public:
 
     FrAction finishAction() const;
 
+    void reject() override;
+
 private Q_SLOTS:
     void onProgress(double fraction);
 

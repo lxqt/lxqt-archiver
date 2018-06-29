@@ -7,7 +7,7 @@
 ProgressDialog::ProgressDialog(QWidget* parent) :
     QDialog(parent),
     ui_{new Ui::ProgressDialog{}},
-archiver_{nullptr} {
+    archiver_{nullptr} {
 
     ui_->setupUi(this);
 
@@ -28,6 +28,13 @@ void ProgressDialog::setArchiver(Archiver* archiver) {
     connect(archiver, &Archiver::progress, this, &ProgressDialog::onProgress);
     connect(archiver, &Archiver::message, this, &ProgressDialog::onMessage);
     connect(archiver, &Archiver::workingArchive, this, &ProgressDialog::onWorkingArchive);
+}
+
+void ProgressDialog::reject() {
+    QDialog::reject();
+    if(archiver_) {
+        archiver_->stopCurrentAction();
+    }
 }
 
 void ProgressDialog::onProgress(double fraction) {
