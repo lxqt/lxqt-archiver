@@ -84,6 +84,8 @@ private Q_SLOTS:
 
     void on_actionReload_triggered(bool checked);
 
+    void on_actionStop_triggered(bool checked);
+
     void on_actionAbout_triggered(bool checked);
 
     void onDirTreeSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected);

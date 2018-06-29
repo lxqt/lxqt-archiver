@@ -386,9 +386,6 @@
    </property>
   </action>
   <action name="actionStop">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
    <property name="icon">
     <iconset theme="process-stop">
      <normaloff>.</normaloff>.</iconset>

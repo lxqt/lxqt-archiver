@@ -371,6 +371,11 @@ void MainWindow::on_actionReload_triggered(bool /*checked*/) {
     }
 }
 
+void MainWindow::on_actionStop_triggered(bool /*checked*/) {
+    archiver_->stopCurrentAction();
+}
+
+
 void MainWindow::on_actionAbout_triggered(bool /*checked*/) {
     QDialog dlg{this};
     Ui::AboutDialog ui;
