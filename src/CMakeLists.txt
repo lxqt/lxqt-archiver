@@ -7,10 +7,6 @@ include_directories(
     ${CMAKE_CURRENT_BINARY_DIR}
 )
 
-add_definitions(
-    -DQT_NO_KEYWORDS
-)
-
 set(lxqt-archiver_HDRS
 )
 
@@ -29,6 +25,7 @@ set(lxqt-archiver_UI
     mainwindow.ui
     progressdialog.ui
     passworddialog.ui
+    about.ui
 )
 
 # Translations
@@ -55,10 +52,13 @@ add_executable(lxqt-archiver
     ${lxqt-archiver_UI}
     ${DESKTOP_FILES}
 )
-set_property(
-     TARGET lxqt-archiver APPEND
-     PROPERTY COMPILE_DEFINITIONS
-     PAVUCONTROL_QT_DATA_DIR="${CMAKE_INSTALL_PREFIX}/share/${PROJECT_NAME}"
+
+target_compile_definitions(lxqt-archiver
+    PRIVATE
+        LXQT_ARCHIVER_DATA_DIR="${CMAKE_INSTALL_PREFIX}/share/lxqt-archiver"
+        LXQT_ARCHIVER_VERSION="${LXQT_ARCHIVER_VERSION}"
+        QT_NO_FOREACH
+        QT_NO_KEYWORDS
 )
 
 target_link_libraries(lxqt-archiver

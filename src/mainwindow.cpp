@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "ui_about.h"
 
 #include "archiver.h"
 #include "archiveritem.h"
@@ -277,7 +278,11 @@ void MainWindow::on_actionReload_triggered(bool checked) {
 }
 
 void MainWindow::on_actionAbout_triggered(bool checked) {
-    QMessageBox::about(this, tr("About LXQt Archiver"), tr("File Archiver for LXQt.\n\nCopyright (C) 2018 LXQt team."));
+    QDialog dlg{this};
+    Ui::AboutDialog ui;
+    ui.setupUi(&dlg);
+    ui.version->setText(tr("Version: %1").arg(LXQT_ARCHIVER_VERSION));
+    dlg.exec();
 }
 
 void MainWindow::onDirTreeSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected) {

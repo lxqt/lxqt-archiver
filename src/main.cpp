@@ -126,6 +126,7 @@ static int runApp(int argc, char** argv) {
     char*        add_to_uri = NULL;
 
     QApplication app(argc, argv);
+    app.setApplicationVersion(LXQT_ARCHIVER_VERSION);
     app.setQuitOnLastWindowClosed(true);
 
     if(remaining_args == NULL) {  /* No archive specified. */
