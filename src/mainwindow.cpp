@@ -26,6 +26,8 @@
 #include <QMenu>
 #include <QInputDialog>
 #include <QFormLayout>
+#include <QBoxLayout>
+#include <QCheckBox>
 
 #include <QDebug>
 
@@ -172,6 +174,14 @@ void MainWindow::on_actionAddFiles_triggered(bool checked) {
     Fm::FileDialog dlg{this};
     dlg.setFileMode(QFileDialog::ExistingFiles);
     dlg.setNameFilters(QStringList{} << tr("All files (*)"));
+
+    // only add the files if they are newer
+    auto onlyIfNewerCheckbox = new QCheckBox{tr("Add only if &newer"), &dlg};
+    auto layout = qobject_cast<QBoxLayout*>(dlg.layout());
+    if(layout) {
+        layout->addWidget(onlyIfNewerCheckbox);
+    }
+
     if(dlg.exec() != QDialog::Accepted)
         return;
 
@@ -179,8 +189,10 @@ void MainWindow::on_actionAddFiles_triggered(bool checked) {
     qDebug() << "selected:" << fileUrls;
     if(!fileUrls.isEmpty()) {
         auto srcPaths = Fm::pathListFromQUrls(fileUrls);
-        archiver_->addFiles(srcPaths, currentDirPath_.c_str(), false,
-                            password_.empty() ? nullptr : password_.c_str(), encryptHeader_, FR_COMPRESSION_NORMAL, 0);
+        archiver_->addFiles(srcPaths, currentDirPath_.c_str(),
+                            onlyIfNewerCheckbox->isChecked(),
+                            password_.empty() ? nullptr : password_.c_str(),
+                            encryptHeader_, FR_COMPRESSION_NORMAL, 0);
     }
 }
 
@@ -188,6 +200,14 @@ void MainWindow::on_actionAddFolder_triggered(bool checked) {
     Fm::FileDialog dlg{this};
     dlg.setOptions(QFileDialog::ShowDirsOnly | QFileDialog::HideNameFilterDetails);
     dlg.setFileMode(QFileDialog::Directory);
+
+    // only add the files if they are newer
+    auto onlyIfNewerCheckbox = new QCheckBox{tr("Add only if &newer"), &dlg};
+    auto layout = qobject_cast<QBoxLayout*>(dlg.layout());
+    if(layout) {
+        layout->addWidget(onlyIfNewerCheckbox);
+    }
+
     if(dlg.exec() != QDialog::Accepted) {
         return;
     }
@@ -196,7 +216,9 @@ void MainWindow::on_actionAddFolder_triggered(bool checked) {
     if(!dirUrl.isEmpty()) {
         auto path = Fm::FilePath::fromUri(dirUrl.toEncoded().constData());
         archiver_->addDirectory(path, currentDirPath_.c_str(),
-                                false, password_.empty() ? nullptr : password_.c_str(), encryptHeader_, FR_COMPRESSION_NORMAL, 0);
+                                onlyIfNewerCheckbox->isChecked(),
+                                password_.empty() ? nullptr : password_.c_str(),
+                                encryptHeader_, FR_COMPRESSION_NORMAL, 0);
     }
 }
 
