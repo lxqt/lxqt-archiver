@@ -43,6 +43,10 @@
 #include <QApplication>
 #include <QFileDialog>
 #include <QMessageBox>
+#include <QTranslator>
+#include <QLocale>
+#include <QLibraryInfo>
+
 
 gint          ForceDirectoryCreation;
 
@@ -129,6 +133,19 @@ static int runApp(int argc, char** argv) {
     app.setApplicationVersion(LXQT_ARCHIVER_VERSION);
     app.setQuitOnLastWindowClosed(true);
 
+    // load translations
+    // install the translations built-into Qt itself
+    QTranslator qtTranslator;
+    qtTranslator.load("qt_" + QLocale::system().name(), QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+    app.installTranslator(&qtTranslator);
+
+    // install our own tranlations
+    QTranslator translator;
+    translator.load("lxqt-archiver_" + QLocale::system().name(), LXQT_ARCHIVER_DATA_DIR "/translations");
+    app.installTranslator(&translator);
+
+    // handle command line options
+
     if(remaining_args == NULL) {  /* No archive specified. */
         auto mainWin = new MainWindow();
         mainWin->show();
@@ -198,7 +215,7 @@ static int runApp(int argc, char** argv) {
         // we can only add files after the archive is fully created
         QObject::connect(&archiver, &Archiver::finish, &dlg, [&](FrAction action, ArchiverError err) {
             if(err.hasError()) {
-                QMessageBox::critical(&dlg, dlg.tr("Error"), err.message());
+                QMessageBox::critical(&dlg, QObject::tr("Error"), err.message());
                 dlg.reject();
                 return;
             }
@@ -230,7 +247,7 @@ static int runApp(int argc, char** argv) {
             // we can only start archive extraction after its content is fully loaded
             QObject::connect(&archiver, &Archiver::finish, &dlg, [&](FrAction action, ArchiverError err) {
                 if(err.hasError()) {
-                    QMessageBox::critical(&dlg, dlg.tr("Error"), err.message());
+                    QMessageBox::critical(&dlg, QObject::tr("Error"), err.message());
                     dlg.reject();
                     return;
                 }

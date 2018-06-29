@@ -39,7 +39,7 @@ lxqt_translate_ts(lxqt-archiver_QM_FILES
         ${lxqt-archiver_SRCS}
         ${lxqt-archiver_UI}
     INSTALL_DIR
-        "${CMAKE_INSTALL_DATADIR}/${PROJECT_NAME}/translations"
+        "${CMAKE_INSTALL_DATADIR}/lxqt-archiver/translations"
 )
 
 lxqt_translate_desktop(DESKTOP_FILES
@@ -50,7 +50,6 @@ lxqt_translate_desktop(DESKTOP_FILES
 add_executable(lxqt-archiver
     ${lxqt-archiver_SRCS}
     ${lxqt-archiver_QM_FILES}
-    ${lxqt-archiver_QM_LOADER}
     ${lxqt-archiver_UI}
     ${DESKTOP_FILES}
 )

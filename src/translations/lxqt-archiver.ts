@@ -556,8 +556,14 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="167"/>
+        <location filename="../main.cpp" line="184"/>
         <source>All files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="218"/>
+        <location filename="../main.cpp" line="250"/>
+        <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
