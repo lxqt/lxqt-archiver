@@ -35,6 +35,7 @@
 #include <libfm-qt/core/fileinfojob.h>
 #include <libfm-qt/utilities.h>
 #include <libfm-qt/filepropsdialog.h>
+#include <libfm-qt/filedialog.h>
 // #include <libfm-qt/pathbar.h>
 
 #include <map>
@@ -127,11 +128,12 @@ void MainWindow::setFileName(const QString &fileName) {
 }
 
 void MainWindow::on_actionCreateNew_triggered(bool checked) {
-    QFileDialog dlg{this};
+    Fm::FileDialog dlg{this};
+    dlg.setAcceptMode(QFileDialog::AcceptSave);
     dlg.setNameFilters(Archiver::supportedCreateNameFilters() << tr("All files (*)"));
     dlg.setAcceptMode(QFileDialog::AcceptSave);
     if(dlg.exec() == QDialog::Accepted) {
-        auto url = dlg.selectedUrls()[0];
+        auto url = dlg.selectedFiles()[0];
         if(!url.isEmpty()) {
             archiver_->createNewArchive(url);
         }
@@ -140,12 +142,13 @@ void MainWindow::on_actionCreateNew_triggered(bool checked) {
 
 void MainWindow::on_actionOpen_triggered(bool checked) {
     qDebug("open");
-    QFileDialog dlg;
+    Fm::FileDialog dlg{this};
+    dlg.setFileMode(QFileDialog::ExistingFile);
     dlg.setNameFilters(Archiver::supportedOpenNameFilters() << tr("All files (*)"));
     qDebug() << Archiver::supportedOpenMimeTypes();
     dlg.setAcceptMode(QFileDialog::AcceptOpen);
     if(dlg.exec() == QDialog::Accepted) {
-        auto url = dlg.selectedUrls()[0];
+        auto url = dlg.selectedFiles()[0];
         if(!url.isEmpty()) {
             loadFile(Fm::FilePath::fromUri(url.toEncoded()));
         }
@@ -166,7 +169,14 @@ void MainWindow::on_actionArchiveProperties_triggered(bool checked) {
 }
 
 void MainWindow::on_actionAddFiles_triggered(bool checked) {
-    auto fileUrls = QFileDialog::getOpenFileUrls(this);
+    Fm::FileDialog dlg{this};
+    dlg.setFileMode(QFileDialog::ExistingFiles);
+    dlg.setNameFilters(QStringList{} << tr("All files (*)"));
+    if(dlg.exec() != QDialog::Accepted)
+        return;
+
+    auto fileUrls = dlg.selectedFiles();
+    qDebug() << "selected:" << fileUrls;
     if(!fileUrls.isEmpty()) {
         auto srcPaths = Fm::pathListFromQUrls(fileUrls);
         archiver_->addFiles(srcPaths, currentDirPath_.c_str(), false,
@@ -175,8 +185,14 @@ void MainWindow::on_actionAddFiles_triggered(bool checked) {
 }
 
 void MainWindow::on_actionAddFolder_triggered(bool checked) {
-    QFileDialog dlg;
-    QUrl dirUrl = QFileDialog::getExistingDirectoryUrl(this, QString(), QUrl(), (QFileDialog::ShowDirsOnly | QFileDialog::DontUseNativeDialog));
+    Fm::FileDialog dlg{this};
+    dlg.setOptions(QFileDialog::ShowDirsOnly | QFileDialog::HideNameFilterDetails);
+    dlg.setFileMode(QFileDialog::Directory);
+    if(dlg.exec() != QDialog::Accepted) {
+        return;
+    }
+
+    QUrl dirUrl = dlg.selectedFiles()[0];
     if(!dirUrl.isEmpty()) {
         auto path = Fm::FilePath::fromUri(dirUrl.toEncoded().constData());
         archiver_->addDirectory(path, currentDirPath_.c_str(),
@@ -201,8 +217,14 @@ void MainWindow::on_actionSelectAll_triggered(bool checked) {
 
 void MainWindow::on_actionExtract_triggered(bool checked) {
     qDebug("extract");
-    QFileDialog dlg;
-    QUrl dirUrl = QFileDialog::getExistingDirectoryUrl(this, QString(), QUrl(), (QFileDialog::ShowDirsOnly | QFileDialog::DontUseNativeDialog));
+    Fm::FileDialog dlg{this};
+    dlg.setOptions(QFileDialog::ShowDirsOnly | QFileDialog::HideNameFilterDetails);
+    dlg.setFileMode(QFileDialog::Directory);
+    if(dlg.exec() != QDialog::Accepted) {
+        return;
+    }
+
+    QUrl dirUrl = dlg.selectedFiles()[0];
     if(!dirUrl.isEmpty()) {
         if(archiver_->isEncrypted() && password_.empty()) {
             password_ = PasswordDialog::askPassword(this).toStdString();
