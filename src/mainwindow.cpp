@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "ui_about.h"
 #include "ui_create.h"
+#include "ui_extract.h"
 
 #include "archiver.h"
 #include "archiveritem.h"
@@ -147,7 +148,10 @@ void MainWindow::on_actionCreateNew_triggered(bool checked) {
     QWidget extraWidget;
     Ui::CreateArchiveExtraWidget extraUi;
     extraUi.setupUi(&extraWidget);
-    dlg.layout()->addWidget(&extraWidget);
+    auto layout = qobject_cast<QBoxLayout*>(dlg.layout());
+    if(layout) {
+        layout->addWidget(&extraWidget);
+    }
 
     if(dlg.exec() == QDialog::Accepted) {
         password_ = extraUi.password->text().toStdString();
@@ -267,6 +271,29 @@ void MainWindow::on_actionExtract_triggered(bool checked) {
     Fm::FileDialog dlg{this};
     dlg.setOptions(QFileDialog::ShowDirsOnly | QFileDialog::HideNameFilterDetails);
     dlg.setFileMode(QFileDialog::Directory);
+
+    // add extra options
+    QWidget extraWidget;
+    Ui::ExtractArchiveExtraWidget extraUi;
+    extraUi.setupUi(&extraWidget);
+    auto layout = qobject_cast<QBoxLayout*>(dlg.layout());
+    if(layout) {
+        layout->addWidget(&extraWidget);
+    }
+
+    auto files = selectedFiles();
+    // check if the user has selected some files
+    if(files.empty()) {
+        // No files are selected. The user can only extract all
+        extraUi.extractAll->setChecked(true);
+        extraUi.extractSelected->setEnabled(false);
+    }
+    else {
+        // Some files are selected. Extract the selected files by default.
+        extraUi.extractSelected->setChecked(true);
+        extraUi.extractSelected->setEnabled(true);
+    }
+
     if(dlg.exec() != QDialog::Accepted) {
         return;
     }
@@ -277,9 +304,16 @@ void MainWindow::on_actionExtract_triggered(bool checked) {
             password_ = PasswordDialog::askPassword(this).toStdString();
         }
 
-        auto files = selectedFiles();
-        if(files.empty()) {
-            archiver_->extractAll(dirUrl.toEncoded().constData(), false, false, false,
+        bool skipOlder = extraUi.skipOlder->isChecked();
+        bool overwrite = extraUi.overwriteExisting->isChecked();
+        bool reCreateFolders = extraUi.reCreateFolders->isChecked();
+        bool extractAll = extraUi.extractAll->isChecked();
+
+        if(extractAll) {
+            archiver_->extractAll(dirUrl.toEncoded().constData(),
+                                  skipOlder,
+                                  overwrite,
+                                  reCreateFolders,
                                   password_.empty() ? nullptr : password_.c_str());
         }
         else {
@@ -290,7 +324,12 @@ void MainWindow::on_actionExtract_triggered(bool checked) {
             if(baseDir.empty() || baseDir.back() != '/') {
                 baseDir += '/';
             }
-            archiver_->extractFiles(files, destDir, currentDirPath_.c_str(), false, false, false,
+            archiver_->extractFiles(files,
+                                    destDir,
+                                    currentDirPath_.c_str(),
+                                    skipOlder,
+                                    overwrite,
+                                    reCreateFolders,
                                     password_.empty() ? nullptr : password_.c_str()
             );
         }

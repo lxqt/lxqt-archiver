@@ -26,6 +26,7 @@ set(lxqt-archiver_UI
     progressdialog.ui
     passworddialog.ui
     create.ui
+    extract.ui
     about.ui
 )
 
