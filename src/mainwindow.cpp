@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "ui_about.h"
+#include "ui_create.h"
 
 #include "archiver.h"
 #include "archiveritem.h"
@@ -28,6 +29,7 @@
 #include <QFormLayout>
 #include <QBoxLayout>
 #include <QCheckBox>
+#include <QSpinBox>
 
 #include <QDebug>
 
@@ -118,6 +120,12 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::loadFile(const Fm::FilePath &file) {
+    // FIXME: how should we set these values after loading an existing archive?
+    password_.clear();
+    encryptHeader_ = false;
+    splitVolumes_ = false;
+    volumeSize_ = 0;
+
     archiver_->openArchive(file.uri().get(), nullptr);
 }
 
@@ -134,7 +142,18 @@ void MainWindow::on_actionCreateNew_triggered(bool checked) {
     dlg.setAcceptMode(QFileDialog::AcceptSave);
     dlg.setNameFilters(Archiver::supportedCreateNameFilters() << tr("All files (*)"));
     dlg.setAcceptMode(QFileDialog::AcceptSave);
+
+    // extra options
+    QWidget extraWidget;
+    Ui::CreateArchiveExtraWidget extraUi;
+    extraUi.setupUi(&extraWidget);
+    dlg.layout()->addWidget(&extraWidget);
+
     if(dlg.exec() == QDialog::Accepted) {
+        password_ = extraUi.password->text().toStdString();
+        encryptHeader_ = extraUi.encryptFileList->isChecked();
+        splitVolumes_ = extraUi.splitVolumes->isChecked();
+
         auto url = dlg.selectedFiles()[0];
         if(!url.isEmpty()) {
             archiver_->createNewArchive(url);
@@ -189,10 +208,13 @@ void MainWindow::on_actionAddFiles_triggered(bool checked) {
     qDebug() << "selected:" << fileUrls;
     if(!fileUrls.isEmpty()) {
         auto srcPaths = Fm::pathListFromQUrls(fileUrls);
-        archiver_->addFiles(srcPaths, currentDirPath_.c_str(),
+        archiver_->addFiles(srcPaths,
+                            currentDirPath_.c_str(),
                             onlyIfNewerCheckbox->isChecked(),
                             password_.empty() ? nullptr : password_.c_str(),
-                            encryptHeader_, FR_COMPRESSION_NORMAL, 0);
+                            encryptHeader_,
+                            FR_COMPRESSION_NORMAL,
+                            splitVolumes_ ? volumeSize_ : 0);
     }
 }
 
@@ -215,10 +237,13 @@ void MainWindow::on_actionAddFolder_triggered(bool checked) {
     QUrl dirUrl = dlg.selectedFiles()[0];
     if(!dirUrl.isEmpty()) {
         auto path = Fm::FilePath::fromUri(dirUrl.toEncoded().constData());
-        archiver_->addDirectory(path, currentDirPath_.c_str(),
+        archiver_->addDirectory(path,
+                                currentDirPath_.c_str(),
                                 onlyIfNewerCheckbox->isChecked(),
                                 password_.empty() ? nullptr : password_.c_str(),
-                                encryptHeader_, FR_COMPRESSION_NORMAL, 0);
+                                encryptHeader_,
+                                FR_COMPRESSION_NORMAL,
+                                splitVolumes_ ? volumeSize_ : 0);
     }
 }
 

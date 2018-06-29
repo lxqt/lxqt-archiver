@@ -149,6 +149,8 @@ private:
     const ArchiverItem* currentDirItem_;
     std::string password_;
     bool encryptHeader_;
+    bool splitVolumes_;
+    unsigned int volumeSize_;
 };
 
 #endif // MAINWINDOW_H
