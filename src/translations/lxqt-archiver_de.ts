@@ -6,7 +6,7 @@
     <message>
         <location filename="../about.ui" line="14"/>
         <source>About</source>
-        <translation></translation>
+        <translation>Über</translation>
     </message>
     <message>
         <location filename="../about.ui" line="24"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../about.ui" line="77"/>
         <source>Authors</source>
-        <translation></translation>
+        <translation>Autoren</translation>
     </message>
     <message>
         <location filename="../about.ui" line="86"/>
@@ -42,7 +42,7 @@ LXQt Archiver is derived from the following programs:
     <message>
         <location filename="../about.ui" line="103"/>
         <source>License</source>
-        <translation></translation>
+        <translation>Lizenz</translation>
     </message>
     <message>
         <location filename="../about.ui" line="112"/>
@@ -142,7 +142,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../create.ui" line="43"/>
         <source>Password:</source>
-        <translation></translation>
+        <translation>Kennwort:</translation>
     </message>
     <message>
         <location filename="../create.ui" line="50"/>
@@ -155,7 +155,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="23"/>
         <source>Extract</source>
-        <translation></translation>
+        <translation>Entpacken</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="29"/>
@@ -170,7 +170,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="59"/>
         <source>Actions</source>
-        <translation></translation>
+        <translation>Aktionen</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="65"/>
@@ -199,62 +199,62 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="97"/>
         <source>&amp;File</source>
-        <translation></translation>
+        <translation>&amp;Datei</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="112"/>
         <source>&amp;Edit</source>
-        <translation></translation>
+        <translation>&amp;Bearbeiten</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="131"/>
         <source>&amp;View</source>
-        <translation></translation>
+        <translation>&amp;Ansicht</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="146"/>
         <source>&amp;Help</source>
-        <translation></translation>
+        <translation>&amp;Hilfe</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="157"/>
         <source>toolBar</source>
-        <translation></translation>
+        <translation>Werkzeugleiste</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="182"/>
         <source>&amp;About</source>
-        <translation></translation>
+        <translation>&amp;Über</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="191"/>
         <source>&amp;New</source>
-        <translation></translation>
+        <translation>&amp;Neu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="194"/>
         <source>Ctrl+N</source>
-        <translation></translation>
+        <translation>Strg+N</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="203"/>
         <source>&amp;Open</source>
-        <translation></translation>
+        <translation>&amp;Öffnen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
         <source>Ctrl+O</source>
-        <translation></translation>
+        <translation>Strg+O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="214"/>
         <source>Save &amp;As</source>
-        <translation></translation>
+        <translation>Speichern &amp;unter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="219"/>
         <source>&amp;Extract</source>
-        <translation></translation>
+        <translation>&amp;Entpacken</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="224"/>
@@ -264,7 +264,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="232"/>
         <source>&amp;Properties</source>
-        <translation></translation>
+        <translation>&amp;Eigenschaften</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="235"/>
@@ -274,47 +274,47 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="244"/>
         <source>&amp;Close</source>
-        <translation></translation>
+        <translation>&amp;Schließen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="247"/>
         <source>Ctrl+Q</source>
-        <translation></translation>
+        <translation>Strg+Q</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="255"/>
         <source>Cu&amp;t</source>
-        <translation></translation>
+        <translation>&amp;Ausschneiden</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="258"/>
         <source>Ctrl+X</source>
-        <translation></translation>
+        <translation>Strg+X</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="266"/>
         <source>&amp;Copy</source>
-        <translation></translation>
+        <translation>&amp;Kopieren</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="269"/>
         <source>Ctrl+C</source>
-        <translation></translation>
+        <translation>Strg+C</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="277"/>
         <source>&amp;Paste</source>
-        <translation></translation>
+        <translation>&amp;Einfügen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="280"/>
         <source>Ctrl+V</source>
-        <translation></translation>
+        <translation>Strg+V</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="288"/>
         <source>&amp;Rename</source>
-        <translation></translation>
+        <translation>&amp;Umbenennen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="291"/>
@@ -324,37 +324,37 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="296"/>
         <source>&amp;Delete</source>
-        <translation></translation>
+        <translation>&amp;Löschen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="299"/>
         <source>Del</source>
-        <translation></translation>
+        <translation>Entf</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="304"/>
         <source>&amp;Select All</source>
-        <translation></translation>
+        <translation>Alles a&amp;uswählen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="307"/>
         <source>Ctrl+A</source>
-        <translation></translation>
+        <translation>Strg+A</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="315"/>
         <source>&amp;Find</source>
-        <translation></translation>
+        <translation>&amp;Suchen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="318"/>
         <source>Ctrl+F</source>
-        <translation></translation>
+        <translation>Strg+F</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="323"/>
         <source>&amp;Add Files</source>
-        <translation></translation>
+        <translation>&amp;Files hinzufügen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="328"/>
@@ -364,12 +364,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="333"/>
         <source>Pass&amp;word</source>
-        <translation></translation>
+        <translation>Pass&amp;wort</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="344"/>
         <source>&amp;Toolbar</source>
-        <translation></translation>
+        <translation>&amp;Werkzeugleiste</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="355"/>
@@ -379,7 +379,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="366"/>
         <source>&amp;Directory Tree</source>
-        <translation></translation>
+        <translation>&amp;Verzeichnisbaum</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="377"/>
@@ -389,7 +389,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="385"/>
         <source>Show &amp;All Files</source>
-        <translation></translation>
+        <translation>Zeige &amp;alle Dateien</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="394"/>
@@ -404,7 +404,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="402"/>
         <source>&amp;Reload</source>
-        <translation></translation>
+        <translation>Neu &amp;laden</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="405"/>
@@ -421,7 +421,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../mainwindow.cpp" line="172"/>
         <location filename="../mainwindow.cpp" line="199"/>
         <source>All files (*)</source>
-        <translation></translation>
+        <translation>Alle Dateien (*)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="202"/>
@@ -432,7 +432,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="255"/>
         <source>Confirm</source>
-        <translation></translation>
+        <translation>Bestätigung</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="255"/>
@@ -452,7 +452,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="510"/>
         <source>Success</source>
-        <translation></translation>
+        <translation>Erfolg</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="510"/>
@@ -462,7 +462,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="535"/>
         <source>Error</source>
-        <translation></translation>
+        <translation>Fehler</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="563"/>
@@ -472,42 +472,42 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="567"/>
         <source>Uncompressed Size:</source>
-        <translation></translation>
+        <translation>Unkomprimierte Größe:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="569"/>
         <source>Compression Ratio:</source>
-        <translation></translation>
+        <translation>Kompressionsverhältnis:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="622"/>
         <source>File name</source>
-        <translation></translation>
+        <translation>Dateiname</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="623"/>
         <source>File Type</source>
-        <translation></translation>
+        <translation>Dateityp</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="624"/>
         <source>File Size</source>
-        <translation></translation>
+        <translation>Dateigröße</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="625"/>
         <source>Modified</source>
-        <translation></translation>
+        <translation>Geändert</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="626"/>
         <source>Encrypted</source>
-        <translation></translation>
+        <translation>Verschlüsselt</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="656"/>
         <source>%1 files</source>
-        <translation></translation>
+        <translation>%1 Dateien</translation>
     </message>
 </context>
 <context>
@@ -516,7 +516,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../passworddialog.ui" line="14"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password</source>
-        <translation></translation>
+        <translation>Kennwort</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="20"/>
@@ -526,13 +526,13 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../passworddialog.ui" line="34"/>
         <source>Show password</source>
-        <translation></translation>
+        <translation>Zeige das Kennwort</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="48"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password:</source>
-        <translation></translation>
+        <translation>Kennwort:</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="61"/>
@@ -545,7 +545,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../progressdialog.ui" line="14"/>
         <source>Progress</source>
-        <translation></translation>
+        <translation>Fortschritt</translation>
     </message>
     <message>
         <location filename="../progressdialog.cpp" line="17"/>
@@ -558,13 +558,13 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../main.cpp" line="184"/>
         <source>All files (*)</source>
-        <translation></translation>
+        <translation>Alle Dateien (*)</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="218"/>
         <location filename="../main.cpp" line="250"/>
         <source>Error</source>
-        <translation></translation>
+        <translation>Fehler</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="6"/>
@@ -728,7 +728,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="48"/>
         <location filename="../corestrs.h" line="63"/>
         <source>Extracting file: </source>
-        <translation></translation>
+        <translation>Entpacke Datei: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="42"/>
@@ -739,7 +739,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="46"/>
         <location filename="../corestrs.h" line="62"/>
         <source>Removing file: </source>
-        <translation></translation>
+        <translation>Entferne Datei: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="47"/>
@@ -759,7 +759,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="53"/>
         <source>File not found.</source>
-        <translation></translation>
+        <translation>Datei nicht gefunden.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="54"/>
