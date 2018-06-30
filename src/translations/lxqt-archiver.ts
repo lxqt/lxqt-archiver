@@ -392,27 +392,27 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="397"/>
+        <location filename="../mainwindow.ui" line="394"/>
         <source>St&amp;op</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="400"/>
+        <location filename="../mainwindow.ui" line="397"/>
         <source>Esc</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="405"/>
+        <location filename="../mainwindow.ui" line="402"/>
         <source>&amp;Reload</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="408"/>
+        <location filename="../mainwindow.ui" line="405"/>
         <source>F5</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="413"/>
+        <location filename="../mainwindow.ui" line="410"/>
         <source>Filename &amp;Encoding</source>
         <translation type="unfinished"></translation>
     </message>
@@ -440,72 +440,72 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="378"/>
+        <location filename="../mainwindow.cpp" line="383"/>
         <source>Version: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="429"/>
+        <location filename="../mainwindow.cpp" line="434"/>
         <source>%p %</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="505"/>
+        <location filename="../mainwindow.cpp" line="510"/>
         <source>Success</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="505"/>
+        <location filename="../mainwindow.cpp" line="510"/>
         <source>No errors are found.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="530"/>
+        <location filename="../mainwindow.cpp" line="535"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="558"/>
+        <location filename="../mainwindow.cpp" line="563"/>
         <source>N/A</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="562"/>
+        <location filename="../mainwindow.cpp" line="567"/>
         <source>Uncompressed Size:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="564"/>
+        <location filename="../mainwindow.cpp" line="569"/>
         <source>Compression Ratio:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="617"/>
+        <location filename="../mainwindow.cpp" line="622"/>
         <source>File name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="618"/>
+        <location filename="../mainwindow.cpp" line="623"/>
         <source>File Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="619"/>
+        <location filename="../mainwindow.cpp" line="624"/>
         <source>File Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="620"/>
+        <location filename="../mainwindow.cpp" line="625"/>
         <source>Modified</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="621"/>
+        <location filename="../mainwindow.cpp" line="626"/>
         <source>Encrypted</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="651"/>
+        <location filename="../mainwindow.cpp" line="656"/>
         <source>%1 files</source>
         <translation type="unfinished"></translation>
     </message>
@@ -564,6 +564,231 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../main.cpp" line="218"/>
         <location filename="../main.cpp" line="250"/>
         <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="6"/>
+        <source>7-Zip (.7z)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="7"/>
+        <source>Tar compressed with 7z (.tar.7z)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="8"/>
+        <source>Ace (.ace)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="9"/>
+        <source>Ar (.a)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="10"/>
+        <source>Ar (.ar)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="11"/>
+        <source>Arj (.arj)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="12"/>
+        <source>Tar compressed with bzip2 (.tar.bz2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="13"/>
+        <source>Tar compressed with bzip (.tar.bz)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="14"/>
+        <source>Cabinet (.cab)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="15"/>
+        <source>Rar Archived Comic Book (.cbr)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="16"/>
+        <source>Zip Archived Comic Book (.cbz)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="17"/>
+        <source>Tar compressed with gzip (.tar.gz)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="18"/>
+        <source>Ear (.ear)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="19"/>
+        <source>Self-extracting zip (.exe)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="20"/>
+        <source>Jar (.jar)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="21"/>
+        <source>Lha (.lzh)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="22"/>
+        <source>Lrzip (.lrz)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="23"/>
+        <source>Tar compressed with lrzip (.tar.lrz)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="24"/>
+        <source>Tar compressed with lzip (.tar.lz)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="25"/>
+        <source>Tar compressed with lzma (.tar.lzma)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="26"/>
+        <source>Tar compressed with lzop (.tar.lzo)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="27"/>
+        <source>Windows Imaging Format (.wim)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="28"/>
+        <source>Rar (.rar)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="29"/>
+        <source>Tar uncompressed (.tar)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="30"/>
+        <source>Tar compressed with compress (.tar.Z)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="31"/>
+        <source>War (.war)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="32"/>
+        <source>Xz (.xz)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="33"/>
+        <source>Tar compressed with xz (.tar.xz)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="34"/>
+        <source>Zoo (.zoo)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="35"/>
+        <source>Zip (.zip)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="38"/>
+        <location filename="../corestrs.h" line="45"/>
+        <location filename="../corestrs.h" line="61"/>
+        <source>Adding file: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="39"/>
+        <location filename="../corestrs.h" line="48"/>
+        <location filename="../corestrs.h" line="63"/>
+        <source>Extracting file: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="42"/>
+        <source>%d %B %Y, %H:%M</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="46"/>
+        <location filename="../corestrs.h" line="62"/>
+        <source>Removing file: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="47"/>
+        <source>Deleting files from archive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="49"/>
+        <source>Recompressing archive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="50"/>
+        <source>Decompressing archive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="53"/>
+        <source>File not found.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="54"/>
+        <source>Archive type not supported.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="55"/>
+        <source>Archive not found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="56"/>
+        <source>You don&apos;t have the right permissions.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="57"/>
+        <source>This archive type cannot be modified</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="58"/>
+        <source>You can&apos;t add an archive to itself.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="64"/>
+        <source>Could not find the volume: %s</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

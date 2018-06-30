@@ -25,7 +25,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <glib.h>
-#include <glib/gi18n.h>
+#include "tr-wrapper.h"
 #include <json-glib/json-glib.h>
 #include "file-data.h"
 #include "file-utils.h"

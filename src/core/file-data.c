@@ -21,7 +21,7 @@
  */
 
 #include <config.h>
-#include <glib/gi18n.h>
+#include "tr-wrapper.h"
 #include <gio/gio.h>
 #include "glib-utils.h"
 #include "file-utils.h"

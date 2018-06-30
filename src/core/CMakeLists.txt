@@ -9,6 +9,7 @@ add_definitions(
 )
 
 add_library(lxqt-archiver-core STATIC
+    tr-wrapper.c  # our own wrapper for QTranslater
     file-data.c
     file-utils.c
     fr-archive.c

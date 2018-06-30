@@ -23,7 +23,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <glib.h>
-#include <glib/gi18n.h>
+#include "tr-wrapper.h"
 #include <glib/gprintf.h>
 #include <glib-object.h>
 #include "glib-utils.h"

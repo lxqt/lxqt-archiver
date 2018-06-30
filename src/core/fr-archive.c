@@ -28,7 +28,7 @@
 #include <sys/param.h>
 
 #include <glib.h>
-#include <glib/gi18n.h>
+#include "tr-wrapper.h"
 #include <gio/gio.h>
 #include "glib-utils.h"
 #include "file-utils.h"
@@ -1243,7 +1243,7 @@ copy_remote_file (FrArchive  *archive,
 	if (! g_file_query_exists (archive->file, archive->priv->cancellable)) {
 		GError *error;
 
-		error = g_error_new (G_IO_ERROR, G_IO_ERROR_NOT_FOUND, _("Archive not found"));
+        error = g_error_new (G_IO_ERROR, G_IO_ERROR_NOT_FOUND, _("Archive not found"));
 		fr_archive_copy_done (archive, FR_ACTION_LOADING_ARCHIVE, error);
 		g_error_free (error);
 

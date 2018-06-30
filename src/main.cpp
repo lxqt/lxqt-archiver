@@ -27,14 +27,13 @@
 #include "archiver.h"
 #include "passworddialog.h"
 #include "core/fr-init.h"
-
 #include "core/config.h"
+#include "core/tr-wrapper.h"
 
 #include <string.h>
 #include <sys/types.h>
 #include <signal.h>
 #include <stdlib.h>
-#include <glib/gi18n.h>
 #include <glib.h>
 #include <gio/gio.h>
 
@@ -47,6 +46,8 @@
 #include <QLocale>
 #include <QLibraryInfo>
 
+#include <string>
+#include <unordered_map>
 
 gint          ForceDirectoryCreation;
 
@@ -60,6 +61,7 @@ static char*  default_url = NULL;
 
 /* argv[0] from main(); used as the command to restart the program */
 static const char* program_argv0 = NULL;
+static std::unordered_map<std::string, QByteArray> gettextCache;
 
 static const GOptionEntry options[] = {
     {
@@ -125,24 +127,9 @@ static char* get_uri_from_command_line(const char* path) {
     return uri;
 }
 
-static int runApp(int argc, char** argv) {
+static int runApp(QApplication& app) {
     char*        extract_to_uri = NULL;
     char*        add_to_uri = NULL;
-
-    QApplication app(argc, argv);
-    app.setApplicationVersion(LXQT_ARCHIVER_VERSION);
-    app.setQuitOnLastWindowClosed(true);
-
-    // load translations
-    // install the translations built-into Qt itself
-    QTranslator qtTranslator;
-    qtTranslator.load("qt_" + QLocale::system().name(), QLibraryInfo::location(QLibraryInfo::TranslationsPath));
-    app.installTranslator(&qtTranslator);
-
-    // install our own tranlations
-    QTranslator translator;
-    translator.load("lxqt-archiver_" + QLocale::system().name(), LXQT_ARCHIVER_DATA_DIR "/translations");
-    app.installTranslator(&translator);
 
     // handle command line options
 
@@ -294,6 +281,15 @@ static int runApp(int argc, char** argv) {
 }
 
 
+const char* qtGettext(const char* msg) {
+    auto it = gettextCache.find(msg);
+    if(it == gettextCache.end()) {
+        auto result = QObject::tr(msg).toUtf8();
+        it = gettextCache.emplace(msg, std::move(result)).first;
+    }
+    return it->second.constData();
+}
+
 int main(int argc, char** argv) {
     GOptionContext* context = NULL;
     GError*         error = NULL;
@@ -301,13 +297,28 @@ int main(int argc, char** argv) {
 
     program_argv0 = argv[0];
 
-    bindtextdomain(GETTEXT_PACKAGE, LOCALEDIR);
-    bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8");
-    textdomain(GETTEXT_PACKAGE);
+    QApplication app(argc, argv);
+    app.setApplicationVersion(LXQT_ARCHIVER_VERSION);
+    app.setQuitOnLastWindowClosed(true);
 
+    // load translations
+    // install the translations built-into Qt itself
+    QTranslator qtTranslator;
+    qtTranslator.load("qt_" + QLocale::system().name(), QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+    app.installTranslator(&qtTranslator);
+
+    // install our own tranlations
+    QTranslator translator;
+    translator.load("lxqt-archiver_" + QLocale::system().name(), LXQT_ARCHIVER_DATA_DIR "/translations");
+    app.installTranslator(&translator);
+
+    // set a fake gettext replacement to translate the C code in src/core/*.c taken from engrampa
+    // this function pointer is defined in src/core/tr-wrapper.c
+    qt_gettext = qtGettext;
+
+    // TODO: replace this with QCommandLineParser
     context = g_option_context_new(N_("- Create and modify an archive"));
-    g_option_context_set_translation_domain(context, GETTEXT_PACKAGE);
-    g_option_context_add_main_entries(context, options, GETTEXT_PACKAGE);
+    g_option_context_add_main_entries(context, options, nullptr);
 
     if(! g_option_context_parse(context, &argc, &argv, &error)) {
         g_critical("Failed to parse arguments: %s", error->message);
@@ -324,7 +335,7 @@ int main(int argc, char** argv) {
 
     // FIXME: port command line parsing to Qt
     initialize_data(); // initialize the file-roller core
-    status = runApp(argc, argv);
+    status = runApp(app);
     release_data();
 
     return status;

@@ -7,9 +7,6 @@ include_directories(
     ${CMAKE_CURRENT_BINARY_DIR}
 )
 
-set(lxqt-archiver_HDRS
-)
-
 set(lxqt-archiver_SRCS
     main.cpp
     mainwindow.cpp
@@ -35,7 +32,7 @@ lxqt_translate_ts(lxqt-archiver_QM_FILES
     UPDATE_TRANSLATIONS
         ${UPDATE_TRANSLATIONS}
     SOURCES
-        ${lxqt-archiver_HDRS}
+        corestrs.h  # translatable strings of src/core/*.c genreated using extract_c_strs.py
         ${lxqt-archiver_SRCS}
         ${lxqt-archiver_UI}
     INSTALL_DIR

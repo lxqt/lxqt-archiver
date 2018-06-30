@@ -27,7 +27,7 @@
 #include <time.h>
 
 #include <glib.h>
-#include <glib/gi18n.h>
+#include "tr-wrapper.h"
 
 #include "file-data.h"
 #include "file-utils.h"
