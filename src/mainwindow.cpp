@@ -142,7 +142,6 @@ void MainWindow::on_actionCreateNew_triggered(bool /*checked*/) {
     Fm::FileDialog dlg{this};
     dlg.setAcceptMode(QFileDialog::AcceptSave);
     dlg.setNameFilters(Archiver::supportedCreateNameFilters() << tr("All files (*)"));
-    dlg.setAcceptMode(QFileDialog::AcceptSave);
 
     // extra options
     QWidget extraWidget;
@@ -270,6 +269,8 @@ void MainWindow::on_actionExtract_triggered(bool /*checked*/) {
     qDebug("extract");
     Fm::FileDialog dlg{this};
     dlg.setOptions(QFileDialog::ShowDirsOnly | QFileDialog::HideNameFilterDetails);
+    dlg.setNameFilters(QStringList{} << tr("All files (*)"));
+    dlg.setAcceptMode(QFileDialog::AcceptOpen);
     dlg.setFileMode(QFileDialog::Directory);
 
     // add extra options
