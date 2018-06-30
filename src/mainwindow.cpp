@@ -255,7 +255,7 @@ void MainWindow::on_actionDelete_triggered(bool /*checked*/) {
         return;
     }
     qDebug("delete");
-    auto files = selectedFiles();
+    auto files = selectedFiles(true);
     if(!files.empty()) {
         archiver_->removeFiles(files, FR_COMPRESSION_NORMAL);
     }
@@ -282,7 +282,7 @@ void MainWindow::on_actionExtract_triggered(bool /*checked*/) {
         layout->addWidget(&extraWidget);
     }
 
-    auto files = selectedFiles();
+    auto files = selectedFiles(true);
     // check if the user has selected some files
     if(files.empty()) {
         // No files are selected. The user can only extract all
@@ -708,20 +708,33 @@ void MainWindow::updateUiStates() {
     ui_->actionExtract->setEnabled(canEdit);
 }
 
-std::vector<const FileData*> MainWindow::selectedFiles() {
-    std::vector<const FileData*> files;
+std::vector<const FileData*> MainWindow::selectedFiles(bool recursive) {
+    std::vector<const ArchiverItem *> items;
+    std::vector<const FileData*> results;
+
     // FIXME: use ArchiverItem instead of FileData
     auto selModel = ui_->fileListView->selectionModel();
     if(selModel) {
         auto selIndexes = selModel->selectedRows();
         for(const auto& idx: selIndexes) {
             auto item = itemFromIndex(idx);
-            if(item && item->data()) {
-                files.emplace_back(item->data());
+            if(item) {
+                items.emplace_back(item);
+                if(recursive) {
+                    item->allChildren(items);
+                }
+            }
+        }
+
+        // FIXME: the old code uses FileData here. Later we should all use ArchiveItem instead.
+        for(auto& item: items) {
+            if(item->data()) {
+                qDebug("SEL: %s", item->fullPath());
+                results.emplace_back(item->data());
             }
         }
     }
-    return files;
+    return results;
 }
 
 const ArchiverItem *MainWindow::itemFromIndex(const QModelIndex &index) {

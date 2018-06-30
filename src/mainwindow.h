@@ -132,7 +132,7 @@ private:
 
     void updateUiStates();
 
-    std::vector<const FileData*> selectedFiles();
+    std::vector<const FileData*> selectedFiles(bool recursive);
 
     const ArchiverItem* itemFromIndex(const QModelIndex& index);
 
