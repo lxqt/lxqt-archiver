@@ -574,7 +574,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="7"/>
         <source>Tar compressed with 7z (.tar.7z)</source>
-        <translation type="unfinished"></translation>
+        <translation>使用 7z 壓縮的 Tar 檔案 (.tar.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="8"/>
@@ -599,7 +599,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="12"/>
         <source>Tar compressed with bzip2 (.tar.bz2)</source>
-        <translation type="unfinished"></translation>
+        <translation>使用 bzip2 壓縮的 Tar 檔案 (.tar.bz2)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="13"/>
@@ -721,75 +721,75 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="45"/>
         <location filename="../corestrs.h" line="61"/>
         <source>Adding file: </source>
-        <translation type="unfinished"></translation>
+        <translation>正在加入檔案: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="39"/>
         <location filename="../corestrs.h" line="48"/>
         <location filename="../corestrs.h" line="63"/>
         <source>Extracting file: </source>
-        <translation type="unfinished"></translation>
+        <translation>正在解壓縮檔案: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="42"/>
         <source>%d %B %Y, %H:%M</source>
-        <translation type="unfinished"></translation>
+        <translation>%d %B %Y, %H:%M</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="46"/>
         <location filename="../corestrs.h" line="62"/>
         <source>Removing file: </source>
-        <translation type="unfinished"></translation>
+        <translation>正在移除檔案: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="47"/>
         <source>Deleting files from archive</source>
-        <translation type="unfinished"></translation>
+        <translation>從壓縮檔刪除</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="49"/>
         <source>Recompressing archive</source>
-        <translation type="unfinished"></translation>
+        <translation>重新壓縮檔案</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="50"/>
         <source>Decompressing archive</source>
-        <translation type="unfinished"></translation>
+        <translation>正在解壓縮檔案</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="53"/>
         <source>File not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>找不到檔案</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="54"/>
         <source>Archive type not supported.</source>
-        <translation type="unfinished">檔案格式不支援</translation>
+        <translation>檔案格式不支援</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="55"/>
         <source>Archive not found</source>
-        <translation type="unfinished"></translation>
+        <translation>找不到壓縮檔</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="56"/>
         <source>You don&apos;t have the right permissions.</source>
-        <translation type="unfinished"></translation>
+        <translation>你沒有正確的權限</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="57"/>
         <source>This archive type cannot be modified</source>
-        <translation type="unfinished"></translation>
+        <translation>這個類型的壓縮檔不能被修改</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="58"/>
         <source>You can&apos;t add an archive to itself.</source>
-        <translation type="unfinished"></translation>
+        <translation>你不能把壓縮檔加入到它自己</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="64"/>
         <source>Could not find the volume: %s</source>
-        <translation type="unfinished"></translation>
+        <translation>找不到檔案分片: %s</translation>
     </message>
 </context>
 </TS>
