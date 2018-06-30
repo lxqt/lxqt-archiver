@@ -312,6 +312,10 @@ int main(int argc, char** argv) {
     translator.load("lxqt-archiver_" + QLocale::system().name(), LXQT_ARCHIVER_DATA_DIR "/translations");
     app.installTranslator(&translator);
 
+    // initialize libfm-qt
+    Fm::LibFmQt libfmQt;
+    app.installTranslator(libfmQt.translator());
+
     // set a fake gettext replacement to translate the C code in src/core/*.c taken from engrampa
     // this function pointer is defined in src/core/tr-wrapper.c
     qt_gettext = qtGettext;
@@ -329,9 +333,6 @@ int main(int argc, char** argv) {
 
     g_option_context_free(context);
     g_set_application_name(_("LXQt Archiver"));
-
-    // initialize libfm-qt
-    Fm::LibFmQt libfmQt;
 
     // FIXME: port command line parsing to Qt
     initialize_data(); // initialize the file-roller core
