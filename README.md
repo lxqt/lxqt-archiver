@@ -43,3 +43,11 @@ like tar and zip. The supported file types are :
   * ZOO Compressed Archive File (.zoo)
   * Single files compressed with gzip, bzip, bzip2, compress, lrzip, lzip,
     lzop, rzip, xz.
+
+
+
+### Translation (Weblate)
+
+<a href="https://weblate.lxqt.org/projects/lxqt/lxqt-archiver/">
+<img src="https://weblate.lxqt.org/widgets/lxqt/-/lxqt-archiver/multi-auto.svg" alt="Translation status" />
+</a>
