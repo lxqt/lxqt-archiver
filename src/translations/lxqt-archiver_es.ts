@@ -16,7 +16,7 @@
     <message>
         <location filename="../about.ui" line="47"/>
         <source> A simple and desktop-agnostic Qt file archiver </source>
-        <translation> Un gestor de archivos comprimidos hecho con Qt, sencillo e independiente del escritorio </translation>
+        <translation> Un archivador hecho con Qt, sencillo e independiente del escritorio </translation>
     </message>
     <message>
         <location filename="../about.ui" line="57"/>
@@ -77,7 +77,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archiver.cpp" line="64"/>
         <source>Archive type not supported.</source>
-        <translation>Tipo de archivo no admitido.</translation>
+        <translation>Todos los formatos admitidos.</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="267"/>
@@ -225,7 +225,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="157"/>
         <source>toolBar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra de herramientas</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="182"/>
@@ -420,7 +420,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="410"/>
         <source>Filename &amp;Encoding</source>
-        <translation>Codificación del nombre de archivo</translation>
+        <translation>&amp;Codificación del nombre de archivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="144"/>
@@ -433,7 +433,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../mainwindow.cpp" line="202"/>
         <location filename="../mainwindow.cpp" line="231"/>
         <source>Add only if &amp;newer</source>
-        <translation>Añadir solo los nuevos</translation>
+        <translation>Añadir solo si son más &amp;nuevos</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="255"/>
@@ -610,7 +610,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="13"/>
         <source>Tar compressed with bzip (.tar.bz)</source>
-        <translation type="unfinished">Tar comprimido con bzip (.tar.bz)</translation>
+        <translation>Tar comprimido con bzip (.tar.bz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="14"/>
@@ -734,7 +734,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="48"/>
         <location filename="../corestrs.h" line="63"/>
         <source>Extracting file: </source>
-        <translation>Extrayendo el archivo:</translation>
+        <translation>Extrayendo el archivo: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="42"/>
@@ -770,12 +770,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="54"/>
         <source>Archive type not supported.</source>
-        <translation>Tipo de archivo no admitido.</translation>
+        <translation>Tipo de archivo comprimido no admitido.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="55"/>
         <source>Archive not found</source>
-        <translation>No se encuentra el archivo</translation>
+        <translation>No se encuentra el archivo comprimido</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="56"/>
@@ -785,7 +785,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="57"/>
         <source>This archive type cannot be modified</source>
-        <translation>El archivo no se puede modificar</translation>
+        <translation>Este tipo de archivo comprimido no se puede modificar</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="58"/>
