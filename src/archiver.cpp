@@ -546,10 +546,11 @@ void Archiver::onDone(FrArchive*, FrAction action, FrProcError* error, Archiver*
 
 void Archiver::onProgress(FrArchive*, double fraction, Archiver* _this) {
     QMetaObject::invokeMethod(_this, "progress", Qt::QueuedConnection, QGenericReturnArgument(), Q_ARG(double, fraction));
-    // qDebug("progress: %lf", fraction);
+    qDebug("progress: %lf", fraction);
 }
 
 void Archiver::onMessage(FrArchive*, const char* msg, Archiver* _this) {
+    qDebug("message: %s", msg);
     QMetaObject::invokeMethod(_this, "message", Qt::QueuedConnection, QGenericReturnArgument(), Q_ARG(QString, QString::fromUtf8(msg)));
 }
 
@@ -559,5 +560,6 @@ void Archiver::onStoppable(FrArchive*, gboolean value, Archiver* _this) {
 
 void Archiver::onWorkingArchive(FrCommand* comm, const char* filename, Archiver* _this) {
     // FIXME: why the first param is comm?
+    qDebug("working: %s", filename);
     Q_EMIT _this->workingArchive(filename);
 }

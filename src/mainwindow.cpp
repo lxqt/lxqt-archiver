@@ -196,6 +196,7 @@ void MainWindow::on_actionAddFiles_triggered(bool /*checked*/) {
     Fm::FileDialog dlg{this};
     dlg.setFileMode(QFileDialog::ExistingFiles);
     dlg.setNameFilters(QStringList{} << tr("All files (*)"));
+    dlg.setAcceptMode(QFileDialog::AcceptOpen);
 
     // only add the files if they are newer
     auto onlyIfNewerCheckbox = new QCheckBox{tr("Add only if &newer"), &dlg};
@@ -225,6 +226,8 @@ void MainWindow::on_actionAddFolder_triggered(bool /*checked*/) {
     Fm::FileDialog dlg{this};
     dlg.setOptions(QFileDialog::ShowDirsOnly | QFileDialog::HideNameFilterDetails);
     dlg.setFileMode(QFileDialog::Directory);
+    dlg.setNameFilters(QStringList{} << tr("All files (*)"));
+    dlg.setAcceptMode(QFileDialog::AcceptOpen);
 
     // only add the files if they are newer
     auto onlyIfNewerCheckbox = new QCheckBox{tr("Add only if &newer"), &dlg};
@@ -431,7 +434,6 @@ void MainWindow::onActionStarted(FrAction action) {
     setBusyState(true);
     progressBar_->setValue(0);
     progressBar_->show();
-    progressBar_->setRange(0, 100);
     progressBar_->setFormat(tr("%p %"));
 
     qDebug("action start: %d", action);
@@ -475,7 +477,14 @@ void MainWindow::onActionStarted(FrAction action) {
 }
 
 void MainWindow::onActionProgress(double fraction) {
-    progressBar_->setValue(int(100 * fraction));
+    if(fraction < 0.0) {
+        // negative progress indicates that progress is unknown
+        progressBar_->setRange(0, 0); // set it to undertermined state
+    }
+    else {
+        progressBar_->setRange(0, 100);
+        progressBar_->setValue(int(100 * fraction));
+    }
 }
 
 void MainWindow::onActionFinished(FrAction action, ArchiverError err) {
@@ -700,6 +709,7 @@ void MainWindow::updateUiStates() {
 
     ui_->actionSelectAll->setEnabled(canEdit);
     ui_->actionPassword->setEnabled(canEdit);
+    ui_->actionReload->setEnabled(canEdit);
 
     ui_->actionAddFiles->setEnabled(canEdit);
     ui_->actionAddFolder->setEnabled(canEdit);

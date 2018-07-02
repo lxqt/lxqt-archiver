@@ -13,7 +13,6 @@ ProgressDialog::ProgressDialog(QWidget* parent) :
 
     ui_->progressBar->setValue(0);
     ui_->progressBar->show();
-    ui_->progressBar->setRange(0, 100);
     ui_->progressBar->setFormat(tr("%p %"));
 }
 
@@ -39,7 +38,14 @@ void ProgressDialog::reject() {
 
 void ProgressDialog::onProgress(double fraction) {
     qDebug("progress: %lf", fraction);
-    ui_->progressBar->setValue(int(100 * fraction));
+    if(fraction < 0.0) {
+        // negative progress indicates that progress is unknown
+        ui_->progressBar->setRange(0, 0); // set it to undertermined state
+    }
+    else {
+        ui_->progressBar->setRange(0, 100);
+        ui_->progressBar->setValue(int(100 * fraction));
+    }
 }
 
 void ProgressDialog::onFinished(FrAction action, ArchiverError error) {
