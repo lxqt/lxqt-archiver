@@ -23,6 +23,10 @@ public:
 
     FrAction finishAction() const;
 
+    void setOperation(const QString& operation);
+
+    void setMessage(const QString& msg);
+
     void reject() override;
 
 private Q_SLOTS:

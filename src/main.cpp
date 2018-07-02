@@ -205,6 +205,7 @@ static int runApp(QApplication& app) {
 
         Archiver archiver;
         ProgressDialog dlg;
+        dlg.setOperation(QObject::tr("Adding file: "));
 
         dlg.setArchiver(&archiver);
         archiver.createNewArchive(add_to_uri);
@@ -237,6 +238,7 @@ static int runApp(QApplication& app) {
 
             Archiver archiver;
             ProgressDialog dlg;
+            dlg.setOperation(QObject::tr("Extracting file: "));
 
             dlg.setArchiver(&archiver);
             archiver.openArchive(archive_uri.get(), nullptr);

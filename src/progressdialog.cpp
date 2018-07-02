@@ -29,6 +29,14 @@ void ProgressDialog::setArchiver(Archiver* archiver) {
     connect(archiver, &Archiver::workingArchive, this, &ProgressDialog::onWorkingArchive);
 }
 
+void ProgressDialog::setOperation(const QString& operation) {
+    ui_->operation->setText(operation);
+}
+
+void ProgressDialog::setMessage(const QString& msg) {
+    ui_->message->setText(msg);
+}
+
 void ProgressDialog::reject() {
     QDialog::reject();
     if(archiver_) {
