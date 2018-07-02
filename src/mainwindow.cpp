@@ -2,12 +2,12 @@
 #include "ui_mainwindow.h"
 #include "ui_about.h"
 #include "ui_create.h"
-#include "ui_extract.h"
 
 #include "archiver.h"
 #include "archiveritem.h"
 #include "archiverproxymodel.h"
 #include "passworddialog.h"
+#include "extractfiledialog.h"
 #include "core/file-utils.h"
 
 #include <QFileDialog>
@@ -270,32 +270,19 @@ void MainWindow::on_actionSelectAll_triggered(bool /*checked*/) {
 
 void MainWindow::on_actionExtract_triggered(bool /*checked*/) {
     qDebug("extract");
-    Fm::FileDialog dlg{this};
-    dlg.setOptions(QFileDialog::ShowDirsOnly | QFileDialog::HideNameFilterDetails);
-    dlg.setNameFilters(QStringList{} << tr("All files (*)"));
-    dlg.setAcceptMode(QFileDialog::AcceptOpen);
-    dlg.setFileMode(QFileDialog::Directory);
-
-    // add extra options
-    QWidget extraWidget;
-    Ui::ExtractArchiveExtraWidget extraUi;
-    extraUi.setupUi(&extraWidget);
-    auto layout = qobject_cast<QBoxLayout*>(dlg.layout());
-    if(layout) {
-        layout->addWidget(&extraWidget);
-    }
+    ExtractFileDialog dlg{this};
 
     auto files = selectedFiles(true);
     // check if the user has selected some files
     if(files.empty()) {
         // No files are selected. The user can only extract all
-        extraUi.extractAll->setChecked(true);
-        extraUi.extractSelected->setEnabled(false);
+        dlg.setExtractAll(true);
+        dlg.setExtractSelectedEnabled(false);
     }
     else {
         // Some files are selected. Extract the selected files by default.
-        extraUi.extractSelected->setChecked(true);
-        extraUi.extractSelected->setEnabled(true);
+        dlg.setExtractSelectedEnabled(true);
+        dlg.setExtractSelected(true);
     }
 
     if(dlg.exec() != QDialog::Accepted) {
@@ -308,16 +295,11 @@ void MainWindow::on_actionExtract_triggered(bool /*checked*/) {
             password_ = PasswordDialog::askPassword(this).toStdString();
         }
 
-        bool skipOlder = extraUi.skipOlder->isChecked();
-        bool overwrite = extraUi.overwriteExisting->isChecked();
-        bool reCreateFolders = extraUi.reCreateFolders->isChecked();
-        bool extractAll = extraUi.extractAll->isChecked();
-
-        if(extractAll) {
+        if(dlg.extractAll()) {
             archiver_->extractAll(dirUrl.toEncoded().constData(),
-                                  skipOlder,
-                                  overwrite,
-                                  reCreateFolders,
+                                  dlg.skipOlder(),
+                                  dlg.overwrite(),
+                                  dlg.reCreateFolders(),
                                   password_.empty() ? nullptr : password_.c_str());
         }
         else {
@@ -331,9 +313,9 @@ void MainWindow::on_actionExtract_triggered(bool /*checked*/) {
             archiver_->extractFiles(files,
                                     destDir,
                                     currentDirPath_.c_str(),
-                                    skipOlder,
-                                    overwrite,
-                                    reCreateFolders,
+                                    dlg.skipOlder(),
+                                    dlg.overwrite(),
+                                    dlg.reCreateFolders(),
                                     password_.empty() ? nullptr : password_.c_str()
             );
         }
