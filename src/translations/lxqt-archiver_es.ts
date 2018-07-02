@@ -77,7 +77,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archiver.cpp" line="64"/>
         <source>Archive type not supported.</source>
-        <translation>Todos los formatos admitidos.</translation>
+        <translation>Tipo de archivo comprimido no admitido.</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="267"/>
