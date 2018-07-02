@@ -26,6 +26,7 @@
 #include "progressdialog.h"
 #include "archiver.h"
 #include "passworddialog.h"
+#include "extractfiledialog.h"
 #include "core/fr-init.h"
 #include "core/config.h"
 #include "core/tr-wrapper.h"
@@ -139,6 +140,10 @@ static int runApp(QApplication& app) {
         return app.exec();
     }
 
+    bool extractSkipOlder = false;
+    bool extractOverwrite = false;
+    bool extractReCreateFolders = false;
+
     if(extract_to != NULL) {
         extract_to_uri = get_uri_from_command_line(extract_to);
     }
@@ -146,14 +151,19 @@ static int runApp(QApplication& app) {
         // if we want to extract files but dest dir is not specified, choose one
         if(extract && !extract_here) {
             if(!extract_to_uri) {
-                QFileDialog dlg;
-                QUrl dirUrl = QFileDialog::getExistingDirectoryUrl(nullptr, QString(),
-                                                                   default_url ? QUrl() : QUrl::fromEncoded(default_url),
-                                                                   (QFileDialog::ShowDirsOnly | QFileDialog::DontUseNativeDialog));
-                if(dirUrl.isEmpty()) {
+                ExtractFileDialog dlg{nullptr, default_url ? Fm::FilePath::fromUri(default_url) : Fm::FilePath::homeDir()};
+                dlg.setExtractSelectedEnabled(false);
+                dlg.setExtractAll(true);
+                if(dlg.exec() != QDialog::Accepted) {
                     return 1;
                 }
+
+                QUrl dirUrl = dlg.selectedFiles()[0];
                 extract_to_uri = g_strdup(dirUrl.toEncoded().constData());
+
+                extractSkipOlder = dlg.skipOlder();
+                extractOverwrite = dlg.overwrite();
+                extractReCreateFolders = dlg.reCreateFolders();
             }
         }
     }
@@ -246,11 +256,18 @@ static int runApp(QApplication& app) {
                     }
 
                     if(extract_here) {
-                        archiver.extractHere(false, false, false, password_.empty() ? nullptr : password_.c_str());
+                        archiver.extractHere(extractSkipOlder,
+                                             extractOverwrite,
+                                             extractReCreateFolders,
+                                             password_.empty() ? nullptr : password_.c_str());
                     }
                     else {
                         // a target dir is specified
-                        archiver.extractAll(extract_to_uri, false, false, false, password_.empty() ? nullptr : password_.c_str());
+                        archiver.extractAll(extract_to_uri,
+                                            extractSkipOlder,
+                                            extractOverwrite,
+                                            extractReCreateFolders,
+                                            password_.empty() ? nullptr : password_.c_str());
                     }
                     break;
                 }
