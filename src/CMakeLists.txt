@@ -16,6 +16,7 @@ set(lxqt-archiver_SRCS
     archiverproxymodel.cpp
     progressdialog.cpp
     passworddialog.cpp
+    createfiledialog.cpp
     extractfiledialog.cpp
 )
 

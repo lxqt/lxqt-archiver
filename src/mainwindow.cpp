@@ -1,12 +1,12 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "ui_about.h"
-#include "ui_create.h"
 
 #include "archiver.h"
 #include "archiveritem.h"
 #include "archiverproxymodel.h"
 #include "passworddialog.h"
+#include "createfiledialog.h"
 #include "extractfiledialog.h"
 #include "core/file-utils.h"
 
@@ -139,23 +139,13 @@ void MainWindow::setFileName(const QString &fileName) {
 }
 
 void MainWindow::on_actionCreateNew_triggered(bool /*checked*/) {
-    Fm::FileDialog dlg{this};
-    dlg.setAcceptMode(QFileDialog::AcceptSave);
-    dlg.setNameFilters(Archiver::supportedCreateNameFilters() << tr("All files (*)"));
-
-    // extra options
-    QWidget extraWidget;
-    Ui::CreateArchiveExtraWidget extraUi;
-    extraUi.setupUi(&extraWidget);
-    auto layout = qobject_cast<QBoxLayout*>(dlg.layout());
-    if(layout) {
-        layout->addWidget(&extraWidget);
-    }
+    CreateFileDialog dlg{this};
 
     if(dlg.exec() == QDialog::Accepted) {
-        password_ = extraUi.password->text().toStdString();
-        encryptHeader_ = extraUi.encryptFileList->isChecked();
-        splitVolumes_ = extraUi.splitVolumes->isChecked();
+        password_ = dlg.password().toStdString();
+        encryptHeader_ = dlg.encryptFileList();
+        splitVolumes_ = dlg.splitVolumes();
+        volumeSize_ = dlg.volumeSize();
 
         auto url = dlg.selectedFiles()[0];
         if(!url.isEmpty()) {

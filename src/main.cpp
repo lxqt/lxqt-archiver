@@ -26,6 +26,7 @@
 #include "progressdialog.h"
 #include "archiver.h"
 #include "passworddialog.h"
+#include "createfiledialog.h"
 #include "extractfiledialog.h"
 #include "core/fr-init.h"
 #include "core/config.h"
@@ -168,24 +169,31 @@ static int runApp(QApplication& app) {
         }
     }
 
+    std::string addPassword;
+    bool addEncryptFileList = false;
+    bool addSplitVolumes = false;
+    unsigned int addVolumeSize = 0;
+
     if(add_to != NULL) {
         add_to_uri = get_uri_from_command_line(add_to);
     }
     else {
         // if we want to add files but archive path is not specified, choose one
         if(add) {
-            QFileDialog dlg;
+            CreateFileDialog dlg;
             if(default_url) {
-                dlg.setDirectoryUrl(QUrl::fromEncoded(default_url));
+                dlg.setDirectory(QUrl::fromEncoded(default_url));
             }
-            dlg.setNameFilters(Archiver::supportedCreateNameFilters() << QObject::tr("All files (*)"));
-            dlg.setAcceptMode(QFileDialog::AcceptSave);
             if(dlg.exec() == QDialog::Accepted) {
-                auto url = dlg.selectedUrls()[0];
+                auto url = dlg.selectedFiles()[0];
                 if(url.isEmpty()) {
                     return 1;
                 }
                 add_to_uri = g_strdup(url.toEncoded().constData());
+                addPassword = dlg.password().toStdString();
+                addEncryptFileList = dlg.encryptFileList();
+                addSplitVolumes = dlg.splitVolumes();
+                addVolumeSize = dlg.volumeSize();
             }
             else {
                 return 1;
@@ -219,7 +227,14 @@ static int runApp(QApplication& app) {
             }
             switch(action) {
             case FR_ACTION_CREATING_NEW_ARCHIVE:
-                archiver.addDroppedItems(filePaths, nullptr, default_url, false, nullptr, false, FR_COMPRESSION_NORMAL, 0);
+                archiver.addDroppedItems(filePaths, // src files
+                                         nullptr, // base dir
+                                         default_url, // dest dir
+                                         false,  // update: what's this?
+                                         addPassword.empty() ? nullptr : addPassword.c_str(),
+                                         addEncryptFileList,
+                                         FR_COMPRESSION_NORMAL,
+                                         addSplitVolumes ? addVolumeSize : 0);
                 break;
             case FR_ACTION_ADDING_FILES:
                 dlg.accept();
