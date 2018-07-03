@@ -410,6 +410,11 @@
     <string>Filename &amp;Encoding</string>
    </property>
   </action>
+  <action name="actionView">
+   <property name="text">
+    <string>&amp;View Current Item</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections>

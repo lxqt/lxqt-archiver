@@ -45,7 +45,7 @@ void ProgressDialog::reject() {
 }
 
 void ProgressDialog::onProgress(double fraction) {
-    qDebug("progress: %lf", fraction);
+    //qDebug("progress: %lf", fraction);
     if(fraction < 0.0) {
         // negative progress indicates that progress is unknown
         ui_->progressBar->setRange(0, 0); // set it to undertermined state
@@ -60,7 +60,7 @@ void ProgressDialog::onFinished(FrAction action, ArchiverError error) {
 }
 
 void ProgressDialog::onMessage(QString msg) {
-    qDebug("progress: %s", msg.toUtf8().constData());
+    //qDebug("progress: %s", msg.toUtf8().constData());
     ui_->message->setText(msg);
 }
 
@@ -69,7 +69,7 @@ void ProgressDialog::onStoppableChanged(bool value) {
 }
 
 void ProgressDialog::onWorkingArchive(QString filename) {
-    qDebug("progress: %s", filename.toUtf8().constData());
+    //qDebug("progress: %s", filename.toUtf8().constData());
     ui_->currentFile->setText(filename);
 }
 
