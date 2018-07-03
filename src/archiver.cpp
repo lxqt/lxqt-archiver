@@ -338,7 +338,7 @@ void Archiver::rebuildDirTree() {
             std::string dirName = stripTrailingSlash(item->fullPath());
             dirMap_[dirName] = item;
         }
-        
+
         if(fileData->encrypted) {
             isEncrypted_ = true;
         }
@@ -385,8 +385,8 @@ void Archiver::rebuildDirTree() {
                     g_free(tmp);
                 }
 
-                qDebug("op: %s, %s", fileData->original_path, item->originalPath());
-                qDebug("fp: %s, %s", fileData->full_path, item->fullPath());
+                //qDebug("op: %s, %s", fileData->original_path, item->originalPath());
+                //qDebug("fp: %s, %s", fileData->full_path, item->fullPath());
                 fileData->name = g_path_get_basename(dirName.c_str());
                 fileData->dir = 1;
                 file_data_update_content_type(fileData);
@@ -419,9 +419,9 @@ void Archiver::rebuildDirTree() {
     }
     rootItem_ = dirMap_["/"];
 
-    for(auto& kv: dirMap_) {
+    /*for(auto& kv: dirMap_) {
         qDebug("dir: %s: %d", kv.first.c_str(), kv.second->children().size());
-    }
+    }*/
 }
 
 void Archiver::stopCurrentAction() {
@@ -519,14 +519,14 @@ const FileData* Archiver::fileDataByOriginalPath(const char* originalPath) {
 // We use the workaround provided here: https://bugreports.qt.io/browse/QTBUG-18434
 
 void Archiver::onStart(FrArchive*, FrAction action, Archiver* _this) {
-    qDebug("start");
+    //qDebug("start");
 
     _this->busy_ = true;
     QMetaObject::invokeMethod(_this, "start", Qt::QueuedConnection, QGenericReturnArgument(), Q_ARG(FrAction, action));
 }
 
 void Archiver::onDone(FrArchive*, FrAction action, FrProcError* error, Archiver* _this) {
-    qDebug("done: %s", error && error->gerror ? error->gerror->message : "");
+    //qDebug("done: %s", error && error->gerror ? error->gerror->message : "");
     // FIXME: error might become dangling pointer for queued connections. :-(
 
     switch(action) {
@@ -546,11 +546,11 @@ void Archiver::onDone(FrArchive*, FrAction action, FrProcError* error, Archiver*
 
 void Archiver::onProgress(FrArchive*, double fraction, Archiver* _this) {
     QMetaObject::invokeMethod(_this, "progress", Qt::QueuedConnection, QGenericReturnArgument(), Q_ARG(double, fraction));
-    qDebug("progress: %lf", fraction);
+    //qDebug("progress: %lf", fraction);
 }
 
 void Archiver::onMessage(FrArchive*, const char* msg, Archiver* _this) {
-    qDebug("message: %s", msg);
+    //qDebug("message: %s", msg);
     QMetaObject::invokeMethod(_this, "message", Qt::QueuedConnection, QGenericReturnArgument(), Q_ARG(QString, QString::fromUtf8(msg)));
 }
 
@@ -560,6 +560,6 @@ void Archiver::onStoppable(FrArchive*, gboolean value, Archiver* _this) {
 
 void Archiver::onWorkingArchive(FrCommand* comm, const char* filename, Archiver* _this) {
     // FIXME: why the first param is comm?
-    qDebug("working: %s", filename);
+    //qDebug("working: %s", filename);
     Q_EMIT _this->workingArchive(filename);
 }

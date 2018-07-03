@@ -334,6 +334,7 @@ int main(int argc, char** argv) {
     QApplication app(argc, argv);
     app.setApplicationVersion(LXQT_ARCHIVER_VERSION);
     app.setQuitOnLastWindowClosed(true);
+    app.setAttribute(Qt::AA_UseHighDpiPixmaps);
 
     // load translations
     // install the translations built-into Qt itself

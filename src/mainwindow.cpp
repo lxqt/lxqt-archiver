@@ -31,6 +31,7 @@
 #include <QBoxLayout>
 #include <QCheckBox>
 #include <QSpinBox>
+#include <QStandardPaths>
 
 #include <QDebug>
 
@@ -41,6 +42,7 @@
 #include <libfm-qt/utilities.h>
 #include <libfm-qt/filepropsdialog.h>
 #include <libfm-qt/filedialog.h>
+#include <libfm-qt/filelauncher.h>
 // #include <libfm-qt/pathbar.h>
 
 #include <map>
@@ -82,6 +84,8 @@ MainWindow::MainWindow(QWidget* parent):
     popupMenu_ = new QMenu{this};
     popupMenu_->addAction(ui_->actionExtract);
     popupMenu_->addAction(ui_->actionDelete);
+    popupMenu_->addSeparator();
+    popupMenu_->addAction(ui_->actionView);
 
     // proxy model used to filter and sort the items
     proxyModel_ = new ArchiverProxyModel{this};
@@ -98,6 +102,7 @@ MainWindow::MainWindow(QWidget* parent):
     // show context menu
     ui_->fileListView->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(ui_->fileListView, &QAbstractItemView::customContextMenuRequested, this, &MainWindow::onFileListContextMenu);
+    connect(ui_->fileListView, &QAbstractItemView::doubleClicked, this, &MainWindow::onFileListDoubleClicked);
 
     connect(archiver_.get(), &Archiver::invalidateContent, this, &MainWindow::onInvalidateContent);
     connect(archiver_.get(), &Archiver::start, this, &MainWindow::onActionStarted);
@@ -115,9 +120,16 @@ MainWindow::MainWindow(QWidget* parent):
     ui_->actionPaste->deleteLater();
     ui_->actionRename->deleteLater();
     ui_->actionFind->deleteLater();
+
+    lasrDir_ = QStandardPaths::writableLocation(QStandardPaths::HomeLocation);
+
+    setAttribute(Qt::WA_DeleteOnClose, true);
 }
 
 MainWindow::~MainWindow() {
+    if(!tempDir_.isEmpty()) { // remove the temp dir if any
+        QDir(tempDir_).removeRecursively();
+    }
 }
 
 void MainWindow::loadFile(const Fm::FilePath &file) {
@@ -126,6 +138,18 @@ void MainWindow::loadFile(const Fm::FilePath &file) {
     encryptHeader_ = false;
     splitVolumes_ = false;
     volumeSize_ = 0;
+
+    // find the name of temporary extraction directory (used for viewing files)
+    if(!tempDir_.isEmpty()) { // remove the last temp dir
+        QDir(tempDir_).removeRecursively();
+    }
+    QString tmp = QStandardPaths::writableLocation(QStandardPaths::TempLocation);
+    if(!tmp.isEmpty()) {
+        if(QDir(tmp).exists()) {
+            tempDir_ = tmp + "/" + "lxqt-archiver-"
+                       + QDateTime::currentDateTime().toString("yyyyMMddhhmmss");
+        }
+    }
 
     archiver_->openArchive(file.uri().get(), nullptr);
 }
@@ -155,15 +179,17 @@ void MainWindow::on_actionCreateNew_triggered(bool /*checked*/) {
 }
 
 void MainWindow::on_actionOpen_triggered(bool /*checked*/) {
-    qDebug("open");
+    //qDebug("open");
     Fm::FileDialog dlg{this};
     dlg.setFileMode(QFileDialog::ExistingFile);
     dlg.setNameFilters(Archiver::supportedOpenNameFilters() << tr("All files (*)"));
-    qDebug() << Archiver::supportedOpenMimeTypes();
+    //qDebug() << Archiver::supportedOpenMimeTypes();
     dlg.setAcceptMode(QFileDialog::AcceptOpen);
+    dlg.setDirectory(lasrDir_);
     if(dlg.exec() == QDialog::Accepted) {
         auto url = dlg.selectedFiles()[0];
         if(!url.isEmpty()) {
+            lasrDir_ = dlg.directory();
             loadFile(Fm::FilePath::fromUri(url.toEncoded()));
         }
     }
@@ -187,6 +213,7 @@ void MainWindow::on_actionAddFiles_triggered(bool /*checked*/) {
     dlg.setFileMode(QFileDialog::ExistingFiles);
     dlg.setNameFilters(QStringList{} << tr("All files (*)"));
     dlg.setAcceptMode(QFileDialog::AcceptOpen);
+    dlg.setDirectory(lasrDir_);
 
     // only add the files if they are newer
     auto onlyIfNewerCheckbox = new QCheckBox{tr("Add only if &newer"), &dlg};
@@ -199,8 +226,9 @@ void MainWindow::on_actionAddFiles_triggered(bool /*checked*/) {
         return;
 
     auto fileUrls = dlg.selectedFiles();
-    qDebug() << "selected:" << fileUrls;
+    //qDebug() << "selected:" << fileUrls;
     if(!fileUrls.isEmpty()) {
+        lasrDir_ = dlg.directory();
         auto srcPaths = Fm::pathListFromQUrls(fileUrls);
         archiver_->addFiles(srcPaths,
                             currentDirPath_.c_str(),
@@ -218,6 +246,7 @@ void MainWindow::on_actionAddFolder_triggered(bool /*checked*/) {
     dlg.setFileMode(QFileDialog::Directory);
     dlg.setNameFilters(QStringList{} << tr("All files (*)"));
     dlg.setAcceptMode(QFileDialog::AcceptOpen);
+    dlg.setDirectory(lasrDir_);
 
     // only add the files if they are newer
     auto onlyIfNewerCheckbox = new QCheckBox{tr("Add only if &newer"), &dlg};
@@ -232,6 +261,7 @@ void MainWindow::on_actionAddFolder_triggered(bool /*checked*/) {
 
     QUrl dirUrl = dlg.selectedFiles()[0];
     if(!dirUrl.isEmpty()) {
+        lasrDir_ = dlg.directory();
         auto path = Fm::FilePath::fromUri(dirUrl.toEncoded().constData());
         archiver_->addDirectory(path,
                                 currentDirPath_.c_str(),
@@ -247,7 +277,7 @@ void MainWindow::on_actionDelete_triggered(bool /*checked*/) {
     if(QMessageBox::question(this, tr("Confirm"), tr("Are you sure you want to delete selected files?"), QMessageBox::Yes|QMessageBox::No) != QMessageBox::Yes) {
         return;
     }
-    qDebug("delete");
+    //qDebug("delete");
     auto files = selectedFiles(true);
     if(!files.empty()) {
         archiver_->removeFiles(files, FR_COMPRESSION_NORMAL);
@@ -259,7 +289,7 @@ void MainWindow::on_actionSelectAll_triggered(bool /*checked*/) {
 }
 
 void MainWindow::on_actionExtract_triggered(bool /*checked*/) {
-    qDebug("extract");
+    //qDebug("extract");
     ExtractFileDialog dlg{this};
 
     auto files = selectedFiles(true);
@@ -310,6 +340,62 @@ void MainWindow::on_actionExtract_triggered(bool /*checked*/) {
             );
         }
     }
+}
+
+void MainWindow::tempExtractCurFile(bool launch) {
+    launchPath_.clear();
+    if(tempDir_.isEmpty()) {
+        return;
+    }
+    if(auto selModel = ui_->fileListView->selectionModel()) {
+        QModelIndex idx = selModel->currentIndex();
+        auto item = itemFromIndex(idx);
+        if(item && !item->isDir()) {
+            const QString fileName = tempDir_ + item->fullPath();
+            if(QFile::exists(fileName)) { // already extracted under tmp
+                if(launch) {
+                    Fm::FilePathList paths;
+                    paths.push_back(Fm::FilePath::fromLocalPath(fileName.toLocal8Bit().constData()));
+                    Fm::FileLauncher().launchPaths(nullptr, std::move(paths));
+                }
+                return;
+            }
+
+            if (launch) {
+              launchPath_ = fileName;
+            }
+
+            QString dest = tempDir_;
+            QDir dir(tempDir_);
+            const QString curDirPath = QString::fromStdString(currentDirPath_);
+            if(curDirPath.contains("/")) {
+                dest = tempDir_ + "/" + curDirPath.section("/", 0, -2);
+                dir.mkpath(dest); // also creates "dir" if needed
+            }
+            else if(!dir.exists()) {
+                dir.mkpath(tempDir_);
+            }
+
+            if(archiver_->isEncrypted() && password_.empty()) {
+                password_ = PasswordDialog::askPassword(this).toStdString();
+            }
+            auto destDir = Fm::FilePath::fromLocalPath(dest.toLocal8Bit().constData());
+            std::vector<const FileData*> files;
+            files.emplace_back(item->data());
+            archiver_->extractFiles(files,
+                                    destDir,
+                                    currentDirPath_.c_str(),
+                                    false,
+                                    false,
+                                    false,
+                                    password_.empty() ? nullptr : password_.c_str()
+            );
+        }
+    }
+}
+
+void MainWindow::on_actionView_triggered(bool /*checked*/) {
+    tempExtractCurFile(true);
 }
 
 void MainWindow::on_actionTest_triggered(bool /*checked*/) {
@@ -379,9 +465,18 @@ void MainWindow::onFileListSelectionChanged(const QItemSelection& /*selected*/, 
 }
 
 void MainWindow::onFileListContextMenu(const QPoint &pos) {
+    if(auto selModel = ui_->fileListView->selectionModel()) {
+        QModelIndex idx = selModel->currentIndex();
+        auto item = itemFromIndex(idx);
+        ui_->actionView->setVisible(item && !item->isDir());
+    }
     // QAbstractScrollArea and its subclasses map the context menu event to coordinates of the viewport().
     auto globalPos = ui_->fileListView->viewport()->mapToGlobal(pos);
     popupMenu_->popup(globalPos);
+}
+
+void MainWindow::onFileListDoubleClicked(const QModelIndex & /*index*/) {
+    tempExtractCurFile(true);
 }
 
 void MainWindow::onFileListActivated(const QModelIndex &index) {
@@ -408,11 +503,11 @@ void MainWindow::onActionStarted(FrAction action) {
     progressBar_->show();
     progressBar_->setFormat(tr("%p %"));
 
-    qDebug("action start: %d", action);
+    //qDebug("action start: %d", action);
 
     switch(action) {
     case FR_ACTION_CREATING_NEW_ARCHIVE:
-        qDebug("new archive");
+        //qDebug("new archive");
         setFileName(archiver_->archiveDisplayName());
         break;
     case FR_ACTION_LOADING_ARCHIVE:            /* loading the archive from a remote location */
@@ -463,16 +558,16 @@ void MainWindow::onActionFinished(FrAction action, ArchiverError err) {
     setBusyState(false);
     progressBar_->hide();
 
-    qDebug("action finished: %d", action);
+    //qDebug("action finished: %d", action);
 
     switch(action) {
     case FR_ACTION_LOADING_ARCHIVE:            /* loading the archive from a remote location */
-        qDebug("finish! %d", action);
+        //qDebug("finish! %d", action);
         break;
     case FR_ACTION_CREATING_NEW_ARCHIVE:  // same as listing empty content
     case FR_ACTION_CREATING_ARCHIVE:           /* creating a local archive */
     case FR_ACTION_LISTING_CONTENT:            /* listing the content of the archive */
-        qDebug("content listed");
+        //qDebug("content listed");
         // content dir list of the archive is fully loaded
         updateDirTree();
 
@@ -504,6 +599,14 @@ void MainWindow::onActionFinished(FrAction action, ArchiverError err) {
         archiver_->reloadArchive(nullptr);
         break;
     case FR_ACTION_EXTRACTING_FILES:           /* extracting files */
+        if(!launchPath_.isEmpty()) {
+            if(!err.hasError() && QFile::exists(launchPath_)) {
+                Fm::FilePathList paths;
+                paths.push_back(Fm::FilePath::fromLocalPath(launchPath_.toLocal8Bit().constData()));
+                Fm::FileLauncher().launchPaths(this, std::move(paths));
+            }
+            launchPath_.clear();
+        }
         break;
     case FR_ACTION_COPYING_FILES_TO_REMOTE:    /* copying extracted files to a remote location */
         break;
@@ -613,7 +716,7 @@ void MainWindow::showFileList(const std::vector<const ArchiverItem *> &files) {
         if(currentDirItem_) {
             auto parent = archiver_->parentDir(currentDirItem_);
             if(parent) {
-                qDebug("parent: %s", parent ? parent->fullPath() : "null");
+                //qDebug("parent: %s", parent ? parent->fullPath() : "null");
                 auto parentRow = createFileListRow(parent);
                 parentRow[0]->setText("..");
                 model->appendRow(parentRow);
@@ -711,7 +814,7 @@ std::vector<const FileData*> MainWindow::selectedFiles(bool recursive) {
         // FIXME: the old code uses FileData here. Later we should all use ArchiveItem instead.
         for(auto& item: items) {
             if(item->data()) {
-                qDebug("SEL: %s", item->fullPath());
+                //qDebug("SEL: %s", item->fullPath());
                 results.emplace_back(item->data());
             }
         }

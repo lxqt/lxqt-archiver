@@ -72,10 +72,12 @@ private Q_SLOTS:
 
     void on_actionExtract_triggered(bool checked);
 
+    void on_actionView_triggered(bool checked);
+
     void on_actionTest_triggered(bool checked);
 
     void on_actionPassword_triggered(bool checked);
-    
+
     void on_actionDirTree_toggled(bool checked);
 
     void on_actionDirTreeMode_toggled(bool checked);
@@ -93,6 +95,8 @@ private Q_SLOTS:
     void onFileListSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
 
     void onFileListContextMenu(const QPoint &pos);
+
+    void onFileListDoubleClicked(const QModelIndex &index);
 
     void onFileListActivated(const QModelIndex &index);
 
@@ -137,7 +141,9 @@ private:
     const ArchiverItem* itemFromIndex(const QModelIndex& index);
 
     QModelIndex indexFromItem(const QModelIndex& parent, const ArchiverItem* item);
-    
+
+    void tempExtractCurFile(bool launch);
+
 private:
     std::unique_ptr<Ui::MainWindow> ui_;
     std::shared_ptr<Archiver> archiver_;
@@ -153,6 +159,10 @@ private:
     bool encryptHeader_;
     bool splitVolumes_;
     unsigned int volumeSize_;
+
+    QString tempDir_;
+    QString launchPath_;
+    QUrl lasrDir_;
 };
 
 #endif // MAINWINDOW_H
