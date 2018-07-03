@@ -229,7 +229,7 @@ static QString suffixesToNameFilter(QString name, const QStringList& suffixes) {
     QString filter = std::move(name);
     filter += " (";
     for(const auto& suffix: suffixes) {
-        if(filter.back() != '(') {
+        if(filter[filter.length() - 1] != '(') {
             filter += ' ';
         }
         filter += "*.";
