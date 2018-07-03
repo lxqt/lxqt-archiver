@@ -76,12 +76,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archiver.cpp" line="267"/>
         <source>*%1 files (*%1)</source>
-        <translation></translation>
+        <translation>*%1 Dateien (*%1)</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="271"/>
         <source>All supported formats</source>
-        <translation></translation>
+        <translation>Alle unterstützden Formate</translation>
     </message>
 </context>
 <context>
@@ -104,7 +104,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="34"/>
         <source>Password is required.</source>
-        <translation></translation>
+        <translation>Ein Passwort wird benötigt.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="37"/>
@@ -119,7 +119,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="43"/>
         <source>Unsupported file format.</source>
-        <translation></translation>
+        <translation>Nicht unterstütztes Dateiformat.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="46"/>
@@ -160,12 +160,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="29"/>
         <source>E&amp;xtract all files</source>
-        <translation></translation>
+        <translation>E&amp;ntpacke alle Dateien</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="36"/>
         <source>Ex&amp;tract selected files</source>
-        <translation></translation>
+        <translation>En&amp;tpacke ausgewählte Dateien</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="59"/>
@@ -180,12 +180,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="72"/>
         <source>Overwrite existing files</source>
-        <translation></translation>
+        <translation>Überschreibe existierende Dateien</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="79"/>
         <source>Do not extract older files</source>
-        <translation></translation>
+        <translation>Entpacke keine älteren Dateien</translation>
     </message>
 </context>
 <context>
@@ -269,7 +269,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="235"/>
         <source>Alt+Return</source>
-        <translation></translation>
+        <translation>Alt+Enter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="244"/>
@@ -354,12 +354,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="323"/>
         <source>&amp;Add Files</source>
-        <translation>&amp;Files hinzufügen</translation>
+        <translation>&amp;Dateien hinzufügen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="328"/>
         <source>Add F&amp;older</source>
-        <translation></translation>
+        <translation>&amp;Ordner hinzufügen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="333"/>
@@ -374,7 +374,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="355"/>
         <source>&amp;Statusbar</source>
-        <translation></translation>
+        <translation>&amp;Statusleiste</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="366"/>
@@ -437,7 +437,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="247"/>
         <source>Are you sure you want to delete selected files?</source>
-        <translation></translation>
+        <translation>Sind Sie sicher, daß Sie die gewählten Dateien löschen wollen?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="359"/>
@@ -457,7 +457,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="492"/>
         <source>No errors are found.</source>
-        <translation></translation>
+        <translation>Es wurden keine Fehler gefunden.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="517"/>
@@ -521,12 +521,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../passworddialog.ui" line="20"/>
         <source>Encrypt the file list</source>
-        <translation></translation>
+        <translation>Verschlüssele die Dateiliste</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="34"/>
         <source>Show password</source>
-        <translation>Zeige das Kennwort</translation>
+        <translation>Zeige das Kennwort an</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="48"/>
@@ -573,7 +573,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="7"/>
         <source>Tar compressed with 7z (.tar.7z)</source>
-        <translation></translation>
+        <translation>Tar komprimiert mit 7z (.tar.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="8"/>
@@ -598,12 +598,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="12"/>
         <source>Tar compressed with bzip2 (.tar.bz2)</source>
-        <translation></translation>
+        <translation>Tar komprimiert mit bzip2 (.tar.bz2)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="13"/>
         <source>Tar compressed with bzip (.tar.bz)</source>
-        <translation></translation>
+        <translation>Tar komprimiert mit bzip (.tar.bz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="14"/>
@@ -623,7 +623,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="17"/>
         <source>Tar compressed with gzip (.tar.gz)</source>
-        <translation></translation>
+        <translation>Tar komprimiert mit gzip (.tar.gz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="18"/>
@@ -633,7 +633,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="19"/>
         <source>Self-extracting zip (.exe)</source>
-        <translation></translation>
+        <translation>Selbstextrahierendes zip (.exe)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="20"/>
@@ -653,22 +653,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="23"/>
         <source>Tar compressed with lrzip (.tar.lrz)</source>
-        <translation></translation>
+        <translation>Tar komprimiert mit lrzip (.tar.lrz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="24"/>
         <source>Tar compressed with lzip (.tar.lz)</source>
-        <translation></translation>
+        <translation>Tar komprimiert mit lzip (.tar.lz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="25"/>
         <source>Tar compressed with lzma (.tar.lzma)</source>
-        <translation></translation>
+        <translation>Tar komprimiert mit lzma (.tar.lzma)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="26"/>
         <source>Tar compressed with lzop (.tar.lzo)</source>
-        <translation></translation>
+        <translation>Tar komprimiert mit lzop (.tar.lzo)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="27"/>
@@ -683,12 +683,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="29"/>
         <source>Tar uncompressed (.tar)</source>
-        <translation></translation>
+        <translation>Tar nicht komprimiert (.tar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="30"/>
         <source>Tar compressed with compress (.tar.Z)</source>
-        <translation></translation>
+        <translation>Tar komprimiert mit compress (.tar.Z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="31"/>
@@ -703,7 +703,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="33"/>
         <source>Tar compressed with xz (.tar.xz)</source>
-        <translation></translation>
+        <translation>Tar komprimiert mit xz (.tar.xz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="34"/>
@@ -745,7 +745,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="47"/>
         <source>Deleting files from archive</source>
-        <translation></translation>
+        <translation>Lösche Dateien aus dem Archiv</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="49"/>
@@ -765,12 +765,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="54"/>
         <source>Archive type not supported.</source>
-        <translation></translation>
+        <translation>Archivtyp nicht unterstützt.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="55"/>
         <source>Archive not found</source>
-        <translation></translation>
+        <translation>Archiv nicht gefunden</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="56"/>
@@ -785,7 +785,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="58"/>
         <source>You can&apos;t add an archive to itself.</source>
-        <translation></translation>
+        <translation>Sie können das Archiv nicht zu sich selbst hinzufügen.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="64"/>
