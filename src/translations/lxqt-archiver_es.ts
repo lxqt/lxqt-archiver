@@ -14,9 +14,13 @@
         <translation></translation>
     </message>
     <message>
-        <location filename="../about.ui" line="47"/>
         <source> A simple and desktop-agnostic Qt file archiver </source>
-        <translation> Un archivador hecho con Qt, sencillo e independiente del escritorio </translation>
+        <translation type="vanished"> Un archivador hecho con Qt, sencillo e independiente del escritorio </translation>
+    </message>
+    <message>
+        <location filename="../about.ui" line="47"/>
+        <source>A simple and desktop-agnostic Qt file archiver</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../about.ui" line="57"/>

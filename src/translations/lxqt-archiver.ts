@@ -15,7 +15,7 @@
     </message>
     <message>
         <location filename="../about.ui" line="47"/>
-        <source> A simple and desktop-agnostic Qt file archiver </source>
+        <source>A simple and desktop-agnostic Qt file archiver</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
