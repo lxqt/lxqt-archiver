@@ -20,7 +20,7 @@
     <message>
         <location filename="../about.ui" line="47"/>
         <source>A simple and desktop-agnostic Qt file archiver</source>
-        <translation type="unfinished"></translation>
+        <translation>Prosty i niezależny od środowiska graficznego menedżer archiwów Qt</translation>
     </message>
     <message>
         <location filename="../about.ui" line="57"/>
