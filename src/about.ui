@@ -44,7 +44,7 @@
    <item>
     <widget class="QLabel" name="label_2">
      <property name="text">
-      <string> A simple and desktop-agnostic Qt file archiver </string>
+      <string>A simple and desktop-agnostic Qt file archiver</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
