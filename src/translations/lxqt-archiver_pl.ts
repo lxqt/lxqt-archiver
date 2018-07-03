@@ -439,95 +439,95 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</
         <translation>Kodowani&amp;e nazw plików</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="144"/>
-        <location filename="../mainwindow.cpp" line="172"/>
-        <location filename="../mainwindow.cpp" line="199"/>
+        <location filename="../mainwindow.cpp" line="161"/>
+        <location filename="../mainwindow.cpp" line="188"/>
+        <location filename="../mainwindow.cpp" line="219"/>
         <source>All files (*)</source>
         <translation>Wszystkie pliki (*)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="202"/>
-        <location filename="../mainwindow.cpp" line="231"/>
+        <location filename="../mainwindow.cpp" line="192"/>
+        <location filename="../mainwindow.cpp" line="223"/>
         <source>Add only if &amp;newer</source>
         <translation>Dodaj tylko gdy &amp;nowsze</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="255"/>
+        <location filename="../mainwindow.cpp" line="247"/>
         <source>Confirm</source>
         <translation>Potwierdź</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="255"/>
+        <location filename="../mainwindow.cpp" line="247"/>
         <source>Are you sure you want to delete selected files?</source>
         <translation>Czy na pewno chcesz usunąć zaznaczone pliki?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="383"/>
+        <location filename="../mainwindow.cpp" line="359"/>
         <source>Version: %1</source>
         <translation>Wersja: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="434"/>
+        <location filename="../mainwindow.cpp" line="409"/>
         <source>%p %</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="510"/>
+        <location filename="../mainwindow.cpp" line="492"/>
         <source>Success</source>
         <translation>Sukces</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="510"/>
+        <location filename="../mainwindow.cpp" line="492"/>
         <source>No errors are found.</source>
         <translation>Nie odnaleziono błędów.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="535"/>
+        <location filename="../mainwindow.cpp" line="517"/>
         <source>Error</source>
         <translation>Błąd</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="563"/>
+        <location filename="../mainwindow.cpp" line="545"/>
         <source>N/A</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="567"/>
+        <location filename="../mainwindow.cpp" line="549"/>
         <source>Uncompressed Size:</source>
         <translation>Rozmiar nieskompresowany:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="569"/>
+        <location filename="../mainwindow.cpp" line="551"/>
         <source>Compression Ratio:</source>
         <translation>Poziom kompresji:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="622"/>
+        <location filename="../mainwindow.cpp" line="604"/>
         <source>File name</source>
         <translation>Nazwa pliku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="623"/>
+        <location filename="../mainwindow.cpp" line="605"/>
         <source>File Type</source>
         <translation>Rodzaj pliku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="624"/>
+        <location filename="../mainwindow.cpp" line="606"/>
         <source>File Size</source>
         <translation>Rozmiar pliku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="625"/>
+        <location filename="../mainwindow.cpp" line="607"/>
         <source>Modified</source>
         <translation>Modyfikowany</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="626"/>
+        <location filename="../mainwindow.cpp" line="608"/>
         <source>Encrypted</source>
         <translation>Zaszyfrowany</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="656"/>
+        <location filename="../mainwindow.cpp" line="638"/>
         <source>%1 files</source>
         <translation>%1 plików</translation>
     </message>
@@ -570,7 +570,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</
         <translation>Postęp</translation>
     </message>
     <message>
-        <location filename="../progressdialog.cpp" line="17"/>
+        <location filename="../progressdialog.cpp" line="16"/>
         <source>%p %</source>
         <translation></translation>
     </message>
@@ -578,13 +578,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="184"/>
         <source>All files (*)</source>
-        <translation>Wszystkie pliki (*)</translation>
+        <translation type="vanished">Wszystkie pliki (*)</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="218"/>
-        <location filename="../main.cpp" line="250"/>
+        <location filename="../main.cpp" line="224"/>
+        <location filename="../main.cpp" line="264"/>
         <source>Error</source>
         <translation>Błąd</translation>
     </message>
@@ -742,6 +741,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</
         <location filename="../corestrs.h" line="38"/>
         <location filename="../corestrs.h" line="45"/>
         <location filename="../corestrs.h" line="61"/>
+        <location filename="../main.cpp" line="216"/>
         <source>Adding file: </source>
         <translation>Dodawanie pliku: </translation>
     </message>
@@ -749,6 +749,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</
         <location filename="../corestrs.h" line="39"/>
         <location filename="../corestrs.h" line="48"/>
         <location filename="../corestrs.h" line="63"/>
+        <location filename="../main.cpp" line="256"/>
         <source>Extracting file: </source>
         <translation>Rozpakowywanie pliku: </translation>
     </message>
@@ -812,6 +813,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</
         <location filename="../corestrs.h" line="64"/>
         <source>Could not find the volume: %s</source>
         <translation>Nie można odnaleźć wolumenu: %s</translation>
+    </message>
+</context>
+<context>
+    <name>CreateFileDialog</name>
+    <message>
+        <location filename="../createfiledialog.cpp" line="13"/>
+        <source>All files (*)</source>
+        <translation type="unfinished">Wszystkie pliki (*)</translation>
+    </message>
+</context>
+<context>
+    <name>ExtractFileDialog</name>
+    <message>
+        <location filename="../extractfiledialog.cpp" line="12"/>
+        <source>All files (*)</source>
+        <translation type="unfinished">Wszystkie pliki (*)</translation>
     </message>
 </context>
 </TS>
