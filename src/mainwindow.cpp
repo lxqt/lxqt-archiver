@@ -121,7 +121,7 @@ MainWindow::MainWindow(QWidget* parent):
     ui_->actionRename->deleteLater();
     ui_->actionFind->deleteLater();
 
-    lasrDir_ = QStandardPaths::writableLocation(QStandardPaths::HomeLocation);
+    lasrDir_ = QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::HomeLocation));
 
     setAttribute(Qt::WA_DeleteOnClose, true);
 }
