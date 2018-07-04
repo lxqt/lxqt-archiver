@@ -16,7 +16,7 @@
     <message>
         <location filename="../about.ui" line="47"/>
         <source>A simple and desktop-agnostic Qt file archiver</source>
-        <translation type="unfinished"></translation>
+        <translation>Ein einfaches und desktopunabhängiges Qt Datei-Archivierungsprogramm</translation>
     </message>
     <message>
         <location filename="../about.ui" line="57"/>
@@ -37,7 +37,13 @@ LXQt Archiver is derived from the following programs:
 * Engrampa of MATE desktop
 * File Roller of Gnome desktop
 </source>
-        <translation></translation>
+        <translation>Programmierung:
+* Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;
+
+LXQt Archiver wurde von folgenden Programmen abgeleitet:
+* Engrampa of MATE desktop
+* File Roller of Gnome desktop
+</translation>
     </message>
     <message>
         <location filename="../about.ui" line="103"/>
@@ -63,7 +69,25 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation></translation>
+        <translation>LXQt Archiver
+
+Urheberrecht (C) 2018 das LXQt Team
+
+Dieses Programm ist freie Software; Weiterverteilung und/oder 
+Modifizierung unter den Richtlinien der &apos;GNU General Public License&apos; 
+gemäß der Free Software Foundation ist gestattet, ersichtlich in 
+Lizenzversion 2 und in weiteren Neuauflagen der Lizenz.
+
+Dieses Programm wird zur Verfügung gestellt, in der Hoffnung 
+seinen Nutzern hilfreich zu sein, jedoch OHNE EINE GARANTIE 
+und ohne einer implizierten Garantie auf MARKTGÄNGIGKEIT 
+oder ZWECKGEBUNDENER FUNKTIONSFÄHIGKEIT. Weitere 
+Einzelheiten sind in der &apos;GNU General Public License&apos; ersichtlich.
+
+Eine Kopie der &apos;GNU General Public License&apos; ist mit diesem 
+Programm enthalten. Falls nicht, schreiben Sie bitte der 
+Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, 
+Boston, MA  02110-1301, USA.</translation>
     </message>
 </context>
 <context>
@@ -71,7 +95,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archiver.cpp" line="64"/>
         <source>Archive type not supported.</source>
-        <translation></translation>
+        <translation>Archivtyp nicht unterstützt.</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="267"/>
@@ -81,7 +105,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archiver.cpp" line="271"/>
         <source>All supported formats</source>
-        <translation>Alle unterstützden Formate</translation>
+        <translation>Alle unterstützten Formate</translation>
     </message>
 </context>
 <context>
@@ -89,42 +113,42 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="25"/>
         <source>Fail to execute the command.</source>
-        <translation></translation>
+        <translation>Ausführung fehlgeschlagen.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
         <source>Command is not found.</source>
-        <translation></translation>
+        <translation>Befehl nicht gefunden.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="31"/>
         <source>The command exited abnormally.</source>
-        <translation></translation>
+        <translation>Abbruch unerwartet.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="34"/>
         <source>Password is required.</source>
-        <translation>Ein Passwort wird benötigt.</translation>
+        <translation>Kennwort benötigt.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="37"/>
         <source>Missing volume.</source>
-        <translation></translation>
+        <translation>Datenträger fehlt.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="40"/>
         <source>Bad charset.</source>
-        <translation></translation>
+        <translation>Zeichensatz fehlerhaft.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="43"/>
         <source>Unsupported file format.</source>
-        <translation>Nicht unterstütztes Dateiformat.</translation>
+        <translation>Dateiformat nicht unterstützt.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="46"/>
         <source>Unknown errors happened.</source>
-        <translation></translation>
+        <translation>Fehler unbekannt.</translation>
     </message>
 </context>
 <context>
@@ -137,7 +161,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../create.ui" line="36"/>
         <source>Split into volumes of</source>
-        <translation></translation>
+        <translation>Anzahl der zu bildenden Teilarchive</translation>
     </message>
     <message>
         <location filename="../create.ui" line="43"/>
@@ -147,7 +171,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../create.ui" line="50"/>
         <source>Encrypt the file list too</source>
-        <translation></translation>
+        <translation>Dateiliste verschlüsseln als</translation>
     </message>
 </context>
 <context>
@@ -160,12 +184,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="29"/>
         <source>E&amp;xtract all files</source>
-        <translation>E&amp;ntpacke alle Dateien</translation>
+        <translation>E&amp;ntpacken aller Dateien</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="36"/>
         <source>Ex&amp;tract selected files</source>
-        <translation>En&amp;tpacke ausgewählte Dateien</translation>
+        <translation>En&amp;tpacken ausgewählter Dateien</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="59"/>
@@ -175,17 +199,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="65"/>
         <source>Re-create folders</source>
-        <translation></translation>
+        <translation>Ordner übertragen</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="72"/>
         <source>Overwrite existing files</source>
-        <translation>Überschreibe existierende Dateien</translation>
+        <translation>Existierende Dateien überschreiben</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="79"/>
         <source>Do not extract older files</source>
-        <translation>Entpacke keine älteren Dateien</translation>
+        <translation>Ältere Dateien nicht entpacken</translation>
     </message>
 </context>
 <context>
@@ -194,7 +218,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../mainwindow.ui" line="14"/>
         <location filename="../mainwindow.cpp" line="134"/>
         <source>File Archiver</source>
-        <translation></translation>
+        <translation>Dateiarchivierung</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="97"/>
@@ -254,7 +278,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="219"/>
         <source>&amp;Extract</source>
-        <translation>&amp;Entpacken</translation>
+        <translation>Ent&amp;packen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="224"/>
@@ -344,7 +368,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="315"/>
         <source>&amp;Find</source>
-        <translation>&amp;Suchen</translation>
+        <translation>&amp;Finden</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="318"/>
@@ -364,7 +388,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="333"/>
         <source>Pass&amp;word</source>
-        <translation>Pass&amp;wort</translation>
+        <translation>Kenn&amp;wort</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="344"/>
@@ -384,12 +408,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="377"/>
         <source>S&amp;how as Folder</source>
-        <translation></translation>
+        <translation>A&amp;ls Ordner anzeigen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="385"/>
         <source>Show &amp;All Files</source>
-        <translation>Zeige &amp;alle Dateien</translation>
+        <translation>&amp;Alle Dateien anzeigen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="394"/>
@@ -414,7 +438,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="410"/>
         <source>Filename &amp;Encoding</source>
-        <translation></translation>
+        <translation>Dateinamen &amp;verschlüsseln</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="161"/>
@@ -427,17 +451,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../mainwindow.cpp" line="192"/>
         <location filename="../mainwindow.cpp" line="223"/>
         <source>Add only if &amp;newer</source>
-        <translation></translation>
+        <translation>Nur hinzufügen falls a&amp;ktueller</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="247"/>
         <source>Confirm</source>
-        <translation>Bestätigung</translation>
+        <translation>Bestätigen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="247"/>
         <source>Are you sure you want to delete selected files?</source>
-        <translation>Sind Sie sicher, daß Sie die gewählten Dateien löschen wollen?</translation>
+        <translation>Ausgewählte Dateien wirklich löschen?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="359"/>
@@ -452,12 +476,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="492"/>
         <source>Success</source>
-        <translation>Erfolg</translation>
+        <translation>Erfolgreich</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="492"/>
         <source>No errors are found.</source>
-        <translation>Es wurden keine Fehler gefunden.</translation>
+        <translation>Keine Fehler gefunden.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="517"/>
@@ -477,7 +501,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="551"/>
         <source>Compression Ratio:</source>
-        <translation>Kompressionsverhältnis:</translation>
+        <translation>Komprimierungsverhältnis:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="604"/>
@@ -521,12 +545,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../passworddialog.ui" line="20"/>
         <source>Encrypt the file list</source>
-        <translation>Verschlüssele die Dateiliste</translation>
+        <translation>Dateiliste verschlüsseln</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="34"/>
         <source>Show password</source>
-        <translation>Zeige das Kennwort an</translation>
+        <translation>Kennwort anzeigen</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="48"/>
@@ -537,7 +561,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../passworddialog.ui" line="61"/>
         <source>&lt;i&gt;&lt;b&gt;Note:&lt;/b&gt; the password will be used to encrypt files you add to the current archive, and to decrypt files you extract from the current archive. When the archive is closed the password will be deleted.&lt;/i&gt;</source>
-        <translation></translation>
+        <translation>&lt;i&gt;&lt;b&gt;Hinweis:&lt;/b&gt; zum aktuellen Archiv hinzugefügte Dateien werden durch das Kennwort verschlüsselt und beim Extrahieren durch dieses entschlüsselt. Beim Schließen des Archivs wird das Kennwort gelöscht.&lt;/i&gt;</translation>
     </message>
 </context>
 <context>
@@ -633,7 +657,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="19"/>
         <source>Self-extracting zip (.exe)</source>
-        <translation>Selbstextrahierendes zip (.exe)</translation>
+        <translation>Selbstextrahierendes Zip (.exe)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="20"/>
@@ -683,7 +707,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="29"/>
         <source>Tar uncompressed (.tar)</source>
-        <translation>Tar nicht komprimiert (.tar)</translation>
+        <translation>Tar unkomprimiert (.tar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="30"/>
@@ -721,7 +745,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="61"/>
         <location filename="../main.cpp" line="216"/>
         <source>Adding file: </source>
-        <translation></translation>
+        <translation>Füge Datei hinzu: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="39"/>
@@ -750,12 +774,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="49"/>
         <source>Recompressing archive</source>
-        <translation></translation>
+        <translation>Komprimiere Archiv erneut</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="50"/>
         <source>Decompressing archive</source>
-        <translation></translation>
+        <translation>Dekomprimiere Archiv</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="53"/>
@@ -775,22 +799,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="56"/>
         <source>You don&apos;t have the right permissions.</source>
-        <translation></translation>
+        <translation>Unzureichende Zugriffsrechte.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="57"/>
         <source>This archive type cannot be modified</source>
-        <translation></translation>
+        <translation>Dieser Archivtyp ist nicht modifizierbar</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="58"/>
         <source>You can&apos;t add an archive to itself.</source>
-        <translation>Sie können das Archiv nicht zu sich selbst hinzufügen.</translation>
+        <translation>Archive sind nicht zu sich selbst hinzufügbar.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="64"/>
         <source>Could not find the volume: %s</source>
-        <translation></translation>
+        <translation>Konnte Datenträger nicht finden: %s</translation>
     </message>
 </context>
 <context>
@@ -798,7 +822,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../createfiledialog.cpp" line="13"/>
         <source>All files (*)</source>
-        <translation type="unfinished">Alle Dateien (*)</translation>
+        <translation>Alle Dateien (*)</translation>
     </message>
 </context>
 <context>
@@ -806,7 +830,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extractfiledialog.cpp" line="12"/>
         <source>All files (*)</source>
-        <translation type="unfinished">Alle Dateien (*)</translation>
+        <translation>Alle Dateien (*)</translation>
     </message>
 </context>
 </TS>
