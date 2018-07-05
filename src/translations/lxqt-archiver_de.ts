@@ -41,8 +41,8 @@ LXQt Archiver is derived from the following programs:
 * Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;
 
 LXQt Archiver wurde von folgenden Programmen abgeleitet:
-* Engrampa of MATE desktop
-* File Roller of Gnome desktop
+* Engrampa der Desktopumgebung MATE
+* File Roller der Desktopumgebung Gnome
 </translation>
     </message>
     <message>
