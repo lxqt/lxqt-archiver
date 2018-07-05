@@ -199,7 +199,7 @@ Boston, MA  02110-1301, USA.</translation>
     <message>
         <location filename="../extract.ui" line="65"/>
         <source>Re-create folders</source>
-        <translation>Ordner übertragen</translation>
+        <translation>Ordnerstruktur übertragen</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="72"/>
