@@ -25,7 +25,7 @@
     <message>
         <location filename="../about.ui" line="57"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://lxqt.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://lxqt.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://lxqt.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://lxqt.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="77"/>
@@ -41,7 +41,13 @@ LXQt Archiver is derived from the following programs:
 * Engrampa of MATE desktop
 * File Roller of Gnome desktop
 </source>
-        <translation type="unfinished"></translation>
+        <translation>開發者：
+* Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;
+
+LXQt 壓縮程式基於以下兩個軟體：
+* MATE 桌面環境的 Engrampa 壓縮程式
+* GNOME 桌面環境的 File Roller
+</translation>
     </message>
     <message>
         <location filename="../about.ui" line="103"/>
@@ -67,7 +73,23 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt 壓縮程式
+
+版權 (C) 2018 LXQt 團隊
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation>
     </message>
 </context>
 <context>
@@ -288,42 +310,42 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="255"/>
         <source>Cu&amp;t</source>
-        <translation type="unfinished"></translation>
+        <translation>剪下(&amp;T)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="258"/>
         <source>Ctrl+X</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+X</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="266"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>複製 (&amp;C)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="269"/>
         <source>Ctrl+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+C</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="277"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>貼上(&amp;P)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="280"/>
         <source>Ctrl+V</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+V</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="288"/>
         <source>&amp;Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>重新命名(&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="291"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="296"/>
@@ -348,12 +370,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="315"/>
         <source>&amp;Find</source>
-        <translation type="unfinished"></translation>
+        <translation>尋找(&amp;F)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="318"/>
         <source>Ctrl+F</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+F</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="323"/>
@@ -572,7 +594,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="6"/>
         <source>7-Zip (.7z)</source>
-        <translation type="unfinished"></translation>
+        <translation>7-Zip (.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="7"/>
@@ -582,22 +604,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="8"/>
         <source>Ace (.ace)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ace (.ace)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="9"/>
         <source>Ar (.a)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ar (.a)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="10"/>
         <source>Ar (.ar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ar (.ar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="11"/>
         <source>Arj (.arj)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arj (.arj)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="12"/>
@@ -607,117 +629,117 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="13"/>
         <source>Tar compressed with bzip (.tar.bz)</source>
-        <translation type="unfinished"></translation>
+        <translation>使用 bzip 壓縮的 Tar (.tar.bz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="14"/>
         <source>Cabinet (.cab)</source>
-        <translation type="unfinished"></translation>
+        <translation>Cabinet (.cab)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="15"/>
         <source>Rar Archived Comic Book (.cbr)</source>
-        <translation type="unfinished"></translation>
+        <translation>使用 RAR 封存的漫畫書 (.cbr)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="16"/>
         <source>Zip Archived Comic Book (.cbz)</source>
-        <translation type="unfinished"></translation>
+        <translation>使用 ZIP 封存的漫畫書 (.cbz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="17"/>
         <source>Tar compressed with gzip (.tar.gz)</source>
-        <translation type="unfinished"></translation>
+        <translation>使用 gzip 壓縮的 Tar (.tar.gz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="18"/>
         <source>Ear (.ear)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ear (.ear)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="19"/>
         <source>Self-extracting zip (.exe)</source>
-        <translation type="unfinished"></translation>
+        <translation>自解壓 ZIP (.exe)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="20"/>
         <source>Jar (.jar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Jar (.jar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="21"/>
         <source>Lha (.lzh)</source>
-        <translation type="unfinished"></translation>
+        <translation>Lha (.lzh)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="22"/>
         <source>Lrzip (.lrz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Lrzip (.lrz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="23"/>
         <source>Tar compressed with lrzip (.tar.lrz)</source>
-        <translation type="unfinished"></translation>
+        <translation>使用 lrzip 壓縮的 Tar (.tar.lrz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="24"/>
         <source>Tar compressed with lzip (.tar.lz)</source>
-        <translation type="unfinished"></translation>
+        <translation>使用 lzip 壓縮的 Tar (.tar.lz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="25"/>
         <source>Tar compressed with lzma (.tar.lzma)</source>
-        <translation type="unfinished"></translation>
+        <translation>使用 lzma 壓縮的 Tar (.tar.lzma)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="26"/>
         <source>Tar compressed with lzop (.tar.lzo)</source>
-        <translation type="unfinished"></translation>
+        <translation>使用 lzop 壓縮的 Tar (.tar.lzo)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="27"/>
         <source>Windows Imaging Format (.wim)</source>
-        <translation type="unfinished"></translation>
+        <translation>Windows 鏡像格式 (.wim)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="28"/>
         <source>Rar (.rar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Rar (.rar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="29"/>
         <source>Tar uncompressed (.tar)</source>
-        <translation type="unfinished"></translation>
+        <translation>未壓縮 Tar (.tar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="30"/>
         <source>Tar compressed with compress (.tar.Z)</source>
-        <translation type="unfinished"></translation>
+        <translation>使用 compress 壓縮的 Tar (.tar.Z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="31"/>
         <source>War (.war)</source>
-        <translation type="unfinished"></translation>
+        <translation>War (.war)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="32"/>
         <source>Xz (.xz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Xz (.xz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="33"/>
         <source>Tar compressed with xz (.tar.xz)</source>
-        <translation type="unfinished"></translation>
+        <translation>使用 xz 壓縮的 Tar (.tar.xz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="34"/>
         <source>Zoo (.zoo)</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoo (.zoo)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="35"/>
         <source>Zip (.zip)</source>
-        <translation type="unfinished"></translation>
+        <translation>Zip (.zip)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="38"/>
@@ -802,7 +824,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../createfiledialog.cpp" line="13"/>
         <source>All files (*)</source>
-        <translation type="unfinished">所有檔案 (*)</translation>
+        <translation>所有檔案 (*)</translation>
     </message>
 </context>
 <context>
@@ -810,7 +832,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extractfiledialog.cpp" line="12"/>
         <source>All files (*)</source>
-        <translation type="unfinished">所有檔案 (*)</translation>
+        <translation>所有檔案 (*)</translation>
     </message>
 </context>
 </TS>
