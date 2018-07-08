@@ -79,12 +79,12 @@ Derechos de autor (C) 2018 el equipo de LXQt
 
 Este programa es software libre; puede redistribuirlo y/o
 modificarlo bajo los términos de la Licencia Pública General de GNU
-de acuerdo a la publicación de la Free Software Foundation; en su versión 2
+de acuerdo a lo publicado por la Free Software Foundation; en su versión 2
 de la Lincencia, o (a su parecer) cualquier versión posterior.
 
 Este programa es distribuído con la esperanza que será de utilidad,
-pero SIN NINGUNA GARANTÍA; sin siquiera la garantía implicita de
-COMERCIABILIDAD  o IDONEIDAD PARA UN PROPÓSITO PARTICULAR. Ver la
+pero SIN NINGUNA GARANTÍA; sin siquiera la garantía implícita de
+COMERCIABILIDAD o IDONEIDAD PARA UN PROPÓSITO PARTICULAR. Ver la
 Licencia Pública General de GNU para más detalles.
 
 Usted debió haber recibido una copia de la Licencia Pública General de GNU
@@ -225,7 +225,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="97"/>
         <source>&amp;File</source>
-        <translation>&amp;Archivo comprimido</translation>
+        <translation>&amp;Archivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="112"/>
@@ -240,7 +240,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="146"/>
         <source>&amp;Help</source>
-        <translation>A&amp;yuda</translation>
+        <translation>Ay&amp;uda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="157"/>
@@ -295,7 +295,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="235"/>
         <source>Alt+Return</source>
-        <translation>Alt+Entrar</translation>
+        <translation>Alt+Enter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="244"/>
@@ -350,7 +350,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="296"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Borrar</translation>
+        <translation>&amp;Eliminar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="299"/>
