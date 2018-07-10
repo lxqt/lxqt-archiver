@@ -69,7 +69,22 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation></translation>
+        <translation>מנהל הארכיונים של LXQt
+
+כל הזכויות שמורות (C) 2018 לצוות LXQt
+
+תכנית זו מוגשת במסגרת תכנה חופשית, ניתן להפיץ ו/או לשנות
+תחת תנאי הרישיון הציבורי הכללי של GNU כפי שמופץ על ידי
+קרן התכנה החופשית; בין אם גרסה 2 או כל גרסה עדכנית יותר
+של הרישיון (לשיקולך).
+
+תכנית זו מופצת בתקווה שתביא תועלת, אך ללא כל אחריות, אפילו לא
+מרומזת לשימוש מסחרי או התאמה לצרכים מסוימים.  נא לעיין
+ברישיון הציבורי הכללי של GNU לפרטים נוספים.
+
+לתכנית זו אמור היה להיות מצורף הרישיון הציבורי הכללי של GNU,
+אם לא, מוטב לשלוח מכתב אל Free Software Foundation, Inc.‎,
+ 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation>
     </message>
 </context>
 <context>
