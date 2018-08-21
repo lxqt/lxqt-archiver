@@ -6,7 +6,7 @@
     <message>
         <location filename="../about.ui" line="14"/>
         <source>About</source>
-        <translation></translation>
+        <translation>Acerca</translation>
     </message>
     <message>
         <location filename="../about.ui" line="24"/>
@@ -16,7 +16,7 @@
     <message>
         <location filename="../about.ui" line="47"/>
         <source>A simple and desktop-agnostic Qt file archiver</source>
-        <translation></translation>
+        <translation>Um arquivador de ficheiros agnóstico criado em Qt</translation>
     </message>
     <message>
         <location filename="../about.ui" line="57"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../about.ui" line="77"/>
         <source>Authors</source>
-        <translation></translation>
+        <translation>Autores</translation>
     </message>
     <message>
         <location filename="../about.ui" line="86"/>
@@ -37,12 +37,18 @@ LXQt Archiver is derived from the following programs:
 * Engrampa of MATE desktop
 * File Roller of Gnome desktop
 </source>
-        <translation></translation>
+        <translation>Programação:
+* Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;
+
+LXQt Archiver teve como base os seguintes programas:
+* Engrampa de MATE desktop
+* File Roller de Gnome desktop
+</translation>
     </message>
     <message>
         <location filename="../about.ui" line="103"/>
         <source>License</source>
-        <translation></translation>
+        <translation>Licença</translation>
     </message>
     <message>
         <location filename="../about.ui" line="112"/>
@@ -63,7 +69,23 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation></translation>
+        <translation>LXQt Archiver
+
+Copyright (C) 2018 - Equipa LXQt
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation>
     </message>
 </context>
 <context>
@@ -71,17 +93,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archiver.cpp" line="64"/>
         <source>Archive type not supported.</source>
-        <translation></translation>
+        <translation>Arquivo não suportado.</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="267"/>
         <source>*%1 files (*%1)</source>
-        <translation></translation>
+        <translation>Ficheiros *%1 (*%1)</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="271"/>
         <source>All supported formats</source>
-        <translation></translation>
+        <translation>Todos os formatos suportados</translation>
     </message>
 </context>
 <context>
@@ -89,42 +111,42 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="25"/>
         <source>Fail to execute the command.</source>
-        <translation></translation>
+        <translation>Erro ao executar o comando.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
         <source>Command is not found.</source>
-        <translation></translation>
+        <translation>Comando não encontrado.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="31"/>
         <source>The command exited abnormally.</source>
-        <translation></translation>
+        <translation>O comando terminou abruptamente.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="34"/>
         <source>Password is required.</source>
-        <translation></translation>
+        <translation>Requer palavra-passe.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="37"/>
         <source>Missing volume.</source>
-        <translation></translation>
+        <translation>Volume inexistente.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="40"/>
         <source>Bad charset.</source>
-        <translation></translation>
+        <translation>Codificação inválida.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="43"/>
         <source>Unsupported file format.</source>
-        <translation></translation>
+        <translation>Formato não suportado.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="46"/>
         <source>Unknown errors happened.</source>
-        <translation></translation>
+        <translation>Ocorreram erros não conhecidos.</translation>
     </message>
 </context>
 <context>
@@ -137,17 +159,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../create.ui" line="36"/>
         <source>Split into volumes of</source>
-        <translation></translation>
+        <translation>Separar em volumes de</translation>
     </message>
     <message>
         <location filename="../create.ui" line="43"/>
         <source>Password:</source>
-        <translation></translation>
+        <translation>Palavra-passe:</translation>
     </message>
     <message>
         <location filename="../create.ui" line="50"/>
         <source>Encrypt the file list too</source>
-        <translation></translation>
+        <translation>Cifrar também a lista de ficheiros</translation>
     </message>
 </context>
 <context>
@@ -155,32 +177,32 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="23"/>
         <source>Extract</source>
-        <translation></translation>
+        <translation>Extrair</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="29"/>
         <source>E&amp;xtract all files</source>
-        <translation></translation>
+        <translation>E&amp;xtrair todos os ficheiros</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="36"/>
         <source>Ex&amp;tract selected files</source>
-        <translation></translation>
+        <translation>Ex&amp;trair ficheiros selecionados</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="59"/>
         <source>Actions</source>
-        <translation></translation>
+        <translation>Ações</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="65"/>
         <source>Re-create folders</source>
-        <translation></translation>
+        <translation>Recriar pastas</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="72"/>
         <source>Overwrite existing files</source>
-        <translation></translation>
+        <translation>Substituir ficheiros existentes</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="79"/>
