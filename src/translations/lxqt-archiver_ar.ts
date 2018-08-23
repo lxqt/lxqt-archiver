@@ -6,12 +6,12 @@
     <message>
         <location filename="../about.ui" line="14"/>
         <source>About</source>
-        <translation></translation>
+        <translation>عن</translation>
     </message>
     <message>
         <location filename="../about.ui" line="24"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;مؤرشف لكسكيوت&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="47"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../about.ui" line="77"/>
         <source>Authors</source>
-        <translation></translation>
+        <translation>المؤلفون</translation>
     </message>
     <message>
         <location filename="../about.ui" line="86"/>
@@ -42,7 +42,7 @@ LXQt Archiver is derived from the following programs:
     <message>
         <location filename="../about.ui" line="103"/>
         <source>License</source>
-        <translation></translation>
+        <translation>الرخصة</translation>
     </message>
     <message>
         <location filename="../about.ui" line="112"/>
@@ -71,17 +71,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archiver.cpp" line="64"/>
         <source>Archive type not supported.</source>
-        <translation></translation>
+        <translation>نوع الأرشيف غير مدعوم.</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="267"/>
         <source>*%1 files (*%1)</source>
-        <translation></translation>
+        <translation>*ملفات %1 (*%1)</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="271"/>
         <source>All supported formats</source>
-        <translation></translation>
+        <translation>كل النسق المدعومة</translation>
     </message>
 </context>
 <context>
@@ -89,22 +89,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="25"/>
         <source>Fail to execute the command.</source>
-        <translation></translation>
+        <translation>فشل تنفيذ الأمر.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
         <source>Command is not found.</source>
-        <translation></translation>
+        <translation>لم يُعثر على الأمر.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="31"/>
         <source>The command exited abnormally.</source>
-        <translation></translation>
+        <translation>لم يخرج الأمر كما ينبغي.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="34"/>
         <source>Password is required.</source>
-        <translation></translation>
+        <translation>كلمة السر مطلوبة.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="37"/>
@@ -114,17 +114,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="40"/>
         <source>Bad charset.</source>
-        <translation></translation>
+        <translation>طقم المحارف سيّئ.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="43"/>
         <source>Unsupported file format.</source>
-        <translation></translation>
+        <translation>نسق الملفات غير مدعوم.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="46"/>
         <source>Unknown errors happened.</source>
-        <translation></translation>
+        <translation>حدثت أخطاء مجهولة.</translation>
     </message>
 </context>
 <context>
@@ -132,22 +132,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../create.ui" line="26"/>
         <source> MiB</source>
-        <translation></translation>
+        <translation> ميبي.بايت</translation>
     </message>
     <message>
         <location filename="../create.ui" line="36"/>
         <source>Split into volumes of</source>
-        <translation></translation>
+        <translation>افصل إلى أقسام بحجم</translation>
     </message>
     <message>
         <location filename="../create.ui" line="43"/>
         <source>Password:</source>
-        <translation></translation>
+        <translation>كلمة السر:</translation>
     </message>
     <message>
         <location filename="../create.ui" line="50"/>
         <source>Encrypt the file list too</source>
-        <translation></translation>
+        <translation>عمِّ قائمة الملفات أيضًا</translation>
     </message>
 </context>
 <context>
@@ -155,17 +155,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="23"/>
         <source>Extract</source>
-        <translation></translation>
+        <translation>استخرج</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="29"/>
         <source>E&amp;xtract all files</source>
-        <translation></translation>
+        <translation>ا&amp;ستخرج كل الملفات</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="36"/>
         <source>Ex&amp;tract selected files</source>
-        <translation></translation>
+        <translation>اس&amp;تخرج الملفات المحدّدة</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="59"/>
@@ -175,17 +175,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="65"/>
         <source>Re-create folders</source>
-        <translation></translation>
+        <translation>أعِد إنشاء المجلدات</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="72"/>
         <source>Overwrite existing files</source>
-        <translation></translation>
+        <translation>اكتب فوق الملفات الموجودة</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="79"/>
         <source>Do not extract older files</source>
-        <translation></translation>
+        <translation>لا تستخرج الملفات القديمة</translation>
     </message>
 </context>
 <context>
@@ -194,42 +194,42 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../mainwindow.ui" line="14"/>
         <location filename="../mainwindow.cpp" line="134"/>
         <source>File Archiver</source>
-        <translation></translation>
+        <translation>مؤرشف الملفات</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="97"/>
         <source>&amp;File</source>
-        <translation></translation>
+        <translation>&amp;ملف</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="112"/>
         <source>&amp;Edit</source>
-        <translation></translation>
+        <translation>ت&amp;حرير</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="131"/>
         <source>&amp;View</source>
-        <translation></translation>
+        <translation>من&amp;ظور</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="146"/>
         <source>&amp;Help</source>
-        <translation></translation>
+        <translation>م&amp;ساعدة</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="157"/>
         <source>toolBar</source>
-        <translation></translation>
+        <translation>شريط الأدوات</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="182"/>
         <source>&amp;About</source>
-        <translation></translation>
+        <translation>&amp;عن</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="191"/>
         <source>&amp;New</source>
-        <translation></translation>
+        <translation>&amp;جديد</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="194"/>
@@ -239,7 +239,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="203"/>
         <source>&amp;Open</source>
-        <translation></translation>
+        <translation>ا&amp;فتح</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
@@ -249,32 +249,32 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="214"/>
         <source>Save &amp;As</source>
-        <translation></translation>
+        <translation>احفظ &amp;كَ‍</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="219"/>
         <source>&amp;Extract</source>
-        <translation></translation>
+        <translation>ا&amp;ستخرج</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="224"/>
         <source>&amp;Test</source>
-        <translation></translation>
+        <translation>ا&amp;ختبر</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="232"/>
         <source>&amp;Properties</source>
-        <translation></translation>
+        <translation>ال&amp;خصائص</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="235"/>
         <source>Alt+Return</source>
-        <translation></translation>
+        <translation>Alt+Enter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="244"/>
         <source>&amp;Close</source>
-        <translation></translation>
+        <translation>أ&amp;غلِق</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="247"/>
@@ -284,7 +284,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="255"/>
         <source>Cu&amp;t</source>
-        <translation></translation>
+        <translation>&amp;قصّ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="258"/>
@@ -294,7 +294,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="266"/>
         <source>&amp;Copy</source>
-        <translation></translation>
+        <translation>ا&amp;نسخ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="269"/>
@@ -304,7 +304,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="277"/>
         <source>&amp;Paste</source>
-        <translation></translation>
+        <translation>أل&amp;صِق</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="280"/>
@@ -314,7 +314,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="288"/>
         <source>&amp;Rename</source>
-        <translation></translation>
+        <translation>&amp;غيّر الاسم</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="291"/>
@@ -324,7 +324,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="296"/>
         <source>&amp;Delete</source>
-        <translation></translation>
+        <translation>ا&amp;حذف</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="299"/>
@@ -334,7 +334,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="304"/>
         <source>&amp;Select All</source>
-        <translation></translation>
+        <translation>&amp;حدّد الكل</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="307"/>
@@ -354,47 +354,47 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="323"/>
         <source>&amp;Add Files</source>
-        <translation></translation>
+        <translation>أ&amp;ضِف ملفات</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="328"/>
         <source>Add F&amp;older</source>
-        <translation></translation>
+        <translation>أضِف مجل&amp;دًا</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="333"/>
         <source>Pass&amp;word</source>
-        <translation></translation>
+        <translation>&amp;كلمة السر</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="344"/>
         <source>&amp;Toolbar</source>
-        <translation></translation>
+        <translation>&amp;شريط الأدوات</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="355"/>
         <source>&amp;Statusbar</source>
-        <translation></translation>
+        <translation>شريط ال&amp;حالة</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="366"/>
         <source>&amp;Directory Tree</source>
-        <translation></translation>
+        <translation>شجرة الأ&amp;دلة</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="377"/>
         <source>S&amp;how as Folder</source>
-        <translation></translation>
+        <translation>ا&amp;عرض كمجلد</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="385"/>
         <source>Show &amp;All Files</source>
-        <translation></translation>
+        <translation>اعر&amp;ض كل الملفات</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="394"/>
         <source>St&amp;op</source>
-        <translation></translation>
+        <translation>أو&amp;قِف</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="397"/>
@@ -404,7 +404,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="402"/>
         <source>&amp;Reload</source>
-        <translation></translation>
+        <translation>أ&amp;عِد التحميل</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="405"/>
@@ -414,14 +414,14 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="410"/>
         <source>Filename &amp;Encoding</source>
-        <translation></translation>
+        <translation>&amp;ترميز اسم الملف</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="161"/>
         <location filename="../mainwindow.cpp" line="188"/>
         <location filename="../mainwindow.cpp" line="219"/>
         <source>All files (*)</source>
-        <translation></translation>
+        <translation>كل الملفات (*)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="192"/>
