@@ -4,8 +4,8 @@ include_directories(
 )
 
 add_definitions(
-    -DSHDIR=\"${CMAKE_INSTALL_FULL_LIBEXECDIR}/lxqt-archiver\"
-    -DPRIVEXECDIR=\"${CMAKE_INSTALL_FULL_LIBEXECDIR}/lxqt-archiver\"
+    -DSHDIR=\"${CMAKE_INSTALL_LIBDIR}/lxqt-archiver\"
+    -DPRIVEXECDIR=\"${CMAKE_INSTALL_LIBDIR}/lxqt-archiver\"
 )
 
 add_library(lxqt-archiver-core STATIC
@@ -57,7 +57,7 @@ target_link_libraries(rpm2cpio
 )
 install(TARGETS
     rpm2cpio
-    DESTINATION "${CMAKE_INSTALL_FULL_LIBEXECDIR}/lxqt-archiver"
+    DESTINATION "${CMAKE_INSTALL_LIBDIR}/lxqt-archiver"
     COMPONENT Runtime
 )
 
@@ -68,6 +68,6 @@ set(SCRIPT_FILES
 
 install(FILES
     ${SCRIPT_FILES}
-    DESTINATION "${CMAKE_INSTALL_FULL_LIBEXECDIR}/lxqt-archiver"
+    DESTINATION "${CMAKE_INSTALL_LIBDIR}/lxqt-archiver"
     COMPONENT Runtime
 )
