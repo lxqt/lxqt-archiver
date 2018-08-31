@@ -215,6 +215,10 @@
    </property>
   </action>
   <action name="actionExtract">
+   <property name="icon">
+    <iconset theme="archive-extract">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
    <property name="text">
     <string>&amp;Extract</string>
    </property>
@@ -319,11 +323,19 @@
    </property>
   </action>
   <action name="actionAddFiles">
+   <property name="icon">
+    <iconset theme="archive-insert">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
    <property name="text">
     <string>&amp;Add Files</string>
    </property>
   </action>
   <action name="actionAddFolder">
+   <property name="icon">
+    <iconset theme="archive-insert-directory">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
    <property name="text">
     <string>Add F&amp;older</string>
    </property>
