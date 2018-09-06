@@ -442,7 +442,7 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="415"/>
         <source>&amp;View Current Item</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mostra l&apos;element actual</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="185"/>
