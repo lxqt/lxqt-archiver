@@ -275,7 +275,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="214"/>
         <source>Save &amp;As</source>
-        <translation>&amp;Guardar como</translation>
+        <translation>G&amp;uardar como…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="219"/>
