@@ -6,17 +6,17 @@
     <message>
         <location filename="../about.ui" line="14"/>
         <source>About</source>
-        <translation></translation>
+        <translation>О программе</translation>
     </message>
     <message>
         <location filename="../about.ui" line="24"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Архиватор LXQt&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="47"/>
         <source>A simple and desktop-agnostic Qt file archiver</source>
-        <translation></translation>
+        <translation>Простой и независимый от рабочего стола архиватор на Qt</translation>
     </message>
     <message>
         <location filename="../about.ui" line="57"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../about.ui" line="77"/>
         <source>Authors</source>
-        <translation></translation>
+        <translation>Авторы</translation>
     </message>
     <message>
         <location filename="../about.ui" line="86"/>
@@ -37,12 +37,18 @@ LXQt Archiver is derived from the following programs:
 * Engrampa of MATE desktop
 * File Roller of Gnome desktop
 </source>
-        <translation></translation>
+        <translation>Программирование:
+* Хон Дженйи (PCMan) &lt;pcman.tw@gmail.com&gt;
+
+Архиватор LXQt основан на следующих программах:
+* Engrampa из MATE
+* File Roller из Gnome
+</translation>
     </message>
     <message>
         <location filename="../about.ui" line="103"/>
         <source>License</source>
-        <translation></translation>
+        <translation>Лицензия</translation>
     </message>
     <message>
         <location filename="../about.ui" line="112"/>
@@ -63,7 +69,23 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation></translation>
+        <translation>Архиватор LXQt
+
+Copyright (C) 2018 команда LXQt
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation>
     </message>
 </context>
 <context>
@@ -71,7 +93,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archiver.cpp" line="64"/>
         <source>Archive type not supported.</source>
-        <translation></translation>
+        <translation>Тип архива не поддерживается.</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="267"/>
@@ -81,7 +103,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archiver.cpp" line="271"/>
         <source>All supported formats</source>
-        <translation></translation>
+        <translation>Все поддерживаемые форматы</translation>
     </message>
 </context>
 <context>
@@ -89,42 +111,42 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="25"/>
         <source>Fail to execute the command.</source>
-        <translation></translation>
+        <translation>Не удалось выполнить команду.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
         <source>Command is not found.</source>
-        <translation></translation>
+        <translation>Команда не найдена.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="31"/>
         <source>The command exited abnormally.</source>
-        <translation></translation>
+        <translation>Команда аварийно завершилась.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="34"/>
         <source>Password is required.</source>
-        <translation></translation>
+        <translation>Требуется пароль.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="37"/>
         <source>Missing volume.</source>
-        <translation></translation>
+        <translation>Отсутствует том.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="40"/>
         <source>Bad charset.</source>
-        <translation></translation>
+        <translation>Неверная кодировка.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="43"/>
         <source>Unsupported file format.</source>
-        <translation></translation>
+        <translation>Неподдерживаемый формат файла.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="46"/>
         <source>Unknown errors happened.</source>
-        <translation></translation>
+        <translation>Произошли неизвестные ошибки.</translation>
     </message>
 </context>
 <context>
@@ -132,22 +154,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../create.ui" line="26"/>
         <source> MiB</source>
-        <translation></translation>
+        <translation> МиБ</translation>
     </message>
     <message>
         <location filename="../create.ui" line="36"/>
         <source>Split into volumes of</source>
-        <translation></translation>
+        <translation>Разделить на тома размером</translation>
     </message>
     <message>
         <location filename="../create.ui" line="43"/>
         <source>Password:</source>
-        <translation></translation>
+        <translation>Пароль:</translation>
     </message>
     <message>
         <location filename="../create.ui" line="50"/>
         <source>Encrypt the file list too</source>
-        <translation></translation>
+        <translation>Зашифровать список файлов</translation>
     </message>
 </context>
 <context>
@@ -155,37 +177,37 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="23"/>
         <source>Extract</source>
-        <translation></translation>
+        <translation>Извлечь</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="29"/>
         <source>E&amp;xtract all files</source>
-        <translation></translation>
+        <translation>&amp;Извлечь все файлы</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="36"/>
         <source>Ex&amp;tract selected files</source>
-        <translation></translation>
+        <translation>Из&amp;влечь выделенные файлы</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="59"/>
         <source>Actions</source>
-        <translation></translation>
+        <translation>Действия</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="65"/>
         <source>Re-create folders</source>
-        <translation></translation>
+        <translation>Воссоздать папки</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="72"/>
         <source>Overwrite existing files</source>
-        <translation></translation>
+        <translation>Перезаписать существующие файлы</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="79"/>
         <source>Do not extract older files</source>
-        <translation></translation>
+        <translation>Не извлекать более старые файлы</translation>
     </message>
 </context>
 <context>
@@ -194,42 +216,42 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../mainwindow.ui" line="14"/>
         <location filename="../mainwindow.cpp" line="158"/>
         <source>File Archiver</source>
-        <translation></translation>
+        <translation>Архиватор файлов</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="97"/>
         <source>&amp;File</source>
-        <translation></translation>
+        <translation>&amp;Файл</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="112"/>
         <source>&amp;Edit</source>
-        <translation></translation>
+        <translation>&amp;Правка</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="131"/>
         <source>&amp;View</source>
-        <translation></translation>
+        <translation>&amp;Вид</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="146"/>
         <source>&amp;Help</source>
-        <translation></translation>
+        <translation>&amp;Справка</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="157"/>
         <source>toolBar</source>
-        <translation></translation>
+        <translation>Панель</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="182"/>
         <source>&amp;About</source>
-        <translation></translation>
+        <translation>&amp;О программе</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="191"/>
         <source>&amp;New</source>
-        <translation></translation>
+        <translation>Со&amp;здать</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="194"/>
@@ -239,7 +261,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="203"/>
         <source>&amp;Open</source>
-        <translation></translation>
+        <translation>&amp;Открыть</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
@@ -249,22 +271,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="214"/>
         <source>Save &amp;As</source>
-        <translation></translation>
+        <translation>Сохранить &amp;как</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="219"/>
         <source>&amp;Extract</source>
-        <translation></translation>
+        <translation>&amp;Извлечь</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="224"/>
         <source>&amp;Test</source>
-        <translation></translation>
+        <translation>Про&amp;тестировать</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="232"/>
         <source>&amp;Properties</source>
-        <translation></translation>
+        <translation>С&amp;войства</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="235"/>
@@ -274,7 +296,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="244"/>
         <source>&amp;Close</source>
-        <translation></translation>
+        <translation>&amp;Закрыть</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="247"/>
@@ -284,7 +306,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="255"/>
         <source>Cu&amp;t</source>
-        <translation></translation>
+        <translation>&amp;Вырезать</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="258"/>
@@ -294,7 +316,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="266"/>
         <source>&amp;Copy</source>
-        <translation></translation>
+        <translation>&amp;Копировать</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="269"/>
@@ -304,7 +326,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="277"/>
         <source>&amp;Paste</source>
-        <translation></translation>
+        <translation>&amp;Вставить</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="280"/>
@@ -314,7 +336,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="288"/>
         <source>&amp;Rename</source>
-        <translation></translation>
+        <translation>Пере&amp;именовать</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="291"/>
@@ -324,7 +346,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="296"/>
         <source>&amp;Delete</source>
-        <translation></translation>
+        <translation>&amp;Удалить</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="299"/>
@@ -334,7 +356,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="304"/>
         <source>&amp;Select All</source>
-        <translation></translation>
+        <translation>В&amp;ыделить все</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="307"/>
@@ -344,7 +366,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="315"/>
         <source>&amp;Find</source>
-        <translation></translation>
+        <translation>&amp;Найти</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="318"/>
@@ -354,47 +376,47 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="323"/>
         <source>&amp;Add Files</source>
-        <translation></translation>
+        <translation>&amp;Добавить файлы</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="328"/>
         <source>Add F&amp;older</source>
-        <translation></translation>
+        <translation>Добавить &amp;папку</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="333"/>
         <source>Pass&amp;word</source>
-        <translation></translation>
+        <translation>П&amp;ароль</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="344"/>
         <source>&amp;Toolbar</source>
-        <translation></translation>
+        <translation>Панель &amp;инструментов</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="355"/>
         <source>&amp;Statusbar</source>
-        <translation></translation>
+        <translation>Строка с&amp;остояния</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="366"/>
         <source>&amp;Directory Tree</source>
-        <translation></translation>
+        <translation>&amp;Дерево каталогов</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="377"/>
         <source>S&amp;how as Folder</source>
-        <translation></translation>
+        <translation>По&amp;казать как папку</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="385"/>
         <source>Show &amp;All Files</source>
-        <translation></translation>
+        <translation>Показать &amp;все файлы</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="394"/>
         <source>St&amp;op</source>
-        <translation></translation>
+        <translation>П&amp;рервать</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="397"/>
@@ -404,7 +426,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="402"/>
         <source>&amp;Reload</source>
-        <translation></translation>
+        <translation>&amp;Обновить</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="405"/>
@@ -414,40 +436,40 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="410"/>
         <source>Filename &amp;Encoding</source>
-        <translation></translation>
+        <translation>&amp;Кодировка имен файлов</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="415"/>
         <source>&amp;View Current Item</source>
-        <translation></translation>
+        <translation>Прос&amp;мотр текущего элемента</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="185"/>
         <location filename="../mainwindow.cpp" line="214"/>
         <location filename="../mainwindow.cpp" line="247"/>
         <source>All files (*)</source>
-        <translation></translation>
+        <translation>Все файлы (*)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="219"/>
         <location filename="../mainwindow.cpp" line="252"/>
         <source>Add only if &amp;newer</source>
-        <translation></translation>
+        <translation>Добавлять только более &amp;новые</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="277"/>
         <source>Confirm</source>
-        <translation></translation>
+        <translation>Подтвердить</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="277"/>
         <source>Are you sure you want to delete selected files?</source>
-        <translation></translation>
+        <translation>Вы действительно хотите удалить выделенные файлы?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="445"/>
         <source>Version: %1</source>
-        <translation></translation>
+        <translation>Версия: %1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="504"/>
@@ -457,62 +479,62 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="587"/>
         <source>Success</source>
-        <translation></translation>
+        <translation>Удача</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="587"/>
         <source>No errors are found.</source>
-        <translation></translation>
+        <translation>Ошибок не найдено.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="620"/>
         <source>Error</source>
-        <translation></translation>
+        <translation>Ошибка</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="648"/>
         <source>N/A</source>
-        <translation></translation>
+        <translation>Непр.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="652"/>
         <source>Uncompressed Size:</source>
-        <translation></translation>
+        <translation>Исходный размер:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="654"/>
         <source>Compression Ratio:</source>
-        <translation></translation>
+        <translation>Степень сжатия:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="707"/>
         <source>File name</source>
-        <translation></translation>
+        <translation>Имя файла</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="708"/>
         <source>File Type</source>
-        <translation></translation>
+        <translation>Тип файла</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="709"/>
         <source>File Size</source>
-        <translation></translation>
+        <translation>Размер файла</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="710"/>
         <source>Modified</source>
-        <translation></translation>
+        <translation>Изменён</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="711"/>
         <source>Encrypted</source>
-        <translation></translation>
+        <translation>Зашифрован</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="741"/>
         <source>%1 files</source>
-        <translation></translation>
+        <translation>Файлов: %1</translation>
     </message>
 </context>
 <context>
@@ -521,28 +543,28 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../passworddialog.ui" line="14"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password</source>
-        <translation></translation>
+        <translation>Пароль</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="20"/>
         <source>Encrypt the file list</source>
-        <translation></translation>
+        <translation>Зашифровать список файлов</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="34"/>
         <source>Show password</source>
-        <translation></translation>
+        <translation>Показать пароль</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="48"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password:</source>
-        <translation></translation>
+        <translation>Пароль:</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="61"/>
         <source>&lt;i&gt;&lt;b&gt;Note:&lt;/b&gt; the password will be used to encrypt files you add to the current archive, and to decrypt files you extract from the current archive. When the archive is closed the password will be deleted.&lt;/i&gt;</source>
-        <translation></translation>
+        <translation>&lt;i&gt;&lt;b&gt;Внимание:&lt;/b&gt; пароль будет использован для шифрования файлов, добавляемых в текущий архив, и для расшифровки файлов, извлекаемых из текущего архива. После закрытия архива введенный пароль исчезнет.&lt;/i&gt;</translation>
     </message>
 </context>
 <context>
@@ -550,7 +572,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../progressdialog.ui" line="14"/>
         <source>Progress</source>
-        <translation></translation>
+        <translation>Ход операции</translation>
     </message>
     <message>
         <location filename="../progressdialog.cpp" line="16"/>
@@ -564,7 +586,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../main.cpp" line="224"/>
         <location filename="../main.cpp" line="264"/>
         <source>Error</source>
-        <translation></translation>
+        <translation>Ошибка</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="6"/>
@@ -574,7 +596,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="7"/>
         <source>Tar compressed with 7z (.tar.7z)</source>
-        <translation></translation>
+        <translation>Tar сжатый 7z (.tar.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="8"/>
@@ -599,12 +621,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="12"/>
         <source>Tar compressed with bzip2 (.tar.bz2)</source>
-        <translation></translation>
+        <translation>Tar сжатый bzip2 (.tar.bz2)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="13"/>
         <source>Tar compressed with bzip (.tar.bz)</source>
-        <translation></translation>
+        <translation>Tar сжатый bzip (.tar.bz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="14"/>
@@ -614,17 +636,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="15"/>
         <source>Rar Archived Comic Book (.cbr)</source>
-        <translation></translation>
+        <translation>Комикс сжатый Rar (.cbr)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="16"/>
         <source>Zip Archived Comic Book (.cbz)</source>
-        <translation></translation>
+        <translation>Комикс сжатый Zip (.cbz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="17"/>
         <source>Tar compressed with gzip (.tar.gz)</source>
-        <translation></translation>
+        <translation>Tar сжатый gzip (.tar.gz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="18"/>
@@ -634,7 +656,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="19"/>
         <source>Self-extracting zip (.exe)</source>
-        <translation></translation>
+        <translation>Самораспаковывающийся zip (.exe)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="20"/>
@@ -654,22 +676,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="23"/>
         <source>Tar compressed with lrzip (.tar.lrz)</source>
-        <translation></translation>
+        <translation>Tar сжатый lrzip (.tar.lrz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="24"/>
         <source>Tar compressed with lzip (.tar.lz)</source>
-        <translation></translation>
+        <translation>Tar сжатый lzip (.tar.lz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="25"/>
         <source>Tar compressed with lzma (.tar.lzma)</source>
-        <translation></translation>
+        <translation>Tar сжатый lzma (.tar.lzma)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="26"/>
         <source>Tar compressed with lzop (.tar.lzo)</source>
-        <translation></translation>
+        <translation>Tar сжатый lzop (.tar.lzo)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="27"/>
@@ -684,12 +706,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="29"/>
         <source>Tar uncompressed (.tar)</source>
-        <translation></translation>
+        <translation>Несжатый Tar (.tar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="30"/>
         <source>Tar compressed with compress (.tar.Z)</source>
-        <translation></translation>
+        <translation>Tar сжатый compress (.tar.Z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="31"/>
@@ -704,7 +726,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="33"/>
         <source>Tar compressed with xz (.tar.xz)</source>
-        <translation></translation>
+        <translation>Tar сжатый xz (.tar.xz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="34"/>
@@ -722,7 +744,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="61"/>
         <location filename="../main.cpp" line="216"/>
         <source>Adding file: </source>
-        <translation></translation>
+        <translation>Добавление файла: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="39"/>
@@ -730,7 +752,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="63"/>
         <location filename="../main.cpp" line="256"/>
         <source>Extracting file: </source>
-        <translation></translation>
+        <translation>Извлечение файла: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="42"/>
@@ -741,57 +763,57 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="46"/>
         <location filename="../corestrs.h" line="62"/>
         <source>Removing file: </source>
-        <translation></translation>
+        <translation>Удаление файла: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="47"/>
         <source>Deleting files from archive</source>
-        <translation></translation>
+        <translation>Удаление файлов из архива</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="49"/>
         <source>Recompressing archive</source>
-        <translation></translation>
+        <translation>Перепаковка архива</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="50"/>
         <source>Decompressing archive</source>
-        <translation></translation>
+        <translation>Распаковка архива</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="53"/>
         <source>File not found.</source>
-        <translation></translation>
+        <translation>Файл не найден.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="54"/>
         <source>Archive type not supported.</source>
-        <translation></translation>
+        <translation>Тип архива не поддерживается.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="55"/>
         <source>Archive not found</source>
-        <translation></translation>
+        <translation>Архив не найден</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="56"/>
         <source>You don&apos;t have the right permissions.</source>
-        <translation></translation>
+        <translation>У вас недостаточно прав.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="57"/>
         <source>This archive type cannot be modified</source>
-        <translation></translation>
+        <translation>Архивы этого типа нельзя изменить</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="58"/>
         <source>You can&apos;t add an archive to itself.</source>
-        <translation></translation>
+        <translation>Нельзя добавить архив сам в себя.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="64"/>
         <source>Could not find the volume: %s</source>
-        <translation></translation>
+        <translation>Не удалось найти том: %s</translation>
     </message>
 </context>
 <context>
@@ -799,7 +821,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../createfiledialog.cpp" line="13"/>
         <source>All files (*)</source>
-        <translation></translation>
+        <translation>Все файлы (*)</translation>
     </message>
 </context>
 <context>
@@ -807,7 +829,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extractfiledialog.cpp" line="12"/>
         <source>All files (*)</source>
-        <translation></translation>
+        <translation>Все файлы (*)</translation>
     </message>
 </context>
 </TS>
