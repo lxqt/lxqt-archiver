@@ -15,7 +15,7 @@
     </message>
     <message>
         <source> A simple and desktop-agnostic Qt file archiver </source>
-        <translation type="vanished">一個簡單且不限桌面環境的 Qt 檔案壓縮程式</translation>
+        <translation> 一個簡單且不限桌面環境的 Qt 檔案壓縮程式 </translation>
     </message>
     <message>
         <location filename="../about.ui" line="47"/>
@@ -97,7 +97,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archiver.cpp" line="64"/>
         <source>Archive type not supported.</source>
-        <translation>檔案格式不支援</translation>
+        <translation>不支援該壓縮檔格式。</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="267"/>
@@ -115,42 +115,42 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="25"/>
         <source>Fail to execute the command.</source>
-        <translation>無法執行指令</translation>
+        <translation>無法執行指令。</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
         <source>Command is not found.</source>
-        <translation>找不到指令</translation>
+        <translation>找不到指令。</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="31"/>
         <source>The command exited abnormally.</source>
-        <translation>命令異常結束</translation>
+        <translation>命令異常結束。</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="34"/>
         <source>Password is required.</source>
-        <translation>需要密碼</translation>
+        <translation>密碼為必須項目。</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="37"/>
         <source>Missing volume.</source>
-        <translation>卷遺失</translation>
+        <translation>儲存區遺失。</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="40"/>
         <source>Bad charset.</source>
-        <translation>損壞的字元集</translation>
+        <translation>損壞的字元集。</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="43"/>
         <source>Unsupported file format.</source>
-        <translation>不支援的檔案格式</translation>
+        <translation>不支援的檔案格式。</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="46"/>
         <source>Unknown errors happened.</source>
-        <translation>發生未知錯誤</translation>
+        <translation>發生未知錯誤。</translation>
     </message>
 </context>
 <context>
@@ -440,7 +440,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="410"/>
         <source>Filename &amp;Encoding</source>
-        <translation></translation>
+        <translation>檔案名稱編碼(&amp;E)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="415"/>
@@ -488,7 +488,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="587"/>
         <source>No errors are found.</source>
-        <translation>沒有發現任何錯誤</translation>
+        <translation>未發現任何錯誤。</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="620"/>
@@ -563,7 +563,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../passworddialog.ui" line="48"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password:</source>
-        <translation>密碼:</translation>
+        <translation>密碼：</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="61"/>
