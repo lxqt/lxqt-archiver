@@ -1,5 +1,8 @@
-cmake_minimum_required(VERSION 3.0.2 FATAL_ERROR)
 project(lxqt-archiver)
+# CMP0000 - A minimum required CMake version must be specified.
+# Note that the command invocation must appear in the CMakeLists.txt
+# file itself; a call in an included file is not sufficient.
+cmake_minimum_required(VERSION 3.6.2 FATAL_ERROR)
 
 option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
 
@@ -34,10 +37,6 @@ pkg_check_modules(
     gio-unix-2.0
     json-glib-1.0  # what's this?
 )
-
-if(NOT CMAKE_BUILD_TYPE)
-    set(CMAKE_BUILD_TYPE Release)
-endif()
 
 set(LXQT_ARCHIVER_MAJOR_VERSION 0)
 set(LXQT_ARCHIVER_MINOR_VERSION 1)
