@@ -145,7 +145,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="43"/>
         <source>Unsupported file format.</source>
-        <translation>Formato de archivo no admitido.</translation>
+        <translation>Formato de archivo no soportado.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="46"/>
@@ -201,7 +201,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="65"/>
         <source>Re-create folders</source>
-        <translation>Recrear las carpetas</translation>
+        <translation>Volver a crear carpetas</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="72"/>
