@@ -564,7 +564,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../main.cpp" line="224"/>
         <location filename="../main.cpp" line="264"/>
         <source>Error</source>
-        <translation></translation>
+        <translation>خطأ</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="6"/>
