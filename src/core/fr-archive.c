@@ -1576,7 +1576,7 @@ g_print("src_dir: %s, dst: %s\n", base_dir, dest_dir);
 		for (scan = file_list; scan != NULL; scan = scan->next) {
 			char *filename = scan->data;
 			new_file_list = g_list_prepend (new_file_list, g_build_filename (rel_dest_dir, filename, NULL));
-            g_print(" dst_fn: %s\n", new_file_list->data);
+            g_print(" dst_fn: %s\n", (char*)new_file_list->data);
         }
 	}
 	else {
