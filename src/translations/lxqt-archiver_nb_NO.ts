@@ -11,7 +11,7 @@
     <message>
         <location filename="../about.ui" line="24"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Arkivhåndterer&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="47"/>
@@ -696,7 +696,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../corestrs.h" line="27"/>
         <source>Windows Imaging Format (.wim)</source>
-        <translation></translation>
+        <translation>Windows diskbildeformat (.wim)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="28"/>
