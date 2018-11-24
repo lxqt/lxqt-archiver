@@ -8,9 +8,11 @@ project(lxqt-archiver)
 
 option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
 
-set(LXQTBT_MINIMUM_VERSION "0.5.0")
-set(LIBFM_QT_MINIMUM_VERSION "0.14.0")
 
+set(GLIB_MINIMUM_VERSION "2.50.0")
+set(LIBFM_QT_MINIMUM_VERSION "0.14.0")
+set(LXQTBT_MINIMUM_VERSION "0.6.0")
+set(QT_MINIMUM_VERSION "5.7.1")
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
@@ -21,22 +23,19 @@ set(CMAKE_AUTOUIC ON)
 
 include(GNUInstallDirs)
 
-find_package(Qt5Widgets REQUIRED)
-find_package(Qt5LinguistTools REQUIRED)
-find_package(Qt5DBus REQUIRED)
 
-find_package(Qt5X11Extras REQUIRED)  # seems to be required by fm-qt?
+find_package(Qt5DBus ${QT_MINIMUM_VERSION} REQUIRED)
+find_package(Qt5LinguistTools ${QT_MINIMUM_VERSION} REQUIRED)
+find_package(Qt5Widgets ${QT_MINIMUM_VERSION} REQUIRED)
+find_package(Qt5X11Extras ${QT_MINIMUM_VERSION} REQUIRED)  # seems to be required by fm-qt?
 find_package(fm-qt ${LIBFM_QT_MINIMUM_VERSION} REQUIRED)
-
 find_package(lxqt-build-tools ${LXQTBT_MINIMUM_VERSION} REQUIRED)
 
+find_package(GLIB ${GLIB_MINIMUM_VERSION} REQUIRED)
 find_package(PkgConfig REQUIRED)
 
 pkg_check_modules(
-    GLIB REQUIRED
-    glib-2.0
-    gio-2.0
-    gio-unix-2.0
+    GLIB
     json-glib-1.0  # what's this?
 )
 
