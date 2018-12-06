@@ -425,7 +425,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="397"/>
         <source>Esc</source>
-        <translation>Esc</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="402"/>
@@ -609,7 +609,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="8"/>
         <source>Ace (.ace)</source>
-        <translation>Ace (.ace)</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="9"/>
@@ -624,7 +624,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="11"/>
         <source>Arj (.arj)</source>
-        <translation>Arj (.arj)</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="12"/>
@@ -639,7 +639,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="14"/>
         <source>Cabinet (.cab)</source>
-        <translation>Cabinet (.cab)</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="15"/>
@@ -659,7 +659,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="18"/>
         <source>Ear (.ear)</source>
-        <translation>Ear (.ear)</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="19"/>
@@ -669,17 +669,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="20"/>
         <source>Jar (.jar)</source>
-        <translation>Jar (.jar)</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="21"/>
         <source>Lha (.lzh)</source>
-        <translation>Lha (.lzh)</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="22"/>
         <source>Lrzip (.lrz)</source>
-        <translation>Lrzip (.lrz)</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="23"/>
@@ -709,7 +709,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="28"/>
         <source>Rar (.rar)</source>
-        <translation>Rar (.rar)</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="29"/>
