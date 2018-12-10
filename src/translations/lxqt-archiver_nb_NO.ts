@@ -173,6 +173,14 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     </message>
 </context>
 <context>
+    <name>CreateFileDialog</name>
+    <message>
+        <location filename="../createfiledialog.cpp" line="13"/>
+        <source>All files (*)</source>
+        <translation>Alle filer (*)</translation>
+    </message>
+</context>
+<context>
     <name>ExtractArchiveExtraWidget</name>
     <message>
         <location filename="../extract.ui" line="23"/>
@@ -208,6 +216,14 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
         <location filename="../extract.ui" line="79"/>
         <source>Do not extract older files</source>
         <translation>Ikke pakk ut gamle filer</translation>
+    </message>
+</context>
+<context>
+    <name>ExtractFileDialog</name>
+    <message>
+        <location filename="../extractfiledialog.cpp" line="12"/>
+        <source>All files (*)</source>
+        <translation>Alle filer (*)</translation>
     </message>
 </context>
 <context>
@@ -274,172 +290,172 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
         <translation>Lagre &amp;som</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="219"/>
+        <location filename="../mainwindow.ui" line="223"/>
         <source>&amp;Extract</source>
         <translation>&amp;Pakk ut</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="224"/>
+        <location filename="../mainwindow.ui" line="228"/>
         <source>&amp;Test</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="232"/>
+        <location filename="../mainwindow.ui" line="236"/>
         <source>&amp;Properties</source>
         <translation>&amp;Egenskaper</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="235"/>
+        <location filename="../mainwindow.ui" line="239"/>
         <source>Alt+Return</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="244"/>
+        <location filename="../mainwindow.ui" line="248"/>
         <source>&amp;Close</source>
         <translation>&amp;Lukk</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="247"/>
+        <location filename="../mainwindow.ui" line="251"/>
         <source>Ctrl+Q</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="255"/>
+        <location filename="../mainwindow.ui" line="259"/>
         <source>Cu&amp;t</source>
         <translation>Kl&amp;ipp ut</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="258"/>
+        <location filename="../mainwindow.ui" line="262"/>
         <source>Ctrl+X</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="266"/>
+        <location filename="../mainwindow.ui" line="270"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopier</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="269"/>
+        <location filename="../mainwindow.ui" line="273"/>
         <source>Ctrl+C</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="277"/>
+        <location filename="../mainwindow.ui" line="281"/>
         <source>&amp;Paste</source>
         <translation>&amp;Lim inn</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="280"/>
+        <location filename="../mainwindow.ui" line="284"/>
         <source>Ctrl+V</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="288"/>
+        <location filename="../mainwindow.ui" line="292"/>
         <source>&amp;Rename</source>
         <translation>&amp;Gi nytt navn</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="291"/>
+        <location filename="../mainwindow.ui" line="295"/>
         <source>F2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="296"/>
+        <location filename="../mainwindow.ui" line="300"/>
         <source>&amp;Delete</source>
         <translation>&amp;Slett</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="299"/>
+        <location filename="../mainwindow.ui" line="303"/>
         <source>Del</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="304"/>
+        <location filename="../mainwindow.ui" line="308"/>
         <source>&amp;Select All</source>
         <translation>&amp;Velg alt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="307"/>
+        <location filename="../mainwindow.ui" line="311"/>
         <source>Ctrl+A</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="315"/>
+        <location filename="../mainwindow.ui" line="319"/>
         <source>&amp;Find</source>
         <translation>&amp;Finn</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="318"/>
+        <location filename="../mainwindow.ui" line="322"/>
         <source>Ctrl+F</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="323"/>
+        <location filename="../mainwindow.ui" line="331"/>
         <source>&amp;Add Files</source>
         <translation>&amp;Legg til filer</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="328"/>
+        <location filename="../mainwindow.ui" line="340"/>
         <source>Add F&amp;older</source>
         <translation>Legg&amp; til mappe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="333"/>
+        <location filename="../mainwindow.ui" line="345"/>
         <source>Pass&amp;word</source>
         <translation>Pass&amp;ord</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="344"/>
+        <location filename="../mainwindow.ui" line="356"/>
         <source>&amp;Toolbar</source>
         <translation>&amp;Verktøylinje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="355"/>
+        <location filename="../mainwindow.ui" line="367"/>
         <source>&amp;Statusbar</source>
         <translation>&amp;Statuslinje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="366"/>
+        <location filename="../mainwindow.ui" line="378"/>
         <source>&amp;Directory Tree</source>
         <translation>&amp;Mappetre</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="377"/>
+        <location filename="../mainwindow.ui" line="389"/>
         <source>S&amp;how as Folder</source>
         <translation>V&amp;is som mappe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="385"/>
+        <location filename="../mainwindow.ui" line="397"/>
         <source>Show &amp;All Files</source>
         <translation>Vis a&amp;lle filer</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="394"/>
+        <location filename="../mainwindow.ui" line="406"/>
         <source>St&amp;op</source>
         <translation>St&amp;opp</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="397"/>
+        <location filename="../mainwindow.ui" line="409"/>
         <source>Esc</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="402"/>
+        <location filename="../mainwindow.ui" line="414"/>
         <source>&amp;Reload</source>
         <translation>&amp;Last på nytt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="405"/>
+        <location filename="../mainwindow.ui" line="417"/>
         <source>F5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="410"/>
+        <location filename="../mainwindow.ui" line="422"/>
         <source>Filename &amp;Encoding</source>
         <translation>Filnavns t&amp;egnsett</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="415"/>
+        <location filename="../mainwindow.ui" line="427"/>
         <source>&amp;View Current Item</source>
         <translation>&amp;Vis nåværende valg</translation>
     </message>
@@ -814,22 +830,6 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
         <location filename="../corestrs.h" line="64"/>
         <source>Could not find the volume: %s</source>
         <translation>Fant ikke volumet: %s</translation>
-    </message>
-</context>
-<context>
-    <name>CreateFileDialog</name>
-    <message>
-        <location filename="../createfiledialog.cpp" line="13"/>
-        <source>All files (*)</source>
-        <translation>Alle filer (*)</translation>
-    </message>
-</context>
-<context>
-    <name>ExtractFileDialog</name>
-    <message>
-        <location filename="../extractfiledialog.cpp" line="12"/>
-        <source>All files (*)</source>
-        <translation>Alle filer (*)</translation>
     </message>
 </context>
 </TS>

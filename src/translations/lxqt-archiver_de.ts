@@ -175,6 +175,14 @@ Boston, MA  02110-1301, USA.</translation>
     </message>
 </context>
 <context>
+    <name>CreateFileDialog</name>
+    <message>
+        <location filename="../createfiledialog.cpp" line="13"/>
+        <source>All files (*)</source>
+        <translation>Alle Dateien (*)</translation>
+    </message>
+</context>
+<context>
     <name>ExtractArchiveExtraWidget</name>
     <message>
         <location filename="../extract.ui" line="23"/>
@@ -210,6 +218,14 @@ Boston, MA  02110-1301, USA.</translation>
         <location filename="../extract.ui" line="79"/>
         <source>Do not extract older files</source>
         <translation>Ältere Dateien nicht entpacken</translation>
+    </message>
+</context>
+<context>
+    <name>ExtractFileDialog</name>
+    <message>
+        <location filename="../extractfiledialog.cpp" line="12"/>
+        <source>All files (*)</source>
+        <translation>Alle Dateien (*)</translation>
     </message>
 </context>
 <context>
@@ -276,172 +292,172 @@ Boston, MA  02110-1301, USA.</translation>
         <translation>Speichern &amp;unter</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="219"/>
+        <location filename="../mainwindow.ui" line="223"/>
         <source>&amp;Extract</source>
         <translation>Ent&amp;packen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="224"/>
+        <location filename="../mainwindow.ui" line="228"/>
         <source>&amp;Test</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="232"/>
+        <location filename="../mainwindow.ui" line="236"/>
         <source>&amp;Properties</source>
         <translation>&amp;Eigenschaften</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="235"/>
+        <location filename="../mainwindow.ui" line="239"/>
         <source>Alt+Return</source>
         <translation>Alt+Enter</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="244"/>
+        <location filename="../mainwindow.ui" line="248"/>
         <source>&amp;Close</source>
         <translation>&amp;Schließen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="247"/>
+        <location filename="../mainwindow.ui" line="251"/>
         <source>Ctrl+Q</source>
         <translation>Strg+Q</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="255"/>
+        <location filename="../mainwindow.ui" line="259"/>
         <source>Cu&amp;t</source>
         <translation>&amp;Ausschneiden</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="258"/>
+        <location filename="../mainwindow.ui" line="262"/>
         <source>Ctrl+X</source>
         <translation>Strg+X</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="266"/>
+        <location filename="../mainwindow.ui" line="270"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopieren</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="269"/>
+        <location filename="../mainwindow.ui" line="273"/>
         <source>Ctrl+C</source>
         <translation>Strg+C</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="277"/>
+        <location filename="../mainwindow.ui" line="281"/>
         <source>&amp;Paste</source>
         <translation>&amp;Einfügen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="280"/>
+        <location filename="../mainwindow.ui" line="284"/>
         <source>Ctrl+V</source>
         <translation>Strg+V</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="288"/>
+        <location filename="../mainwindow.ui" line="292"/>
         <source>&amp;Rename</source>
         <translation>&amp;Umbenennen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="291"/>
+        <location filename="../mainwindow.ui" line="295"/>
         <source>F2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="296"/>
+        <location filename="../mainwindow.ui" line="300"/>
         <source>&amp;Delete</source>
         <translation>&amp;Löschen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="299"/>
+        <location filename="../mainwindow.ui" line="303"/>
         <source>Del</source>
         <translation>Entf</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="304"/>
+        <location filename="../mainwindow.ui" line="308"/>
         <source>&amp;Select All</source>
         <translation>Alles a&amp;uswählen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="307"/>
+        <location filename="../mainwindow.ui" line="311"/>
         <source>Ctrl+A</source>
         <translation>Strg+A</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="315"/>
+        <location filename="../mainwindow.ui" line="319"/>
         <source>&amp;Find</source>
         <translation>&amp;Finden</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="318"/>
+        <location filename="../mainwindow.ui" line="322"/>
         <source>Ctrl+F</source>
         <translation>Strg+F</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="323"/>
+        <location filename="../mainwindow.ui" line="331"/>
         <source>&amp;Add Files</source>
         <translation>&amp;Dateien hinzufügen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="328"/>
+        <location filename="../mainwindow.ui" line="340"/>
         <source>Add F&amp;older</source>
         <translation>&amp;Ordner hinzufügen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="333"/>
+        <location filename="../mainwindow.ui" line="345"/>
         <source>Pass&amp;word</source>
         <translation>Kenn&amp;wort</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="344"/>
+        <location filename="../mainwindow.ui" line="356"/>
         <source>&amp;Toolbar</source>
         <translation>&amp;Werkzeugleiste</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="355"/>
+        <location filename="../mainwindow.ui" line="367"/>
         <source>&amp;Statusbar</source>
         <translation>&amp;Statusleiste</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="366"/>
+        <location filename="../mainwindow.ui" line="378"/>
         <source>&amp;Directory Tree</source>
         <translation>&amp;Verzeichnisbaum</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="377"/>
+        <location filename="../mainwindow.ui" line="389"/>
         <source>S&amp;how as Folder</source>
         <translation>A&amp;ls Ordner anzeigen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="385"/>
+        <location filename="../mainwindow.ui" line="397"/>
         <source>Show &amp;All Files</source>
         <translation>&amp;Alle Dateien anzeigen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="394"/>
+        <location filename="../mainwindow.ui" line="406"/>
         <source>St&amp;op</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="397"/>
+        <location filename="../mainwindow.ui" line="409"/>
         <source>Esc</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="402"/>
+        <location filename="../mainwindow.ui" line="414"/>
         <source>&amp;Reload</source>
         <translation>Neu &amp;laden</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="405"/>
+        <location filename="../mainwindow.ui" line="417"/>
         <source>F5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="410"/>
+        <location filename="../mainwindow.ui" line="422"/>
         <source>Filename &amp;Encoding</source>
         <translation>Dateinamen &amp;verschlüsseln</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="415"/>
+        <location filename="../mainwindow.ui" line="427"/>
         <source>&amp;View Current Item</source>
         <translation>Aktuelles Element &amp;anzeigen</translation>
     </message>
@@ -584,10 +600,6 @@ Boston, MA  02110-1301, USA.</translation>
 </context>
 <context>
     <name>QObject</name>
-    <message>
-        <source>All files (*)</source>
-        <translation type="vanished">Alle Dateien (*)</translation>
-    </message>
     <message>
         <location filename="../main.cpp" line="224"/>
         <location filename="../main.cpp" line="264"/>
@@ -820,22 +832,6 @@ Boston, MA  02110-1301, USA.</translation>
         <location filename="../corestrs.h" line="64"/>
         <source>Could not find the volume: %s</source>
         <translation>Konnte Datenträger nicht finden: %s</translation>
-    </message>
-</context>
-<context>
-    <name>CreateFileDialog</name>
-    <message>
-        <location filename="../createfiledialog.cpp" line="13"/>
-        <source>All files (*)</source>
-        <translation>Alle Dateien (*)</translation>
-    </message>
-</context>
-<context>
-    <name>ExtractFileDialog</name>
-    <message>
-        <location filename="../extractfiledialog.cpp" line="12"/>
-        <source>All files (*)</source>
-        <translation>Alle Dateien (*)</translation>
     </message>
 </context>
 </TS>
