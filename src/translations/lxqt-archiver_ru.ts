@@ -173,6 +173,14 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     </message>
 </context>
 <context>
+    <name>CreateFileDialog</name>
+    <message>
+        <location filename="../createfiledialog.cpp" line="13"/>
+        <source>All files (*)</source>
+        <translation>Все файлы (*)</translation>
+    </message>
+</context>
+<context>
     <name>ExtractArchiveExtraWidget</name>
     <message>
         <location filename="../extract.ui" line="23"/>
@@ -208,6 +216,14 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../extract.ui" line="79"/>
         <source>Do not extract older files</source>
         <translation>Не извлекать более старые файлы</translation>
+    </message>
+</context>
+<context>
+    <name>ExtractFileDialog</name>
+    <message>
+        <location filename="../extractfiledialog.cpp" line="12"/>
+        <source>All files (*)</source>
+        <translation>Все файлы (*)</translation>
     </message>
 </context>
 <context>
@@ -274,172 +290,172 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <translation>Сохранить &amp;как</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="219"/>
+        <location filename="../mainwindow.ui" line="223"/>
         <source>&amp;Extract</source>
         <translation>&amp;Извлечь</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="224"/>
+        <location filename="../mainwindow.ui" line="228"/>
         <source>&amp;Test</source>
         <translation>Про&amp;тестировать</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="232"/>
+        <location filename="../mainwindow.ui" line="236"/>
         <source>&amp;Properties</source>
         <translation>С&amp;войства</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="235"/>
+        <location filename="../mainwindow.ui" line="239"/>
         <source>Alt+Return</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="244"/>
+        <location filename="../mainwindow.ui" line="248"/>
         <source>&amp;Close</source>
         <translation>&amp;Закрыть</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="247"/>
+        <location filename="../mainwindow.ui" line="251"/>
         <source>Ctrl+Q</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="255"/>
+        <location filename="../mainwindow.ui" line="259"/>
         <source>Cu&amp;t</source>
         <translation>&amp;Вырезать</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="258"/>
+        <location filename="../mainwindow.ui" line="262"/>
         <source>Ctrl+X</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="266"/>
+        <location filename="../mainwindow.ui" line="270"/>
         <source>&amp;Copy</source>
         <translation>&amp;Копировать</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="269"/>
+        <location filename="../mainwindow.ui" line="273"/>
         <source>Ctrl+C</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="277"/>
+        <location filename="../mainwindow.ui" line="281"/>
         <source>&amp;Paste</source>
         <translation>&amp;Вставить</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="280"/>
+        <location filename="../mainwindow.ui" line="284"/>
         <source>Ctrl+V</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="288"/>
+        <location filename="../mainwindow.ui" line="292"/>
         <source>&amp;Rename</source>
         <translation>Пере&amp;именовать</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="291"/>
+        <location filename="../mainwindow.ui" line="295"/>
         <source>F2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="296"/>
+        <location filename="../mainwindow.ui" line="300"/>
         <source>&amp;Delete</source>
         <translation>&amp;Удалить</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="299"/>
+        <location filename="../mainwindow.ui" line="303"/>
         <source>Del</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="304"/>
+        <location filename="../mainwindow.ui" line="308"/>
         <source>&amp;Select All</source>
         <translation>В&amp;ыделить все</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="307"/>
+        <location filename="../mainwindow.ui" line="311"/>
         <source>Ctrl+A</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="315"/>
+        <location filename="../mainwindow.ui" line="319"/>
         <source>&amp;Find</source>
         <translation>&amp;Найти</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="318"/>
+        <location filename="../mainwindow.ui" line="322"/>
         <source>Ctrl+F</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="323"/>
+        <location filename="../mainwindow.ui" line="331"/>
         <source>&amp;Add Files</source>
         <translation>&amp;Добавить файлы</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="328"/>
+        <location filename="../mainwindow.ui" line="340"/>
         <source>Add F&amp;older</source>
         <translation>Добавить &amp;папку</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="333"/>
+        <location filename="../mainwindow.ui" line="345"/>
         <source>Pass&amp;word</source>
         <translation>П&amp;ароль</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="344"/>
+        <location filename="../mainwindow.ui" line="356"/>
         <source>&amp;Toolbar</source>
         <translation>Панель &amp;инструментов</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="355"/>
+        <location filename="../mainwindow.ui" line="367"/>
         <source>&amp;Statusbar</source>
         <translation>Строка с&amp;остояния</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="366"/>
+        <location filename="../mainwindow.ui" line="378"/>
         <source>&amp;Directory Tree</source>
         <translation>&amp;Дерево каталогов</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="377"/>
+        <location filename="../mainwindow.ui" line="389"/>
         <source>S&amp;how as Folder</source>
         <translation>По&amp;казать как папку</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="385"/>
+        <location filename="../mainwindow.ui" line="397"/>
         <source>Show &amp;All Files</source>
         <translation>Показать &amp;все файлы</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="394"/>
+        <location filename="../mainwindow.ui" line="406"/>
         <source>St&amp;op</source>
         <translation>П&amp;рервать</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="397"/>
+        <location filename="../mainwindow.ui" line="409"/>
         <source>Esc</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="402"/>
+        <location filename="../mainwindow.ui" line="414"/>
         <source>&amp;Reload</source>
         <translation>&amp;Обновить</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="405"/>
+        <location filename="../mainwindow.ui" line="417"/>
         <source>F5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="410"/>
+        <location filename="../mainwindow.ui" line="422"/>
         <source>Filename &amp;Encoding</source>
         <translation>&amp;Кодировка имен файлов</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="415"/>
+        <location filename="../mainwindow.ui" line="427"/>
         <source>&amp;View Current Item</source>
         <translation>Прос&amp;мотр текущего элемента</translation>
     </message>
@@ -814,22 +830,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="64"/>
         <source>Could not find the volume: %s</source>
         <translation>Не удалось найти том: %s</translation>
-    </message>
-</context>
-<context>
-    <name>CreateFileDialog</name>
-    <message>
-        <location filename="../createfiledialog.cpp" line="13"/>
-        <source>All files (*)</source>
-        <translation>Все файлы (*)</translation>
-    </message>
-</context>
-<context>
-    <name>ExtractFileDialog</name>
-    <message>
-        <location filename="../extractfiledialog.cpp" line="12"/>
-        <source>All files (*)</source>
-        <translation>Все файлы (*)</translation>
     </message>
 </context>
 </TS>
