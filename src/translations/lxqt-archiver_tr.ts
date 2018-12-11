@@ -6,7 +6,7 @@
     <message>
         <location filename="../about.ui" line="14"/>
         <source>About</source>
-        <translation></translation>
+        <translation>Hakkında</translation>
     </message>
     <message>
         <location filename="../about.ui" line="24"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../about.ui" line="77"/>
         <source>Authors</source>
-        <translation></translation>
+        <translation>Yazarlar</translation>
     </message>
     <message>
         <location filename="../about.ui" line="86"/>
@@ -42,7 +42,7 @@ LXQt Archiver is derived from the following programs:
     <message>
         <location filename="../about.ui" line="103"/>
         <source>License</source>
-        <translation></translation>
+        <translation>Lisans</translation>
     </message>
     <message>
         <location filename="../about.ui" line="112"/>
@@ -94,7 +94,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="28"/>
         <source>Command is not found.</source>
-        <translation></translation>
+        <translation>Komut bulunamadı.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="31"/>
