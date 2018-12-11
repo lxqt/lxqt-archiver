@@ -11,12 +11,12 @@
     <message>
         <location filename="../about.ui" line="24"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Arşivleyici&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="47"/>
         <source>A simple and desktop-agnostic Qt file archiver</source>
-        <translation></translation>
+        <translation>Basit ve masaüstü etkileşimli Qt dosya arşivleyici</translation>
     </message>
     <message>
         <location filename="../about.ui" line="57"/>
@@ -37,7 +37,13 @@ LXQt Archiver is derived from the following programs:
 * Engrampa of MATE desktop
 * File Roller of Gnome desktop
 </source>
-        <translation></translation>
+        <translation>Programlama:
+* Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;
+
+LXQt Archiver aşağıdaki programlardan türetilmiştir:
+* Engrampa (MATE masaüstü)
+* File Roller (Gnome masaüstü)
+</translation>
     </message>
     <message>
         <location filename="../about.ui" line="103"/>
@@ -63,7 +69,23 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation></translation>
+        <translation>LXQt Archiver
+
+Telif Hakkı (C) 2018 LXQt Ekibi
+
+Bu program ücretsiz bir yazılımdır; Özgür Yazılım Vakfı tarafından
+yayınlandığı gibi GNU Genel Kamu Lisansı (Lisansın ya Sürüm 2 
+ya da (seçiminize göre) dah yeni sürümleri) şartlarına göre yeniden
+dağıtabilir ve değiştirebilirsiniz.
+
+Bu programın faydalı olacağını umuyoruz, ama HİÇBİR GARANTİSİ 
+YOKTUR; SATILABİLİRLİK veya BELİRLİ BİR AMACA UYGUNLUK 
+garantisi de yoktur. Daha fazla bilgi için GNU Genel Kamu Lisansı&apos;na 
+bakınız.
+
+Bu programla birlikte GNU Genel Kamu Lisansının bir kopyasını 
+almış olmalısınız; Yoksa, Özgür Yazılım Vakfı Şirketi&apos;ne yazın.
+51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation>
     </message>
 </context>
 <context>
@@ -71,17 +93,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archiver.cpp" line="64"/>
         <source>Archive type not supported.</source>
-        <translation></translation>
+        <translation>Arşiv türü desteklenmiyor.</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="267"/>
         <source>*%1 files (*%1)</source>
-        <translation></translation>
+        <translation>*%1 dosyalar (*%1)</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="271"/>
         <source>All supported formats</source>
-        <translation></translation>
+        <translation>Desteklenen tüm biçimler</translation>
     </message>
 </context>
 <context>
@@ -89,7 +111,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="25"/>
         <source>Fail to execute the command.</source>
-        <translation></translation>
+        <translation>Komut çalıştırılamadı.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
@@ -99,32 +121,32 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="31"/>
         <source>The command exited abnormally.</source>
-        <translation></translation>
+        <translation>Komut anormal olarak çıktı.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="34"/>
         <source>Password is required.</source>
-        <translation></translation>
+        <translation>Parola gerekli.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="37"/>
         <source>Missing volume.</source>
-        <translation></translation>
+        <translation>Eksik parça.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="40"/>
         <source>Bad charset.</source>
-        <translation></translation>
+        <translation>Kötü karakter.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="43"/>
         <source>Unsupported file format.</source>
-        <translation></translation>
+        <translation>Desteklenmeyen dosya biçimi.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="46"/>
         <source>Unknown errors happened.</source>
-        <translation></translation>
+        <translation>Bilinmeyen hatalar oluştu.</translation>
     </message>
 </context>
 <context>
@@ -137,12 +159,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../create.ui" line="36"/>
         <source>Split into volumes of</source>
-        <translation></translation>
+        <translation>Parçalara böl</translation>
     </message>
     <message>
         <location filename="../create.ui" line="43"/>
         <source>Password:</source>
-        <translation></translation>
+        <translation>Parola:</translation>
     </message>
     <message>
         <location filename="../create.ui" line="50"/>
@@ -155,7 +177,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../createfiledialog.cpp" line="13"/>
         <source>All files (*)</source>
-        <translation></translation>
+        <translation>Tüm dosyalar (*)</translation>
     </message>
 </context>
 <context>
@@ -163,37 +185,37 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="23"/>
         <source>Extract</source>
-        <translation></translation>
+        <translation>Çıkart</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="29"/>
         <source>E&amp;xtract all files</source>
-        <translation></translation>
+        <translation>Tüm dosyaları çı&amp;kart</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="36"/>
         <source>Ex&amp;tract selected files</source>
-        <translation></translation>
+        <translation>Seçilen dosyaları çı&amp;kart</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="59"/>
         <source>Actions</source>
-        <translation></translation>
+        <translation>Eylemler</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="65"/>
         <source>Re-create folders</source>
-        <translation></translation>
+        <translation>Dizinleri yeniden oluştur</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="72"/>
         <source>Overwrite existing files</source>
-        <translation></translation>
+        <translation>Varolan dosyaların üzerine yaz</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="79"/>
         <source>Do not extract older files</source>
-        <translation></translation>
+        <translation>Eski dosyaları çıkartma</translation>
     </message>
 </context>
 <context>
@@ -201,7 +223,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extractfiledialog.cpp" line="12"/>
         <source>All files (*)</source>
-        <translation></translation>
+        <translation>Tüm dosyalar (*)</translation>
     </message>
 </context>
 <context>
@@ -210,42 +232,42 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../mainwindow.ui" line="14"/>
         <location filename="../mainwindow.cpp" line="158"/>
         <source>File Archiver</source>
-        <translation></translation>
+        <translation>Dosya Arşivleyici</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="97"/>
         <source>&amp;File</source>
-        <translation></translation>
+        <translation>&amp;Dosya</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="112"/>
         <source>&amp;Edit</source>
-        <translation></translation>
+        <translation>&amp;Düzenle</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="131"/>
         <source>&amp;View</source>
-        <translation></translation>
+        <translation>&amp;Görünüm</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="146"/>
         <source>&amp;Help</source>
-        <translation></translation>
+        <translation>&amp;Yardım</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="157"/>
         <source>toolBar</source>
-        <translation></translation>
+        <translation>Araç çubuğu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="182"/>
         <source>&amp;About</source>
-        <translation></translation>
+        <translation>&amp;Hakkında</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="191"/>
         <source>&amp;New</source>
-        <translation></translation>
+        <translation>&amp;Yeni</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="194"/>
@@ -255,7 +277,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="203"/>
         <source>&amp;Open</source>
-        <translation></translation>
+        <translation>&amp;Açık</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
@@ -265,22 +287,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="214"/>
         <source>Save &amp;As</source>
-        <translation></translation>
+        <translation>Farklı K&amp;aydet</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="223"/>
         <source>&amp;Extract</source>
-        <translation></translation>
+        <translation>&amp;Çıkart</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="228"/>
         <source>&amp;Test</source>
-        <translation></translation>
+        <translation>&amp;Test Et</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="236"/>
         <source>&amp;Properties</source>
-        <translation></translation>
+        <translation>&amp;Özellikler</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="239"/>
@@ -290,7 +312,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="248"/>
         <source>&amp;Close</source>
-        <translation></translation>
+        <translation>&amp;Kapat</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="251"/>
@@ -300,7 +322,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="259"/>
         <source>Cu&amp;t</source>
-        <translation></translation>
+        <translation>Ke&amp;s</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="262"/>
@@ -310,7 +332,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="270"/>
         <source>&amp;Copy</source>
-        <translation></translation>
+        <translation>&amp;Kopyala</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="273"/>
@@ -320,7 +342,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="281"/>
         <source>&amp;Paste</source>
-        <translation></translation>
+        <translation>&amp;Yapıştır</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="284"/>
@@ -330,7 +352,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="292"/>
         <source>&amp;Rename</source>
-        <translation></translation>
+        <translation>&amp;Yeniden Adlandır</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="295"/>
@@ -340,17 +362,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="300"/>
         <source>&amp;Delete</source>
-        <translation></translation>
+        <translation>&amp;Sil</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="303"/>
         <source>Del</source>
-        <translation></translation>
+        <translation>Sil</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="308"/>
         <source>&amp;Select All</source>
-        <translation></translation>
+        <translation>&amp;Tümünü Seç</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="311"/>
@@ -360,7 +382,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="319"/>
         <source>&amp;Find</source>
-        <translation></translation>
+        <translation>&amp;Bul</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="322"/>
@@ -370,47 +392,47 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="331"/>
         <source>&amp;Add Files</source>
-        <translation></translation>
+        <translation>&amp;Dosya Ekle</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="340"/>
         <source>Add F&amp;older</source>
-        <translation></translation>
+        <translation>&amp;Dizin Ekle</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="345"/>
         <source>Pass&amp;word</source>
-        <translation></translation>
+        <translation>&amp;Parola</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="356"/>
         <source>&amp;Toolbar</source>
-        <translation></translation>
+        <translation>&amp;Araç Çubuğu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="367"/>
         <source>&amp;Statusbar</source>
-        <translation></translation>
+        <translation>&amp;Durum Çubuğu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="378"/>
         <source>&amp;Directory Tree</source>
-        <translation></translation>
+        <translation>&amp;Dizin Ağacı</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="389"/>
         <source>S&amp;how as Folder</source>
-        <translation></translation>
+        <translation>Dizin Olarak Gö&amp;ster</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="397"/>
         <source>Show &amp;All Files</source>
-        <translation></translation>
+        <translation>&amp;Tüm Dosyaları Göster</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="406"/>
         <source>St&amp;op</source>
-        <translation></translation>
+        <translation>&amp;Dur</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="409"/>
@@ -420,7 +442,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="414"/>
         <source>&amp;Reload</source>
-        <translation></translation>
+        <translation>&amp;Yeniden Yükle</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="417"/>
@@ -435,35 +457,35 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="427"/>
         <source>&amp;View Current Item</source>
-        <translation></translation>
+        <translation>&amp;Mevcut Ögeyi Göster</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="185"/>
         <location filename="../mainwindow.cpp" line="214"/>
         <location filename="../mainwindow.cpp" line="247"/>
         <source>All files (*)</source>
-        <translation></translation>
+        <translation>Tüm dosyalar (*)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="219"/>
         <location filename="../mainwindow.cpp" line="252"/>
         <source>Add only if &amp;newer</source>
-        <translation></translation>
+        <translation>Sadece &amp;yeniyse ekle</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="277"/>
         <source>Confirm</source>
-        <translation></translation>
+        <translation>Doğrula</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="277"/>
         <source>Are you sure you want to delete selected files?</source>
-        <translation></translation>
+        <translation>Seçilen dosyaları silmek istediğinizden emin misiniz?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="445"/>
         <source>Version: %1</source>
-        <translation></translation>
+        <translation>Sürüm: %1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="504"/>
@@ -473,17 +495,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="587"/>
         <source>Success</source>
-        <translation></translation>
+        <translation>Başasılı</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="587"/>
         <source>No errors are found.</source>
-        <translation></translation>
+        <translation>Hata bulunamadı.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="620"/>
         <source>Error</source>
-        <translation></translation>
+        <translation>Hata</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="648"/>
@@ -493,42 +515,42 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="652"/>
         <source>Uncompressed Size:</source>
-        <translation></translation>
+        <translation>Sıkıştırılmamış Boyut:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="654"/>
         <source>Compression Ratio:</source>
-        <translation></translation>
+        <translation>Sıkıştırma Oranı:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="707"/>
         <source>File name</source>
-        <translation></translation>
+        <translation>Dosya adı</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="708"/>
         <source>File Type</source>
-        <translation></translation>
+        <translation>Dosya Türü</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="709"/>
         <source>File Size</source>
-        <translation></translation>
+        <translation>Dosya Boyutu</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="710"/>
         <source>Modified</source>
-        <translation></translation>
+        <translation>Değiştirildi</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="711"/>
         <source>Encrypted</source>
-        <translation></translation>
+        <translation>Şifreli</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="741"/>
         <source>%1 files</source>
-        <translation></translation>
+        <translation>dosyalar %1</translation>
     </message>
 </context>
 <context>
@@ -537,7 +559,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../passworddialog.ui" line="14"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password</source>
-        <translation></translation>
+        <translation>Parola</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="20"/>
@@ -547,18 +569,18 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../passworddialog.ui" line="34"/>
         <source>Show password</source>
-        <translation></translation>
+        <translation>Parolayı göster</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="48"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password:</source>
-        <translation></translation>
+        <translation>Parola:</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="61"/>
         <source>&lt;i&gt;&lt;b&gt;Note:&lt;/b&gt; the password will be used to encrypt files you add to the current archive, and to decrypt files you extract from the current archive. When the archive is closed the password will be deleted.&lt;/i&gt;</source>
-        <translation></translation>
+        <translation>&lt;i&gt;&lt;b&gt;Not:&lt;/b&gt; Parola mevcut arşive eklediğiniz dosyaları şifrelemek ve dosyaları çıkartırken şifreleri çözmek için kullanılacaktır. Arşiv kapatıldığında parola silinecektir.&lt;/i&gt;</translation>
     </message>
 </context>
 <context>
@@ -566,7 +588,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../progressdialog.ui" line="14"/>
         <source>Progress</source>
-        <translation></translation>
+        <translation>İlerleme</translation>
     </message>
     <message>
         <location filename="../progressdialog.cpp" line="16"/>
@@ -580,7 +602,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../main.cpp" line="224"/>
         <location filename="../main.cpp" line="264"/>
         <source>Error</source>
-        <translation></translation>
+        <translation>Hata</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="6"/>
@@ -590,7 +612,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="7"/>
         <source>Tar compressed with 7z (.tar.7z)</source>
-        <translation></translation>
+        <translation>7z ile sıkıştırılmış tar (.tar.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="8"/>
@@ -615,12 +637,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="12"/>
         <source>Tar compressed with bzip2 (.tar.bz2)</source>
-        <translation></translation>
+        <translation>bzip2 ile sıkıştırılmış tar (.tar.bz2)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="13"/>
         <source>Tar compressed with bzip (.tar.bz)</source>
-        <translation></translation>
+        <translation>bzip ile sıkıştırılmış tar (.tar.bz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="14"/>
@@ -640,7 +662,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="17"/>
         <source>Tar compressed with gzip (.tar.gz)</source>
-        <translation></translation>
+        <translation>gzip ile sıkıştırılmış tar (.tar.gz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="18"/>
@@ -670,22 +692,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="23"/>
         <source>Tar compressed with lrzip (.tar.lrz)</source>
-        <translation></translation>
+        <translation>lrzip ile sıkıştırılmış tar (.tar.lrz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="24"/>
         <source>Tar compressed with lzip (.tar.lz)</source>
-        <translation></translation>
+        <translation>lzip ile sıkıştırılmış tar (.tar.lz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="25"/>
         <source>Tar compressed with lzma (.tar.lzma)</source>
-        <translation></translation>
+        <translation>lzma ile sıkıştırılmış tar (.tar.lzma)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="26"/>
         <source>Tar compressed with lzop (.tar.lzo)</source>
-        <translation></translation>
+        <translation>lzop ile sıkıştırılmış tar (.tar.lzo)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="27"/>
@@ -705,7 +727,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="30"/>
         <source>Tar compressed with compress (.tar.Z)</source>
-        <translation></translation>
+        <translation>compress ile sıkıştırılmış tar (.tar.Z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="31"/>
@@ -720,7 +742,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="33"/>
         <source>Tar compressed with xz (.tar.xz)</source>
-        <translation></translation>
+        <translation>xz ile sıkıştırılmış tar (.tar.xz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="34"/>
@@ -738,7 +760,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="61"/>
         <location filename="../main.cpp" line="216"/>
         <source>Adding file: </source>
-        <translation></translation>
+        <translation>Dosya ekleniyor: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="39"/>
@@ -746,7 +768,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="63"/>
         <location filename="../main.cpp" line="256"/>
         <source>Extracting file: </source>
-        <translation></translation>
+        <translation>Dosya çıkartılıyor: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="42"/>
@@ -757,52 +779,52 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="46"/>
         <location filename="../corestrs.h" line="62"/>
         <source>Removing file: </source>
-        <translation></translation>
+        <translation>Dosya siliniyor: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="47"/>
         <source>Deleting files from archive</source>
-        <translation></translation>
+        <translation>Dosyalar arşivden siliniyor</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="49"/>
         <source>Recompressing archive</source>
-        <translation></translation>
+        <translation>Arşiv yeniden sıkıştırılıyor</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="50"/>
         <source>Decompressing archive</source>
-        <translation></translation>
+        <translation>Arşiv açılıyor</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="53"/>
         <source>File not found.</source>
-        <translation></translation>
+        <translation>Dosya bulunamadı.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="54"/>
         <source>Archive type not supported.</source>
-        <translation></translation>
+        <translation>Arşiv türü desteklenmiyor.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="55"/>
         <source>Archive not found</source>
-        <translation></translation>
+        <translation>Arşiv bulunamadı</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="56"/>
         <source>You don&apos;t have the right permissions.</source>
-        <translation></translation>
+        <translation>Yetkiniz yok.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="57"/>
         <source>This archive type cannot be modified</source>
-        <translation></translation>
+        <translation>Bu arşiv türü değiştirilemez</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="58"/>
         <source>You can&apos;t add an archive to itself.</source>
-        <translation></translation>
+        <translation>Arşivi kendisine ekleyemezsiniz.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="64"/>
