@@ -16,7 +16,7 @@
     <message>
         <location filename="../about.ui" line="47"/>
         <source>A simple and desktop-agnostic Qt file archiver</source>
-        <translation>Un arquivador de ficheiros sinxelo e independente do escritorio, feito con Qt</translation>
+        <translation>Un arquivador de ficheiros Qt sinxelo e independente do escritorio</translation>
     </message>
     <message>
         <location filename="../about.ui" line="57"/>
@@ -159,7 +159,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../create.ui" line="36"/>
         <source>Split into volumes of</source>
-        <translation>Divididir en volumes de</translation>
+        <translation>Dividir en volumes de</translation>
     </message>
     <message>
         <location filename="../create.ui" line="43"/>
