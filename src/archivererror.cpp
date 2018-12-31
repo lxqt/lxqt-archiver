@@ -22,7 +22,7 @@ ArchiverError::ArchiverError(FrProcError* err): ArchiverError{} {
             switch(type_) {
                 case FR_PROC_ERROR_COMMAND_ERROR:
                 case FR_PROC_ERROR_SPAWN:
-                    message_ = QCoreApplication::translate("ArchiverError", "Fail to execute the command.");
+                    message_ = QCoreApplication::translate("ArchiverError", "Failed to execute the command.");
                     break;
                 case FR_PROC_ERROR_COMMAND_NOT_FOUND:
                     message_ = QCoreApplication::translate("ArchiverError", "Command is not found.");
