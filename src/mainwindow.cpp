@@ -584,7 +584,7 @@ void MainWindow::onActionFinished(FrAction action, ArchiverError err) {
         break;
     case FR_ACTION_TESTING_ARCHIVE:            /* testing the archive integrity */
         if(!err.hasError()) {
-            QMessageBox::information(this, tr("Success"), tr("No errors are found."));
+            QMessageBox::information(this, tr("Successful"), tr("No errors have been found."));
         }
         break;
     case FR_ACTION_GETTING_FILE_LIST:          /* getting the file list (when fr_archive_add_with_wildcard or
