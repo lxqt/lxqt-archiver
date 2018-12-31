@@ -123,12 +123,12 @@ Boston, MA  02110-1301, USA.</translation>
     <message>
         <location filename="../archivererror.cpp" line="31"/>
         <source>The command exited abnormally.</source>
-        <translation>Abbruch unerwartet.</translation>
+        <translation>Der Befehl wurde fehlerhaft beendet.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="34"/>
         <source>Password is required.</source>
-        <translation>Kennwort benötigt.</translation>
+        <translation>Passwort ist erforderlich.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="37"/>
@@ -138,17 +138,17 @@ Boston, MA  02110-1301, USA.</translation>
     <message>
         <location filename="../archivererror.cpp" line="40"/>
         <source>Bad charset.</source>
-        <translation>Zeichensatz fehlerhaft.</translation>
+        <translation>Fehlerhafter Zeichensatz.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="43"/>
         <source>Unsupported file format.</source>
-        <translation>Dateiformat nicht unterstützt.</translation>
+        <translation>Nicht unterstütztes Dateiformat.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="46"/>
         <source>Unknown errors happened.</source>
-        <translation>Fehler unbekannt.</translation>
+        <translation>Unbekannte Fehler sind aufgetreten.</translation>
     </message>
 </context>
 <context>
@@ -166,12 +166,12 @@ Boston, MA  02110-1301, USA.</translation>
     <message>
         <location filename="../create.ui" line="43"/>
         <source>Password:</source>
-        <translation>Kennwort:</translation>
+        <translation>Passwort:</translation>
     </message>
     <message>
         <location filename="../create.ui" line="50"/>
         <source>Encrypt the file list too</source>
-        <translation>Dateiliste verschlüsseln als</translation>
+        <translation>Dateiliste auch verschlüsseln</translation>
     </message>
 </context>
 <context>
@@ -192,12 +192,12 @@ Boston, MA  02110-1301, USA.</translation>
     <message>
         <location filename="../extract.ui" line="29"/>
         <source>E&amp;xtract all files</source>
-        <translation>E&amp;ntpacken aller Dateien</translation>
+        <translation>Alle Dateien e&amp;ntpacken</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="36"/>
         <source>Ex&amp;tract selected files</source>
-        <translation>En&amp;tpacken ausgewählter Dateien</translation>
+        <translation>Ausgewählte Dateien en&amp;tpacken</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="59"/>
@@ -207,7 +207,7 @@ Boston, MA  02110-1301, USA.</translation>
     <message>
         <location filename="../extract.ui" line="65"/>
         <source>Re-create folders</source>
-        <translation>Ordnerstruktur übertragen</translation>
+        <translation>Ordner neu erstellen</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="72"/>
@@ -294,7 +294,7 @@ Boston, MA  02110-1301, USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="223"/>
         <source>&amp;Extract</source>
-        <translation>Ent&amp;packen</translation>
+        <translation>&amp;Entpacken</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="228"/>
@@ -374,7 +374,7 @@ Boston, MA  02110-1301, USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="308"/>
         <source>&amp;Select All</source>
-        <translation>Alles a&amp;uswählen</translation>
+        <translation>Alle&amp;s auswählen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="311"/>
@@ -434,7 +434,7 @@ Boston, MA  02110-1301, USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="406"/>
         <source>St&amp;op</source>
-        <translation></translation>
+        <translation>An&amp;halten</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="409"/>
@@ -454,12 +454,12 @@ Boston, MA  02110-1301, USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="422"/>
         <source>Filename &amp;Encoding</source>
-        <translation>Dateinamen &amp;verschlüsseln</translation>
+        <translation>Dat&amp;einamenkodierung</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="427"/>
         <source>&amp;View Current Item</source>
-        <translation>Aktuelles Element &amp;anzeigen</translation>
+        <translation>Aktuelles Element &amp;ansehen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="185"/>
@@ -472,7 +472,7 @@ Boston, MA  02110-1301, USA.</translation>
         <location filename="../mainwindow.cpp" line="219"/>
         <location filename="../mainwindow.cpp" line="252"/>
         <source>Add only if &amp;newer</source>
-        <translation>Nur hinzufügen falls a&amp;ktueller</translation>
+        <translation>Nur hinzufügen, wenn &amp;neuer</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="277"/>
@@ -482,7 +482,7 @@ Boston, MA  02110-1301, USA.</translation>
     <message>
         <location filename="../mainwindow.cpp" line="277"/>
         <source>Are you sure you want to delete selected files?</source>
-        <translation>Ausgewählte Dateien wirklich löschen?</translation>
+        <translation>Sind Sie sicher, dass Sie ausgewählte Dateien löschen möchten?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="445"/>
@@ -512,7 +512,7 @@ Boston, MA  02110-1301, USA.</translation>
     <message>
         <location filename="../mainwindow.cpp" line="648"/>
         <source>N/A</source>
-        <translation></translation>
+        <translation>N/V</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="652"/>
@@ -571,18 +571,18 @@ Boston, MA  02110-1301, USA.</translation>
     <message>
         <location filename="../passworddialog.ui" line="34"/>
         <source>Show password</source>
-        <translation>Kennwort anzeigen</translation>
+        <translation>Passwort anzeigen</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="48"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password:</source>
-        <translation>Kennwort:</translation>
+        <translation>Passwort:</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="61"/>
         <source>&lt;i&gt;&lt;b&gt;Note:&lt;/b&gt; the password will be used to encrypt files you add to the current archive, and to decrypt files you extract from the current archive. When the archive is closed the password will be deleted.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;&lt;b&gt;Hinweis:&lt;/b&gt; zum aktuellen Archiv hinzugefügte Dateien werden durch das Kennwort verschlüsselt und beim Extrahieren durch dieses entschlüsselt. Beim Schließen des Archivs wird das Kennwort gelöscht.&lt;/i&gt;</translation>
+        <translation>&lt;i&gt;&lt;b&gt;Hinweis:&lt;/b&gt; zum aktuellen Archiv hinzugefügte Dateien werden durch das Passwort verschlüsselt und beim Extrahieren durch dieses entschlüsselt. Beim Schließen des Archivs wird das Passwort gelöscht.&lt;/i&gt;</translation>
     </message>
 </context>
 <context>
@@ -654,12 +654,12 @@ Boston, MA  02110-1301, USA.</translation>
     <message>
         <location filename="../corestrs.h" line="15"/>
         <source>Rar Archived Comic Book (.cbr)</source>
-        <translation></translation>
+        <translation>Rar archiviertes Comicbuch (.cbr)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="16"/>
         <source>Zip Archived Comic Book (.cbz)</source>
-        <translation></translation>
+        <translation>Zip archiviertes Comicbuch (.cbz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="17"/>
@@ -674,7 +674,7 @@ Boston, MA  02110-1301, USA.</translation>
     <message>
         <location filename="../corestrs.h" line="19"/>
         <source>Self-extracting zip (.exe)</source>
-        <translation>Selbstextrahierendes Zip (.exe)</translation>
+        <translation>Selbstentpackende Zip (.exe)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="20"/>
@@ -816,17 +816,17 @@ Boston, MA  02110-1301, USA.</translation>
     <message>
         <location filename="../corestrs.h" line="56"/>
         <source>You don&apos;t have the right permissions.</source>
-        <translation>Unzureichende Zugriffsrechte.</translation>
+        <translation>Sie haben nicht die richtigen Berechtigungen.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="57"/>
         <source>This archive type cannot be modified</source>
-        <translation>Dieser Archivtyp ist nicht modifizierbar</translation>
+        <translation>Dieser Archivtyp kann nicht geändert werden</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="58"/>
         <source>You can&apos;t add an archive to itself.</source>
-        <translation>Archive sind nicht zu sich selbst hinzufügbar.</translation>
+        <translation>Sie können ein Archiv nicht zu sich selbst hinzufügen.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="64"/>
