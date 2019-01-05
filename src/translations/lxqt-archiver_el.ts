@@ -6,7 +6,7 @@
     <message>
         <location filename="../about.ui" line="14"/>
         <source>About</source>
-        <translation>Περί</translation>
+        <translation>Σχετικά</translation>
     </message>
     <message>
         <location filename="../about.ui" line="24"/>
@@ -264,7 +264,7 @@ USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="182"/>
         <source>&amp;About</source>
-        <translation>&amp;Περί</translation>
+        <translation>&amp;Σχετικά</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="191"/>
