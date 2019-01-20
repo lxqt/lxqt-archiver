@@ -112,8 +112,8 @@ Boston, MA  02110-1301, USA.</translation>
     <name>ArchiverError</name>
     <message>
         <location filename="../archivererror.cpp" line="25"/>
-        <source>Fail to execute the command.</source>
-        <translation>Ausführung fehlgeschlagen.</translation>
+        <source>Failed to execute the command.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
@@ -501,8 +501,8 @@ Boston, MA  02110-1301, USA.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="587"/>
-        <source>No errors are found.</source>
-        <translation>Keine Fehler gefunden.</translation>
+        <source>No errors have been found.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="620"/>
