@@ -110,8 +110,8 @@ almış olmalısınız; Yoksa, Özgür Yazılım Vakfı Şirketi&apos;ne yazın.
     <name>ArchiverError</name>
     <message>
         <location filename="../archivererror.cpp" line="25"/>
-        <source>Fail to execute the command.</source>
-        <translation>Komut çalıştırılamadı.</translation>
+        <source>Failed to execute the command.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
@@ -499,8 +499,8 @@ almış olmalısınız; Yoksa, Özgür Yazılım Vakfı Şirketi&apos;ne yazın.
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="587"/>
-        <source>No errors are found.</source>
-        <translation>Hata bulunamadı.</translation>
+        <source>No errors have been found.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="620"/>

@@ -88,7 +88,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <name>ArchiverError</name>
     <message>
         <location filename="../archivererror.cpp" line="25"/>
-        <source>Fail to execute the command.</source>
+        <source>Failed to execute the command.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -477,7 +477,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="587"/>
-        <source>No errors are found.</source>
+        <source>No errors have been found.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

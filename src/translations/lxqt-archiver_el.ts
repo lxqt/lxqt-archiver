@@ -112,8 +112,8 @@ USA.</translation>
     <name>ArchiverError</name>
     <message>
         <location filename="../archivererror.cpp" line="25"/>
-        <source>Fail to execute the command.</source>
-        <translation>Αποτυχία εκτέλεσης της εντολής.</translation>
+        <source>Failed to execute the command.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
@@ -501,8 +501,8 @@ USA.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="587"/>
-        <source>No errors are found.</source>
-        <translation>Δεν βρέθηκαν σφάλματα.</translation>
+        <source>No errors have been found.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="620"/>

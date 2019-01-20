@@ -111,8 +111,8 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</translation>
     <name>ArchiverError</name>
     <message>
         <location filename="../archivererror.cpp" line="25"/>
-        <source>Fail to execute the command.</source>
-        <translation>No s&apos;ha pogut executar l&apos;ordre.</translation>
+        <source>Failed to execute the command.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
@@ -500,8 +500,8 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="587"/>
-        <source>No errors are found.</source>
-        <translation>No es troben errors.</translation>
+        <source>No errors have been found.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="620"/>
