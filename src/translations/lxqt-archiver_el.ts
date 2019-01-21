@@ -113,7 +113,7 @@ USA.</translation>
     <message>
         <location filename="../archivererror.cpp" line="25"/>
         <source>Failed to execute the command.</source>
-        <translation type="unfinished"></translation>
+        <translation>Αποτυχία εκτέλεσης της εντολής.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
@@ -502,7 +502,7 @@ USA.</translation>
     <message>
         <location filename="../mainwindow.cpp" line="587"/>
         <source>No errors have been found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Δεν βρέθηκαν σφάλματα.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="620"/>
