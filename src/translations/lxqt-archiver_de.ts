@@ -161,7 +161,7 @@ Boston, MA  02110-1301, USA.</translation>
     <message>
         <location filename="../create.ui" line="36"/>
         <source>Split into volumes of</source>
-        <translation>Anzahl der zu bildenden Teilarchive</translation>
+        <translation>Aufteilen in Einheiten von</translation>
     </message>
     <message>
         <location filename="../create.ui" line="43"/>
@@ -497,7 +497,7 @@ Boston, MA  02110-1301, USA.</translation>
     <message>
         <location filename="../mainwindow.cpp" line="587"/>
         <source>Success</source>
-        <translation>Erfolgreich</translation>
+        <translation>Erfolg</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="587"/>
@@ -582,7 +582,7 @@ Boston, MA  02110-1301, USA.</translation>
     <message>
         <location filename="../passworddialog.ui" line="61"/>
         <source>&lt;i&gt;&lt;b&gt;Note:&lt;/b&gt; the password will be used to encrypt files you add to the current archive, and to decrypt files you extract from the current archive. When the archive is closed the password will be deleted.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;&lt;b&gt;Hinweis:&lt;/b&gt; zum aktuellen Archiv hinzugefügte Dateien werden durch das Passwort verschlüsselt und beim Extrahieren durch dieses entschlüsselt. Beim Schließen des Archivs wird das Passwort gelöscht.&lt;/i&gt;</translation>
+        <translation>&lt;i&gt;&lt;b&gt;Hinweis:&lt;/b&gt; Das Passwort wird verwendet, um Dateien zu verschlüsseln, die Sie dem aktuellen Archiv hinzufügen, und um Dateien zu entschlüsseln, die Sie aus dem aktuellen Archiv entpacken. Wenn das Archiv geschlossen wird, wird das Passwort gelöscht.&lt;/i&gt;</translation>
     </message>
 </context>
 <context>
