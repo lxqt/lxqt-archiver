@@ -112,7 +112,7 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</translation>
     <message>
         <location filename="../archivererror.cpp" line="25"/>
         <source>Failed to execute the command.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ha fallat l&apos;execució de l&apos;ordre.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
@@ -501,7 +501,7 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</translation>
     <message>
         <location filename="../mainwindow.cpp" line="587"/>
         <source>No errors have been found.</source>
-        <translation type="unfinished"></translation>
+        <translation>No s&apos;ha trobat cap error.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="620"/>
