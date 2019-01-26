@@ -113,7 +113,7 @@ Boston, MA  02110-1301, USA.</translation>
     <message>
         <location filename="../archivererror.cpp" line="25"/>
         <source>Failed to execute the command.</source>
-        <translation type="unfinished"></translation>
+        <translation>Der Befehl konnte nicht ausgeführt werden.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
@@ -502,7 +502,7 @@ Boston, MA  02110-1301, USA.</translation>
     <message>
         <location filename="../mainwindow.cpp" line="587"/>
         <source>No errors have been found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Es wurden keine Fehler gefunden.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="620"/>
