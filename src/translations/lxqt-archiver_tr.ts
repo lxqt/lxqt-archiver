@@ -111,7 +111,7 @@ almış olmalısınız; Yoksa, Özgür Yazılım Vakfı Şirketi&apos;ne yazın.
     <message>
         <location filename="../archivererror.cpp" line="25"/>
         <source>Failed to execute the command.</source>
-        <translation type="unfinished"></translation>
+        <translation>Komut çalıştırılamadı.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
@@ -500,7 +500,7 @@ almış olmalısınız; Yoksa, Özgür Yazılım Vakfı Şirketi&apos;ne yazın.
     <message>
         <location filename="../mainwindow.cpp" line="587"/>
         <source>No errors have been found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hata bulunamadı.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="620"/>
