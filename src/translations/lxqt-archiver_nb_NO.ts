@@ -242,7 +242,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../mainwindow.ui" line="112"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Rediger</translation>
+        <translation>R&amp;ediger</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="131"/>
@@ -307,7 +307,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../mainwindow.ui" line="239"/>
         <source>Alt+Return</source>
-        <translation></translation>
+        <translation>Alt+Retur</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="248"/>
@@ -322,7 +322,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../mainwindow.ui" line="259"/>
         <source>Cu&amp;t</source>
-        <translation>Kl&amp;ipp ut</translation>
+        <translation>Kli&amp;pp ut</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="262"/>
@@ -367,7 +367,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../mainwindow.ui" line="303"/>
         <source>Del</source>
-        <translation></translation>
+        <translation>Slett</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="308"/>
