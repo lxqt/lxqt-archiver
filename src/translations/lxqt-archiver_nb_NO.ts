@@ -111,7 +111,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../archivererror.cpp" line="25"/>
         <source>Failed to execute the command.</source>
-        <translation type="unfinished"></translation>
+        <translation>Klarte ikke å utføre kommandoen.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
@@ -500,7 +500,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../mainwindow.cpp" line="587"/>
         <source>No errors have been found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingen feil har blitt funnet.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="620"/>
