@@ -35,7 +35,7 @@ find_package(GLIB ${GLIB_MINIMUM_VERSION} REQUIRED)
 find_package(PkgConfig REQUIRED)
 
 pkg_check_modules(
-    GLIB
+    GLIB_JSON
     json-glib-1.0  # what's this?
 )
 
