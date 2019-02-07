@@ -1,5 +1,6 @@
 include_directories(
     ${GLIB_INCLUDE_DIRS}
+    ${GLIB_JSON_INCLUDE_DIRS}
     ${CMAKE_BINARY_DIR}
 )
 
@@ -46,14 +47,16 @@ add_library(lxqt-archiver-core STATIC
 )
 
 target_link_libraries(lxqt-archiver-core
-    ${GLIB_LDFLAGS}
+    ${GLIB_LIBRARIES}
+    ${GLIB_JSON_LDFLAGS}
 )
 
 add_executable(rpm2cpio
     commands/rpm2cpio.c
 )
 target_link_libraries(rpm2cpio
-    ${GLIB_LDFLAGS}
+    ${GLIB_LIBRARIES}
+    ${GLIB_JSON_LDFLAGS}
 )
 install(TARGETS
     rpm2cpio
