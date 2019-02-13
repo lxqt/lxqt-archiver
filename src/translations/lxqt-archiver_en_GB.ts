@@ -42,7 +42,7 @@ LXQt Archiver is derived from the following programs:
     <message>
         <location filename="../about.ui" line="103"/>
         <source>License</source>
-        <translation></translation>
+        <translation>Licence</translation>
     </message>
     <message>
         <location filename="../about.ui" line="112"/>
@@ -767,7 +767,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="49"/>
         <source>Recompressing archive</source>
-        <translation></translation>
+        <translation>Re-compressing archive</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="50"/>
