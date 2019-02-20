@@ -71,7 +71,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
         <translation>LXQt Archiver
 
-Copyright (C) 2018 - Equipa LXQt
+Copyright (C) 2018-2019 - Equipa LXQt
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -111,7 +111,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="25"/>
         <source>Failed to execute the command.</source>
-        <translation type="unfinished"></translation>
+        <translation>Erro ao executar o comando.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
@@ -452,12 +452,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="422"/>
         <source>Filename &amp;Encoding</source>
-        <translation>Codificação do nom&amp;e do ficheiro</translation>
+        <translation>Codificação para o nom&amp;e do ficheiro</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="427"/>
         <source>&amp;View Current Item</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ver item atual</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="185"/>
@@ -500,7 +500,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="587"/>
         <source>No errors have been found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Não foram encontrados erros.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="620"/>
@@ -657,7 +657,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="16"/>
         <source>Zip Archived Comic Book (.cbz)</source>
-        <translation>Comic Book arquivado com Zip (.cbr)</translation>
+        <translation>Comic Book arquivado com Zip (.cbz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="17"/>
@@ -814,7 +814,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="56"/>
         <source>You don&apos;t have the right permissions.</source>
-        <translation>Você não tem as permissões necessárias.</translation>
+        <translation>Não tem as permissões necessárias.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="57"/>
@@ -824,7 +824,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="58"/>
         <source>You can&apos;t add an archive to itself.</source>
-        <translation>Você não pode adicionar um arquivo para si mesmo.</translation>
+        <translation>Não pode adicionar um arquivo para si mesmo.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="64"/>
