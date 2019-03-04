@@ -124,6 +124,9 @@ MainWindow::MainWindow(QWidget* parent):
     lasrDir_ = QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::HomeLocation));
 
     setAttribute(Qt::WA_DeleteOnClose, true);
+
+    // support file dropping into the window
+    setAcceptDrops(true);
 }
 
 MainWindow::~MainWindow() {
@@ -152,6 +155,40 @@ void MainWindow::loadFile(const Fm::FilePath &file) {
     }
 
     archiver_->openArchive(file.uri().get(), nullptr);
+}
+
+void MainWindow::dragEnterEvent(QDragEnterEvent *event) {
+    if(event->mimeData()->hasUrls()) {
+        const auto urlList = event->mimeData()->urls();
+        if(!urlList.isEmpty()) {
+            auto url = urlList.at(0);
+            if(!url.isEmpty()) {
+                const auto mimeType = Fm::MimeType::guessFromFileName(url.toEncoded().constData())->name();
+                if(archiver_->supportedOpenMimeTypes().contains(mimeType)) {
+                    event->acceptProposedAction();
+                    return;
+                }
+            }
+        }
+    }
+    event->ignore();
+}
+
+void MainWindow::dropEvent(QDropEvent* event) {
+    const auto urlList = event->mimeData()->urls();
+    if(!urlList.isEmpty()) {
+        auto url = urlList.at(0);
+        if(!url.isEmpty()) {
+            auto path = Fm::FilePath::fromUri(url.toEncoded());
+            if(path.hasParent()) {
+                lasrDir_ = path.parent().uri().get();
+            }
+            loadFile(path);
+            activateWindow();
+            raise();
+        }
+    }
+    event->acceptProposedAction();
 }
 
 void MainWindow::setFileName(const QString &fileName) {
