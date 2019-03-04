@@ -54,6 +54,10 @@ public:
 
     void chdir(const ArchiverItem* dir);
 
+protected:
+    virtual void dropEvent(QDropEvent* event) override;
+    virtual void dragEnterEvent(QDragEnterEvent* event) override;
+
 private Q_SLOTS:
     // action slots
     void on_actionCreateNew_triggered(bool checked);
