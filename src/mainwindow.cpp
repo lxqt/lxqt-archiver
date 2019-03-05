@@ -379,29 +379,27 @@ void MainWindow::on_actionExtract_triggered(bool /*checked*/) {
     }
 }
 
-void MainWindow::tempExtractCurFile(bool launch) {
-    launchPath_.clear();
+void MainWindow::viewSelectedFiles() {
+    launchPaths_.clear();
     if(tempDir_.isEmpty()) {
         return;
     }
     if(auto selModel = ui_->fileListView->selectionModel()) {
-        QModelIndex idx = selModel->currentIndex();
-        auto item = itemFromIndex(idx);
-        if(item && !item->isDir()) {
-            const QString fileName = tempDir_ + item->fullPath();
-            if(QFile::exists(fileName)) { // already extracted under tmp
-                if(launch) {
-                    Fm::FilePathList paths;
-                    paths.push_back(Fm::FilePath::fromLocalPath(fileName.toLocal8Bit().constData()));
-                    Fm::FileLauncher().launchPaths(nullptr, std::move(paths));
+        std::vector<const FileData*> files;
+        const QModelIndexList indexes = selModel->selectedRows();
+        for(const auto index : indexes) {
+            auto item = itemFromIndex(index);
+            if(item && !item->isDir()) {
+                const QString fileName = tempDir_ + item->fullPath();
+                launchPaths_ << fileName;
+                if(archiver_->isEncrypted() && password_.empty()) {
+                    password_ = PasswordDialog::askPassword(this).toStdString();
                 }
-                return;
+                files.emplace_back(item->data());
             }
+        }
 
-            if (launch) {
-              launchPath_ = fileName;
-            }
-
+        if(!files.empty()) {
             QString dest = tempDir_;
             QDir dir(tempDir_);
             const QString curDirPath = QString::fromStdString(currentDirPath_);
@@ -417,8 +415,7 @@ void MainWindow::tempExtractCurFile(bool launch) {
                 password_ = PasswordDialog::askPassword(this).toStdString();
             }
             auto destDir = Fm::FilePath::fromLocalPath(dest.toLocal8Bit().constData());
-            std::vector<const FileData*> files;
-            files.emplace_back(item->data());
+
             archiver_->extractFiles(files,
                                     destDir,
                                     currentDirPath_.c_str(),
@@ -432,7 +429,7 @@ void MainWindow::tempExtractCurFile(bool launch) {
 }
 
 void MainWindow::on_actionView_triggered(bool /*checked*/) {
-    tempExtractCurFile(true);
+    viewSelectedFiles();
 }
 
 void MainWindow::on_actionTest_triggered(bool /*checked*/) {
@@ -513,13 +510,15 @@ void MainWindow::onFileListContextMenu(const QPoint &pos) {
 }
 
 void MainWindow::onFileListDoubleClicked(const QModelIndex & /*index*/) {
-    tempExtractCurFile(true);
+    viewSelectedFiles();
 }
 
 void MainWindow::onFileListActivated(const QModelIndex &index) {
-    auto item = itemFromIndex(index);
-    if(item && item->isDir()) {
-        chdir(item);
+    if(QApplication::keyboardModifiers() == Qt::NoModifier) {
+        auto item = itemFromIndex(index);
+        if(item && item->isDir()) {
+            chdir(item);
+        }
     }
 }
 
@@ -636,14 +635,16 @@ void MainWindow::onActionFinished(FrAction action, ArchiverError err) {
         archiver_->reloadArchive(nullptr);
         break;
     case FR_ACTION_EXTRACTING_FILES:           /* extracting files */
-        if(!launchPath_.isEmpty()) {
-            if(!err.hasError() && QFile::exists(launchPath_)) {
-                Fm::FilePathList paths;
-                paths.push_back(Fm::FilePath::fromLocalPath(launchPath_.toLocal8Bit().constData()));
-                Fm::FileLauncher().launchPaths(this, std::move(paths));
+        if(!err.hasError()) {
+            Fm::FilePathList paths;
+            for(auto& launchPath : launchPaths_) {
+                if(QFile::exists(launchPath)) {
+                    paths.push_back(Fm::FilePath::fromLocalPath(launchPath.toLocal8Bit().constData()));
+                }
             }
-            launchPath_.clear();
+            Fm::FileLauncher().launchPaths(this, std::move(paths));
         }
+        launchPaths_.clear();
         break;
     case FR_ACTION_COPYING_FILES_TO_REMOTE:    /* copying extracted files to a remote location */
         break;
