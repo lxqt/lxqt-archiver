@@ -424,7 +424,7 @@
   </action>
   <action name="actionView">
    <property name="text">
-    <string>&amp;View Current Item</string>
+    <string>&amp;View Selected Items</string>
    </property>
   </action>
  </widget>

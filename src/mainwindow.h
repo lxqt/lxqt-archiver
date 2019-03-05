@@ -142,7 +142,7 @@ private:
 
     QModelIndex indexFromItem(const QModelIndex& parent, const ArchiverItem* item);
 
-    void tempExtractCurFile(bool launch);
+    void viewSelectedFiles();
 
 private:
     std::unique_ptr<Ui::MainWindow> ui_;
@@ -161,7 +161,7 @@ private:
     unsigned int volumeSize_;
 
     QString tempDir_;
-    QString launchPath_;
+    QStringList launchPaths_;
     QUrl lasrDir_;
 };
 
