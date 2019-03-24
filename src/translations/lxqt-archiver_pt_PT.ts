@@ -580,7 +580,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../passworddialog.ui" line="61"/>
         <source>&lt;i&gt;&lt;b&gt;Note:&lt;/b&gt; the password will be used to encrypt files you add to the current archive, and to decrypt files you extract from the current archive. When the archive is closed the password will be deleted.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;&lt;b&gt;Nota:&lt;/b&gt; a palavra-passe será utilizada para cifrar os ficheiros adicionados ao arquivo atual e para decifrar os ficheiros extraídos do arquivo atual. Quando o arquivo estiver fechado, a palavra-passe será apagada.&lt;/i&gt;</translation>
+        <translation>&lt;i&gt;&lt;b&gt;Nota:&lt;/b&gt; a palavra-passe será utilizada para cifrar os ficheiros adicionados ao arquivo atual e para decifrar os ficheiros extraídos do arquivo atual. Quando o arquivo for fechado, a palavra-passe será apagada.&lt;/i&gt;</translation>
     </message>
 </context>
 <context>
@@ -712,7 +712,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="27"/>
         <source>Windows Imaging Format (.wim)</source>
-        <translation>Formato Windows Imaging (.wim)</translation>
+        <translation>Windows Imaging Format (.wim)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="28"/>
