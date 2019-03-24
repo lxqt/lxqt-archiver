@@ -406,32 +406,32 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="389"/>
         <source>S&amp;how as Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Mo&amp;strar como Pasta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="397"/>
         <source>Show &amp;All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostr&amp;ar todos os arquivos</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="406"/>
         <source>St&amp;op</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Parar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="409"/>
         <source>Esc</source>
-        <translation type="unfinished"></translation>
+        <translation>Esc</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="414"/>
         <source>&amp;Reload</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Recarregar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="417"/>
         <source>F5</source>
-        <translation type="unfinished"></translation>
+        <translation>F5</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="422"/>
@@ -441,14 +441,14 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="427"/>
         <source>&amp;View Current Item</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ver item atual</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="185"/>
         <location filename="../mainwindow.cpp" line="214"/>
         <location filename="../mainwindow.cpp" line="247"/>
         <source>All files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Todos os arquivos (*)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="219"/>
@@ -459,82 +459,82 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="277"/>
         <source>Confirm</source>
-        <translation type="unfinished"></translation>
+        <translation>Confirmar</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="277"/>
         <source>Are you sure you want to delete selected files?</source>
-        <translation type="unfinished"></translation>
+        <translation>Você realmente deseja apagar os arquivos selecionados?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="445"/>
         <source>Version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Versão: %1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="504"/>
         <source>%p %</source>
-        <translation type="unfinished"></translation>
+        <translation>%p %</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="587"/>
         <source>Success</source>
-        <translation type="unfinished"></translation>
+        <translation>Sucesso</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="587"/>
         <source>No errors have been found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nenhum erro foi encontrado.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="620"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erro</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="648"/>
         <source>N/A</source>
-        <translation type="unfinished"></translation>
+        <translation>N/A</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="652"/>
         <source>Uncompressed Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamanho descompactado:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="654"/>
         <source>Compression Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation>Taxa de compressão:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="707"/>
         <source>File name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome do arquivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="708"/>
         <source>File Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipo do arquivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="709"/>
         <source>File Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamanho do arquivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="710"/>
         <source>Modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Modificado</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="711"/>
         <source>Encrypted</source>
-        <translation type="unfinished"></translation>
+        <translation>Criptografado</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="741"/>
         <source>%1 files</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 arquivos</translation>
     </message>
 </context>
 <context>
@@ -543,28 +543,28 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../passworddialog.ui" line="14"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Senha</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="20"/>
         <source>Encrypt the file list</source>
-        <translation type="unfinished"></translation>
+        <translation>Criptografar a lista de arquivos</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="34"/>
         <source>Show password</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar senha</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="48"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password:</source>
-        <translation type="unfinished"></translation>
+        <translation>Senha:</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="61"/>
         <source>&lt;i&gt;&lt;b&gt;Note:&lt;/b&gt; the password will be used to encrypt files you add to the current archive, and to decrypt files you extract from the current archive. When the archive is closed the password will be deleted.&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;i&gt;&lt;b&gt;Lembrete:&lt;/b&gt; Esta senha será utilizada para criptografar os elementos que você adicionar na compactação atual, e para descriptografar os elementos que você extrair. Quando o arquivo compactado for fechado, a senha será apagada.&lt;/i&gt;</translation>
     </message>
 </context>
 <context>
@@ -572,12 +572,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../progressdialog.ui" line="14"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Progresso</translation>
     </message>
     <message>
         <location filename="../progressdialog.cpp" line="16"/>
         <source>%p %</source>
-        <translation type="unfinished"></translation>
+        <translation>%p %</translation>
     </message>
 </context>
 <context>
@@ -586,157 +586,157 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../main.cpp" line="224"/>
         <location filename="../main.cpp" line="264"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erro</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="6"/>
         <source>7-Zip (.7z)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo 7-Zip (.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="7"/>
         <source>Tar compressed with 7z (.tar.7z)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar comprimido em 7z (.tar.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="8"/>
         <source>Ace (.ace)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo Ace (.ace)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="9"/>
         <source>Ar (.a)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo A (.a)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="10"/>
         <source>Ar (.ar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo Ar (.ar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="11"/>
         <source>Arj (.arj)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo Arj (.arj)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="12"/>
         <source>Tar compressed with bzip2 (.tar.bz2)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar comprimido em bzip2 (.tar.bz2)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="13"/>
         <source>Tar compressed with bzip (.tar.bz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar comprimido em bzip (.tar.bz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="14"/>
         <source>Cabinet (.cab)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo Cabinet (.cab)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="15"/>
         <source>Rar Archived Comic Book (.cbr)</source>
-        <translation type="unfinished"></translation>
+        <translation>Rar Archived Comic Book (.cbr)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="16"/>
         <source>Zip Archived Comic Book (.cbz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Zip Archived Comic Book (.cbz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="17"/>
         <source>Tar compressed with gzip (.tar.gz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar comprimido em gzip (.tar.gz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="18"/>
         <source>Ear (.ear)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo Ear (.ear)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="19"/>
         <source>Self-extracting zip (.exe)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo auto-extraível (.exe)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="20"/>
         <source>Jar (.jar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo Jar (.jar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="21"/>
         <source>Lha (.lzh)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo LHA (.lzh)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="22"/>
         <source>Lrzip (.lrz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo Lrzip (.lrz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="23"/>
         <source>Tar compressed with lrzip (.tar.lrz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar comprimido em Lrzip (.tar.lrz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="24"/>
         <source>Tar compressed with lzip (.tar.lz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar comprimido em lzip (.tar.lz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="25"/>
         <source>Tar compressed with lzma (.tar.lzma)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar comprimido em lzma (.tar.lzma)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="26"/>
         <source>Tar compressed with lzop (.tar.lzo)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar comprimido em lzop (.tar.lzo)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="27"/>
         <source>Windows Imaging Format (.wim)</source>
-        <translation type="unfinished"></translation>
+        <translation>Imagem do Windows (.wim)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="28"/>
         <source>Rar (.rar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo RAR (.rar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="29"/>
         <source>Tar uncompressed (.tar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar sem compressão (.tar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="30"/>
         <source>Tar compressed with compress (.tar.Z)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar comprimido com compress (.tar.Z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="31"/>
         <source>War (.war)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo WAR (.war)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="32"/>
         <source>Xz (.xz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo Xz (.xz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="33"/>
         <source>Tar compressed with xz (.tar.xz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar comprimido em xz (.tar.xz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="34"/>
         <source>Zoo (.zoo)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo Zoo (.zoo)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="35"/>
         <source>Zip (.zip)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo ZIP (.zip)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="38"/>
@@ -744,7 +744,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="61"/>
         <location filename="../main.cpp" line="216"/>
         <source>Adding file: </source>
-        <translation type="unfinished"></translation>
+        <translation>Adicionando arquivo: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="39"/>
@@ -752,68 +752,68 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="63"/>
         <location filename="../main.cpp" line="256"/>
         <source>Extracting file: </source>
-        <translation type="unfinished"></translation>
+        <translation>Extraindo arquivo: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="42"/>
         <source>%d %B %Y, %H:%M</source>
-        <translation type="unfinished"></translation>
+        <translation>%d %B %Y, %H:%M</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="46"/>
         <location filename="../corestrs.h" line="62"/>
         <source>Removing file: </source>
-        <translation type="unfinished"></translation>
+        <translation>Removendo arquivo: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="47"/>
         <source>Deleting files from archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Apagando arquivos da compactação</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="49"/>
         <source>Recompressing archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Recomprimindo arquivo</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="50"/>
         <source>Decompressing archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Descomprimindo arquivo</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="53"/>
         <source>File not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo não encontrado.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="54"/>
         <source>Archive type not supported.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipo de arquivo não suportado.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="55"/>
         <source>Archive not found</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo não encontrado</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="56"/>
         <source>You don&apos;t have the right permissions.</source>
-        <translation type="unfinished"></translation>
+        <translation>Você não tem as permissões corretas para isso.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="57"/>
         <source>This archive type cannot be modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Este tipo de arquivo não pode ser modificado</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="58"/>
         <source>You can&apos;t add an archive to itself.</source>
-        <translation type="unfinished"></translation>
+        <translation>Você não pode adicionar um arquivo dentro dele próprio.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="64"/>
         <source>Could not find the volume: %s</source>
-        <translation type="unfinished"></translation>
+        <translation>O volume não foi localizado: %s</translation>
     </message>
 </context>
 </TS>
