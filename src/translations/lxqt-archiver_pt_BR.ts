@@ -16,7 +16,7 @@
     <message>
         <location filename="../about.ui" line="47"/>
         <source>A simple and desktop-agnostic Qt file archiver</source>
-        <translation type="unfinished"></translation>
+        <translation>Um compactador de arquivos Qt simples e independente de desktop</translation>
     </message>
     <message>
         <location filename="../about.ui" line="57"/>
@@ -69,7 +69,24 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt Archiver
+
+Copyright (C) 2018 Comunidade LXQt
+
+Este programa é software livre; você pode redistribuí-lo e/ou
+modificá-lo sob os termos da Licença Pública Geral GNU, 
+conforme publicada pela Free Software Foundation; ou a versão 2
+da Licença, ou (a seu critério) qualquer versão posterior.
+
+Este programa é distribuído na esperança de que seja útil, 
+mas SEM QUALQUER GARANTIA; sem mesmo a garantia
+implícita de COMERCIALIZAÇÃO ou ADEQUAÇÃO A UM DETERMINADO FIM.   
+Veja a Licença Pública Geral GNU para mais detalhes.
+
+Você deve ter recebido uma cópia da Licença Pública Geral GNU
+junto com este programa; se não, escreva para a Free Software
+Foundation, Inc., 51 Franklin Street, Quinta Andar, Boston,   
+MA 02110-1301, EUA.</translation>
     </message>
 </context>
 <context>
