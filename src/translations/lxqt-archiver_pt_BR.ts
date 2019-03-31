@@ -263,7 +263,7 @@ MA 02110-1301, EUA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="182"/>
         <source>&amp;About</source>
-        <translation>&amp;Sobre</translation>
+        <translation>S&amp;obre</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="191"/>
@@ -288,7 +288,7 @@ MA 02110-1301, EUA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="214"/>
         <source>Save &amp;As</source>
-        <translation>Sa&amp;lvar como</translation>
+        <translation>S&amp;alvar como</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="223"/>
@@ -313,7 +313,7 @@ MA 02110-1301, EUA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="248"/>
         <source>&amp;Close</source>
-        <translation>&amp;Fechar</translation>
+        <translation>Fe&amp;char</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="251"/>
@@ -323,7 +323,7 @@ MA 02110-1301, EUA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="259"/>
         <source>Cu&amp;t</source>
-        <translation>Cor&amp;tar</translation>
+        <translation>Recor&amp;tar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="262"/>
@@ -363,7 +363,7 @@ MA 02110-1301, EUA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="300"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Excluir</translation>
+        <translation>Exc&amp;luir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="303"/>
