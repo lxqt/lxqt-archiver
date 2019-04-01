@@ -453,7 +453,7 @@ MA 02110-1301, EUA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="422"/>
         <source>Filename &amp;Encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Codificação do Nome do Arquivo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="427"/>
@@ -471,7 +471,7 @@ MA 02110-1301, EUA.</translation>
         <location filename="../mainwindow.cpp" line="219"/>
         <location filename="../mainwindow.cpp" line="252"/>
         <source>Add only if &amp;newer</source>
-        <translation type="unfinished"></translation>
+        <translation>Adicionar apenas se for mais recente</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="277"/>
@@ -653,12 +653,12 @@ MA 02110-1301, EUA.</translation>
     <message>
         <location filename="../corestrs.h" line="15"/>
         <source>Rar Archived Comic Book (.cbr)</source>
-        <translation>Rar Archived Comic Book (.cbr)</translation>
+        <translation>Arquivo Rar Comic Book (.cbr)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="16"/>
         <source>Zip Archived Comic Book (.cbz)</source>
-        <translation>Zip Archived Comic Book (.cbz)</translation>
+        <translation>Arquivo Zip Comic Book (.cbz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="17"/>
