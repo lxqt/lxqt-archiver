@@ -19,6 +19,7 @@ set(lxqt-archiver_SRCS
     passworddialog.cpp
     createfiledialog.cpp
     extractfiledialog.cpp
+    filetreeView.cpp
 )
 
 set(lxqt-archiver_UI
