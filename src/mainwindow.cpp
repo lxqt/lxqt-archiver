@@ -150,7 +150,7 @@ void MainWindow::loadFile(const Fm::FilePath &file) {
     if(!tmp.isEmpty()) {
         if(QDir(tmp).exists()) {
             tempDir_ = tmp + "/" + "lxqt-archiver-"
-                       + QDateTime::currentDateTime().toString("yyyyMMddhhmmss");
+                       + QDateTime::currentDateTime().toString(QStringLiteral("yyyyMMddhhmmss"));
         }
     }
 
@@ -403,8 +403,8 @@ void MainWindow::viewSelectedFiles() {
             QString dest = tempDir_;
             QDir dir(tempDir_);
             const QString curDirPath = QString::fromStdString(currentDirPath_);
-            if(curDirPath.contains("/")) {
-                dest = tempDir_ + "/" + curDirPath.section("/", 0, -2);
+            if(curDirPath.contains(QLatin1String("/"))) {
+                dest = tempDir_ + "/" + curDirPath.section(QStringLiteral("/"), 0, -2);
                 dir.mkpath(dest); // also creates "dir" if needed
             }
             else if(!dir.exists()) {
@@ -674,7 +674,7 @@ void MainWindow::onPropertiesFileInfoJobFinished() {
         auto dlg = new Fm::FilePropsDialog{infos, this};
         // FIXME: this relies on libfm-qt internals.
         // We need to add APIs to libfm-qt to let callers customize the file properties dialog.
-        QWidget* generalPage = dlg->findChild<QWidget*>("generalPage");
+        QWidget* generalPage = dlg->findChild<QWidget*>(QStringLiteral("generalPage"));
         if(generalPage) {
             auto fullSize = archiver_->uncompressedSize(); // actual uncompressed file size
             auto compSize = infos[0]->size(); // compressed file size
@@ -756,7 +756,7 @@ void MainWindow::showFileList(const std::vector<const ArchiverItem *> &files) {
             if(parent) {
                 //qDebug("parent: %s", parent ? parent->fullPath() : "null");
                 auto parentRow = createFileListRow(parent);
-                parentRow[0]->setText("..");
+                parentRow[0]->setText(QStringLiteral(".."));
                 model->appendRow(parentRow);
             }
         }

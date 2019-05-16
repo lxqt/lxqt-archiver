@@ -227,15 +227,15 @@ QStringList Archiver::supportedCreateMimeTypes() {
 
 static QString suffixesToNameFilter(QString name, const QStringList& suffixes) {
     QString filter = std::move(name);
-    filter += " (";
+    filter += QLatin1String(" (");
     for(const auto& suffix: suffixes) {
         if(filter[filter.length() - 1] != '(') {
             filter += ' ';
         }
-        filter += "*.";
+        filter += QLatin1String("*.");
         filter += suffix;
     }
-    filter += ")";
+    filter += QLatin1String(")");
     return filter;
 }
 
