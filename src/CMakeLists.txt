@@ -60,6 +60,11 @@ target_compile_definitions(lxqt-archiver
         LXQT_ARCHIVER_VERSION="${LXQT_ARCHIVER_VERSION}"
         QT_NO_FOREACH
         QT_NO_KEYWORDS
+        QT_USE_QSTRINGBUILDER
+        QT_NO_CAST_FROM_ASCII
+        QT_NO_CAST_TO_ASCII
+        QT_NO_URL_CAST_FROM_STRING
+        QT_NO_CAST_FROM_BYTEARRAY
 )
 
 target_link_libraries(lxqt-archiver

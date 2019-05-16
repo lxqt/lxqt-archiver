@@ -332,19 +332,19 @@ int main(int argc, char** argv) {
     program_argv0 = argv[0];
 
     QApplication app(argc, argv);
-    app.setApplicationVersion(LXQT_ARCHIVER_VERSION);
+    app.setApplicationVersion(QStringLiteral(LXQT_ARCHIVER_VERSION));
     app.setQuitOnLastWindowClosed(true);
     app.setAttribute(Qt::AA_UseHighDpiPixmaps);
 
     // load translations
     // install the translations built-into Qt itself
     QTranslator qtTranslator;
-    qtTranslator.load("qt_" + QLocale::system().name(), QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+    qtTranslator.load(QStringLiteral("qt_") + QLocale::system().name(), QLibraryInfo::location(QLibraryInfo::TranslationsPath));
     app.installTranslator(&qtTranslator);
 
     // install our own tranlations
     QTranslator translator;
-    translator.load("lxqt-archiver_" + QLocale::system().name(), LXQT_ARCHIVER_DATA_DIR "/translations");
+    translator.load(QStringLiteral("lxqt-archiver_") + QLocale::system().name(), QStringLiteral(LXQT_ARCHIVER_DATA_DIR) + QStringLiteral("/translations"));
     app.installTranslator(&translator);
 
     // initialize libfm-qt
