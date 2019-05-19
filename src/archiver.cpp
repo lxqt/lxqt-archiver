@@ -220,22 +220,22 @@ void Archiver::testArchiveIntegrity(const char* password) {
 QStringList Archiver::supportedCreateMimeTypes() {
     QStringList types;
     for(auto p = create_type; *p != -1; ++p) {
-        types << mime_type_desc[*p].mime_type;
+        types << QString::fromUtf8(mime_type_desc[*p].mime_type);
     }
     return types;
 }
 
 static QString suffixesToNameFilter(QString name, const QStringList& suffixes) {
     QString filter = std::move(name);
-    filter += " (";
+    filter += QLatin1String(" (");
     for(const auto& suffix: suffixes) {
-        if(filter[filter.length() - 1] != '(') {
-            filter += ' ';
+        if(filter[filter.length() - 1] != QLatin1Char('(')) {
+            filter += QLatin1Char(' ');
         }
-        filter += "*.";
+        filter += QLatin1String("*.");
         filter += suffix;
     }
-    filter += ")";
+    filter += QLatin1String(")");
     return filter;
 }
 
@@ -253,18 +253,18 @@ QStringList Archiver::mimeDescToNameFilters(int* mimeDescIndexes) {
     QStringList allSuffixes;
     QMimeDatabase mimeDb;
     for(auto p = mimeDescIndexes; *p != -1; ++p) {
-        auto mimeType = mimeDb.mimeTypeForName(mime_type_desc[*p].mime_type);
+        auto mimeType = mimeDb.mimeTypeForName(QString::fromUtf8(mime_type_desc[*p].mime_type));
         QString filter;
         if(mimeType.isValid()) {
             auto suffixes = mimeType.suffixes();
             if(suffixes.empty()) {
-                suffixes.append(mime_type_desc[*p].default_ext);
+                suffixes.append(QString::fromUtf8(mime_type_desc[*p].default_ext));
             }
             filter = suffixesToNameFilter(mimeType.comment(), suffixes);
             allSuffixes += suffixes;
         }
         else {
-            filter = tr("*%1 files (*%1)").arg(mime_type_desc[*p].default_ext);
+            filter = tr("*%1 files (*%1)").arg(QString::fromUtf8(mime_type_desc[*p].default_ext));
         }
         filters << filter;
     }
@@ -279,7 +279,7 @@ QStringList Archiver::supportedCreateNameFilters() {
 QStringList Archiver::supportedOpenMimeTypes() {
     QStringList types;
     for(auto p = open_type; *p != -1; ++p) {
-        types << mime_type_desc[*p].mime_type;
+        types << QString::fromUtf8(mime_type_desc[*p].mime_type);
     }
     return types;
 
@@ -292,7 +292,7 @@ QStringList Archiver::supportedOpenNameFilters() {
 QStringList Archiver::supportedSaveMimeTypes() {
     QStringList types;
     for(auto p = save_type; *p != -1; ++p) {
-        types << mime_type_desc[*p].mime_type;
+        types << QString::fromUtf8(mime_type_desc[*p].mime_type);
     }
     return types;
 }
@@ -561,5 +561,5 @@ void Archiver::onStoppable(FrArchive*, gboolean value, Archiver* _this) {
 void Archiver::onWorkingArchive(FrCommand* comm, const char* filename, Archiver* _this) {
     // FIXME: why the first param is comm?
     //qDebug("working: %s", filename);
-    Q_EMIT _this->workingArchive(filename);
+    Q_EMIT _this->workingArchive(QString::fromUtf8(filename));
 }

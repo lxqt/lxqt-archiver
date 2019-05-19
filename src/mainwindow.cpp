@@ -149,8 +149,8 @@ void MainWindow::loadFile(const Fm::FilePath &file) {
     QString tmp = QStandardPaths::writableLocation(QStandardPaths::TempLocation);
     if(!tmp.isEmpty()) {
         if(QDir(tmp).exists()) {
-            tempDir_ = tmp + "/" + "lxqt-archiver-"
-                       + QDateTime::currentDateTime().toString("yyyyMMddhhmmss");
+            tempDir_ = tmp + QStringLiteral("/") + QStringLiteral("lxqt-archiver-")
+                       + QDateTime::currentDateTime().toString(QStringLiteral("yyyyMMddhhmmss"));
         }
     }
 
@@ -164,7 +164,7 @@ void MainWindow::dragEnterEvent(QDragEnterEvent *event) {
             auto url = urlList.at(0);
             if(!url.isEmpty()) {
                 const auto mimeType = Fm::MimeType::guessFromFileName(url.toEncoded().constData())->name();
-                if(archiver_->supportedOpenMimeTypes().contains(mimeType)) {
+                if(archiver_->supportedOpenMimeTypes().contains(QString::fromUtf8(mimeType))) {
                     event->acceptProposedAction();
                     return;
                 }
@@ -179,9 +179,9 @@ void MainWindow::dropEvent(QDropEvent* event) {
     if(!urlList.isEmpty()) {
         auto url = urlList.at(0);
         if(!url.isEmpty()) {
-            auto path = Fm::FilePath::fromUri(url.toEncoded());
+            auto path = Fm::FilePath::fromUri(url.toEncoded().constData());
             if(path.hasParent()) {
-                lasrDir_ = path.parent().uri().get();
+                lasrDir_ = QUrl::fromEncoded(QByteArray(path.parent().uri().get()));
             }
             loadFile(path);
             activateWindow();
@@ -194,7 +194,7 @@ void MainWindow::dropEvent(QDropEvent* event) {
 void MainWindow::setFileName(const QString &fileName) {
     QString title = tr("File Archiver");
     if(!fileName.isEmpty()) {
-        title = fileName + " - " + title;
+        title = fileName + QStringLiteral(" - ") + title;
     }
     setWindowTitle(title);
 }
@@ -227,7 +227,7 @@ void MainWindow::on_actionOpen_triggered(bool /*checked*/) {
         auto url = dlg.selectedFiles()[0];
         if(!url.isEmpty()) {
             lasrDir_ = dlg.directory();
-            loadFile(Fm::FilePath::fromUri(url.toEncoded()));
+            loadFile(Fm::FilePath::fromUri(url.toEncoded().constData()));
         }
     }
 }
@@ -390,7 +390,7 @@ void MainWindow::viewSelectedFiles() {
         for(const auto index : indexes) {
             auto item = itemFromIndex(index);
             if(item && !item->isDir()) {
-                const QString fileName = tempDir_ + item->fullPath();
+                const QString fileName = tempDir_ + QString::fromUtf8(item->fullPath());
                 launchPaths_ << fileName;
                 if(archiver_->isEncrypted() && password_.empty()) {
                     password_ = PasswordDialog::askPassword(this).toStdString();
@@ -403,8 +403,8 @@ void MainWindow::viewSelectedFiles() {
             QString dest = tempDir_;
             QDir dir(tempDir_);
             const QString curDirPath = QString::fromStdString(currentDirPath_);
-            if(curDirPath.contains("/")) {
-                dest = tempDir_ + "/" + curDirPath.section("/", 0, -2);
+            if(curDirPath.contains(QLatin1String("/"))) {
+                dest = tempDir_ + QLatin1String("/") + curDirPath.section(QStringLiteral("/"), 0, -2);
                 dir.mkpath(dest); // also creates "dir" if needed
             }
             else if(!dir.exists()) {
@@ -476,7 +476,7 @@ void MainWindow::on_actionAbout_triggered(bool /*checked*/) {
     QDialog dlg{this};
     Ui::AboutDialog ui;
     ui.setupUi(&dlg);
-    ui.version->setText(tr("Version: %1").arg(LXQT_ARCHIVER_VERSION));
+    ui.version->setText(tr("Version: %1").arg(QStringLiteral(LXQT_ARCHIVER_VERSION)));
     dlg.exec();
 }
 
@@ -674,7 +674,7 @@ void MainWindow::onPropertiesFileInfoJobFinished() {
         auto dlg = new Fm::FilePropsDialog{infos, this};
         // FIXME: this relies on libfm-qt internals.
         // We need to add APIs to libfm-qt to let callers customize the file properties dialog.
-        QWidget* generalPage = dlg->findChild<QWidget*>("generalPage");
+        QWidget* generalPage = dlg->findChild<QWidget*>(QStringLiteral("generalPage"));
         if(generalPage) {
             auto fullSize = archiver_->uncompressedSize(); // actual uncompressed file size
             auto compSize = infos[0]->size(); // compressed file size
@@ -716,7 +716,7 @@ QList<QStandardItem *> MainWindow::createFileListRow(const ArchiverItem *file) {
     auto mtime = QDateTime::fromMSecsSinceEpoch(file->modifiedTime() * 1000);
 
     // FIXME: filename might not be UTF-8
-    QString name = viewMode_ == ViewMode::FlatList ? file->fullPath() : file->name();
+    QString name = viewMode_ == ViewMode::FlatList ? QString::fromUtf8(file->fullPath()) : QString::fromUtf8(file->name());
     auto nameItem = new QStandardItem{icon, name};
     nameItem->setData(QVariant::fromValue(file), ArchiverItemRole); // store the item pointer on the first column
     nameItem->setEditable(false);
@@ -756,7 +756,7 @@ void MainWindow::showFileList(const std::vector<const ArchiverItem *> &files) {
             if(parent) {
                 //qDebug("parent: %s", parent ? parent->fullPath() : "null");
                 auto parentRow = createFileListRow(parent);
-                parentRow[0]->setText("..");
+                parentRow[0]->setText(QStringLiteral(".."));
                 model->appendRow(parentRow);
             }
         }
@@ -915,7 +915,7 @@ void MainWindow::updateDirTree() {
     auto archivePath = archiver_->currentArchivePath();
     auto contentType = archiver_->currentArchiveContentType();
     auto rootItem = model->item(0, 0);
-    rootItem->setText(archivePath.baseName().get());
+    rootItem->setText(QString::fromUtf8(archivePath.baseName().get()));
     if(contentType) {
         auto mimeType = Fm::MimeType::fromName(contentType);
         if(mimeType && mimeType->icon()) {
@@ -932,7 +932,7 @@ void MainWindow::buildDirTree(QStandardItem *parent, const ArchiverItem *root) {
         QIcon qicon = iconInfo ? iconInfo->qicon() : QIcon();
 
         // FIXME: root->name() might not be UTF-8
-        auto item = new QStandardItem{qicon, root->name()};
+        auto item = new QStandardItem{qicon, QString::fromUtf8(root->name())};
 
         item->setEditable(false);
         item->setData(QVariant::fromValue(root), ArchiverItemRole);
@@ -963,7 +963,7 @@ void MainWindow::chdir(std::string dirPath) {
 
 void MainWindow::chdir(const ArchiverItem *dir) {
     currentDirPath_ = dir->fullPath();
-    currentPathEdit_->setText(dir->fullPath());
+    currentPathEdit_->setText(QString::fromUtf8(dir->fullPath()));
     currentDirItem_ = dir;
     if(viewMode_ == ViewMode::DirTree) {
         showCurrentDirList();
