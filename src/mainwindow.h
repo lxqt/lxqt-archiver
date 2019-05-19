@@ -121,6 +121,8 @@ private Q_SLOTS:
 
     void onPropertiesFileInfoJobFinished();
 
+    void onDragStarted();
+
 private:
     void setFileName(const QString& fileName);
 
@@ -147,6 +149,8 @@ private:
     QModelIndex indexFromItem(const QModelIndex& parent, const ArchiverItem* item);
 
     void viewSelectedFiles();
+
+    bool isExtracted(const ArchiverItem* item);
 
 private:
     std::unique_ptr<Ui::MainWindow> ui_;

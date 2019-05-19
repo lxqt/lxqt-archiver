@@ -56,28 +56,10 @@
         <number>0</number>
        </attribute>
       </widget>
-      <widget class="QTreeView" name="fileListView">
+      <widget class="FileTreeView" name="fileListView">
        <property name="enabled">
         <bool>false</bool>
        </property>
-       <property name="selectionMode">
-        <enum>QAbstractItemView::ExtendedSelection</enum>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>24</width>
-         <height>24</height>
-        </size>
-       </property>
-       <property name="rootIsDecorated">
-        <bool>false</bool>
-       </property>
-       <attribute name="headerShowSortIndicator" stdset="0">
-        <bool>true</bool>
-       </attribute>
-       <attribute name="headerStretchLastSection">
-        <bool>false</bool>
-       </attribute>
       </widget>
      </widget>
     </item>
@@ -428,6 +410,14 @@
    </property>
   </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>FileTreeView</class>
+   <extends>QTreeview</extends>
+   <header>filetreeView.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections>
   <connection>
