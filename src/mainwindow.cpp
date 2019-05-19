@@ -32,6 +32,8 @@
 #include <QCheckBox>
 #include <QSpinBox>
 #include <QStandardPaths>
+#include <QDrag>
+#include <QPointer>
 
 #include <QDebug>
 
@@ -96,6 +98,7 @@ MainWindow::MainWindow(QWidget* parent):
     proxyModel_->sort(0, Qt::AscendingOrder);
 
     ui_->fileListView->setModel(proxyModel_);
+    connect(ui_->fileListView, &FileTreeView::dragStarted, this, &MainWindow::onDragStarted);
     connect(ui_->fileListView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &MainWindow::onFileListSelectionChanged);
     connect(ui_->fileListView, &QAbstractItemView::activated, this, &MainWindow::onFileListActivated);
 
@@ -149,7 +152,7 @@ void MainWindow::loadFile(const Fm::FilePath &file) {
     QString tmp = QStandardPaths::writableLocation(QStandardPaths::TempLocation);
     if(!tmp.isEmpty()) {
         if(QDir(tmp).exists()) {
-            tempDir_ = tmp + QStringLiteral("/") + QStringLiteral("lxqt-archiver-")
+            tempDir_ = tmp + QStringLiteral("/lxqt-archiver-")
                        + QDateTime::currentDateTime().toString(QStringLiteral("yyyyMMddhhmmss"));
         }
     }
@@ -392,19 +395,31 @@ void MainWindow::viewSelectedFiles() {
             if(item && !item->isDir()) {
                 const QString fileName = tempDir_ + QString::fromUtf8(item->fullPath());
                 launchPaths_ << fileName;
-                if(archiver_->isEncrypted() && password_.empty()) {
-                    password_ = PasswordDialog::askPassword(this).toStdString();
+                if(!QFile::exists(fileName)) {
+                    if(archiver_->isEncrypted() && password_.empty()) {
+                        password_ = PasswordDialog::askPassword(this).toStdString();
+                    }
+                    files.emplace_back(item->data());
                 }
-                files.emplace_back(item->data());
             }
         }
 
-        if(!files.empty()) {
+        if(files.empty()) { // all files are already extracted; launch them together
+            if(!launchPaths_.empty()) {
+                Fm::FilePathList paths;
+                for(auto& launchPath : launchPaths_) {
+                    paths.push_back(Fm::FilePath::fromLocalPath(launchPath.toLocal8Bit().constData()));
+                }
+                Fm::FileLauncher().launchPaths(this, std::move(paths));
+                launchPaths_.clear();
+            }
+        }
+        else {
             QString dest = tempDir_;
             QDir dir(tempDir_);
             const QString curDirPath = QString::fromStdString(currentDirPath_);
             if(curDirPath.contains(QLatin1String("/"))) {
-                dest = tempDir_ + QLatin1String("/") + curDirPath.section(QStringLiteral("/"), 0, -2);
+                dest = tempDir_ + QLatin1String("/") + curDirPath.section(QLatin1String("/"), 0, -2);
                 dir.mkpath(dest); // also creates "dir" if needed
             }
             else if(!dir.exists()) {
@@ -424,6 +439,112 @@ void MainWindow::viewSelectedFiles() {
                                     false,
                                     password_.empty() ? nullptr : password_.c_str()
             );
+        }
+    }
+}
+
+bool MainWindow::isExtracted(const ArchiverItem* item) {
+    if(item->isDir()) {
+        std::vector<const ArchiverItem *> children;
+        item->allChildren(children);
+        if(children.empty()) {
+            const QString fileName = tempDir_ + QString::fromUtf8(item->fullPath());
+            return QFile::exists(fileName);
+        }
+        for(auto child : children) {
+            if(child->isDir()) {
+                if(!isExtracted(child)) {
+                    return false;
+                }
+            }
+            else {
+                const QString fileName = tempDir_ + QString::fromUtf8(child->fullPath());
+                if(!QFile::exists(fileName)) {
+                    return false;
+                }
+            }
+        }
+    }
+    else {
+        const QString fileName = tempDir_ + QString::fromUtf8(item->fullPath());
+        return QFile::exists(fileName);
+    }
+    return true;
+}
+
+void MainWindow::onDragStarted() {
+    if(tempDir_.isEmpty()) {
+        return;
+    }
+    if(auto selModel = ui_->fileListView->selectionModel()) {
+        const QString curDirPath = QString::fromStdString(currentDirPath_);
+        QStringList fileNames;
+        std::vector<const FileData*> files;
+        const QModelIndexList indexes = selModel->selectedRows();
+        for(const auto idx : indexes) {
+            if(const auto item = itemFromIndex(idx)) {
+                const QString fullPath = QString::fromUtf8(item->fullPath());
+                // only children of the current directory (not "..")
+                if(fullPath.startsWith(curDirPath)) {
+                    const QString fileName = tempDir_
+                                             // without the ending "/"
+                                             + (fullPath.endsWith(QLatin1String("/"))
+                                                    ? fullPath.left(fullPath.size() - 1)
+                                                    : fullPath);
+                    fileNames << fileName;
+                    if(!isExtracted(item)) {
+                        if(archiver_->isEncrypted() && password_.empty()) {
+                            password_ = PasswordDialog::askPassword(this).toStdString();
+                        }
+                        files.emplace_back(item->data());
+                    }
+                }
+            }
+        }
+
+        if(!fileNames.isEmpty()) {
+            QPointer<QDrag> drag = new QDrag(this);
+            QMimeData* mimeData = new QMimeData;
+            QList<QUrl> urlList;
+            for(auto& file : fileNames) {
+                urlList << QUrl::fromLocalFile(file);
+            }
+            mimeData->setUrls(urlList);
+            drag->setMimeData(mimeData);
+            if(files.empty()) { // all files are already extracted
+                if(drag->exec(Qt::CopyAction) == Qt::IgnoreAction) {
+                    drag->deleteLater();
+                }
+            }
+            else { // wait until all files are extracted
+                connect(archiver_.get(), &Archiver::finish, this, [drag]() {
+                    if(drag && drag->exec(Qt::CopyAction) == Qt::IgnoreAction) {
+                        drag->deleteLater();
+                    }
+                });
+            }
+
+            if(!files.empty()) {
+                QString dest = tempDir_;
+                QDir dir(tempDir_);
+                if(curDirPath.contains(QLatin1String("/"))) {
+                    dest = tempDir_ + QLatin1String("/") + curDirPath.section(QLatin1String("/"), 0, -2);
+                    dir.mkpath(dest); // also creates "dir" if needed
+                }
+                else if(!dir.exists()) {
+                    dir.mkpath(tempDir_);
+                }
+                auto destDir = Fm::FilePath::fromLocalPath(dest.toLocal8Bit().constData());
+
+                archiver_->extractFiles(files,
+                                        destDir,
+                                        currentDirPath_.c_str(),
+                                        false,
+                                        true, // overwrite because a dir may have been only partly extracted
+                                        false,
+                                        password_.empty() ? nullptr : password_.c_str()
+                );
+            }
         }
     }
 }
