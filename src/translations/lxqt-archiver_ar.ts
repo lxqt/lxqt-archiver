@@ -220,17 +220,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="112"/>
         <source>&amp;Edit</source>
-        <translation>ت&amp;حرير</translation>
+        <translation>&amp;تحرير</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="131"/>
         <source>&amp;View</source>
-        <translation>من&amp;ظور</translation>
+        <translation>&amp;منظور</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="146"/>
         <source>&amp;Help</source>
-        <translation>م&amp;ساعدة</translation>
+        <translation>&amp;مساعدة</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="157"/>
