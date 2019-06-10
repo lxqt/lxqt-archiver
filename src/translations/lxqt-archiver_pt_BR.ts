@@ -471,7 +471,7 @@ MA 02110-1301, EUA.</translation>
         <location filename="../mainwindow.cpp" line="219"/>
         <location filename="../mainwindow.cpp" line="252"/>
         <source>Add only if &amp;newer</source>
-        <translation>Adicionar apenas se for mais recente</translation>
+        <translation>Adicio&amp;nar apenas se mais recente</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="277"/>
