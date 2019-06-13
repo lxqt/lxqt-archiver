@@ -111,7 +111,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="25"/>
         <source>Failed to execute the command.</source>
-        <translation type="unfinished"></translation>
+        <translation>無法執行此命令.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
@@ -437,7 +437,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="409"/>
         <source>Esc</source>
-        <translation></translation>
+        <translation>退出(Esc)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="414"/>
@@ -500,7 +500,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="587"/>
         <source>No errors have been found.</source>
-        <translation type="unfinished"></translation>
+        <translation>未發現錯誤.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="620"/>
