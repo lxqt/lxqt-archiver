@@ -442,7 +442,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="414"/>
         <source>&amp;Reload</source>
-        <translation>&amp;Recargar</translation>
+        <translation>&amp;Actualizar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="417"/>
