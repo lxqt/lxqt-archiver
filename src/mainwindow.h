@@ -171,6 +171,8 @@ private:
     QString tempDir_;
     QStringList launchPaths_;
     QUrl lasrDir_;
+
+    int splitterPos_;
 };
 
 #endif // MAINWINDOW_H

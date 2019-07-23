@@ -12,6 +12,8 @@ FileTreeView::FileTreeView(QWidget* parent) : QTreeView(parent) {
     setDragDropMode(QAbstractItemView::DragOnly);
     header()->setSortIndicatorShown(true);
     header()->setStretchLastSection(false);
+    header()->setSortIndicatorShown(true);
+    header()->setSortIndicator(0, Qt::AscendingOrder);
 }
 
 void FileTreeView::mousePressEvent(QMouseEvent* event) {
