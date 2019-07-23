@@ -34,6 +34,8 @@
 #include <QStandardPaths>
 #include <QDrag>
 #include <QPointer>
+#include <QScreen>
+#include <QSettings>
 
 #include <QDebug>
 
@@ -56,13 +58,33 @@ MainWindow::MainWindow(QWidget* parent):
     archiver_{std::make_shared<Archiver>()},
     viewMode_{ViewMode::DirTree},
     currentDirItem_{nullptr},
-    encryptHeader_{false} {
+    encryptHeader_{false},
+    splitterPos_{200} {
 
     ui_->setupUi(this);
 
     // only stretch the right pane
     ui_->splitter->setStretchFactor(0, 0);
     ui_->splitter->setStretchFactor(1, 1);
+
+    QSettings settings(QSettings::UserScope, QStringLiteral("lxqt"), QStringLiteral("arciver"));
+    // window size
+    settings.beginGroup (QStringLiteral("Sizes"));
+    QSize winSize = settings.value(QStringLiteral("WindowSize"), QSize(700, 500)).toSize();
+    QSize ag;
+    if (QScreen *pScreen = QApplication::primaryScreen()) {
+        ag = pScreen->availableVirtualGeometry().size();
+    }
+    if (!ag.isEmpty()) {
+        winSize = winSize.boundedTo (ag);
+    }
+    resize(winSize);
+    // splitter position
+    QList<int> sizes;
+    sizes.append(settings.value(QStringLiteral("SplitterPos"), splitterPos_).toInt());
+    settings.endGroup();
+    sizes.append(400);
+    ui_->splitter->setSizes(sizes);
 
     // create a progress bar in the status bar
     progressBar_ = new QProgressBar{ui_->statusBar};
@@ -133,6 +155,18 @@ MainWindow::MainWindow(QWidget* parent):
 }
 
 MainWindow::~MainWindow() {
+    QSettings settings(QSettings::UserScope, QStringLiteral("lxqt"), QStringLiteral("arciver"));
+    settings.beginGroup (QStringLiteral("Sizes"));
+    QSize windowSize = size();
+    if(settings.value(QStringLiteral("WindowSize")).toSize() != windowSize) {
+        settings.setValue(QStringLiteral("WindowSize"), windowSize);
+    }
+    int splitterPos = viewMode_ == ViewMode::FlatList ? splitterPos_ : ui_->splitter->sizes().at(0);
+    if(settings.value(QStringLiteral("SplitterPos")).toInt() != splitterPos) {
+        settings.setValue(QStringLiteral("SplitterPos"), splitterPos);
+    }
+    settings.endGroup();
+
     if(!tempDir_.isEmpty()) { // remove the temp dir if any
         QDir(tempDir_).removeRecursively();
     }
@@ -898,8 +932,14 @@ void MainWindow::showFileList(const std::vector<const ArchiverItem *> &files) {
     proxyModel_->setSourceModel(model);
 
     ui_->statusBar->showMessage(tr("%1 files").arg(files.size()));
-    // ui_->fileListView->header()->setSectionResizeMode(0, QHeaderView::Stretch);
-    ui_->fileListView->resizeColumnToContents(0);
+
+    //ui_->fileListView->header()->setSectionResizeMode(0, QHeaderView::Stretch);
+    QTimer::singleShot(0, this, [this] {
+        const int n = ui_->fileListView->header()->count();
+        for(int i = 0; i < n; ++i) {
+            ui_->fileListView->resizeColumnToContents(i);
+        }
+    });
 }
 
 void MainWindow::showFlatFileList() {
@@ -1118,7 +1158,8 @@ void MainWindow::setViewMode(MainWindow::ViewMode viewMode) {
             showCurrentDirList();
             break;
         case ViewMode::FlatList:
-            // always hide dir tree view in flast list mode
+            // always hide dir tree view in flat list mode but remember splitter position first
+            splitterPos_ = ui_->splitter->sizes().at(0);
             ui_->dirTreeView->hide();
             showFlatFileList();
             break;
