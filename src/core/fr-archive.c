@@ -3192,6 +3192,11 @@ g_print("dest fn: %s\n", dest_filename);
 
 		if (extract_all)
 			path_list_free (file_list);
+
+		fr_archive_action_completed (archive,
+					     FR_ACTION_EXTRACTING_FILES,
+					     FR_PROC_ERROR_NONE,
+					     NULL);
 		return;
 	}
 
