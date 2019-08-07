@@ -191,6 +191,11 @@ void MainWindow::loadFile(const Fm::FilePath &file) {
         }
     }
 
+    // set the work directory to the containing folder
+    if(file.hasParent()) {
+        lasrDir_ = QUrl::fromEncoded(QByteArray(file.parent().uri().get()));
+    }
+
     archiver_->openArchive(file.uri().get(), nullptr);
 }
 
@@ -238,7 +243,7 @@ void MainWindow::setFileName(const QString &fileName) {
 
 void MainWindow::on_actionCreateNew_triggered(bool /*checked*/) {
     CreateFileDialog dlg{this};
-
+    dlg.setDirectory(lasrDir_);
     if(dlg.exec() == QDialog::Accepted) {
         password_ = dlg.password().toStdString();
         encryptHeader_ = dlg.encryptFileList();
@@ -247,6 +252,7 @@ void MainWindow::on_actionCreateNew_triggered(bool /*checked*/) {
 
         auto url = dlg.selectedFiles()[0];
         if(!url.isEmpty()) {
+            lasrDir_ = dlg.directory();
             archiver_->createNewArchive(url);
         }
     }
@@ -379,12 +385,14 @@ void MainWindow::on_actionExtract_triggered(bool /*checked*/) {
         dlg.setExtractSelected(true);
     }
 
+    dlg.setDirectory(lasrDir_);
     if(dlg.exec() != QDialog::Accepted) {
         return;
     }
 
     QUrl dirUrl = dlg.selectedFiles()[0];
     if(!dirUrl.isEmpty()) {
+        lasrDir_ = dlg.directory();
         if(archiver_->isEncrypted() && password_.empty()) {
             password_ = PasswordDialog::askPassword(this).toStdString();
         }
