@@ -54,15 +54,15 @@
 gint          ForceDirectoryCreation;
 
 static char** remaining_args;
-static char*  add_to = NULL;
+static char*  add_to = nullptr;
 static int    add;
-static char*  extract_to = NULL;
+static char*  extract_to = nullptr;
 static int    extract;
 static int    extract_here;
-static char*  default_url = NULL;
+static char*  default_url = nullptr;
 
 /* argv[0] from main(); used as the command to restart the program */
-static const char* program_argv0 = NULL;
+static const char* program_argv0 = nullptr;
 static std::unordered_map<std::string, QByteArray> gettextCache;
 
 static const GOptionEntry options[] = {
@@ -75,7 +75,7 @@ static const GOptionEntry options[] = {
     {
         "add", 'd', 0, G_OPTION_ARG_NONE, &add,
         N_("Add files asking the name of the archive and quit the program"),
-        NULL
+        nullptr
     },
 
     {
@@ -87,13 +87,13 @@ static const GOptionEntry options[] = {
     {
         "extract", 'f', 0, G_OPTION_ARG_NONE, &extract,
         N_("Extract archives asking the destination folder and quit the program"),
-        NULL
+        nullptr
     },
 
     {
         "extract-here", 'h', 0, G_OPTION_ARG_NONE, &extract_here,
         N_("Extract the contents of the archives in the archive folder and quit the program"),
-        NULL
+        nullptr
     },
 
     {
@@ -105,16 +105,16 @@ static const GOptionEntry options[] = {
     {
         "force", '\0', 0, G_OPTION_ARG_NONE, &ForceDirectoryCreation,
         N_("Create destination folder without asking confirmation"),
-        NULL
+        nullptr
     },
 
     {
         G_OPTION_REMAINING, 0, 0, G_OPTION_ARG_STRING_ARRAY, &remaining_args,
-        NULL,
-        NULL
+        nullptr,
+        nullptr
     },
 
-    { NULL }
+    { nullptr }
 };
 
 
@@ -130,12 +130,12 @@ static char* get_uri_from_command_line(const char* path) {
 }
 
 static int runApp(QApplication& app) {
-    char*        extract_to_uri = NULL;
-    char*        add_to_uri = NULL;
+    char*        extract_to_uri = nullptr;
+    char*        add_to_uri = nullptr;
 
     // handle command line options
 
-    if(remaining_args == NULL) {  /* No archive specified. */
+    if(remaining_args == nullptr) {  /* No archive specified. */
         auto mainWin = new MainWindow();
         mainWin->show();
         return app.exec();
@@ -145,7 +145,7 @@ static int runApp(QApplication& app) {
     bool extractOverwrite = false;
     bool extractReCreateFolders = false;
 
-    if(extract_to != NULL) {
+    if(extract_to != nullptr) {
         extract_to_uri = get_uri_from_command_line(extract_to);
     }
     else {
@@ -174,7 +174,7 @@ static int runApp(QApplication& app) {
     bool addSplitVolumes = false;
     unsigned int addVolumeSize = 0;
 
-    if(add_to != NULL) {
+    if(add_to != nullptr) {
         add_to_uri = get_uri_from_command_line(add_to);
     }
     else {
@@ -183,6 +183,15 @@ static int runApp(QApplication& app) {
             CreateFileDialog dlg;
             if(default_url) {
                 dlg.setDirectory(QUrl::fromEncoded(default_url));
+            }
+            else { // set the directory to the parent of the first file
+                const char* firstFile = remaining_args[0];
+                if(firstFile != nullptr) {
+                    auto path = Fm::FilePath::fromPathStr(firstFile);
+                    if(path.hasParent()) {
+                        dlg.setDirectory(QUrl::fromEncoded(QByteArray(path.parent().uri().get())));
+                    }
+                }
             }
             if(dlg.exec() == QDialog::Accepted) {
                 auto url = dlg.selectedFiles()[0];
@@ -201,13 +210,13 @@ static int runApp(QApplication& app) {
         }
     }
 
-    if((add_to != NULL) || (add == 1)) {
+    if((add_to != nullptr) || (add == 1)) {
         /* Add files to an archive */
-        const char* filename = NULL;
+        const char* filename = nullptr;
         int i = 0;
 
         Fm::FilePathList filePaths;
-        while((filename = remaining_args[i++]) != NULL) {
+        while((filename = remaining_args[i++]) != nullptr) {
             filePaths.emplace_back(Fm::FilePath::fromPathStr(filename));
         }
 
@@ -244,11 +253,11 @@ static int runApp(QApplication& app) {
         dlg.exec();
         return 0;
     }
-    else if((extract_to != NULL) || (extract == 1) || (extract_here == 1)) {
-        const char* filename = NULL;
+    else if((extract_to != nullptr) || (extract == 1) || (extract_here == 1)) {
+        const char* filename = nullptr;
         int i = 0;
         /* Extract all archives. */
-        while((filename = remaining_args[i++]) != NULL) {
+        while((filename = remaining_args[i++]) != nullptr) {
             auto archive_uri = Fm::CStrPtr{get_uri_from_command_line(filename)};
 
             Archiver archiver;
@@ -300,9 +309,9 @@ static int runApp(QApplication& app) {
         }
     }
     else { /* Open each archive in a window */
-        const char* filename = NULL;
+        const char* filename = nullptr;
         int i = 0;
-        while((filename = remaining_args[i++]) != NULL) {
+        while((filename = remaining_args[i++]) != nullptr) {
             auto mainWindow = new MainWindow();
             auto file = Fm::FilePath::fromPathStr(filename);
             mainWindow->loadFile(file);
@@ -325,8 +334,8 @@ const char* qtGettext(const char* msg) {
 }
 
 int main(int argc, char** argv) {
-    GOptionContext* context = NULL;
-    GError*         error = NULL;
+    GOptionContext* context = nullptr;
+    GError*         error = nullptr;
     int             status;
 
     program_argv0 = argv[0];
