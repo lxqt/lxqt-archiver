@@ -200,6 +200,12 @@ void MainWindow::loadFile(const Fm::FilePath &file) {
 }
 
 void MainWindow::dragEnterEvent(QDragEnterEvent *event) {
+    // If the drag is originated in this window, ignore it.
+    // This is needed when an archive contains another archive, as with deb packages.
+    if(event->source()) {
+        event->ignore();
+        return;
+    }
     if(event->mimeData()->hasUrls()) {
         const auto urlList = event->mimeData()->urls();
         if(!urlList.isEmpty()) {
@@ -217,17 +223,19 @@ void MainWindow::dragEnterEvent(QDragEnterEvent *event) {
 }
 
 void MainWindow::dropEvent(QDropEvent* event) {
-    const auto urlList = event->mimeData()->urls();
-    if(!urlList.isEmpty()) {
-        auto url = urlList.at(0);
-        if(!url.isEmpty()) {
-            auto path = Fm::FilePath::fromUri(url.toEncoded().constData());
-            if(path.hasParent()) {
-                lasrDir_ = QUrl::fromEncoded(QByteArray(path.parent().uri().get()));
+    if(event->mimeData()->hasUrls()) {
+        const auto urlList = event->mimeData()->urls();
+        if(!urlList.isEmpty()) {
+            auto url = urlList.at(0);
+            if(!url.isEmpty()) {
+                auto path = Fm::FilePath::fromUri(url.toEncoded().constData());
+                if(path.hasParent()) {
+                    lasrDir_ = QUrl::fromEncoded(QByteArray(path.parent().uri().get()));
+                }
+                loadFile(path);
+                raise();
+                activateWindow();
             }
-            loadFile(path);
-            activateWindow();
-            raise();
         }
     }
     event->acceptProposedAction();
