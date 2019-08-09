@@ -32,11 +32,10 @@ void FileTreeView::mouseMoveEvent(QMouseEvent* event) {
         QTreeView::mouseMoveEvent(event);
         return;
     }
-    if((event->pos() - dragStartPosition_).manhattanLength() >= qMax(16, QApplication::startDragDistance())) {
+    if(!dragStarted_
+       && (event->buttons() & Qt::LeftButton)
+       && (event->pos() - dragStartPosition_).manhattanLength() >= qMax(16, QApplication::startDragDistance())) {
         dragStarted_ = true;
-    }
-
-    if((event->buttons() & Qt::LeftButton) && dragStarted_) {
         if(selectionModel() && !selectionModel()->selectedRows().isEmpty()) {
             Q_EMIT dragStarted();
         }
