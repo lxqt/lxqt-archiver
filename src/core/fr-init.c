@@ -57,6 +57,7 @@
 /* The capabilities are computed automatically in
  * compute_supported_archive_types() so it's correct to initialize to 0 here. */
 FrMimeTypeDescription mime_type_desc[] = {
+	{ "application/gzip",                   ".gz",       NULL, 0 },
 	{ "application/x-7z-compressed",        ".7z",       N_("7-Zip (.7z)"), 0 },
 	{ "application/x-7z-compressed-tar",    ".tar.7z",   N_("Tar compressed with 7z (.tar.7z)"), 0 },
 	{ "application/x-ace",                  ".ace",      N_("Ace (.ace)"), 0 },
@@ -78,7 +79,6 @@ FrMimeTypeDescription mime_type_desc[] = {
 	{ "application/x-deb",                  ".deb",      NULL, 0 },
 	{ "application/x-ear",                  ".ear",      N_("Ear (.ear)"), 0 },
 	{ "application/x-ms-dos-executable",    ".exe",      N_("Self-extracting zip (.exe)"), 0 },
-	{ "application/x-gzip",                 ".gz",       NULL, 0 },
 	{ "application/x-java-archive",         ".jar",      N_("Jar (.jar)"), 0 },
 	{ "application/x-lha",                  ".lzh",      N_("Lha (.lzh)"), 0 },
 	{ "application/x-lrzip",                ".lrz",      N_("Lrzip (.lrz)"), 0},
@@ -121,7 +121,7 @@ FrExtensionType file_ext_type[] = {
 	{ ".deb", "application/x-deb" },
 	{ ".ear", "application/x-ear" },
 	{ ".exe", "application/x-ms-dos-executable" },
-	{ ".gz", "application/x-gzip" },
+	{ ".gz", "application/gzip" },
 	{ ".iso", "application/x-cd-image" },
 	{ ".jar", "application/x-java-archive" },
 	{ ".lha", "application/x-lha" },
@@ -157,7 +157,7 @@ FrExtensionType file_ext_type[] = {
 	{ ".war", "application/x-war" },
 	{ ".wim", "application/x-ms-wim" },
 	{ ".xz", "application/x-xz" },
-	{ ".z", "application/x-gzip" },
+	{ ".z", "application/gzip" },
 	{ ".Z", "application/x-compress" },
 	{ ".zip", "application/zip" },
 	{ ".zoo", "application/x-zoo" },

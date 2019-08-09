@@ -49,7 +49,7 @@ get_uncompressed_name_from_archive (FrCommand  *comm,
 	GInputStream *stream;
 	char         *filename = NULL;
 
-	if (! is_mime_type (comm->mime_type, "application/x-gzip"))
+	if (! is_mime_type (comm->mime_type, "application/gzip"))
 		return NULL;
 
 	file = g_file_new_for_path (archive);
@@ -140,7 +140,7 @@ fr_command_cfile_list (FrCommand  *comm)
 {
 	FrCommandCFile *comm_cfile = FR_COMMAND_CFILE (comm);
 
-	if (is_mime_type (comm->mime_type, "application/x-gzip")) {
+	if (is_mime_type (comm->mime_type, "application/gzip")) {
 		/* gzip let us known the uncompressed size */
 
 		fr_process_set_out_line_func (FR_COMMAND (comm)->process,
@@ -225,7 +225,7 @@ fr_command_cfile_add (FrCommand     *comm,
 
 	/**/
 
-	if (is_mime_type (comm->mime_type, "application/x-gzip")) {
+	if (is_mime_type (comm->mime_type, "application/gzip")) {
 		fr_process_begin_command (comm->process, "gzip");
 		fr_process_set_working_dir (comm->process, temp_dir);
 		fr_process_add_arg (comm->process, "--");
@@ -356,7 +356,7 @@ fr_command_cfile_extract (FrCommand  *comm,
 
 	/* uncompress the file */
 
-	if (is_mime_type (comm->mime_type, "application/x-gzip")) {
+	if (is_mime_type (comm->mime_type, "application/gzip")) {
 		fr_process_begin_command (comm->process, "gzip");
 		fr_process_add_arg (comm->process, "-f");
 		fr_process_add_arg (comm->process, "-d");
@@ -455,7 +455,7 @@ fr_command_cfile_extract (FrCommand  *comm,
 }
 
 
-const char *cfile_mime_type[] = { "application/x-gzip",
+const char *cfile_mime_type[] = { "application/gzip",
 				  "application/x-bzip",
 				  "application/x-compress",
 				  "application/x-lzip",
@@ -481,7 +481,7 @@ fr_command_cfile_get_capabilities (FrCommand  *comm,
 	FrCommandCap capabilities;
 
 	capabilities = FR_COMMAND_CAN_DO_NOTHING;
-	if (is_mime_type (mime_type, "application/x-gzip")) {
+	if (is_mime_type (mime_type, "application/gzip")) {
 		if (is_program_available ("gzip", check_command))
 			capabilities |= FR_COMMAND_CAN_READ_WRITE;
 	}
@@ -536,7 +536,7 @@ static const char *
 fr_command_cfile_get_packages (FrCommand  *comm,
 			       const char *mime_type)
 {
-	if (is_mime_type (mime_type, "application/x-gzip"))
+	if (is_mime_type (mime_type, "application/gzip"))
 		return PACKAGES ("gzip");
 	else if (is_mime_type (mime_type, "application/x-bzip"))
 		return PACKAGES ("bzip2");
