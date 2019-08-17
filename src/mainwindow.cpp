@@ -253,6 +253,9 @@ void MainWindow::on_actionCreateNew_triggered(bool /*checked*/) {
     CreateFileDialog dlg{this};
     dlg.setDirectory(lasrDir_);
     if(dlg.exec() == QDialog::Accepted) {
+        if(!tempDir_.isEmpty()) { // remove the last temp dir
+            QDir(tempDir_).removeRecursively();
+        }
         password_ = dlg.password().toStdString();
         encryptHeader_ = dlg.encryptFileList();
         splitVolumes_ = dlg.splitVolumes();
@@ -634,6 +637,9 @@ void MainWindow::on_actionFlatListMode_toggled(bool /*checked*/) {
 
 void MainWindow::on_actionReload_triggered(bool /*checked*/) {
     if(archiver_->isLoaded()) {
+        if(!tempDir_.isEmpty()) { // remove the last temp dir
+            QDir(tempDir_).removeRecursively();
+        }
         archiver_->reloadArchive(nullptr);
     }
 }
@@ -774,6 +780,14 @@ void MainWindow::onActionFinished(FrAction action, ArchiverError err) {
     case FR_ACTION_CREATING_NEW_ARCHIVE:  // same as listing empty content
     case FR_ACTION_CREATING_ARCHIVE:           /* creating a local archive */
     case FR_ACTION_LISTING_CONTENT:            /* listing the content of the archive */
+        if(err.hasError()) {
+            // there has been a trouble with archive creation or listing; clear the tree
+            if(auto model = qobject_cast<QStandardItemModel*>(ui_->dirTreeView->model())) {
+                model->clear();
+            }
+            QMessageBox::critical(this, tr("Error"), err.message());
+            return;
+        }
         //qDebug("content listed");
         // content dir list of the archive is fully loaded
         updateDirTree();
@@ -783,7 +797,9 @@ void MainWindow::onActionFinished(FrAction action, ArchiverError err) {
         if(!currentDirItem_) {
             currentDirItem_ = archiver_->dirTreeRoot();
         }
-        chdir(currentDirItem_);
+        if(currentDirItem_) {
+            chdir(currentDirItem_);
+        }
 
         break;
     case FR_ACTION_DELETING_FILES:             /* deleting files from the archive */
@@ -1092,11 +1108,13 @@ void MainWindow::updateDirTree() {
     auto archivePath = archiver_->currentArchivePath();
     auto contentType = archiver_->currentArchiveContentType();
     auto rootItem = model->item(0, 0);
-    rootItem->setText(QString::fromUtf8(archivePath.baseName().get()));
-    if(contentType) {
-        auto mimeType = Fm::MimeType::fromName(contentType);
-        if(mimeType && mimeType->icon()) {
-            rootItem->setIcon(mimeType->icon()->qicon());
+    if(rootItem) {
+        rootItem->setText(QString::fromUtf8(archivePath.baseName().get()));
+        if(contentType) {
+            auto mimeType = Fm::MimeType::fromName(contentType);
+            if(mimeType && mimeType->icon()) {
+                rootItem->setIcon(mimeType->icon()->qicon());
+            }
         }
     }
     connect(ui_->dirTreeView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &MainWindow::onDirTreeSelectionChanged);
