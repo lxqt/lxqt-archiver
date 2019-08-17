@@ -1753,7 +1753,7 @@ g_print("src_dir: %s, dst: %s\n", base_dir, dest_dir);
 		fr_process_add_arg (archive->process, tmp_archive_filename);
 		fr_process_add_arg (archive->process, archive_filename);
 		fr_process_end_command (archive->process);
-return;
+
 		/* remove the temp sub-directory */
 
 		fr_process_begin_command (archive->process, "rm");
