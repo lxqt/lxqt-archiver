@@ -71,10 +71,12 @@ process_metadata_line (char      *line,
         fdata->original_path = fdata->full_path + 1;
 
         g_strfreev (fields);
-        g_free (name);
 
         fdata->name = g_strdup (name);
         fdata->path = g_strdup ("DEBIAN");
+  
+        g_free (name);
+  
         fr_command_add_file (comm, fdata);
 }
 
