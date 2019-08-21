@@ -944,7 +944,9 @@ get_temp_work_dir (const char *parent_folder)
 		g_free (template);
 		result = NULL;
 	}
-
+	
+	g_free(best_folder);
+	
 	return result;
 }
 
