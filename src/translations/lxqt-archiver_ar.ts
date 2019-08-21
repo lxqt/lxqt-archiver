@@ -16,7 +16,7 @@
     <message>
         <location filename="../about.ui" line="47"/>
         <source>A simple and desktop-agnostic Qt file archiver</source>
-        <translation></translation>
+        <translation>مؤرشف ملفات بسيط لا يأبه لسطح المكتب لديك مبنيّ على كيوت</translation>
     </message>
     <message>
         <location filename="../about.ui" line="57"/>
@@ -155,7 +155,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../createfiledialog.cpp" line="13"/>
         <source>All files (*)</source>
-        <translation></translation>
+        <translation>كل الملفات (*)</translation>
     </message>
 </context>
 <context>
@@ -201,7 +201,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extractfiledialog.cpp" line="12"/>
         <source>All files (*)</source>
-        <translation></translation>
+        <translation>كل الملفات (*)</translation>
     </message>
 </context>
 <context>
