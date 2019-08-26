@@ -16,7 +16,7 @@
     <message>
         <location filename="../about.ui" line="47"/>
         <source>A simple and desktop-agnostic Qt file archiver</source>
-        <translation>一個簡單且不限桌面環境的 Qt 檔案壓縮程式</translation>
+        <translation>簡潔且不限桌面環境的 Qt 檔案壓縮程式</translation>
     </message>
     <message>
         <location filename="../about.ui" line="57"/>
@@ -617,7 +617,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="8"/>
         <source>Ace (.ace)</source>
-        <translation>Ace (.ace)</translation>
+        <translation>Ace (.ace) 檔案</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="9"/>
@@ -632,7 +632,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="11"/>
         <source>Arj (.arj)</source>
-        <translation>Arj (.arj)</translation>
+        <translation>Arj (.arj) 檔案</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="12"/>
@@ -647,7 +647,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="14"/>
         <source>Cabinet (.cab)</source>
-        <translation>Cabinet (.cab)</translation>
+        <translation>Cabinet (.cab) 檔案</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="15"/>
@@ -667,7 +667,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="18"/>
         <source>Ear (.ear)</source>
-        <translation>Ear (.ear)</translation>
+        <translation>Ear (.ear) 檔案</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="19"/>
@@ -677,17 +677,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="20"/>
         <source>Jar (.jar)</source>
-        <translation>Jar (.jar)</translation>
+        <translation>Jar (.jar) 檔案</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="21"/>
         <source>Lha (.lzh)</source>
-        <translation>Lha (.lzh)</translation>
+        <translation>Lha (.lzh) 檔案</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="22"/>
         <source>Lrzip (.lrz)</source>
-        <translation>Lrzip (.lrz)</translation>
+        <translation>Lrzip (.lrz) 檔案</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="23"/>
@@ -717,7 +717,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="28"/>
         <source>Rar (.rar)</source>
-        <translation>Rar (.rar)</translation>
+        <translation>Rar (.rar) 檔案</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="29"/>
@@ -799,12 +799,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="53"/>
         <source>File not found.</source>
-        <translation>找不到檔案</translation>
+        <translation>找不到檔案。</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="54"/>
         <source>Archive type not supported.</source>
-        <translation>檔案格式不支援</translation>
+        <translation>壓縮檔案格式不支援。</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="55"/>
@@ -814,7 +814,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="56"/>
         <source>You don&apos;t have the right permissions.</source>
-        <translation>你沒有正確的權限</translation>
+        <translation>沒有正確權限。</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="57"/>
@@ -824,7 +824,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="58"/>
         <source>You can&apos;t add an archive to itself.</source>
-        <translation>你不能把壓縮檔加入到它自己</translation>
+        <translation>不能把壓縮檔加入到它自己。</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="64"/>
