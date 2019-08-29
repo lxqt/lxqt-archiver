@@ -535,17 +535,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="709"/>
         <source>File Size</source>
-        <translation>ファイルのサイズ</translation>
+        <translation>サイズ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="710"/>
         <source>Modified</source>
-        <translation>変更済</translation>
+        <translation>更新</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="711"/>
         <source>Encrypted</source>
-        <translation>暗号化済</translation>
+        <translation>暗号化</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="741"/>
