@@ -242,7 +242,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="112"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Upravit</translation>
+        <translation>&amp;Úpravy</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="131"/>
@@ -332,7 +332,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="270"/>
         <source>&amp;Copy</source>
-        <translation>&amp;Zkopírovat</translation>
+        <translation>&amp;Kopírovat</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="273"/>
