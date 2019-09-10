@@ -495,7 +495,7 @@ almış olmalısınız; Yoksa, Özgür Yazılım Vakfı Şirketi&apos;ne yazın.
     <message>
         <location filename="../mainwindow.cpp" line="587"/>
         <source>Success</source>
-        <translation>Başasılı</translation>
+        <translation>Başarılı</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="587"/>
