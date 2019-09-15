@@ -67,7 +67,7 @@ MainWindow::MainWindow(QWidget* parent):
     ui_->splitter->setStretchFactor(0, 0);
     ui_->splitter->setStretchFactor(1, 1);
 
-    QSettings settings(QSettings::UserScope, QStringLiteral("lxqt"), QStringLiteral("arciver"));
+    QSettings settings(QSettings::UserScope, QStringLiteral("lxqt"), QStringLiteral("archiver"));
     // window size
     settings.beginGroup (QStringLiteral("Sizes"));
     QSize winSize = settings.value(QStringLiteral("WindowSize"), QSize(700, 500)).toSize();
@@ -155,7 +155,7 @@ MainWindow::MainWindow(QWidget* parent):
 }
 
 MainWindow::~MainWindow() {
-    QSettings settings(QSettings::UserScope, QStringLiteral("lxqt"), QStringLiteral("arciver"));
+    QSettings settings(QSettings::UserScope, QStringLiteral("lxqt"), QStringLiteral("archiver"));
     settings.beginGroup (QStringLiteral("Sizes"));
     QSize windowSize = size();
     if(settings.value(QStringLiteral("WindowSize")).toSize() != windowSize) {
