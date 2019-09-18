@@ -11,10 +11,12 @@ public:
 
 Q_SIGNALS:
     void dragStarted();
+    void enterPressed();
 
 protected:
     virtual void mousePressEvent(QMouseEvent* event) override;
     virtual void mouseMoveEvent(QMouseEvent* event) override;
+    virtual void keyPressEvent(QKeyEvent* event) override;
 
 private:
     QPoint dragStartPosition_;

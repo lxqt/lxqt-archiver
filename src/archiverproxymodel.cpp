@@ -33,6 +33,31 @@ bool ArchiverProxyModel::lessThan(const QModelIndex &source_left, const QModelIn
     return QSortFilterProxyModel::lessThan(source_left, source_right);
 }
 
+bool ArchiverProxyModel::filterAcceptsRow(int source_row, const QModelIndex& source_parent) const {
+    if(filterStr_.isEmpty()) {
+        return true;
+    }
+    if(auto model = sourceModel()) {
+        auto indx = model->index(source_row, 0, source_parent);
+        if(indx.isValid()) {
+            auto firstCol = indx.sibling(source_row, 0);
+            if(const ArchiverItem* item = firstCol.data(MainWindow::ArchiverItemRole).value<const ArchiverItem*>()) {
+                if(QString::fromUtf8(item->name()).contains(filterStr_, Qt::CaseInsensitive)) {
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
+}
+
+void ArchiverProxyModel::setFilterStr(QString str) {
+    if(filterStr_ != str) {
+        filterStr_ = str;
+        invalidate();
+    }
+}
+
 bool ArchiverProxyModel::folderFirst() const {
     return folderFirst_;
 }
