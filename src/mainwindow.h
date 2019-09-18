@@ -94,6 +94,8 @@ private Q_SLOTS:
 
     void on_actionAbout_triggered(bool checked);
 
+    void on_actionFilter_triggered(bool checked);
+
     void onDirTreeSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
 
     void onFileListSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
@@ -103,6 +105,10 @@ private Q_SLOTS:
     void onFileListDoubleClicked(const QModelIndex &index);
 
     void onFileListActivated(const QModelIndex &index);
+
+    void onFileListEnterPressed();
+
+    void filter(const QString& text);
 
 private Q_SLOTS:
     // Archiver slots

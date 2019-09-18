@@ -62,10 +62,23 @@
         <number>0</number>
        </attribute>
       </widget>
-      <widget class="FileTreeView" name="fileListView">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
+      <widget class="QWidget" name="verticalLayoutWidget">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="FileTreeView" name="fileListView">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="filterLineEdit">
+          <property name="placeholderText">
+           <string>Filter Files...</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
@@ -128,6 +141,8 @@
     <addaction name="separator"/>
     <addaction name="actionStop"/>
     <addaction name="actionReload"/>
+    <addaction name="separator"/>
+    <addaction name="actionFilter"/>
    </widget>
    <widget class="QMenu" name="menu_Help">
     <property name="title">
@@ -413,6 +428,14 @@
   <action name="actionView">
    <property name="text">
     <string>&amp;View Selected Items</string>
+   </property>
+  </action>
+  <action name="actionFilter">
+   <property name="text">
+    <string>&amp;Filter</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
    </property>
   </action>
  </widget>

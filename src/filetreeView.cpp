@@ -42,3 +42,16 @@ void FileTreeView::mouseMoveEvent(QMouseEvent* event) {
         event->accept();
     }
 }
+
+void FileTreeView::keyPressEvent(QKeyEvent* event) {
+    if (event->key() == Qt::Key_Return || event->key() == Qt::Key_Enter) {
+        if(currentIndex().isValid()) {
+            // instead of AbstractItemView::activated(), emit our signal,
+            // which works with Enter and Return alike
+            Q_EMIT enterPressed();
+            event->accept();
+            return;
+        }
+    }
+    QTreeView::keyPressEvent(event);
+}

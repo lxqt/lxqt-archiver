@@ -122,12 +122,20 @@ MainWindow::MainWindow(QWidget* parent):
     ui_->fileListView->setModel(proxyModel_);
     connect(ui_->fileListView, &FileTreeView::dragStarted, this, &MainWindow::onDragStarted);
     connect(ui_->fileListView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &MainWindow::onFileListSelectionChanged);
+    // NOTE: QAbstractItemView::activated() is only for single/double clicking a directory.
+    // FileTreeView does not emit it with Enter or Return because it may not cover both of them.
+    // Instead, FileTreeView::enterPressed() is emitted on pressing Enter and Return alike.
     connect(ui_->fileListView, &QAbstractItemView::activated, this, &MainWindow::onFileListActivated);
+    connect(ui_->fileListView, &FileTreeView::enterPressed, this, &MainWindow::onFileListEnterPressed);
 
     // show context menu
     ui_->fileListView->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(ui_->fileListView, &QAbstractItemView::customContextMenuRequested, this, &MainWindow::onFileListContextMenu);
     connect(ui_->fileListView, &QAbstractItemView::doubleClicked, this, &MainWindow::onFileListDoubleClicked);
+
+    // filtering
+    ui_->filterLineEdit->setVisible(false);
+    connect(ui_->filterLineEdit, &QLineEdit::textChanged, this, &MainWindow::filter);
 
     connect(archiver_.get(), &Archiver::invalidateContent, this, &MainWindow::onInvalidateContent);
     connect(archiver_.get(), &Archiver::start, this, &MainWindow::onActionStarted);
@@ -195,6 +203,10 @@ void MainWindow::loadFile(const Fm::FilePath &file) {
     if(file.hasParent()) {
         lasrDir_ = QUrl::fromEncoded(QByteArray(file.parent().uri().get()));
     }
+
+    // first remove filtering
+    ui_->filterLineEdit->clear();
+    ui_->filterLineEdit->setVisible(false);
 
     archiver_->openArchive(file.uri().get(), nullptr);
 }
@@ -691,12 +703,38 @@ void MainWindow::onFileListDoubleClicked(const QModelIndex & /*index*/) {
 }
 
 void MainWindow::onFileListActivated(const QModelIndex &index) {
+    // This is only for clicking directories because QAbstractItemView::activated() may not
+    // cover Enter and Return alike. But onFileListEnterPressed() works with both of them.
     if(QApplication::keyboardModifiers() == Qt::NoModifier) {
         auto item = itemFromIndex(index);
         if(item && item->isDir()) {
             chdir(item);
         }
     }
+}
+
+void MainWindow::onFileListEnterPressed() {
+    if(auto selModel = ui_->fileListView->selectionModel()){
+        const QModelIndexList indexes = selModel->selectedRows();
+        if(indexes.size() == 1) {
+            // change directory if a single directory item is selected
+            auto item = itemFromIndex(indexes.at(0));
+            if(item && item->isDir()) {
+                chdir(item);
+                return;
+            }
+        }
+        else if (indexes.isEmpty()) {
+            // select the current row if there is no selection
+            auto indx = selModel->currentIndex();
+            if(indx.isValid()) {
+                selModel->select(indx, QItemSelectionModel::Select | QItemSelectionModel::Rows);
+                return;
+            }
+        }
+    }
+    // otherwise, view the selected files
+    viewSelectedFiles();
 }
 
 void MainWindow::onInvalidateContent() {
@@ -967,10 +1005,13 @@ void MainWindow::showFileList(const std::vector<const ArchiverItem *> &files) {
 
     //ui_->fileListView->header()->setSectionResizeMode(0, QHeaderView::Stretch);
     QTimer::singleShot(0, this, [this] {
+        // remove filtering and reapply it after resizing columns to avoid ellipses
+        filter(QString());
         const int n = ui_->fileListView->header()->count();
         for(int i = 0; i < n; ++i) {
             ui_->fileListView->resizeColumnToContents(i);
         }
+        filter(ui_->filterLineEdit->text());
     });
 }
 
@@ -1006,6 +1047,8 @@ void MainWindow::updateUiStates() {
     bool canEdit = hasArchive && !inProgress;
     currentPathEdit_->setEnabled(canEdit);
     ui_->fileListView->setEnabled(canEdit);
+    ui_->actionFilter->setEnabled(canEdit);
+    ui_->filterLineEdit->setEnabled(canEdit);
     ui_->dirTreeView->setEnabled(canEdit);
     // FIXME support this later
     // ui_->actionSaveAs->setEnabled(canEdit);
@@ -1157,6 +1200,10 @@ void MainWindow::chdir(std::string dirPath) {
 }
 
 void MainWindow::chdir(const ArchiverItem *dir) {
+    // first remove filtering
+    ui_->filterLineEdit->clear();
+    ui_->filterLineEdit->setVisible(false);
+
     currentDirPath_ = dir->fullPath();
     currentPathEdit_->setText(QString::fromUtf8(dir->fullPath()));
     currentDirItem_ = dir;
@@ -1198,6 +1245,24 @@ void MainWindow::setViewMode(MainWindow::ViewMode viewMode) {
             showFlatFileList();
             break;
         }
+    }
+}
+
+void MainWindow::filter(const QString& text) {
+    if(proxyModel_) {
+        proxyModel_->setFilterStr(text);
+    }
+}
+
+void MainWindow::on_actionFilter_triggered(bool /*checked*/) {
+    ui_->filterLineEdit->clear();
+    if(!ui_->filterLineEdit->isVisible()) {
+        ui_->filterLineEdit->setVisible(true);
+        ui_->filterLineEdit->setFocus();
+    }
+    else {
+        ui_->fileListView->setFocus();
+        ui_->filterLineEdit->setVisible(false);
     }
 }
 
