@@ -938,7 +938,7 @@ QList<QStandardItem *> MainWindow::createFileListRow(const ArchiverItem *file) {
     }
 
     // mtime
-    auto mtime = QDateTime::fromMSecsSinceEpoch(file->modifiedTime() * 1000);
+    auto mtime = QDateTime::fromMSecsSinceEpoch((long long)file->modifiedTime() * 1000);
 
     // FIXME: filename might not be UTF-8
     QString name = viewMode_ == ViewMode::FlatList ? QString::fromUtf8(file->fullPath()) : QString::fromUtf8(file->name());
