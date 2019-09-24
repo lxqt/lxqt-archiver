@@ -38,8 +38,8 @@ const char *ArchiverItem::fullPath() const {
 }
 
 
-time_t ArchiverItem::modifiedTime() const {
-    return data_ ? data_->modified : 0;
+qint64 ArchiverItem::modifiedTime() const {
+    return data_ ? static_cast<quint64>(data_->modified) : 0LL; // data_->modified is time_t
 }
 
 size_t ArchiverItem::size() const {

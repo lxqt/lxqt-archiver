@@ -25,7 +25,7 @@ public:
 
     const char* fullPath() const;
 
-    time_t modifiedTime() const;
+    qint64 modifiedTime() const;
 
     size_t size() const;
 
