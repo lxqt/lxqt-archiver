@@ -237,7 +237,7 @@ almış olmalısınız; Yoksa, Özgür Yazılım Vakfı Şirketi&apos;ne yazın.
     <message>
         <location filename="../mainwindow.ui" line="77"/>
         <source>Filter Files...</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosyaları Süz...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="98"/>
@@ -262,7 +262,7 @@ almış olmalısınız; Yoksa, Özgür Yazılım Vakfı Şirketi&apos;ne yazın.
     <message>
         <location filename="../mainwindow.ui" line="160"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Ana Araç Çubuğu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="185"/>
@@ -463,12 +463,12 @@ almış olmalısınız; Yoksa, Özgür Yazılım Vakfı Şirketi&apos;ne yazın.
     <message>
         <location filename="../mainwindow.ui" line="430"/>
         <source>&amp;View Selected Items</source>
-        <translation type="unfinished"></translation>
+        <translation>Seçilen Ögeleri &amp;Göster</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="435"/>
         <source>&amp;Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Süz</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="288"/>
