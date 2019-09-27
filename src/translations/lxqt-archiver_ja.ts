@@ -463,7 +463,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="430"/>
         <source>&amp;View Selected Items</source>
-        <translation>選択したアイテムを表示</translation>
+        <translation>選択したアイテムの表示</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="435"/>
