@@ -121,7 +121,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="31"/>
         <source>The command exited abnormally.</source>
-        <translation>Příkaz neskončil normálně.</translation>
+        <translation>Příkaz neskončil tak, jak měl.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="34"/>
@@ -237,7 +237,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="77"/>
         <source>Filter Files...</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtrovat soubory…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="98"/>
@@ -262,7 +262,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="160"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Hlavní lišta nástrojů</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="185"/>
@@ -463,12 +463,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="430"/>
         <source>&amp;View Selected Items</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zobrazit označené položky</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="435"/>
         <source>&amp;Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Filtrovat</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="288"/>
@@ -506,7 +506,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="848"/>
         <source>Success</source>
-        <translation>Úspěch</translation>
+        <translation>Úspěšné</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="848"/>
