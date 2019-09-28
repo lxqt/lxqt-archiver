@@ -121,7 +121,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../archivererror.cpp" line="31"/>
         <source>The command exited abnormally.</source>
-        <translation>Kommandoen sluttet unormalt.</translation>
+        <translation>Kommandoen avsluttet unormalt.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="34"/>
@@ -159,7 +159,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../create.ui" line="36"/>
         <source>Split into volumes of</source>
-        <translation>Del inn i volumer av</translation>
+        <translation>Del inn i volumer på</translation>
     </message>
     <message>
         <location filename="../create.ui" line="43"/>
@@ -237,7 +237,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../mainwindow.ui" line="77"/>
         <source>Filter Files...</source>
-        <translation type="unfinished"></translation>
+        <translation>Filrer filer...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="98"/>
@@ -262,7 +262,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../mainwindow.ui" line="160"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Hovedverktøylinje</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="185"/>
@@ -372,7 +372,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../mainwindow.ui" line="306"/>
         <source>Del</source>
-        <translation>Slett</translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="311"/>
@@ -403,7 +403,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../mainwindow.ui" line="343"/>
         <source>Add F&amp;older</source>
-        <translation>Legg&amp; til mappe</translation>
+        <translation>Legg &amp;til mappe</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="348"/>
@@ -433,7 +433,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../mainwindow.ui" line="400"/>
         <source>Show &amp;All Files</source>
-        <translation>Vis a&amp;lle filer</translation>
+        <translation>Vis &amp;alle filer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="409"/>
@@ -448,7 +448,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../mainwindow.ui" line="417"/>
         <source>&amp;Reload</source>
-        <translation>&amp;Last på nytt</translation>
+        <translation>&amp;Last inn på nytt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="420"/>
@@ -458,17 +458,17 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../mainwindow.ui" line="425"/>
         <source>Filename &amp;Encoding</source>
-        <translation>Filnavns t&amp;egnsett</translation>
+        <translation>Filnavnets t&amp;egnsett</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="430"/>
         <source>&amp;View Selected Items</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vis valgte elementer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="435"/>
         <source>&amp;Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Filtrer</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="288"/>
@@ -481,7 +481,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
         <location filename="../mainwindow.cpp" line="322"/>
         <location filename="../mainwindow.cpp" line="355"/>
         <source>Add only if &amp;newer</source>
-        <translation>Legg til bar&amp;e hvis nyere</translation>
+        <translation>Legg til bare hvis &amp;nyere</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="380"/>
@@ -600,7 +600,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../progressdialog.ui" line="14"/>
         <source>Progress</source>
-        <translation>Tilbakelagt</translation>
+        <translation>Framdrift</translation>
     </message>
     <message>
         <location filename="../progressdialog.cpp" line="16"/>
@@ -836,7 +836,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../corestrs.h" line="58"/>
         <source>You can&apos;t add an archive to itself.</source>
-        <translation>Du kan ikke legget arkiv til seg selv.</translation>
+        <translation>Du kan ikke legge arkiv til seg selv.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="64"/>
