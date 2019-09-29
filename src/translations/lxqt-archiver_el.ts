@@ -239,7 +239,7 @@ USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="77"/>
         <source>Filter Files...</source>
-        <translation type="unfinished"></translation>
+        <translation>Φιλτράρισμα αρχείων...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="98"/>
@@ -264,7 +264,7 @@ USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="160"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Κύρια εργαλειοθήκη</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="185"/>
@@ -465,12 +465,12 @@ USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="430"/>
         <source>&amp;View Selected Items</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Προβολή των επιλεγμένων αντικειμένων</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="435"/>
         <source>&amp;Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Φίλτρο</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="288"/>
