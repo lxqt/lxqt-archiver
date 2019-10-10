@@ -248,7 +248,7 @@ MA 02110-1301, EUA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="113"/>
         <source>&amp;Edit</source>
-        <translation>E&amp;ditar</translation>
+        <translation>&amp;Editar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="132"/>
@@ -258,17 +258,17 @@ MA 02110-1301, EUA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="149"/>
         <source>&amp;Help</source>
-        <translation>Aj&amp;uda</translation>
+        <translation>&amp;Ajuda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="160"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra de ferramentas</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="185"/>
         <source>&amp;About</source>
-        <translation>S&amp;obre</translation>
+        <translation>&amp;Sobre</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="194"/>
@@ -293,7 +293,7 @@ MA 02110-1301, EUA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
         <source>Save &amp;As</source>
-        <translation>S&amp;alvar como</translation>
+        <translation>Salvar &amp;como</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="226"/>
@@ -318,7 +318,7 @@ MA 02110-1301, EUA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="251"/>
         <source>&amp;Close</source>
-        <translation>Fe&amp;char</translation>
+        <translation>&amp;Fechar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="254"/>
@@ -368,7 +368,7 @@ MA 02110-1301, EUA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="303"/>
         <source>&amp;Delete</source>
-        <translation>Exc&amp;luir</translation>
+        <translation>&amp;Excluir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="306"/>
