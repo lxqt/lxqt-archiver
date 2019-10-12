@@ -16,16 +16,25 @@ bool ArchiverProxyModel::lessThan(const QModelIndex &source_left, const QModelIn
     if(leftFirstCol.isValid() && rightFirstCol.isValid()) {
         auto leftItem = leftFirstCol.data(MainWindow::ArchiverItemRole).value<const ArchiverItem*>();
         auto rightItem = rightFirstCol.data(MainWindow::ArchiverItemRole).value<const ArchiverItem*>();
-        // qDebug("left: %s, right: %s", leftItem->name(), rightItem->name());
         if(leftItem) {
             if(leftItem->isDir()) {
-                if(folderFirst_ && rightItem && !rightItem->isDir()) {
+                if(folderFirst_ && !(rightItem && rightItem->isDir())) {
                     // put folder before non-folder items
                     return (sortOrder() == Qt::AscendingOrder);
                 }
                 else if(leftFirstCol.data().toString() == QStringLiteral("..")) {
                     // the item ".." should always be the first
                     return (sortOrder() == Qt::AscendingOrder);
+                }
+            }
+        }
+        if(rightItem) {
+            if(rightItem->isDir()) {
+                if(folderFirst_ && !(leftItem && leftItem->isDir())) {
+                    return (sortOrder() != Qt::AscendingOrder);
+                }
+                else if(rightFirstCol.data().toString() == QStringLiteral("..")) {
+                    return (sortOrder() != Qt::AscendingOrder);
                 }
             }
         }
