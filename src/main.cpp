@@ -47,6 +47,7 @@
 #include <QTranslator>
 #include <QLocale>
 #include <QLibraryInfo>
+#include <QMimeDatabase>
 
 #include <string>
 #include <unordered_map>
@@ -184,12 +185,28 @@ static int runApp(QApplication& app) {
             if(default_url) {
                 dlg.setDirectory(QUrl::fromEncoded(default_url));
             }
-            else { // set the directory to the parent of the first file
+            else {
+                // set the directory to the parent of the first file
+                // and make the archive name out of its name
                 const char* firstFile = remaining_args[0];
                 if(firstFile != nullptr) {
                     auto path = Fm::FilePath::fromPathStr(firstFile);
                     if(path.hasParent()) {
-                        dlg.setDirectory(QUrl::fromEncoded(QByteArray(path.parent().uri().get())));
+                        auto target = path.parent();
+                        auto name = QString::fromUtf8(path.baseName().get());
+                        const auto mimeTypes = Archiver::supportedCreateMimeTypes();
+                        if(!mimeTypes.isEmpty()) {
+                            QMimeDatabase mimeDb;
+                            auto mimeType = mimeDb.mimeTypeForName(mimeTypes.at(0));
+                            if(mimeType.isValid()) {
+                                auto suffixes = mimeType.suffixes();
+                                if(!suffixes.isEmpty()) {
+                                    name += QStringLiteral(".") + suffixes.at(0);
+                                    target = target.child(name.toLocal8Bit().constData());
+                                    dlg.selectFile(QUrl::fromEncoded(QByteArray(target.uri().get())));
+                                }
+                            }
+                        }
                     }
                 }
             }
