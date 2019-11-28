@@ -238,7 +238,7 @@ MA 02110-1301, EUA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="77"/>
         <source>Filter Files...</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtrar Arquivos...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="98"/>
@@ -464,12 +464,12 @@ MA 02110-1301, EUA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="430"/>
         <source>&amp;View Selected Items</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Visualizar Itens Selecionados</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="435"/>
         <source>&amp;Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Filtro</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="288"/>
