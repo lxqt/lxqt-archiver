@@ -232,198 +232,198 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../mainwindow.ui" line="14"/>
         <location filename="../mainwindow.cpp" line="257"/>
         <source>File Archiver</source>
-        <translation type="unfinished"></translation>
+        <translation>Lưu trữ tập tin</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="77"/>
         <source>Filter Files...</source>
-        <translation type="unfinished"></translation>
+        <translation>Lọc tập tin...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="98"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tệp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="113"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Chỉnh sửa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="132"/>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hiển thị</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="149"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Trợ giúp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="160"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Thanh công cụ chính</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="185"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Thông tin</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="194"/>
         <source>&amp;New</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mới</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="197"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
         <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mở</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
         <source>Ctrl+O</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
         <source>Save &amp;As</source>
-        <translation type="unfinished"></translation>
+        <translation>Lưu &amp;dưới dạng</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="226"/>
         <source>&amp;Extract</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Giải nén</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="231"/>
         <source>&amp;Test</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kiểm tra</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="239"/>
         <source>&amp;Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Thuộc tính</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="242"/>
         <source>Alt+Return</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Return</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="251"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đóng</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="254"/>
         <source>Ctrl+Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Q</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="262"/>
         <source>Cu&amp;t</source>
-        <translation type="unfinished"></translation>
+        <translation>Cắ&amp;t</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="265"/>
         <source>Ctrl+X</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+X</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="273"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sao chép</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="276"/>
         <source>Ctrl+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+C</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="284"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Dán</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="287"/>
         <source>Ctrl+V</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+V</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="295"/>
         <source>&amp;Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Đổi tên</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="298"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="303"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Xóa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="306"/>
         <source>Del</source>
-        <translation type="unfinished"></translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="311"/>
         <source>&amp;Select All</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Chọn tất cả</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="314"/>
         <source>Ctrl+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="322"/>
         <source>&amp;Find</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tìm kiếm</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="325"/>
         <location filename="../mainwindow.ui" line="438"/>
         <source>Ctrl+F</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+F</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="334"/>
         <source>&amp;Add Files</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Thêm tập tin</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="343"/>
         <source>Add F&amp;older</source>
-        <translation type="unfinished"></translation>
+        <translation>Thêm thư &amp;mục</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="348"/>
         <source>Pass&amp;word</source>
-        <translation type="unfinished"></translation>
+        <translation>Mật &amp;khẩu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="359"/>
         <source>&amp;Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Thanh công cụ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="370"/>
         <source>&amp;Statusbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Thanh trạng thái</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="381"/>
         <source>&amp;Directory Tree</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Cây thư mục</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="392"/>
