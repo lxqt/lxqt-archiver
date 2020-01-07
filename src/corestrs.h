@@ -31,6 +31,7 @@ QObject::tr("Tar compressed with compress (.tar.Z)");
 QObject::tr("War (.war)");
 QObject::tr("Xz (.xz)");
 QObject::tr("Tar compressed with xz (.tar.xz)");
+QObject::tr("Tar compressed with zstd (.tar.zst)");
 QObject::tr("Zoo (.zoo)");
 QObject::tr("Zip (.zip)");
 

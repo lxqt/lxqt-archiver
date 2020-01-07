@@ -273,6 +273,14 @@ fr_command_cfile_add (FrCommand     *comm,
 		fr_process_end_command (comm->process);
 		compressed_filename = g_strconcat (filename, ".xz", NULL);
 	}
+	else if (is_mime_type (comm->mime_type, "application/x-zstd")) {
+		fr_process_begin_command (comm->process, "zstd");
+		fr_process_set_working_dir (comm->process, temp_dir);
+		fr_process_add_arg (comm->process, "--");
+		fr_process_add_arg (comm->process, filename);
+		fr_process_end_command (comm->process);
+		compressed_filename = g_strconcat (filename, ".zst", NULL);
+	}
 	else if (is_mime_type (comm->mime_type, "application/x-lzop")) {
 		fr_process_begin_command (comm->process, "lzop");
 		fr_process_set_working_dir (comm->process, temp_dir);
@@ -404,6 +412,13 @@ fr_command_cfile_extract (FrCommand  *comm,
 		fr_process_add_arg (comm->process, temp_file);
 		fr_process_end_command (comm->process);
 	}
+	else if (is_mime_type (comm->mime_type, "application/x-zstd")) {
+		fr_process_begin_command (comm->process, "zstd");
+		fr_process_add_arg (comm->process, "-f");
+		fr_process_add_arg (comm->process, "-d");
+		fr_process_add_arg (comm->process, temp_file);
+		fr_process_end_command (comm->process);
+	}
 	else if (is_mime_type (comm->mime_type, "application/x-lzop")) {
 		fr_process_begin_command (comm->process, "lzop");
 		fr_process_set_working_dir (comm->process, temp_dir);
@@ -463,6 +478,7 @@ const char *cfile_mime_type[] = { "application/gzip",
 				  "application/x-lzop",
 				  "application/x-rzip",
 				  "application/x-xz",
+				  "application/x-zstd",
 				  NULL };
 
 
@@ -507,6 +523,10 @@ fr_command_cfile_get_capabilities (FrCommand  *comm,
 		if (is_program_available ("xz", check_command))
 			capabilities |= FR_COMMAND_CAN_READ_WRITE;
 	}
+	else if (is_mime_type (mime_type, "application/x-zstd")) {
+		if (is_program_available ("zstd", check_command))
+			capabilities |= FR_COMMAND_CAN_READ_WRITE;
+	}
 	else if (is_mime_type (mime_type, "application/x-lzop")) {
 		if (is_program_available ("lzop", check_command))
 			capabilities |= FR_COMMAND_CAN_READ_WRITE;
@@ -548,6 +568,8 @@ fr_command_cfile_get_packages (FrCommand  *comm,
 		return PACKAGES ("lzma");
 	else if (is_mime_type (mime_type, "application/x-xz"))
 		return PACKAGES ("xz");
+	else if (is_mime_type (mime_type, "application/x-zstd"))
+		return PACKAGES ("zstd");
 	else if (is_mime_type (mime_type, "application/x-lzop"))
 		return PACKAGES ("lzop");
 	else if (is_mime_type (mime_type, "application/x-rzip"))

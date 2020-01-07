@@ -559,6 +559,7 @@ get_mime_type_from_magic_numbers (GFile *file)
 		{ 0,  4, "Rar!",                                 "application/x-rar"           },
 		{ 0,  4, "RZIP",                                 "application/x-rzip"          },
 		{ 0,  6, "\3757zXZ\000",                         "application/x-xz"            },
+		{ 0,  4, "\x28\xB5\x2F\xFD",                     "application/zstd"            },
 		{ 20, 4, "\xdc\xa7\xc4\xfd",                     "application/x-zoo",          },
 		{ 0,  4, "PK\003\004",                           "application/zip"             },
 		{ 0,  8, "PK00PK\003\004",                       "application/zip"             },
