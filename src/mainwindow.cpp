@@ -102,6 +102,7 @@ MainWindow::MainWindow(QWidget* parent):
     pathBar->setPath(Fm::FilePath::fromLocalPath("/"));
     ui_->toolBar->addWidget(pathBar);
 #endif
+    ui_->toolBar->addSeparator();
     currentPathEdit_ = new QLineEdit(this);
     ui_->toolBar->addWidget(currentPathEdit_);
 
