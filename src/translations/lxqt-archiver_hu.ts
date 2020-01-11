@@ -11,17 +11,17 @@
     <message>
         <location filename="../about.ui" line="24"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiváló&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="47"/>
         <source>A simple and desktop-agnostic Qt file archiver</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Egy egyszerű és asztal-független Qt tömörítő</translation>
     </message>
     <message>
         <location filename="../about.ui" line="57"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://lxqt.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://lxqt.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://lxqt.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://lxqt.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="77"/>
@@ -37,10 +37,10 @@ LXQt Archiver is derived from the following programs:
 * Engrampa of MATE desktop
 * File Roller of Gnome desktop
 </source>
-        <translation type="unfinished">Program:
+        <translation type="unfinished">Programozás:
 * Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;
 
-LXQt Tömörítő a következő programokból származik:
+LXQt Archiválót a következő programokból származtatják:
 * Engrampa a MATE-től
 * File Roller a Gnome-tól
 </translation>
@@ -69,9 +69,10 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation>LXQt Archiver
+        <translation>LXQt Archiváló
 
 Copyright (C) 2018 az LXQt Csapat
+
 Ez egy szabad szoftver, ami a Free Software Foundation által
 megjelentetett GNU General Public Licenc 2-es, vagy későbbi
 verzióiban felsorolt feltételekkel szabadon terjeszthető, módosítható.
@@ -134,7 +135,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../archivererror.cpp" line="40"/>
         <source>Bad charset.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rossz karakterkészlet.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="43"/>
@@ -230,7 +231,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
         <location filename="../mainwindow.ui" line="14"/>
         <location filename="../mainwindow.cpp" line="257"/>
         <source>File Archiver</source>
-        <translation type="unfinished">Tömörítő</translation>
+        <translation type="unfinished">Archiváló</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="77"/>
@@ -385,7 +386,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="322"/>
         <source>&amp;Find</source>
-        <translation type="unfinished">&amp;Keresés</translation>
+        <translation>&amp;Keresés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="325"/>
@@ -396,12 +397,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="334"/>
         <source>&amp;Add Files</source>
-        <translation type="unfinished">&amp;Fájlok hozzáadása</translation>
+        <translation>&amp;Fájlok hozzáadása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="343"/>
         <source>Add F&amp;older</source>
-        <translation type="unfinished">Mappa &amp;hozzáadása</translation>
+        <translation>Mappa &amp;hozzáadása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="348"/>
@@ -411,32 +412,32 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="359"/>
         <source>&amp;Toolbar</source>
-        <translation type="unfinished">&amp;Eszköztár</translation>
+        <translation>&amp;Eszköztár</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="370"/>
         <source>&amp;Statusbar</source>
-        <translation type="unfinished">&amp;Állapotsor</translation>
+        <translation>&amp;Állapotsor</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="381"/>
         <source>&amp;Directory Tree</source>
-        <translation type="unfinished">&amp;Kö&amp;nyvtárfa</translation>
+        <translation>&amp;Kö&amp;nyvtárfa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="392"/>
         <source>S&amp;how as Folder</source>
-        <translation type="unfinished">Mutassa map&amp;paként</translation>
+        <translation>Mutassa map&amp;paként</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="400"/>
         <source>Show &amp;All Files</source>
-        <translation type="unfinished">Mutassa az öss&amp;zes fájlt</translation>
+        <translation>Mutassa az öss&amp;zes fájlt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="409"/>
         <source>St&amp;op</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Leállítá&amp;s</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="412"/>
@@ -456,17 +457,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="425"/>
         <source>Filename &amp;Encoding</source>
-        <translation type="unfinished">Fájlnév és kó&amp;dolás</translation>
+        <translation>Fájlnév és kó&amp;dolás</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="430"/>
         <source>&amp;View Selected Items</source>
-        <translation type="unfinished">&amp;Kiválasztott elemek metekintése</translation>
+        <translation>&amp;Kiválasztott elemek megtekintése</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="435"/>
         <source>&amp;Filter</source>
-        <translation type="unfinished">&amp;Szűrő</translation>
+        <translation>&amp;Szűrő</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="288"/>
@@ -484,7 +485,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.cpp" line="380"/>
         <source>Confirm</source>
-        <translation type="unfinished">Megerősítés</translation>
+        <translation>Megerősítés</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="380"/>
@@ -520,7 +521,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.cpp" line="911"/>
         <source>N/A</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">N/A</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="915"/>
@@ -603,7 +604,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../progressdialog.cpp" line="16"/>
         <source>%p %</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%p %</translation>
     </message>
 </context>
 <context>
@@ -647,7 +648,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../corestrs.h" line="12"/>
         <source>Tar compressed with bzip2 (.tar.bz2)</source>
-        <translation type="unfinished"></translation>
+        <translation>Bzip2-vel tömörített tar (.tar.bz32</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="13"/>
@@ -722,7 +723,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../corestrs.h" line="27"/>
         <source>Windows Imaging Format (.wim)</source>
-        <translation type="unfinished"></translation>
+        <translation>Windows Imaging Format (.wim)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="28"/>
@@ -783,7 +784,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../corestrs.h" line="42"/>
         <source>%d %B %Y, %H:%M</source>
-        <translation type="unfinished"></translation>
+        <translation>%d %B %Y, %H:%M</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="46"/>
