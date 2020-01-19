@@ -237,7 +237,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="77"/>
         <source>Filter Files...</source>
-        <translation type="unfinished">Фильтр файлов...</translation>
+        <translation>Отфильтровать файлы…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="98"/>
