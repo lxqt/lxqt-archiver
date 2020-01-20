@@ -237,12 +237,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="77"/>
         <source>Filter Files...</source>
-        <translation type="unfinished"></translation>
+        <translation>Saring Berkas...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="98"/>
         <source>&amp;File</source>
-        <translation>Berkas</translation>
+        <translation>&amp;Berkas</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="113"/>
