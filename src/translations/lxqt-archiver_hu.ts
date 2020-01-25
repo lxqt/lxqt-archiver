@@ -97,7 +97,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../archiver.cpp" line="267"/>
         <source>*%1 files (*%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>*%1 fájl (*%1)</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="271"/>
@@ -204,7 +204,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../extract.ui" line="65"/>
         <source>Re-create folders</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mappák ismételt létrehozása</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="72"/>
@@ -311,7 +311,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="242"/>
         <source>Alt+Return</source>
-        <translation type="unfinished">Alt+Return</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="251"/>
@@ -326,7 +326,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="262"/>
         <source>Cu&amp;t</source>
-        <translation>Kivá&amp;gás</translation>
+        <translation>&amp;Kivágás</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="265"/>
@@ -336,7 +336,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="273"/>
         <source>&amp;Copy</source>
-        <translation>&amp;Má&amp;solás</translation>
+        <translation>&amp;Másolás</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="276"/>
@@ -346,7 +346,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="284"/>
         <source>&amp;Paste</source>
-        <translation>B&amp;eillesztés</translation>
+        <translation>&amp;Beillesztés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="287"/>
@@ -648,7 +648,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../corestrs.h" line="12"/>
         <source>Tar compressed with bzip2 (.tar.bz2)</source>
-        <translation>Bzip2-vel tömörített tar (.tar.bz32</translation>
+        <translation>Bzip2-vel tömörített tar (.tar.bz2)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="13"/>
@@ -805,7 +805,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../corestrs.h" line="50"/>
         <source>Decompressing archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Archívum kitömörítése</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="53"/>
@@ -825,7 +825,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../corestrs.h" line="56"/>
         <source>You don&apos;t have the right permissions.</source>
-        <translation type="unfinished">Nincs megfelelő engedélyed.</translation>
+        <translation type="unfinished">Nincs megfelelő engedélye.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="57"/>
