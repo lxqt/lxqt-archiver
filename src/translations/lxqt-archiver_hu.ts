@@ -291,7 +291,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="217"/>
         <source>Save &amp;As</source>
-        <translation type="unfinished">Me&amp;ntés másként</translation>
+        <translation>Me&amp;ntés másként</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="226"/>
