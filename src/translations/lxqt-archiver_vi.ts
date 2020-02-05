@@ -587,7 +587,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../passworddialog.ui" line="48"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mật khẩu:</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="61"/>
