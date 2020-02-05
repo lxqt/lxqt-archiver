@@ -11,12 +11,12 @@
     <message>
         <location filename="../about.ui" line="24"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiváló&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiváló&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="47"/>
         <source>A simple and desktop-agnostic Qt file archiver</source>
-        <translation type="unfinished">Egy egyszerű és asztal-független Qt tömörítő</translation>
+        <translation>Egy egyszerű és asztal-független Qt tömörítő</translation>
     </message>
     <message>
         <location filename="../about.ui" line="57"/>
@@ -37,7 +37,7 @@ LXQt Archiver is derived from the following programs:
 * Engrampa of MATE desktop
 * File Roller of Gnome desktop
 </source>
-        <translation type="unfinished">Programozás:
+        <translation>Programozás:
 * Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;
 
 LXQt Archiválót a következő programokból származtatják:
@@ -92,7 +92,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../archiver.cpp" line="64"/>
         <source>Archive type not supported.</source>
-        <translation type="unfinished">Archívumtípus nem támogatott.</translation>
+        <translation>Archívumtípus nem támogatott.</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="267"/>
@@ -120,7 +120,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../archivererror.cpp" line="31"/>
         <source>The command exited abnormally.</source>
-        <translation type="unfinished">A parancs rendellenesen lépett ki.</translation>
+        <translation>A parancs rendellenesen lépett ki.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="34"/>
@@ -130,12 +130,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../archivererror.cpp" line="37"/>
         <source>Missing volume.</source>
-        <translation type="unfinished">Hiányzó kötet.</translation>
+        <translation>Hiányzó kötet.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="40"/>
         <source>Bad charset.</source>
-        <translation type="unfinished">Rossz karakterkészlet.</translation>
+        <translation>Rossz karakterkészlet.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="43"/>
@@ -189,32 +189,32 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../extract.ui" line="29"/>
         <source>E&amp;xtract all files</source>
-        <translation type="unfinished">Összes fá&amp;jl kibontása</translation>
+        <translation>Összes fá&amp;jl kibontása</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="36"/>
         <source>Ex&amp;tract selected files</source>
-        <translation type="unfinished">Ki&amp;választott fájl kibontása</translation>
+        <translation>Ki&amp;választott fájl kibontása</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="59"/>
         <source>Actions</source>
-        <translation type="unfinished">Mőveletek</translation>
+        <translation>Műveletek</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="65"/>
         <source>Re-create folders</source>
-        <translation type="unfinished">Mappák ismételt létrehozása</translation>
+        <translation>Mappák ismételt létrehozása</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="72"/>
         <source>Overwrite existing files</source>
-        <translation type="unfinished">Meglévő fájlok felülírása</translation>
+        <translation>Meglévő fájlok felülírása</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="79"/>
         <source>Do not extract older files</source>
-        <translation type="unfinished">Ne bontsa ki a régebbi fájlokat</translation>
+        <translation>Ne bontsa ki a régebbi fájlokat</translation>
     </message>
 </context>
 <context>
@@ -231,7 +231,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
         <location filename="../mainwindow.ui" line="14"/>
         <location filename="../mainwindow.cpp" line="257"/>
         <source>File Archiver</source>
-        <translation type="unfinished">Archiváló</translation>
+        <translation>Archiváló</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="77"/>
@@ -261,7 +261,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="160"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished">Fő eszköztár</translation>
+        <translation>Fő eszköztár</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="185"/>
@@ -296,12 +296,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="226"/>
         <source>&amp;Extract</source>
-        <translation type="unfinished">&amp;Kibontás</translation>
+        <translation>&amp;Kibontás</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="231"/>
         <source>&amp;Test</source>
-        <translation type="unfinished">&amp;Vizsgálat</translation>
+        <translation>&amp;Vizsgálat</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="239"/>
@@ -437,7 +437,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="409"/>
         <source>St&amp;op</source>
-        <translation type="unfinished">Leállítá&amp;s</translation>
+        <translation>Leállítá&amp;s</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="412"/>
@@ -480,7 +480,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
         <location filename="../mainwindow.cpp" line="322"/>
         <location filename="../mainwindow.cpp" line="355"/>
         <source>Add only if &amp;newer</source>
-        <translation type="unfinished">&amp;Csak akkor adja hozzá, ha újabb</translation>
+        <translation>&amp;Csak akkor adja hozzá, ha újabb</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="380"/>
@@ -495,22 +495,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.cpp" line="668"/>
         <source>Version: %1</source>
-        <translation type="unfinished">Verzió: %1</translation>
+        <translation>Verzió: %1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="755"/>
         <source>%p %</source>
-        <translation type="unfinished">%p %</translation>
+        <translation>%p %</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="848"/>
         <source>Success</source>
-        <translation type="unfinished">Sikeres</translation>
+        <translation>Sikeres</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="848"/>
         <source>No errors have been found.</source>
-        <translation type="unfinished">Nem található hiba.</translation>
+        <translation>Nem található hiba.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="826"/>
@@ -521,7 +521,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.cpp" line="911"/>
         <source>N/A</source>
-        <translation type="unfinished">N/A</translation>
+        <translation>N/A</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="915"/>
@@ -591,7 +591,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../passworddialog.ui" line="61"/>
         <source>&lt;i&gt;&lt;b&gt;Note:&lt;/b&gt; the password will be used to encrypt files you add to the current archive, and to decrypt files you extract from the current archive. When the archive is closed the password will be deleted.&lt;/i&gt;</source>
-        <translation type="unfinished">&lt;i&gt;&lt;b&gt; Megjegyzés: &lt;/b&gt; A jelszót az aktuális archívumhoz hozzáadott fájlok titkosításához és az aktuális archívumból kinyert fájlok visszafejtéséhez használjuk. Az archívum bezárásakor a jelszó törlődik. &lt;/i&gt;</translation>
+        <translation>&lt;i&gt;&lt;b&gt; Megjegyzés: &lt;/b&gt; A jelszót az aktuális archívumhoz hozzáadott fájlok titkosításához és az aktuális archívumból kinyert fájlok visszafejtéséhez használjuk. Az archívum bezárásakor a jelszó törlődik. &lt;/i&gt;</translation>
     </message>
 </context>
 <context>
@@ -604,7 +604,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../progressdialog.cpp" line="16"/>
         <source>%p %</source>
-        <translation type="unfinished">%p %</translation>
+        <translation>%p %</translation>
     </message>
 </context>
 <context>
@@ -618,12 +618,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../corestrs.h" line="6"/>
         <source>7-Zip (.7z)</source>
-        <translation type="unfinished">7-Zip (.7z)</translation>
+        <translation>7-Zip (.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="7"/>
         <source>Tar compressed with 7z (.tar.7z)</source>
-        <translation type="unfinished">7z-vel tömörített tar (.tar.7z)</translation>
+        <translation>7z-vel tömörített tar (.tar.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="8"/>
@@ -658,17 +658,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../corestrs.h" line="14"/>
         <source>Cabinet (.cab)</source>
-        <translation type="unfinished">Kabinet (.cab)</translation>
+        <translation>Kabinet (.cab)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="15"/>
         <source>Rar Archived Comic Book (.cbr)</source>
-        <translation type="unfinished">Rarral tömörített képregény (.cbr)</translation>
+        <translation>Rarral tömörített képregény (.cbr)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="16"/>
         <source>Zip Archived Comic Book (.cbz)</source>
-        <translation type="unfinished">Zippel tömörített képregény (.cbz)</translation>
+        <translation>Zippel tömörített képregény (.cbz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="17"/>
@@ -693,7 +693,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../corestrs.h" line="21"/>
         <source>Lha (.lzh)</source>
-        <translation type="unfinished">Lha (.lzh)</translation>
+        <translation>Lha (.lzh)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="22"/>
@@ -738,7 +738,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../corestrs.h" line="30"/>
         <source>Tar compressed with compress (.tar.Z)</source>
-        <translation type="unfinished">Compress-szel tömörített tar (.tar.Z)</translation>
+        <translation>Compress-szel tömörített tar (.tar.Z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="31"/>
@@ -753,7 +753,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../corestrs.h" line="33"/>
         <source>Tar compressed with xz (.tar.xz)</source>
-        <translation type="unfinished">Xz-vel tömörített tar (.tar.xz)</translation>
+        <translation>Xz-vel tömörített tar (.tar.xz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="34"/>
@@ -790,7 +790,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
         <location filename="../corestrs.h" line="46"/>
         <location filename="../corestrs.h" line="62"/>
         <source>Removing file: </source>
-        <translation type="unfinished">Fájl törlése: </translation>
+        <translation>Fájl törlése: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="47"/>
@@ -815,7 +815,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../corestrs.h" line="54"/>
         <source>Archive type not supported.</source>
-        <translation type="unfinished">Az archívum típusa nem támogatott.</translation>
+        <translation>Az archívum típusa nem támogatott.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="55"/>
@@ -825,12 +825,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../corestrs.h" line="56"/>
         <source>You don&apos;t have the right permissions.</source>
-        <translation type="unfinished">Nincs megfelelő engedélye.</translation>
+        <translation>Nincs megfelelő engedélye.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="57"/>
         <source>This archive type cannot be modified</source>
-        <translation type="unfinished">Ezt az archívumtípust nem lehet módosítani</translation>
+        <translation>Ezt az archívumtípust nem lehet módosítani</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="58"/>
