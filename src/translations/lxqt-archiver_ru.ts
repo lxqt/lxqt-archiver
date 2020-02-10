@@ -98,7 +98,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archiver.cpp" line="267"/>
         <source>*%1 files (*%1)</source>
-        <translation></translation>
+        <translation>*%1  (*%1)</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="271"/>
@@ -458,7 +458,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="425"/>
         <source>Filename &amp;Encoding</source>
-        <translation>&amp;Кодировка имен файлов</translation>
+        <translation>&amp;Кодировка имён файлов</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="430"/>
