@@ -158,7 +158,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../create.ui" line="36"/>
         <source>Split into volumes of</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Feldarabolás ekkora darabokra:</translation>
     </message>
     <message>
         <location filename="../create.ui" line="43"/>
@@ -168,7 +168,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../create.ui" line="50"/>
         <source>Encrypt the file list too</source>
-        <translation>A fájllistát is titkosítsa</translation>
+        <translation>Fájllista titkosítása</translation>
     </message>
 </context>
 <context>
@@ -209,7 +209,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../extract.ui" line="72"/>
         <source>Overwrite existing files</source>
-        <translation>Meglévő fájlok felülírása</translation>
+        <translation>Létező fájlok felülírása</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="79"/>
@@ -246,7 +246,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="113"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Szerkesztés</translation>
+        <translation>S&amp;zerkesztés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="132"/>
@@ -427,12 +427,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="392"/>
         <source>S&amp;how as Folder</source>
-        <translation>Mutassa map&amp;paként</translation>
+        <translation>Megjelenítés map&amp;paként</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="400"/>
         <source>Show &amp;All Files</source>
-        <translation>Mutassa az öss&amp;zes fájlt</translation>
+        <translation>Öss&amp;zes fájl megjelenítése</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="409"/>
@@ -447,7 +447,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="417"/>
         <source>&amp;Reload</source>
-        <translation>&amp;Frissítés</translation>
+        <translation>&amp;Újratöltés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="420"/>
@@ -467,7 +467,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="435"/>
         <source>&amp;Filter</source>
-        <translation>&amp;Szűrő</translation>
+        <translation>&amp;Keresés</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="288"/>
@@ -575,7 +575,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../passworddialog.ui" line="20"/>
         <source>Encrypt the file list</source>
-        <translation>Titkosítsa a fájllistát</translation>
+        <translation>Fájllista titkosítása</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="34"/>
@@ -795,7 +795,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../corestrs.h" line="47"/>
         <source>Deleting files from archive</source>
-        <translation>Fájlok törlése archívumból</translation>
+        <translation>Fájlok törlése az archívumból</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="49"/>
