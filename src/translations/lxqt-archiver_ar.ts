@@ -11,12 +11,12 @@
     <message>
         <location filename="../about.ui" line="24"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;مؤرشف لكسكيوت&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;مؤرشف لكسكيوت&lt;/span&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="47"/>
         <source>A simple and desktop-agnostic Qt file archiver</source>
-        <translation>مؤرشف ملفات بسيط لا يأبه لسطح المكتب لديك مبنيّ على كيوت</translation>
+        <translation>مؤرشف ملفات بسيط لا يأبه لسطح المكتب لديك، مبنيّ على كيوت</translation>
     </message>
     <message>
         <location filename="../about.ui" line="57"/>
@@ -37,7 +37,13 @@ LXQt Archiver is derived from the following programs:
 * Engrampa of MATE desktop
 * File Roller of Gnome desktop
 </source>
-        <translation></translation>
+        <translation>البرمجة:
+* Hong Jen Yee ‏(PCMan) ‏&lt;pcman.tw@gmail.com&gt;
+
+اشتُّق «مؤرشف لكسكيوت» من البرامج الآتية:
+* «إنغرمبا» لسطح المكتب متّة
+* «ضاغط الملفات» لسطح المكتب جنوم
+</translation>
     </message>
     <message>
         <location filename="../about.ui" line="103"/>
@@ -89,12 +95,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="25"/>
         <source>Failed to execute the command.</source>
-        <translation type="unfinished"></translation>
+        <translation>فشل تنفيذ الأمر.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
         <source>Command is not found.</source>
-        <translation>لم يُعثر على الأمر.</translation>
+        <translation>لم يوجد الأمر.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="31"/>
@@ -109,7 +115,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="37"/>
         <source>Missing volume.</source>
-        <translation></translation>
+        <translation>ثمّة قسم ناقص.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="40"/>
@@ -178,7 +184,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="59"/>
         <source>Actions</source>
-        <translation></translation>
+        <translation>إجراءات</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="65"/>
@@ -188,7 +194,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="72"/>
         <source>Overwrite existing files</source>
-        <translation>اكتب فوق الملفات الموجودة</translation>
+        <translation>عوّض الملفات الموجودة</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="79"/>
@@ -215,7 +221,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="77"/>
         <source>Filter Files...</source>
-        <translation type="unfinished"></translation>
+        <translation>رشّح الملفات…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="98"/>
@@ -225,22 +231,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="113"/>
         <source>&amp;Edit</source>
-        <translation>&amp;تحرير</translation>
+        <translation>ت&amp;حرير</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="132"/>
         <source>&amp;View</source>
-        <translation>&amp;منظور</translation>
+        <translation>من&amp;ظور</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="149"/>
         <source>&amp;Help</source>
-        <translation>&amp;مساعدة</translation>
+        <translation>م&amp;ساعدة</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="160"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>شريط الأدوات الرئيسي</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="185"/>
@@ -365,7 +371,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="322"/>
         <source>&amp;Find</source>
-        <translation></translation>
+        <translation>اب&amp;حث</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="325"/>
@@ -441,12 +447,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="430"/>
         <source>&amp;View Selected Items</source>
-        <translation type="unfinished"></translation>
+        <translation>ا&amp;عرض العناصر المحدّدة</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="435"/>
         <source>&amp;Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>ر&amp;شّح</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="288"/>
@@ -459,83 +465,83 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../mainwindow.cpp" line="322"/>
         <location filename="../mainwindow.cpp" line="355"/>
         <source>Add only if &amp;newer</source>
-        <translation></translation>
+        <translation>أضِف لو كانت أجدد فقط</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="380"/>
         <source>Confirm</source>
-        <translation></translation>
+        <translation>تأكيد</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="380"/>
         <source>Are you sure you want to delete selected files?</source>
-        <translation></translation>
+        <translation>أمتأكّد من حذف الملفات المحدّدة؟</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="668"/>
         <source>Version: %1</source>
-        <translation></translation>
+        <translation>الإصدارة: %L1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="755"/>
         <source>%p %</source>
-        <translation></translation>
+        <translation>%p ‏٪</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="848"/>
         <source>Success</source>
-        <translation></translation>
+        <translation>نجح</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="848"/>
         <source>No errors have been found.</source>
-        <translation type="unfinished"></translation>
+        <translation>لم توجد أيّ أخطاء.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="826"/>
         <location filename="../mainwindow.cpp" line="883"/>
         <source>Error</source>
-        <translation></translation>
+        <translation>خطأ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="911"/>
         <source>N/A</source>
-        <translation></translation>
+        <translation>غير مُتاحة</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="915"/>
         <source>Uncompressed Size:</source>
-        <translation></translation>
+        <translation>الحجم بلا ضغط:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="917"/>
         <source>Compression Ratio:</source>
-        <translation></translation>
+        <translation>نسبة الضغط:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="970"/>
         <source>File name</source>
-        <translation></translation>
+        <translation>اسم الملف</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="971"/>
         <source>File Type</source>
-        <translation></translation>
+        <translation>نوع الملف</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="972"/>
         <source>File Size</source>
-        <translation></translation>
+        <translation>حجم الملف</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="973"/>
         <source>Modified</source>
-        <translation></translation>
+        <translation>تاريخ التعديل</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="974"/>
         <source>Encrypted</source>
-        <translation></translation>
+        <translation>التعمية</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1004"/>
@@ -549,28 +555,28 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../passworddialog.ui" line="14"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password</source>
-        <translation></translation>
+        <translation>كلمة السر</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="20"/>
         <source>Encrypt the file list</source>
-        <translation></translation>
+        <translation>عمِّ قائمة الملفات أيضًا</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="34"/>
         <source>Show password</source>
-        <translation></translation>
+        <translation>اعرض كلمة السر</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="48"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password:</source>
-        <translation></translation>
+        <translation>كلمة السر:</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="61"/>
         <source>&lt;i&gt;&lt;b&gt;Note:&lt;/b&gt; the password will be used to encrypt files you add to the current archive, and to decrypt files you extract from the current archive. When the archive is closed the password will be deleted.&lt;/i&gt;</source>
-        <translation></translation>
+        <translation>&lt;b&gt;ملاحظة:&lt;/b&gt; ستُستعمل كلمة السر لتعمية الملفات حين تُضيفها إلى الأرشيف الحالي، ولفكّ تعمية الملفات التي تستخرجها من الأرشيف الحالي. متى أغلقت الأرشيف ستُحذف كلمة السر.</translation>
     </message>
 </context>
 <context>
@@ -578,12 +584,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../progressdialog.ui" line="14"/>
         <source>Progress</source>
-        <translation></translation>
+        <translation>التقدّم</translation>
     </message>
     <message>
         <location filename="../progressdialog.cpp" line="16"/>
         <source>%p %</source>
-        <translation></translation>
+        <translation>%p ‏٪</translation>
     </message>
 </context>
 <context>
@@ -597,7 +603,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="6"/>
         <source>7-Zip (.7z)</source>
-        <translation></translation>
+        <translation>7‎-Zip ‏(.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="7"/>
@@ -607,22 +613,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="8"/>
         <source>Ace (.ace)</source>
-        <translation></translation>
+        <translation>Ace ‏(.ace)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="9"/>
         <source>Ar (.a)</source>
-        <translation></translation>
+        <translation>Ar ‏(.a)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="10"/>
         <source>Ar (.ar)</source>
-        <translation></translation>
+        <translation>Ar ‏(.ar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="11"/>
         <source>Arj (.arj)</source>
-        <translation></translation>
+        <translation>Arj ‏(.arj)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="12"/>
@@ -637,7 +643,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="14"/>
         <source>Cabinet (.cab)</source>
-        <translation></translation>
+        <translation>Cabinet ‏(.cab)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="15"/>
@@ -657,27 +663,27 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="18"/>
         <source>Ear (.ear)</source>
-        <translation></translation>
+        <translation>Ear ‏(.ear)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="19"/>
         <source>Self-extracting zip (.exe)</source>
-        <translation></translation>
+        <translation>ملف zip يستخرج نفسه بنفسه (.exe)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="20"/>
         <source>Jar (.jar)</source>
-        <translation></translation>
+        <translation>Jar ‏(.jar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="21"/>
         <source>Lha (.lzh)</source>
-        <translation></translation>
+        <translation>Lha ‏(.lzh)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="22"/>
         <source>Lrzip (.lrz)</source>
-        <translation></translation>
+        <translation>Lrzip ‏(.lrz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="23"/>
@@ -702,12 +708,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="27"/>
         <source>Windows Imaging Format (.wim)</source>
-        <translation></translation>
+        <translation>نسق صور وِندوز (.wim)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="28"/>
         <source>Rar (.rar)</source>
-        <translation></translation>
+        <translation>Rar ‏(.rar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="29"/>
@@ -722,12 +728,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="31"/>
         <source>War (.war)</source>
-        <translation></translation>
+        <translation>War ‏(.war)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="32"/>
         <source>Xz (.xz)</source>
-        <translation></translation>
+        <translation>Xz ‏(.xz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="33"/>
@@ -737,12 +743,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="34"/>
         <source>Zoo (.zoo)</source>
-        <translation></translation>
+        <translation>Zoo ‏(.zoo)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="35"/>
         <source>Zip (.zip)</source>
-        <translation></translation>
+        <translation>Zip ‏(.zip)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="38"/>
@@ -750,7 +756,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="61"/>
         <location filename="../main.cpp" line="225"/>
         <source>Adding file: </source>
-        <translation></translation>
+        <translation>يُضيف الملف: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="39"/>
@@ -758,7 +764,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="63"/>
         <location filename="../main.cpp" line="265"/>
         <source>Extracting file: </source>
-        <translation></translation>
+        <translation>يستخرج الملف: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="42"/>
@@ -769,37 +775,37 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="46"/>
         <location filename="../corestrs.h" line="62"/>
         <source>Removing file: </source>
-        <translation></translation>
+        <translation>يُزيل الملف: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="47"/>
         <source>Deleting files from archive</source>
-        <translation></translation>
+        <translation>يحذف الملفات من الأرشيف</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="49"/>
         <source>Recompressing archive</source>
-        <translation></translation>
+        <translation>يُعيد ضغط الأرشيف</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="50"/>
         <source>Decompressing archive</source>
-        <translation></translation>
+        <translation>يفكّ ضغط الأرشيف</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="53"/>
         <source>File not found.</source>
-        <translation></translation>
+        <translation>لم يوجد الملف.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="54"/>
         <source>Archive type not supported.</source>
-        <translation></translation>
+        <translation>نوع الأرشيف غير مدعوم.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="55"/>
         <source>Archive not found</source>
-        <translation></translation>
+        <translation>لم يوجد الأرشيف</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="56"/>
@@ -809,17 +815,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="57"/>
         <source>This archive type cannot be modified</source>
-        <translation></translation>
+        <translation>لا يمكن تعديل نوع هذا الأرشيف</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="58"/>
         <source>You can&apos;t add an archive to itself.</source>
-        <translation></translation>
+        <translation>لا يمكنك إضافة أرشيف داخل نفسه.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="64"/>
         <source>Could not find the volume: %s</source>
-        <translation></translation>
+        <translation>تعذّر العثور على القسم: %s</translation>
     </message>
 </context>
 </TS>
