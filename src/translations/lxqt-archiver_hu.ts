@@ -158,7 +158,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../create.ui" line="36"/>
         <source>Split into volumes of</source>
-        <translation type="unfinished">Feldarabolás ekkora darabokra:</translation>
+        <translation>Feldarabolás ekkora darabokra:</translation>
     </message>
     <message>
         <location filename="../create.ui" line="43"/>
