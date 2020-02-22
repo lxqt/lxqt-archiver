@@ -581,7 +581,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../passworddialog.ui" line="34"/>
         <source>Show password</source>
-        <translation>Vis  passord</translation>
+        <translation>Vis passord</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="48"/>
