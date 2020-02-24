@@ -110,7 +110,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="25"/>
         <source>Failed to execute the command.</source>
-        <translation type="unfinished"></translation>
+        <translation>הפעלת הפקודה נכשלה.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
@@ -236,7 +236,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="77"/>
         <source>Filter Files...</source>
-        <translation type="unfinished"></translation>
+        <translation>סינון קבצים…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="98"/>
@@ -261,7 +261,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="160"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>סרגל כלים ראשי</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="185"/>
@@ -462,12 +462,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="430"/>
         <source>&amp;View Selected Items</source>
-        <translation type="unfinished"></translation>
+        <translation>ה&amp;צגת הפריטים הנבחרים</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="435"/>
         <source>&amp;Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>מ&amp;סנן</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="288"/>
@@ -510,7 +510,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="848"/>
         <source>No errors have been found.</source>
-        <translation type="unfinished"></translation>
+        <translation>לא נמצאו שגיאות.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="826"/>
