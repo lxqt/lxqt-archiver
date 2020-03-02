@@ -98,7 +98,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archiver.cpp" line="267"/>
         <source>*%1 files (*%1)</source>
-        <translation>*%1  (*%1)</translation>
+        <translation>*%1 файлы (*%1)</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="271"/>
