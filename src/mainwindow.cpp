@@ -274,7 +274,7 @@ void MainWindow::on_actionCreateNew_triggered(bool /*checked*/) {
         splitVolumes_ = dlg.splitVolumes();
         volumeSize_ = dlg.volumeSize();
 
-        auto url = dlg.selectedFiles()[0];
+        const auto url = dlg.selectedFiles().at(0);
         if(!url.isEmpty()) {
             lasrDir_ = dlg.directory();
             archiver_->createNewArchive(url);
@@ -291,7 +291,7 @@ void MainWindow::on_actionOpen_triggered(bool /*checked*/) {
     dlg.setAcceptMode(QFileDialog::AcceptOpen);
     dlg.setDirectory(lasrDir_);
     if(dlg.exec() == QDialog::Accepted) {
-        auto url = dlg.selectedFiles()[0];
+        const auto url = dlg.selectedFiles().at(0);
         if(!url.isEmpty()) {
             lasrDir_ = dlg.directory();
             loadFile(Fm::FilePath::fromUri(url.toEncoded().constData()));
@@ -363,7 +363,7 @@ void MainWindow::on_actionAddFolder_triggered(bool /*checked*/) {
         return;
     }
 
-    QUrl dirUrl = dlg.selectedFiles()[0];
+    const QUrl dirUrl = dlg.selectedFiles().at(0);
     if(!dirUrl.isEmpty()) {
         lasrDir_ = dlg.directory();
         auto path = Fm::FilePath::fromUri(dirUrl.toEncoded().constData());
@@ -414,7 +414,7 @@ void MainWindow::on_actionExtract_triggered(bool /*checked*/) {
         return;
     }
 
-    QUrl dirUrl = dlg.selectedFiles()[0];
+    const QUrl dirUrl = dlg.selectedFiles().at(0);
     if(!dirUrl.isEmpty()) {
         lasrDir_ = dlg.directory();
         if(archiver_->isEncrypted() && password_.empty()) {

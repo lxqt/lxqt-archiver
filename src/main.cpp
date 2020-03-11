@@ -160,7 +160,7 @@ static int runApp(QApplication& app) {
                     return 1;
                 }
 
-                QUrl dirUrl = dlg.selectedFiles()[0];
+                const QUrl dirUrl = dlg.selectedFiles().at(0);
                 extract_to_uri = g_strdup(dirUrl.toEncoded().constData());
 
                 extractSkipOlder = dlg.skipOlder();
@@ -211,7 +211,7 @@ static int runApp(QApplication& app) {
                 }
             }
             if(dlg.exec() == QDialog::Accepted) {
-                auto url = dlg.selectedFiles()[0];
+                const auto url = dlg.selectedFiles().at(0);
                 if(url.isEmpty()) {
                     return 1;
                 }
