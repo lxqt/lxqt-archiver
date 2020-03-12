@@ -1075,7 +1075,7 @@ std::vector<const FileData*> MainWindow::selectedFiles(bool recursive) {
     // FIXME: use ArchiverItem instead of FileData
     auto selModel = ui_->fileListView->selectionModel();
     if(selModel) {
-        auto selIndexes = selModel->selectedRows();
+        const auto selIndexes = selModel->selectedRows();
         for(const auto& idx: selIndexes) {
             auto item = itemFromIndex(idx);
             if(item) {
