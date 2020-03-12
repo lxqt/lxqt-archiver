@@ -330,7 +330,7 @@ void Archiver::rebuildDirTree() {
 
     // create one ArchiverItem per file and build dir_path => ArchiverItem mappings
     items_.reserve(n_files);
-    for(int i = 0; i < n_files; ++i) {
+    for(unsigned int i = 0; i < n_files; ++i) {
         auto fileData = reinterpret_cast<FileData*>(g_ptr_array_index(frArchive_->command->files, i));
         items_.emplace_back(new ArchiverItem{fileData, false}); // do not take ownership of the existing FileData object
         auto item = items_.back().get();
@@ -355,7 +355,7 @@ void Archiver::rebuildDirTree() {
     // So we create the missing items by ourselves :-(
 
     // for each item, ensure all its parent dirs exist and setup the parent-child links
-    for(int i = 0; i < n_files; ++i) {
+    for(unsigned int i = 0; i < n_files; ++i) {
         auto item = items_[i].get();
         while(strcmp(item->fullPath(), "/")) {
             ArchiverItem* parent = nullptr;
