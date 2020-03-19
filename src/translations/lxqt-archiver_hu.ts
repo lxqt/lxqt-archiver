@@ -376,7 +376,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="311"/>
         <source>&amp;Select All</source>
-        <translation>&amp;Összes kijelölése</translation>
+        <translation>Ö&amp;sszes kijelölése</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="314"/>
@@ -402,7 +402,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="343"/>
         <source>Add F&amp;older</source>
-        <translation>Mappa &amp;hozzáadása</translation>
+        <translation>&amp;Mappa hozzáadása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="348"/>
@@ -417,22 +417,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="370"/>
         <source>&amp;Statusbar</source>
-        <translation>&amp;Állapotsor</translation>
+        <translation>Á&amp;llapotsor</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="381"/>
         <source>&amp;Directory Tree</source>
-        <translation>&amp;Kö&amp;nyvtárfa</translation>
+        <translation>Kö&amp;nyvtárfa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="392"/>
         <source>S&amp;how as Folder</source>
-        <translation>Megjelenítés map&amp;paként</translation>
+        <translation>&amp;Megjelenítés mappaként</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="400"/>
         <source>Show &amp;All Files</source>
-        <translation>Öss&amp;zes fájl megjelenítése</translation>
+        <translation>Ö&amp;sszes fájl megjelenítése</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="409"/>
@@ -447,7 +447,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="417"/>
         <source>&amp;Reload</source>
-        <translation>&amp;Újratöltés</translation>
+        <translation>Ú&amp;jratöltés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="420"/>
