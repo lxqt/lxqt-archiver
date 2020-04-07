@@ -6,27 +6,27 @@
     <message>
         <location filename="../about.ui" line="14"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>O programu</translation>
     </message>
     <message>
         <location filename="../about.ui" line="24"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt arhivsko orodje&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="47"/>
         <source>A simple and desktop-agnostic Qt file archiver</source>
-        <translation type="unfinished"></translation>
+        <translation>Enostavno Qt arhivsko orodje neodvisno od namizja</translation>
     </message>
     <message>
         <location filename="../about.ui" line="57"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://lxqt.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://lxqt.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://lxqt.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://lxqt.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="77"/>
         <source>Authors</source>
-        <translation type="unfinished"></translation>
+        <translation>Avtorji</translation>
     </message>
     <message>
         <location filename="../about.ui" line="86"/>
@@ -37,12 +37,18 @@ LXQt Archiver is derived from the following programs:
 * Engrampa of MATE desktop
 * File Roller of Gnome desktop
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Programiranje:
+* Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;
+
+LXQt Archiver izvira iz naslednjih programov:
+* Engrampa iz namizja MATE
+* File Roller iz namizja Gnome
+</translation>
     </message>
     <message>
         <location filename="../about.ui" line="103"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>Licenca</translation>
     </message>
     <message>
         <location filename="../about.ui" line="112"/>
@@ -63,7 +69,24 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt Archiver
+
+Copyright (C) 2018 ekipa LXQt
+
+Ta program spada med prosto programje; lahko ga razširjate in/ali
+spreminjate pod pogoji Splošnega dovoljenja GNU (GNU General Public
+License), kot ga je objavila ustanova Free Software Foundation; bodisi
+različice 2 ali (po vaši izbiri) katerekoli poznejše različice.
+
+Ta program se razširja v upanju, da bo uporaben, vendar BREZ VSAKRŠNEGA
+JAMSTVA; tudi brez posredne zagotovitve CENOVNE VREDNOSTI ali PRIMERNOSTI
+ZA DOLOČEN NAMEN.  Za podrobnosti glejte besedilo GNU General Public
+License.
+
+Skupaj s tem programom bi morali prejeti izvod Splošnega
+dovoljenja GNU (GNU General Public License); če ga niste,
+pišite na the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation>
     </message>
 </context>
 <context>
@@ -71,17 +94,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archiver.cpp" line="64"/>
         <source>Archive type not supported.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tip arhiva ni podprt.</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="267"/>
         <source>*%1 files (*%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>*%1 datotek (*%1)</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="271"/>
         <source>All supported formats</source>
-        <translation type="unfinished"></translation>
+        <translation>Vsi podprti formati</translation>
     </message>
 </context>
 <context>
@@ -89,22 +112,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="25"/>
         <source>Failed to execute the command.</source>
-        <translation type="unfinished"></translation>
+        <translation>Izvedba ukaza neuspešna.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
         <source>Command is not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukaz ni najden.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="31"/>
         <source>The command exited abnormally.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukaz se je zaključil z napako.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="34"/>
         <source>Password is required.</source>
-        <translation type="unfinished"></translation>
+        <translation>Geslo je zahtevano.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="37"/>
@@ -114,17 +137,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="40"/>
         <source>Bad charset.</source>
-        <translation type="unfinished"></translation>
+        <translation>Slab nabor znakov.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="43"/>
         <source>Unsupported file format.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepodprt format datoteke.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="46"/>
         <source>Unknown errors happened.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zgodile so se neznane napake.</translation>
     </message>
 </context>
 <context>
@@ -132,7 +155,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../create.ui" line="26"/>
         <source> MiB</source>
-        <translation type="unfinished"></translation>
+        <translation> MiB</translation>
     </message>
     <message>
         <location filename="../create.ui" line="36"/>
@@ -142,12 +165,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../create.ui" line="43"/>
         <source>Password:</source>
-        <translation type="unfinished"></translation>
+        <translation>Geslo:</translation>
     </message>
     <message>
         <location filename="../create.ui" line="50"/>
         <source>Encrypt the file list too</source>
-        <translation type="unfinished"></translation>
+        <translation>Šifriraj tudi seznam datotek</translation>
     </message>
 </context>
 <context>
@@ -155,7 +178,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../createfiledialog.cpp" line="13"/>
         <source>All files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Vse datoteke (*)</translation>
     </message>
 </context>
 <context>
@@ -163,37 +186,37 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="23"/>
         <source>Extract</source>
-        <translation type="unfinished"></translation>
+        <translation>Razširi</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="29"/>
         <source>E&amp;xtract all files</source>
-        <translation type="unfinished"></translation>
+        <translation>R&amp;azširi vse datoteke</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="36"/>
         <source>Ex&amp;tract selected files</source>
-        <translation type="unfinished"></translation>
+        <translation>Ra&amp;zširi izbrane datoteke</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="59"/>
         <source>Actions</source>
-        <translation type="unfinished"></translation>
+        <translation>Dejanja</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="65"/>
         <source>Re-create folders</source>
-        <translation type="unfinished"></translation>
+        <translation>Ponovno ustvari mape</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="72"/>
         <source>Overwrite existing files</source>
-        <translation type="unfinished"></translation>
+        <translation>Prepiši obstoječe datoteke</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="79"/>
         <source>Do not extract older files</source>
-        <translation type="unfinished"></translation>
+        <translation>Ne razširi starejših datotek</translation>
     </message>
 </context>
 <context>
@@ -201,7 +224,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extractfiledialog.cpp" line="12"/>
         <source>All files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Vse datoteke (*)</translation>
     </message>
 </context>
 <context>
@@ -210,233 +233,233 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../mainwindow.ui" line="14"/>
         <location filename="../mainwindow.cpp" line="257"/>
         <source>File Archiver</source>
-        <translation type="unfinished"></translation>
+        <translation>Arhivsko orodje</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="77"/>
         <source>Filter Files...</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtriraj datoteke...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="98"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Datoteka</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="113"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Uredi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="132"/>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pogled</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="149"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Po&amp;moč</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="160"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Glavna orodna vrstica</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="185"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;O programu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="194"/>
         <source>&amp;New</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nova</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="197"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
         <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Odpri</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
         <source>Ctrl+O</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="217"/>
         <source>Save &amp;As</source>
-        <translation type="unfinished"></translation>
+        <translation>Shrani &amp;kot</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="226"/>
         <source>&amp;Extract</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Razširi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="231"/>
         <source>&amp;Test</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Preveri</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="239"/>
         <source>&amp;Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Lastnosti</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="242"/>
         <source>Alt+Return</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Vračalka</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="251"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zapri</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="254"/>
         <source>Ctrl+Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Q</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="262"/>
         <source>Cu&amp;t</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Izreži</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="265"/>
         <source>Ctrl+X</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+X</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="273"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kopiraj</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="276"/>
         <source>Ctrl+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+C</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="284"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Prilepi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="287"/>
         <source>Ctrl+V</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+V</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="295"/>
         <source>&amp;Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>P&amp;reimenuj</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="298"/>
         <source>F2</source>
-        <translation type="unfinished"></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="303"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>I&amp;zbriši</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="306"/>
         <source>Del</source>
-        <translation type="unfinished"></translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="311"/>
         <source>&amp;Select All</source>
-        <translation type="unfinished"></translation>
+        <translation>Izberi &amp;vse</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="314"/>
         <source>Ctrl+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="322"/>
         <source>&amp;Find</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Najdi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="325"/>
         <location filename="../mainwindow.ui" line="438"/>
         <source>Ctrl+F</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+F</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="334"/>
         <source>&amp;Add Files</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Dodaj datoteke</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="343"/>
         <source>Add F&amp;older</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj &amp;mapo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="348"/>
         <source>Pass&amp;word</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Geslo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="359"/>
         <source>&amp;Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Orodna vrstica</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="370"/>
         <source>&amp;Statusbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Statusna vrstica</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="381"/>
         <source>&amp;Directory Tree</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mape</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="392"/>
         <source>S&amp;how as Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pokaži kot mapo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="400"/>
         <source>Show &amp;All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokaži &amp;vse datoteke</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="409"/>
         <source>St&amp;op</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ustavi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="412"/>
         <source>Esc</source>
-        <translation type="unfinished"></translation>
+        <translation>Esc</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="417"/>
         <source>&amp;Reload</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ponovno naloži</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="420"/>
         <source>F5</source>
-        <translation type="unfinished"></translation>
+        <translation>F5</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="425"/>
         <source>Filename &amp;Encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kodiranje datoteke</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="430"/>
@@ -446,66 +469,66 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="435"/>
         <source>&amp;Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Filtriraj</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="288"/>
         <location filename="../mainwindow.cpp" line="317"/>
         <location filename="../mainwindow.cpp" line="350"/>
         <source>All files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Vse datoteke (*)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="322"/>
         <location filename="../mainwindow.cpp" line="355"/>
         <source>Add only if &amp;newer</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj samo &amp;novejše</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="380"/>
         <source>Confirm</source>
-        <translation type="unfinished"></translation>
+        <translation>Potrdi</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="380"/>
         <source>Are you sure you want to delete selected files?</source>
-        <translation type="unfinished"></translation>
+        <translation>Ali res želite izbrisati izbrane datoteke?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="668"/>
         <source>Version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Različica: %1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="755"/>
         <source>%p %</source>
-        <translation type="unfinished"></translation>
+        <translation>%p %</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="848"/>
         <source>Success</source>
-        <translation type="unfinished"></translation>
+        <translation>Uspeh</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="848"/>
         <source>No errors have been found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ni najdenih napak.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="826"/>
         <location filename="../mainwindow.cpp" line="883"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Napaka</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="911"/>
         <source>N/A</source>
-        <translation type="unfinished"></translation>
+        <translation>N/A</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="915"/>
         <source>Uncompressed Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nestisnjena velikost:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="917"/>
@@ -515,32 +538,32 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="970"/>
         <source>File name</source>
-        <translation type="unfinished"></translation>
+        <translation>Ime datoteke</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="971"/>
         <source>File Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Tip datoteke</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="972"/>
         <source>File Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Velikost datoteke</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="973"/>
         <source>Modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Spremenjena</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="974"/>
         <source>Encrypted</source>
-        <translation type="unfinished"></translation>
+        <translation>Šifrirana</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1004"/>
         <source>%1 files</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 datotek</translation>
     </message>
 </context>
 <context>
@@ -549,28 +572,28 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../passworddialog.ui" line="14"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Geslo</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="20"/>
         <source>Encrypt the file list</source>
-        <translation type="unfinished"></translation>
+        <translation>Šifriraj seznam datotek</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="34"/>
         <source>Show password</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokaži geslo</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="48"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password:</source>
-        <translation type="unfinished"></translation>
+        <translation>Geslo:</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="61"/>
         <source>&lt;i&gt;&lt;b&gt;Note:&lt;/b&gt; the password will be used to encrypt files you add to the current archive, and to decrypt files you extract from the current archive. When the archive is closed the password will be deleted.&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;i&gt;&lt;b&gt;Opomba:&lt;/b&gt; geslo bo uporabljeno za šifriranje datotek dodanih v trenutni arhiv in dešifriranje datotek razširjenih iz trenutnega arhiva. Ko se arhiv zapre, bo geslo izbrisano.&lt;/i&gt;</translation>
     </message>
 </context>
 <context>
@@ -578,12 +601,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../progressdialog.ui" line="14"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Napredek</translation>
     </message>
     <message>
         <location filename="../progressdialog.cpp" line="16"/>
         <source>%p %</source>
-        <translation type="unfinished"></translation>
+        <translation>%p %</translation>
     </message>
 </context>
 <context>
@@ -592,72 +615,72 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../main.cpp" line="233"/>
         <location filename="../main.cpp" line="273"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Napaka</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="6"/>
         <source>7-Zip (.7z)</source>
-        <translation type="unfinished"></translation>
+        <translation>7-Zip (.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="7"/>
         <source>Tar compressed with 7z (.tar.7z)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar stisnjen s 7z (.tar.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="8"/>
         <source>Ace (.ace)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ace (.ace)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="9"/>
         <source>Ar (.a)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ar (.a)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="10"/>
         <source>Ar (.ar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ar (.ar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="11"/>
         <source>Arj (.arj)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arj (.arj)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="12"/>
         <source>Tar compressed with bzip2 (.tar.bz2)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar stisnjen z bzip2 (.tar.bz2)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="13"/>
         <source>Tar compressed with bzip (.tar.bz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar stisnjen z bzip (.tar.bz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="14"/>
         <source>Cabinet (.cab)</source>
-        <translation type="unfinished"></translation>
+        <translation>Cabinet (.cab)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="15"/>
         <source>Rar Archived Comic Book (.cbr)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arhiv stripov stisnjen z Rar (.cbr)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="16"/>
         <source>Zip Archived Comic Book (.cbz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arhiv stripov stisnjen z Zip (.cbz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="17"/>
         <source>Tar compressed with gzip (.tar.gz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar stisnjen z gzip (.tar.gz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="18"/>
         <source>Ear (.ear)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ear (.ear)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="19"/>
@@ -667,37 +690,37 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="20"/>
         <source>Jar (.jar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Jar (.jar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="21"/>
         <source>Lha (.lzh)</source>
-        <translation type="unfinished"></translation>
+        <translation>Lha (.lzh)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="22"/>
         <source>Lrzip (.lrz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Lrzip (.lrz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="23"/>
         <source>Tar compressed with lrzip (.tar.lrz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar stisnjen z lrzip (.tar.lrz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="24"/>
         <source>Tar compressed with lzip (.tar.lz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar stisnjen z lzip (.tar.lz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="25"/>
         <source>Tar compressed with lzma (.tar.lzma)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar stisnjen z lzma (.tar.lzma)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="26"/>
         <source>Tar compressed with lzop (.tar.lzo)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar stisnjen z lzop (.tar.lzo)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="27"/>
@@ -707,42 +730,42 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="28"/>
         <source>Rar (.rar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Rar (.rar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="29"/>
         <source>Tar uncompressed (.tar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar nestisnjen (.tar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="30"/>
         <source>Tar compressed with compress (.tar.Z)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar stisnjen s compress (.tar.Z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="31"/>
         <source>War (.war)</source>
-        <translation type="unfinished"></translation>
+        <translation>War (.war)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="32"/>
         <source>Xz (.xz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Xz (.xz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="33"/>
         <source>Tar compressed with xz (.tar.xz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar stisnjen z xz (.tar.xz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="34"/>
         <source>Zoo (.zoo)</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoo (.zoo)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="35"/>
         <source>Zip (.zip)</source>
-        <translation type="unfinished"></translation>
+        <translation>Zip (.zip)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="38"/>
@@ -750,7 +773,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="61"/>
         <location filename="../main.cpp" line="225"/>
         <source>Adding file: </source>
-        <translation type="unfinished"></translation>
+        <translation>Dodajanje datoteke: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="39"/>
@@ -758,58 +781,58 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="63"/>
         <location filename="../main.cpp" line="265"/>
         <source>Extracting file: </source>
-        <translation type="unfinished"></translation>
+        <translation>Razširjanje datoteke: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="42"/>
         <source>%d %B %Y, %H:%M</source>
-        <translation type="unfinished"></translation>
+        <translation>%d. %B %Y, %H:%M</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="46"/>
         <location filename="../corestrs.h" line="62"/>
         <source>Removing file: </source>
-        <translation type="unfinished"></translation>
+        <translation>Odstranjevanje datoteke: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="47"/>
         <source>Deleting files from archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Brisanje datotek iz arhiva</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="49"/>
         <source>Recompressing archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Ponovno stiskanje arhiva</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="50"/>
         <source>Decompressing archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Razširjanje arhiva</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="53"/>
         <source>File not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Datoteka ni bila najdena.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="54"/>
         <source>Archive type not supported.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tip arhiva ni podprt.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="55"/>
         <source>Archive not found</source>
-        <translation type="unfinished"></translation>
+        <translation>Arhiv ni bil najden</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="56"/>
         <source>You don&apos;t have the right permissions.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nimate ustreznih dovoljenj.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="57"/>
         <source>This archive type cannot be modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Tega tipa arhiva ni mogoče urejati</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="58"/>
