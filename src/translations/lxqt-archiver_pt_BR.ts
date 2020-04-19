@@ -16,7 +16,7 @@
     <message>
         <location filename="../about.ui" line="47"/>
         <source>A simple and desktop-agnostic Qt file archiver</source>
-        <translation>Um gerenciador de arquivos simples e independente de desktop</translation>
+        <translation>Um gerenciador de arquivos simples e independente de ambiente gráfico</translation>
     </message>
     <message>
         <location filename="../about.ui" line="57"/>
