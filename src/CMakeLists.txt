@@ -65,7 +65,6 @@ target_compile_definitions(lxqt-archiver
 
 target_link_libraries(lxqt-archiver
     Qt5::Widgets
-    Qt5::DBus
     fm-qt
     lxqt-archiver-core
     ${GLIB_LIBRARIES}
