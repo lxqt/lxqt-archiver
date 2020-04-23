@@ -1,3 +1,10 @@
+lxqt-archiver-0.1.1 / 2020-04-23
+===================================
+  * CMake: Used 'LIBEXECDIR' instead of 'LIBDIR' for executables.
+  * CMake: Removed unused qtdbus dependency.
+  * Removed comment about json-glib in CMakeLists.
+  * Fixed handling of RPM archives.
+
 lxqt-archiver-0.1.0 / 2020-04-19
 ===================================
 
