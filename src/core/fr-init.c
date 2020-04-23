@@ -92,6 +92,7 @@ FrMimeTypeDescription mime_type_desc[] = {
 	{ "application/x-ms-wim",               ".wim",      N_("Windows Imaging Format (.wim)"), 0 },
 	{ "application/x-rar",                  ".rar",      N_("Rar (.rar)"), 0 },
 	{ "application/x-rpm",                  ".rpm",      NULL, 0 },
+	{ "application/x-source-rpm",           ".rpm",      NULL, 0 },
 	{ "application/x-rzip",                 ".rz",       NULL, 0 },
 	{ "application/x-tar",                  ".tar",      N_("Tar uncompressed (.tar)"), 0 },
 	{ "application/x-tarz",                 ".tar.Z",    N_("Tar compressed with compress (.tar.Z)"), 0 },
