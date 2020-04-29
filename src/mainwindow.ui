@@ -14,7 +14,7 @@
    <string>File Archiver</string>
   </property>
   <property name="windowIcon">
-   <iconset theme="application-x-archive">
+   <iconset theme="lxqt-archiver">
     <normaloff>.</normaloff>.</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">

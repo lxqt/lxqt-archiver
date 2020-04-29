@@ -666,6 +666,7 @@ void MainWindow::on_actionAbout_triggered(bool /*checked*/) {
     QDialog dlg{this};
     Ui::AboutDialog ui;
     ui.setupUi(&dlg);
+    ui.iconLabel->setPixmap(QIcon::fromTheme(QStringLiteral("lxqt-archiver")).pixmap(64, 64));
     ui.version->setText(tr("Version: %1").arg(QStringLiteral(LXQT_ARCHIVER_VERSION)));
     dlg.exec();
 }

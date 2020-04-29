@@ -82,3 +82,8 @@ install(FILES
     DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications"
     COMPONENT Runtime
 )
+
+install(
+    FILES icons/lxqt-archiver.svg
+    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/scalable/apps"
+)
