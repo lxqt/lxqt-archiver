@@ -36,6 +36,7 @@ find_package(PkgConfig REQUIRED)
 pkg_check_modules(
     GLIB_JSON
     json-glib-1.0
+    REQUIRED
 )
 
 set(LXQT_ARCHIVER_MAJOR_VERSION 0)
