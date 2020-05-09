@@ -139,6 +139,9 @@
     <addaction name="actionFlatListMode"/>
     <addaction name="actionDirTreeMode"/>
     <addaction name="separator"/>
+    <addaction name="actionExpand"/>
+    <addaction name="actionCollapse"/>
+    <addaction name="separator"/>
     <addaction name="actionStop"/>
     <addaction name="actionReload"/>
     <addaction name="separator"/>
@@ -439,6 +442,28 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="actionExpand">
+   <property name="icon">
+    <iconset theme="expand-all"/>
+   </property>
+   <property name="text">
+    <string>&amp;Expand</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Down</string>
+   </property>
+  </action>
+  <action name="actionCollapse">
+   <property name="icon">
+    <iconset theme="collapse-all"/>
+   </property>
+   <property name="text">
+    <string>&amp;Collapse</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Up</string>
    </property>
   </action>
  </widget>

@@ -88,6 +88,10 @@ private Q_SLOTS:
 
     void on_actionFlatListMode_toggled(bool checked);
 
+    void on_actionExpand_triggered(bool checked);
+
+    void on_actionCollapse_triggered(bool checked);
+
     void on_actionReload_triggered(bool checked);
 
     void on_actionStop_triggered(bool checked);

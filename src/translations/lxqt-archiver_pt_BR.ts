@@ -9,27 +9,27 @@
         <translation>Sobre</translation>
     </message>
     <message>
-        <location filename="../about.ui" line="24"/>
+        <location filename="../about.ui" line="34"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../about.ui" line="47"/>
+        <location filename="../about.ui" line="57"/>
         <source>A simple and desktop-agnostic Qt file archiver</source>
         <translation>Um gerenciador de arquivos simples e independente de ambiente gráfico</translation>
     </message>
     <message>
-        <location filename="../about.ui" line="57"/>
+        <location filename="../about.ui" line="67"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://lxqt.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://lxqt.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://lxqt.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://lxqt.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../about.ui" line="77"/>
+        <location filename="../about.ui" line="87"/>
         <source>Authors</source>
         <translation>Autores</translation>
     </message>
     <message>
-        <location filename="../about.ui" line="86"/>
+        <location filename="../about.ui" line="96"/>
         <source>Programming:
 * Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;
 
@@ -46,12 +46,12 @@ O LXQt Archiver é derivado dos seguintes programas:
 </translation>
     </message>
     <message>
-        <location filename="../about.ui" line="103"/>
+        <location filename="../about.ui" line="113"/>
         <source>License</source>
         <translation>Licença</translation>
     </message>
     <message>
-        <location filename="../about.ui" line="112"/>
+        <location filename="../about.ui" line="122"/>
         <source>LXQt Archiver
 
 Copyright (C) 2018 the LXQt Team
@@ -92,17 +92,17 @@ MA 02110-1301, EUA.</translation>
 <context>
     <name>Archiver</name>
     <message>
-        <location filename="../archiver.cpp" line="64"/>
+        <location filename="../archiver.cpp" line="66"/>
         <source>Archive type not supported.</source>
         <translation>Este tipo de arquivo não é suportado.</translation>
     </message>
     <message>
-        <location filename="../archiver.cpp" line="267"/>
+        <location filename="../archiver.cpp" line="310"/>
         <source>*%1 files (*%1)</source>
         <translation>*%1 arquivos (*%1)</translation>
     </message>
     <message>
-        <location filename="../archiver.cpp" line="271"/>
+        <location filename="../archiver.cpp" line="314"/>
         <source>All supported formats</source>
         <translation>Todos os formatos suportados</translation>
     </message>
@@ -231,7 +231,7 @@ MA 02110-1301, EUA.</translation>
     <name>MainWindow</name>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
-        <location filename="../mainwindow.cpp" line="257"/>
+        <location filename="../mainwindow.cpp" line="258"/>
         <source>File Archiver</source>
         <translation>Compactador de Arquivos</translation>
     </message>
@@ -256,312 +256,332 @@ MA 02110-1301, EUA.</translation>
         <translation>&amp;Exibir</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="149"/>
+        <location filename="../mainwindow.ui" line="152"/>
         <source>&amp;Help</source>
         <translation>&amp;Ajuda</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="160"/>
+        <location filename="../mainwindow.ui" line="163"/>
         <source>Main Toolbar</source>
         <translation>Barra de ferramentas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="185"/>
+        <location filename="../mainwindow.ui" line="191"/>
         <source>&amp;About</source>
         <translation>&amp;Sobre</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="194"/>
+        <location filename="../mainwindow.ui" line="200"/>
         <source>&amp;New</source>
         <translation>&amp;Novo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="197"/>
+        <location filename="../mainwindow.ui" line="203"/>
         <source>Ctrl+N</source>
         <translation>Ctrl+N</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="206"/>
+        <location filename="../mainwindow.ui" line="212"/>
         <source>&amp;Open</source>
         <translation>&amp;Abrir</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="209"/>
+        <location filename="../mainwindow.ui" line="215"/>
         <source>Ctrl+O</source>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="217"/>
+        <location filename="../mainwindow.ui" line="223"/>
         <source>Save &amp;As</source>
         <translation>Salvar &amp;como</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="226"/>
+        <location filename="../mainwindow.ui" line="232"/>
         <source>&amp;Extract</source>
         <translation>E&amp;xtrair</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="231"/>
+        <location filename="../mainwindow.ui" line="237"/>
         <source>&amp;Test</source>
         <translation>&amp;Testar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="239"/>
+        <location filename="../mainwindow.ui" line="245"/>
         <source>&amp;Properties</source>
         <translation>&amp;Propriedades</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="242"/>
+        <location filename="../mainwindow.ui" line="248"/>
         <source>Alt+Return</source>
         <translation>Alt+Enter</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="251"/>
+        <location filename="../mainwindow.ui" line="257"/>
         <source>&amp;Close</source>
         <translation>&amp;Fechar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="254"/>
+        <location filename="../mainwindow.ui" line="260"/>
         <source>Ctrl+Q</source>
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="262"/>
+        <location filename="../mainwindow.ui" line="268"/>
         <source>Cu&amp;t</source>
         <translation>Recor&amp;tar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="265"/>
+        <location filename="../mainwindow.ui" line="271"/>
         <source>Ctrl+X</source>
         <translation>Ctrl+X</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="273"/>
+        <location filename="../mainwindow.ui" line="279"/>
         <source>&amp;Copy</source>
         <translation>&amp;Copiar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="276"/>
+        <location filename="../mainwindow.ui" line="282"/>
         <source>Ctrl+C</source>
         <translation>Ctrl+C</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="284"/>
+        <location filename="../mainwindow.ui" line="290"/>
         <source>&amp;Paste</source>
         <translation>Col&amp;ar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="287"/>
+        <location filename="../mainwindow.ui" line="293"/>
         <source>Ctrl+V</source>
         <translation>Ctrl+V</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="295"/>
+        <location filename="../mainwindow.ui" line="301"/>
         <source>&amp;Rename</source>
         <translation>&amp;Renomear</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="298"/>
+        <location filename="../mainwindow.ui" line="304"/>
         <source>F2</source>
         <translation>F2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="303"/>
+        <location filename="../mainwindow.ui" line="309"/>
         <source>&amp;Delete</source>
         <translation>&amp;Excluir</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="306"/>
+        <location filename="../mainwindow.ui" line="312"/>
         <source>Del</source>
         <translation>Del</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="311"/>
+        <location filename="../mainwindow.ui" line="317"/>
         <source>&amp;Select All</source>
         <translation>Selecionar &amp;tudo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="314"/>
+        <location filename="../mainwindow.ui" line="320"/>
         <source>Ctrl+A</source>
         <translation>Ctrl+A</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="322"/>
+        <location filename="../mainwindow.ui" line="328"/>
         <source>&amp;Find</source>
         <translation>Pesqu&amp;isar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="325"/>
-        <location filename="../mainwindow.ui" line="438"/>
+        <location filename="../mainwindow.ui" line="331"/>
+        <location filename="../mainwindow.ui" line="444"/>
         <source>Ctrl+F</source>
         <translation>Ctrl+F</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="334"/>
+        <location filename="../mainwindow.ui" line="340"/>
         <source>&amp;Add Files</source>
         <translation>&amp;Adicionar arquivos</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="343"/>
+        <location filename="../mainwindow.ui" line="349"/>
         <source>Add F&amp;older</source>
         <translation>Adici&amp;onar pasta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="348"/>
+        <location filename="../mainwindow.ui" line="354"/>
         <source>Pass&amp;word</source>
         <translation>&amp;Senha</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="359"/>
+        <location filename="../mainwindow.ui" line="365"/>
         <source>&amp;Toolbar</source>
         <translation>Barra de ferramen&amp;tas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="370"/>
+        <location filename="../mainwindow.ui" line="376"/>
         <source>&amp;Statusbar</source>
         <translation>Barra de &amp;status</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="381"/>
+        <location filename="../mainwindow.ui" line="387"/>
         <source>&amp;Directory Tree</source>
         <translation>Árvore de &amp;diretórios</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="392"/>
+        <location filename="../mainwindow.ui" line="398"/>
         <source>S&amp;how as Folder</source>
         <translation>Mo&amp;strar como Pasta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="400"/>
+        <location filename="../mainwindow.ui" line="406"/>
         <source>Show &amp;All Files</source>
         <translation>Mostr&amp;ar todos os arquivos</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="409"/>
+        <location filename="../mainwindow.ui" line="415"/>
         <source>St&amp;op</source>
         <translation>&amp;Parar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="412"/>
+        <location filename="../mainwindow.ui" line="418"/>
         <source>Esc</source>
         <translation>Esc</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="417"/>
+        <location filename="../mainwindow.ui" line="423"/>
         <source>&amp;Reload</source>
         <translation>&amp;Recarregar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="420"/>
+        <location filename="../mainwindow.ui" line="426"/>
         <source>F5</source>
         <translation>F5</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="425"/>
+        <location filename="../mainwindow.ui" line="431"/>
         <source>Filename &amp;Encoding</source>
         <translation>Codificação do Nome do Arquivo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="430"/>
+        <location filename="../mainwindow.ui" line="436"/>
         <source>&amp;View Selected Items</source>
         <translation>&amp;Visualizar Itens Selecionados</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="435"/>
+        <location filename="../mainwindow.ui" line="441"/>
         <source>&amp;Filter</source>
         <translation>&amp;Filtro</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="288"/>
-        <location filename="../mainwindow.cpp" line="317"/>
-        <location filename="../mainwindow.cpp" line="350"/>
+        <location filename="../mainwindow.ui" line="452"/>
+        <source>&amp;Expand</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="455"/>
+        <source>Ctrl+Shift+Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="463"/>
+        <source>&amp;Collapse</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="466"/>
+        <source>Ctrl+Shift+Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="289"/>
+        <location filename="../mainwindow.cpp" line="318"/>
+        <location filename="../mainwindow.cpp" line="351"/>
         <source>All files (*)</source>
         <translation>Todos os arquivos (*)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="322"/>
-        <location filename="../mainwindow.cpp" line="355"/>
+        <location filename="../mainwindow.cpp" line="323"/>
+        <location filename="../mainwindow.cpp" line="356"/>
         <source>Add only if &amp;newer</source>
         <translation>Adicio&amp;nar apenas se mais recente</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="380"/>
+        <location filename="../mainwindow.cpp" line="381"/>
         <source>Confirm</source>
         <translation>Confirmar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="380"/>
+        <location filename="../mainwindow.cpp" line="381"/>
         <source>Are you sure you want to delete selected files?</source>
         <translation>Você realmente deseja apagar os arquivos selecionados?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="668"/>
+        <location filename="../mainwindow.cpp" line="672"/>
         <source>Version: %1</source>
         <translation>Versão: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="755"/>
+        <location filename="../mainwindow.cpp" line="759"/>
         <source>%p %</source>
         <translation>%p %</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="848"/>
+        <location filename="../mainwindow.cpp" line="852"/>
         <source>Success</source>
         <translation>Sucesso</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="848"/>
+        <location filename="../mainwindow.cpp" line="852"/>
         <source>No errors have been found.</source>
         <translation>Nenhum erro foi encontrado.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="826"/>
-        <location filename="../mainwindow.cpp" line="883"/>
+        <location filename="../mainwindow.cpp" line="830"/>
+        <location filename="../mainwindow.cpp" line="887"/>
         <source>Error</source>
         <translation>Erro</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="911"/>
+        <location filename="../mainwindow.cpp" line="915"/>
         <source>N/A</source>
         <translation>N/A</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="915"/>
+        <location filename="../mainwindow.cpp" line="919"/>
         <source>Uncompressed Size:</source>
         <translation>Tamanho descompactado:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="917"/>
+        <location filename="../mainwindow.cpp" line="921"/>
         <source>Compression Ratio:</source>
         <translation>Taxa de compressão:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="970"/>
+        <location filename="../mainwindow.cpp" line="974"/>
         <source>File name</source>
         <translation>Nome do arquivo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="971"/>
+        <location filename="../mainwindow.cpp" line="975"/>
         <source>File Type</source>
         <translation>Tipo do arquivo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="972"/>
+        <location filename="../mainwindow.cpp" line="976"/>
         <source>File Size</source>
         <translation>Tamanho do arquivo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="973"/>
+        <location filename="../mainwindow.cpp" line="977"/>
         <source>Modified</source>
         <translation>Modificado</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="974"/>
+        <location filename="../mainwindow.cpp" line="978"/>
         <source>Encrypted</source>
         <translation>Criptografado</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1004"/>
+        <location filename="../mainwindow.cpp" line="1008"/>
         <source>%1 files</source>
         <translation>%1 arquivos</translation>
     </message>
@@ -612,8 +632,8 @@ MA 02110-1301, EUA.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="233"/>
-        <location filename="../main.cpp" line="273"/>
+        <location filename="../main.cpp" line="250"/>
+        <location filename="../main.cpp" line="290"/>
         <source>Error</source>
         <translation>Erro</translation>
     </message>
@@ -759,88 +779,93 @@ MA 02110-1301, EUA.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="34"/>
+        <source>Tar compressed with zstd (.tar.zst)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="35"/>
         <source>Zoo (.zoo)</source>
         <translation>Arquivo Zoo (.zoo)</translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="35"/>
+        <location filename="../corestrs.h" line="36"/>
         <source>Zip (.zip)</source>
         <translation>Arquivo ZIP (.zip)</translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="38"/>
-        <location filename="../corestrs.h" line="45"/>
-        <location filename="../corestrs.h" line="61"/>
-        <location filename="../main.cpp" line="225"/>
+        <location filename="../corestrs.h" line="39"/>
+        <location filename="../corestrs.h" line="46"/>
+        <location filename="../corestrs.h" line="62"/>
+        <location filename="../main.cpp" line="242"/>
         <source>Adding file: </source>
         <translation>Adicionando arquivo: </translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="39"/>
-        <location filename="../corestrs.h" line="48"/>
-        <location filename="../corestrs.h" line="63"/>
-        <location filename="../main.cpp" line="265"/>
+        <location filename="../corestrs.h" line="40"/>
+        <location filename="../corestrs.h" line="49"/>
+        <location filename="../corestrs.h" line="64"/>
+        <location filename="../main.cpp" line="282"/>
         <source>Extracting file: </source>
         <translation>Extraindo arquivo: </translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="42"/>
+        <location filename="../corestrs.h" line="43"/>
         <source>%d %B %Y, %H:%M</source>
         <translation>%d %B %Y, %H:%M</translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="46"/>
-        <location filename="../corestrs.h" line="62"/>
+        <location filename="../corestrs.h" line="47"/>
+        <location filename="../corestrs.h" line="63"/>
         <source>Removing file: </source>
         <translation>Removendo arquivo: </translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="47"/>
+        <location filename="../corestrs.h" line="48"/>
         <source>Deleting files from archive</source>
         <translation>Apagando arquivos da compactação</translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="49"/>
+        <location filename="../corestrs.h" line="50"/>
         <source>Recompressing archive</source>
         <translation>Recomprimindo arquivo</translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="50"/>
+        <location filename="../corestrs.h" line="51"/>
         <source>Decompressing archive</source>
         <translation>Descomprimindo arquivo</translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="53"/>
+        <location filename="../corestrs.h" line="54"/>
         <source>File not found.</source>
         <translation>Arquivo não encontrado.</translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="54"/>
+        <location filename="../corestrs.h" line="55"/>
         <source>Archive type not supported.</source>
         <translation>Tipo de arquivo não suportado.</translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="55"/>
+        <location filename="../corestrs.h" line="56"/>
         <source>Archive not found</source>
         <translation>Arquivo não encontrado</translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="56"/>
+        <location filename="../corestrs.h" line="57"/>
         <source>You don&apos;t have the right permissions.</source>
         <translation>Você não tem as permissões corretas para isso.</translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="57"/>
+        <location filename="../corestrs.h" line="58"/>
         <source>This archive type cannot be modified</source>
         <translation>Este tipo de arquivo não pode ser modificado</translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="58"/>
+        <location filename="../corestrs.h" line="59"/>
         <source>You can&apos;t add an archive to itself.</source>
         <translation>Você não pode adicionar um arquivo dentro dele próprio.</translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="64"/>
+        <location filename="../corestrs.h" line="65"/>
         <source>Could not find the volume: %s</source>
         <translation>O volume não foi localizado: %s</translation>
     </message>
