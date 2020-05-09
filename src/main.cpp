@@ -52,8 +52,6 @@
 #include <string>
 #include <unordered_map>
 
-gint          ForceDirectoryCreation;
-
 static char** remaining_args;
 static char*  add_to = nullptr;
 static int    add;
