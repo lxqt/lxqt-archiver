@@ -12,6 +12,8 @@ extern "C" {
 
 #include <QMimeDatabase>
 #include <QMimeType>
+#include <QFile>
+#include <QDir>
 
 #include <unordered_map>
 
@@ -197,6 +199,47 @@ void Archiver::extractFiles(const std::vector<const FileData*>& files, const Fm:
 }
 
 void Archiver::extractAll(const char* destDirUri, bool skip_older, bool overwrite, bool junk_path, const char* password) {
+    if(!overwrite && rootItem_) {
+        // if the archive has multiple files but no parent folder, make a directory
+        // and extract them in it, instead of putting them among existing files
+        if(rootItem_->children().size() > 1
+           || (rootItem_->children().size() == 1
+               && rootItem_->children()[0]->isDir()
+               && (rootItem_->children()[0]->name() == nullptr
+                   || strcmp(rootItem_->children()[0]->name(), ".") == 0))) { // may happen with rpm
+            auto dirUrl = QUrl::fromEncoded(destDirUri);
+            if(dirUrl.isLocalFile()) {
+                QString dirName = archiveDisplayName().section(QStringLiteral("/"), -1);
+                if(dirName.contains(QStringLiteral("."))) {
+                    dirName = dirName.section(QStringLiteral("."), 0, -2);
+                }
+                if(dirName.isEmpty()) { // this is possible (as in ".zip")
+                    dirName = QStringLiteral("lxqt-archiver-extracted");
+                }
+
+                QString extDir = dirUrl.toLocalFile();
+                if(!extDir.endsWith(QStringLiteral("/"))) {
+                    extDir += QStringLiteral("/");
+                }
+                extDir += dirName;
+
+                // don't overwrite but make a directory
+                QString suffix;
+                int i = 0;
+                while(QFile::exists(extDir + suffix)) {
+                    suffix = QStringLiteral("-") + QString::number(i);
+                    i++;
+                }
+                extDir += suffix;
+                QDir dir(extDir);
+                dir.mkpath(extDir);
+
+                dirUrl = QUrl::fromLocalFile(extDir);
+                extractFiles(nullptr, dirUrl.toEncoded().constData(), nullptr, skip_older, false, junk_path, password);
+                return;
+            }
+        }
+    }
     extractFiles(nullptr, destDirUri, nullptr, skip_older, overwrite, junk_path, password);
 }
 
