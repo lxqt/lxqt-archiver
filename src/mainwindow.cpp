@@ -638,6 +638,8 @@ void MainWindow::on_actionPassword_triggered(bool /*checked*/) {
 void MainWindow::on_actionDirTree_toggled(bool checked) {
     bool visible = checked && viewMode_ == ViewMode::DirTree;
     ui_->dirTreeView->setVisible(visible);
+    ui_->actionExpand->setEnabled(visible);
+    ui_->actionCollapse->setEnabled(visible);
 }
 
 void MainWindow::on_actionDirTreeMode_toggled(bool /*checked*/) {
@@ -1014,6 +1016,11 @@ void MainWindow::showFileList(const std::vector<const ArchiverItem *> &files) {
             ui_->fileListView->resizeColumnToContents(i);
         }
         filter(ui_->filterLineEdit->text());
+
+        // give the focus to the file list view if needed
+        if(!ui_->dirTreeView->isVisible() && !ui_->filterLineEdit->isVisible()) {
+            ui_->fileListView->setFocus();
+        }
     });
 }
 
@@ -1163,6 +1170,10 @@ void MainWindow::updateDirTree() {
         }
     }
     connect(ui_->dirTreeView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &MainWindow::onDirTreeSelectionChanged);
+
+    if(ui_->dirTreeView->isVisible()) {
+        ui_->dirTreeView->setFocus();
+    }
 }
 
 void MainWindow::buildDirTree(QStandardItem *parent, const ArchiverItem *root) {
@@ -1238,12 +1249,16 @@ void MainWindow::setViewMode(MainWindow::ViewMode viewMode) {
         switch(viewMode) {
         case ViewMode::DirTree:
             ui_->dirTreeView->setVisible(ui_->actionDirTree->isChecked());
+            ui_->actionExpand->setEnabled(ui_->actionDirTree->isChecked());
+            ui_->actionCollapse->setEnabled(ui_->actionDirTree->isChecked());
             showCurrentDirList();
             break;
         case ViewMode::FlatList:
             // always hide dir tree view in flat list mode but remember splitter position first
             splitterPos_ = ui_->splitter->sizes().at(0);
             ui_->dirTreeView->hide();
+            ui_->actionExpand->setEnabled(false);
+            ui_->actionCollapse->setEnabled(false);
             showFlatFileList();
             break;
         }
@@ -1271,3 +1286,19 @@ void MainWindow::on_actionFilter_triggered(bool /*checked*/) {
 std::shared_ptr<Archiver> MainWindow::archiver() const {
     return archiver_;
 }
+
+void MainWindow::on_actionExpand_triggered(bool /*checked*/) {
+    ui_->dirTreeView->expandAll();
+    // also, make the current index visible
+    if(auto selModel = ui_->dirTreeView->selectionModel()) {
+        QModelIndex idx = selModel->currentIndex();
+        if(idx.isValid()) {
+            ui_->dirTreeView->scrollTo(idx);
+        }
+    }
+}
+
+void MainWindow::on_actionCollapse_triggered(bool /*checked*/) {
+	ui_->dirTreeView->collapseAll();
+}
+
