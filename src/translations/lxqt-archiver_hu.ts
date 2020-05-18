@@ -40,7 +40,7 @@ LXQt Archiver is derived from the following programs:
         <translation>Programozás:
 * Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;
 
-LXQt Archiválót a következő programokból származtatják:
+Az LXQt Archiváló a következő programokból származik:
 * Engrampa a MATE-től
 * File Roller a Gnome-tól
 </translation>
@@ -356,7 +356,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="301"/>
         <source>&amp;Rename</source>
-        <translation>&amp;Átnevezés</translation>
+        <translation>Á&amp;tnevezés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="304"/>
@@ -366,7 +366,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="309"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Törlés</translation>
+        <translation>Tö&amp;rlés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="312"/>
@@ -402,7 +402,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="349"/>
         <source>Add F&amp;older</source>
-        <translation>&amp;Mappa hozzáadása</translation>
+        <translation>M&amp;appa hozzáadása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="354"/>
@@ -412,12 +412,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="365"/>
         <source>&amp;Toolbar</source>
-        <translation>&amp;Eszköztár</translation>
+        <translation>Es&amp;zköztár</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="376"/>
         <source>&amp;Statusbar</source>
-        <translation>Á&amp;llapotsor</translation>
+        <translation>Áll&amp;apotsor</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="387"/>
@@ -437,7 +437,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="415"/>
         <source>St&amp;op</source>
-        <translation>Leállítá&amp;s</translation>
+        <translation>&amp;Leállítás</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="418"/>
@@ -472,22 +472,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="452"/>
         <source>&amp;Expand</source>
-        <translation type="unfinished"></translation>
+        <translation>K&amp;inyitás</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="455"/>
         <source>Ctrl+Shift+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Le</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="463"/>
         <source>&amp;Collapse</source>
-        <translation type="unfinished"></translation>
+        <translation>B&amp;ecsukás</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="466"/>
         <source>Ctrl+Shift+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Fel</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="289"/>
