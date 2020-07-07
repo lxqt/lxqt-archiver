@@ -32,6 +32,10 @@
 #include <QCheckBox>
 #include <QSpinBox>
 #include <QStandardPaths>
+#include <QDrag>
+#include <QPointer>
+#include <QScreen>
+#include <QSettings>
 
 #include <QDebug>
 
@@ -54,13 +58,33 @@ MainWindow::MainWindow(QWidget* parent):
     archiver_{std::make_shared<Archiver>()},
     viewMode_{ViewMode::DirTree},
     currentDirItem_{nullptr},
-    encryptHeader_{false} {
+    encryptHeader_{false},
+    splitterPos_{200} {
 
     ui_->setupUi(this);
 
     // only stretch the right pane
     ui_->splitter->setStretchFactor(0, 0);
     ui_->splitter->setStretchFactor(1, 1);
+
+    QSettings settings(QSettings::UserScope, QStringLiteral("lxqt"), QStringLiteral("archiver"));
+    // window size
+    settings.beginGroup (QStringLiteral("Sizes"));
+    QSize winSize = settings.value(QStringLiteral("WindowSize"), QSize(700, 500)).toSize();
+    QSize ag;
+    if (QScreen *pScreen = QApplication::primaryScreen()) {
+        ag = pScreen->availableVirtualGeometry().size();
+    }
+    if (!ag.isEmpty()) {
+        winSize = winSize.boundedTo (ag);
+    }
+    resize(winSize);
+    // splitter position
+    QList<int> sizes;
+    sizes.append(settings.value(QStringLiteral("SplitterPos"), splitterPos_).toInt());
+    settings.endGroup();
+    sizes.append(400);
+    ui_->splitter->setSizes(sizes);
 
     // create a progress bar in the status bar
     progressBar_ = new QProgressBar{ui_->statusBar};
@@ -78,6 +102,7 @@ MainWindow::MainWindow(QWidget* parent):
     pathBar->setPath(Fm::FilePath::fromLocalPath("/"));
     ui_->toolBar->addWidget(pathBar);
 #endif
+    ui_->toolBar->addSeparator();
     currentPathEdit_ = new QLineEdit(this);
     ui_->toolBar->addWidget(currentPathEdit_);
 
@@ -96,13 +121,22 @@ MainWindow::MainWindow(QWidget* parent):
     proxyModel_->sort(0, Qt::AscendingOrder);
 
     ui_->fileListView->setModel(proxyModel_);
+    connect(ui_->fileListView, &FileTreeView::dragStarted, this, &MainWindow::onDragStarted);
     connect(ui_->fileListView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &MainWindow::onFileListSelectionChanged);
+    // NOTE: QAbstractItemView::activated() is only for single/double clicking a directory.
+    // FileTreeView does not emit it with Enter or Return because it may not cover both of them.
+    // Instead, FileTreeView::enterPressed() is emitted on pressing Enter and Return alike.
     connect(ui_->fileListView, &QAbstractItemView::activated, this, &MainWindow::onFileListActivated);
+    connect(ui_->fileListView, &FileTreeView::enterPressed, this, &MainWindow::onFileListEnterPressed);
 
     // show context menu
     ui_->fileListView->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(ui_->fileListView, &QAbstractItemView::customContextMenuRequested, this, &MainWindow::onFileListContextMenu);
     connect(ui_->fileListView, &QAbstractItemView::doubleClicked, this, &MainWindow::onFileListDoubleClicked);
+
+    // filtering
+    ui_->filterLineEdit->setVisible(false);
+    connect(ui_->filterLineEdit, &QLineEdit::textChanged, this, &MainWindow::filter);
 
     connect(archiver_.get(), &Archiver::invalidateContent, this, &MainWindow::onInvalidateContent);
     connect(archiver_.get(), &Archiver::start, this, &MainWindow::onActionStarted);
@@ -124,9 +158,24 @@ MainWindow::MainWindow(QWidget* parent):
     lasrDir_ = QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::HomeLocation));
 
     setAttribute(Qt::WA_DeleteOnClose, true);
+
+    // support file dropping into the window
+    setAcceptDrops(true);
 }
 
 MainWindow::~MainWindow() {
+    QSettings settings(QSettings::UserScope, QStringLiteral("lxqt"), QStringLiteral("archiver"));
+    settings.beginGroup (QStringLiteral("Sizes"));
+    QSize windowSize = size();
+    if(settings.value(QStringLiteral("WindowSize")).toSize() != windowSize) {
+        settings.setValue(QStringLiteral("WindowSize"), windowSize);
+    }
+    int splitterPos = viewMode_ == ViewMode::FlatList ? splitterPos_ : ui_->splitter->sizes().at(0);
+    if(settings.value(QStringLiteral("SplitterPos")).toInt() != splitterPos) {
+        settings.setValue(QStringLiteral("SplitterPos"), splitterPos);
+    }
+    settings.endGroup();
+
     if(!tempDir_.isEmpty()) { // remove the temp dir if any
         QDir(tempDir_).removeRecursively();
     }
@@ -146,33 +195,88 @@ void MainWindow::loadFile(const Fm::FilePath &file) {
     QString tmp = QStandardPaths::writableLocation(QStandardPaths::TempLocation);
     if(!tmp.isEmpty()) {
         if(QDir(tmp).exists()) {
-            tempDir_ = tmp + "/" + "lxqt-archiver-"
-                       + QDateTime::currentDateTime().toString("yyyyMMddhhmmss");
+            tempDir_ = tmp + QStringLiteral("/lxqt-archiver-")
+                       + QDateTime::currentDateTime().toString(QStringLiteral("yyyyMMddhhmmss"));
         }
     }
 
+    // set the work directory to the containing folder
+    if(file.hasParent()) {
+        lasrDir_ = QUrl::fromEncoded(QByteArray(file.parent().uri().get()));
+    }
+
+    // first remove filtering
+    ui_->filterLineEdit->clear();
+    ui_->filterLineEdit->setVisible(false);
+
     archiver_->openArchive(file.uri().get(), nullptr);
+}
+
+void MainWindow::dragEnterEvent(QDragEnterEvent *event) {
+    // If the drag is originated in this window, ignore it.
+    // This is needed when an archive contains another archive, as with deb packages.
+    if(event->source()) {
+        event->ignore();
+        return;
+    }
+    if(event->mimeData()->hasUrls()) {
+        const auto urlList = event->mimeData()->urls();
+        if(!urlList.isEmpty()) {
+            auto url = urlList.at(0);
+            if(!url.isEmpty()) {
+                const auto mimeType = Fm::MimeType::guessFromFileName(url.toEncoded().constData())->name();
+                if(archiver_->supportedOpenMimeTypes().contains(QString::fromUtf8(mimeType))) {
+                    event->acceptProposedAction();
+                    return;
+                }
+            }
+        }
+    }
+    event->ignore();
+}
+
+void MainWindow::dropEvent(QDropEvent* event) {
+    if(event->mimeData()->hasUrls()) {
+        const auto urlList = event->mimeData()->urls();
+        if(!urlList.isEmpty()) {
+            auto url = urlList.at(0);
+            if(!url.isEmpty()) {
+                auto path = Fm::FilePath::fromUri(url.toEncoded().constData());
+                if(path.hasParent()) {
+                    lasrDir_ = QUrl::fromEncoded(QByteArray(path.parent().uri().get()));
+                }
+                loadFile(path);
+                raise();
+                activateWindow();
+            }
+        }
+    }
+    event->acceptProposedAction();
 }
 
 void MainWindow::setFileName(const QString &fileName) {
     QString title = tr("File Archiver");
     if(!fileName.isEmpty()) {
-        title = fileName + " - " + title;
+        title = fileName + QStringLiteral(" - ") + title;
     }
     setWindowTitle(title);
 }
 
 void MainWindow::on_actionCreateNew_triggered(bool /*checked*/) {
     CreateFileDialog dlg{this};
-
+    dlg.setDirectory(lasrDir_);
     if(dlg.exec() == QDialog::Accepted) {
+        if(!tempDir_.isEmpty()) { // remove the last temp dir
+            QDir(tempDir_).removeRecursively();
+        }
         password_ = dlg.password().toStdString();
         encryptHeader_ = dlg.encryptFileList();
         splitVolumes_ = dlg.splitVolumes();
         volumeSize_ = dlg.volumeSize();
 
-        auto url = dlg.selectedFiles()[0];
+        const auto url = dlg.selectedFiles().at(0);
         if(!url.isEmpty()) {
+            lasrDir_ = dlg.directory();
             archiver_->createNewArchive(url);
         }
     }
@@ -187,10 +291,10 @@ void MainWindow::on_actionOpen_triggered(bool /*checked*/) {
     dlg.setAcceptMode(QFileDialog::AcceptOpen);
     dlg.setDirectory(lasrDir_);
     if(dlg.exec() == QDialog::Accepted) {
-        auto url = dlg.selectedFiles()[0];
+        const auto url = dlg.selectedFiles().at(0);
         if(!url.isEmpty()) {
             lasrDir_ = dlg.directory();
-            loadFile(Fm::FilePath::fromUri(url.toEncoded()));
+            loadFile(Fm::FilePath::fromUri(url.toEncoded().constData()));
         }
     }
 }
@@ -259,7 +363,7 @@ void MainWindow::on_actionAddFolder_triggered(bool /*checked*/) {
         return;
     }
 
-    QUrl dirUrl = dlg.selectedFiles()[0];
+    const QUrl dirUrl = dlg.selectedFiles().at(0);
     if(!dirUrl.isEmpty()) {
         lasrDir_ = dlg.directory();
         auto path = Fm::FilePath::fromUri(dirUrl.toEncoded().constData());
@@ -305,12 +409,14 @@ void MainWindow::on_actionExtract_triggered(bool /*checked*/) {
         dlg.setExtractSelected(true);
     }
 
+    dlg.setDirectory(lasrDir_);
     if(dlg.exec() != QDialog::Accepted) {
         return;
     }
 
-    QUrl dirUrl = dlg.selectedFiles()[0];
+    const QUrl dirUrl = dlg.selectedFiles().at(0);
     if(!dirUrl.isEmpty()) {
+        lasrDir_ = dlg.directory();
         if(archiver_->isEncrypted() && password_.empty()) {
             password_ = PasswordDialog::askPassword(this).toStdString();
         }
@@ -342,34 +448,44 @@ void MainWindow::on_actionExtract_triggered(bool /*checked*/) {
     }
 }
 
-void MainWindow::tempExtractCurFile(bool launch) {
-    launchPath_.clear();
+void MainWindow::viewSelectedFiles() {
+    launchPaths_.clear();
     if(tempDir_.isEmpty()) {
         return;
     }
     if(auto selModel = ui_->fileListView->selectionModel()) {
-        QModelIndex idx = selModel->currentIndex();
-        auto item = itemFromIndex(idx);
-        if(item && !item->isDir()) {
-            const QString fileName = tempDir_ + item->fullPath();
-            if(QFile::exists(fileName)) { // already extracted under tmp
-                if(launch) {
-                    Fm::FilePathList paths;
-                    paths.push_back(Fm::FilePath::fromLocalPath(fileName.toLocal8Bit().constData()));
-                    Fm::FileLauncher().launchPaths(nullptr, std::move(paths));
+        std::vector<const FileData*> files;
+        const QModelIndexList indexes = selModel->selectedRows();
+        for(const auto index : indexes) {
+            auto item = itemFromIndex(index);
+            if(item && !item->isDir()) {
+                const QString fileName = tempDir_ + QString::fromUtf8(item->fullPath());
+                launchPaths_ << fileName;
+                if(!QFile::exists(fileName)) {
+                    if(archiver_->isEncrypted() && password_.empty()) {
+                        password_ = PasswordDialog::askPassword(this).toStdString();
+                    }
+                    files.emplace_back(item->data());
                 }
-                return;
             }
+        }
 
-            if (launch) {
-              launchPath_ = fileName;
+        if(files.empty()) { // all files are already extracted; launch them together
+            if(!launchPaths_.empty()) {
+                Fm::FilePathList paths;
+                for(auto& launchPath : launchPaths_) {
+                    paths.push_back(Fm::FilePath::fromLocalPath(launchPath.toLocal8Bit().constData()));
+                }
+                Fm::FileLauncher().launchPaths(this, std::move(paths));
+                launchPaths_.clear();
             }
-
+        }
+        else {
             QString dest = tempDir_;
             QDir dir(tempDir_);
             const QString curDirPath = QString::fromStdString(currentDirPath_);
-            if(curDirPath.contains("/")) {
-                dest = tempDir_ + "/" + curDirPath.section("/", 0, -2);
+            if(curDirPath.contains(QLatin1String("/"))) {
+                dest = tempDir_ + QLatin1String("/") + curDirPath.section(QLatin1String("/"), 0, -2);
                 dir.mkpath(dest); // also creates "dir" if needed
             }
             else if(!dir.exists()) {
@@ -380,8 +496,7 @@ void MainWindow::tempExtractCurFile(bool launch) {
                 password_ = PasswordDialog::askPassword(this).toStdString();
             }
             auto destDir = Fm::FilePath::fromLocalPath(dest.toLocal8Bit().constData());
-            std::vector<const FileData*> files;
-            files.emplace_back(item->data());
+
             archiver_->extractFiles(files,
                                     destDir,
                                     currentDirPath_.c_str(),
@@ -394,8 +509,114 @@ void MainWindow::tempExtractCurFile(bool launch) {
     }
 }
 
+bool MainWindow::isExtracted(const ArchiverItem* item) {
+    if(item->isDir()) {
+        std::vector<const ArchiverItem *> children;
+        item->allChildren(children);
+        if(children.empty()) {
+            const QString fileName = tempDir_ + QString::fromUtf8(item->fullPath());
+            return QFile::exists(fileName);
+        }
+        for(auto child : children) {
+            if(child->isDir()) {
+                if(!isExtracted(child)) {
+                    return false;
+                }
+            }
+            else {
+                const QString fileName = tempDir_ + QString::fromUtf8(child->fullPath());
+                if(!QFile::exists(fileName)) {
+                    return false;
+                }
+            }
+        }
+    }
+    else {
+        const QString fileName = tempDir_ + QString::fromUtf8(item->fullPath());
+        return QFile::exists(fileName);
+    }
+    return true;
+}
+
+void MainWindow::onDragStarted() {
+    if(tempDir_.isEmpty()) {
+        return;
+    }
+    if(auto selModel = ui_->fileListView->selectionModel()) {
+        const QString curDirPath = QString::fromStdString(currentDirPath_);
+        QStringList fileNames;
+        std::vector<const FileData*> files;
+        const QModelIndexList indexes = selModel->selectedRows();
+        for(const auto idx : indexes) {
+            if(const auto item = itemFromIndex(idx)) {
+                const QString fullPath = QString::fromUtf8(item->fullPath());
+                // only children of the current directory (not "..")
+                if(fullPath.startsWith(curDirPath)) {
+                    const QString fileName = tempDir_
+                                             // without the ending "/"
+                                             + (fullPath.endsWith(QLatin1String("/"))
+                                                    ? fullPath.left(fullPath.size() - 1)
+                                                    : fullPath);
+                    fileNames << fileName;
+                    if(!isExtracted(item)) {
+                        if(archiver_->isEncrypted() && password_.empty()) {
+                            password_ = PasswordDialog::askPassword(this).toStdString();
+                        }
+                        files.emplace_back(item->data());
+                    }
+                }
+            }
+        }
+
+        if(!fileNames.isEmpty()) {
+            QPointer<QDrag> drag = new QDrag(this);
+            QMimeData* mimeData = new QMimeData;
+            QList<QUrl> urlList;
+            for(auto& file : fileNames) {
+                urlList << QUrl::fromLocalFile(file);
+            }
+            mimeData->setUrls(urlList);
+            drag->setMimeData(mimeData);
+            if(files.empty()) { // all files are already extracted
+                if(drag->exec(Qt::CopyAction) == Qt::IgnoreAction) {
+                    drag->deleteLater();
+                }
+            }
+            else { // wait until all files are extracted
+                connect(archiver_.get(), &Archiver::finish, this, [drag]() {
+                    if(drag && drag->exec(Qt::CopyAction) == Qt::IgnoreAction) {
+                        drag->deleteLater();
+                    }
+                });
+            }
+
+            if(!files.empty()) {
+                QString dest = tempDir_;
+                QDir dir(tempDir_);
+                if(curDirPath.contains(QLatin1String("/"))) {
+                    dest = tempDir_ + QLatin1String("/") + curDirPath.section(QLatin1String("/"), 0, -2);
+                    dir.mkpath(dest); // also creates "dir" if needed
+                }
+                else if(!dir.exists()) {
+                    dir.mkpath(tempDir_);
+                }
+                auto destDir = Fm::FilePath::fromLocalPath(dest.toLocal8Bit().constData());
+
+                archiver_->extractFiles(files,
+                                        destDir,
+                                        currentDirPath_.c_str(),
+                                        false,
+                                        true, // overwrite because a dir may have been only partly extracted
+                                        false,
+                                        password_.empty() ? nullptr : password_.c_str()
+                );
+            }
+        }
+    }
+}
+
 void MainWindow::on_actionView_triggered(bool /*checked*/) {
-    tempExtractCurFile(true);
+    viewSelectedFiles();
 }
 
 void MainWindow::on_actionTest_triggered(bool /*checked*/) {
@@ -417,6 +638,8 @@ void MainWindow::on_actionPassword_triggered(bool /*checked*/) {
 void MainWindow::on_actionDirTree_toggled(bool checked) {
     bool visible = checked && viewMode_ == ViewMode::DirTree;
     ui_->dirTreeView->setVisible(visible);
+    ui_->actionExpand->setEnabled(visible);
+    ui_->actionCollapse->setEnabled(visible);
 }
 
 void MainWindow::on_actionDirTreeMode_toggled(bool /*checked*/) {
@@ -429,6 +652,9 @@ void MainWindow::on_actionFlatListMode_toggled(bool /*checked*/) {
 
 void MainWindow::on_actionReload_triggered(bool /*checked*/) {
     if(archiver_->isLoaded()) {
+        if(!tempDir_.isEmpty()) { // remove the last temp dir
+            QDir(tempDir_).removeRecursively();
+        }
         archiver_->reloadArchive(nullptr);
     }
 }
@@ -442,7 +668,8 @@ void MainWindow::on_actionAbout_triggered(bool /*checked*/) {
     QDialog dlg{this};
     Ui::AboutDialog ui;
     ui.setupUi(&dlg);
-    ui.version->setText(tr("Version: %1").arg(LXQT_ARCHIVER_VERSION));
+    ui.iconLabel->setPixmap(QIcon::fromTheme(QStringLiteral("lxqt-archiver")).pixmap(64, 64));
+    ui.version->setText(tr("Version: %1").arg(QStringLiteral(LXQT_ARCHIVER_VERSION)));
     dlg.exec();
 }
 
@@ -476,14 +703,42 @@ void MainWindow::onFileListContextMenu(const QPoint &pos) {
 }
 
 void MainWindow::onFileListDoubleClicked(const QModelIndex & /*index*/) {
-    tempExtractCurFile(true);
+    viewSelectedFiles();
 }
 
 void MainWindow::onFileListActivated(const QModelIndex &index) {
-    auto item = itemFromIndex(index);
-    if(item && item->isDir()) {
-        chdir(item);
+    // This is only for clicking directories because QAbstractItemView::activated() may not
+    // cover Enter and Return alike. But onFileListEnterPressed() works with both of them.
+    if(QApplication::keyboardModifiers() == Qt::NoModifier) {
+        auto item = itemFromIndex(index);
+        if(item && item->isDir()) {
+            chdir(item);
+        }
     }
+}
+
+void MainWindow::onFileListEnterPressed() {
+    if(auto selModel = ui_->fileListView->selectionModel()){
+        const QModelIndexList indexes = selModel->selectedRows();
+        if(indexes.size() == 1) {
+            // change directory if a single directory item is selected
+            auto item = itemFromIndex(indexes.at(0));
+            if(item && item->isDir()) {
+                chdir(item);
+                return;
+            }
+        }
+        else if (indexes.isEmpty()) {
+            // select the current row if there is no selection
+            auto indx = selModel->currentIndex();
+            if(indx.isValid()) {
+                selModel->select(indx, QItemSelectionModel::Select | QItemSelectionModel::Rows);
+                return;
+            }
+        }
+    }
+    // otherwise, view the selected files
+    viewSelectedFiles();
 }
 
 void MainWindow::onInvalidateContent() {
@@ -567,6 +822,14 @@ void MainWindow::onActionFinished(FrAction action, ArchiverError err) {
     case FR_ACTION_CREATING_NEW_ARCHIVE:  // same as listing empty content
     case FR_ACTION_CREATING_ARCHIVE:           /* creating a local archive */
     case FR_ACTION_LISTING_CONTENT:            /* listing the content of the archive */
+        if(err.hasError()) {
+            // there has been a trouble with archive creation or listing; clear the tree
+            if(auto model = qobject_cast<QStandardItemModel*>(ui_->dirTreeView->model())) {
+                model->clear();
+            }
+            QMessageBox::critical(this, tr("Error"), err.message());
+            return;
+        }
         //qDebug("content listed");
         // content dir list of the archive is fully loaded
         updateDirTree();
@@ -576,7 +839,9 @@ void MainWindow::onActionFinished(FrAction action, ArchiverError err) {
         if(!currentDirItem_) {
             currentDirItem_ = archiver_->dirTreeRoot();
         }
-        chdir(currentDirItem_);
+        if(currentDirItem_) {
+            chdir(currentDirItem_);
+        }
 
         break;
     case FR_ACTION_DELETING_FILES:             /* deleting files from the archive */
@@ -599,14 +864,16 @@ void MainWindow::onActionFinished(FrAction action, ArchiverError err) {
         archiver_->reloadArchive(nullptr);
         break;
     case FR_ACTION_EXTRACTING_FILES:           /* extracting files */
-        if(!launchPath_.isEmpty()) {
-            if(!err.hasError() && QFile::exists(launchPath_)) {
-                Fm::FilePathList paths;
-                paths.push_back(Fm::FilePath::fromLocalPath(launchPath_.toLocal8Bit().constData()));
-                Fm::FileLauncher().launchPaths(this, std::move(paths));
+        if(!err.hasError()) {
+            Fm::FilePathList paths;
+            for(auto& launchPath : launchPaths_) {
+                if(QFile::exists(launchPath)) {
+                    paths.push_back(Fm::FilePath::fromLocalPath(launchPath.toLocal8Bit().constData()));
+                }
             }
-            launchPath_.clear();
+            Fm::FileLauncher().launchPaths(this, std::move(paths));
         }
+        launchPaths_.clear();
         break;
     case FR_ACTION_COPYING_FILES_TO_REMOTE:    /* copying extracted files to a remote location */
         break;
@@ -636,7 +903,7 @@ void MainWindow::onPropertiesFileInfoJobFinished() {
         auto dlg = new Fm::FilePropsDialog{infos, this};
         // FIXME: this relies on libfm-qt internals.
         // We need to add APIs to libfm-qt to let callers customize the file properties dialog.
-        QWidget* generalPage = dlg->findChild<QWidget*>("generalPage");
+        QWidget* generalPage = dlg->findChild<QWidget*>(QStringLiteral("generalPage"));
         if(generalPage) {
             auto fullSize = archiver_->uncompressedSize(); // actual uncompressed file size
             auto compSize = infos[0]->size(); // compressed file size
@@ -678,7 +945,7 @@ QList<QStandardItem *> MainWindow::createFileListRow(const ArchiverItem *file) {
     auto mtime = QDateTime::fromMSecsSinceEpoch(file->modifiedTime() * 1000);
 
     // FIXME: filename might not be UTF-8
-    QString name = viewMode_ == ViewMode::FlatList ? file->fullPath() : file->name();
+    QString name = viewMode_ == ViewMode::FlatList ? QString::fromUtf8(file->fullPath()) : QString::fromUtf8(file->name());
     auto nameItem = new QStandardItem{icon, name};
     nameItem->setData(QVariant::fromValue(file), ArchiverItemRole); // store the item pointer on the first column
     nameItem->setEditable(false);
@@ -718,7 +985,7 @@ void MainWindow::showFileList(const std::vector<const ArchiverItem *> &files) {
             if(parent) {
                 //qDebug("parent: %s", parent ? parent->fullPath() : "null");
                 auto parentRow = createFileListRow(parent);
-                parentRow[0]->setText("..");
+                parentRow[0]->setText(QStringLiteral(".."));
                 model->appendRow(parentRow);
             }
         }
@@ -739,8 +1006,22 @@ void MainWindow::showFileList(const std::vector<const ArchiverItem *> &files) {
     proxyModel_->setSourceModel(model);
 
     ui_->statusBar->showMessage(tr("%1 files").arg(files.size()));
-    // ui_->fileListView->header()->setSectionResizeMode(0, QHeaderView::Stretch);
-    ui_->fileListView->resizeColumnToContents(0);
+
+    //ui_->fileListView->header()->setSectionResizeMode(0, QHeaderView::Stretch);
+    QTimer::singleShot(0, this, [this] {
+        // remove filtering and reapply it after resizing columns to avoid ellipses
+        filter(QString());
+        const int n = ui_->fileListView->header()->count();
+        for(int i = 0; i < n; ++i) {
+            ui_->fileListView->resizeColumnToContents(i);
+        }
+        filter(ui_->filterLineEdit->text());
+
+        // give the focus to the file list view if needed
+        if(!ui_->dirTreeView->isVisible() && !ui_->filterLineEdit->isVisible()) {
+            ui_->fileListView->setFocus();
+        }
+    });
 }
 
 void MainWindow::showFlatFileList() {
@@ -775,6 +1056,8 @@ void MainWindow::updateUiStates() {
     bool canEdit = hasArchive && !inProgress;
     currentPathEdit_->setEnabled(canEdit);
     ui_->fileListView->setEnabled(canEdit);
+    ui_->actionFilter->setEnabled(canEdit);
+    ui_->filterLineEdit->setEnabled(canEdit);
     ui_->dirTreeView->setEnabled(canEdit);
     // FIXME support this later
     // ui_->actionSaveAs->setEnabled(canEdit);
@@ -800,7 +1083,7 @@ std::vector<const FileData*> MainWindow::selectedFiles(bool recursive) {
     // FIXME: use ArchiverItem instead of FileData
     auto selModel = ui_->fileListView->selectionModel();
     if(selModel) {
-        auto selIndexes = selModel->selectedRows();
+        const auto selIndexes = selModel->selectedRows();
         for(const auto& idx: selIndexes) {
             auto item = itemFromIndex(idx);
             if(item) {
@@ -877,14 +1160,20 @@ void MainWindow::updateDirTree() {
     auto archivePath = archiver_->currentArchivePath();
     auto contentType = archiver_->currentArchiveContentType();
     auto rootItem = model->item(0, 0);
-    rootItem->setText(archivePath.baseName().get());
-    if(contentType) {
-        auto mimeType = Fm::MimeType::fromName(contentType);
-        if(mimeType && mimeType->icon()) {
-            rootItem->setIcon(mimeType->icon()->qicon());
+    if(rootItem) {
+        rootItem->setText(QString::fromUtf8(archivePath.baseName().get()));
+        if(contentType) {
+            auto mimeType = Fm::MimeType::fromName(contentType);
+            if(mimeType && mimeType->icon()) {
+                rootItem->setIcon(mimeType->icon()->qicon());
+            }
         }
     }
     connect(ui_->dirTreeView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &MainWindow::onDirTreeSelectionChanged);
+
+    if(ui_->dirTreeView->isVisible()) {
+        ui_->dirTreeView->setFocus();
+    }
 }
 
 void MainWindow::buildDirTree(QStandardItem *parent, const ArchiverItem *root) {
@@ -894,7 +1183,7 @@ void MainWindow::buildDirTree(QStandardItem *parent, const ArchiverItem *root) {
         QIcon qicon = iconInfo ? iconInfo->qicon() : QIcon();
 
         // FIXME: root->name() might not be UTF-8
-        auto item = new QStandardItem{qicon, root->name()};
+        auto item = new QStandardItem{qicon, QString::fromUtf8(root->name())};
 
         item->setEditable(false);
         item->setData(QVariant::fromValue(root), ArchiverItemRole);
@@ -924,8 +1213,12 @@ void MainWindow::chdir(std::string dirPath) {
 }
 
 void MainWindow::chdir(const ArchiverItem *dir) {
+    // first remove filtering
+    ui_->filterLineEdit->clear();
+    ui_->filterLineEdit->setVisible(false);
+
     currentDirPath_ = dir->fullPath();
-    currentPathEdit_->setText(dir->fullPath());
+    currentPathEdit_->setText(QString::fromUtf8(dir->fullPath()));
     currentDirItem_ = dir;
     if(viewMode_ == ViewMode::DirTree) {
         showCurrentDirList();
@@ -956,17 +1249,56 @@ void MainWindow::setViewMode(MainWindow::ViewMode viewMode) {
         switch(viewMode) {
         case ViewMode::DirTree:
             ui_->dirTreeView->setVisible(ui_->actionDirTree->isChecked());
+            ui_->actionExpand->setEnabled(ui_->actionDirTree->isChecked());
+            ui_->actionCollapse->setEnabled(ui_->actionDirTree->isChecked());
             showCurrentDirList();
             break;
         case ViewMode::FlatList:
-            // always hide dir tree view in flast list mode
+            // always hide dir tree view in flat list mode but remember splitter position first
+            splitterPos_ = ui_->splitter->sizes().at(0);
             ui_->dirTreeView->hide();
+            ui_->actionExpand->setEnabled(false);
+            ui_->actionCollapse->setEnabled(false);
             showFlatFileList();
             break;
         }
     }
 }
 
+void MainWindow::filter(const QString& text) {
+    if(proxyModel_) {
+        proxyModel_->setFilterStr(text);
+    }
+}
+
+void MainWindow::on_actionFilter_triggered(bool /*checked*/) {
+    ui_->filterLineEdit->clear();
+    if(!ui_->filterLineEdit->isVisible()) {
+        ui_->filterLineEdit->setVisible(true);
+        ui_->filterLineEdit->setFocus();
+    }
+    else {
+        ui_->fileListView->setFocus();
+        ui_->filterLineEdit->setVisible(false);
+    }
+}
+
 std::shared_ptr<Archiver> MainWindow::archiver() const {
     return archiver_;
 }
+
+void MainWindow::on_actionExpand_triggered(bool /*checked*/) {
+    ui_->dirTreeView->expandAll();
+    // also, make the current index visible
+    if(auto selModel = ui_->dirTreeView->selectionModel()) {
+        QModelIndex idx = selModel->currentIndex();
+        if(idx.isValid()) {
+            ui_->dirTreeView->scrollTo(idx);
+        }
+    }
+}
+
+void MainWindow::on_actionCollapse_triggered(bool /*checked*/) {
+	ui_->dirTreeView->collapseAll();
+}
+

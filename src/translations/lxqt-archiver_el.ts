@@ -9,27 +9,27 @@
         <translation>Σχετικά</translation>
     </message>
     <message>
-        <location filename="../about.ui" line="24"/>
+        <location filename="../about.ui" line="34"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Αρχειοθέτης LXQt&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../about.ui" line="47"/>
+        <location filename="../about.ui" line="57"/>
         <source>A simple and desktop-agnostic Qt file archiver</source>
         <translation>Ένας απλός και αγνώστου γραφικού περιβάλλοντος αρχειοθέτης σε Qt</translation>
     </message>
     <message>
-        <location filename="../about.ui" line="57"/>
+        <location filename="../about.ui" line="67"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://lxqt.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://lxqt.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../about.ui" line="77"/>
+        <location filename="../about.ui" line="87"/>
         <source>Authors</source>
         <translation>Συγγραφείς</translation>
     </message>
     <message>
-        <location filename="../about.ui" line="86"/>
+        <location filename="../about.ui" line="96"/>
         <source>Programming:
 * Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;
 
@@ -46,12 +46,12 @@ LXQt Archiver is derived from the following programs:
 </translation>
     </message>
     <message>
-        <location filename="../about.ui" line="103"/>
+        <location filename="../about.ui" line="113"/>
         <source>License</source>
         <translation>Άδεια χρήσης</translation>
     </message>
     <message>
-        <location filename="../about.ui" line="112"/>
+        <location filename="../about.ui" line="122"/>
         <source>LXQt Archiver
 
 Copyright (C) 2018 the LXQt Team
@@ -93,17 +93,17 @@ USA.</translation>
 <context>
     <name>Archiver</name>
     <message>
-        <location filename="../archiver.cpp" line="64"/>
+        <location filename="../archiver.cpp" line="66"/>
         <source>Archive type not supported.</source>
         <translation>Ο τύπος αρχειοθήκης δεν υποστηρίζεται.</translation>
     </message>
     <message>
-        <location filename="../archiver.cpp" line="267"/>
+        <location filename="../archiver.cpp" line="310"/>
         <source>*%1 files (*%1)</source>
         <translation>*%1 αρχεία (*%1)</translation>
     </message>
     <message>
-        <location filename="../archiver.cpp" line="271"/>
+        <location filename="../archiver.cpp" line="314"/>
         <source>All supported formats</source>
         <translation>Όλες οι υποστηριζόμενες μορφές</translation>
     </message>
@@ -232,325 +232,357 @@ USA.</translation>
     <name>MainWindow</name>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
-        <location filename="../mainwindow.cpp" line="158"/>
+        <location filename="../mainwindow.cpp" line="258"/>
         <source>File Archiver</source>
         <translation>Αρχειοθέτης</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="97"/>
+        <location filename="../mainwindow.ui" line="77"/>
+        <source>Filter Files...</source>
+        <translation>Φιλτράρισμα αρχείων...</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="98"/>
         <source>&amp;File</source>
         <translation>&amp;Αρχείο</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="112"/>
+        <location filename="../mainwindow.ui" line="113"/>
         <source>&amp;Edit</source>
         <translation>&amp;Επεξεργασία</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="131"/>
+        <location filename="../mainwindow.ui" line="132"/>
         <source>&amp;View</source>
         <translation>&amp;Προβολή</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="146"/>
+        <location filename="../mainwindow.ui" line="152"/>
         <source>&amp;Help</source>
         <translation>&amp;Βοήθεια</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="157"/>
-        <source>toolBar</source>
-        <translation>Γραμμή εργαλείων</translation>
+        <location filename="../mainwindow.ui" line="163"/>
+        <source>Main Toolbar</source>
+        <translation>Κύρια εργαλειοθήκη</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="182"/>
+        <location filename="../mainwindow.ui" line="191"/>
         <source>&amp;About</source>
         <translation>&amp;Σχετικά</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="191"/>
+        <location filename="../mainwindow.ui" line="200"/>
         <source>&amp;New</source>
         <translation>&amp;Νέο</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="194"/>
+        <location filename="../mainwindow.ui" line="203"/>
         <source>Ctrl+N</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="203"/>
+        <location filename="../mainwindow.ui" line="212"/>
         <source>&amp;Open</source>
         <translation>Ά&amp;νοιγμα</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="206"/>
+        <location filename="../mainwindow.ui" line="215"/>
         <source>Ctrl+O</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="214"/>
+        <location filename="../mainwindow.ui" line="223"/>
         <source>Save &amp;As</source>
         <translation>Αποθήκευση &amp;ως</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="223"/>
+        <location filename="../mainwindow.ui" line="232"/>
         <source>&amp;Extract</source>
         <translation>&amp;Εξαγωγή</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="228"/>
+        <location filename="../mainwindow.ui" line="237"/>
         <source>&amp;Test</source>
         <translation>&amp;Δοκιμή</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="236"/>
+        <location filename="../mainwindow.ui" line="245"/>
         <source>&amp;Properties</source>
         <translation>&amp;Ιδιότητες</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="239"/>
+        <location filename="../mainwindow.ui" line="248"/>
         <source>Alt+Return</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="248"/>
+        <location filename="../mainwindow.ui" line="257"/>
         <source>&amp;Close</source>
         <translation>&amp;Κλείσιμο</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="251"/>
+        <location filename="../mainwindow.ui" line="260"/>
         <source>Ctrl+Q</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="259"/>
+        <location filename="../mainwindow.ui" line="268"/>
         <source>Cu&amp;t</source>
         <translation>Α&amp;ποκοπή</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="262"/>
+        <location filename="../mainwindow.ui" line="271"/>
         <source>Ctrl+X</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="270"/>
+        <location filename="../mainwindow.ui" line="279"/>
         <source>&amp;Copy</source>
         <translation>&amp;Αντιγραφή</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="273"/>
+        <location filename="../mainwindow.ui" line="282"/>
         <source>Ctrl+C</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="281"/>
+        <location filename="../mainwindow.ui" line="290"/>
         <source>&amp;Paste</source>
         <translation>Επι&amp;κόλληση</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="284"/>
+        <location filename="../mainwindow.ui" line="293"/>
         <source>Ctrl+V</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="292"/>
+        <location filename="../mainwindow.ui" line="301"/>
         <source>&amp;Rename</source>
         <translation>&amp;Μετονομασία</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="295"/>
+        <location filename="../mainwindow.ui" line="304"/>
         <source>F2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="300"/>
+        <location filename="../mainwindow.ui" line="309"/>
         <source>&amp;Delete</source>
         <translation>&amp;Διαγραφή</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="303"/>
+        <location filename="../mainwindow.ui" line="312"/>
         <source>Del</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="308"/>
+        <location filename="../mainwindow.ui" line="317"/>
         <source>&amp;Select All</source>
         <translation>&amp;Επιλογή όλων</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="311"/>
+        <location filename="../mainwindow.ui" line="320"/>
         <source>Ctrl+A</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="319"/>
+        <location filename="../mainwindow.ui" line="328"/>
         <source>&amp;Find</source>
         <translation>&amp;Αναζήτηση</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="322"/>
+        <location filename="../mainwindow.ui" line="331"/>
+        <location filename="../mainwindow.ui" line="444"/>
         <source>Ctrl+F</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="331"/>
+        <location filename="../mainwindow.ui" line="340"/>
         <source>&amp;Add Files</source>
         <translation>&amp;Προσθήκη αρχείων</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="340"/>
+        <location filename="../mainwindow.ui" line="349"/>
         <source>Add F&amp;older</source>
         <translation>Προσθήκη &amp;φακέλου</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="345"/>
+        <location filename="../mainwindow.ui" line="354"/>
         <source>Pass&amp;word</source>
         <translation>Κωδικός &amp;πρόσβασης</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="356"/>
+        <location filename="../mainwindow.ui" line="365"/>
         <source>&amp;Toolbar</source>
         <translation>&amp;Γραμμή εργαλείων</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="367"/>
+        <location filename="../mainwindow.ui" line="376"/>
         <source>&amp;Statusbar</source>
         <translation>&amp;Γραμμή κατάστασης</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="378"/>
+        <location filename="../mainwindow.ui" line="387"/>
         <source>&amp;Directory Tree</source>
         <translation>&amp;Δέντρο καταλόγων</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="389"/>
+        <location filename="../mainwindow.ui" line="398"/>
         <source>S&amp;how as Folder</source>
         <translation>Προβολή ως &amp;φάκελος</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="397"/>
+        <location filename="../mainwindow.ui" line="406"/>
         <source>Show &amp;All Files</source>
         <translation>Εμφάνιση ό&amp;λων των αρχείων</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="406"/>
+        <location filename="../mainwindow.ui" line="415"/>
         <source>St&amp;op</source>
         <translation>&amp;Διακοπή</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="409"/>
+        <location filename="../mainwindow.ui" line="418"/>
         <source>Esc</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="414"/>
+        <location filename="../mainwindow.ui" line="423"/>
         <source>&amp;Reload</source>
         <translation>&amp;Επαναφόρτωση</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="417"/>
+        <location filename="../mainwindow.ui" line="426"/>
         <source>F5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="422"/>
+        <location filename="../mainwindow.ui" line="431"/>
         <source>Filename &amp;Encoding</source>
         <translation>&amp;Κωδικοποίηση του ονόματος αρχείου</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="427"/>
-        <source>&amp;View Current Item</source>
-        <translation>&amp;Προβολή του τρέχοντος αντικειμένου</translation>
+        <location filename="../mainwindow.ui" line="436"/>
+        <source>&amp;View Selected Items</source>
+        <translation>&amp;Προβολή των επιλεγμένων αντικειμένων</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="185"/>
-        <location filename="../mainwindow.cpp" line="214"/>
-        <location filename="../mainwindow.cpp" line="247"/>
+        <location filename="../mainwindow.ui" line="441"/>
+        <source>&amp;Filter</source>
+        <translation>&amp;Φίλτρο</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="452"/>
+        <source>&amp;Expand</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="455"/>
+        <source>Ctrl+Shift+Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="463"/>
+        <source>&amp;Collapse</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="466"/>
+        <source>Ctrl+Shift+Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="289"/>
+        <location filename="../mainwindow.cpp" line="318"/>
+        <location filename="../mainwindow.cpp" line="351"/>
         <source>All files (*)</source>
         <translation>Όλα τα αρχεία (*)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="219"/>
-        <location filename="../mainwindow.cpp" line="252"/>
+        <location filename="../mainwindow.cpp" line="323"/>
+        <location filename="../mainwindow.cpp" line="356"/>
         <source>Add only if &amp;newer</source>
         <translation>Προσθήκη μόνο αν είναι &amp;νεώτερο</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="277"/>
+        <location filename="../mainwindow.cpp" line="381"/>
         <source>Confirm</source>
         <translation>Επιβεβαίωση</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="277"/>
+        <location filename="../mainwindow.cpp" line="381"/>
         <source>Are you sure you want to delete selected files?</source>
         <translation>Είστε σίγουρος-η ότι θέλετε να διαγράψετε τα επιλεγμένα αρχεία;</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="445"/>
+        <location filename="../mainwindow.cpp" line="672"/>
         <source>Version: %1</source>
         <translation>Έκδοση: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="504"/>
+        <location filename="../mainwindow.cpp" line="759"/>
         <source>%p %</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="587"/>
+        <location filename="../mainwindow.cpp" line="852"/>
         <source>Success</source>
         <translation>Επιτυχία</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="587"/>
+        <location filename="../mainwindow.cpp" line="852"/>
         <source>No errors have been found.</source>
         <translation>Δεν βρέθηκαν σφάλματα.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="620"/>
+        <location filename="../mainwindow.cpp" line="830"/>
+        <location filename="../mainwindow.cpp" line="887"/>
         <source>Error</source>
         <translation>Σφάλμα</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="648"/>
+        <location filename="../mainwindow.cpp" line="915"/>
         <source>N/A</source>
         <translation>Μ/Δ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="652"/>
+        <location filename="../mainwindow.cpp" line="919"/>
         <source>Uncompressed Size:</source>
         <translation>Αποσυμπιεσμένο μέγεθος:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="654"/>
+        <location filename="../mainwindow.cpp" line="921"/>
         <source>Compression Ratio:</source>
         <translation>Λόγος συμπίεσης:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="707"/>
+        <location filename="../mainwindow.cpp" line="974"/>
         <source>File name</source>
         <translation>Όνομα αρχείου</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="708"/>
+        <location filename="../mainwindow.cpp" line="975"/>
         <source>File Type</source>
         <translation>Τύπος αρχείου</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="709"/>
+        <location filename="../mainwindow.cpp" line="976"/>
         <source>File Size</source>
         <translation>Μέγεθος αρχείου</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="710"/>
+        <location filename="../mainwindow.cpp" line="977"/>
         <source>Modified</source>
         <translation>Τροποποιήθηκε</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="711"/>
+        <location filename="../mainwindow.cpp" line="978"/>
         <source>Encrypted</source>
         <translation>Κρυπτογραφημένο</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="741"/>
+        <location filename="../mainwindow.cpp" line="1008"/>
         <source>%1 files</source>
         <translation>%1 αρχεία</translation>
     </message>
@@ -601,8 +633,8 @@ USA.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="224"/>
-        <location filename="../main.cpp" line="264"/>
+        <location filename="../main.cpp" line="250"/>
+        <location filename="../main.cpp" line="290"/>
         <source>Error</source>
         <translation>Σφάλμα</translation>
     </message>
@@ -748,88 +780,93 @@ USA.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="34"/>
+        <source>Tar compressed with zstd (.tar.zst)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../corestrs.h" line="35"/>
         <source>Zoo (.zoo)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="35"/>
+        <location filename="../corestrs.h" line="36"/>
         <source>Zip (.zip)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="38"/>
-        <location filename="../corestrs.h" line="45"/>
-        <location filename="../corestrs.h" line="61"/>
-        <location filename="../main.cpp" line="216"/>
+        <location filename="../corestrs.h" line="39"/>
+        <location filename="../corestrs.h" line="46"/>
+        <location filename="../corestrs.h" line="62"/>
+        <location filename="../main.cpp" line="242"/>
         <source>Adding file: </source>
         <translation>Προσθήκη του αρχείου: </translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="39"/>
-        <location filename="../corestrs.h" line="48"/>
-        <location filename="../corestrs.h" line="63"/>
-        <location filename="../main.cpp" line="256"/>
+        <location filename="../corestrs.h" line="40"/>
+        <location filename="../corestrs.h" line="49"/>
+        <location filename="../corestrs.h" line="64"/>
+        <location filename="../main.cpp" line="282"/>
         <source>Extracting file: </source>
         <translation>Εξαγωγή του αρχείου: </translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="42"/>
+        <location filename="../corestrs.h" line="43"/>
         <source>%d %B %Y, %H:%M</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="46"/>
-        <location filename="../corestrs.h" line="62"/>
+        <location filename="../corestrs.h" line="47"/>
+        <location filename="../corestrs.h" line="63"/>
         <source>Removing file: </source>
         <translation>Αφαίρεση του αρχείου: </translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="47"/>
+        <location filename="../corestrs.h" line="48"/>
         <source>Deleting files from archive</source>
         <translation>Διαγραφή των αρχείων από την αρχειοθήκη</translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="49"/>
+        <location filename="../corestrs.h" line="50"/>
         <source>Recompressing archive</source>
         <translation>Επανασυμπίεση της αρχειοθήκης</translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="50"/>
+        <location filename="../corestrs.h" line="51"/>
         <source>Decompressing archive</source>
         <translation>Αποσυμπίεση της αρχειοθήκης</translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="53"/>
+        <location filename="../corestrs.h" line="54"/>
         <source>File not found.</source>
         <translation>Το αρχείο δε βρέθηκε.</translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="54"/>
+        <location filename="../corestrs.h" line="55"/>
         <source>Archive type not supported.</source>
         <translation>Ο τύπος της αρχειοθήκης δεν υποστηρίζεται.</translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="55"/>
+        <location filename="../corestrs.h" line="56"/>
         <source>Archive not found</source>
         <translation>Η αρχειοθήκη δεν βρέθηκε</translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="56"/>
+        <location filename="../corestrs.h" line="57"/>
         <source>You don&apos;t have the right permissions.</source>
         <translation>Δεν έχετε τις κατάλληλες άδειες.</translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="57"/>
+        <location filename="../corestrs.h" line="58"/>
         <source>This archive type cannot be modified</source>
         <translation>Ο τύπος της αρχειοθήκης δεν μπορεί να τροποποιηθεί</translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="58"/>
+        <location filename="../corestrs.h" line="59"/>
         <source>You can&apos;t add an archive to itself.</source>
         <translation>Δεν μπορείτε να προσθέσετε μια αρχειοθήκη στον εαυτό της.</translation>
     </message>
     <message>
-        <location filename="../corestrs.h" line="64"/>
+        <location filename="../corestrs.h" line="65"/>
         <source>Could not find the volume: %s</source>
         <translation>Αδύνατη η εύρεση του τόμου: %s</translation>
     </message>

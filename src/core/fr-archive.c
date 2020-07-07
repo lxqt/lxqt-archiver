@@ -553,12 +553,13 @@ get_mime_type_from_magic_numbers (GFile *file)
 		{ 7,  7, "**ACE**",                              "application/x-ace"           },
 		{ 0,  2, "\x60\xea",                             "application/x-arj"           },
 		{ 0,  3, "BZh",                                  "application/x-bzip2"         },
-		{ 0,  2, "\037\213",                             "application/x-gzip"          },
+		{ 0,  2, "\037\213",                             "application/gzip"            },
 		{ 0,  4, "LZIP",                                 "application/x-lzip"          },
 		{ 0,  9, "\x89\x4c\x5a\x4f\x00\x0d\x0a\x1a\x0a", "application/x-lzop",         },
 		{ 0,  4, "Rar!",                                 "application/x-rar"           },
 		{ 0,  4, "RZIP",                                 "application/x-rzip"          },
 		{ 0,  6, "\3757zXZ\000",                         "application/x-xz"            },
+		{ 0,  4, "\x28\xB5\x2F\xFD",                     "application/zstd"            },
 		{ 20, 4, "\xdc\xa7\xc4\xfd",                     "application/x-zoo",          },
 		{ 0,  4, "PK\003\004",                           "application/zip"             },
 		{ 0,  8, "PK00PK\003\004",                       "application/zip"             },
@@ -1753,7 +1754,7 @@ g_print("src_dir: %s, dst: %s\n", base_dir, dest_dir);
 		fr_process_add_arg (archive->process, tmp_archive_filename);
 		fr_process_add_arg (archive->process, archive_filename);
 		fr_process_end_command (archive->process);
-return;
+
 		/* remove the temp sub-directory */
 
 		fr_process_begin_command (archive->process, "rm");
@@ -3192,6 +3193,11 @@ g_print("dest fn: %s\n", dest_filename);
 
 		if (extract_all)
 			path_list_free (file_list);
+
+		fr_archive_action_completed (archive,
+					     FR_ACTION_EXTRACTING_FILES,
+					     FR_PROC_ERROR_NONE,
+					     NULL);
 		return;
 	}
 

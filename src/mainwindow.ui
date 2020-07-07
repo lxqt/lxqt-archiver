@@ -14,7 +14,7 @@
    <string>File Archiver</string>
   </property>
   <property name="windowIcon">
-   <iconset theme="application-x-archive">
+   <iconset theme="lxqt-archiver">
     <normaloff>.</normaloff>.</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -49,6 +49,12 @@
        <property name="sizeAdjustPolicy">
         <enum>QAbstractScrollArea::AdjustIgnored</enum>
        </property>
+       <property name="iconSize">
+        <size>
+         <width>24</width>
+         <height>24</height>
+        </size>
+       </property>
        <attribute name="headerVisible">
         <bool>false</bool>
        </attribute>
@@ -56,28 +62,23 @@
         <number>0</number>
        </attribute>
       </widget>
-      <widget class="QTreeView" name="fileListView">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="selectionMode">
-        <enum>QAbstractItemView::ExtendedSelection</enum>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>24</width>
-         <height>24</height>
-        </size>
-       </property>
-       <property name="rootIsDecorated">
-        <bool>false</bool>
-       </property>
-       <attribute name="headerShowSortIndicator" stdset="0">
-        <bool>true</bool>
-       </attribute>
-       <attribute name="headerStretchLastSection">
-        <bool>false</bool>
-       </attribute>
+      <widget class="QWidget" name="verticalLayoutWidget">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="FileTreeView" name="fileListView">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="filterLineEdit">
+          <property name="placeholderText">
+           <string>Filter Files...</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
@@ -138,8 +139,13 @@
     <addaction name="actionFlatListMode"/>
     <addaction name="actionDirTreeMode"/>
     <addaction name="separator"/>
+    <addaction name="actionExpand"/>
+    <addaction name="actionCollapse"/>
+    <addaction name="separator"/>
     <addaction name="actionStop"/>
     <addaction name="actionReload"/>
+    <addaction name="separator"/>
+    <addaction name="actionFilter"/>
    </widget>
    <widget class="QMenu" name="menu_Help">
     <property name="title">
@@ -154,7 +160,10 @@
   </widget>
   <widget class="QToolBar" name="toolBar">
    <property name="windowTitle">
-    <string>toolBar</string>
+    <string>Main Toolbar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
    </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
@@ -424,10 +433,48 @@
   </action>
   <action name="actionView">
    <property name="text">
-    <string>&amp;View Current Item</string>
+    <string>&amp;View Selected Items</string>
+   </property>
+  </action>
+  <action name="actionFilter">
+   <property name="text">
+    <string>&amp;Filter</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="actionExpand">
+   <property name="icon">
+    <iconset theme="expand-all"/>
+   </property>
+   <property name="text">
+    <string>&amp;Expand</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Down</string>
+   </property>
+  </action>
+  <action name="actionCollapse">
+   <property name="icon">
+    <iconset theme="collapse-all"/>
+   </property>
+   <property name="text">
+    <string>&amp;Collapse</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Up</string>
    </property>
   </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>FileTreeView</class>
+   <extends>QTreeview</extends>
+   <header>filetreeView.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections>
   <connection>

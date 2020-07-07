@@ -3,6 +3,7 @@ add_subdirectory(core)
 include_directories(
     core
     ${GLIB_INCLUDE_DIRS}
+    ${GLIB_JSON_INCLUDE_DIRS}
     ${CMAKE_BINARY_DIR}
     ${CMAKE_CURRENT_BINARY_DIR}
 )
@@ -18,6 +19,7 @@ set(lxqt-archiver_SRCS
     passworddialog.cpp
     createfiledialog.cpp
     extractfiledialog.cpp
+    filetreeView.cpp
 )
 
 set(lxqt-archiver_UI
@@ -63,10 +65,10 @@ target_compile_definitions(lxqt-archiver
 
 target_link_libraries(lxqt-archiver
     Qt5::Widgets
-    Qt5::DBus
     fm-qt
     lxqt-archiver-core
-    ${GLIB_LDFLAGS}
+    ${GLIB_LIBRARIES}
+    ${GLIB_JSON_LDFLAGS}
 )
 
 install(TARGETS
@@ -79,4 +81,9 @@ install(FILES
     ${DESKTOP_FILES}
     DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications"
     COMPONENT Runtime
+)
+
+install(
+    FILES icons/lxqt-archiver.svg
+    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/scalable/apps"
 )

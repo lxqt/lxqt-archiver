@@ -12,6 +12,8 @@ extern "C" {
 
 #include <QMimeDatabase>
 #include <QMimeType>
+#include <QFile>
+#include <QDir>
 
 #include <unordered_map>
 
@@ -197,6 +199,47 @@ void Archiver::extractFiles(const std::vector<const FileData*>& files, const Fm:
 }
 
 void Archiver::extractAll(const char* destDirUri, bool skip_older, bool overwrite, bool junk_path, const char* password) {
+    if(!overwrite && rootItem_) {
+        // if the archive has multiple files but no parent folder, make a directory
+        // and extract them in it, instead of putting them among existing files
+        if(rootItem_->children().size() > 1
+           || (rootItem_->children().size() == 1
+               && rootItem_->children()[0]->isDir()
+               && (rootItem_->children()[0]->name() == nullptr
+                   || strcmp(rootItem_->children()[0]->name(), ".") == 0))) { // may happen with rpm
+            auto dirUrl = QUrl::fromEncoded(destDirUri);
+            if(dirUrl.isLocalFile()) {
+                QString dirName = archiveDisplayName().section(QStringLiteral("/"), -1);
+                if(dirName.contains(QStringLiteral("."))) {
+                    dirName = dirName.section(QStringLiteral("."), 0, -2);
+                }
+                if(dirName.isEmpty()) { // this is possible (as in ".zip")
+                    dirName = QStringLiteral("lxqt-archiver-extracted");
+                }
+
+                QString extDir = dirUrl.toLocalFile();
+                if(!extDir.endsWith(QStringLiteral("/"))) {
+                    extDir += QStringLiteral("/");
+                }
+                extDir += dirName;
+
+                // don't overwrite but make a directory
+                QString suffix;
+                int i = 0;
+                while(QFile::exists(extDir + suffix)) {
+                    suffix = QStringLiteral("-") + QString::number(i);
+                    i++;
+                }
+                extDir += suffix;
+                QDir dir(extDir);
+                dir.mkpath(extDir);
+
+                dirUrl = QUrl::fromLocalFile(extDir);
+                extractFiles(nullptr, dirUrl.toEncoded().constData(), nullptr, skip_older, false, junk_path, password);
+                return;
+            }
+        }
+    }
     extractFiles(nullptr, destDirUri, nullptr, skip_older, overwrite, junk_path, password);
 }
 
@@ -220,22 +263,22 @@ void Archiver::testArchiveIntegrity(const char* password) {
 QStringList Archiver::supportedCreateMimeTypes() {
     QStringList types;
     for(auto p = create_type; *p != -1; ++p) {
-        types << mime_type_desc[*p].mime_type;
+        types << QString::fromUtf8(mime_type_desc[*p].mime_type);
     }
     return types;
 }
 
 static QString suffixesToNameFilter(QString name, const QStringList& suffixes) {
     QString filter = std::move(name);
-    filter += " (";
+    filter += QLatin1String(" (");
     for(const auto& suffix: suffixes) {
-        if(filter[filter.length() - 1] != '(') {
-            filter += ' ';
+        if(filter[filter.length() - 1] != QLatin1Char('(')) {
+            filter += QLatin1Char(' ');
         }
-        filter += "*.";
+        filter += QLatin1String("*.");
         filter += suffix;
     }
-    filter += ")";
+    filter += QLatin1String(")");
     return filter;
 }
 
@@ -253,18 +296,18 @@ QStringList Archiver::mimeDescToNameFilters(int* mimeDescIndexes) {
     QStringList allSuffixes;
     QMimeDatabase mimeDb;
     for(auto p = mimeDescIndexes; *p != -1; ++p) {
-        auto mimeType = mimeDb.mimeTypeForName(mime_type_desc[*p].mime_type);
+        auto mimeType = mimeDb.mimeTypeForName(QString::fromUtf8(mime_type_desc[*p].mime_type));
         QString filter;
         if(mimeType.isValid()) {
             auto suffixes = mimeType.suffixes();
             if(suffixes.empty()) {
-                suffixes.append(mime_type_desc[*p].default_ext);
+                suffixes.append(QString::fromUtf8(mime_type_desc[*p].default_ext));
             }
             filter = suffixesToNameFilter(mimeType.comment(), suffixes);
             allSuffixes += suffixes;
         }
         else {
-            filter = tr("*%1 files (*%1)").arg(mime_type_desc[*p].default_ext);
+            filter = tr("*%1 files (*%1)").arg(QString::fromUtf8(mime_type_desc[*p].default_ext));
         }
         filters << filter;
     }
@@ -279,7 +322,7 @@ QStringList Archiver::supportedCreateNameFilters() {
 QStringList Archiver::supportedOpenMimeTypes() {
     QStringList types;
     for(auto p = open_type; *p != -1; ++p) {
-        types << mime_type_desc[*p].mime_type;
+        types << QString::fromUtf8(mime_type_desc[*p].mime_type);
     }
     return types;
 
@@ -292,7 +335,7 @@ QStringList Archiver::supportedOpenNameFilters() {
 QStringList Archiver::supportedSaveMimeTypes() {
     QStringList types;
     for(auto p = save_type; *p != -1; ++p) {
-        types << mime_type_desc[*p].mime_type;
+        types << QString::fromUtf8(mime_type_desc[*p].mime_type);
     }
     return types;
 }
@@ -330,7 +373,7 @@ void Archiver::rebuildDirTree() {
 
     // create one ArchiverItem per file and build dir_path => ArchiverItem mappings
     items_.reserve(n_files);
-    for(int i = 0; i < n_files; ++i) {
+    for(unsigned int i = 0; i < n_files; ++i) {
         auto fileData = reinterpret_cast<FileData*>(g_ptr_array_index(frArchive_->command->files, i));
         items_.emplace_back(new ArchiverItem{fileData, false}); // do not take ownership of the existing FileData object
         auto item = items_.back().get();
@@ -355,7 +398,7 @@ void Archiver::rebuildDirTree() {
     // So we create the missing items by ourselves :-(
 
     // for each item, ensure all its parent dirs exist and setup the parent-child links
-    for(int i = 0; i < n_files; ++i) {
+    for(unsigned int i = 0; i < n_files; ++i) {
         auto item = items_[i].get();
         while(strcmp(item->fullPath(), "/")) {
             ArchiverItem* parent = nullptr;
@@ -561,5 +604,5 @@ void Archiver::onStoppable(FrArchive*, gboolean value, Archiver* _this) {
 void Archiver::onWorkingArchive(FrCommand* comm, const char* filename, Archiver* _this) {
     // FIXME: why the first param is comm?
     //qDebug("working: %s", filename);
-    Q_EMIT _this->workingArchive(filename);
+    Q_EMIT _this->workingArchive(QString::fromUtf8(filename));
 }

@@ -1056,7 +1056,7 @@ g_copy_file_async (GFile                 *source,
 }
 
 
-void
+/*void
 g_copy_uris_async (GList                 *sources,
 		   GList                 *destinations,
 		   GFileCopyFlags         flags,
@@ -1116,7 +1116,7 @@ g_copy_uri_async (const char            *source,
 
 	g_list_free (source_list);
 	g_list_free (destination_list);
-}
+}*/
 
 
 /* -- g_directory_copy_async -- */

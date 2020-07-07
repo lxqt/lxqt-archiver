@@ -37,7 +37,7 @@ get_mime_type_from_magic_numbers (char *buffer)
 		int         len;
 	} sniffer_data [] = {
 		{ "application/x-bzip2", "BZh", 0, 3 },
-		{ "application/x-gzip", "\037\213", 0, 2 },
+		{ "application/gzip", "\037\213", 0, 2 },
 		{ "application/x-xz", "\3757zXZ\000", 0, 6 },
 		{ NULL, NULL, 0 }
 	};
@@ -122,7 +122,7 @@ main (int argc, char **argv)
 		archive_command = "lzma -dc";
 	else if (strcmp (mime_type, "application/x-xz") == 0)
 		archive_command = "xz -dc";
-	else if (strcmp (mime_type, "application/x-gzip") == 0)
+	else if (strcmp (mime_type, "application/gzip") == 0)
 		archive_command = "gzip -dc";
 	else
 		archive_command = "bzip2 -dc";

@@ -54,6 +54,10 @@ public:
 
     void chdir(const ArchiverItem* dir);
 
+protected:
+    virtual void dropEvent(QDropEvent* event) override;
+    virtual void dragEnterEvent(QDragEnterEvent* event) override;
+
 private Q_SLOTS:
     // action slots
     void on_actionCreateNew_triggered(bool checked);
@@ -84,11 +88,17 @@ private Q_SLOTS:
 
     void on_actionFlatListMode_toggled(bool checked);
 
+    void on_actionExpand_triggered(bool checked);
+
+    void on_actionCollapse_triggered(bool checked);
+
     void on_actionReload_triggered(bool checked);
 
     void on_actionStop_triggered(bool checked);
 
     void on_actionAbout_triggered(bool checked);
+
+    void on_actionFilter_triggered(bool checked);
 
     void onDirTreeSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
 
@@ -99,6 +109,10 @@ private Q_SLOTS:
     void onFileListDoubleClicked(const QModelIndex &index);
 
     void onFileListActivated(const QModelIndex &index);
+
+    void onFileListEnterPressed();
+
+    void filter(const QString& text);
 
 private Q_SLOTS:
     // Archiver slots
@@ -116,6 +130,8 @@ private Q_SLOTS:
     void onStoppableChanged(bool stoppable);
 
     void onPropertiesFileInfoJobFinished();
+
+    void onDragStarted();
 
 private:
     void setFileName(const QString& fileName);
@@ -142,7 +158,9 @@ private:
 
     QModelIndex indexFromItem(const QModelIndex& parent, const ArchiverItem* item);
 
-    void tempExtractCurFile(bool launch);
+    void viewSelectedFiles();
+
+    bool isExtracted(const ArchiverItem* item);
 
 private:
     std::unique_ptr<Ui::MainWindow> ui_;
@@ -161,8 +179,10 @@ private:
     unsigned int volumeSize_;
 
     QString tempDir_;
-    QString launchPath_;
+    QStringList launchPaths_;
     QUrl lasrDir_;
+
+    int splitterPos_;
 };
 
 #endif // MAINWINDOW_H

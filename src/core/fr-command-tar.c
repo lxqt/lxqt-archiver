@@ -224,6 +224,9 @@ add_compress_arg (FrCommand *comm)
 		else
 			fr_process_add_arg (comm->process, "--use-compress-program=xz");
 
+	else if (is_mime_type (comm->mime_type, "application/x-zstd-compressed-tar"))
+		fr_process_add_arg (comm->process, "--use-compress-program=zstd");
+
 	else if (is_mime_type (comm->mime_type, "application/x-lzop-compressed-tar"))
 		fr_process_add_arg (comm->process, "--use-compress-program=lzop");
 
@@ -648,6 +651,27 @@ fr_command_tar_recompress (FrCommand *comm)
 
 		new_name = g_strconcat (c_tar->uncomp_filename, ".xz", NULL);
 	}
+	else if (is_mime_type (comm->mime_type, "application/x-zstd-compressed-tar")) {
+		fr_process_begin_command (comm->process, "zstd");
+		fr_process_set_begin_func (comm->process, begin_func__recompress, comm);
+		switch (comm->compression) {
+		case FR_COMPRESSION_VERY_FAST:
+			fr_process_add_arg (comm->process, "-1"); break;
+		case FR_COMPRESSION_FAST:
+			fr_process_add_arg (comm->process, "-2"); break;
+		case FR_COMPRESSION_NORMAL:
+			fr_process_add_arg (comm->process, "-3"); break;
+		case FR_COMPRESSION_MAXIMUM:
+			fr_process_add_arg (comm->process, "--ultra");
+			fr_process_add_arg (comm->process, "-22");
+			break;
+		}
+		fr_process_add_arg (comm->process, "-f");
+		fr_process_add_arg (comm->process, c_tar->uncomp_filename);
+		fr_process_end_command (comm->process);
+
+		new_name = g_strconcat (c_tar->uncomp_filename, ".zst", NULL);
+	}
 	else if (is_mime_type (comm->mime_type, "application/x-lzop-compressed-tar")) {
 		fr_process_begin_command (comm->process, "lzop");
 		fr_process_set_begin_func (comm->process, begin_func__recompress, comm);
@@ -813,6 +837,17 @@ get_uncompressed_name (FrCommandTar *c_tar,
 		else if (file_extension_is (e_filename, ".tar.xz"))
 			new_name[l - 3] = 0;
 	}
+	else if (is_mime_type (comm->mime_type, "application/x-zstd-compressed-tar")) {
+		/* X.tzst    -->  X.tar
+		 * X.tar.zst -->  X.tar */
+		if (file_extension_is (e_filename, ".tzst")) {
+			new_name[l - 3] = 'a';
+			new_name[l - 2] = 'r';
+			new_name[l - 1] = 0;
+		}
+		else if (file_extension_is (e_filename, ".tar.zst"))
+			new_name[l - 4] = 0;
+	}
 	else if (is_mime_type (comm->mime_type, "application/x-lzop-compressed-tar")) {
 		/* X.tzo     -->  X.tar
 		 * X.tar.lzo -->  X.tar */
@@ -947,6 +982,14 @@ fr_command_tar_uncompress (FrCommand *comm)
 			fr_process_add_arg (comm->process, tmp_name);
 			fr_process_end_command (comm->process);
 		}
+		else if (is_mime_type (comm->mime_type, "application/x-zstd-compressed-tar")) {
+			fr_process_begin_command (comm->process, "zstd");
+			fr_process_set_begin_func (comm->process, begin_func__uncompress, comm);
+			fr_process_add_arg (comm->process, "-f");
+			fr_process_add_arg (comm->process, "-d");
+			fr_process_add_arg (comm->process, tmp_name);
+			fr_process_end_command (comm->process);
+		}
 		else if (is_mime_type (comm->mime_type, "application/x-lzop-compressed-tar")) {
 			fr_process_begin_command (comm->process, "lzop");
 			fr_process_set_begin_func (comm->process, begin_func__uncompress, comm);
@@ -1001,6 +1044,7 @@ const char *tar_mime_types[] = { "application/x-compressed-tar",
 			         "application/x-lzop-compressed-tar",
 			         "application/x-tarz",
 				 "application/x-xz-compressed-tar",
+				 "application/x-zstd-compressed-tar",
 			         NULL };
 
 
@@ -1055,6 +1099,10 @@ fr_command_tar_get_capabilities (FrCommand  *comm,
 	}
 	else if (is_mime_type (mime_type, "application/x-xz-compressed-tar")) {
 		if (is_program_available ("xz", check_command))
+			capabilities |= FR_COMMAND_CAN_READ_WRITE;
+	}
+	else if (is_mime_type (mime_type, "application/x-zstd-compressed-tar")) {
+		if (is_program_available ("zstd", check_command))
 			capabilities |= FR_COMMAND_CAN_READ_WRITE;
 	}
 	else if (is_mime_type (mime_type, "application/x-lzop-compressed-tar")) {
@@ -1119,6 +1167,8 @@ fr_command_tar_get_packages (FrCommand  *comm,
 		return PACKAGES ("tar,lzma");
 	else if (is_mime_type (mime_type, "application/x-xz-compressed-tar"))
 		return PACKAGES ("tar,xz");
+	else if (is_mime_type (mime_type, "application/x-zstd-compressed-tar"))
+		return PACKAGES ("tar,zstd");
 	else if (is_mime_type (mime_type, "application/x-lzop-compressed-tar"))
 		return PACKAGES ("tar,lzop");
 	else if (is_mime_type (mime_type, "application/x-7z-compressed-tar"))
