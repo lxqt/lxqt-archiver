@@ -282,7 +282,7 @@ almış olmalısınız; Yoksa, Özgür Yazılım Vakfı Şirketi&apos;ne yazın.
     <message>
         <location filename="../mainwindow.ui" line="212"/>
         <source>&amp;Open</source>
-        <translation>&amp;Açık</translation>
+        <translation>&amp;Aç</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="215"/>
@@ -473,22 +473,22 @@ almış olmalısınız; Yoksa, Özgür Yazılım Vakfı Şirketi&apos;ne yazın.
     <message>
         <location filename="../mainwindow.ui" line="452"/>
         <source>&amp;Expand</source>
-        <translation type="unfinished"></translation>
+        <translation>G&amp;enişlet</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="455"/>
         <source>Ctrl+Shift+Down</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="463"/>
         <source>&amp;Collapse</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Daralt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="466"/>
         <source>Ctrl+Shift+Up</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="289"/>
@@ -779,7 +779,7 @@ almış olmalısınız; Yoksa, Özgür Yazılım Vakfı Şirketi&apos;ne yazın.
     <message>
         <location filename="../corestrs.h" line="34"/>
         <source>Tar compressed with zstd (.tar.zst)</source>
-        <translation type="unfinished"></translation>
+        <translation>zstd (.tar.zst) ile sıkıştırılmış tar</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="35"/>
