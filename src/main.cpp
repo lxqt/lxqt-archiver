@@ -211,6 +211,7 @@ static int runApp(QApplication& app) {
             if(dlg.exec() == QDialog::Accepted) {
                 const auto url = dlg.selectedFiles().at(0);
                 if(url.isEmpty()) {
+                    g_free(extract_to_uri);
                     return 1;
                 }
                 add_to_uri = g_strdup(url.toEncoded().constData());
