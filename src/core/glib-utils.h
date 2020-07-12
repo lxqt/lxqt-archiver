@@ -67,9 +67,6 @@ const char *        get_last_field               (const char  *line,
 int                 n_fields                     (char       **str_array);
 char *              get_time_string              (time_t       time);
 /*GPtrArray *         g_ptr_array_copy             (GPtrArray   *array);*/
-void                g_ptr_array_free_full        (GPtrArray   *array,
-                       				  GFunc        func,
-                       				  gpointer     user_data);
 /*void                g_ptr_array_reverse          (GPtrArray   *array);
 int                 g_ptr_array_binary_search    (GPtrArray   *array,
 						  gpointer     value,
