@@ -1005,7 +1005,7 @@ void MainWindow::showFileList(const std::vector<const ArchiverItem *> &files) {
 
     proxyModel_->setSourceModel(model);
 
-    ui_->statusBar->showMessage(tr("%1 files").arg(files.size()));
+    ui_->statusBar->showMessage(tr("%n file(s)", "", files.size()));
 
     //ui_->fileListView->header()->setSectionResizeMode(0, QHeaderView::Stretch);
     QTimer::singleShot(0, this, [this] {
