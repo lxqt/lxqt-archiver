@@ -11,12 +11,12 @@
     <message>
         <location filename="../about.ui" line="34"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt arhivsko orodje&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Arhivsko orodje LXQt&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="57"/>
         <source>A simple and desktop-agnostic Qt file archiver</source>
-        <translation>Enostavno Qt arhivsko orodje neodvisno od namizja</translation>
+        <translation>Enostavno arhivsko orodje Qt za vsa okolja</translation>
     </message>
     <message>
         <location filename="../about.ui" line="67"/>
@@ -54,7 +54,7 @@ LXQt Archiver izvira iz naslednjih programov:
         <location filename="../about.ui" line="122"/>
         <source>LXQt Archiver
 
-Copyright (C) 2018 the LXQt Team
+Copyright (C) 2020 the LXQt Team
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -71,7 +71,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
         <translation>LXQt Archiver
 
-Copyright (C) 2018 ekipa LXQt
+Copyright (C) 2020 ekipa LXQt
 
 Ta program spada med prosto programje; lahko ga razširjate in/ali
 spreminjate pod pogoji Splošnega dovoljenja GNU (GNU General Public
@@ -94,12 +94,13 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archiver.cpp" line="66"/>
         <source>Archive type not supported.</source>
-        <translation>Tip arhiva ni podprt.</translation>
+        <translatorcomment>https://wiki.lugos.si/slovenjenje:pravila</translatorcomment>
+        <translation>Ta vrsta arhiva ni podprta.</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="310"/>
         <source>*%1 files (*%1)</source>
-        <translation>*%1 datotek (*%1)</translation>
+        <translation>Datoteke %1 (*%1)</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="314"/>
@@ -112,37 +113,37 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="25"/>
         <source>Failed to execute the command.</source>
-        <translation>Izvedba ukaza neuspešna.</translation>
+        <translation>Ukaza ni bilo možno izvesti.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
         <source>Command is not found.</source>
-        <translation>Ukaz ni najden.</translation>
+        <translation>Ukaz ne obstaja.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="31"/>
         <source>The command exited abnormally.</source>
-        <translation>Ukaz se je zaključil z napako.</translation>
+        <translation>Ukaz ni uspel.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="34"/>
         <source>Password is required.</source>
-        <translation>Geslo je zahtevano.</translation>
+        <translation>Potrebno je geslo.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="37"/>
         <source>Missing volume.</source>
-        <translation type="unfinished"></translation>
+        <translation>Manjka nosilec.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="40"/>
         <source>Bad charset.</source>
-        <translation>Slab nabor znakov.</translation>
+        <translation>Neznan nabor znakov.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="43"/>
         <source>Unsupported file format.</source>
-        <translation>Nepodprt format datoteke.</translation>
+        <translation>Format datoteke ni podprt.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="46"/>
@@ -155,12 +156,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../create.ui" line="26"/>
         <source> MiB</source>
-        <translation> MiB</translation>
-    </message>
-    <message>
-        <location filename="../create.ui" line="36"/>
-        <source>Split into volumes of</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../create.ui" line="43"/>
@@ -171,6 +167,11 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../create.ui" line="50"/>
         <source>Encrypt the file list too</source>
         <translation>Šifriraj tudi seznam datotek</translation>
+    </message>
+    <message>
+        <location filename="../create.ui" line="36"/>
+        <source>Split into volumes of</source>
+        <translation>Razdeli med nosilce velikosti</translation>
     </message>
 </context>
 <context>
@@ -278,7 +279,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="203"/>
         <source>Ctrl+N</source>
-        <translation>Ctrl+N</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="212"/>
@@ -288,7 +289,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="215"/>
         <source>Ctrl+O</source>
-        <translation>Ctrl+O</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="223"/>
@@ -323,7 +324,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="260"/>
         <source>Ctrl+Q</source>
-        <translation>Ctrl+Q</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="268"/>
@@ -333,7 +334,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="271"/>
         <source>Ctrl+X</source>
-        <translation>Ctrl+X</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="279"/>
@@ -343,7 +344,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="282"/>
         <source>Ctrl+C</source>
-        <translation>Ctrl+C</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="290"/>
@@ -353,7 +354,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="293"/>
         <source>Ctrl+V</source>
-        <translation>Ctrl+V</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="301"/>
@@ -363,7 +364,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="304"/>
         <source>F2</source>
-        <translation>F2</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="309"/>
@@ -373,7 +374,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="312"/>
         <source>Del</source>
-        <translation>Del</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="317"/>
@@ -383,7 +384,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="320"/>
         <source>Ctrl+A</source>
-        <translation>Ctrl+A</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="328"/>
@@ -394,12 +395,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../mainwindow.ui" line="331"/>
         <location filename="../mainwindow.ui" line="444"/>
         <source>Ctrl+F</source>
-        <translation>Ctrl+F</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="340"/>
         <source>&amp;Add Files</source>
-        <translation>&amp;Dodaj datoteke</translation>
+        <translation>Dodaj &amp;datoteke</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="349"/>
@@ -444,27 +445,28 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="418"/>
         <source>Esc</source>
-        <translation>Esc</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="423"/>
         <source>&amp;Reload</source>
-        <translation>&amp;Ponovno naloži</translation>
+        <translatorcomment>https://wiki.lugos.si/slovenjenje:pojmovnik</translatorcomment>
+        <translation>Znova &amp;naloži</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="426"/>
         <source>F5</source>
-        <translation>F5</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="431"/>
         <source>Filename &amp;Encoding</source>
-        <translation>&amp;Kodiranje datoteke</translation>
+        <translation>&amp;Kodiranje imen datotek</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="436"/>
         <source>&amp;View Selected Items</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pokaži izbrane datoteke</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="441"/>
@@ -474,22 +476,24 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="452"/>
         <source>&amp;Expand</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>https://wiki.lugos.si/slovenjenje:pravila</translatorcomment>
+        <translation>&amp;Razširi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="455"/>
         <source>Ctrl+Shift+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Dol</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="463"/>
         <source>&amp;Collapse</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>https://wiki.lugos.si/slovenjenje:pravila</translatorcomment>
+        <translation>&amp;Zloži</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="466"/>
         <source>Ctrl+Shift+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Gor</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="289"/>
@@ -522,7 +526,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="759"/>
         <source>%p %</source>
-        <translation>%p %</translation>
+        <translatorcomment>Non-breaking space.</translatorcomment>
+        <translation>%p&#xa0;%</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="852"/>
@@ -548,27 +553,28 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="919"/>
         <source>Uncompressed Size:</source>
-        <translation>Nestisnjena velikost:</translation>
+        <translation>Razširjena velikost:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="921"/>
         <source>Compression Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation>Razmerje stiskanja:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="974"/>
         <source>File name</source>
-        <translation>Ime datoteke</translation>
+        <translation>Ime</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="975"/>
         <source>File Type</source>
-        <translation>Tip datoteke</translation>
+        <translatorcomment>https://wiki.lugos.si/slovenjenje:pravila</translatorcomment>
+        <translation>Vrsta</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="976"/>
         <source>File Size</source>
-        <translation>Velikost datoteke</translation>
+        <translation>Velikost</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="977"/>
@@ -580,10 +586,15 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <source>Encrypted</source>
         <translation>Šifrirana</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1008"/>
-        <source>%1 files</source>
-        <translation>%1 datotek</translation>
+        <source>%n file(s)</source>
+        <translation>
+            <numerusform>%n datoteka</numerusform>
+            <numerusform>%n datoteki</numerusform>
+            <numerusform>%n datoteke</numerusform>
+            <numerusform>%n datotek</numerusform>
+        </translation>
     </message>
 </context>
 <context>
@@ -626,14 +637,15 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../progressdialog.cpp" line="16"/>
         <source>%p %</source>
-        <translation>%p %</translation>
+        <translatorcomment>Non-breaking space.</translatorcomment>
+        <translation>%p&#xa0;%</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="250"/>
-        <location filename="../main.cpp" line="290"/>
+        <location filename="../main.cpp" line="248"/>
+        <location filename="../main.cpp" line="288"/>
         <source>Error</source>
         <translation>Napaka</translation>
     </message>
@@ -705,7 +717,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="19"/>
         <source>Self-extracting zip (.exe)</source>
-        <translation type="unfinished"></translation>
+        <translation>Samostojen zip (.exe)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="20"/>
@@ -745,7 +757,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="27"/>
         <source>Windows Imaging Format (.wim)</source>
-        <translation type="unfinished"></translation>
+        <translation>Windows Imaging Format (.wim)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="28"/>
@@ -780,7 +792,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="34"/>
         <source>Tar compressed with zstd (.tar.zst)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar stisnjen z zstd (.tar.zst)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="35"/>
@@ -793,18 +805,18 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <translation>Zip (.zip)</translation>
     </message>
     <message>
+        <location filename="../main.cpp" line="240"/>
         <location filename="../corestrs.h" line="39"/>
         <location filename="../corestrs.h" line="46"/>
         <location filename="../corestrs.h" line="62"/>
-        <location filename="../main.cpp" line="242"/>
         <source>Adding file: </source>
         <translation>Dodajanje datoteke: </translation>
     </message>
     <message>
+        <location filename="../main.cpp" line="280"/>
         <location filename="../corestrs.h" line="40"/>
         <location filename="../corestrs.h" line="49"/>
         <location filename="../corestrs.h" line="64"/>
-        <location filename="../main.cpp" line="282"/>
         <source>Extracting file: </source>
         <translation>Razširjanje datoteke: </translation>
     </message>
@@ -842,7 +854,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="55"/>
         <source>Archive type not supported.</source>
-        <translation>Tip arhiva ni podprt.</translation>
+        <translatorcomment>https://wiki.lugos.si/slovenjenje:pravila</translatorcomment>
+        <translation>Ta vrsta arhiva ni podprta.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="56"/>
@@ -857,17 +870,18 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="58"/>
         <source>This archive type cannot be modified</source>
-        <translation>Tega tipa arhiva ni mogoče urejati</translation>
+        <translatorcomment>https://wiki.lugos.si/slovenjenje:pravila</translatorcomment>
+        <translation>Arhiva te vrste ni mogoče urejati</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="59"/>
         <source>You can&apos;t add an archive to itself.</source>
-        <translation type="unfinished"></translation>
+        <translation>Arhiva ni mogoče dodati samemu sebi.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="65"/>
         <source>Could not find the volume: %s</source>
-        <translation type="unfinished"></translation>
+        <translation>Nosilec ni bil najden: %s</translation>
     </message>
 </context>
 </TS>
