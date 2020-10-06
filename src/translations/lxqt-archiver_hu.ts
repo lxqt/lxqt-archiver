@@ -48,7 +48,7 @@ Az LXQt Archiváló a következő programokból származik:
     <message>
         <location filename="../about.ui" line="113"/>
         <source>License</source>
-        <translation>Licensz</translation>
+        <translation>Licenc</translation>
     </message>
     <message>
         <location filename="../about.ui" line="122"/>
@@ -74,16 +74,16 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
 Copyright (C) 2018 az LXQt Csapat
 
 Ez egy szabad szoftver, ami a Free Software Foundation által
-megjelentetett GNU General Public Licenc 2-es, vagy későbbi
+megjelentetett GNU General Public License 2-es, vagy későbbi
 verzióiban felsorolt feltételekkel szabadon terjeszthető, módosítható.
 
 A megjelentetők remélik, hogy a program hasznos, viszont
 SEMMILYEN GARANCIÁT NEM VÁLLALNAK, beleértve áttételesen az
 ÜZLETI célú hasznosítására, továbbá a SPECIÁLIS CÉLRA TÖRTÉNŐ
-HASZNÁLHATÓSÁGÁRA sem. További részletek a GNU General Public Licensz soraiban.
+HASZNÁLHATÓSÁGÁRA sem. További részletek a GNU General Public License soraiban.
 
 Ezzel a programmal együtt meg kellett kapnia a GNU General
-Public Licensz másolatát is, ha nem, akkor írjon a Free Software
+Public License másolatát is, ha nem, akkor írjon a Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA címre.</translation>
     </message>
 </context>
@@ -778,7 +778,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../corestrs.h" line="34"/>
         <source>Tar compressed with zstd (.tar.zst)</source>
-        <translation type="unfinished"></translation>
+        <translation>Zstd-vel tömörített tar (.tar.zst)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="35"/>
