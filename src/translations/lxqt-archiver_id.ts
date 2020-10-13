@@ -262,7 +262,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="163"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Bilah Alat Utama</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="191"/>
@@ -468,7 +468,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="441"/>
         <source>&amp;Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Filter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="452"/>
@@ -478,7 +478,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="455"/>
         <source>Ctrl+Shift+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Down</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="463"/>
@@ -488,7 +488,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="466"/>
         <source>Ctrl+Shift+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Up</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="289"/>
