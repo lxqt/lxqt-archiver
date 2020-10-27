@@ -475,22 +475,22 @@ Boston, MA  02110-1301, USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="452"/>
         <source>&amp;Expand</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ausklappen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="455"/>
         <source>Ctrl+Shift+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Strg+Umschalt+Unten</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="463"/>
         <source>&amp;Collapse</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Einklappen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="466"/>
         <source>Ctrl+Shift+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Strg+Umschalt+Oben</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="289"/>
@@ -781,7 +781,7 @@ Boston, MA  02110-1301, USA.</translation>
     <message>
         <location filename="../corestrs.h" line="34"/>
         <source>Tar compressed with zstd (.tar.zst)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar komprimiert mit zstd (.tar.zst)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="35"/>
