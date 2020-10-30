@@ -182,13 +182,12 @@ fr_command_rpm_list (FrCommand *comm)
 {
 	fr_process_set_out_line_func (comm->process, list__process_line, comm);
 
-	char *rpm2cpio_path = g_build_filename (PRIVEXECDIR, "rpm2cpio", NULL);
-	fr_process_begin_command (comm->process, "sh");
-	fr_process_add_arg (comm->process, "-c");
-	fr_process_add_arg_concat (comm->process, rpm2cpio_path, " ", comm->e_filename, " -itv", NULL);
+	fr_process_begin_command (comm->process, "bsdtar");
+	fr_process_add_arg (comm->process, "-f");
+	fr_process_add_arg (comm->process, comm->filename);
+	fr_process_add_arg (comm->process, "-tv");
 	fr_process_end_command (comm->process);
 	fr_process_start (comm->process);
-	g_free (rpm2cpio_path);
 }
 
 
@@ -202,27 +201,16 @@ fr_command_rpm_extract (FrCommand  *comm,
 			gboolean    junk_paths)
 {
 	GList   *scan;
-	GString *cmd;
 
-	fr_process_begin_command (comm->process, "sh");
+	fr_process_begin_command (comm->process, "bsdtar");
 	if (dest_dir != NULL)
-                fr_process_set_working_dir (comm->process, dest_dir);
-	fr_process_add_arg (comm->process, "-c");
-
-	char *rpm2cpio_path = g_build_filename (PRIVEXECDIR, "rpm2cpio", NULL);
-	cmd = g_string_new (rpm2cpio_path);
-	g_string_append (cmd, " ");
-	g_string_append (cmd, comm->e_filename);
-	g_string_append (cmd, " -idu ");
+        fr_process_set_working_dir (comm->process, dest_dir);
+	fr_process_add_arg (comm->process, "-f");
+	fr_process_add_arg (comm->process, comm->filename);
+	fr_process_add_arg (comm->process, "-x");
 	for (scan = file_list; scan; scan = scan->next) {
-		char *filename = g_shell_quote (scan->data);
-		g_string_append (cmd, filename);
-		g_free (filename);
-		g_string_append (cmd, " ");
+		fr_process_add_arg (comm->process, scan->data);
 	}
-	fr_process_add_arg (comm->process, cmd->str);
-	g_string_free (cmd, TRUE);
-	g_free (rpm2cpio_path);
 
 	fr_process_end_command (comm->process);
 }

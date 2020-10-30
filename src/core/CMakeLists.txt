@@ -6,7 +6,6 @@ include_directories(
 
 add_definitions(
     -DSHDIR=\"${CMAKE_INSTALL_LIBEXECDIR}/lxqt-archiver\"
-    -DPRIVEXECDIR=\"${CMAKE_INSTALL_LIBEXECDIR}/lxqt-archiver\"
 )
 
 add_library(lxqt-archiver-core STATIC
@@ -50,20 +49,6 @@ target_link_libraries(lxqt-archiver-core
     ${GLIB_LIBRARIES}
     ${GLIB_JSON_LDFLAGS}
 )
-
-add_executable(rpm2cpio
-    commands/rpm2cpio.c
-)
-target_link_libraries(rpm2cpio
-    ${GLIB_LIBRARIES}
-    ${GLIB_JSON_LDFLAGS}
-)
-install(TARGETS
-    rpm2cpio
-    DESTINATION "${CMAKE_INSTALL_LIBEXECDIR}/lxqt-archiver"
-    COMPONENT Runtime
-)
-
 
 set(SCRIPT_FILES
     sh/isoinfo.sh
