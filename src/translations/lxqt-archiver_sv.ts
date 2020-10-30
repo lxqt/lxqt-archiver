@@ -54,7 +54,7 @@ LXQt Archiver härrör från följande program:
         <location filename="../about.ui" line="122"/>
         <source>LXQt Archiver
 
-Copyright (C) 2018 the LXQt Team
+Copyright (C) 2020 the LXQt Team
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -69,7 +69,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation>LXQt Arkiverare
+        <translation type="unfinished">LXQt Arkiverare
 
 Copyright (C) 2019 LXQt Teamet
 
@@ -85,7 +85,8 @@ garanti om SÄLJBARHET eller LÄMPLIGHET FÖR NÅGOT SPECIELLT
 
 Du ska ha fått en kopia av GNU General Public License tillsammans
 med detta program. Om inte, skriv till Free Software Foundation, Inc., 
-51 Franklin Steet, Fifth Floor, Boston, MA 02110- 1301 USA</translation>
+51 Franklin Steet, Fifth Floor, Boston, MA 02110- 1301 USA {2020 ?} {2
+?} {51 ?} {02110-1301,?}</translation>
     </message>
 </context>
 <context>
@@ -579,10 +580,13 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
         <source>Encrypted</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1008"/>
-        <source>%1 files</source>
-        <translation type="unfinished"></translation>
+        <source>%n file(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 <context>
@@ -631,8 +635,8 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="250"/>
-        <location filename="../main.cpp" line="290"/>
+        <location filename="../main.cpp" line="248"/>
+        <location filename="../main.cpp" line="288"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
@@ -795,7 +799,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
         <location filename="../corestrs.h" line="39"/>
         <location filename="../corestrs.h" line="46"/>
         <location filename="../corestrs.h" line="62"/>
-        <location filename="../main.cpp" line="242"/>
+        <location filename="../main.cpp" line="240"/>
         <source>Adding file: </source>
         <translation type="unfinished"></translation>
     </message>
@@ -803,7 +807,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
         <location filename="../corestrs.h" line="40"/>
         <location filename="../corestrs.h" line="49"/>
         <location filename="../corestrs.h" line="64"/>
-        <location filename="../main.cpp" line="282"/>
+        <location filename="../main.cpp" line="280"/>
         <source>Extracting file: </source>
         <translation type="unfinished"></translation>
     </message>

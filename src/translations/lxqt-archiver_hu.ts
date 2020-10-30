@@ -54,7 +54,7 @@ Az LXQt Archiváló a következő programokból származik:
         <location filename="../about.ui" line="122"/>
         <source>LXQt Archiver
 
-Copyright (C) 2018 the LXQt Team
+Copyright (C) 2020 the LXQt Team
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -69,7 +69,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation>LXQt Archiváló
+        <translation type="unfinished">LXQt Archiváló
 
 Copyright (C) 2018 az LXQt Csapat
 
@@ -84,7 +84,8 @@ HASZNÁLHATÓSÁGÁRA sem. További részletek a GNU General Public License sora
 
 Ezzel a programmal együtt meg kellett kapnia a GNU General
 Public License másolatát is, ha nem, akkor írjon a Free Software
-Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA címre.</translation>
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA címre. {2020 ?} {2
+?} {51 ?} {02110-1301,?}</translation>
     </message>
 </context>
 <context>
@@ -578,10 +579,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
         <source>Encrypted</source>
         <translation>Titkosított</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1008"/>
-        <source>%1 files</source>
-        <translation>%1 fájl</translation>
+        <source>%n file(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 <context>
@@ -630,8 +633,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="250"/>
-        <location filename="../main.cpp" line="290"/>
+        <location filename="../main.cpp" line="248"/>
+        <location filename="../main.cpp" line="288"/>
         <source>Error</source>
         <translation>Hiba</translation>
     </message>
@@ -794,7 +797,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
         <location filename="../corestrs.h" line="39"/>
         <location filename="../corestrs.h" line="46"/>
         <location filename="../corestrs.h" line="62"/>
-        <location filename="../main.cpp" line="242"/>
+        <location filename="../main.cpp" line="240"/>
         <source>Adding file: </source>
         <translation>Fájl hozzáadása: </translation>
     </message>
@@ -802,7 +805,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
         <location filename="../corestrs.h" line="40"/>
         <location filename="../corestrs.h" line="49"/>
         <location filename="../corestrs.h" line="64"/>
-        <location filename="../main.cpp" line="282"/>
+        <location filename="../main.cpp" line="280"/>
         <source>Extracting file: </source>
         <translation>Fájl kibontása: </translation>
     </message>
