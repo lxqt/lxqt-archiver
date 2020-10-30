@@ -54,7 +54,7 @@ LXQt Archiver dibuat bedasarkan dari program berikut ini:
         <location filename="../about.ui" line="122"/>
         <source>LXQt Archiver
 
-Copyright (C) 2018 the LXQt Team
+Copyright (C) 2020 the LXQt Team
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -69,7 +69,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation>LXQt Archiver
+        <translation type="unfinished">LXQt Archiver
 
 Hakcipta (C) 2018 the LXQt Team
 
@@ -85,7 +85,8 @@ GNU General Public License untuk lebih detil.
 
 Anda pasti sudah menerima tembusan daripada GNU General Public License
 bersama program ini; jika tidak, tulislah kepada the Free Software
-Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation>
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. {2020 ?} {2
+?} {51 ?} {02110-1301,?}</translation>
     </message>
 </context>
 <context>
@@ -579,10 +580,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <source>Encrypted</source>
         <translation>Terenkripsi</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1008"/>
-        <source>%1 files</source>
-        <translation>%1 berkas</translation>
+        <source>%n file(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 <context>
@@ -631,8 +634,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="250"/>
-        <location filename="../main.cpp" line="290"/>
+        <location filename="../main.cpp" line="248"/>
+        <location filename="../main.cpp" line="288"/>
         <source>Error</source>
         <translation>Kesalahan</translation>
     </message>
@@ -795,7 +798,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="39"/>
         <location filename="../corestrs.h" line="46"/>
         <location filename="../corestrs.h" line="62"/>
-        <location filename="../main.cpp" line="242"/>
+        <location filename="../main.cpp" line="240"/>
         <source>Adding file: </source>
         <translation>Menambahkan berkas: </translation>
     </message>
@@ -803,7 +806,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="40"/>
         <location filename="../corestrs.h" line="49"/>
         <location filename="../corestrs.h" line="64"/>
-        <location filename="../main.cpp" line="282"/>
+        <location filename="../main.cpp" line="280"/>
         <source>Extracting file: </source>
         <translation>Mengekstrak berkas: </translation>
     </message>

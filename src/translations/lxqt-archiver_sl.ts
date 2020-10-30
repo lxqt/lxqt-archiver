@@ -805,18 +805,18 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <translation>Zip (.zip)</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="240"/>
         <location filename="../corestrs.h" line="39"/>
         <location filename="../corestrs.h" line="46"/>
         <location filename="../corestrs.h" line="62"/>
+        <location filename="../main.cpp" line="240"/>
         <source>Adding file: </source>
         <translation>Dodajanje datoteke: </translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="280"/>
         <location filename="../corestrs.h" line="40"/>
         <location filename="../corestrs.h" line="49"/>
         <location filename="../corestrs.h" line="64"/>
+        <location filename="../main.cpp" line="280"/>
         <source>Extracting file: </source>
         <translation>Razširjanje datoteke: </translation>
     </message>
