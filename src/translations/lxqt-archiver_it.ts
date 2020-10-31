@@ -210,12 +210,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../mainwindow.ui" line="14"/>
         <location filename="../mainwindow.cpp" line="258"/>
         <source>File Archiver</source>
-        <translation type="unfinished">Archiviatore di file</translation>
+        <translation>Gestore di archivi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="77"/>
         <source>Filter Files...</source>
-        <translation type="unfinished">Filtra file...</translation>
+        <translation>Filtra file...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="98"/>
@@ -275,12 +275,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="232"/>
         <source>&amp;Extract</source>
-        <translation type="unfinished">Estrai</translation>
+        <translation>&amp;Estrai</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="237"/>
         <source>&amp;Test</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Prova</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="245"/>
@@ -406,7 +406,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="398"/>
         <source>S&amp;how as Folder</source>
-        <translation type="unfinished">Mostra come Cartella</translation>
+        <translation>&amp;Mostra come cartella</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="406"/>
@@ -436,7 +436,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="431"/>
         <source>Filename &amp;Encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Nomi file e &amp;codifica</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="436"/>
@@ -451,22 +451,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="452"/>
         <source>&amp;Expand</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Espandi</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="455"/>
         <source>Ctrl+Shift+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctlr+maiusc+giù</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="463"/>
         <source>&amp;Collapse</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Collassa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="466"/>
         <source>Ctrl+Shift+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctlr+maiusc+insù</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="289"/>
@@ -499,7 +499,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="759"/>
         <source>%p %</source>
-        <translation type="unfinished"></translation>
+        <translation>%p %</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="852"/>
@@ -560,9 +560,9 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1008"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n file</numerusform>
+            <numerusform>%n file</numerusform>
         </translation>
     </message>
 </context>
@@ -593,7 +593,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../passworddialog.ui" line="61"/>
         <source>&lt;i&gt;&lt;b&gt;Note:&lt;/b&gt; the password will be used to encrypt files you add to the current archive, and to decrypt files you extract from the current archive. When the archive is closed the password will be deleted.&lt;/i&gt;</source>
-        <translation type="unfinished">&lt;i&gt;&lt;b&gt;Nota:&lt;/b&gt; la password verrà utilizzata per crittografare i file aggiunti all&amp;#39;archivio corrente e per decrittografare i file estratti dall&amp;#39;archivio corrente&lt;/i&gt;</translation>
+        <translation>&lt;i&gt;&lt;b&gt;Nota:&lt;/b&gt; la password verrà utilizzata per crittografare i file aggiunti all&amp;#39;archivio corrente e per decrittare i file estratti dall&apos;archivio corrente&lt;/i&gt;</translation>
     </message>
 </context>
 <context>
@@ -606,7 +606,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../progressdialog.cpp" line="16"/>
         <source>%p %</source>
-        <translation type="unfinished"></translation>
+        <translation>%p %</translation>
     </message>
 </context>
 <context>
@@ -760,7 +760,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="34"/>
         <source>Tar compressed with zstd (.tar.zst)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar compresso con zstd (.tar.zst)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="35"/>
@@ -807,7 +807,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="50"/>
         <source>Recompressing archive</source>
-        <translation type="unfinished">Ricompressione dell&apos;archivio</translation>
+        <translation>Ricompatto l&apos;archivio</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="51"/>
@@ -832,7 +832,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="57"/>
         <source>You don&apos;t have the right permissions.</source>
-        <translation type="unfinished"></translation>
+        <translation>Permessi mancanti.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="58"/>

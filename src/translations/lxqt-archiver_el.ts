@@ -69,9 +69,9 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation type="unfinished">Αρχειοθέτης LXQt
+        <translation>Αρχειοθέτης LXQt
 
-Πνευματικά δικαιώματα (C)  - 2018 η ομάδα LXQt
+Πνευματικά δικαιώματα (C)  - 2020 η ομάδα LXQt
 
 Αυτό το πρόγραμμα είναι ένα ελεύθερο λογισμικό· επιτρέπεται
 η αναδιανομή ή/και η τροποποίησή του υπό τους όρους της άδειας
@@ -476,22 +476,22 @@ USA. {2020 ?} {2
     <message>
         <location filename="../mainwindow.ui" line="452"/>
         <source>&amp;Expand</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ανάπτυξη</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="455"/>
         <source>Ctrl+Shift+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Κάτω</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="463"/>
         <source>&amp;Collapse</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Σύμπτυξη</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="466"/>
         <source>Ctrl+Shift+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Πάνω</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="289"/>
@@ -585,9 +585,9 @@ USA. {2020 ?} {2
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1008"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n αρχείο</numerusform>
+            <numerusform>%n αρχεία</numerusform>
         </translation>
     </message>
 </context>
@@ -785,7 +785,7 @@ USA. {2020 ?} {2
     <message>
         <location filename="../corestrs.h" line="34"/>
         <source>Tar compressed with zstd (.tar.zst)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar συμπιεσμένο με zstd (.tar.zst)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="35"/>
