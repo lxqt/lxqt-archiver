@@ -234,7 +234,7 @@ fr_command_rpm_get_capabilities (FrCommand  *comm,
 	FrCommandCap capabilities;
 
 	capabilities = FR_COMMAND_CAN_ARCHIVE_MANY_FILES;
-	if (is_program_available ("cpio", check_command))
+	if (is_program_available ("bsdtar", check_command))
 		capabilities |= FR_COMMAND_CAN_READ;
 
 	return capabilities;
@@ -245,7 +245,7 @@ static const char *
 fr_command_rpm_get_packages (FrCommand  *comm,
 			     const char *mime_type)
 {
-	return PACKAGES ("cpio,rpm");
+	return PACKAGES ("bsdtar");
 }
 
 
