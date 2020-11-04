@@ -1,7 +1,7 @@
 lxqt-archiver-0.3.0 / 2020-11-01
 ===================================
   * Avoid memory leak in "java-utils.c".
-  * Fiixed comparison of integer expressions of different signedness.
+  * Fixed comparison of integer expressions of different signedness.
   * Removed "g_ptr_array_free_full" from "glib-utils.c" and used GLib's "g_ptr_array_free" instead.
   * Use bsdtar to handle RPM packages.
 
