@@ -129,7 +129,7 @@ list__process_line (char     *line,
 			comm->multi_volume = (strcmp (fields[1], "+") == 0);
 			g_strfreev (fields);
 		}
-		else if (strncmp (line, "Unexpected end of archive", 25) == 0)  { 
+		else if (strncmp (line, "Unexpected end of archive", 25) == 0)  {
 			unexpected_end_of_archive = TRUE;
 		}
 		return;
@@ -583,6 +583,7 @@ const char *sevenz_mime_types[] = { "application/x-7z-compressed",
 				    "application/x-arj",
 				    "application/vnd.ms-cab-compressed",
 				    "application/x-cd-image",
+				    "application/x-raw-disk-image",
 				    /*"application/x-cbr",*/
 				    "application/x-cbz",
 				    "application/x-ms-dos-executable",
