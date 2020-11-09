@@ -69,9 +69,9 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation type="unfinished">מנהל הארכיונים של LXQt
+        <translation>מנהל הארכיונים של LXQt
 
-כל הזכויות שמורות (C) 2018 לצוות LXQt
+כל הזכויות שמורות (C) 2020 לצוות LXQt
 
 תכנית זו מוגשת במסגרת תכנה חופשית, ניתן להפיץ ו/או לשנות
 תחת תנאי הרישיון הציבורי הכללי של GNU כפי שמופץ על ידי
@@ -83,9 +83,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
 ברישיון הציבורי הכללי של GNU לפרטים נוספים.
 
 לתכנית זו אמור היה להיות מצורף הרישיון הציבורי הכללי של GNU,
-אם לא, מוטב לשלוח מכתב אל Free Software Foundation, Inc.‎,
- 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. {2020 ?} {2
-?} {51 ?} {02110-1301,?}</translation>
+אם לא, מוטב לשלוח מכתב אל Free Software Foundation, Inc.,‎
+51‎ Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.‎</translation>
     </message>
 </context>
 <context>
@@ -582,9 +581,11 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1008"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>קובץ אחד</numerusform>
+            <numerusform>%n קבצים</numerusform>
+            <numerusform>%n קבצים</numerusform>
+            <numerusform>%n קבצים</numerusform>
         </translation>
     </message>
 </context>
