@@ -32,6 +32,8 @@ set(lxqt-archiver_UI
 )
 
 # Translations
+execute_process(COMMAND lxqt-ts2desktop WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/src)
+
 lxqt_translate_ts(lxqt-archiver_QM_FILES
     UPDATE_TRANSLATIONS
         ${UPDATE_TRANSLATIONS}
