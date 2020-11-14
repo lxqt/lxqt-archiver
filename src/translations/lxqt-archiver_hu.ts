@@ -69,7 +69,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation type="unfinished">LXQt Archiváló
+        <translation>LXQt Archiváló
 
 Copyright (C) 2018 az LXQt Csapat
 
@@ -84,8 +84,7 @@ HASZNÁLHATÓSÁGÁRA sem. További részletek a GNU General Public License sora
 
 Ezzel a programmal együtt meg kellett kapnia a GNU General
 Public License másolatát is, ha nem, akkor írjon a Free Software
-Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA címre. {2020 ?} {2
-?} {51 ?} {02110-1301,?}</translation>
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA címre.</translation>
     </message>
 </context>
 <context>
