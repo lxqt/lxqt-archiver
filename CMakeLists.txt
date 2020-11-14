@@ -50,3 +50,4 @@ include(LXQtCompilerSettings NO_POLICY_SCOPE)
 include(LXQtTranslate)
 
 add_subdirectory(src)
+
