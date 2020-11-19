@@ -69,7 +69,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation type="unfinished">LXQt Archiver
+        <translation>LXQt Archiver
 
 Urheberrecht (C) 2018 das LXQt Team
 
@@ -84,11 +84,10 @@ und ohne einer implizierten Garantie auf MARKTGÄNGIGKEIT
 oder ZWECKGEBUNDENER FUNKTIONSFÄHIGKEIT. Weitere 
 Einzelheiten sind in der &apos;GNU General Public License&apos; ersichtlich.
 
-Eine Kopie der &apos;GNU General Public License&apos; ist mit diesem 
-Programm enthalten. Falls nicht, schreiben Sie bitte der 
-Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, 
-Boston, MA  02110-1301, USA. {2020 ?} {2
-?} {51 ?} {02110-1301,?}</translation>
+Eine Kopie der &apos;GNU General Public License&apos; sollten sie zusammen 
+mit dieser Software enthalten haben. Falls nicht, kontaktieren Sie bitte 
+die Free Software Foundation, 51 Franklin Street, Fifth Floor, Boston, 
+MA 02110, USA.</translation>
     </message>
 </context>
 <context>
@@ -585,9 +584,9 @@ Boston, MA  02110-1301, USA. {2020 ?} {2
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1008"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n Datei</numerusform>
+            <numerusform>%n Dateien</numerusform>
         </translation>
     </message>
 </context>
