@@ -1,8 +1,5 @@
 [Desktop Entry]
 Version=1.0
-Name=LXQt File Archiver
-GenericName=File Archiver
-Comment=File Archiver for the LXQt Desktop
 Exec=lxqt-archiver %U
 Icon=lxqt-archiver
 StartupNotify=true
