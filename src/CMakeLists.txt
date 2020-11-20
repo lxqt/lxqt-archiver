@@ -46,6 +46,7 @@ lxqt_translate_ts(lxqt-archiver_QM_FILES
 lxqt_translate_desktop(DESKTOP_FILES
     SOURCES
     lxqt-archiver.desktop.in
+		USE_YAML
 )
 
 add_executable(lxqt-archiver
