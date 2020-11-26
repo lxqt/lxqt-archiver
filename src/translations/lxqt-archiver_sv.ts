@@ -313,7 +313,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.ui" line="248"/>
         <source>Alt+Return</source>
-        <translation>Alt+Enter</translation>
+        <translation>Alt+Return</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="257"/>
