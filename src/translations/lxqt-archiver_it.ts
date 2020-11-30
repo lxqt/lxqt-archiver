@@ -11,7 +11,7 @@
     <message>
         <location filename="../about.ui" line="34"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Archiviatore LXQt&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Gestore Archivi LXQt&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="57"/>
@@ -37,7 +37,13 @@ LXQt Archiver is derived from the following programs:
 * Engrampa of MATE desktop
 * File Roller of Gnome desktop
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Codice:
+* Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;
+
+LXQt Archiver si basa sulle seguenti applicazioni:
+* Engrampa del Desktop MATE
+* File Roller del Desktop GNOME
+</translation>
     </message>
     <message>
         <location filename="../about.ui" line="113"/>

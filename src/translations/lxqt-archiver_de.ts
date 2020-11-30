@@ -71,7 +71,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
         <translation>LXQt Archiver
 
-Urheberrecht (C) 2018 das LXQt Team
+Urheberrecht (C) 2020das LXQt Team
 
 Dieses Programm ist freie Software; Weiterverteilung und/oder 
 Modifizierung unter den Richtlinien der &apos;GNU General Public License&apos; 
