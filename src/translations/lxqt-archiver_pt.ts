@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ca">
+<TS version="2.1" language="pt">
 <context>
     <name>AboutDialog</name>
     <message>
         <location filename="../about.ui" line="14"/>
         <source>About</source>
-        <translation>Quant a</translation>
+        <translation>Sobre</translation>
     </message>
     <message>
         <location filename="../about.ui" line="34"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Arxivador de LXQt&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="57"/>
         <source>A simple and desktop-agnostic Qt file archiver</source>
-        <translation>Un arxivador de fitxers Qt senzill i d&apos;escriptori agnòstic</translation>
+        <translation>Um arquivador de ficheiros agnóstico, criado em Qt</translation>
     </message>
     <message>
         <location filename="../about.ui" line="67"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../about.ui" line="87"/>
         <source>Authors</source>
-        <translation>Autors</translation>
+        <translation>Autores/Autoras</translation>
     </message>
     <message>
         <location filename="../about.ui" line="96"/>
@@ -37,18 +37,18 @@ LXQt Archiver is derived from the following programs:
 * Engrampa of MATE desktop
 * File Roller of Gnome desktop
 </source>
-        <translation>Programació:
+        <translation>Programação:
 * Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;
 
-L&apos;arxivador de LXQt deriva dels següents programes:
-* Engrampa de l&apos;escriptori MATE
-* File Roller de l&apos;escriptori Gnome
+LXQt Archiver teve como base os seguintes programas:
+* Engrampa de MATE desktop
+* File Roller de Gnome desktop
 </translation>
     </message>
     <message>
         <location filename="../about.ui" line="113"/>
         <source>License</source>
-        <translation>Llicència</translation>
+        <translation>Licença</translation>
     </message>
     <message>
         <location filename="../about.ui" line="122"/>
@@ -69,24 +69,23 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation type="unfinished">Arxivador de LXQt
+        <translation>LXQt Archiver
 
-Drets d&apos;autor (C) 2018 l&apos;equip de LXQt
+Copyright (C) 2018-2019 - Equipa LXQt
 
-Aquest programa és programari lliure; podeu redistribuir-lo i/o
-modificar-lo d&apos;acord amb els termes de la llicència pública general
-de GNU tal com la publica la Free Software Foundation, ja sigui la
-versió 2 de la llicència, o bé, si així ho voleu, qualsevol altra versió
-posterior.
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
 
-Aquest programa es distribueix amb l&apos;esperança que serà útil, però
-SENSE CAP GARANTIA; ni tan sols amb la garantia de
-COMERCIALITZACIÓ o APTITUD PER A PROPÒSITS DETERMINATS.
-Vegeu la Llicència general pública de GNU per a més detalls.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
-Hauríeu d&apos;haver rebut una còpia de la Llicència Pública General de
-GNU; si no és així, escriviu a la Free Software Foundation, Inc., 51
-Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. {2020 ?} {2
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. {2020 ?} {2
 ?} {51 ?} {02110-1301,?}</translation>
     </message>
 </context>
@@ -95,17 +94,17 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. {2020 ?} {2
     <message>
         <location filename="../archiver.cpp" line="66"/>
         <source>Archive type not supported.</source>
-        <translation>El tipus d&apos;arxiu no és compatible.</translation>
+        <translation>Tipo de arquivo não suportado.</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="310"/>
         <source>*%1 files (*%1)</source>
-        <translation>Fitxers *%1 (*%1)</translation>
+        <translation>Ficheiros *%1 (*%1)</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="314"/>
         <source>All supported formats</source>
-        <translation>Tots els formats admesos</translation>
+        <translation>Todos os formatos suportados</translation>
     </message>
 </context>
 <context>
@@ -113,42 +112,42 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. {2020 ?} {2
     <message>
         <location filename="../archivererror.cpp" line="25"/>
         <source>Failed to execute the command.</source>
-        <translation>Ha fallat l&apos;execució de l&apos;ordre.</translation>
+        <translation>Erro ao executar o comando.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
         <source>Command is not found.</source>
-        <translation>No s&apos;ha trobat l&apos;ordre.</translation>
+        <translation>Comando não encontrado.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="31"/>
         <source>The command exited abnormally.</source>
-        <translation>L&apos;ordre va sortir de forma no normal.</translation>
+        <translation>O comando terminou abruptamente.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="34"/>
         <source>Password is required.</source>
-        <translation>Es requereix la contrasenya.</translation>
+        <translation>Requer palavra-passe.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="37"/>
         <source>Missing volume.</source>
-        <translation>Hi falta el volum.</translation>
+        <translation>Volume inexistente.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="40"/>
         <source>Bad charset.</source>
-        <translation>Conjunt de caràcters incorrecte.</translation>
+        <translation>Codificação inválida.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="43"/>
         <source>Unsupported file format.</source>
-        <translation>Format de fitxer no admés.</translation>
+        <translation>Formato não suportado.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="46"/>
         <source>Unknown errors happened.</source>
-        <translation>S&apos;han produït errors desconeguts.</translation>
+        <translation>Ocorreram erros não conhecidos.</translation>
     </message>
 </context>
 <context>
@@ -156,22 +155,22 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. {2020 ?} {2
     <message>
         <location filename="../create.ui" line="26"/>
         <source> MiB</source>
-        <translation></translation>
+        <translation> MiB</translation>
     </message>
     <message>
         <location filename="../create.ui" line="36"/>
         <source>Split into volumes of</source>
-        <translation>Divideix en volums de</translation>
+        <translation>Separar em volumes de</translation>
     </message>
     <message>
         <location filename="../create.ui" line="43"/>
         <source>Password:</source>
-        <translation>Contrasenya:</translation>
+        <translation>Palavra-passe:</translation>
     </message>
     <message>
         <location filename="../create.ui" line="50"/>
         <source>Encrypt the file list too</source>
-        <translation>Xifra també la llista de fitxers</translation>
+        <translation>Cifrar também a lista de ficheiros</translation>
     </message>
 </context>
 <context>
@@ -179,7 +178,7 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. {2020 ?} {2
     <message>
         <location filename="../createfiledialog.cpp" line="13"/>
         <source>All files (*)</source>
-        <translation>Tots els fitxers (*)</translation>
+        <translation>Todos os ficheiros (*)</translation>
     </message>
 </context>
 <context>
@@ -187,37 +186,37 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. {2020 ?} {2
     <message>
         <location filename="../extract.ui" line="23"/>
         <source>Extract</source>
-        <translation>Extreu</translation>
+        <translation>Extrair</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="29"/>
         <source>E&amp;xtract all files</source>
-        <translation>E&amp;xtreu tots els fitxers</translation>
+        <translation>E&amp;xtrair todos os ficheiros</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="36"/>
         <source>Ex&amp;tract selected files</source>
-        <translation>Ex&amp;treu els fitxers seleccionats</translation>
+        <translation>Ex&amp;trair ficheiros selecionados</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="59"/>
         <source>Actions</source>
-        <translation>Accions</translation>
+        <translation>Ações</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="65"/>
         <source>Re-create folders</source>
-        <translation>Torna a crear les carpetes</translation>
+        <translation>Recriar pastas</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="72"/>
         <source>Overwrite existing files</source>
-        <translation>Sobreescriu els fitxers existents</translation>
+        <translation>Substituir ficheiros existentes</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="79"/>
         <source>Do not extract older files</source>
-        <translation>No extraguis els fitxers més antics</translation>
+        <translation>Não extrair ficheiros antigos</translation>
     </message>
 </context>
 <context>
@@ -225,7 +224,7 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. {2020 ?} {2
     <message>
         <location filename="../extractfiledialog.cpp" line="12"/>
         <source>All files (*)</source>
-        <translation>Tots els fitxers (*)</translation>
+        <translation>Todos os ficheiros (*)</translation>
     </message>
 </context>
 <context>
@@ -234,7 +233,7 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. {2020 ?} {2
         <location filename="../mainwindow.ui" line="14"/>
         <location filename="../mainwindow.cpp" line="258"/>
         <source>File Archiver</source>
-        <translation>Arxivador de fitxers</translation>
+        <translation>Arquivador de ficheiros</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="77"/>
@@ -244,22 +243,22 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. {2020 ?} {2
     <message>
         <location filename="../mainwindow.ui" line="98"/>
         <source>&amp;File</source>
-        <translation>&amp;Fitxer</translation>
+        <translation>&amp;Ficheiro</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="113"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Edita</translation>
+        <translation>&amp;Editar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="132"/>
         <source>&amp;View</source>
-        <translation>&amp;Visualitza</translation>
+        <translation>&amp;Ver</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="152"/>
         <source>&amp;Help</source>
-        <translation>&amp;Ajuda</translation>
+        <translation>A&amp;juda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="163"/>
@@ -269,198 +268,198 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. {2020 ?} {2
     <message>
         <location filename="../mainwindow.ui" line="191"/>
         <source>&amp;About</source>
-        <translation>&amp;Quant a</translation>
+        <translation>&amp;Acerca</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="200"/>
         <source>&amp;New</source>
-        <translation>&amp;Nou</translation>
+        <translation>&amp;Novo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="203"/>
         <source>Ctrl+N</source>
-        <translation></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="212"/>
         <source>&amp;Open</source>
-        <translation>&amp;Obre</translation>
+        <translation>&amp;Abrir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="215"/>
         <source>Ctrl+O</source>
-        <translation></translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="223"/>
         <source>Save &amp;As</source>
-        <translation>&amp;Anomena i desa</translation>
+        <translation>Gu&amp;ardar como</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="232"/>
         <source>&amp;Extract</source>
-        <translation>&amp;Extreu</translation>
+        <translation>&amp;Extrair</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="237"/>
         <source>&amp;Test</source>
-        <translation>Pro&amp;va</translation>
+        <translation>&amp;Testar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="245"/>
         <source>&amp;Properties</source>
-        <translation>&amp;Propietats</translation>
+        <translation>&amp;Propriedades</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="248"/>
         <source>Alt+Return</source>
-        <translation>Alt+Retorn</translation>
+        <translation>Alt+Return</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="257"/>
         <source>&amp;Close</source>
-        <translation>Tan&amp;ca</translation>
+        <translation>Fe&amp;char</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="260"/>
         <source>Ctrl+Q</source>
-        <translation></translation>
+        <translation>Ctrl+Q</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="268"/>
         <source>Cu&amp;t</source>
-        <translation>Re&amp;talla</translation>
+        <translation>Cor&amp;tar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="271"/>
         <source>Ctrl+X</source>
-        <translation></translation>
+        <translation>Ctrl+X</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="279"/>
         <source>&amp;Copy</source>
-        <translation>&amp;Copia</translation>
+        <translation>&amp;Copiar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="282"/>
         <source>Ctrl+C</source>
-        <translation></translation>
+        <translation>Ctrl+C</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="290"/>
         <source>&amp;Paste</source>
-        <translation>Engan&amp;xa</translation>
+        <translation>Co&amp;lar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="293"/>
         <source>Ctrl+V</source>
-        <translation></translation>
+        <translation>Ctrl+V</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="301"/>
         <source>&amp;Rename</source>
-        <translation>&amp;Reanomena</translation>
+        <translation>&amp;Renomear</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="304"/>
         <source>F2</source>
-        <translation></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="309"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Elimina</translation>
+        <translation>A&amp;pagar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="312"/>
         <source>Del</source>
-        <translation>Supr</translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="317"/>
         <source>&amp;Select All</source>
-        <translation>&amp;Selecciona-ho tot</translation>
+        <translation>&amp;Selecionar tudo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="320"/>
         <source>Ctrl+A</source>
-        <translation></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="328"/>
         <source>&amp;Find</source>
-        <translation>&amp;Troba</translation>
+        <translation>Locali&amp;zar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="331"/>
         <location filename="../mainwindow.ui" line="444"/>
         <source>Ctrl+F</source>
-        <translation></translation>
+        <translation>Ctrl+F</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="340"/>
         <source>&amp;Add Files</source>
-        <translation>&amp;Afegeix fitxers</translation>
+        <translation>&amp;Adicionar ficheiros</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="349"/>
         <source>Add F&amp;older</source>
-        <translation>Afegeix la car&amp;peta</translation>
+        <translation>Adici&amp;onar pasta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="354"/>
         <source>Pass&amp;word</source>
-        <translation>Contrasen&amp;ya</translation>
+        <translation>Pala&amp;vra-passe</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="365"/>
         <source>&amp;Toolbar</source>
-        <translation>&amp;Barra d&apos;eines</translation>
+        <translation>Barra de ferramen&amp;tas</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="376"/>
         <source>&amp;Statusbar</source>
-        <translation>Barra d&apos;e&amp;stat</translation>
+        <translation>Barra de e&amp;stado</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="387"/>
         <source>&amp;Directory Tree</source>
-        <translation>Arbre de &amp;directoris</translation>
+        <translation>Árvore do &amp;diretório</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="398"/>
         <source>S&amp;how as Folder</source>
-        <translation>M&amp;ostra com a carpeta</translation>
+        <translation>Mo&amp;strar como pasta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="406"/>
         <source>Show &amp;All Files</source>
-        <translation>Mostr&amp;a tots els fitxers</translation>
+        <translation>Mostr&amp;ar todos os ficheiros</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="415"/>
         <source>St&amp;op</source>
-        <translation>At&amp;ura</translation>
+        <translation>&amp;Parar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="418"/>
         <source>Esc</source>
-        <translation></translation>
+        <translation>Esc</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="423"/>
         <source>&amp;Reload</source>
-        <translation>To&amp;rna a carregar</translation>
+        <translation>&amp;Recarregar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="426"/>
         <source>F5</source>
-        <translation></translation>
+        <translation>F5</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="431"/>
         <source>Filename &amp;Encoding</source>
-        <translation>Codificació del nom de fitx&amp;er</translation>
+        <translation>Codificação para o nom&amp;e do ficheiro</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="436"/>
@@ -497,49 +496,49 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. {2020 ?} {2
         <location filename="../mainwindow.cpp" line="318"/>
         <location filename="../mainwindow.cpp" line="351"/>
         <source>All files (*)</source>
-        <translation>Tots els fitxers (*)</translation>
+        <translation>Todos os ficheiros (*)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="323"/>
         <location filename="../mainwindow.cpp" line="356"/>
         <source>Add only if &amp;newer</source>
-        <translation>Afegeix només si és més rece&amp;nt</translation>
+        <translation>Adicio&amp;nar se for mais recente</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="381"/>
         <source>Confirm</source>
-        <translation>Confirma</translation>
+        <translation>Confirmação</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="381"/>
         <source>Are you sure you want to delete selected files?</source>
-        <translation>Esteu segur que voleu eliminar els fitxers seleccionats?</translation>
+        <translation>Tem a certeza de que deseja apagar os ficheiros selecionados?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="672"/>
         <source>Version: %1</source>
-        <translation>Versió: %1</translation>
+        <translation>Versão: %1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="759"/>
         <source>%p %</source>
-        <translation></translation>
+        <translation>%p %</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="852"/>
         <source>Success</source>
-        <translation>Reeixit</translation>
+        <translation>Sucesso</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="852"/>
         <source>No errors have been found.</source>
-        <translation>No s&apos;ha trobat cap error.</translation>
+        <translation>Não foram encontrados erros.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="830"/>
         <location filename="../mainwindow.cpp" line="887"/>
         <source>Error</source>
-        <translation></translation>
+        <translation>Erro</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="915"/>
@@ -549,37 +548,37 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. {2020 ?} {2
     <message>
         <location filename="../mainwindow.cpp" line="919"/>
         <source>Uncompressed Size:</source>
-        <translation>Mida descomprimit:</translation>
+        <translation>Tamanho sem compressão:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="921"/>
         <source>Compression Ratio:</source>
-        <translation>Relació de compressió:</translation>
+        <translation>Rácio de compressão:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="974"/>
         <source>File name</source>
-        <translation>Nom de fitxer</translation>
+        <translation>Nome de ficheiro</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="975"/>
         <source>File Type</source>
-        <translation>Tipus de fitxer</translation>
+        <translation>Tipo de ficheiro</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="976"/>
         <source>File Size</source>
-        <translation>Mida del fitxer</translation>
+        <translation>Tamanho do ficheiro</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="977"/>
         <source>Modified</source>
-        <translation>Modificat</translation>
+        <translation>Modificado</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="978"/>
         <source>Encrypted</source>
-        <translation>Xifrat</translation>
+        <translation>Cifrado</translation>
     </message>
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1008"/>
@@ -596,28 +595,28 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. {2020 ?} {2
         <location filename="../passworddialog.ui" line="14"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password</source>
-        <translation>Contrasenya</translation>
+        <translation>Palavra-passe</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="20"/>
         <source>Encrypt the file list</source>
-        <translation>Xifra la llista de fitxers</translation>
+        <translation>Cifrar também a lista de ficheiros</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="34"/>
         <source>Show password</source>
-        <translation>Mostra la contrasenya</translation>
+        <translation>Mostrar palavra-passe</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="48"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password:</source>
-        <translation>Contrasenya:</translation>
+        <translation>Palavra-passe:</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="61"/>
         <source>&lt;i&gt;&lt;b&gt;Note:&lt;/b&gt; the password will be used to encrypt files you add to the current archive, and to decrypt files you extract from the current archive. When the archive is closed the password will be deleted.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;&lt;b&gt;Nota:&lt;/b&gt;la contrasenya s&apos;utilitzarà per xifrar els fitxers que afegiu a l&apos;arxiu actual i per desxifrar els fitxers que extraieu de l&apos;arxiu actual. Quan es tanqui l&apos;arxiu, s&apos;eliminarà la contrasenya.&lt;/i&gt;</translation>
+        <translation>&lt;i&gt;&lt;b&gt;Nota:&lt;/b&gt; a palavra-passe será utilizada para cifrar os ficheiros adicionados ao arquivo atual e para decifrar os ficheiros extraídos do arquivo atual. Quando o arquivo for fechado, a palavra-passe será apagada.&lt;/i&gt;</translation>
     </message>
 </context>
 <context>
@@ -625,12 +624,12 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. {2020 ?} {2
     <message>
         <location filename="../progressdialog.ui" line="14"/>
         <source>Progress</source>
-        <translation>Progrés</translation>
+        <translation>Progresso</translation>
     </message>
     <message>
         <location filename="../progressdialog.cpp" line="16"/>
         <source>%p %</source>
-        <translation></translation>
+        <translation>%p %</translation>
     </message>
 </context>
 <context>
@@ -639,147 +638,147 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. {2020 ?} {2
         <location filename="../main.cpp" line="248"/>
         <location filename="../main.cpp" line="288"/>
         <source>Error</source>
-        <translation></translation>
+        <translation>Erro</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="6"/>
         <source>7-Zip (.7z)</source>
-        <translation></translation>
+        <translation>7-Zip (.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="7"/>
         <source>Tar compressed with 7z (.tar.7z)</source>
-        <translation>Tar comprimit amb 7z (.tar.7z)</translation>
+        <translation>Tar comprimido com 7z (.tar.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="8"/>
         <source>Ace (.ace)</source>
-        <translation></translation>
+        <translation>Ace (.ace)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="9"/>
         <source>Ar (.a)</source>
-        <translation></translation>
+        <translation>Ar (.a)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="10"/>
         <source>Ar (.ar)</source>
-        <translation></translation>
+        <translation>Ar (.ar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="11"/>
         <source>Arj (.arj)</source>
-        <translation></translation>
+        <translation>Arj (.arj)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="12"/>
         <source>Tar compressed with bzip2 (.tar.bz2)</source>
-        <translation>Tar comprimit amb bzip2 (.tar.bz2)</translation>
+        <translation>Tar comprimido com bzip2 (.tar.bz2)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="13"/>
         <source>Tar compressed with bzip (.tar.bz)</source>
-        <translation>Tar comprimit amb bzip (.tar.bz)</translation>
+        <translation>Tar comprimido com bzip (.tar.bz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="14"/>
         <source>Cabinet (.cab)</source>
-        <translation></translation>
+        <translation>Cabinet (.cab)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="15"/>
         <source>Rar Archived Comic Book (.cbr)</source>
-        <translation></translation>
+        <translation>Comic Book arquivado com Rar (.cbr)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="16"/>
         <source>Zip Archived Comic Book (.cbz)</source>
-        <translation></translation>
+        <translation>Comic Book arquivado com Zip (.cbz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="17"/>
         <source>Tar compressed with gzip (.tar.gz)</source>
-        <translation>Tar comprimit amb gzip (.tar.gz)</translation>
+        <translation>Tar comprimido com gzip (.tar.gz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="18"/>
         <source>Ear (.ear)</source>
-        <translation></translation>
+        <translation>Ear (.ear)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="19"/>
         <source>Self-extracting zip (.exe)</source>
-        <translation>Zio autoextraïble (.exe)</translation>
+        <translation>Zip de extração automática (.exe)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="20"/>
         <source>Jar (.jar)</source>
-        <translation></translation>
+        <translation>Jar (.jar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="21"/>
         <source>Lha (.lzh)</source>
-        <translation></translation>
+        <translation>Lha (.lzh)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="22"/>
         <source>Lrzip (.lrz)</source>
-        <translation></translation>
+        <translation>Lrzip (.lrz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="23"/>
         <source>Tar compressed with lrzip (.tar.lrz)</source>
-        <translation>Tar comprimit amb lrzip (.tar.lrz)</translation>
+        <translation>Tar comprimido com lrzip (.tar.lrz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="24"/>
         <source>Tar compressed with lzip (.tar.lz)</source>
-        <translation>Tar comprimit amb lzip (.tar.lz)</translation>
+        <translation>Tar comprimido com lzip (.tar.lz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="25"/>
         <source>Tar compressed with lzma (.tar.lzma)</source>
-        <translation>Tar comprimit amb lzma (.tar.lzma)</translation>
+        <translation>Tar comprimido com lzma (.tar.lzma)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="26"/>
         <source>Tar compressed with lzop (.tar.lzo)</source>
-        <translation>Tar comprimit amb lzop (.tar.lzo)</translation>
+        <translation>Tar comprimido com lzop (.tar.lzo)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="27"/>
         <source>Windows Imaging Format (.wim)</source>
-        <translation></translation>
+        <translation>Windows Imaging Format (.wim)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="28"/>
         <source>Rar (.rar)</source>
-        <translation></translation>
+        <translation>Rar (.rar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="29"/>
         <source>Tar uncompressed (.tar)</source>
-        <translation>Tar sense comprimir (.tar)</translation>
+        <translation>Tar sem compressão (.tar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="30"/>
         <source>Tar compressed with compress (.tar.Z)</source>
-        <translation>Tar comprimit amb compress (.tar.Z)</translation>
+        <translation>Tar comprimido com compress (.tar.Z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="31"/>
         <source>War (.war)</source>
-        <translation></translation>
+        <translation>War (.war)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="32"/>
         <source>Xz (.xz)</source>
-        <translation></translation>
+        <translation>Xz (.xz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="33"/>
         <source>Tar compressed with xz (.tar.xz)</source>
-        <translation>Tar comprimit amb xz (.tar.xz)</translation>
+        <translation>Tar comprimido com xz (.tar.xz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="34"/>
@@ -789,12 +788,12 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. {2020 ?} {2
     <message>
         <location filename="../corestrs.h" line="35"/>
         <source>Zoo (.zoo)</source>
-        <translation></translation>
+        <translation>Zoo (.zoo)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="36"/>
         <source>Zip (.zip)</source>
-        <translation></translation>
+        <translation>Zip (.zip)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="39"/>
@@ -802,7 +801,7 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. {2020 ?} {2
         <location filename="../corestrs.h" line="62"/>
         <location filename="../main.cpp" line="240"/>
         <source>Adding file: </source>
-        <translation>Addició del fitxer: </translation>
+        <translation>A adicionar ficheiro: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="40"/>
@@ -810,68 +809,68 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. {2020 ?} {2
         <location filename="../corestrs.h" line="64"/>
         <location filename="../main.cpp" line="280"/>
         <source>Extracting file: </source>
-        <translation>Extracció del fitxer: </translation>
+        <translation>A extrair ficheiro: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="43"/>
         <source>%d %B %Y, %H:%M</source>
-        <translation>%d %B de %Y, %H:%M</translation>
+        <translation>%d %B %Y, %H:%M</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="47"/>
         <location filename="../corestrs.h" line="63"/>
         <source>Removing file: </source>
-        <translation>Supressió del fitxer: </translation>
+        <translation>A remover ficheiro: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="48"/>
         <source>Deleting files from archive</source>
-        <translation>Eliminació dels fitxers de l&apos;arxiu</translation>
+        <translation>A apagar ficheiros do arquivo</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="50"/>
         <source>Recompressing archive</source>
-        <translation>Recompressió de l&apos;arxiu</translation>
+        <translation>A comprimir ficheiro</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="51"/>
         <source>Decompressing archive</source>
-        <translation>Descompressió de l&apos;arxiu</translation>
+        <translation>A descomprimir arquivo</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="54"/>
         <source>File not found.</source>
-        <translation>Fitxer no trobat.</translation>
+        <translation>Ficheiro não encontrado.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="55"/>
         <source>Archive type not supported.</source>
-        <translation>Tipus d&apos;arxiu no admés.</translation>
+        <translation>Arquivo não suportado.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="56"/>
         <source>Archive not found</source>
-        <translation>Arxiu no trobat</translation>
+        <translation>Arquivo não encontrado</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="57"/>
         <source>You don&apos;t have the right permissions.</source>
-        <translation>No teniu els permisos adequats.</translation>
+        <translation>Não tem as permissões necessárias.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="58"/>
         <source>This archive type cannot be modified</source>
-        <translation>Aquest tipus d&apos;arxiu no es pot modificar</translation>
+        <translation>Este tipo de arquivo não pode ser modificado</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="59"/>
         <source>You can&apos;t add an archive to itself.</source>
-        <translation>No podeu afegir un arxiu a si mateix.</translation>
+        <translation>Não pode adicionar um arquivo para si mesmo.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="65"/>
         <source>Could not find the volume: %s</source>
-        <translation>No s&apos;ha pogut trobar el volum: %s</translation>
+        <translation>Não foi possível localizar o volume: %s</translation>
     </message>
 </context>
 </TS>
