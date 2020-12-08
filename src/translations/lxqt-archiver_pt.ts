@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -11,7 +11,7 @@
     <message>
         <location filename="../about.ui" line="34"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="57"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../about.ui" line="67"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://lxqt.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://lxqt.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://lxqt.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://lxqt.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="87"/>
@@ -69,7 +69,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation type="unfinished">LXQt Archiver
+        <translation>LXQt Archiver
 
 Copyright (C) 2018-2019 - Equipa LXQt
 
@@ -155,7 +155,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../create.ui" line="26"/>
         <source> MiB</source>
-        <translation></translation>
+        <translation> MiB</translation>
     </message>
     <message>
         <location filename="../create.ui" line="36"/>
@@ -278,7 +278,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="203"/>
         <source>Ctrl+N</source>
-        <translation></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="212"/>
@@ -288,7 +288,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="215"/>
         <source>Ctrl+O</source>
-        <translation></translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="223"/>
@@ -313,7 +313,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="248"/>
         <source>Alt+Return</source>
-        <translation></translation>
+        <translation>Alt+Return</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="257"/>
@@ -323,7 +323,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="260"/>
         <source>Ctrl+Q</source>
-        <translation></translation>
+        <translation>Ctrl+Q</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="268"/>
@@ -333,7 +333,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="271"/>
         <source>Ctrl+X</source>
-        <translation></translation>
+        <translation>Ctrl+X</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="279"/>
@@ -343,7 +343,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="282"/>
         <source>Ctrl+C</source>
-        <translation></translation>
+        <translation>Ctrl+C</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="290"/>
@@ -353,7 +353,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="293"/>
         <source>Ctrl+V</source>
-        <translation></translation>
+        <translation>Ctrl+V</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="301"/>
@@ -363,7 +363,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="304"/>
         <source>F2</source>
-        <translation></translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="309"/>
@@ -373,7 +373,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="312"/>
         <source>Del</source>
-        <translation></translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="317"/>
@@ -383,7 +383,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="320"/>
         <source>Ctrl+A</source>
-        <translation></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="328"/>
@@ -394,7 +394,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
         <location filename="../mainwindow.ui" line="331"/>
         <location filename="../mainwindow.ui" line="444"/>
         <source>Ctrl+F</source>
-        <translation></translation>
+        <translation>Ctrl+F</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="340"/>
@@ -444,7 +444,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="418"/>
         <source>Esc</source>
-        <translation></translation>
+        <translation>Esc</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="423"/>
@@ -454,7 +454,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="426"/>
         <source>F5</source>
-        <translation></translation>
+        <translation>F5</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="431"/>
@@ -522,7 +522,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.cpp" line="759"/>
         <source>%p %</source>
-        <translation></translation>
+        <translation>%p %</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="852"/>
@@ -585,7 +585,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
         <source>%n file(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -629,7 +628,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../progressdialog.cpp" line="16"/>
         <source>%p %</source>
-        <translation></translation>
+        <translation>%p %</translation>
     </message>
 </context>
 <context>
@@ -643,7 +642,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../corestrs.h" line="6"/>
         <source>7-Zip (.7z)</source>
-        <translation></translation>
+        <translation>7-Zip (.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="7"/>
@@ -653,22 +652,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../corestrs.h" line="8"/>
         <source>Ace (.ace)</source>
-        <translation></translation>
+        <translation>Ace (.ace)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="9"/>
         <source>Ar (.a)</source>
-        <translation></translation>
+        <translation>Ar (.a)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="10"/>
         <source>Ar (.ar)</source>
-        <translation></translation>
+        <translation>Ar (.ar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="11"/>
         <source>Arj (.arj)</source>
-        <translation></translation>
+        <translation>Arj (.arj)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="12"/>
@@ -683,7 +682,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../corestrs.h" line="14"/>
         <source>Cabinet (.cab)</source>
-        <translation></translation>
+        <translation>Cabinet (.cab)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="15"/>
@@ -703,7 +702,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../corestrs.h" line="18"/>
         <source>Ear (.ear)</source>
-        <translation></translation>
+        <translation>Ear (.ear)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="19"/>
@@ -713,17 +712,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../corestrs.h" line="20"/>
         <source>Jar (.jar)</source>
-        <translation></translation>
+        <translation>Jar (.jar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="21"/>
         <source>Lha (.lzh)</source>
-        <translation></translation>
+        <translation>Lha (.lzh)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="22"/>
         <source>Lrzip (.lrz)</source>
-        <translation></translation>
+        <translation>Lrzip (.lrz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="23"/>
@@ -753,7 +752,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../corestrs.h" line="28"/>
         <source>Rar (.rar)</source>
-        <translation></translation>
+        <translation>Rar (.rar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="29"/>
@@ -768,12 +767,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../corestrs.h" line="31"/>
         <source>War (.war)</source>
-        <translation></translation>
+        <translation>War (.war)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="32"/>
         <source>Xz (.xz)</source>
-        <translation></translation>
+        <translation>Xz (.xz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="33"/>
@@ -788,12 +787,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../corestrs.h" line="35"/>
         <source>Zoo (.zoo)</source>
-        <translation></translation>
+        <translation>Zoo (.zoo)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="36"/>
         <source>Zip (.zip)</source>
-        <translation></translation>
+        <translation>Zip (.zip)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="39"/>
@@ -814,7 +813,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../corestrs.h" line="43"/>
         <source>%d %B %Y, %H:%M</source>
-        <translation></translation>
+        <translation>%d %B %Y, %H:%M</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="47"/>
