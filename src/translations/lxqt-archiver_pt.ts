@@ -11,7 +11,7 @@
     <message>
         <location filename="../about.ui" line="34"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Arquivador LXQt&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="57"/>
@@ -69,24 +69,23 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation>LXQt Archiver
+        <translation>Arquivador LXQt
 
-Copyright (C) 2018-2019 - Equipa LXQt
+Direitos de autor (C) 2018-2019 - Equipa LXQt
 
-This program is free software; you can redistribute it and/or
-modify it under the terms of the GNU General Public License
-as published by the Free Software Foundation; either version 2
-of the License, or (at your option) any later version.
+Este programa é software livre; pode redistribuí-lo e/ou
+modificá-lo sob os termos da Licença Pública Geral GNU
+tal como publicado pela Free Software Foundation; qualquer das versões 2
+da Licença, ou (à sua escolha) qualquer versão posterior.
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+Este programa é distribuído na esperança de que venha a ser útil,
+mas SEM QUALQUER GARANTIA; sem sequer a garantia implícita de
+MERCANTABILIDADE ou ADEQUAÇÃO PARA UM FINAL PARTICULAR.  Ver a
+GNU General Public License para mais detalhes.
 
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. {2020 ?} {2
-?} {51 ?} {02110-1301,?}</translation>
+Deverá ter recebido uma cópia da Licença Pública Geral do GNU
+juntamente com este programa; se não, escreva para o Software Livre
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</translation>
     </message>
 </context>
 <context>
@@ -238,7 +237,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="77"/>
         <source>Filter Files...</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtrar ficheiros...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="98"/>
@@ -263,7 +262,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="163"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barra de ferramentas principal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="191"/>
@@ -464,32 +463,32 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="436"/>
         <source>&amp;View Selected Items</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ver itens selecionados</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="441"/>
         <source>&amp;Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Filtrar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="452"/>
         <source>&amp;Expand</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Expandir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="455"/>
         <source>Ctrl+Shift+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Baixo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="463"/>
         <source>&amp;Collapse</source>
-        <translation type="unfinished"></translation>
+        <translation>Re&amp;colher</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="466"/>
         <source>Ctrl+Shift+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Cima</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="289"/>
@@ -583,8 +582,9 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1008"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n ficheiro</numerusform>
+            <numerusform>%n ficheiros</numerusform>
         </translation>
     </message>
 </context>
@@ -747,7 +747,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../corestrs.h" line="27"/>
         <source>Windows Imaging Format (.wim)</source>
-        <translation>Windows Imaging Format (.wim)</translation>
+        <translation>Formato Windows Imaging (.wim)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="28"/>
@@ -782,7 +782,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../corestrs.h" line="34"/>
         <source>Tar compressed with zstd (.tar.zst)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar comprimido com zstd (.tar.zst)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="35"/>
