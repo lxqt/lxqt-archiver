@@ -69,13 +69,13 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation type="unfinished">LXQt Archiver
+        <translation>LXQt Archiver
 
 Telif Hakkı (C) 2018 LXQt Ekibi
 
 Bu program ücretsiz bir yazılımdır; Özgür Yazılım Vakfı tarafından
-yayınlandığı gibi GNU Genel Kamu Lisansı (Lisansın ya Sürüm 2 
-ya da (seçiminize göre) dah yeni sürümleri) şartlarına göre yeniden
+yayınlanan GNU Genel Kamu Lisansı (Lisansın Sürüm 2 
+ya da (seçiminize göre) daha yeni sürümleri) şartlarına göre yeniden
 dağıtabilir ve değiştirebilirsiniz.
 
 Bu programın faydalı olacağını umuyoruz, ama HİÇBİR GARANTİSİ 
@@ -84,9 +84,9 @@ garantisi de yoktur. Daha fazla bilgi için GNU Genel Kamu Lisansı&apos;na
 bakınız.
 
 Bu programla birlikte GNU Genel Kamu Lisansının bir kopyasını 
-almış olmalısınız; Yoksa, Özgür Yazılım Vakfı Şirketi&apos;ne yazın.
-51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. {2020 ?} {2
-?} {51 ?} {02110-1301,?}</translation>
+almış olmalısınız; elinizde yoksa Özgür Yazılım Vakfı Şirketi&apos;ne yazın.
+Free Software Foundation, Inc., 
+51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, ABD.</translation>
     </message>
 </context>
 <context>
@@ -583,8 +583,9 @@ almış olmalısınız; Yoksa, Özgür Yazılım Vakfı Şirketi&apos;ne yazın.
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1008"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n dosya</numerusform>
+            <numerusform>%n dosya</numerusform>
         </translation>
     </message>
 </context>
