@@ -566,10 +566,10 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1008"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n datoteka</numerusform>
+            <numerusform>%n datoteke</numerusform>
+            <numerusform>%n datoteka</numerusform>
         </translation>
     </message>
 </context>
