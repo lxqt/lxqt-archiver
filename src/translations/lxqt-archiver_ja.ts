@@ -41,8 +41,8 @@ LXQt Archiver is derived from the following programs:
 * Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;
 
 LXQt Archiver は次のプログラムから派生しています:
-* Engrampa of MATE desktop
-* File Roller of Gnome desktop
+* MATE デスクトップの Engrampa
+* Gnome デスクトップの File Roller
 </translation>
     </message>
     <message>
@@ -71,7 +71,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
         <translation>LXQt Archiver
 
-Copyright (C) 2020 the LXQt Team
+Copyright (C) 2020 the LXQt Team 
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -813,7 +813,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="43"/>
         <source>%d %B %Y, %H:%M</source>
-        <translation>%d %B %Y, %H:%M</translation>
+        <translation>%Y %B %d, %H:%M</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="47"/>
