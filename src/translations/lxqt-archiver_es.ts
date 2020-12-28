@@ -373,7 +373,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="312"/>
         <source>Del</source>
-        <translation>Supr</translation>
+        <translation type="unfinished">Supr</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="317"/>
