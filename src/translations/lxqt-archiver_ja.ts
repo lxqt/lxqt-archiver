@@ -206,7 +206,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../extract.ui" line="65"/>
         <source>Re-create folders</source>
         <translatorcomment>動作不明で確認できないため未翻訳</translatorcomment>
-        <translation>フォルダを再作成する</translation>
+        <translation>フォルダーを再作成する</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="72"/>
