@@ -373,7 +373,7 @@ Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.ui" line="312"/>
         <source>Del</source>
-        <translation>Sil</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="317"/>
