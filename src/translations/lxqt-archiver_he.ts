@@ -376,7 +376,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="317"/>
         <source>&amp;Select All</source>
-        <translation>בחירת ה&amp;כול</translation>
+        <translation>לבחור ה&amp;כול</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="320"/>
