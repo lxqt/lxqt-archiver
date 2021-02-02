@@ -195,7 +195,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="36"/>
         <source>Ex&amp;tract selected files</source>
-        <translation>選択されたファイルを展開する(&amp;T)</translation>
+        <translation>選択したファイルを展開する(&amp;T)</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="59"/>
