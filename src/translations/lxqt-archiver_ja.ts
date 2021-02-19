@@ -532,7 +532,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="852"/>
         <source>No errors have been found.</source>
-        <translation>エラーはありませんでした。</translation>
+        <translation>エラーは見つかりませんでした。</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="830"/>
