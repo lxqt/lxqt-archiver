@@ -69,9 +69,9 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation type="unfinished">LXQt Archiver
+        <translation>LXQt Archiver
 
-Copyright (C) 2018 LXQt Teamet
+Opphavsrett © 2018 LXQt-laget
 
 Dette programmet er fri programvare. Du kan redistribuere det 
 og/eller endre det under vilkårene i GNU General Public License
@@ -474,22 +474,22 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. {2020 ?} {2
     <message>
         <location filename="../mainwindow.ui" line="452"/>
         <source>&amp;Expand</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Utvid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="455"/>
         <source>Ctrl+Shift+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+↓</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="463"/>
         <source>&amp;Collapse</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Fold sammen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="466"/>
         <source>Ctrl+Shift+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+↑</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="289"/>
@@ -583,9 +583,9 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. {2020 ?} {2
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1008"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n fil</numerusform>
+            <numerusform>%n filer</numerusform>
         </translation>
     </message>
 </context>
@@ -783,7 +783,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. {2020 ?} {2
     <message>
         <location filename="../corestrs.h" line="34"/>
         <source>Tar compressed with zstd (.tar.zst)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">TAR-komprimert med zstd (.tar.zst)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="35"/>

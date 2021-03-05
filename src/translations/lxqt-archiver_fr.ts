@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv">
+<TS version="2.1" language="fr">
 <context>
     <name>AboutDialog</name>
     <message>
         <location filename="../about.ui" line="14"/>
         <source>About</source>
-        <translation>Om</translation>
+        <translation>À propos</translation>
     </message>
     <message>
         <location filename="../about.ui" line="34"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Arkiverare&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="57"/>
         <source>A simple and desktop-agnostic Qt file archiver</source>
-        <translation>En enkel Qt filarkiverare</translation>
+        <translation>Un gestionnaire d&apos;archives Qt simple et indépendant du bureau</translation>
     </message>
     <message>
         <location filename="../about.ui" line="67"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../about.ui" line="87"/>
         <source>Authors</source>
-        <translation>Författare</translation>
+        <translation>Auteurs</translation>
     </message>
     <message>
         <location filename="../about.ui" line="96"/>
@@ -37,18 +37,18 @@ LXQt Archiver is derived from the following programs:
 * Engrampa of MATE desktop
 * File Roller of Gnome desktop
 </source>
-        <translation>Programmering:
+        <translation>Programmation :
 * Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;
 
-LXQt Archiver härrör från följande program: 
-* Engrampa av MATE desktop 
-* File Roller av Gnome desktop
+LXQt Archiver est dérivé des programmes suivants :
+* Engrampa du bureau MATE
+* File Roller du bureau Gnome
 </translation>
     </message>
     <message>
         <location filename="../about.ui" line="113"/>
         <source>License</source>
-        <translation>Licens</translation>
+        <translation>Licence</translation>
     </message>
     <message>
         <location filename="../about.ui" line="122"/>
@@ -69,24 +69,22 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation type="unfinished">LXQt Arkiverare
+        <translation>LXQt Archiver
 
-Copyright (C) 2019 LXQt Teamet
+Copyright (C) 2020 l&apos;équipe LXQt
 
-Detta program är fri programvara. Du kan distribuera det och/eller
-ändra det under villkoren i GNU General Public License, publicerad 
-av Free Software Foundation, antingen version 2 av licensen, 
-eller (om du så önskar) någon senare version.
+Ce programme est un logiciel libre ; vous pouvez le redistribuer et / ou
+le modifier selon les termes de la licence publique générale GNU
+tel que publié par la Free Software Foundation ; soit la version 2
+de la Licence, ou (à votre choix) toute version ultérieure.
 
-Detta program distribueras i hopp om att det ska vara användbart, 
-men UTAN NÅGON SOM HELST GARANTI, även utan underförstådd
-garanti om SÄLJBARHET eller LÄMPLIGHET FÖR NÅGOT SPECIELLT
-ÄNDAMÅL. Se GNU General Public License för ytterligare information.
+Ce programme est distribué dans l&apos;espoir qu&apos;il sera utile,
+mais SANS AUCUNE GARANTIE ; sans même la garantie implicite de
+QUALITÉ MARCHANDE ou ADAPTATION À UN USAGE PARTICULIER. Voir le
+GNU General Public License pour plus de détails.
 
-Du ska ha fått en kopia av GNU General Public License tillsammans
-med detta program. Om inte, skriv till Free Software Foundation, Inc., 
-51 Franklin Steet, Fifth Floor, Boston, MA 02110- 1301 USA {2020 ?} {2
-?} {51 ?} {02110-1301,?}</translation>
+Vous devriez avoir reçu une copie de la licence publique générale GNU
+avec ce programme ; si ce n&apos;est pas le cas, consultez &lt;http://www.gnu.org/licenses&gt;.</translation>
     </message>
 </context>
 <context>
@@ -94,17 +92,17 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../archiver.cpp" line="66"/>
         <source>Archive type not supported.</source>
-        <translation>Arkivtypen stöds inte.</translation>
+        <translation>Type d&apos;archive non supporté.</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="310"/>
         <source>*%1 files (*%1)</source>
-        <translation>*%1 filer (*%1)</translation>
+        <translation>*%1 fichier (*%1)</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="314"/>
         <source>All supported formats</source>
-        <translation>Alla format som stöds</translation>
+        <translation>Tous les formats supportés</translation>
     </message>
 </context>
 <context>
@@ -112,42 +110,42 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../archivererror.cpp" line="25"/>
         <source>Failed to execute the command.</source>
-        <translation>Misslyckades köra kommandot.</translation>
+        <translation>Échec de l&apos;exécution de la commande.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
         <source>Command is not found.</source>
-        <translation>Kommandot kunde inte hittas.</translation>
+        <translation>La commande est introuvable.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="31"/>
         <source>The command exited abnormally.</source>
-        <translation>Kommandot avslutades onormalt.</translation>
+        <translation>La commande s&apos;est terminée anormalement.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="34"/>
         <source>Password is required.</source>
-        <translation>Lösenord krävs.</translation>
+        <translation>Mot de passe requis.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="37"/>
         <source>Missing volume.</source>
-        <translation>Volymen saknas.</translation>
+        <translation>Volume manquant.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="40"/>
         <source>Bad charset.</source>
-        <translation>Felaktigt teckensnitt.</translation>
+        <translation>Mauvais jeu de caractères.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="43"/>
         <source>Unsupported file format.</source>
-        <translation>Filformatet stöds inte.</translation>
+        <translation>Format de fichier non pris en charge.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="46"/>
         <source>Unknown errors happened.</source>
-        <translation>Okända fel uppstod.</translation>
+        <translation>Des erreurs inconnues se sont produites.</translation>
     </message>
 </context>
 <context>
@@ -155,22 +153,22 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../create.ui" line="26"/>
         <source> MiB</source>
-        <translation> MiB</translation>
+        <translation> Mio</translation>
     </message>
     <message>
         <location filename="../create.ui" line="36"/>
         <source>Split into volumes of</source>
-        <translation>Dela upp i volymer på</translation>
+        <translation>Diviser en volumes de</translation>
     </message>
     <message>
         <location filename="../create.ui" line="43"/>
         <source>Password:</source>
-        <translation>Lösenord:</translation>
+        <translation>Mot de passe :</translation>
     </message>
     <message>
         <location filename="../create.ui" line="50"/>
         <source>Encrypt the file list too</source>
-        <translation>Kryptera även fillistan</translation>
+        <translation>Crypter également la liste des fichiers</translation>
     </message>
 </context>
 <context>
@@ -178,7 +176,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../createfiledialog.cpp" line="13"/>
         <source>All files (*)</source>
-        <translation>Alla filer (*)</translation>
+        <translation>Tous les fichiers (*)</translation>
     </message>
 </context>
 <context>
@@ -186,37 +184,37 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../extract.ui" line="23"/>
         <source>Extract</source>
-        <translation>Extrahera</translation>
+        <translation>Extraire</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="29"/>
         <source>E&amp;xtract all files</source>
-        <translation>E&amp;xtrahera alla filer</translation>
+        <translation>E&amp;xtraire tous les fichiers</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="36"/>
         <source>Ex&amp;tract selected files</source>
-        <translation>Ex&amp;trahera valda filer</translation>
+        <translation>Ex&amp;traitre les fichiers sélectionnés</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="59"/>
         <source>Actions</source>
-        <translation>Åtgärder</translation>
+        <translation>Actions</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="65"/>
         <source>Re-create folders</source>
-        <translation>Återskapa foldrar</translation>
+        <translation>Recréer des dossiers</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="72"/>
         <source>Overwrite existing files</source>
-        <translation>Skriv över befintliga filer</translation>
+        <translation>Écraser les fichiers existants</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="79"/>
         <source>Do not extract older files</source>
-        <translation>Extrahera inte äldre filer</translation>
+        <translation>Ne pas extraire les anciens fichiers</translation>
     </message>
 </context>
 <context>
@@ -224,7 +222,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../extractfiledialog.cpp" line="12"/>
         <source>All files (*)</source>
-        <translation type="unfinished">Alla filer (*)</translation>
+        <translation>Tous les fichiers (*)</translation>
     </message>
 </context>
 <context>
@@ -233,47 +231,47 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
         <location filename="../mainwindow.ui" line="14"/>
         <location filename="../mainwindow.cpp" line="258"/>
         <source>File Archiver</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestionnaire d&apos;archives</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="77"/>
         <source>Filter Files...</source>
-        <translation>Filtrera filer...</translation>
+        <translation>Filtrer les fichiers...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="98"/>
         <source>&amp;File</source>
-        <translation>&amp;Fil</translation>
+        <translation>&amp;Fichier</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="113"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Redigera</translation>
+        <translation>&amp;Editer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="132"/>
         <source>&amp;View</source>
-        <translation>&amp;Visa</translation>
+        <translation>&amp;Vue</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="152"/>
         <source>&amp;Help</source>
-        <translation>&amp;Hjälp</translation>
+        <translation>Aide</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="163"/>
         <source>Main Toolbar</source>
-        <translation>Huvudverktygsfält</translation>
+        <translation>Barre d&apos;outils principale</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="191"/>
         <source>&amp;About</source>
-        <translation>&amp;Om</translation>
+        <translation>&amp;A propos</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="200"/>
         <source>&amp;New</source>
-        <translation>&amp;Ny</translation>
+        <translation>&amp;Nouveau</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="203"/>
@@ -283,7 +281,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.ui" line="212"/>
         <source>&amp;Open</source>
-        <translation>&amp;Öppna</translation>
+        <translation>&amp;Ouvrir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="215"/>
@@ -293,22 +291,22 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.ui" line="223"/>
         <source>Save &amp;As</source>
-        <translation>Spara &amp;som</translation>
+        <translation>Enregistrer sous</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="232"/>
         <source>&amp;Extract</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Extraire</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="237"/>
         <source>&amp;Test</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tester</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="245"/>
         <source>&amp;Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Propriétés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="248"/>
@@ -318,7 +316,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.ui" line="257"/>
         <source>&amp;Close</source>
-        <translation>&amp;Stäng</translation>
+        <translation>Fermer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="260"/>
@@ -328,7 +326,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.ui" line="268"/>
         <source>Cu&amp;t</source>
-        <translation>Kl&amp;ipp ut</translation>
+        <translation>Couper</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="271"/>
@@ -338,7 +336,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.ui" line="279"/>
         <source>&amp;Copy</source>
-        <translation>&amp;Kopiera</translation>
+        <translation>&amp;Copier</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="282"/>
@@ -348,7 +346,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.ui" line="290"/>
         <source>&amp;Paste</source>
-        <translation>&amp;Klistra in</translation>
+        <translation>Coller</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="293"/>
@@ -358,7 +356,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.ui" line="301"/>
         <source>&amp;Rename</source>
-        <translation>&amp;Byt namn</translation>
+        <translation>&amp;Renommer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="304"/>
@@ -368,7 +366,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.ui" line="309"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Ta bort</translation>
+        <translation>Supprimer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="312"/>
@@ -378,7 +376,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.ui" line="317"/>
         <source>&amp;Select All</source>
-        <translation>&amp;Välj alla</translation>
+        <translation>&amp;Sélectionner tout</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="320"/>
@@ -388,7 +386,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.ui" line="328"/>
         <source>&amp;Find</source>
-        <translation>&amp;Hitta</translation>
+        <translation>Trouver</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="331"/>
@@ -399,47 +397,47 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.ui" line="340"/>
         <source>&amp;Add Files</source>
-        <translation>&amp;Lägg till filer</translation>
+        <translation>&amp;Ajouter des fichiers</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="349"/>
         <source>Add F&amp;older</source>
-        <translation>Lägg till M&amp;app</translation>
+        <translation>Ajouter un d&amp;ossier</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="354"/>
         <source>Pass&amp;word</source>
-        <translation>Löse&amp;nord</translation>
+        <translation>Mot de passe</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="365"/>
         <source>&amp;Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barre d&apos;ou&amp;tils</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="376"/>
         <source>&amp;Statusbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barre d&apos;état</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="387"/>
         <source>&amp;Directory Tree</source>
-        <translation>&amp;Mapp träd</translation>
+        <translation>Arborescence &amp;des répertoires</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="398"/>
         <source>S&amp;how as Folder</source>
-        <translation>V&amp;isa som mapp</translation>
+        <translation>Afficher comme dossier</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="406"/>
         <source>Show &amp;All Files</source>
-        <translation>Visa &amp;Alla filer</translation>
+        <translation>&amp;Afficher tous les fichiers</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="415"/>
         <source>St&amp;op</source>
-        <translation type="unfinished"></translation>
+        <translation>St&amp;op</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="418"/>
@@ -449,7 +447,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.ui" line="423"/>
         <source>&amp;Reload</source>
-        <translation>&amp;Uppdatera</translation>
+        <translation>&amp;Recharger</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="426"/>
@@ -459,65 +457,65 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.ui" line="431"/>
         <source>Filename &amp;Encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Encodage du nom de fichier</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="436"/>
         <source>&amp;View Selected Items</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Voir les items sélectionnés</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="441"/>
         <source>&amp;Filter</source>
-        <translation>&amp;Filter</translation>
+        <translation>&amp;Filtre</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="452"/>
         <source>&amp;Expand</source>
-        <translation>&amp;Expandera</translation>
+        <translation>&amp;Etendre</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="455"/>
         <source>Ctrl+Shift+Down</source>
-        <translation>Ctrl+Shift+Nedåtpil</translation>
+        <translation>Ctrl+Shift+Down</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="463"/>
         <source>&amp;Collapse</source>
-        <translation type="unfinished"></translation>
+        <translation>Réduire</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="466"/>
         <source>Ctrl+Shift+Up</source>
-        <translation>Ctrl+Shift+Uppåtpil</translation>
+        <translation>Ctrl+Shift+Up</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="289"/>
         <location filename="../mainwindow.cpp" line="318"/>
         <location filename="../mainwindow.cpp" line="351"/>
         <source>All files (*)</source>
-        <translation type="unfinished">Alla filer (*)</translation>
+        <translation>Tous les fichiers (*)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="323"/>
         <location filename="../mainwindow.cpp" line="356"/>
         <source>Add only if &amp;newer</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter seulement si plus réce&amp;nt</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="381"/>
         <source>Confirm</source>
-        <translation>Bekräfta</translation>
+        <translation>Confirmer</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="381"/>
         <source>Are you sure you want to delete selected files?</source>
-        <translation type="unfinished"></translation>
+        <translation>Voulez-vous vraiment supprimer les fichiers sélectionnés ?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="672"/>
         <source>Version: %1</source>
-        <translation>Version: %1</translation>
+        <translation>Version : %1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="759"/>
@@ -527,65 +525,65 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.cpp" line="852"/>
         <source>Success</source>
-        <translation type="unfinished"></translation>
+        <translation>Succès</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="852"/>
         <source>No errors have been found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Aucune erreur n&apos;a été trouvée.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="830"/>
         <location filename="../mainwindow.cpp" line="887"/>
         <source>Error</source>
-        <translation>Fel</translation>
+        <translation>Erreur</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="915"/>
         <source>N/A</source>
-        <translation type="unfinished"></translation>
+        <translation>N/A</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="919"/>
         <source>Uncompressed Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Taille non compressée :</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="921"/>
         <source>Compression Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ratio de compression :</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="974"/>
         <source>File name</source>
-        <translation>Filnamn</translation>
+        <translation>Nom du fichier</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="975"/>
         <source>File Type</source>
-        <translation>Filtyp</translation>
+        <translation>Type de fichier</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="976"/>
         <source>File Size</source>
-        <translation>Filstorlek</translation>
+        <translation>Taille du fichier</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="977"/>
         <source>Modified</source>
-        <translation>Modifierad</translation>
+        <translation>Modifié</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="978"/>
         <source>Encrypted</source>
-        <translation>Krypterad</translation>
+        <translation>Crypté</translation>
     </message>
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1008"/>
         <source>%n file(s)</source>
         <translation>
-            <numerusform>%n fil</numerusform>
-            <numerusform>%n filer</numerusform>
+            <numerusform>%n fichier</numerusform>
+            <numerusform>%n fichiers</numerusform>
         </translation>
     </message>
 </context>
@@ -595,28 +593,28 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
         <location filename="../passworddialog.ui" line="14"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password</source>
-        <translation>Lösenord</translation>
+        <translation>Mot de passe</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="20"/>
         <source>Encrypt the file list</source>
-        <translation type="unfinished"></translation>
+        <translation>Crypter la liste des fichiers</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="34"/>
         <source>Show password</source>
-        <translation>Visa lösenord</translation>
+        <translation>Montrer le mot de passe</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="48"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password:</source>
-        <translation>Lösenord:</translation>
+        <translation>Mot de passe :</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="61"/>
         <source>&lt;i&gt;&lt;b&gt;Note:&lt;/b&gt; the password will be used to encrypt files you add to the current archive, and to decrypt files you extract from the current archive. When the archive is closed the password will be deleted.&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;i&gt;&lt;b&gt;Note :&lt;/b&gt; le mot de passe sera utilisé pour crypter les fichiers que vous ajoutez à l&apos;archive actuelle et pour décrypter les fichiers que vous extrayez de l&apos;archive actuelle. Lorsque l&apos;archive est fermée, le mot de passe sera supprimé.&lt;/i&gt;</translation>
     </message>
 </context>
 <context>
@@ -624,7 +622,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../progressdialog.ui" line="14"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Progression</translation>
     </message>
     <message>
         <location filename="../progressdialog.cpp" line="16"/>
@@ -638,7 +636,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
         <location filename="../main.cpp" line="248"/>
         <location filename="../main.cpp" line="288"/>
         <source>Error</source>
-        <translation>Fel</translation>
+        <translation>Erreur</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="6"/>
@@ -648,7 +646,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../corestrs.h" line="7"/>
         <source>Tar compressed with 7z (.tar.7z)</source>
-        <translation>Tar komprimerad med 7z (.tar.7z)</translation>
+        <translation>Tar compressé avec 7z (.tar.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="8"/>
@@ -673,32 +671,32 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../corestrs.h" line="12"/>
         <source>Tar compressed with bzip2 (.tar.bz2)</source>
-        <translation>Tar komprimerad med bzip2 (.tar.bz2)</translation>
+        <translation>Tar compressé avec bzip2 (.tar.bz2)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="13"/>
         <source>Tar compressed with bzip (.tar.bz)</source>
-        <translation>Tar komprimerad med bzip (.tar.bz)</translation>
+        <translation>Tar compressé avec bzip (.tar.bz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="14"/>
         <source>Cabinet (.cab)</source>
-        <translation>Kabinett (.cab)</translation>
+        <translation>Cabinet (.cab)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="15"/>
         <source>Rar Archived Comic Book (.cbr)</source>
-        <translation>Rar arkiverad serietidning (.cbr)</translation>
+        <translation>Bande dessinée archivée Rar (.cbr)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="16"/>
         <source>Zip Archived Comic Book (.cbz)</source>
-        <translation>Zip-arkiverad serietidning (.cbz)</translation>
+        <translation>Zip Comic Book (.cbz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="17"/>
         <source>Tar compressed with gzip (.tar.gz)</source>
-        <translation>Tar komprimerad med gzip (.tar.gz)</translation>
+        <translation>Tar compressé avec gzip (.tar.gz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="18"/>
@@ -708,7 +706,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../corestrs.h" line="19"/>
         <source>Self-extracting zip (.exe)</source>
-        <translation>Självuppackande zip (.exe)</translation>
+        <translation>Zip auto-extractible (.exe)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="20"/>
@@ -728,27 +726,27 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../corestrs.h" line="23"/>
         <source>Tar compressed with lrzip (.tar.lrz)</source>
-        <translation>Tar komprimerad med lrzip (.tar.lrz)</translation>
+        <translation>Tar compressé avec lrzip (.tar.lrz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="24"/>
         <source>Tar compressed with lzip (.tar.lz)</source>
-        <translation>Tar komprimerad med lzip (.tar.lz)</translation>
+        <translation>Tar compressé avec lzip (.tar.lz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="25"/>
         <source>Tar compressed with lzma (.tar.lzma)</source>
-        <translation>Tar komprimerad med lzma (.tar.lzma)</translation>
+        <translation>Tar compressé avec lzma (.tar.lzma)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="26"/>
         <source>Tar compressed with lzop (.tar.lzo)</source>
-        <translation>Tar komprimerad med lzop (.tar.lzo)</translation>
+        <translation>Tar compressé avec lzop (.tar.lzo)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="27"/>
         <source>Windows Imaging Format (.wim)</source>
-        <translation type="unfinished"></translation>
+        <translation>Windows Imaging Format (.wim)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="28"/>
@@ -758,12 +756,12 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../corestrs.h" line="29"/>
         <source>Tar uncompressed (.tar)</source>
-        <translation>Tar okomprimerad (.tar)</translation>
+        <translation>Tar non compressé (.tar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="30"/>
         <source>Tar compressed with compress (.tar.Z)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar compressé avec compress (.tar.Z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="31"/>
@@ -778,12 +776,12 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../corestrs.h" line="33"/>
         <source>Tar compressed with xz (.tar.xz)</source>
-        <translation>Tar komprimerad med xz (.tar.xz)</translation>
+        <translation>Tar compressé avec xz (.tar.xz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="34"/>
         <source>Tar compressed with zstd (.tar.zst)</source>
-        <translation>Tar komprimerad med zstd (.tar.zst)</translation>
+        <translation>Tar compressé avec zstd (.tar.zst)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="35"/>
@@ -801,7 +799,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
         <location filename="../corestrs.h" line="62"/>
         <location filename="../main.cpp" line="240"/>
         <source>Adding file: </source>
-        <translation>Lägger till fil: </translation>
+        <translation>Ajout de fichier : </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="40"/>
@@ -809,68 +807,68 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
         <location filename="../corestrs.h" line="64"/>
         <location filename="../main.cpp" line="280"/>
         <source>Extracting file: </source>
-        <translation type="unfinished"></translation>
+        <translation>Extraction du fichier : </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="43"/>
         <source>%d %B %Y, %H:%M</source>
-        <translation>%d %B %Y, %H:%M</translation>
+        <translation>%d %B %Y, %H :%M</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="47"/>
         <location filename="../corestrs.h" line="63"/>
         <source>Removing file: </source>
-        <translation>Ta bort fil: </translation>
+        <translation>Suppression du fichier : </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="48"/>
         <source>Deleting files from archive</source>
-        <translation>Ta bort filer från arkivet</translation>
+        <translation>Suppression de fichiers de l&apos;archive</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="50"/>
         <source>Recompressing archive</source>
-        <translation>Komprimera arkivet igen</translation>
+        <translation>Recompression de l&apos;archive</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="51"/>
         <source>Decompressing archive</source>
-        <translation>Komprimerar arkiv</translation>
+        <translation>Décompresser l&apos;archive</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="54"/>
         <source>File not found.</source>
-        <translation>Filen hittades inte.</translation>
+        <translation>Fichier introuvable.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="55"/>
         <source>Archive type not supported.</source>
-        <translation type="unfinished">Arkivtypen stöds inte.</translation>
+        <translation>Type d&apos;archive non pris en charge.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="56"/>
         <source>Archive not found</source>
-        <translation>Arkiv hittades inte</translation>
+        <translation>Archive introuvable</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="57"/>
         <source>You don&apos;t have the right permissions.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vous n&apos;avez pas les bonnes autorisations.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="58"/>
         <source>This archive type cannot be modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Ce type d&apos;archive ne peut pas être modifié</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="59"/>
         <source>You can&apos;t add an archive to itself.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vous ne pouvez pas ajouter une archive à elle-même.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="65"/>
         <source>Could not find the volume: %s</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible de trouver le volume :%s</translation>
     </message>
 </context>
 </TS>
