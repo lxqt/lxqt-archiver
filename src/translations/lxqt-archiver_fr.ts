@@ -256,7 +256,7 @@ avec ce programme ; si ce n&apos;est pas le cas, consultez &lt;http://www.gnu.
     <message>
         <location filename="../mainwindow.ui" line="152"/>
         <source>&amp;Help</source>
-        <translation>Aide</translation>
+        <translation>&amp;Aide</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="163"/>
@@ -291,7 +291,7 @@ avec ce programme ; si ce n&apos;est pas le cas, consultez &lt;http://www.gnu.
     <message>
         <location filename="../mainwindow.ui" line="223"/>
         <source>Save &amp;As</source>
-        <translation>Enregistrer sous</translation>
+        <translation>E&amp;nregistrer sous</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="232"/>
@@ -311,12 +311,12 @@ avec ce programme ; si ce n&apos;est pas le cas, consultez &lt;http://www.gnu.
     <message>
         <location filename="../mainwindow.ui" line="248"/>
         <source>Alt+Return</source>
-        <translation>Alt+Return</translation>
+        <translation>Alt+Entrée</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="257"/>
         <source>&amp;Close</source>
-        <translation>Fermer</translation>
+        <translation>&amp;Fermer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="260"/>
@@ -326,7 +326,7 @@ avec ce programme ; si ce n&apos;est pas le cas, consultez &lt;http://www.gnu.
     <message>
         <location filename="../mainwindow.ui" line="268"/>
         <source>Cu&amp;t</source>
-        <translation>Couper</translation>
+        <translation>Cou&amp;per</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="271"/>
@@ -346,7 +346,7 @@ avec ce programme ; si ce n&apos;est pas le cas, consultez &lt;http://www.gnu.
     <message>
         <location filename="../mainwindow.ui" line="290"/>
         <source>&amp;Paste</source>
-        <translation>Coller</translation>
+        <translation>C&amp;oller</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="293"/>
@@ -366,12 +366,12 @@ avec ce programme ; si ce n&apos;est pas le cas, consultez &lt;http://www.gnu.
     <message>
         <location filename="../mainwindow.ui" line="309"/>
         <source>&amp;Delete</source>
-        <translation>Supprimer</translation>
+        <translation>&amp;Supprimer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="312"/>
         <source>Del</source>
-        <translation>Del</translation>
+        <translation>Suppr</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="317"/>
@@ -386,7 +386,7 @@ avec ce programme ; si ce n&apos;est pas le cas, consultez &lt;http://www.gnu.
     <message>
         <location filename="../mainwindow.ui" line="328"/>
         <source>&amp;Find</source>
-        <translation>Trouver</translation>
+        <translation>&amp;Trouver</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="331"/>
@@ -407,7 +407,7 @@ avec ce programme ; si ce n&apos;est pas le cas, consultez &lt;http://www.gnu.
     <message>
         <location filename="../mainwindow.ui" line="354"/>
         <source>Pass&amp;word</source>
-        <translation>Mot de passe</translation>
+        <translation>&amp;Mot de passe</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="365"/>
@@ -417,7 +417,7 @@ avec ce programme ; si ce n&apos;est pas le cas, consultez &lt;http://www.gnu.
     <message>
         <location filename="../mainwindow.ui" line="376"/>
         <source>&amp;Statusbar</source>
-        <translation>Barre d&apos;état</translation>
+        <translation>&amp;Barre d&apos;état</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="387"/>
@@ -427,7 +427,7 @@ avec ce programme ; si ce n&apos;est pas le cas, consultez &lt;http://www.gnu.
     <message>
         <location filename="../mainwindow.ui" line="398"/>
         <source>S&amp;how as Folder</source>
-        <translation>Afficher comme dossier</translation>
+        <translation>A&amp;fficher comme dossier</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="406"/>
@@ -442,7 +442,7 @@ avec ce programme ; si ce n&apos;est pas le cas, consultez &lt;http://www.gnu.
     <message>
         <location filename="../mainwindow.ui" line="418"/>
         <source>Esc</source>
-        <translation>Esc</translation>
+        <translation>Échap</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="423"/>
@@ -477,17 +477,17 @@ avec ce programme ; si ce n&apos;est pas le cas, consultez &lt;http://www.gnu.
     <message>
         <location filename="../mainwindow.ui" line="455"/>
         <source>Ctrl+Shift+Down</source>
-        <translation>Ctrl+Shift+Down</translation>
+        <translation>Ctrl+Maj+Bas</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="463"/>
         <source>&amp;Collapse</source>
-        <translation>Réduire</translation>
+        <translation>&amp;Réduire</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="466"/>
         <source>Ctrl+Shift+Up</source>
-        <translation>Ctrl+Shift+Up</translation>
+        <translation>Ctrl+Maj+Haut</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="289"/>
