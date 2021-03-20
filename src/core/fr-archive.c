@@ -600,6 +600,17 @@ get_mime_type_from_filename (GFile *file)
 	mime_type = get_mime_type_from_extension (get_file_extension (filename));
 	g_free (filename);
 
+	/* if a disk image is not compressed, 7z can handle it correctly */
+	if (mime_type && strcmp (mime_type, "application/x-raw-disk-image") == 0) {
+		const char * real_type = get_mime_type_from_magic_numbers(file);
+		if (real_type
+			&& (strcmp (real_type, "application/gzip") == 0
+				|| strcmp (real_type, "application/x-cpio") == 0
+				|| strcmp (real_type, "application/x-xz") == 0)) {
+			return "compressed-disk-image";
+		}
+	}
+
 	return mime_type;
 }
 
@@ -1170,7 +1181,10 @@ load_local_archive (FrArchive  *archive,
 	}
 
 	fr_archive_connect_to_command (archive);
-	archive->content_type = mime_type;
+	if (strcmp(mime_type, "compressed-disk-image") == 0) /* a virtual type */
+		archive->content_type = "application/x-raw-disk-image";
+	else
+		archive->content_type = mime_type;
 	if (! fr_command_is_capable_of (archive->command, FR_COMMAND_CAN_WRITE))
 		archive->read_only = TRUE;
 	fr_archive_stoppable (archive, TRUE);

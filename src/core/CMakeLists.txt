@@ -4,10 +4,6 @@ include_directories(
     ${CMAKE_BINARY_DIR}
 )
 
-add_definitions(
-    -DSHDIR=\"${CMAKE_INSTALL_LIBEXECDIR}/lxqt-archiver\"
-)
-
 add_library(lxqt-archiver-core STATIC
     tr-wrapper.c  # our own wrapper for QTranslater
     file-data.c
@@ -22,7 +18,7 @@ add_library(lxqt-archiver-core STATIC
     fr-command-cfile.c
     fr-command-cpio.c
     fr-command-dpkg.c
-    fr-command-iso.c
+    fr-command-img.c
     fr-command-jar.c
     fr-command-lha.c
     fr-command-lrzip.c
@@ -48,10 +44,6 @@ add_library(lxqt-archiver-core STATIC
 target_link_libraries(lxqt-archiver-core
     ${GLIB_LIBRARIES}
     ${GLIB_JSON_LDFLAGS}
-)
-
-set(SCRIPT_FILES
-    sh/isoinfo.sh
 )
 
 install(FILES

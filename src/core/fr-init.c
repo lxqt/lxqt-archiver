@@ -33,7 +33,8 @@
 #include "fr-command-cfile.h"
 #include "fr-command-cpio.h"
 #include "fr-command-dpkg.h"
-#include "fr-command-iso.h"
+/*#include "fr-command-iso.h"*/
+#include "fr-command-img.h"
 #include "fr-command-jar.h"
 #include "fr-command-lha.h"
 #include "fr-command-rar.h"
@@ -73,6 +74,7 @@ FrMimeTypeDescription mime_type_desc[] = {
 	{ "application/x-cbr",                  ".cbr",      N_("Rar Archived Comic Book (.cbr)"), 0 },
 	{ "application/x-cbz",                  ".cbz",      N_("Zip Archived Comic Book (.cbz)"), 0 },
 	{ "application/x-cd-image",             ".iso",      NULL, 0 },
+	{ "application/x-raw-disk-image",       ".img",      NULL, 0 },
 	{ "application/x-compress",             ".Z",        NULL, 0 },
 	{ "application/x-compressed-tar",       ".tar.gz",   N_("Tar compressed with gzip (.tar.gz)"), 0 },
 	{ "application/x-cpio",                 ".cpio",     NULL, 0 },
@@ -104,6 +106,8 @@ FrMimeTypeDescription mime_type_desc[] = {
 	{ "application/x-zstd-compressed-tar",  ".tar.zst",  N_("Tar compressed with zstd"), 0 },
 	{ "application/x-zoo",                  ".zoo",      N_("Zoo (.zoo)"), 0 },
 	{ "application/zip",                    ".zip",      N_("Zip (.zip)"), 0 },
+	/* this is a virtual type for compressed disk images, which bsdtar can handle but 7z cannot */
+	{ "compressed-disk-image",              NULL,        NULL, 0 },
 	{ NULL, NULL, NULL, 0 }
 };
 
@@ -126,6 +130,7 @@ FrExtensionType file_ext_type[] = {
 	{ ".exe", "application/x-ms-dos-executable" },
 	{ ".gz", "application/gzip" },
 	{ ".iso", "application/x-cd-image" },
+	{ ".img", "application/x-raw-disk-image" },
 	{ ".jar", "application/x-java-archive" },
 	{ ".lha", "application/x-lha" },
 	{ ".lrz", "application/x-lrzip" },
@@ -357,7 +362,8 @@ register_commands (void)
 	register_command (FR_TYPE_COMMAND_AR);
 	register_command (FR_TYPE_COMMAND_ARJ);
 	register_command (FR_TYPE_COMMAND_CPIO);
-	register_command (FR_TYPE_COMMAND_ISO);
+	/*register_command (FR_TYPE_COMMAND_ISO);*/
+	register_command (FR_TYPE_COMMAND_IMG);
 	register_command (FR_TYPE_COMMAND_JAR);
 	register_command (FR_TYPE_COMMAND_LHA);
 	register_command (FR_TYPE_COMMAND_RPM);
