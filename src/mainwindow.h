@@ -134,6 +134,10 @@ private Q_SLOTS:
     void onDragStarted();
 
 private:
+    void loadSettings();
+
+    void saveSettings();
+
     void setFileName(const QString& fileName);
 
     QList<QStandardItem*> createFileListRow(const ArchiverItem* file);

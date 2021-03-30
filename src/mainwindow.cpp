@@ -67,24 +67,7 @@ MainWindow::MainWindow(QWidget* parent):
     ui_->splitter->setStretchFactor(0, 0);
     ui_->splitter->setStretchFactor(1, 1);
 
-    QSettings settings(QSettings::UserScope, QStringLiteral("lxqt"), QStringLiteral("archiver"));
-    // window size
-    settings.beginGroup (QStringLiteral("Sizes"));
-    QSize winSize = settings.value(QStringLiteral("WindowSize"), QSize(700, 500)).toSize();
-    QSize ag;
-    if (QScreen *pScreen = QApplication::primaryScreen()) {
-        ag = pScreen->availableVirtualGeometry().size();
-    }
-    if (!ag.isEmpty()) {
-        winSize = winSize.boundedTo (ag);
-    }
-    resize(winSize);
-    // splitter position
-    QList<int> sizes;
-    sizes.append(settings.value(QStringLiteral("SplitterPos"), splitterPos_).toInt());
-    settings.endGroup();
-    sizes.append(400);
-    ui_->splitter->setSizes(sizes);
+    loadSettings();
 
     // create a progress bar in the status bar
     progressBar_ = new QProgressBar{ui_->statusBar};
@@ -164,21 +147,66 @@ MainWindow::MainWindow(QWidget* parent):
 }
 
 MainWindow::~MainWindow() {
+    saveSettings();
+    if(!tempDir_.isEmpty()) { // remove the temp dir if any
+        QDir(tempDir_).removeRecursively();
+    }
+}
+
+void MainWindow::loadSettings() {
     QSettings settings(QSettings::UserScope, QStringLiteral("lxqt"), QStringLiteral("archiver"));
+    // window size
     settings.beginGroup (QStringLiteral("Sizes"));
+    QSize winSize = settings.value(QStringLiteral("WindowSize"), QSize(700, 500)).toSize();
+    QSize ag;
+    if (QScreen *pScreen = QApplication::primaryScreen()) {
+        ag = pScreen->availableVirtualGeometry().size();
+    }
+    if (!ag.isEmpty()) {
+        winSize = winSize.boundedTo (ag);
+    }
+    resize(winSize);
+    // splitter position
+    QList<int> sizes;
+    sizes.append(settings.value(QStringLiteral("SplitterPos"), splitterPos_).toInt());
+    settings.endGroup();
+    sizes.append(400);
+    ui_->splitter->setSizes(sizes);
+    // window settings
+    settings.beginGroup (QStringLiteral("Window"));
+    ui_->actionDirTree->setChecked(settings.value(QStringLiteral("DirTree"), true).toBool());
+    ui_->actionStatusbar->setChecked(settings.value(QStringLiteral("StatusBar"), true).toBool());
+    ui_->actionToolbar->setChecked(settings.value(QStringLiteral("ToolBar"), true).toBool());
+    settings.endGroup();
+}
+
+void MainWindow::saveSettings() {
+    // Sizes
+    QSettings settings(QSettings::UserScope, QStringLiteral("lxqt"), QStringLiteral("archiver"));
+    settings.beginGroup(QStringLiteral("Sizes"));
     QSize windowSize = size();
     if(settings.value(QStringLiteral("WindowSize")).toSize() != windowSize) {
         settings.setValue(QStringLiteral("WindowSize"), windowSize);
     }
-    int splitterPos = viewMode_ == ViewMode::FlatList ? splitterPos_ : ui_->splitter->sizes().at(0);
+    int splitterPos = viewMode_ == ViewMode::FlatList || !ui_->actionDirTree->isChecked()
+                          ? splitterPos_
+                          : ui_->splitter->sizes().at(0);
     if(settings.value(QStringLiteral("SplitterPos")).toInt() != splitterPos) {
         settings.setValue(QStringLiteral("SplitterPos"), splitterPos);
     }
     settings.endGroup();
-
-    if(!tempDir_.isEmpty()) { // remove the temp dir if any
-        QDir(tempDir_).removeRecursively();
+    // Window
+    settings.beginGroup(QStringLiteral("Window"));
+    if(settings.value(QStringLiteral("DirTree")).toBool() != ui_->actionDirTree->isChecked()) {
+        settings.setValue(QStringLiteral("DirTree"), ui_->actionDirTree->isChecked());
     }
+    if(settings.value(QStringLiteral("StatusBar")).toBool() != ui_->actionStatusbar->isChecked()) {
+        settings.setValue(QStringLiteral("StatusBar"), ui_->actionStatusbar->isChecked());
+    }
+    if(settings.value(QStringLiteral("ToolBar")).toBool() != ui_->actionToolbar->isChecked()) {
+        settings.setValue(QStringLiteral("ToolBar"), ui_->actionToolbar->isChecked());
+    }
+    settings.endGroup();
 }
 
 void MainWindow::loadFile(const Fm::FilePath &file) {
@@ -636,6 +664,7 @@ void MainWindow::on_actionPassword_triggered(bool /*checked*/) {
 }
 
 void MainWindow::on_actionDirTree_toggled(bool checked) {
+    splitterPos_ = ui_->splitter->sizes().at(0); // remember splitter position first
     bool visible = checked && viewMode_ == ViewMode::DirTree;
     ui_->dirTreeView->setVisible(visible);
     ui_->actionExpand->setEnabled(visible);
