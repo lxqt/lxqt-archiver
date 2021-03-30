@@ -1120,7 +1120,7 @@ QModelIndex MainWindow::indexFromItem(const QModelIndex &parent, const ArchiverI
         auto model = parent.model();
         auto n_rows = model->rowCount(parent);
         for(int row = 0; row < n_rows; ++row) {
-            auto rowIdx = parent.child(row, 0);
+            auto rowIdx = model->index(row, 0, parent);
             if(itemFromIndex(rowIdx) == item) {
                 index = std::move(rowIdx);
                 break;

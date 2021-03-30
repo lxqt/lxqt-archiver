@@ -20,6 +20,7 @@ set(lxqt-archiver_SRCS
     createfiledialog.cpp
     extractfiledialog.cpp
     filetreeView.cpp
+    dirtreeView.cpp
 )
 
 set(lxqt-archiver_UI
