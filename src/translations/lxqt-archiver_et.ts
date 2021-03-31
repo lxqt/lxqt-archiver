@@ -11,17 +11,17 @@
     <message>
         <location filename="../about.ui" line="34"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt arhiivihaldur&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="57"/>
         <source>A simple and desktop-agnostic Qt file archiver</source>
-        <translation type="unfinished"></translation>
+        <translation>Lihtne ja töölauakeskkonast sõltumatu Qt-põhine failide arhiivihaldur</translation>
     </message>
     <message>
         <location filename="../about.ui" line="67"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://lxqt.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://lxqt.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://lxqt.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://lxqt.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="87"/>
@@ -37,7 +37,13 @@ LXQt Archiver is derived from the following programs:
 * Engrampa of MATE desktop
 * File Roller of Gnome desktop
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Rakenduse koodi on kirjutanud:
+* Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;
+
+LXQt arhiivihalduri loomisel on kasutatud järgmisi rakendusi:
+* Engrampa MATE töölauakeskkonnast
+* File Roller Gnome töölauakeskkonnast
+</translation>
     </message>
     <message>
         <location filename="../about.ui" line="113"/>
@@ -71,12 +77,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archiver.cpp" line="66"/>
         <source>Archive type not supported.</source>
-        <translation type="unfinished"></translation>
+        <translation>See arhiivi tüüp ei ole toetatud.</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="310"/>
         <source>*%1 files (*%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>*%1 faili (*%1)</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="314"/>
@@ -89,7 +95,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="25"/>
         <source>Failed to execute the command.</source>
-        <translation>Käsu käivitamine ei õnnestunud,</translation>
+        <translation>Käsu käivitamine ei õnnestunud.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
@@ -155,7 +161,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../createfiledialog.cpp" line="13"/>
         <source>All files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Kõik failid (*)</translation>
     </message>
 </context>
 <context>
@@ -163,7 +169,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="23"/>
         <source>Extract</source>
-        <translation type="unfinished"></translation>
+        <translation>Paki lahti</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="29"/>
@@ -201,7 +207,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extractfiledialog.cpp" line="12"/>
         <source>All files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Kõik failid (*)</translation>
     </message>
 </context>
 <context>
@@ -210,7 +216,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../mainwindow.ui" line="14"/>
         <location filename="../mainwindow.cpp" line="258"/>
         <source>File Archiver</source>
-        <translation type="unfinished"></translation>
+        <translation>Failiarhiivide haldur</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="77"/>
@@ -220,22 +226,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="98"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Fail</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="113"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Muuda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="132"/>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vaata</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="152"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Abiteave</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="163"/>
@@ -509,13 +515,13 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="852"/>
         <source>No errors have been found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vigu ei leidunud.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="830"/>
         <location filename="../mainwindow.cpp" line="887"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Viga</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="915"/>
@@ -525,37 +531,37 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="919"/>
         <source>Uncompressed Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pakkimata andmemaht:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="921"/>
         <source>Compression Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pakkimise suhtarv:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="974"/>
         <source>File name</source>
-        <translation type="unfinished"></translation>
+        <translation>Faili nimi</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="975"/>
         <source>File Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Faili tüüp</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="976"/>
         <source>File Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Faili suurus</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="977"/>
         <source>Modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Muudetud</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="978"/>
         <source>Encrypted</source>
-        <translation type="unfinished"></translation>
+        <translation>Krüptitud</translation>
     </message>
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1008"/>
@@ -571,7 +577,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../passworddialog.ui" line="14"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Salasõna</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="20"/>
@@ -581,13 +587,13 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../passworddialog.ui" line="34"/>
         <source>Show password</source>
-        <translation type="unfinished"></translation>
+        <translation>Näita salasõna</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="48"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password:</source>
-        <translation type="unfinished"></translation>
+        <translation>Salasõna:</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="61"/>
@@ -600,12 +606,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../progressdialog.ui" line="14"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Pakkimise edenemine</translation>
     </message>
     <message>
         <location filename="../progressdialog.cpp" line="16"/>
         <source>%p %</source>
-        <translation type="unfinished"></translation>
+        <translation>%p %</translation>
     </message>
 </context>
 <context>
@@ -614,52 +620,52 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../main.cpp" line="248"/>
         <location filename="../main.cpp" line="288"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Viga</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="6"/>
         <source>7-Zip (.7z)</source>
-        <translation type="unfinished"></translation>
+        <translation>7-Zip (.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="7"/>
         <source>Tar compressed with 7z (.tar.7z)</source>
-        <translation type="unfinished"></translation>
+        <translation>7z abil pakitud tar (.tar.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="8"/>
         <source>Ace (.ace)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ace (.ace)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="9"/>
         <source>Ar (.a)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ar (.a)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="10"/>
         <source>Ar (.ar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ar (.ar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="11"/>
         <source>Arj (.arj)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arj (.arj)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="12"/>
         <source>Tar compressed with bzip2 (.tar.bz2)</source>
-        <translation type="unfinished"></translation>
+        <translation>bzip2 abil pakitud tar (.tar.bz2)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="13"/>
         <source>Tar compressed with bzip (.tar.bz)</source>
-        <translation type="unfinished"></translation>
+        <translation>bzip abil pakitud tar (.tar.bz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="14"/>
         <source>Cabinet (.cab)</source>
-        <translation type="unfinished"></translation>
+        <translation>Cabinet (.cab)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="15"/>
@@ -674,12 +680,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="17"/>
         <source>Tar compressed with gzip (.tar.gz)</source>
-        <translation type="unfinished"></translation>
+        <translation>gzip abil pakitud tar (.tar.gz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="18"/>
         <source>Ear (.ear)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ear (.ear)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="19"/>
@@ -689,37 +695,37 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="20"/>
         <source>Jar (.jar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Jar (.jar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="21"/>
         <source>Lha (.lzh)</source>
-        <translation type="unfinished"></translation>
+        <translation>Lha (.lzh)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="22"/>
         <source>Lrzip (.lrz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Lrzip (.lrz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="23"/>
         <source>Tar compressed with lrzip (.tar.lrz)</source>
-        <translation type="unfinished"></translation>
+        <translation>lrzip abil pakitud tar (.tar.lrz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="24"/>
         <source>Tar compressed with lzip (.tar.lz)</source>
-        <translation type="unfinished"></translation>
+        <translation>lzip abil pakitud tar (.tar.lz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="25"/>
         <source>Tar compressed with lzma (.tar.lzma)</source>
-        <translation type="unfinished"></translation>
+        <translation>lzma abil pakitud tar (.tar.lzma)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="26"/>
         <source>Tar compressed with lzop (.tar.lzo)</source>
-        <translation type="unfinished"></translation>
+        <translation>lzop abil pakitud tar (.tar.lzo)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="27"/>
@@ -729,47 +735,47 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="28"/>
         <source>Rar (.rar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Rar (.rar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="29"/>
         <source>Tar uncompressed (.tar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Pakkimata tar (.tar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="30"/>
         <source>Tar compressed with compress (.tar.Z)</source>
-        <translation type="unfinished"></translation>
+        <translation>Compressi abil pakitud tar (.tar.Z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="31"/>
         <source>War (.war)</source>
-        <translation type="unfinished"></translation>
+        <translation>War (.war)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="32"/>
         <source>Xz (.xz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Xz (.xz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="33"/>
         <source>Tar compressed with xz (.tar.xz)</source>
-        <translation type="unfinished"></translation>
+        <translation>xz abil pakitud tar (.tar.xz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="34"/>
         <source>Tar compressed with zstd (.tar.zst)</source>
-        <translation type="unfinished"></translation>
+        <translation>zstd abil pakitud tar (.tar.zst)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="35"/>
         <source>Zoo (.zoo)</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoo (.zoo)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="36"/>
         <source>Zip (.zip)</source>
-        <translation type="unfinished"></translation>
+        <translation>Zip (.zip)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="39"/>
