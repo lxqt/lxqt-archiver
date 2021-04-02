@@ -417,7 +417,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="406"/>
         <source>Show &amp;All Files</source>
-        <translation>Mostra e tutti i file</translation>
+        <translation>Mostra &amp;tutti file</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="415"/>
