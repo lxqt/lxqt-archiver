@@ -69,7 +69,21 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation type="unfinished"></translation>
+        <translation>Käesolev programm on vaba tarkvara. Te võite seda edasi levitada
+ja/või muuta vastavalt GNU Üldise Avaliku Litsentsi
+tingimustele, nagu need on Vaba Tarkvara Fondi poolt
+avaldatud; kas Litsentsi versioon number 2 või (vastavalt
+Teie valikule) ükskõik milline hilisem versioon.
+
+Seda programmi levitatakse lootuses, et see on kasulik,
+kuid ILMA IGASUGUSE TAGATISETA; isegi RAHULDAVA KVALITEEDI
+või ERILISEKS OTSTARBEKS SOBIVUSE kaudse tagatiseta.
+Üksikasjalise info saamiseks vaata GNU Üldist Avaliku Litsentsi.
+
+Te peaks olema saanud GNU Üldise Avaliku Litsentsi
+koopia koos selle programmiga, kui ei, siis kontakteeruge Free Software
+Foundation&apos;iga, 51 Franklin Street, Fifth Floor, 
+Boston, MA 02110-1301, USA.</translation>
     </message>
 </context>
 <context>
@@ -115,7 +129,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="37"/>
         <source>Missing volume.</source>
-        <translation type="unfinished"></translation>
+        <translation>Arhiiviköide puudub.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="40"/>
@@ -143,7 +157,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../create.ui" line="36"/>
         <source>Split into volumes of</source>
-        <translation type="unfinished"></translation>
+        <translation>Jaga arhiiv mitmeks köiteks</translation>
     </message>
     <message>
         <location filename="../create.ui" line="43"/>
@@ -221,7 +235,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="77"/>
         <source>Filter Files...</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtreeri selle arhiivi faile...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="98"/>
@@ -246,7 +260,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="163"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Põhiline tööriistariba</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="191"/>
@@ -397,120 +411,120 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="365"/>
         <source>&amp;Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tööriistariba</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="376"/>
         <source>&amp;Statusbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Olekuriba</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="387"/>
         <source>&amp;Directory Tree</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kaustade puu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="398"/>
         <source>S&amp;how as Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Näita kaus&amp;tana</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="406"/>
         <source>Show &amp;All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Näita &amp;kõiki faile</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="415"/>
         <source>St&amp;op</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Peata</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="418"/>
         <source>Esc</source>
-        <translation type="unfinished"></translation>
+        <translation>Esc</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="423"/>
         <source>&amp;Reload</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Laadi uuesti</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="426"/>
         <source>F5</source>
-        <translation type="unfinished"></translation>
+        <translation>F5</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="431"/>
         <source>Filename &amp;Encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Failinime &amp;kodeering</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="436"/>
         <source>&amp;View Selected Items</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vaata valitud kirjeid</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="441"/>
         <source>&amp;Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Filtreeri faile</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="452"/>
         <source>&amp;Expand</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Laienda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="455"/>
         <source>Ctrl+Shift+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Down</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="463"/>
         <source>&amp;Collapse</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ahenda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="466"/>
         <source>Ctrl+Shift+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Up</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="289"/>
         <location filename="../mainwindow.cpp" line="318"/>
         <location filename="../mainwindow.cpp" line="351"/>
         <source>All files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Kõik failid (*)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="323"/>
         <location filename="../mainwindow.cpp" line="356"/>
         <source>Add only if &amp;newer</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisa vaid siis, kui fail on &amp;uuem</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="381"/>
         <source>Confirm</source>
-        <translation type="unfinished"></translation>
+        <translation>Kinnita</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="381"/>
         <source>Are you sure you want to delete selected files?</source>
-        <translation type="unfinished"></translation>
+        <translation>Kas sa oled kindel, et soovid kustutada valitud faile?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="672"/>
         <source>Version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Versioon: %1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="759"/>
         <source>%p %</source>
-        <translation type="unfinished"></translation>
+        <translation>%p %</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="852"/>
         <source>Success</source>
-        <translation type="unfinished"></translation>
+        <translation>Valmis</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="852"/>
@@ -526,7 +540,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="915"/>
         <source>N/A</source>
-        <translation type="unfinished"></translation>
+        <translation>pole teada</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="919"/>
@@ -566,8 +580,9 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1008"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n fail</numerusform>
+            <numerusform>%n faili</numerusform>
         </translation>
     </message>
 </context>
@@ -582,7 +597,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../passworddialog.ui" line="20"/>
         <source>Encrypt the file list</source>
-        <translation type="unfinished"></translation>
+        <translation>Krüpti failide loend</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="34"/>
@@ -598,7 +613,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../passworddialog.ui" line="61"/>
         <source>&lt;i&gt;&lt;b&gt;Note:&lt;/b&gt; the password will be used to encrypt files you add to the current archive, and to decrypt files you extract from the current archive. When the archive is closed the password will be deleted.&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;i&gt;&lt;b&gt;Märkus:&lt;/b&gt; sellesse arhiivi failide lisamisel krüptime nad antud salasõna abil ning samamoodi eemaldame lahtipakkimisel krüptimise. Arhiivifaili sulgemisel kustutame mälus hoitava salasõna.&lt;/i&gt;</translation>
     </message>
 </context>
 <context>
@@ -670,12 +685,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="15"/>
         <source>Rar Archived Comic Book (.cbr)</source>
-        <translation type="unfinished"></translation>
+        <translation>Koomiksiraamat rar-vormingus (.cbr)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="16"/>
         <source>Zip Archived Comic Book (.cbz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Koomiksiraamat zip-vormingus (.cbz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="17"/>
@@ -690,7 +705,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="19"/>
         <source>Self-extracting zip (.exe)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ise lahtipakkiv zip (.exe)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="20"/>
@@ -730,7 +745,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="27"/>
         <source>Windows Imaging Format (.wim)</source>
-        <translation type="unfinished"></translation>
+        <translation>Windowsi kettatõmmise arhiiv (.wim)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="28"/>
@@ -783,7 +798,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="62"/>
         <location filename="../main.cpp" line="240"/>
         <source>Adding file: </source>
-        <translation type="unfinished"></translation>
+        <translation>Lisan faili: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="40"/>
@@ -791,68 +806,68 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="64"/>
         <location filename="../main.cpp" line="280"/>
         <source>Extracting file: </source>
-        <translation type="unfinished"></translation>
+        <translation>Pakin faili lahti: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="43"/>
         <source>%d %B %Y, %H:%M</source>
-        <translation type="unfinished"></translation>
+        <translation>%d. %B %Y, %H:%M</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="47"/>
         <location filename="../corestrs.h" line="63"/>
         <source>Removing file: </source>
-        <translation type="unfinished"></translation>
+        <translation>Kustutan faili: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="48"/>
         <source>Deleting files from archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Kustutan arhiivist faile</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="50"/>
         <source>Recompressing archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Pakin arhiivi uuesti kokku</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="51"/>
         <source>Decompressing archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Pakin arhiivi lahti</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="54"/>
         <source>File not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Faili ei leidunud.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="55"/>
         <source>Archive type not supported.</source>
-        <translation type="unfinished"></translation>
+        <translation>See arhiivivorming ei ole toetatud.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="56"/>
         <source>Archive not found</source>
-        <translation type="unfinished"></translation>
+        <translation>Arhiivifaili ei leidunud</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="57"/>
         <source>You don&apos;t have the right permissions.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sul pole piisavalt õigusi.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="58"/>
         <source>This archive type cannot be modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Seda tüüpi arhiivi ei saa muuta</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="59"/>
         <source>You can&apos;t add an archive to itself.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sa ei saa arhiivifailile teda ennast lisada.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="65"/>
         <source>Could not find the volume: %s</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei leidnud arhiiviköidet: %s</translation>
     </message>
 </context>
 </TS>
