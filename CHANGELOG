@@ -1,3 +1,11 @@
+lxqt-archiver-0.4.0 / 2021-04-15
+===================================
+  * Support opening and extracting of disk images.
+  * Also, support xz-compressed disk images.
+  * Added "application/vnd.debian.binary-package" to mimetypes list.
+  * Made directory view horizontally scrollable.
+  * Remember window settings.
+
 lxqt-archiver-0.3.0 / 2020-11-01
 ===================================
   * Avoid memory leak in "java-utils.c".
