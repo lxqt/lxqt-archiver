@@ -1025,10 +1025,6 @@ void MainWindow::showFileList(const std::vector<const ArchiverItem *> &files) {
     }
 
     if(oldModel) {
-        // Workaround for Qt 5.11 QSortFilterProxyModel bug: https://bugreports.qt.io/browse/QTBUG-68581
-#if QT_VERSION == QT_VERSION_CHECK(5, 11, 0)
-        oldModel->disconnect(this);
-#endif
         delete oldModel;
     }
 
