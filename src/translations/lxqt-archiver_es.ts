@@ -94,7 +94,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../archiver.cpp" line="66"/>
         <source>Archive type not supported.</source>
-        <translation>Tipo de archivo no admitido.</translation>
+        <translation>Tipo de archivador no admitido.</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="310"/>
@@ -112,22 +112,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../archivererror.cpp" line="25"/>
         <source>Failed to execute the command.</source>
-        <translation>Error al ejecutar el comando.</translation>
+        <translation>No se pudo ejecutar la orden.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
         <source>Command is not found.</source>
-        <translation>No se encuentra el comando.</translation>
+        <translation>No se encuentra la orden.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="31"/>
         <source>The command exited abnormally.</source>
-        <translation>El comando ha terminado de forma anormal.</translation>
+        <translation>La orden ha terminado de forma anormal.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="34"/>
         <source>Password is required.</source>
-        <translation>Se necesita contraseña.</translation>
+        <translation>Se necesita una contraseña.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="37"/>
@@ -142,7 +142,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../archivererror.cpp" line="43"/>
         <source>Unsupported file format.</source>
-        <translation>Formato de archivo no soportado.</translation>
+        <translation>Formato de archivo no admitido.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="46"/>
@@ -160,7 +160,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../create.ui" line="36"/>
         <source>Split into volumes of</source>
-        <translation>Divididir en volúmenes de</translation>
+        <translation>Dividir en volúmenes de</translation>
     </message>
     <message>
         <location filename="../create.ui" line="43"/>
@@ -358,7 +358,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="301"/>
         <source>&amp;Rename</source>
-        <translation>&amp;Renombrar</translation>
+        <translation>Cambia&amp;r nombre</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="304"/>
@@ -439,7 +439,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="415"/>
         <source>St&amp;op</source>
-        <translation>&amp;Parar</translation>
+        <translation>&amp;Detener</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="418"/>
@@ -474,22 +474,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="452"/>
         <source>&amp;Expand</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Expandir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="455"/>
         <source>Ctrl+Shift+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Mayús+Abajo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="463"/>
         <source>&amp;Collapse</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Contraer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="466"/>
         <source>Ctrl+Shift+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Mayús+Arriba</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="289"/>
