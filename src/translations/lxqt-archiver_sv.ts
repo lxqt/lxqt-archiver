@@ -233,7 +233,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
         <location filename="../mainwindow.ui" line="14"/>
         <location filename="../mainwindow.cpp" line="258"/>
         <source>File Archiver</source>
-        <translation type="unfinished"></translation>
+        <translation>Filarkiverare</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="77"/>
@@ -748,7 +748,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../corestrs.h" line="27"/>
         <source>Windows Imaging Format (.wim)</source>
-        <translation type="unfinished"></translation>
+        <translation>Windows avbildsformat (.wim)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="28"/>

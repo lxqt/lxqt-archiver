@@ -6,7 +6,7 @@
     <message>
         <location filename="../about.ui" line="14"/>
         <source>About</source>
-        <translation>Thông tin</translation>
+        <translation>Về</translation>
     </message>
     <message>
         <location filename="../about.ui" line="34"/>
@@ -69,9 +69,9 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation type="unfinished">LXQt Archiver
+        <translation>LXQt Archiver
 
-Copyright (C) 2018 the LXQt Team
+Copyright (C) 2020 the LXQt Team
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -85,8 +85,7 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
-Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. {2020 ?} {2
-?} {51 ?} {02110-1301,?}</translation>
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation>
     </message>
 </context>
 <context>
@@ -112,7 +111,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../archivererror.cpp" line="25"/>
         <source>Failed to execute the command.</source>
-        <translation>Thư thi câu lệnh thất bại.</translation>
+        <translation>Thực thi câu lệnh thất bại.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
@@ -429,162 +428,162 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="398"/>
         <source>S&amp;how as Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>X&amp;em như thư mục</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="406"/>
         <source>Show &amp;All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Xem &amp;Tất cả Tập tin</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="415"/>
         <source>St&amp;op</source>
-        <translation type="unfinished"></translation>
+        <translation>Dừ&amp;ng</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="418"/>
         <source>Esc</source>
-        <translation type="unfinished"></translation>
+        <translation>Esc</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="423"/>
         <source>&amp;Reload</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tải lại</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="426"/>
         <source>F5</source>
-        <translation type="unfinished">F5</translation>
+        <translation>F5</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="431"/>
         <source>Filename &amp;Encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Mã hóa kí tự &amp;Tên tập tin</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="436"/>
         <source>&amp;View Selected Items</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Xem Các mục Đã chọn</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="441"/>
         <source>&amp;Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Lọc</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="452"/>
         <source>&amp;Expand</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mở rộng</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="455"/>
         <source>Ctrl+Shift+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Down</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="463"/>
         <source>&amp;Collapse</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Thu lại</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="466"/>
         <source>Ctrl+Shift+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Up</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="289"/>
         <location filename="../mainwindow.cpp" line="318"/>
         <location filename="../mainwindow.cpp" line="351"/>
         <source>All files (*)</source>
-        <translation type="unfinished">Tất cả tập tin (*)</translation>
+        <translation>Tất cả tập tin (*)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="323"/>
         <location filename="../mainwindow.cpp" line="356"/>
         <source>Add only if &amp;newer</source>
-        <translation type="unfinished"></translation>
+        <translation>Chỉ thêm nếu như &amp;mới hơn</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="381"/>
         <source>Confirm</source>
-        <translation type="unfinished"></translation>
+        <translation>Xác nhận</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="381"/>
         <source>Are you sure you want to delete selected files?</source>
-        <translation type="unfinished"></translation>
+        <translation>Bạn có chắc bạn muốn xóa các tập tin đã chọn?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="672"/>
         <source>Version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Phiên bản: %1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="759"/>
         <source>%p %</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%p %</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="852"/>
         <source>Success</source>
-        <translation type="unfinished"></translation>
+        <translation>Thành công</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="852"/>
         <source>No errors have been found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Không có lỗi nào được tìm thấy.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="830"/>
         <location filename="../mainwindow.cpp" line="887"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Lỗi</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="915"/>
         <source>N/A</source>
-        <translation type="unfinished"></translation>
+        <translation>N/A</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="919"/>
         <source>Uncompressed Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích cỡ Chưa nén:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="921"/>
         <source>Compression Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tỉ lệ Nén:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="974"/>
         <source>File name</source>
-        <translation type="unfinished"></translation>
+        <translation>Tên tập tin</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="975"/>
         <source>File Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Loại Tập tin</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="976"/>
         <source>File Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Kích cỡ Tập tin</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="977"/>
         <source>Modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã chỉnh sửa</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="978"/>
         <source>Encrypted</source>
-        <translation type="unfinished"></translation>
+        <translation>Đã mã hóa</translation>
     </message>
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1008"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n tập tin</numerusform>
         </translation>
     </message>
 </context>
@@ -594,17 +593,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
         <location filename="../passworddialog.ui" line="14"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Mật khẩu</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="20"/>
         <source>Encrypt the file list</source>
-        <translation type="unfinished"></translation>
+        <translation>Mã hóa danh sách tập tin</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="34"/>
         <source>Show password</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiện mật khẩu</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="48"/>
@@ -615,7 +614,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../passworddialog.ui" line="61"/>
         <source>&lt;i&gt;&lt;b&gt;Note:&lt;/b&gt; the password will be used to encrypt files you add to the current archive, and to decrypt files you extract from the current archive. When the archive is closed the password will be deleted.&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;i&gt;&lt;b&gt;Chú ý:&lt;/b&gt; mật khẩu sẽ được dùng để mã hóa các tập tin mà bạn thêm vào lưu trữ hiện tại, và để giải mã các tập tin bạn giải nén từ lưu trữ hiện tại. Một khi lưu trữ bị đóng mật khẩu sẽ bị xóa.&lt;/i&gt;</translation>
     </message>
 </context>
 <context>
@@ -623,12 +622,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../progressdialog.ui" line="14"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiến độ</translation>
     </message>
     <message>
         <location filename="../progressdialog.cpp" line="16"/>
         <source>%p %</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%p %</translation>
     </message>
 </context>
 <context>
@@ -637,47 +636,47 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
         <location filename="../main.cpp" line="248"/>
         <location filename="../main.cpp" line="288"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Lỗi</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="6"/>
         <source>7-Zip (.7z)</source>
-        <translation type="unfinished"></translation>
+        <translation>7-Zip (.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="7"/>
         <source>Tar compressed with 7z (.tar.7z)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar nén bằng 7z (.tar.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="8"/>
         <source>Ace (.ace)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ace (.ace)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="9"/>
         <source>Ar (.a)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ar (.a)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="10"/>
         <source>Ar (.ar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ar (.ar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="11"/>
         <source>Arj (.arj)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arj (.arj)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="12"/>
         <source>Tar compressed with bzip2 (.tar.bz2)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar nén bằng bzip2 (.tar.bz2)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="13"/>
         <source>Tar compressed with bzip (.tar.bz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar nén bằng bzip (.tar.bz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="14"/>
@@ -697,7 +696,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../corestrs.h" line="17"/>
         <source>Tar compressed with gzip (.tar.gz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar nén bằng gzip (.tar.gz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="18"/>
@@ -707,7 +706,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../corestrs.h" line="19"/>
         <source>Self-extracting zip (.exe)</source>
-        <translation type="unfinished"></translation>
+        <translation>zip tự giải nén (.exe)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="20"/>
@@ -727,22 +726,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../corestrs.h" line="23"/>
         <source>Tar compressed with lrzip (.tar.lrz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar nén bằng lrzip (.tar.lrz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="24"/>
         <source>Tar compressed with lzip (.tar.lz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar nén bằng lzip (.tar.lz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="25"/>
         <source>Tar compressed with lzma (.tar.lzma)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar nén bằng lzma (.tar.lzma)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="26"/>
         <source>Tar compressed with lzop (.tar.lzo)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar nén bằng lzop (.tar.lzo)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="27"/>
@@ -757,12 +756,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../corestrs.h" line="29"/>
         <source>Tar uncompressed (.tar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar chưa nén (.tar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="30"/>
         <source>Tar compressed with compress (.tar.Z)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar nén bằng compress (.tar.Z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="31"/>
@@ -777,12 +776,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../corestrs.h" line="33"/>
         <source>Tar compressed with xz (.tar.xz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar nén bằng xz (.tar.xz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="34"/>
         <source>Tar compressed with zstd (.tar.zst)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar nén bằng zstd (.tar.zst)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="35"/>
@@ -800,7 +799,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
         <location filename="../corestrs.h" line="62"/>
         <location filename="../main.cpp" line="240"/>
         <source>Adding file: </source>
-        <translation type="unfinished"></translation>
+        <translation>Thêm tập tin: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="40"/>
@@ -808,7 +807,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
         <location filename="../corestrs.h" line="64"/>
         <location filename="../main.cpp" line="280"/>
         <source>Extracting file: </source>
-        <translation type="unfinished"></translation>
+        <translation>Giải nén tập tin: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="43"/>
@@ -819,57 +818,57 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
         <location filename="../corestrs.h" line="47"/>
         <location filename="../corestrs.h" line="63"/>
         <source>Removing file: </source>
-        <translation type="unfinished"></translation>
+        <translation>Loại bỏ tập tin: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="48"/>
         <source>Deleting files from archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Xóa tập tin từ lưu trữ</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="50"/>
         <source>Recompressing archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Nén lại lưu trữ</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="51"/>
         <source>Decompressing archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Giải nén lưu trữ</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="54"/>
         <source>File not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tập tin không tìm thấy.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="55"/>
         <source>Archive type not supported.</source>
-        <translation type="unfinished">Loại lưu trữ không được hỗ trợ.</translation>
+        <translation>Loại lưu trữ không được hỗ trợ.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="56"/>
         <source>Archive not found</source>
-        <translation type="unfinished"></translation>
+        <translation>Lưu trữ không tìm thấy</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="57"/>
         <source>You don&apos;t have the right permissions.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bạn không có quyền phù hợp.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="58"/>
         <source>This archive type cannot be modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Loại lưu trữ này không thể chỉnh sửa được</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="59"/>
         <source>You can&apos;t add an archive to itself.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bạn không thể thêm một lưu trữ vào chính nó.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="65"/>
         <source>Could not find the volume: %s</source>
-        <translation type="unfinished"></translation>
+        <translation>Không thể tìm được volume: %s</translation>
     </message>
 </context>
 </TS>
