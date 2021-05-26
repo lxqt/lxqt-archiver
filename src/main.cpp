@@ -281,18 +281,27 @@ static int runApp(QApplication& app) {
 
             dlg.setArchiver(&archiver);
             archiver.openArchive(archive_uri.get(), nullptr);
+            std::string password_;
 
             // we can only start archive extraction after its content is fully loaded
             QObject::connect(&archiver, &Archiver::finish, &dlg, [&](FrAction action, ArchiverError err) {
                 if(err.hasError()) {
+                    if(action == FR_ACTION_LISTING_CONTENT
+                       && err.type() == FR_PROC_ERROR_ASK_PASSWORD
+                       && password_.empty()) { // encrypted list
+                        password_ = PasswordDialog::askPassword().toStdString();
+                        if(!password_.empty()) {
+                            archiver.reloadArchive(password_.c_str());
+                            return;
+                        }
+                    }
                     QMessageBox::critical(&dlg, QObject::tr("Error"), err.message());
                     dlg.reject();
                     return;
                 }
                 switch(action) {
                 case FR_ACTION_LISTING_CONTENT: {            /* loading the archive from a remote location */
-                    std::string password_;
-                    if(archiver.isEncrypted()) {
+                    if(archiver.isEncrypted() && password_.empty()) {
                         password_ = PasswordDialog::askPassword().toStdString();
                     }
 
