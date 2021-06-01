@@ -856,6 +856,17 @@ void MainWindow::onActionFinished(FrAction action, ArchiverError err) {
             if(auto model = qobject_cast<QStandardItemModel*>(ui_->dirTreeView->model())) {
                 model->clear();
             }
+
+            if(action == FR_ACTION_LISTING_CONTENT
+               && err.type() == FR_PROC_ERROR_ASK_PASSWORD
+               && password_.empty()) { // encrypted list
+                password_ = PasswordDialog::askPassword(this).toStdString();
+                if(!password_.empty()) {
+                    archiver_->reloadArchive(password_.c_str());
+                    return;
+                }
+            }
+
             QMessageBox::critical(this, tr("Error"), err.message());
             return;
         }
