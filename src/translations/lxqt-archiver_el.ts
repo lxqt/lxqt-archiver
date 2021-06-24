@@ -87,8 +87,7 @@ GNU Γενική Άδεια Χρήσης όπως έχουν δημοσιευθ�
 Θα πρέπει να έχετε παραλάβει ένα αντίγραφο της GNU Γενικής Άδειας Χρήσης
 μαζί με αυτό το πρόγραμμα. Αν όχι, γράψτε στο Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301,
-USA. {2020 ?} {2
-?} {51 ?} {02110-1301,?}</translation>
+USA.</translation>
     </message>
 </context>
 <context>
