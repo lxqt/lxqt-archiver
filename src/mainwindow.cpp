@@ -224,7 +224,7 @@ void MainWindow::loadFile(const Fm::FilePath &file) {
     if(!tmp.isEmpty()) {
         if(QDir(tmp).exists()) {
             tempDir_ = tmp + QStringLiteral("/lxqt-archiver-")
-                       + QDateTime::currentDateTime().toString(QStringLiteral("yyyyMMddhhmmss"));
+                       + QDateTime::currentDateTime().toString(QStringLiteral("yyyyMMddhhmmsszzz"));
         }
     }
 
@@ -611,8 +611,8 @@ void MainWindow::onDragStarted() {
                 }
             }
             else { // wait until all files are extracted
-                connect(archiver_.get(), &Archiver::finish, this, [drag]() {
-                    if(drag && drag->exec(Qt::CopyAction) == Qt::IgnoreAction) {
+                connect(archiver_.get(), &Archiver::finish, drag, [drag]() {
+                    if(drag->exec(Qt::CopyAction) == Qt::IgnoreAction) {
                         drag->deleteLater();
                     }
                 });
