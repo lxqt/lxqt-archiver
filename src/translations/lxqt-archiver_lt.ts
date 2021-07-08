@@ -16,7 +16,7 @@
     <message>
         <location filename="../about.ui" line="57"/>
         <source>A simple and desktop-agnostic Qt file archiver</source>
-        <translation type="unfinished"></translation>
+        <translation>Paprasta ir nuo darbalaukio aplinkos nepriklausanti Qt failų archyvavimo programa</translation>
     </message>
     <message>
         <location filename="../about.ui" line="67"/>
@@ -37,7 +37,13 @@ LXQt Archiver is derived from the following programs:
 * Engrampa of MATE desktop
 * File Roller of Gnome desktop
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Programavimas:
+* Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;
+
+LXQt archyvavimo programa yra kilusi iš šių programų:
+* Engrampa iš MATE darbalaukio
+* File Roller iš Gnome darbalaukio
+</translation>
     </message>
     <message>
         <location filename="../about.ui" line="113"/>
@@ -63,7 +69,23 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt archyvavimo programa
+
+Autorių teisės (C) 2020 LXQt komanda
+
+Ši programa yra laisva programinė įranga; jūs galite ją platinti ir/arba
+modifikuoti remdamiesi Free Software Foundation paskelbtomis
+GNU Bendrosios Viešosios Licencijos sąlygomis; licencijos 2 versija
+arba (jūsų pasirinkimu) bet kuria velesne versija.
+
+Ši programa platinama, tikintis, kad ji bus naudinga,
+tačiau BE JOKIŲ GARANTIJŲ; netgi be numanomos PARDAVIMO
+ar TINKAMUMO TAM TIKRAM TIKSLUI garantijos. Išsamiau apie tai,
+žiūrėkite GNU Bendrojoje Viešojoje Licencijoje.
+
+Kartu su šia programa turėjote gauti GNU Bendrosios Viešosios
+Licencijos kopiją; jeigu jos negavote, rašykite Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation>
     </message>
 </context>
 <context>
@@ -99,7 +121,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="31"/>
         <source>The command exited abnormally.</source>
-        <translation type="unfinished"></translation>
+        <translation>Komanda baigė darbą nenormaliai.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="34"/>
@@ -137,7 +159,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../create.ui" line="36"/>
         <source>Split into volumes of</source>
-        <translation type="unfinished"></translation>
+        <translation>Padalyti į tomus po</translation>
     </message>
     <message>
         <location filename="../create.ui" line="43"/>
@@ -163,17 +185,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="23"/>
         <source>Extract</source>
-        <translation>Išskleisti</translation>
+        <translation>Išpakuoti</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="29"/>
         <source>E&amp;xtract all files</source>
-        <translation>Iš&amp;skleisti visus failus</translation>
+        <translation>Iš&amp;pakuoti visus failus</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="36"/>
         <source>Ex&amp;tract selected files</source>
-        <translation>Iš&amp;skleisti pažymėtus failus</translation>
+        <translation>Iš&amp;pakuoti pažymėtus failus</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="59"/>
@@ -183,7 +205,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="65"/>
         <source>Re-create folders</source>
-        <translation type="unfinished"></translation>
+        <translation>Atkurti aplankų struktūrą</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="72"/>
@@ -193,7 +215,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="79"/>
         <source>Do not extract older files</source>
-        <translation>Neišskleisti senesnių failų</translation>
+        <translation>Neišpakuoti senesnių failų</translation>
     </message>
 </context>
 <context>
@@ -235,7 +257,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="152"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Ž&amp;inynas</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="163"/>
@@ -275,7 +297,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="232"/>
         <source>&amp;Extract</source>
-        <translation>&amp;Išskleisti</translation>
+        <translation>&amp;Išpakuoti</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="237"/>
@@ -355,213 +377,215 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="317"/>
         <source>&amp;Select All</source>
-        <translation type="unfinished"></translation>
+        <translation>Ž&amp;ymėti viską</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="320"/>
         <source>Ctrl+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+A</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="328"/>
         <source>&amp;Find</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Rasti</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="331"/>
         <location filename="../mainwindow.ui" line="444"/>
         <source>Ctrl+F</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+F</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="340"/>
         <source>&amp;Add Files</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pridėti failus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="349"/>
         <source>Add F&amp;older</source>
-        <translation type="unfinished"></translation>
+        <translation>Pridėti a&amp;planką</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="354"/>
         <source>Pass&amp;word</source>
-        <translation type="unfinished"></translation>
+        <translation>S&amp;laptažodis</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="365"/>
         <source>&amp;Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Į&amp;rankių juosta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="376"/>
         <source>&amp;Statusbar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Būsenos juosta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="387"/>
         <source>&amp;Directory Tree</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Katalogų medis</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="398"/>
         <source>S&amp;how as Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Ro&amp;dyti kaip aplanką</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="406"/>
         <source>Show &amp;All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Rodyti &amp;visus failus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="415"/>
         <source>St&amp;op</source>
-        <translation type="unfinished"></translation>
+        <translation>St&amp;abdyti</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="418"/>
         <source>Esc</source>
-        <translation type="unfinished"></translation>
+        <translation>Esc</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="423"/>
         <source>&amp;Reload</source>
-        <translation type="unfinished"></translation>
+        <translation>Į&amp;kelti iš naujo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="426"/>
         <source>F5</source>
-        <translation type="unfinished"></translation>
+        <translation>F5</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="431"/>
         <source>Filename &amp;Encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Failų pavadinimų &amp;koduotė</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="436"/>
         <source>&amp;View Selected Items</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Rodyti pažymėtus elementus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="441"/>
         <source>&amp;Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Filtras</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="452"/>
         <source>&amp;Expand</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Išskleisti</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="455"/>
         <source>Ctrl+Shift+Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Down</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="463"/>
         <source>&amp;Collapse</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Suskleisti</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="466"/>
         <source>Ctrl+Shift+Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+Up</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="289"/>
         <location filename="../mainwindow.cpp" line="318"/>
         <location filename="../mainwindow.cpp" line="351"/>
         <source>All files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Visi failai (*)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="323"/>
         <location filename="../mainwindow.cpp" line="356"/>
         <source>Add only if &amp;newer</source>
-        <translation type="unfinished"></translation>
+        <translation>Pridėti tik tuo atveju, jei &amp;naujesnis</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="381"/>
         <source>Confirm</source>
-        <translation type="unfinished"></translation>
+        <translation>Patvirtinti</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="381"/>
         <source>Are you sure you want to delete selected files?</source>
-        <translation type="unfinished"></translation>
+        <translation>Ar tikrai norite ištrinti pažymėtus failus?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="672"/>
         <source>Version: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Versija: %1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="759"/>
         <source>%p %</source>
-        <translation type="unfinished"></translation>
+        <translation>%p %</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="852"/>
         <source>Success</source>
-        <translation type="unfinished"></translation>
+        <translation>Pavyko</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="852"/>
         <source>No errors have been found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Klaidų nerasta.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="830"/>
         <location filename="../mainwindow.cpp" line="887"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Klaida</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="915"/>
         <source>N/A</source>
-        <translation type="unfinished"></translation>
+        <translation>–</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="919"/>
         <source>Uncompressed Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nesuglaudinto dydis:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="921"/>
         <source>Compression Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation>Glaudinimo santykis:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="974"/>
         <source>File name</source>
-        <translation type="unfinished"></translation>
+        <translation>Failo pavadinimas</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="975"/>
         <source>File Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Failo tipas</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="976"/>
         <source>File Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Failo dydis</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="977"/>
         <source>Modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Keistas</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="978"/>
         <source>Encrypted</source>
-        <translation type="unfinished"></translation>
+        <translation>Šifruotas</translation>
     </message>
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1008"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n failas</numerusform>
+            <numerusform>%n failai</numerusform>
+            <numerusform>%n failų</numerusform>
         </translation>
     </message>
 </context>
@@ -571,28 +595,28 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../passworddialog.ui" line="14"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Slaptažodis</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="20"/>
         <source>Encrypt the file list</source>
-        <translation type="unfinished"></translation>
+        <translation>Šifruoti failų sąrašą</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="34"/>
         <source>Show password</source>
-        <translation type="unfinished"></translation>
+        <translation>Rodyti slaptažodį</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="48"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password:</source>
-        <translation type="unfinished"></translation>
+        <translation>Slaptažodis:</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="61"/>
         <source>&lt;i&gt;&lt;b&gt;Note:&lt;/b&gt; the password will be used to encrypt files you add to the current archive, and to decrypt files you extract from the current archive. When the archive is closed the password will be deleted.&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;i&gt;&lt;b&gt;Pastaba:&lt;/b&gt; slaptažodis bus naudojamas šifruoti į dabartinį archyvą pridedamus failus ir iššifruoti iš dabartinio archyvo išpakuojamus failus. Užvėrus archyvą, slaptažodis bus ištrintas.&lt;/i&gt;</translation>
     </message>
 </context>
 <context>
@@ -600,12 +624,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../progressdialog.ui" line="14"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Eiga</translation>
     </message>
     <message>
         <location filename="../progressdialog.cpp" line="16"/>
         <source>%p %</source>
-        <translation type="unfinished"></translation>
+        <translation>%p %</translation>
     </message>
 </context>
 <context>
@@ -614,162 +638,162 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../main.cpp" line="248"/>
         <location filename="../main.cpp" line="288"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Klaida</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="6"/>
         <source>7-Zip (.7z)</source>
-        <translation type="unfinished"></translation>
+        <translation>7-Zip (.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="7"/>
         <source>Tar compressed with 7z (.tar.7z)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar glaudintas naudojant 7z (.tar.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="8"/>
         <source>Ace (.ace)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ace (.ace)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="9"/>
         <source>Ar (.a)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ar (.a)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="10"/>
         <source>Ar (.ar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ar (.ar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="11"/>
         <source>Arj (.arj)</source>
-        <translation type="unfinished"></translation>
+        <translation>Arj (.arj)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="12"/>
         <source>Tar compressed with bzip2 (.tar.bz2)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar glaudintas naudojant bzip2 (.tar.bz2)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="13"/>
         <source>Tar compressed with bzip (.tar.bz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar glaudintas naudojant bzip (.tar.bz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="14"/>
         <source>Cabinet (.cab)</source>
-        <translation type="unfinished"></translation>
+        <translation>Cabinet (.cab)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="15"/>
         <source>Rar Archived Comic Book (.cbr)</source>
-        <translation type="unfinished"></translation>
+        <translation>Rar archyvuota komiksų knyga (.cbr)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="16"/>
         <source>Zip Archived Comic Book (.cbz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Zip archyvuota komiksų knyga (.cbz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="17"/>
         <source>Tar compressed with gzip (.tar.gz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar glaudintas naudojant gzip (.tar.gz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="18"/>
         <source>Ear (.ear)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ear (.ear)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="19"/>
         <source>Self-extracting zip (.exe)</source>
-        <translation type="unfinished"></translation>
+        <translation>Išsipakuojantis zip (.exe)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="20"/>
         <source>Jar (.jar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Jar (.jar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="21"/>
         <source>Lha (.lzh)</source>
-        <translation type="unfinished"></translation>
+        <translation>Lha (.lzh)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="22"/>
         <source>Lrzip (.lrz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Lrzip (.lrz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="23"/>
         <source>Tar compressed with lrzip (.tar.lrz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar glaudintas naudojant lrzip (.tar.lrz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="24"/>
         <source>Tar compressed with lzip (.tar.lz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar glaudintas naudojant lzip (.tar.lz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="25"/>
         <source>Tar compressed with lzma (.tar.lzma)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar glaudintas naudojant lzma (.tar.lzma)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="26"/>
         <source>Tar compressed with lzop (.tar.lzo)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar glaudintas naudojant lzop (.tar.lzo)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="27"/>
         <source>Windows Imaging Format (.wim)</source>
-        <translation type="unfinished"></translation>
+        <translation>Windows atvaizdų formatas (.wim)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="28"/>
         <source>Rar (.rar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Rar (.rar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="29"/>
         <source>Tar uncompressed (.tar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar nesuglaudintas (.tar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="30"/>
         <source>Tar compressed with compress (.tar.Z)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar glaudintas naudojant compress (.tar.Z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="31"/>
         <source>War (.war)</source>
-        <translation type="unfinished"></translation>
+        <translation>War (.war)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="32"/>
         <source>Xz (.xz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Xz (.xz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="33"/>
         <source>Tar compressed with xz (.tar.xz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar glaudintas naudojant xz (.tar.xz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="34"/>
         <source>Tar compressed with zstd (.tar.zst)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tar glaudintas naudojant zstd (.tar.zst)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="35"/>
         <source>Zoo (.zoo)</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoo (.zoo)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="36"/>
         <source>Zip (.zip)</source>
-        <translation type="unfinished"></translation>
+        <translation>Zip (.zip)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="39"/>
@@ -777,7 +801,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="62"/>
         <location filename="../main.cpp" line="240"/>
         <source>Adding file: </source>
-        <translation type="unfinished"></translation>
+        <translation>Failo pridėjimas: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="40"/>
@@ -785,68 +809,68 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="64"/>
         <location filename="../main.cpp" line="280"/>
         <source>Extracting file: </source>
-        <translation type="unfinished"></translation>
+        <translation>Failo išskleidimas: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="43"/>
         <source>%d %B %Y, %H:%M</source>
-        <translation type="unfinished"></translation>
+        <translation>%Y %B %d, %H:%M</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="47"/>
         <location filename="../corestrs.h" line="63"/>
         <source>Removing file: </source>
-        <translation type="unfinished"></translation>
+        <translation>Failo šalinimas: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="48"/>
         <source>Deleting files from archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Failų ištrynimas iš archyvo</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="50"/>
         <source>Recompressing archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Archyvo glaudinimas iš naujo</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="51"/>
         <source>Decompressing archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Archyvo išglaudinimas</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="54"/>
         <source>File not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Failas nerastas.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="55"/>
         <source>Archive type not supported.</source>
-        <translation type="unfinished"></translation>
+        <translation>Archyvo tipas nepalaikomas.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="56"/>
         <source>Archive not found</source>
-        <translation type="unfinished"></translation>
+        <translation>Archyvas nerastas</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="57"/>
         <source>You don&apos;t have the right permissions.</source>
-        <translation type="unfinished"></translation>
+        <translation>Neturite tinkamų leidimų.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="58"/>
         <source>This archive type cannot be modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Šio archyvo tipo negalima keisti</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="59"/>
         <source>You can&apos;t add an archive to itself.</source>
-        <translation type="unfinished"></translation>
+        <translation>Negalite pridėti į archyvo patį į save.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="65"/>
         <source>Could not find the volume: %s</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepavyko rasti tomo: %s</translation>
     </message>
 </context>
 </TS>
