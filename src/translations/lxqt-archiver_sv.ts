@@ -484,7 +484,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.ui" line="463"/>
         <source>&amp;Collapse</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Fäll ihop</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="466"/>
