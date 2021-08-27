@@ -16,7 +16,7 @@
     <message>
         <location filename="../about.ui" line="57"/>
         <source>A simple and desktop-agnostic Qt file archiver</source>
-        <translation>Jednostavan program za arhiviranje Qt datoteka</translation>
+        <translation>Jednostavan Qt program za arhiviranje datoteka</translation>
     </message>
     <message>
         <location filename="../about.ui" line="67"/>
@@ -115,7 +115,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="37"/>
         <source>Missing volume.</source>
-        <translation>Nedostajuća jedinica memorije.</translation>
+        <translation>Nedostaje jedan dio.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="40"/>
@@ -130,7 +130,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="46"/>
         <source>Unknown errors happened.</source>
-        <translation>Doogdile su se nepoznate greške.</translation>
+        <translation>Dogodile su se nepoznate greške.</translation>
     </message>
 </context>
 <context>
@@ -143,7 +143,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../create.ui" line="36"/>
         <source>Split into volumes of</source>
-        <translation>Podijeli jedinice memorije na</translation>
+        <translation>Rastavi u dijelove od</translation>
     </message>
     <message>
         <location filename="../create.ui" line="43"/>
@@ -199,7 +199,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="79"/>
         <source>Do not extract older files</source>
-        <translation>Nemoj otpakirati starije mape</translation>
+        <translation>Nemoj raspakirati starije datoteke</translation>
     </message>
 </context>
 <context>
@@ -216,7 +216,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../mainwindow.ui" line="14"/>
         <location filename="../mainwindow.cpp" line="258"/>
         <source>File Archiver</source>
-        <translation>Arhivist datoteka</translation>
+        <translation>Arhiviranje datoteka</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="77"/>
@@ -341,7 +341,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="301"/>
         <source>&amp;Rename</source>
-        <translation>Pre&amp;imenuj</translation>
+        <translation>Prei&amp;menuj</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="304"/>
@@ -632,7 +632,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="7"/>
         <source>Tar compressed with 7z (.tar.7z)</source>
-        <translation>Tar komprimirano s 7z (.tar.7z)</translation>
+        <translation>Tar komprimirano sa 7z (.tar.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="8"/>
@@ -762,7 +762,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="33"/>
         <source>Tar compressed with xz (.tar.xz)</source>
-        <translation>Tar komprimirano sa xz (.tar.xz)</translation>
+        <translation>Tar komprimirano s xz (.tar.xz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="34"/>
