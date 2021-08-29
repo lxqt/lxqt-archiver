@@ -687,7 +687,7 @@ fr_command_rar_handle_error (FrCommand   *comm,
 	for (scan = g_list_last (comm->process->err.raw); scan; scan = scan->prev) {
 		char *line = scan->data;
 
-		if ((strstr (line, "password incorrect") != NULL) ||
+		if ((strstr (line, "Incorrect password") != NULL) ||
 		    (strstr (line, "password incorrect") != NULL) ||
 		    (strstr (line, "password is incorrect") != NULL) ||
 		    (strstr (line, "wrong password") != NULL)) {
