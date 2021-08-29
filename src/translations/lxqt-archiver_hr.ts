@@ -69,7 +69,23 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt Arhivist
+
+Copyright (C) 2020. LXQt tim
+
+Ovaj program je slobodan softver: može se redistribuirati i/ili mijenjati
+pod uvjetima GNU opće javne licence, koju je objavila zaklada
+Free Software Foundation, u 2. verziji licence ili (po izboru) bilo koje
+novije verzije.
+
+Ovaj se program distribuira u nadi da će biti koristan, ali BEZ
+IKAKVOG JAMSTVA; čak i bez podrazumijevanog jamstva za
+PRODAJU ili PRIKLADNOST ZA ODREĐENU SVRHU.
+Pogledaj GNU Opću javnu licencu za pojedinosti.
+
+GNU opća javna licenca je standardno pridodana ovom programu.
+Ako nije, kontaktiraj zakladu Free Software Foundation,
+Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation>
     </message>
 </context>
 <context>
@@ -356,7 +372,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="312"/>
         <source>Del</source>
-        <translation>Izbriši</translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="317"/>
