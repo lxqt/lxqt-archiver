@@ -6,7 +6,7 @@
     <message>
         <location filename="../about.ui" line="14"/>
         <source>About</source>
-        <translation>Про Стискач</translation>
+        <translation>Про</translation>
     </message>
     <message>
         <location filename="../about.ui" line="34"/>
@@ -71,16 +71,16 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
         <translation>LXQt Стискач (LXQt Archiver)
 
-Права застережено (C) 2020 the LXQt Команда розробників
+Права застережено (C) 2020 Команда LXQt
 
 Ця програма є вільною; дозволяється розповсюджувати та/або змінювати її
-на умовах ліцензії GNU General Public License, що опублікована Free
-Software Foundation; версії 2 цієї ліцензії, або (на ваш розсуд)
-будь-якою пізнішою версією.
+на умовах ліцензії GNU General Public License, що опублікована Фондом
+вільного програмного забезпечення; версії 2 цієї ліцензії, або (на ваш розсуд)
+будь-якою новішою версією.
 
-Програма розповсюджується із сподіванням, що буде корисною, але БЕЗ
+Ця програма розповсюджується зі сподіванням, що буде корисною, але БЕЗ
 БУДЬ-ЯКИХ ГАРАНТІЙ; навіть без неявної гарантії ПРИДАТНОСТІ ДО ПРОДАЖУ чи
-ВІДПОВІДНОСТІ ПЕВНІЙ МЕТІ. Докладніше про це дивіться текст GNU
+ВІДПОВІДНОСТІ ПЕВНІЙ МЕТІ. Докладніше про це читайте у тексті GNU
 General Public License.
 
 З цією програмою ви мали отримати копію ліцензії GNU General Public License;
@@ -121,7 +121,7 @@ Street, Fifth Floor, Boston, MA 02110-1301, USA.</translation>
     <message>
         <location filename="../archivererror.cpp" line="31"/>
         <source>The command exited abnormally.</source>
-        <translation>Команду завершено надзвичайно.</translation>
+        <translation>Збій виконання команди.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="34"/>
@@ -205,12 +205,12 @@ Street, Fifth Floor, Boston, MA 02110-1301, USA.</translation>
     <message>
         <location filename="../extract.ui" line="65"/>
         <source>Re-create folders</source>
-        <translation>Повторно створити папки</translation>
+        <translation>Повторно створити теки</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="72"/>
         <source>Overwrite existing files</source>
-        <translation>Переписати існуючі файли</translation>
+        <translation>Перезаписати наявні файли</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="79"/>
@@ -232,7 +232,7 @@ Street, Fifth Floor, Boston, MA 02110-1301, USA.</translation>
         <location filename="../mainwindow.ui" line="14"/>
         <location filename="../mainwindow.cpp" line="258"/>
         <source>File Archiver</source>
-        <translation>Файловий стискач</translation>
+        <translation>Стискач файлів</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="77"/>
@@ -247,12 +247,12 @@ Street, Fifth Floor, Boston, MA 02110-1301, USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="113"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Змінити</translation>
+        <translation>З&amp;мінити</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="132"/>
         <source>&amp;View</source>
-        <translation>&amp;Вигляд</translation>
+        <translation>Пере&amp;гляд</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="152"/>
@@ -267,7 +267,7 @@ Street, Fifth Floor, Boston, MA 02110-1301, USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="191"/>
         <source>&amp;About</source>
-        <translation>Про &amp;Стискач</translation>
+        <translation>&amp;Про</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="200"/>
@@ -302,7 +302,7 @@ Street, Fifth Floor, Boston, MA 02110-1301, USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="237"/>
         <source>&amp;Test</source>
-        <translation>&amp;Протестувати</translation>
+        <translation>&amp;Тестувати</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="245"/>
@@ -347,7 +347,7 @@ Street, Fifth Floor, Boston, MA 02110-1301, USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="290"/>
         <source>&amp;Paste</source>
-        <translation>&amp;Вставити</translation>
+        <translation>Вс&amp;тавити</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="293"/>
@@ -418,12 +418,12 @@ Street, Fifth Floor, Boston, MA 02110-1301, USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="376"/>
         <source>&amp;Statusbar</source>
-        <translation>Рядок &amp;стану</translation>
+        <translation>Панель &amp;стану</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="387"/>
         <source>&amp;Directory Tree</source>
-        <translation>&amp;Дерево тек</translation>
+        <translation>&amp;Дерево каталогів</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="398"/>
@@ -458,7 +458,7 @@ Street, Fifth Floor, Boston, MA 02110-1301, USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="431"/>
         <source>Filename &amp;Encoding</source>
-        <translation>Кодування назви файлів</translation>
+        <translation>&amp;Кодування назв файлів</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="436"/>
@@ -501,7 +501,7 @@ Street, Fifth Floor, Boston, MA 02110-1301, USA.</translation>
         <location filename="../mainwindow.cpp" line="323"/>
         <location filename="../mainwindow.cpp" line="356"/>
         <source>Add only if &amp;newer</source>
-        <translation>Додати, тільки якщо новіші</translation>
+        <translation>Додати, тільки якщо &amp;новіші</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="381"/>
@@ -616,7 +616,7 @@ Street, Fifth Floor, Boston, MA 02110-1301, USA.</translation>
     <message>
         <location filename="../passworddialog.ui" line="61"/>
         <source>&lt;i&gt;&lt;b&gt;Note:&lt;/b&gt; the password will be used to encrypt files you add to the current archive, and to decrypt files you extract from the current archive. When the archive is closed the password will be deleted.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;&lt;b&gt;Примітка:&lt;/b&gt; пароль буде використовуватися для шифрування файлів, які ви додаєте до поточного архіву і для дешифрування файлів, які ви видобуваєте з поточного архіву. Після закриття архіву пароль буде видалено.&lt;/i&gt;</translation>
+        <translation>&lt;i&gt;&lt;b&gt;Примітка:&lt;/b&gt; пароль буде використовуватися для шифрування файлів, які ви додаєте до поточного архіву і для розшифрування файлів, які ви видобуваєте з поточного архіву. Після закриття архіву пароль буде видалено.&lt;/i&gt;</translation>
     </message>
 </context>
 <context>
