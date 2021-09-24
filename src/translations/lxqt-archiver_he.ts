@@ -261,7 +261,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="163"/>
         <source>Main Toolbar</source>
-        <translation>סרגל כלים ראשי</translation>
+        <translation>סרגל הכלים הראשי</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="191"/>
