@@ -256,7 +256,7 @@ avec ce programme ; si ce n&apos;est pas le cas, consultez &lt;http://www.gnu.
     <message>
         <location filename="../mainwindow.ui" line="152"/>
         <source>&amp;Help</source>
-        <translation>&amp;Aide</translation>
+        <translation>A&amp;ide</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="163"/>
