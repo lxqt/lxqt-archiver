@@ -264,7 +264,7 @@ MA 02110, USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="163"/>
         <source>Main Toolbar</source>
-        <translation>Werkzeugleiste</translation>
+        <translation>Hauptwerkzeugleiste</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="191"/>
