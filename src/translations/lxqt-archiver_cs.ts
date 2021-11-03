@@ -312,7 +312,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="248"/>
         <source>Alt+Return</source>
-        <translation>Alt+Return</translation>
+        <translation>Alt+Enter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="257"/>
