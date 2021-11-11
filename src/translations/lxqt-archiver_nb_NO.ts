@@ -262,7 +262,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../mainwindow.ui" line="163"/>
         <source>Main Toolbar</source>
-        <translation>Hovedverktøylinje</translation>
+        <translation>Hovedverktøyfelt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="191"/>
