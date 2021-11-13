@@ -1,4 +1,4 @@
-#include "archiverproxymodel.h"
+﻿#include "archiverproxymodel.h"
 
 // for MainWindow::ArchiverItemRole
 // FIXME: better to move this to its own module outside main window
@@ -13,9 +13,11 @@ ArchiverProxyModel::ArchiverProxyModel(QObject *parent):
 bool ArchiverProxyModel::lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const {
     auto leftFirstCol = source_left.sibling(source_left.row(), 0);
     auto rightFirstCol = source_right.sibling(source_right.row(), 0);
+
     if(leftFirstCol.isValid() && rightFirstCol.isValid()) {
         auto leftItem = leftFirstCol.data(MainWindow::ArchiverItemRole).value<const ArchiverItem*>();
         auto rightItem = rightFirstCol.data(MainWindow::ArchiverItemRole).value<const ArchiverItem*>();
+
         if(leftItem) {
             if(leftItem->isDir()) {
                 if(folderFirst_ && !(rightItem && rightItem->isDir())) {
@@ -36,6 +38,13 @@ bool ArchiverProxyModel::lessThan(const QModelIndex &source_left, const QModelIn
                 else if(rightFirstCol.data().toString() == QStringLiteral("..")) {
                     return (sortOrder() != Qt::AscendingOrder);
                 }
+            }
+        }
+
+        // size column sort
+        if (leftItem && rightItem) {
+            if (source_left.column() == 2) {
+                return (leftItem->size() < rightItem->size()) ? true : false;
             }
         }
     }
