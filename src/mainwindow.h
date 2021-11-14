@@ -88,6 +88,14 @@ private Q_SLOTS:
 
     void on_actionFlatListMode_toggled(bool checked);
 
+    void on_action16px_triggered();
+
+    void on_action24px_triggered();
+
+    void on_action32px_triggered();
+
+    void on_action48px_triggered();
+
     void on_actionExpand_triggered(bool checked);
 
     void on_actionCollapse_triggered(bool checked);
@@ -155,6 +163,8 @@ private:
     void buildDirTree(QStandardItem *parent, const ArchiverItem *root);
 
     void updateUiStates();
+
+    void setViewsIconSize(const QSize &size);
 
     std::vector<const FileData*> selectedFiles(bool recursive);
 

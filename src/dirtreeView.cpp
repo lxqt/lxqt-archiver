@@ -5,7 +5,7 @@
 #include "dirtreeView.h"
 
 DirTreeView::DirTreeView(QWidget* parent) : QTreeView(parent) {
-    setIconSize(QSize(24, 24));
+//    setIconSize(QSize(24, 24));
     header()->setOffset(0);
     setHeaderHidden(true);
     // show the horizontal scrollbar if needed
