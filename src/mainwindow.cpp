@@ -157,6 +157,9 @@ void MainWindow::loadSettings() {
     QSettings settings(QSettings::UserScope, QStringLiteral("lxqt"), QStringLiteral("archiver"));
     // window size
     settings.beginGroup (QStringLiteral("Sizes"));
+    QPoint winPos = settings.value(QStringLiteral("WindowPosition")).toPoint();
+    if (!winPos.isNull())
+        move(winPos);
     QSize winSize = settings.value(QStringLiteral("WindowSize"), QSize(700, 500)).toSize();
     QSize ag;
     if (QScreen *pScreen = QApplication::primaryScreen()) {
@@ -184,6 +187,10 @@ void MainWindow::saveSettings() {
     // Sizes
     QSettings settings(QSettings::UserScope, QStringLiteral("lxqt"), QStringLiteral("archiver"));
     settings.beginGroup(QStringLiteral("Sizes"));
+    QPoint windowPos = pos();
+    if(settings.value(QStringLiteral("WindowPosition")).toPoint() != windowPos) {
+        settings.setValue(QStringLiteral("WindowPosition"), windowPos);
+    }
     QSize windowSize = size();
     if(settings.value(QStringLiteral("WindowSize")).toSize() != windowSize) {
         settings.setValue(QStringLiteral("WindowSize"), windowSize);
