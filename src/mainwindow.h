@@ -88,14 +88,6 @@ private Q_SLOTS:
 
     void on_actionFlatListMode_toggled(bool checked);
 
-    void on_action16px_triggered();
-
-    void on_action24px_triggered();
-
-    void on_action32px_triggered();
-
-    void on_action48px_triggered();
-
     void on_actionExpand_triggered(bool checked);
 
     void on_actionCollapse_triggered(bool checked);
@@ -119,6 +111,8 @@ private Q_SLOTS:
     void onFileListActivated(const QModelIndex &index);
 
     void onFileListEnterPressed();
+
+    void onViewsIconSizeTtriggered(QAction *action);
 
     void filter(const QString& text);
 
@@ -164,7 +158,9 @@ private:
 
     void updateUiStates();
 
-    void setViewsIconSize(const QSize &size);
+    void setViewsIconSize(const int &size);
+
+    void compactViewsColumns();
 
     std::vector<const FileData*> selectedFiles(bool recursive);
 

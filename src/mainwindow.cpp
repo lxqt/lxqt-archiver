@@ -81,10 +81,15 @@ MainWindow::MainWindow(QWidget* parent):
 
     // views icon size
     auto viewsIconSizeGroup = new QActionGroup{this};
+    ui_->action16px->setData(16);
     viewsIconSizeGroup->addAction(ui_->action16px);
+    ui_->action24px->setData(24);
     viewsIconSizeGroup->addAction(ui_->action24px);
+    ui_->action32px->setData(32);
     viewsIconSizeGroup->addAction(ui_->action32px);
+    ui_->action48px->setData(48);
     viewsIconSizeGroup->addAction(ui_->action48px);
+    connect(viewsIconSizeGroup, &QActionGroup::triggered, this, &MainWindow::onViewsIconSizeTtriggered);
 
     // FIXME: need to add a way in libfm-qt to turn off default auto-complete
 #if 0
@@ -175,15 +180,15 @@ void MainWindow::loadSettings() {
     resize(winSize);
 
     // views icon size
-    QSize viewsIconSize = settings.value(QStringLiteral("ViewsIconSize"), QSize(24, 24)).toSize();
+    int viewsIconSize = settings.value(QStringLiteral("ViewsIconSize"), 24).toInt();
     setViewsIconSize(viewsIconSize);
-    if(viewsIconSize == QSize(16, 16))
+    if(viewsIconSize == 16)
         ui_->action16px->setChecked(true);
-    else if(viewsIconSize == QSize(24, 24))
+    else if(viewsIconSize == 24)
         ui_->action24px->setChecked(true);
-    else if(viewsIconSize == QSize(32, 32))
+    else if(viewsIconSize == 32)
         ui_->action32px->setChecked(true);
-    else if(viewsIconSize == QSize(48, 48))
+    else if(viewsIconSize == 48)
         ui_->action48px->setChecked(true);
 
     // splitter position
@@ -214,8 +219,8 @@ void MainWindow::saveSettings() {
     if(settings.value(QStringLiteral("SplitterPos")).toInt() != splitterPos) {
         settings.setValue(QStringLiteral("SplitterPos"), splitterPos);
     }
-    if(settings.value(QStringLiteral("ViewsIconSize")).toSize() != ui_->fileListView->iconSize()) {
-        settings.setValue(QStringLiteral("ViewsIconSize"), ui_->fileListView->iconSize());
+    if(settings.value(QStringLiteral("ViewsIconSize")).toInt() != ui_->fileListView->iconSize().width()) {
+        settings.setValue(QStringLiteral("ViewsIconSize"), ui_->fileListView->iconSize().width());
     }
     settings.endGroup();
     // Window
@@ -313,25 +318,17 @@ void MainWindow::setFileName(const QString &fileName) {
     setWindowTitle(title);
 }
 
-void MainWindow::setViewsIconSize(const QSize &size) {
-    ui_->fileListView->setIconSize(size);
-    ui_->dirTreeView->setIconSize(size);
+void MainWindow::setViewsIconSize(const int &size) {
+    const QSize qs = QSize(size, size);
+    ui_->fileListView->setIconSize(qs);
+    ui_->dirTreeView->setIconSize(qs);
+    compactViewsColumns();
 }
 
-void MainWindow::on_action16px_triggered() {
-    setViewsIconSize(QSize(16, 16));
-}
-
-void MainWindow::on_action24px_triggered() {
-    setViewsIconSize(QSize(24, 24));
-}
-
-void MainWindow::on_action32px_triggered() {
-    setViewsIconSize(QSize(32, 32));
-}
-
-void MainWindow::on_action48px_triggered() {
-    setViewsIconSize(QSize(48, 48));
+void MainWindow::onViewsIconSizeTtriggered(QAction *action) {
+    if(action) {
+        setViewsIconSize(action->data().toInt());
+    }
 }
 
 void MainWindow::on_actionCreateNew_triggered(bool /*checked*/) {
@@ -1087,6 +1084,10 @@ void MainWindow::showFileList(const std::vector<const ArchiverItem *> &files) {
 
     ui_->statusBar->showMessage(tr("%n file(s)", "", files.size()));
 
+    compactViewsColumns();
+}
+
+void MainWindow::compactViewsColumns() {
     //ui_->fileListView->header()->setSectionResizeMode(0, QHeaderView::Stretch);
     QTimer::singleShot(0, this, [this] {
         // remove filtering and reapply it after resizing columns to avoid ellipses
