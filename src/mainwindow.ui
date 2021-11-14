@@ -36,7 +36,7 @@
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
-      <widget class="DirTreeView" name="dirTreeView" native="true">
+      <widget class="DirTreeView" name="dirTreeView">
        <property name="enabled">
         <bool>false</bool>
        </property>
@@ -50,7 +50,7 @@
       <widget class="QWidget" name="verticalLayoutWidget">
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
-         <widget class="FileTreeView" name="fileListView" native="true">
+         <widget class="FileTreeView" name="fileListView">
           <property name="enabled">
            <bool>false</bool>
           </property>
@@ -138,6 +138,7 @@
     <addaction name="actionCollapse"/>
     <addaction name="separator"/>
     <addaction name="actionStop"/>
+    <addaction name="actionReload"/>
     <addaction name="separator"/>
     <addaction name="actionFilter"/>
    </widget>
@@ -440,8 +441,7 @@
   </action>
   <action name="actionExpand">
    <property name="icon">
-    <iconset theme="expand-all">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="expand-all"/>
    </property>
    <property name="text">
     <string>&amp;Expand</string>
@@ -452,8 +452,7 @@
   </action>
   <action name="actionCollapse">
    <property name="icon">
-    <iconset theme="collapse-all">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="collapse-all"/>
    </property>
    <property name="text">
     <string>&amp;Collapse</string>
@@ -486,13 +485,13 @@
  <customwidgets>
   <customwidget>
    <class>FileTreeView</class>
-   <extends>QWidget</extends>
+   <extends>QTreeview</extends>
    <header>filetreeView.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>DirTreeView</class>
-   <extends>QWidget</extends>
+   <extends>QTreeview</extends>
    <header>dirtreeView.h</header>
    <container>1</container>
   </customwidget>
