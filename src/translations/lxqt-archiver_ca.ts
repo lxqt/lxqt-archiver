@@ -485,7 +485,7 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. {2020 ?} {2
     <message>
         <location filename="../mainwindow.ui" line="463"/>
         <source>&amp;Collapse</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Compacta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="466"/>
