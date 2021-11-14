@@ -116,11 +116,21 @@
     <property name="title">
      <string>&amp;View</string>
     </property>
+    <widget class="QMenu" name="menuIcon_Size">
+     <property name="title">
+      <string>&amp;Icon Size</string>
+     </property>
+     <addaction name="action16px"/>
+     <addaction name="action24px"/>
+     <addaction name="action32px"/>
+     <addaction name="action48px"/>
+    </widget>
     <addaction name="separator"/>
     <addaction name="actionToolbar"/>
     <addaction name="actionStatusbar"/>
     <addaction name="actionDirTree"/>
     <addaction name="separator"/>
+    <addaction name="menuIcon_Size"/>
     <addaction name="actionFlatListMode"/>
     <addaction name="actionDirTreeMode"/>
     <addaction name="separator"/>
@@ -449,6 +459,38 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+Shift+Up</string>
+   </property>
+  </action>
+  <action name="action16px">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>16 px</string>
+   </property>
+  </action>
+  <action name="action24px">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>24 px</string>
+   </property>
+  </action>
+  <action name="action32px">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>32 px</string>
+   </property>
+  </action>
+  <action name="action48px">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>48 px</string>
    </property>
   </action>
  </widget>

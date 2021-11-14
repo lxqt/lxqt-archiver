@@ -112,6 +112,8 @@ private Q_SLOTS:
 
     void onFileListEnterPressed();
 
+    void onViewsIconSizeTtriggered(QAction *action);
+
     void filter(const QString& text);
 
 private Q_SLOTS:
@@ -155,6 +157,10 @@ private:
     void buildDirTree(QStandardItem *parent, const ArchiverItem *root);
 
     void updateUiStates();
+
+    void setViewsIconSize(const int &size);
+
+    void compactViewsColumns();
 
     std::vector<const FileData*> selectedFiles(bool recursive);
 

@@ -79,6 +79,18 @@ MainWindow::MainWindow(QWidget* parent):
     viewModeGroup->addAction(ui_->actionDirTreeMode);
     viewModeGroup->addAction(ui_->actionFlatListMode);
 
+    // views icon size
+    auto viewsIconSizeGroup = new QActionGroup{this};
+    ui_->action16px->setData(16);
+    viewsIconSizeGroup->addAction(ui_->action16px);
+    ui_->action24px->setData(24);
+    viewsIconSizeGroup->addAction(ui_->action24px);
+    ui_->action32px->setData(32);
+    viewsIconSizeGroup->addAction(ui_->action32px);
+    ui_->action48px->setData(48);
+    viewsIconSizeGroup->addAction(ui_->action48px);
+    connect(viewsIconSizeGroup, &QActionGroup::triggered, this, &MainWindow::onViewsIconSizeTtriggered);
+
     // FIXME: need to add a way in libfm-qt to turn off default auto-complete
 #if 0
     auto pathBar = new Fm::PathBar{this};
@@ -166,12 +178,25 @@ void MainWindow::loadSettings() {
         winSize = winSize.boundedTo (ag);
     }
     resize(winSize);
+
+    // views icon size
+    int viewsIconSize = settings.value(QStringLiteral("ViewsIconSize"), 24).toInt();
+    setViewsIconSize(viewsIconSize);
+    if(viewsIconSize == 16)
+        ui_->action16px->setChecked(true);
+    else if(viewsIconSize == 24)
+        ui_->action24px->setChecked(true);
+    else if(viewsIconSize == 32)
+        ui_->action32px->setChecked(true);
+    else if(viewsIconSize == 48)
+        ui_->action48px->setChecked(true);
+
     // splitter position
     QList<int> sizes;
     sizes.append(settings.value(QStringLiteral("SplitterPos"), splitterPos_).toInt());
-    settings.endGroup();
     sizes.append(400);
     ui_->splitter->setSizes(sizes);
+    settings.endGroup();
     // window settings
     settings.beginGroup (QStringLiteral("Window"));
     ui_->actionDirTree->setChecked(settings.value(QStringLiteral("DirTree"), true).toBool());
@@ -193,6 +218,9 @@ void MainWindow::saveSettings() {
                           : ui_->splitter->sizes().at(0);
     if(settings.value(QStringLiteral("SplitterPos")).toInt() != splitterPos) {
         settings.setValue(QStringLiteral("SplitterPos"), splitterPos);
+    }
+    if(settings.value(QStringLiteral("ViewsIconSize")).toInt() != ui_->fileListView->iconSize().width()) {
+        settings.setValue(QStringLiteral("ViewsIconSize"), ui_->fileListView->iconSize().width());
     }
     settings.endGroup();
     // Window
@@ -288,6 +316,19 @@ void MainWindow::setFileName(const QString &fileName) {
         title = fileName + QStringLiteral(" - ") + title;
     }
     setWindowTitle(title);
+}
+
+void MainWindow::setViewsIconSize(const int &size) {
+    const QSize qs = QSize(size, size);
+    ui_->fileListView->setIconSize(qs);
+    ui_->dirTreeView->setIconSize(qs);
+    compactViewsColumns();
+}
+
+void MainWindow::onViewsIconSizeTtriggered(QAction *action) {
+    if(action) {
+        setViewsIconSize(action->data().toInt());
+    }
 }
 
 void MainWindow::on_actionCreateNew_triggered(bool /*checked*/) {
@@ -1043,6 +1084,10 @@ void MainWindow::showFileList(const std::vector<const ArchiverItem *> &files) {
 
     ui_->statusBar->showMessage(tr("%n file(s)", "", files.size()));
 
+    compactViewsColumns();
+}
+
+void MainWindow::compactViewsColumns() {
     //ui_->fileListView->header()->setSectionResizeMode(0, QHeaderView::Stretch);
     QTimer::singleShot(0, this, [this] {
         // remove filtering and reapply it after resizing columns to avoid ellipses
