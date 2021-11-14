@@ -462,21 +462,33 @@
    </property>
   </action>
   <action name="action16px">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>16 px</string>
    </property>
   </action>
   <action name="action24px">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>24 px</string>
    </property>
   </action>
   <action name="action32px">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>32 px</string>
    </property>
   </action>
   <action name="action48px">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>48 px</string>
    </property>

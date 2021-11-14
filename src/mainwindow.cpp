@@ -79,6 +79,13 @@ MainWindow::MainWindow(QWidget* parent):
     viewModeGroup->addAction(ui_->actionDirTreeMode);
     viewModeGroup->addAction(ui_->actionFlatListMode);
 
+    // views icon size
+    auto viewsIconSizeGroup = new QActionGroup{this};
+    viewsIconSizeGroup->addAction(ui_->action16px);
+    viewsIconSizeGroup->addAction(ui_->action24px);
+    viewsIconSizeGroup->addAction(ui_->action32px);
+    viewsIconSizeGroup->addAction(ui_->action48px);
+
     // FIXME: need to add a way in libfm-qt to turn off default auto-complete
 #if 0
     auto pathBar = new Fm::PathBar{this};
@@ -166,9 +173,19 @@ void MainWindow::loadSettings() {
         winSize = winSize.boundedTo (ag);
     }
     resize(winSize);
+
     // views icon size
     QSize viewsIconSize = settings.value(QStringLiteral("ViewsIconSize"), QSize(24, 24)).toSize();
     setViewsIconSize(viewsIconSize);
+    if(viewsIconSize == QSize(16, 16))
+        ui_->action16px->setChecked(true);
+    else if(viewsIconSize == QSize(24, 24))
+        ui_->action24px->setChecked(true);
+    else if(viewsIconSize == QSize(32, 32))
+        ui_->action32px->setChecked(true);
+    else if(viewsIconSize == QSize(48, 48))
+        ui_->action48px->setChecked(true);
+
     // splitter position
     QList<int> sizes;
     sizes.append(settings.value(QStringLiteral("SplitterPos"), splitterPos_).toInt());
