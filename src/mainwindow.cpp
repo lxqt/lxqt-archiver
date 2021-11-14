@@ -166,12 +166,15 @@ void MainWindow::loadSettings() {
         winSize = winSize.boundedTo (ag);
     }
     resize(winSize);
+    // views icon size
+    QSize viewsIconSize = settings.value(QStringLiteral("ViewsIconSize"), QSize(24, 24)).toSize();
+    setViewsIconSize(viewsIconSize);
     // splitter position
     QList<int> sizes;
     sizes.append(settings.value(QStringLiteral("SplitterPos"), splitterPos_).toInt());
-    settings.endGroup();
     sizes.append(400);
     ui_->splitter->setSizes(sizes);
+    settings.endGroup();
     // window settings
     settings.beginGroup (QStringLiteral("Window"));
     ui_->actionDirTree->setChecked(settings.value(QStringLiteral("DirTree"), true).toBool());
@@ -193,6 +196,9 @@ void MainWindow::saveSettings() {
                           : ui_->splitter->sizes().at(0);
     if(settings.value(QStringLiteral("SplitterPos")).toInt() != splitterPos) {
         settings.setValue(QStringLiteral("SplitterPos"), splitterPos);
+    }
+    if(settings.value(QStringLiteral("ViewsIconSize")).toSize() != ui_->fileListView->iconSize()) {
+        settings.setValue(QStringLiteral("ViewsIconSize"), ui_->fileListView->iconSize());
     }
     settings.endGroup();
     // Window
@@ -288,6 +294,27 @@ void MainWindow::setFileName(const QString &fileName) {
         title = fileName + QStringLiteral(" - ") + title;
     }
     setWindowTitle(title);
+}
+
+void MainWindow::setViewsIconSize(const QSize &size) {
+    ui_->fileListView->setIconSize(size);
+    ui_->dirTreeView->setIconSize(size);
+}
+
+void MainWindow::on_action16px_triggered() {
+    setViewsIconSize(QSize(16, 16));
+}
+
+void MainWindow::on_action24px_triggered() {
+    setViewsIconSize(QSize(24, 24));
+}
+
+void MainWindow::on_action32px_triggered() {
+    setViewsIconSize(QSize(32, 32));
+}
+
+void MainWindow::on_action48px_triggered() {
+    setViewsIconSize(QSize(48, 48));
 }
 
 void MainWindow::on_actionCreateNew_triggered(bool /*checked*/) {

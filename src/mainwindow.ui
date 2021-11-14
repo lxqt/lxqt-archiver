@@ -36,7 +36,7 @@
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
-      <widget class="DirTreeView" name="dirTreeView">
+      <widget class="DirTreeView" name="dirTreeView" native="true">
        <property name="enabled">
         <bool>false</bool>
        </property>
@@ -50,7 +50,7 @@
       <widget class="QWidget" name="verticalLayoutWidget">
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
-         <widget class="FileTreeView" name="fileListView">
+         <widget class="FileTreeView" name="fileListView" native="true">
           <property name="enabled">
            <bool>false</bool>
           </property>
@@ -116,11 +116,21 @@
     <property name="title">
      <string>&amp;View</string>
     </property>
+    <widget class="QMenu" name="menuIcon_Size">
+     <property name="title">
+      <string>&amp;Icon Size</string>
+     </property>
+     <addaction name="action16px"/>
+     <addaction name="action24px"/>
+     <addaction name="action32px"/>
+     <addaction name="action48px"/>
+    </widget>
     <addaction name="separator"/>
     <addaction name="actionToolbar"/>
     <addaction name="actionStatusbar"/>
     <addaction name="actionDirTree"/>
     <addaction name="separator"/>
+    <addaction name="menuIcon_Size"/>
     <addaction name="actionFlatListMode"/>
     <addaction name="actionDirTreeMode"/>
     <addaction name="separator"/>
@@ -128,7 +138,6 @@
     <addaction name="actionCollapse"/>
     <addaction name="separator"/>
     <addaction name="actionStop"/>
-    <addaction name="actionReload"/>
     <addaction name="separator"/>
     <addaction name="actionFilter"/>
    </widget>
@@ -431,7 +440,8 @@
   </action>
   <action name="actionExpand">
    <property name="icon">
-    <iconset theme="expand-all"/>
+    <iconset theme="expand-all">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Expand</string>
@@ -442,7 +452,8 @@
   </action>
   <action name="actionCollapse">
    <property name="icon">
-    <iconset theme="collapse-all"/>
+    <iconset theme="collapse-all">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Collapse</string>
@@ -451,17 +462,37 @@
     <string>Ctrl+Shift+Up</string>
    </property>
   </action>
+  <action name="action16px">
+   <property name="text">
+    <string>16 px</string>
+   </property>
+  </action>
+  <action name="action24px">
+   <property name="text">
+    <string>24 px</string>
+   </property>
+  </action>
+  <action name="action32px">
+   <property name="text">
+    <string>32 px</string>
+   </property>
+  </action>
+  <action name="action48px">
+   <property name="text">
+    <string>48 px</string>
+   </property>
+  </action>
  </widget>
  <customwidgets>
   <customwidget>
    <class>FileTreeView</class>
-   <extends>QTreeview</extends>
+   <extends>QWidget</extends>
    <header>filetreeView.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>DirTreeView</class>
-   <extends>QTreeview</extends>
+   <extends>QWidget</extends>
    <header>dirtreeView.h</header>
    <container>1</container>
   </customwidget>
