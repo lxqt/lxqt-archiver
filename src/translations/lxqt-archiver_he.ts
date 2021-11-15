@@ -229,362 +229,385 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <name>MainWindow</name>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
-        <location filename="../mainwindow.cpp" line="258"/>
+        <location filename="../mainwindow.cpp" line="314"/>
         <source>File Archiver</source>
         <translation>מנהל ארכיונים</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="77"/>
+        <location filename="../mainwindow.ui" line="62"/>
         <source>Filter Files...</source>
         <translation>סינון קבצים…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="98"/>
+        <location filename="../mainwindow.ui" line="83"/>
         <source>&amp;File</source>
         <translation>&amp;קובץ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="113"/>
+        <location filename="../mainwindow.ui" line="98"/>
         <source>&amp;Edit</source>
         <translation>ע&amp;ריכה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="132"/>
+        <location filename="../mainwindow.ui" line="117"/>
         <source>&amp;View</source>
         <translation>ת&amp;צוגה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="152"/>
+        <location filename="../mainwindow.ui" line="121"/>
+        <source>&amp;Icon Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="147"/>
         <source>&amp;Help</source>
         <translation>ע&amp;זרה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="163"/>
+        <location filename="../mainwindow.ui" line="158"/>
         <source>Main Toolbar</source>
         <translation>סרגל הכלים הראשי</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="191"/>
+        <location filename="../mainwindow.ui" line="186"/>
         <source>&amp;About</source>
         <translation>על &amp;אודות</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="200"/>
+        <location filename="../mainwindow.ui" line="195"/>
         <source>&amp;New</source>
         <translation>&amp;חדש</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="203"/>
+        <location filename="../mainwindow.ui" line="198"/>
         <source>Ctrl+N</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="212"/>
+        <location filename="../mainwindow.ui" line="207"/>
         <source>&amp;Open</source>
         <translation>&amp;פתיחה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="215"/>
+        <location filename="../mainwindow.ui" line="210"/>
         <source>Ctrl+O</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="223"/>
+        <location filename="../mainwindow.ui" line="218"/>
         <source>Save &amp;As</source>
         <translation>שמירה &amp;בשם</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="232"/>
+        <location filename="../mainwindow.ui" line="227"/>
         <source>&amp;Extract</source>
         <translation>&amp;חילוץ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="237"/>
+        <location filename="../mainwindow.ui" line="232"/>
         <source>&amp;Test</source>
         <translation>ב&amp;דיקה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="245"/>
+        <location filename="../mainwindow.ui" line="240"/>
         <source>&amp;Properties</source>
         <translation>מ&amp;אפיינים</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="248"/>
+        <location filename="../mainwindow.ui" line="243"/>
         <source>Alt+Return</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="257"/>
+        <location filename="../mainwindow.ui" line="252"/>
         <source>&amp;Close</source>
         <translation>&amp;סגירה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="260"/>
+        <location filename="../mainwindow.ui" line="255"/>
         <source>Ctrl+Q</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="268"/>
+        <location filename="../mainwindow.ui" line="263"/>
         <source>Cu&amp;t</source>
         <translation>ג&amp;זירה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="271"/>
+        <location filename="../mainwindow.ui" line="266"/>
         <source>Ctrl+X</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="279"/>
+        <location filename="../mainwindow.ui" line="274"/>
         <source>&amp;Copy</source>
         <translation>ה&amp;עתקה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="282"/>
+        <location filename="../mainwindow.ui" line="277"/>
         <source>Ctrl+C</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="290"/>
+        <location filename="../mainwindow.ui" line="285"/>
         <source>&amp;Paste</source>
         <translation>ה&amp;דבקה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="293"/>
+        <location filename="../mainwindow.ui" line="288"/>
         <source>Ctrl+V</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="301"/>
+        <location filename="../mainwindow.ui" line="296"/>
         <source>&amp;Rename</source>
         <translation>&amp;שינוי שם</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="304"/>
+        <location filename="../mainwindow.ui" line="299"/>
         <source>F2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="309"/>
+        <location filename="../mainwindow.ui" line="304"/>
         <source>&amp;Delete</source>
         <translation>מ&amp;חיקה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="312"/>
+        <location filename="../mainwindow.ui" line="307"/>
         <source>Del</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="317"/>
+        <location filename="../mainwindow.ui" line="312"/>
         <source>&amp;Select All</source>
         <translation>לבחור ה&amp;כול</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="320"/>
+        <location filename="../mainwindow.ui" line="315"/>
         <source>Ctrl+A</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="328"/>
+        <location filename="../mainwindow.ui" line="323"/>
         <source>&amp;Find</source>
         <translation>&amp;חיפוש</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="331"/>
-        <location filename="../mainwindow.ui" line="444"/>
+        <location filename="../mainwindow.ui" line="326"/>
+        <location filename="../mainwindow.ui" line="439"/>
         <source>Ctrl+F</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="340"/>
+        <location filename="../mainwindow.ui" line="335"/>
         <source>&amp;Add Files</source>
         <translation>הוספת &amp;קבצים</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="349"/>
+        <location filename="../mainwindow.ui" line="344"/>
         <source>Add F&amp;older</source>
         <translation>הוס&amp;פת תיקייה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="354"/>
+        <location filename="../mainwindow.ui" line="349"/>
         <source>Pass&amp;word</source>
         <translation>&amp;ססמה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="365"/>
+        <location filename="../mainwindow.ui" line="360"/>
         <source>&amp;Toolbar</source>
         <translation>ס&amp;רגל כלים</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="376"/>
+        <location filename="../mainwindow.ui" line="371"/>
         <source>&amp;Statusbar</source>
         <translation>סרגל מ&amp;צב</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="387"/>
+        <location filename="../mainwindow.ui" line="382"/>
         <source>&amp;Directory Tree</source>
         <translation>&amp;עץ תיקיות</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="398"/>
+        <location filename="../mainwindow.ui" line="393"/>
         <source>S&amp;how as Folder</source>
         <translation>הצ&amp;גה כתיקייה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="406"/>
+        <location filename="../mainwindow.ui" line="401"/>
         <source>Show &amp;All Files</source>
         <translation>הצגת כ&amp;ל הקבצים</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="415"/>
+        <location filename="../mainwindow.ui" line="410"/>
         <source>St&amp;op</source>
         <translation>&amp;עצירה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="418"/>
+        <location filename="../mainwindow.ui" line="413"/>
         <source>Esc</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="423"/>
+        <location filename="../mainwindow.ui" line="418"/>
         <source>&amp;Reload</source>
         <translation>&amp;רענון</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="426"/>
+        <location filename="../mainwindow.ui" line="421"/>
         <source>F5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="431"/>
+        <location filename="../mainwindow.ui" line="426"/>
         <source>Filename &amp;Encoding</source>
         <translation>&amp;קידוד שמות קבצים</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="436"/>
+        <location filename="../mainwindow.ui" line="431"/>
         <source>&amp;View Selected Items</source>
         <translation>ה&amp;צגת הפריטים הנבחרים</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="441"/>
+        <location filename="../mainwindow.ui" line="436"/>
         <source>&amp;Filter</source>
         <translation>מ&amp;סנן</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="452"/>
+        <location filename="../mainwindow.ui" line="447"/>
         <source>&amp;Expand</source>
         <translation>&amp;הרחבה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="455"/>
+        <location filename="../mainwindow.ui" line="450"/>
         <source>Ctrl+Shift+Down</source>
         <translation>Ctrl+Shift+Down</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="463"/>
+        <location filename="../mainwindow.ui" line="458"/>
         <source>&amp;Collapse</source>
         <translation>&amp;צמצום</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="466"/>
+        <location filename="../mainwindow.ui" line="461"/>
         <source>Ctrl+Shift+Up</source>
         <translation>Ctrl+Shift+Up</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="289"/>
-        <location filename="../mainwindow.cpp" line="318"/>
-        <location filename="../mainwindow.cpp" line="351"/>
+        <location filename="../mainwindow.ui" line="469"/>
+        <source>16 px</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="477"/>
+        <source>24 px</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="485"/>
+        <source>32 px</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="493"/>
+        <source>48 px</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="358"/>
+        <location filename="../mainwindow.cpp" line="387"/>
+        <location filename="../mainwindow.cpp" line="420"/>
         <source>All files (*)</source>
         <translation>כל הקבצים (*)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="323"/>
-        <location filename="../mainwindow.cpp" line="356"/>
+        <location filename="../mainwindow.cpp" line="392"/>
+        <location filename="../mainwindow.cpp" line="425"/>
         <source>Add only if &amp;newer</source>
         <translation>להוסיף רק אם &amp;חדש יותר</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="381"/>
+        <location filename="../mainwindow.cpp" line="450"/>
         <source>Confirm</source>
         <translation>אישור</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="381"/>
+        <location filename="../mainwindow.cpp" line="450"/>
         <source>Are you sure you want to delete selected files?</source>
         <translation>למחוק את הקבצים הנבחרים?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="672"/>
+        <location filename="../mainwindow.cpp" line="742"/>
         <source>Version: %1</source>
         <translation>גרסה: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="759"/>
+        <location filename="../mainwindow.cpp" line="829"/>
         <source>%p %</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="852"/>
+        <location filename="../mainwindow.cpp" line="933"/>
         <source>Success</source>
         <translation>הצלחה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="852"/>
+        <location filename="../mainwindow.cpp" line="933"/>
         <source>No errors have been found.</source>
         <translation>לא נמצאו שגיאות.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="830"/>
-        <location filename="../mainwindow.cpp" line="887"/>
+        <location filename="../mainwindow.cpp" line="911"/>
+        <location filename="../mainwindow.cpp" line="968"/>
         <source>Error</source>
         <translation>שגיאה</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="915"/>
+        <location filename="../mainwindow.cpp" line="996"/>
         <source>N/A</source>
         <translation>לא זמין</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="919"/>
+        <location filename="../mainwindow.cpp" line="1000"/>
         <source>Uncompressed Size:</source>
         <translation>גודל לאחר חילוץ:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="921"/>
+        <location filename="../mainwindow.cpp" line="1002"/>
         <source>Compression Ratio:</source>
         <translation>יחס דחיסה:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="974"/>
+        <location filename="../mainwindow.cpp" line="1055"/>
         <source>File name</source>
         <translation>שם קובץ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="975"/>
+        <location filename="../mainwindow.cpp" line="1056"/>
         <source>File Type</source>
         <translation>סוג קובץ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="976"/>
+        <location filename="../mainwindow.cpp" line="1057"/>
         <source>File Size</source>
         <translation>גודל קובץ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="977"/>
+        <location filename="../mainwindow.cpp" line="1058"/>
         <source>Modified</source>
         <translation>מועד שינוי</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="978"/>
+        <location filename="../mainwindow.cpp" line="1059"/>
         <source>Encrypted</source>
         <translation>הצפנה</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="1008"/>
+        <location filename="../mainwindow.cpp" line="1085"/>
         <source>%n file(s)</source>
         <translation>
             <numerusform>קובץ אחד</numerusform>
-            <numerusform>%n קבצים</numerusform>
-            <numerusform>%n קבצים</numerusform>
             <numerusform>%n קבצים</numerusform>
         </translation>
     </message>
@@ -636,7 +659,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <name>QObject</name>
     <message>
         <location filename="../main.cpp" line="248"/>
-        <location filename="../main.cpp" line="288"/>
+        <location filename="../main.cpp" line="298"/>
         <source>Error</source>
         <translation>שגיאה</translation>
     </message>
