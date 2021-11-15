@@ -526,7 +526,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="915"/>
         <source>N/A</source>
-        <translation type="unfinished"></translation>
+        <translation>N/D</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="919"/>
@@ -583,7 +583,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../passworddialog.ui" line="20"/>
         <source>Encrypt the file list</source>
-        <translation type="unfinished">Crittografa l&apos;elenco dei file</translation>
+        <translation>Cripta l&apos;elenco dei file</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="34"/>
