@@ -160,7 +160,7 @@ private:
 
     void setViewsIconSize(const int &size);
 
-    void compactViewsColumns();
+    void fitFileViewColumns();
 
     std::vector<const FileData*> selectedFiles(bool recursive);
 

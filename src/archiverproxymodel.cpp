@@ -8,6 +8,8 @@
 
 ArchiverProxyModel::ArchiverProxyModel(QObject *parent):
     QSortFilterProxyModel (parent), folderFirst_{true} {
+    folderFirst_ = true;
+    collator_.setNumericMode(true);
 }
 
 bool ArchiverProxyModel::lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const {
@@ -38,6 +40,36 @@ bool ArchiverProxyModel::lessThan(const QModelIndex &source_left, const QModelIn
                 }
             }
         }
+        // apply other sorting criteria, especially for the columns other than the first one
+        if(sortColumn() != 0) {
+            auto leftSortColumn = source_left.sibling(source_left.row(), sortColumn());
+            auto rightSortColumn = source_right.sibling(source_right.row(), sortColumn());
+            if(leftSortColumn.isValid() && rightSortColumn.isValid()) {
+                if(leftItem && rightItem) {
+                    auto str = leftSortColumn.data(MainWindow::ArchiverItemRole).toString();
+                    if(str == QStringLiteral("size")) {
+                        if(leftItem->size() != rightItem->size()) {
+                            return (leftItem->size() < rightItem->size());
+                        }
+                    }
+                    else if(str == QStringLiteral("mTime")) {
+                        if(leftItem->modifiedTime() != rightItem->modifiedTime()) {
+                            return (leftItem->modifiedTime() < rightItem->modifiedTime());
+                        }
+                    }
+                    else {
+                        // as the last resort, compare texts (e.g., types for the file type column)
+                        int comp = collator_.compare(leftSortColumn.data().toString(),
+                                                     rightSortColumn.data().toString());
+                        if(comp != 0) {
+                            return comp < 0;
+                        }
+                    }
+                }
+            }
+        }
+        // fall back to the texts of the first column (usually, file names)
+        return collator_.compare(leftFirstCol.data().toString(), rightFirstCol.data().toString()) < 0;
     }
     return QSortFilterProxyModel::lessThan(source_left, source_right);
 }
