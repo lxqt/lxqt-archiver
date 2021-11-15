@@ -260,7 +260,7 @@ Foundation, Inc., ул. Франклин 51, пети етаж, Бостън, М
     <message>
         <location filename="../mainwindow.ui" line="163"/>
         <source>Main Toolbar</source>
-        <translation>Основна лента с инструменти</translation>
+        <translation>Главна лента с меню</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="191"/>
@@ -705,7 +705,7 @@ Foundation, Inc., ул. Франклин 51, пети етаж, Бостън, М
     <message>
         <location filename="../corestrs.h" line="19"/>
         <source>Self-extracting zip (.exe)</source>
-        <translation>Self-extracting zip (.exe)</translation>
+        <translation>Саморазархивиращ се zip (.exe)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="20"/>
