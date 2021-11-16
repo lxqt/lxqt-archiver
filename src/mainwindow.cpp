@@ -66,6 +66,8 @@ MainWindow::MainWindow(QWidget* parent):
     ui_->splitter->setStretchFactor(0, 0);
     ui_->splitter->setStretchFactor(1, 1);
 
+    qRegisterMetaTypeStreamOperators<QList<recentFile>>("QList<recentFile>");
+
     loadSettings();
 
     // create a progress bar in the status bar
@@ -205,7 +207,7 @@ void MainWindow::loadSettings() {
 
     // recent files list
     settings.beginGroup(QStringLiteral("Recent"));
-    recentFiles_ = settings.value(QStringLiteral("RecentFiles")).toStringList();
+    recentFiles_ = settings.value(QStringLiteral("RecentFiles")).value<QList<recentFile>>();
     updateRecentFilesSubMenu();
     settings.endGroup();
 }
@@ -243,7 +245,7 @@ void MainWindow::saveSettings() {
 
     // recent files list
     settings.beginGroup(QStringLiteral("Recent"));
-    settings.setValue(QStringLiteral("RecentFiles"), recentFiles_);
+    settings.setValue(QStringLiteral("RecentFiles"), QVariant::fromValue(recentFiles_));
     settings.endGroup();
 }
 
@@ -291,13 +293,11 @@ void MainWindow::updateRecentFilesSubMenu() {
         recentFiles_.removeLast();
     }
     auto group = new QActionGroup(this);
-    for (QString path : recentFiles_) {
+    for (recentFile file : recentFiles_) {
         auto action = new QAction(this);
-        //fixme wtf is this?
-        QString name = QString::fromUtf8(Fm::FilePath::fromUri(QUrl(path).toEncoded().constData()).baseName().get());
-        action->setText(name);
-        action->setStatusTip(path);
-        action->setData(path);
+        action->setText(file.name);
+        action->setStatusTip(file.path);
+        action->setData(file.path);
         group->addAction(action);
         ui_->menuOpen_Recent->addAction(action);
     }
@@ -313,7 +313,29 @@ void MainWindow::updateRecentFilesSubMenu() {
 
 
 void MainWindow::addToRecentFiles(const Fm::FilePath &file) {
-    recentFiles_.prepend(QString::fromUtf8(file.uri().get()));
+    auto name = QString::fromUtf8(file.baseName().get());
+    auto path = QString::fromUtf8(file.uri().get());
+    bool isMoved = false;
+//    QListIterator<recentFile> it(recentFiles_);
+//    while(it.hasNext()) {
+//        qDebug() << it.next().name << it.next().path;
+//        qDebug() << it.next().name << it.next().path;
+//        if (it.next().path == path) {
+//            recentFiles_.insert(0, recentFiles_.takeAt(recentFiles_.indexOf(it.next())));
+//            isMoved = true;
+//        }
+//        qDebug() << it.next().name << it.next().path;
+//        qDebug() << it.next().name << it.next().path;
+//    }
+
+    for (auto file : recentFiles_) {
+        if (file.path == path) {
+            recentFiles_.insert(0, recentFiles_.takeAt(recentFiles_.indexOf(file)));
+            isMoved = true;
+        }
+    }
+    if (!isMoved)
+        recentFiles_.prepend(recentFile{name, path});
     updateRecentFilesSubMenu();
 }
 
@@ -1444,5 +1466,16 @@ void MainWindow::on_actionExpand_triggered(bool /*checked*/) {
 
 void MainWindow::on_actionCollapse_triggered(bool /*checked*/) {
 	ui_->dirTreeView->collapseAll();
+}
+
+QDataStream &operator<<(QDataStream &out, const recentFile &rf) {
+    out << rf.name << rf.path;
+    return out;
+}
+
+QDataStream &operator>>(QDataStream &in, recentFile &rf) {
+    in >> rf.name;
+    in >> rf.path;
+    return in;
 }
 

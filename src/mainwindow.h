@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QObject>
+#include <QString>
 #include <memory>
 #include <vector>
 #include <string>
@@ -22,6 +23,17 @@ class QLineEdit;
 class QMenu;
 class ArchiverProxyModel;
 
+
+struct recentFile
+{
+    QString name;
+    QString path;
+
+    bool operator==(const recentFile &rf) const
+    {
+        return (name == rf.name && path == rf.path);
+    }
+};
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -202,7 +214,14 @@ private:
 
     int splitterPos_;
 
-    QStringList recentFiles_;
+    QList<recentFile> recentFiles_;
 };
+
+
+QDataStream &operator<<(QDataStream &out, const recentFile &rf);
+
+QDataStream &operator>>(QDataStream &in, recentFile &rf);
+
+Q_DECLARE_METATYPE(recentFile);
 
 #endif // MAINWINDOW_H
