@@ -2,6 +2,7 @@
 #define ARCHIVERPROXYMODEL_H
 
 #include <QSortFilterProxyModel>
+#include <QCollator>
 
 class ArchiverProxyModel : public QSortFilterProxyModel {
     Q_OBJECT
@@ -21,6 +22,7 @@ protected:
 private:
     bool folderFirst_;
     QString filterStr_;
+    QCollator collator_;
 };
 
 #endif // ARCHIVERPROXYMODEL_H

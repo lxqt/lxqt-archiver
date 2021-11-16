@@ -9,6 +9,7 @@ FileTreeView::FileTreeView(QWidget* parent) : QTreeView(parent) {
     setSelectionMode(QAbstractItemView::ExtendedSelection);
     setRootIsDecorated(false);
     setDragDropMode(QAbstractItemView::DragOnly);
+    setSortingEnabled(true);
     header()->setSortIndicatorShown(true);
     header()->setStretchLastSection(false);
     header()->setSortIndicatorShown(true);

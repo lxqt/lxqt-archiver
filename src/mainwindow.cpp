@@ -322,7 +322,7 @@ void MainWindow::setViewsIconSize(const int &size) {
     const QSize qs = QSize(size, size);
     ui_->fileListView->setIconSize(qs);
     ui_->dirTreeView->setIconSize(qs);
-    compactViewsColumns();
+    fitFileViewColumns();
 }
 
 void MainWindow::onViewsIconSizeTtriggered(QAction *action) {
@@ -1035,9 +1035,11 @@ QList<QStandardItem *> MainWindow::createFileListRow(const ArchiverItem *file) {
     descItem->setEditable(false);
 
     auto sizeItem = new QStandardItem{Fm::formatFileSize(file->size())};
+    sizeItem->setData(QStringLiteral("size"), ArchiverItemRole);
     sizeItem->setEditable(false);
 
     auto mtimeItem = new QStandardItem{mtime.toString(Qt::SystemLocaleShortDate)};
+    mtimeItem->setData(QStringLiteral("mTime"), ArchiverItemRole);
     mtimeItem->setEditable(false);
 
     auto encryptedItem = new QStandardItem{file->isEncrypted() ? QStringLiteral("*") : QString{}};
@@ -1084,10 +1086,10 @@ void MainWindow::showFileList(const std::vector<const ArchiverItem *> &files) {
 
     ui_->statusBar->showMessage(tr("%n file(s)", "", files.size()));
 
-    compactViewsColumns();
+    fitFileViewColumns();
 }
 
-void MainWindow::compactViewsColumns() {
+void MainWindow::fitFileViewColumns() {
     //ui_->fileListView->header()->setSectionResizeMode(0, QHeaderView::Stretch);
     QTimer::singleShot(0, this, [this] {
         // remove filtering and reapply it after resizing columns to avoid ellipses
