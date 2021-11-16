@@ -316,18 +316,6 @@ void MainWindow::addToRecentFiles(const Fm::FilePath &file) {
     auto name = QString::fromUtf8(file.baseName().get());
     auto path = QString::fromUtf8(file.uri().get());
     bool isMoved = false;
-//    QListIterator<recentFile> it(recentFiles_);
-//    while(it.hasNext()) {
-//        qDebug() << it.next().name << it.next().path;
-//        qDebug() << it.next().name << it.next().path;
-//        if (it.next().path == path) {
-//            recentFiles_.insert(0, recentFiles_.takeAt(recentFiles_.indexOf(it.next())));
-//            isMoved = true;
-//        }
-//        qDebug() << it.next().name << it.next().path;
-//        qDebug() << it.next().name << it.next().path;
-//    }
-
     for (auto file : recentFiles_) {
         if (file.path == path) {
             recentFiles_.insert(0, recentFiles_.takeAt(recentFiles_.indexOf(file)));
