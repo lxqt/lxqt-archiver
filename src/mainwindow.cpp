@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+﻿#include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "ui_about.h"
 
@@ -50,7 +50,6 @@
 // #include <libfm-qt/pathbar.h>
 
 #include <map>
-
 
 MainWindow::MainWindow(QWidget* parent):
     QMainWindow(parent),
@@ -203,6 +202,12 @@ void MainWindow::loadSettings() {
     ui_->actionStatusbar->setChecked(settings.value(QStringLiteral("StatusBar"), true).toBool());
     ui_->actionToolbar->setChecked(settings.value(QStringLiteral("ToolBar"), true).toBool());
     settings.endGroup();
+
+    // recent files list
+    settings.beginGroup(QStringLiteral("Recent"));
+    recentFiles_ = settings.value(QStringLiteral("RecentFiles")).toStringList();
+    updateRecentFilesSubMenu();
+    settings.endGroup();
 }
 
 void MainWindow::saveSettings() {
@@ -235,6 +240,11 @@ void MainWindow::saveSettings() {
         settings.setValue(QStringLiteral("ToolBar"), ui_->actionToolbar->isChecked());
     }
     settings.endGroup();
+
+    // recent files list
+    settings.beginGroup(QStringLiteral("Recent"));
+    settings.setValue(QStringLiteral("RecentFiles"), recentFiles_);
+    settings.endGroup();
 }
 
 void MainWindow::loadFile(const Fm::FilePath &file) {
@@ -266,7 +276,47 @@ void MainWindow::loadFile(const Fm::FilePath &file) {
     ui_->filterLineEdit->setVisible(false);
 
     archiver_->openArchive(file.uri().get(), nullptr);
+
+    addToRecentFiles(file);
 }
+
+void MainWindow::updateRecentFilesSubMenu() {
+    bool isEmpty = recentFiles_.isEmpty();
+    ui_->menuOpen_Recent->clear();
+    ui_->menuOpen_Recent->setDisabled(isEmpty);
+    if(isEmpty)
+        return;
+
+    while (recentFiles_.size() > 5) {
+        recentFiles_.removeLast();
+    }
+    auto group = new QActionGroup(this);
+    for (QString path : recentFiles_) {
+        auto action = new QAction(this);
+        //fixme wtf is this?
+        QString name = QString::fromUtf8(Fm::FilePath::fromUri(QUrl(path).toEncoded().constData()).baseName().get());
+        action->setText(name);
+        action->setStatusTip(path);
+        action->setData(path);
+        group->addAction(action);
+        ui_->menuOpen_Recent->addAction(action);
+    }
+    connect(group, &QActionGroup::triggered, this, &MainWindow::onRecentFileAction);
+    ui_->menuOpen_Recent->addSeparator();
+    auto actionClear = new QAction(this);
+    actionClear->setText(tr("Clear &Recent"));
+    actionClear->setIcon(QIcon::fromTheme(QStringLiteral("edit-clear-all")));
+    connect(actionClear, &QAction::triggered, this, &MainWindow::onRecentClearAction);
+    ui_->menuOpen_Recent->addAction(actionClear);
+
+}
+
+
+void MainWindow::addToRecentFiles(const Fm::FilePath &file) {
+    recentFiles_.prepend(QString::fromUtf8(file.uri().get()));
+    updateRecentFilesSubMenu();
+}
+
 
 void MainWindow::dragEnterEvent(QDragEnterEvent *event) {
     // If the drag is originated in this window, ignore it.
@@ -329,6 +379,17 @@ void MainWindow::onViewsIconSizeTtriggered(QAction *action) {
     if(action) {
         setViewsIconSize(action->data().toInt());
     }
+}
+
+void MainWindow::onRecentFileAction(QAction *action) {
+    if(action) {
+        loadFile(Fm::FilePath::fromUri(QUrl(action->data().toString()).toEncoded().constData()));
+    }
+}
+
+void MainWindow::onRecentClearAction(bool /*checkd*/) {
+    recentFiles_.clear();
+    updateRecentFilesSubMenu();
 }
 
 void MainWindow::on_actionCreateNew_triggered(bool /*checked*/) {
@@ -1155,6 +1216,8 @@ void MainWindow::updateUiStates() {
     ui_->actionDelete->setEnabled(canEdit);
 
     ui_->actionExtract->setEnabled(canEdit);
+
+    ui_->menuOpen_Recent->setEnabled(!inProgress && !recentFiles_.isEmpty());
 }
 
 std::vector<const FileData*> MainWindow::selectedFiles(bool recursive) {

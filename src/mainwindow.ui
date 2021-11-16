@@ -82,8 +82,17 @@
     <property name="title">
      <string>&amp;File</string>
     </property>
+    <widget class="QMenu" name="menuOpen_Recent">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="title">
+      <string>Open &amp;Recent</string>
+     </property>
+    </widget>
     <addaction name="actionCreateNew"/>
     <addaction name="actionOpen"/>
+    <addaction name="menuOpen_Recent"/>
     <addaction name="actionSaveAs"/>
     <addaction name="separator"/>
     <addaction name="actionExtract"/>

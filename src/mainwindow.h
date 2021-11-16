@@ -100,6 +100,8 @@ private Q_SLOTS:
 
     void on_actionFilter_triggered(bool checked);
 
+    void onRecentClearAction(bool checked);
+
     void onDirTreeSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
 
     void onFileListSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
@@ -113,6 +115,8 @@ private Q_SLOTS:
     void onFileListEnterPressed();
 
     void onViewsIconSizeTtriggered(QAction *action);
+
+    void onRecentFileAction(QAction *action);
 
     void filter(const QString& text);
 
@@ -172,6 +176,10 @@ private:
 
     bool isExtracted(const ArchiverItem* item);
 
+    void updateRecentFilesSubMenu();
+
+    void addToRecentFiles(const Fm::FilePath &file);
+
 private:
     std::unique_ptr<Ui::MainWindow> ui_;
     std::shared_ptr<Archiver> archiver_;
@@ -193,6 +201,8 @@ private:
     QUrl lasrDir_;
 
     int splitterPos_;
+
+    QStringList recentFiles_;
 };
 
 #endif // MAINWINDOW_H
