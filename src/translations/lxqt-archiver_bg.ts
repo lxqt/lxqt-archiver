@@ -255,7 +255,7 @@ Foundation, Inc., ул. Франклин 51, пети етаж, Бостън, М
     <message>
         <location filename="../mainwindow.ui" line="121"/>
         <source>&amp;Icon Size</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Размер на икона</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="147"/>
@@ -496,22 +496,22 @@ Foundation, Inc., ул. Франклин 51, пети етаж, Бостън, М
     <message>
         <location filename="../mainwindow.ui" line="469"/>
         <source>16 px</source>
-        <translation type="unfinished"></translation>
+        <translation>16 px</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="477"/>
         <source>24 px</source>
-        <translation type="unfinished"></translation>
+        <translation>24 px</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="485"/>
         <source>32 px</source>
-        <translation type="unfinished"></translation>
+        <translation>32 px</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="493"/>
         <source>48 px</source>
-        <translation type="unfinished"></translation>
+        <translation>48 px</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="358"/>
