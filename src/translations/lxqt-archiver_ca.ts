@@ -259,7 +259,7 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. {2020 ?} {2
     <message>
         <location filename="../mainwindow.ui" line="121"/>
         <source>&amp;Icon Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Mida de la icona</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="147"/>
@@ -500,22 +500,22 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. {2020 ?} {2
     <message>
         <location filename="../mainwindow.ui" line="469"/>
         <source>16 px</source>
-        <translation type="unfinished"></translation>
+        <translation>16 px</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="477"/>
         <source>24 px</source>
-        <translation type="unfinished"></translation>
+        <translation>24 px</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="485"/>
         <source>32 px</source>
-        <translation type="unfinished"></translation>
+        <translation>32 px</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="493"/>
         <source>48 px</source>
-        <translation type="unfinished"></translation>
+        <translation>48 px</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="358"/>
@@ -714,12 +714,12 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. {2020 ?} {2
     <message>
         <location filename="../corestrs.h" line="15"/>
         <source>Rar Archived Comic Book (.cbr)</source>
-        <translation></translation>
+        <translation>Llibre de còmic arxivat Rar (.cbr)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="16"/>
         <source>Zip Archived Comic Book (.cbz)</source>
-        <translation></translation>
+        <translation>Llibre de còmic arxivat Zip (.cbz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="17"/>
@@ -774,7 +774,7 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. {2020 ?} {2
     <message>
         <location filename="../corestrs.h" line="27"/>
         <source>Windows Imaging Format (.wim)</source>
-        <translation></translation>
+        <translation>Format d&apos;imatge del Windows (.wim)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="28"/>
