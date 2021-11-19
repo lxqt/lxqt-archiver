@@ -725,6 +725,7 @@ void MainWindow::on_actionReload_triggered(bool /*checked*/) {
         if(!tempDir_.isEmpty()) { // remove the last temp dir
             QDir(tempDir_).removeRecursively();
         }
+        password_.clear();
         archiver_->reloadArchive(nullptr);
     }
 }
