@@ -44,7 +44,10 @@ like tar and zip. The supported file types are :
   * Single files compressed with gzip, bzip, bzip2, compress, lrzip, lzip,
     lzop, rzip, xz.
 
+### Binary packages
 
+Official binary packages are provided by most major Linux and BSD distributions. 
+Just use your package manager to search for string `lxqt-archiver`.
 
 ### Translation
 
