@@ -257,7 +257,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="121"/>
         <source>&amp;Icon Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Velikost &amp;ikony</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="147"/>
@@ -267,7 +267,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="158"/>
         <source>Main Toolbar</source>
-        <translation>Hlavní pruh nástrojů</translation>
+        <translation>Hlavní lišta nástrojů</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="186"/>
@@ -342,7 +342,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="274"/>
         <source>&amp;Copy</source>
-        <translation>&amp;Kopírovat</translation>
+        <translation>&amp;Zkopírovat</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="277"/>
@@ -418,12 +418,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="360"/>
         <source>&amp;Toolbar</source>
-        <translation>Pruh nás&amp;trojů</translation>
+        <translation>Liš&amp;ta nástrojů</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="371"/>
         <source>&amp;Statusbar</source>
-        <translation>&amp;Stavový pruh</translation>
+        <translation>&amp;Stavová lišta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="382"/>
@@ -498,22 +498,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="469"/>
         <source>16 px</source>
-        <translation type="unfinished"></translation>
+        <translation>16 px</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="477"/>
         <source>24 px</source>
-        <translation type="unfinished"></translation>
+        <translation>24 px</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="485"/>
         <source>32 px</source>
-        <translation type="unfinished"></translation>
+        <translation>32 px</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="493"/>
         <source>48 px</source>
-        <translation type="unfinished"></translation>
+        <translation>48 px</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="358"/>
@@ -713,12 +713,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="15"/>
         <source>Rar Archived Comic Book (.cbr)</source>
-        <translation>Komiksy komprimované pomocí rar (.cbr)</translation>
+        <translation>Komiksy zabalené pomocí rar (.cbr)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="16"/>
         <source>Zip Archived Comic Book (.cbz)</source>
-        <translation>Komiksy komprimované pomocí zip (.cbz)</translation>
+        <translation>Komiksy zabalené pomocí zip (.cbz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="17"/>
@@ -788,7 +788,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="30"/>
         <source>Tar compressed with compress (.tar.Z)</source>
-        <translation>Tar zabalený pomocí (.tar.Z)</translation>
+        <translation>Tar zabalený pomocí compress (.tar.Z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="31"/>

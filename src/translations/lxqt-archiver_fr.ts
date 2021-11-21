@@ -73,18 +73,18 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
 
 Copyright (C) 2020 l&apos;équipe LXQt
 
-Ce programme est un logiciel libre&#x202f;; vous pouvez le redistribuer et / ou
+Ce programme est un logiciel libre ; vous pouvez le redistribuer et / ou
 le modifier selon les termes de la licence publique générale GNU
-tel que publié par la Free Software Foundation&#x202f;; soit la version 2
+tel que publié par la Free Software Foundation ; soit la version 2
 de la Licence, ou (à votre choix) toute version ultérieure.
 
 Ce programme est distribué dans l&apos;espoir qu&apos;il sera utile,
-mais SANS AUCUNE GARANTIE&#x202f;; sans même la garantie implicite de
+mais SANS AUCUNE GARANTIE ; sans même la garantie implicite de
 QUALITÉ MARCHANDE ou ADAPTATION À UN USAGE PARTICULIER. Voir le
 GNU General Public License pour plus de détails.
 
 Vous devriez avoir reçu une copie de la licence publique générale GNU
-avec ce programme&#x202f;; si ce n&apos;est pas le cas, consultez &lt;http://www.gnu.org/licenses&gt;.</translation>
+avec ce programme ; si ce n&apos;est pas le cas, consultez &lt;http://www.gnu.org/licenses&gt;.</translation>
     </message>
 </context>
 <context>
@@ -256,7 +256,7 @@ avec ce programme&#x202f;; si ce n&apos;est pas le cas, consultez &lt;http://www
     <message>
         <location filename="../mainwindow.ui" line="121"/>
         <source>&amp;Icon Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Taille d&apos;&amp;Icône</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="147"/>
@@ -497,22 +497,22 @@ avec ce programme&#x202f;; si ce n&apos;est pas le cas, consultez &lt;http://www
     <message>
         <location filename="../mainwindow.ui" line="469"/>
         <source>16 px</source>
-        <translation type="unfinished"></translation>
+        <translation>16 px</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="477"/>
         <source>24 px</source>
-        <translation type="unfinished"></translation>
+        <translation>24 px</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="485"/>
         <source>32 px</source>
-        <translation type="unfinished"></translation>
+        <translation>32 px</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="493"/>
         <source>48 px</source>
-        <translation type="unfinished"></translation>
+        <translation>48 px</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="358"/>
