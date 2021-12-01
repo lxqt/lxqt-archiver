@@ -259,7 +259,7 @@ USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="121"/>
         <source>&amp;Icon Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Μέγεθος της &amp;εικόνας</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="147"/>
@@ -500,22 +500,22 @@ USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="469"/>
         <source>16 px</source>
-        <translation type="unfinished"></translation>
+        <translation>16 εικ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="477"/>
         <source>24 px</source>
-        <translation type="unfinished"></translation>
+        <translation>24 εικ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="485"/>
         <source>32 px</source>
-        <translation type="unfinished"></translation>
+        <translation>32 εικ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="493"/>
         <source>48 px</source>
-        <translation type="unfinished"></translation>
+        <translation>48 εικ</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="358"/>
