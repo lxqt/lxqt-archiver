@@ -257,7 +257,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../mainwindow.ui" line="121"/>
         <source>&amp;Icon Size</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ikonstørrelse</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="147"/>
@@ -498,22 +498,22 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../mainwindow.ui" line="469"/>
         <source>16 px</source>
-        <translation type="unfinished"></translation>
+        <translation>16 piksler</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="477"/>
         <source>24 px</source>
-        <translation type="unfinished"></translation>
+        <translation>24 piksler</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="485"/>
         <source>32 px</source>
-        <translation type="unfinished"></translation>
+        <translation>32 piksler</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="493"/>
         <source>48 px</source>
-        <translation type="unfinished"></translation>
+        <translation>48 piksler</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="358"/>

@@ -258,7 +258,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.ui" line="121"/>
         <source>&amp;Icon Size</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ikonstorlek</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="147"/>
@@ -499,22 +499,22 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.ui" line="469"/>
         <source>16 px</source>
-        <translation type="unfinished"></translation>
+        <translation>16 px</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="477"/>
         <source>24 px</source>
-        <translation type="unfinished"></translation>
+        <translation>24 px</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="485"/>
         <source>32 px</source>
-        <translation type="unfinished"></translation>
+        <translation>32 px</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="493"/>
         <source>48 px</source>
-        <translation type="unfinished"></translation>
+        <translation>48 px</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="358"/>
@@ -641,7 +641,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../passworddialog.ui" line="61"/>
         <source>&lt;i&gt;&lt;b&gt;Note:&lt;/b&gt; the password will be used to encrypt files you add to the current archive, and to decrypt files you extract from the current archive. When the archive is closed the password will be deleted.&lt;/i&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;i&gt;&lt;b&gt;OBS:&lt;/b&gt; Lösenordet kommer att användas för att kryptera filer du lägger till arkivet, och för att dekryptera filer du extraherar från arkivet. När arkivet stängs kommer lösenordet att raderas.&lt;/i&gt;</translation>
     </message>
 </context>
 <context>
@@ -890,7 +890,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../corestrs.h" line="59"/>
         <source>You can&apos;t add an archive to itself.</source>
-        <translation type="unfinished"></translation>
+        <translation>Du kan inte lägga till ett arkiv till sig själv.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="65"/>
