@@ -17,7 +17,7 @@
  *
  *  You should have received a copy of the GNU General Public License
  *  along with this program; if not, write to the Free Software
- *  Foundation, Inc., 59 Temple Street #330, Boston, MA 02110-1301, USA.
+ *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
 #include <string.h>
@@ -33,16 +33,6 @@
 
 
 /* gobject utils*/
-
-
-gpointer
-_g_object_ref (gpointer object)
-{
-	if (object != NULL)
-		return g_object_ref (object);
-	else
-		return NULL;
-}
 
 
 void
@@ -182,14 +172,6 @@ escape_str (const char *str,
 	    const char *meta_chars)
 {
 	return escape_str_common (str, meta_chars, '\\', 0);
-}
-
-
-/* escape with backslash the file name. */
-char*
-shell_escape (const char *filename)
-{
-	return escape_str (filename, "$'`\"\\!?* ()[]&|:;<>#");
 }
 
 
@@ -395,7 +377,7 @@ search_util_get_regexps (const char         *pattern_string,
 	if (patterns == NULL)
 		return NULL;
 
-	regexps = g_new0 (GRegex*, n_fields (patterns) + 1);
+	regexps = g_new0 (GRegex*, g_strv_length (patterns) + 1);
 	for (i = 0; patterns[i] != NULL; i++)
 		regexps[i] = g_regex_new (patterns[i],
 					  G_REGEX_OPTIMIZE | compile_options,
@@ -407,51 +389,12 @@ search_util_get_regexps (const char         *pattern_string,
 }
 
 
-/*char *
-_g_strdup_with_max_size (const char *s,
-			 int         max_size)
-{
-	char *result;
-	int   l = strlen (s);
-
-	if (l > max_size) {
-		char *first_half;
-		char *second_half;
-		int   offset;
-		int   half_max_size = max_size / 2 + 1;
-
-		first_half = g_strndup (s, half_max_size);
-		offset = half_max_size + l - max_size;
-		second_half = g_strndup (s + offset, half_max_size);
-
-		result = g_strconcat (first_half, "...", second_half, NULL);
-
-		g_free (first_half);
-		g_free (second_half);
-	} else
-		result = g_strdup (s);
-
-	return result;
-}*/
-
-
 const char *
 eat_spaces (const char *line)
 {
 	if (line == NULL)
 		return NULL;
-	while (*line == ' ')
-		line++;
-	return line;
-}
-
-
-const char *
-eat_void_chars (const char *line)
-{
-	if (line == NULL)
-		return NULL;
-	while (((*line == ' ') || (*line == '\t')) && (*line != 0))
+	while ((*line == ' ') && (*line != 0))
 		line++;
 	return line;
 }
@@ -508,21 +451,6 @@ get_last_field (const char *line,
 }
 
 
-int
-n_fields (char **str_array)
-{
-	int i;
-
-	if (str_array == NULL)
-		return 0;
-
-	i = 0;
-	while (str_array[i] != NULL)
-		i++;
-	return i;
-}
-
-
 void
 debug (const char *file,
        int         line,
@@ -545,82 +473,6 @@ debug (const char *file,
 #else /* ! DEBUG */
 #endif
 }
-
-
-char *
-get_time_string (time_t time)
-{
-	struct tm *tm;
-	char       s_time[256];
-	char      *locale_format = NULL;
-	char      *time_utf8;
-
-	tm = localtime (&time);
-	/* This is the time format used in the "Date Modified" column and
-	 * in the Properties dialog.  See the man page of strftime for an
-	 * explanation of the values. */
-	locale_format = g_locale_from_utf8 (_("%d %B %Y, %H:%M"), -1, NULL, NULL, NULL);
-	strftime (s_time, sizeof (s_time) - 1, locale_format, tm);
-	g_free (locale_format);
-	time_utf8 = g_locale_to_utf8 (s_time, -1, NULL, NULL, NULL);
-
-	return time_utf8;
-}
-
-
-/*GPtrArray *
-g_ptr_array_copy (GPtrArray *array)
-{
-	GPtrArray *new_array;
-
-	if (array == NULL)
-		return NULL;
-
-	new_array = g_ptr_array_sized_new (array->len);
-	memcpy (new_array->pdata, array->pdata, array->len * sizeof (gpointer));
-	new_array->len = array->len;
-
-	return new_array;
-}*/
-
-
-/*void
-g_ptr_array_reverse (GPtrArray *array)
-{
-	int      i, j;
-	gpointer tmp;
-
-	for (i = 0; i < array->len / 2; i++) {
-		j = array->len - i - 1;
-		tmp = g_ptr_array_index (array, i);
-		g_ptr_array_index (array, i) = g_ptr_array_index (array, j);
-		g_ptr_array_index (array, j) = tmp;
-	}
-}
-
-
-int
-g_ptr_array_binary_search (GPtrArray    *array,
-			   gpointer      value,
-			   GCompareFunc  func)
-{
-	int l, r, p, cmp = -1;
-
-	l = 0;
-	r = array->len;
-	while (l < r) {
-		p = l + ((r - l) / 2);
-		cmp = func(value, &g_ptr_array_index (array, p));
-		if (cmp == 0)
-			return p;
-		else if (cmp < 0)
-			r = p;
-		else
-			l = p + 1;
-	}
-
-	return -1;
-}*/
 
 
 GHashTable *static_strings = NULL;
@@ -648,7 +500,7 @@ get_static_string (const char *s)
 }
 
 
-/*char*
+char*
 g_uri_display_basename (const char  *uri)
 {
 	char *e_name, *name;
@@ -658,49 +510,6 @@ g_uri_display_basename (const char  *uri)
 	g_free (e_name);
 
 	return name;
-}
-
-
-char **
-_g_strv_prepend (char **str_array,
-                 const char *str)
-{
-       char **result;
-       int i;
-       int j;
-
-       result = g_new (char *, g_strv_length (str_array) + 1);
-       i = 0;
-       result[i++] = g_strdup (str);
-       for (j = 0; str_array[j] != NULL; j++)
-               result[i++] = g_strdup (str_array[j]);
-       result[i] = NULL;
-
-       return result;
-}
-
-
-gboolean
-_g_strv_remove (char **str_array,
-               const char *str)
-{
-        int i;
-        int j;
-
-        if (str == NULL)
-                return FALSE;
-
-        for (i = 0; str_array[i] != NULL; i++)
-                if (strcmp (str_array[i], str) == 0)
-                        break;
-
-        if (str_array[i] == NULL)
-                return FALSE;
-
-        for (j = i; str_array[j] != NULL; j++)
-                str_array[j] = str_array[j + 1];
-
-        return TRUE;
 }
 
 
@@ -749,5 +558,5 @@ _g_path_get_base_name (const char *path,
 		base_path -= 1;
 
 	return base_path;
-}*/
+}
 
