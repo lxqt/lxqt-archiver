@@ -6,7 +6,7 @@
     <message>
         <location filename="../about.ui" line="14"/>
         <source>About</source>
-        <translation>O programu</translation>
+        <translation>O opravljalniku</translation>
     </message>
     <message>
         <location filename="../about.ui" line="34"/>
@@ -552,7 +552,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../mainwindow.cpp" line="829"/>
         <source>%p %</source>
         <translatorcomment>Non-breaking space.</translatorcomment>
-        <translation>%p&#xa0;%</translation>
+        <translation>%p %</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="933"/>
@@ -663,7 +663,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../progressdialog.cpp" line="16"/>
         <source>%p %</source>
         <translatorcomment>Non-breaking space.</translatorcomment>
-        <translation>%p&#xa0;%</translation>
+        <translation>%p %</translation>
     </message>
 </context>
 <context>
