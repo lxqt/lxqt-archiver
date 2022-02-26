@@ -187,17 +187,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="23"/>
         <source>Extract</source>
-        <translation>추출</translation>
+        <translation>압축풀기</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="29"/>
         <source>E&amp;xtract all files</source>
-        <translation>모든 파일 추출(&amp;X)</translation>
+        <translation>모든 파일 압축풀기(&amp;X)</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="36"/>
         <source>Ex&amp;tract selected files</source>
-        <translation>선택한 파일 추출(&amp;T)</translation>
+        <translation>선택한 파일 압축풀기(&amp;T)</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="59"/>
@@ -217,7 +217,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="79"/>
         <source>Do not extract older files</source>
-        <translation>더 오래된 파일 추출 안함</translation>
+        <translation>더 오래된 파일 압축풀기 안함</translation>
     </message>
 </context>
 <context>
@@ -304,7 +304,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="227"/>
         <source>&amp;Extract</source>
-        <translation>추출(&amp;E)</translation>
+        <translation>압축풀기(&amp;E)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="232"/>
@@ -834,7 +834,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="64"/>
         <location filename="../main.cpp" line="280"/>
         <source>Extracting file: </source>
-        <translation>파일 추출 중: </translation>
+        <translation>파일 압축푸는 중: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="43"/>
