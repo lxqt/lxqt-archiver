@@ -242,27 +242,27 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="83"/>
         <source>&amp;File</source>
-        <translation>&amp;Tệp</translation>
+        <translation>Tập tin</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="98"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Chỉnh sửa</translation>
+        <translation>Chỉnh sửa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="117"/>
         <source>&amp;View</source>
-        <translation>&amp;Hiển thị</translation>
+        <translation>Xem</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="121"/>
         <source>&amp;Icon Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Cỡ biểu tượng</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="147"/>
         <source>&amp;Help</source>
-        <translation>&amp;Trợ giúp</translation>
+        <translation>Trợ giúp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="158"/>
@@ -272,7 +272,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="186"/>
         <source>&amp;About</source>
-        <translation>&amp;Thông tin</translation>
+        <translation>Về</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="195"/>
@@ -297,7 +297,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="218"/>
         <source>Save &amp;As</source>
-        <translation>Lưu &amp;dưới dạng</translation>
+        <translation>Lưu nơi khác</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="227"/>
@@ -322,7 +322,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="252"/>
         <source>&amp;Close</source>
-        <translation>&amp;Đóng</translation>
+        <translation>Đóng</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="255"/>
@@ -372,12 +372,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="304"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Xóa</translation>
+        <translation>Xóa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="307"/>
         <source>Del</source>
-        <translation>Del</translation>
+        <translation>Xóa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="312"/>
@@ -498,22 +498,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="469"/>
         <source>16 px</source>
-        <translation type="unfinished"></translation>
+        <translation>16 điểm ảnh</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="477"/>
         <source>24 px</source>
-        <translation type="unfinished"></translation>
+        <translation>24 điểm ảnh</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="485"/>
         <source>32 px</source>
-        <translation type="unfinished"></translation>
+        <translation>32 điểm ảnh</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="493"/>
         <source>48 px</source>
-        <translation type="unfinished"></translation>
+        <translation>48 điểm ảnh</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="358"/>
