@@ -71,7 +71,23 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation type="unfinished"></translation>
+        <translation>LXQt Archiver
+
+Copyright (C) 2020 il Team LXQt
+
+Questo programma è distribuito nella speranza è software libero; puoi redistribuirlo o
+modificarlo entro i termini della GNU General Public License 
+come pubblicato dalla Free Software Foundation (Fondazione Software Libero); sia la versione 2 
+della Licenza o (opzionalmente) qualunque versione successiva.
+
+Questo programma è distribuito nella speranza sia utile,
+ma SENZA ALCUNA GARANZIA; nemmeno l&apos;implicita garanzia 
+di COMMERCIABILITÀ o IDONEITÀ PER UN PARTICOLARE SCOPO.  Vedi la
+GNU General Public License per maggiori dettagli.
+
+Dovresti aver ricevuto una copia della GNU General Public License 
+insieme a questo programma; in caso contrario, scrivi alla Free Software 
+Foundation, Inc., 51 Franklin Street, Quinto piano, Boston, MA  02110-1301, USA.</translation>
     </message>
 </context>
 <context>
