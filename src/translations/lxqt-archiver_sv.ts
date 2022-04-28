@@ -22,7 +22,8 @@
         <location filename="../about.ui" line="67"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/lxqt/lxqt-archiver&quot;&gt;https://github.com/lxqt/lxqt-archiver&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/lxqt/lxqt-archiver&quot;&gt;https://github.com/lxqt/lxqt-archiver&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+</translation>
     </message>
     <message>
         <location filename="../about.ui" line="91"/>
@@ -70,9 +71,9 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation type="unfinished">LXQt Arkiverare
+        <translation>LXQt Arkiverare
 
-Copyright (C) 2019 LXQt Teamet
+Copyright (C) 2020 LXQt Teamet
 
 Detta program är fri programvara. Du kan distribuera det och/eller
 ändra det under villkoren i GNU General Public License, publicerad 
@@ -86,8 +87,7 @@ garanti om SÄLJBARHET eller LÄMPLIGHET FÖR NÅGOT SPECIELLT
 
 Du ska ha fått en kopia av GNU General Public License tillsammans
 med detta program. Om inte, skriv till Free Software Foundation, Inc., 
-51 Franklin Steet, Fifth Floor, Boston, MA 02110- 1301 USA {2020 ?} {2
-?} {51 ?} {02110-1301,?}</translation>
+51 Franklin Steet, Fifth Floor, Boston, MA 02110- 1301 USA.</translation>
     </message>
 </context>
 <context>
@@ -569,7 +569,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.cpp" line="997"/>
         <source>N/A</source>
-        <translation type="unfinished"></translation>
+        <translation>Inte tillgänglig</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1001"/>
