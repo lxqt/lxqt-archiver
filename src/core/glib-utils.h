@@ -64,7 +64,6 @@ char **             split_line                   (const char  *line,
 						  int          n_fields);
 const char *        get_last_field               (const char  *line,
 						  int          last_field);
-int                 n_fields                     (char       **str_array);
 char *              get_time_string              (time_t       time);
 /*GPtrArray *         g_ptr_array_copy             (GPtrArray   *array);*/
 /*void                g_ptr_array_reverse          (GPtrArray   *array);
