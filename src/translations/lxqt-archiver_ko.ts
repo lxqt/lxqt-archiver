@@ -251,7 +251,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="98"/>
         <source>&amp;Edit</source>
-        <translation>편집(&amp;E)</translation>
+        <translation>편집하기(&amp;E)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="117"/>
@@ -301,7 +301,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="218"/>
         <source>Save &amp;As</source>
-        <translation>다른 이름으로 저장(&amp;A)</translation>
+        <translation>다른 이름으로 저장하기(&amp;A)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="227"/>
@@ -407,12 +407,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="335"/>
         <source>&amp;Add Files</source>
-        <translation>파일 추가(&amp;A)</translation>
+        <translation>파일 추가하기(&amp;A)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="344"/>
         <source>Add F&amp;older</source>
-        <translation>폴더 추가(&amp;O)</translation>
+        <translation>폴더 추가하기(&amp;O)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="349"/>
@@ -442,7 +442,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="401"/>
         <source>Show &amp;All Files</source>
-        <translation>모든 파일 표시(&amp;A)</translation>
+        <translation>모든 파일 표시하기(&amp;A)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="410"/>
@@ -530,7 +530,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../mainwindow.cpp" line="392"/>
         <location filename="../mainwindow.cpp" line="425"/>
         <source>Add only if &amp;newer</source>
-        <translation>더 새 파일인 경우만 추가</translation>
+        <translation>더 새 파일인 경우만 추가하기</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="450"/>
@@ -632,7 +632,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../passworddialog.ui" line="34"/>
         <source>Show password</source>
-        <translation>비밀번호 표시</translation>
+        <translation>비밀번호 표시하기</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="48"/>
@@ -828,7 +828,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="62"/>
         <location filename="../main.cpp" line="240"/>
         <source>Adding file: </source>
-        <translation>파일 추가 중: </translation>
+        <translation>파일 추가하는 중: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="40"/>
