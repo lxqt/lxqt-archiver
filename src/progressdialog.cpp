@@ -56,7 +56,7 @@ void ProgressDialog::onProgress(double fraction) {
     }
 }
 
-void ProgressDialog::onFinished(FrAction action, ArchiverError error) {
+void ProgressDialog::onFinished(FrAction /*action*/, ArchiverError /*error*/) {
 }
 
 void ProgressDialog::onMessage(QString msg) {
@@ -64,7 +64,7 @@ void ProgressDialog::onMessage(QString msg) {
     ui_->message->setText(msg);
 }
 
-void ProgressDialog::onStoppableChanged(bool value) {
+void ProgressDialog::onStoppableChanged(bool /*value*/) {
 
 }
 
