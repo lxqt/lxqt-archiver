@@ -516,7 +516,7 @@ std::vector<const ArchiverItem*> Archiver::flatFileList() const {
     return files;
 }
 
-const ArchiverItem *Archiver::itemByPath(const char *fullPath) const {
+const ArchiverItem *Archiver::itemByPath(const char * /*fullPath*/) const {
     return nullptr;
 }
 
@@ -601,7 +601,7 @@ void Archiver::onStoppable(FrArchive*, gboolean value, Archiver* _this) {
     QMetaObject::invokeMethod(_this, "stoppableChanged", Qt::QueuedConnection, QGenericReturnArgument(), Q_ARG(bool, bool(value)));
 }
 
-void Archiver::onWorkingArchive(FrCommand* comm, const char* filename, Archiver* _this) {
+void Archiver::onWorkingArchive(FrCommand* /*comm*/, const char* filename, Archiver* _this) {
     // FIXME: why the first param is comm?
     //qDebug("working: %s", filename);
     Q_EMIT _this->workingArchive(QString::fromUtf8(filename));
