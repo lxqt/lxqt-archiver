@@ -438,7 +438,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="418"/>
         <source>&amp;Reload</source>
-        <translation>أ&amp;عِد التحميل</translation>
+        <translation>&amp;أعِد التحميل</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="421"/>
