@@ -625,7 +625,7 @@ Foundation، Inc.، 51 Franklin Street، Fifth Floor، Boston، MA 02110-1301، 
         <location filename="../passworddialog.ui" line="14"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password</source>
-        <translation>كلمة السر</translation>
+        <translation>كلمة المرور</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="20"/>
@@ -635,18 +635,18 @@ Foundation، Inc.، 51 Franklin Street، Fifth Floor، Boston، MA 02110-1301، 
     <message>
         <location filename="../passworddialog.ui" line="34"/>
         <source>Show password</source>
-        <translation>اعرض كلمة السر</translation>
+        <translation>اعرض كلمة المرور</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="48"/>
         <location filename="../passworddialog.cpp" line="60"/>
         <source>Password:</source>
-        <translation>كلمة السر:</translation>
+        <translation>كلمة المرور:</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="61"/>
         <source>&lt;i&gt;&lt;b&gt;Note:&lt;/b&gt; the password will be used to encrypt files you add to the current archive, and to decrypt files you extract from the current archive. When the archive is closed the password will be deleted.&lt;/i&gt;</source>
-        <translation>&lt;b&gt;ملاحظة:&lt;/b&gt; ستُستعمل كلمة السر لتعمية الملفات حين تُضيفها إلى الأرشيف الحالي، ولفكّ تعمية الملفات التي تستخرجها من الأرشيف الحالي. متى أغلقت الأرشيف ستُحذف كلمة السر.</translation>
+        <translation>&lt;i&gt; &lt;b&gt; ملاحظة: &lt;/b&gt; سيتم استخدام كلمة المرور لتشفير الملفات التي تضيفها إلى الأرشيف الحالي ، وفك تشفير الملفات التي تستخرجها من الأرشيف الحالي. عندما يتم إغلاق الأرشيف ، سيتم حذف كلمة المرور. &lt;/i&gt;</translation>
     </message>
 </context>
 <context>
@@ -678,7 +678,7 @@ Foundation، Inc.، 51 Franklin Street، Fifth Floor، Boston، MA 02110-1301، 
     <message>
         <location filename="../corestrs.h" line="7"/>
         <source>Tar compressed with 7z (.tar.7z)</source>
-        <translation></translation>
+        <translation>ضغط 7z (.tar.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="8"/>
@@ -703,12 +703,12 @@ Foundation، Inc.، 51 Franklin Street، Fifth Floor، Boston، MA 02110-1301، 
     <message>
         <location filename="../corestrs.h" line="12"/>
         <source>Tar compressed with bzip2 (.tar.bz2)</source>
-        <translation></translation>
+        <translation>ضغط bzip (.tar.bz2)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="13"/>
         <source>Tar compressed with bzip (.tar.bz)</source>
-        <translation></translation>
+        <translation>ضغط bzip (.tar.bz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="14"/>
@@ -718,17 +718,17 @@ Foundation، Inc.، 51 Franklin Street، Fifth Floor، Boston، MA 02110-1301، 
     <message>
         <location filename="../corestrs.h" line="15"/>
         <source>Rar Archived Comic Book (.cbr)</source>
-        <translation></translation>
+        <translation>Rar أرشيف Comic Book (.cbr)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="16"/>
         <source>Zip Archived Comic Book (.cbz)</source>
-        <translation></translation>
+        <translation>Zip أرشيف Comic Book (.cbz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="17"/>
         <source>Tar compressed with gzip (.tar.gz)</source>
-        <translation></translation>
+        <translation>للضغط بواسطة gzip (.tar.gz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="18"/>
@@ -758,22 +758,22 @@ Foundation، Inc.، 51 Franklin Street، Fifth Floor، Boston، MA 02110-1301، 
     <message>
         <location filename="../corestrs.h" line="23"/>
         <source>Tar compressed with lrzip (.tar.lrz)</source>
-        <translation></translation>
+        <translation>Tar مضغوط lrzip (.tar.lrz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="24"/>
         <source>Tar compressed with lzip (.tar.lz)</source>
-        <translation></translation>
+        <translation>Tar مضغوط lzip (.tar.lz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="25"/>
         <source>Tar compressed with lzma (.tar.lzma)</source>
-        <translation></translation>
+        <translation>Tar مضغوط lzma (.tar.lzma)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="26"/>
         <source>Tar compressed with lzop (.tar.lzo)</source>
-        <translation></translation>
+        <translation>Tar مضغوط lzop (.tar.lzo)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="27"/>
@@ -788,12 +788,12 @@ Foundation، Inc.، 51 Franklin Street، Fifth Floor، Boston، MA 02110-1301، 
     <message>
         <location filename="../corestrs.h" line="29"/>
         <source>Tar uncompressed (.tar)</source>
-        <translation></translation>
+        <translation>Tar مضغوط (.tar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="30"/>
         <source>Tar compressed with compress (.tar.Z)</source>
-        <translation></translation>
+        <translation>Tar مضغوط (.tar.Z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="31"/>
@@ -808,7 +808,7 @@ Foundation، Inc.، 51 Franklin Street، Fifth Floor، Boston، MA 02110-1301، 
     <message>
         <location filename="../corestrs.h" line="33"/>
         <source>Tar compressed with xz (.tar.xz)</source>
-        <translation></translation>
+        <translation>Tarمضغوط xz (.tar.xz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="34"/>
@@ -885,7 +885,7 @@ Foundation، Inc.، 51 Franklin Street، Fifth Floor، Boston، MA 02110-1301، 
     <message>
         <location filename="../corestrs.h" line="57"/>
         <source>You don&apos;t have the right permissions.</source>
-        <translation></translation>
+        <translation>ليس لديك الأذونات الصحيحة.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="58"/>
