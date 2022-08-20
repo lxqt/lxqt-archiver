@@ -289,7 +289,7 @@ can_create_a_compressed_archive (FrCommand *comm)
 static void
 process_line__generic (char     *line,
 		       gpointer  data,
-		       char     *action_msg)
+		       const char     *action_msg)
 {
 	FrCommand *comm = FR_COMMAND (data);
 

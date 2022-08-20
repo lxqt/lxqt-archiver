@@ -43,9 +43,6 @@ public:
 
     void addChild(ArchiverItem* child);
 
-    // recursively get all children of this item
-    std::vector<const ArchiverItem*>& allChildren() const;
-
     void allChildren(std::vector<const ArchiverItem*>& results) const;
 
 private:
