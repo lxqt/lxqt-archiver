@@ -309,7 +309,7 @@ Foundation, Inc., 51 Franklin Street, Quinto piano, Boston, MA  02110-1301, USA.
     <message>
         <location filename="../mainwindow.ui" line="232"/>
         <source>&amp;Test</source>
-        <translation>&amp;Prova</translation>
+        <translation>&amp;Controlla</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="240"/>
