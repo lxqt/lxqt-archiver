@@ -217,6 +217,9 @@
    <property name="text">
     <string>Save &amp;As</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
   </action>
   <action name="actionExtract">
    <property name="icon">
@@ -230,6 +233,9 @@
   <action name="actionTest">
    <property name="text">
     <string>&amp;Test</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
    </property>
   </action>
   <action name="actionArchiveProperties">
@@ -392,6 +398,9 @@
    <property name="text">
     <string>S&amp;how as Folder</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+D</string>
+   </property>
   </action>
   <action name="actionFlatListMode">
    <property name="checkable">
@@ -399,6 +408,9 @@
    </property>
    <property name="text">
     <string>Show &amp;All Files</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+A</string>
    </property>
   </action>
   <action name="actionStop">
@@ -447,7 +459,7 @@
     <string>&amp;Expand</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+Shift+Down</string>
+    <string>Ctrl+Shift+E</string>
    </property>
   </action>
   <action name="actionCollapse">
@@ -458,7 +470,7 @@
     <string>&amp;Collapse</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+Shift+Up</string>
+    <string>Ctrl+Shift+C</string>
    </property>
   </action>
   <action name="action16px">
