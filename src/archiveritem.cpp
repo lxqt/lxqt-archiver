@@ -78,12 +78,6 @@ void ArchiverItem::addChild(ArchiverItem *child) {
   children_.emplace_back(child);
 }
 
-std::vector<const ArchiverItem *> &ArchiverItem::allChildren() const {
-    std::vector<const ArchiverItem *> results;
-    allChildren(results);
-    return results;
-}
-
 void ArchiverItem::allChildren(std::vector<const ArchiverItem*>& results) const {
     for(auto& child: children()) {
         results.emplace_back(child);

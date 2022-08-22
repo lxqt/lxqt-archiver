@@ -263,6 +263,8 @@ static int runApp(QApplication& app) {
             case FR_ACTION_ADDING_FILES:
                 dlg.accept();
                 break;
+            default:
+                break;
             };
         });
         dlg.exec();
