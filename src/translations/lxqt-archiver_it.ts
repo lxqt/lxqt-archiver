@@ -415,12 +415,12 @@ Foundation, Inc., 51 Franklin Street, Quinto piano, Boston, MA  02110-1301, USA.
     <message>
         <location filename="../mainwindow.ui" line="341"/>
         <source>&amp;Add Files</source>
-        <translation>&amp;Aggiungi i file</translation>
+        <translation>&amp;Aggiungi file</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="350"/>
         <source>Add F&amp;older</source>
-        <translation>Aggiungi cartella</translation>
+        <translation>Aggiungi &amp;cartella</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="355"/>
@@ -548,7 +548,7 @@ Foundation, Inc., 51 Franklin Street, Quinto piano, Boston, MA  02110-1301, USA.
         <location filename="../mainwindow.cpp" line="392"/>
         <location filename="../mainwindow.cpp" line="425"/>
         <source>Add only if &amp;newer</source>
-        <translation>Aggiungi solo se più recente</translation>
+        <translation>Aggiungi solo se più &amp;recente</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="450"/>
