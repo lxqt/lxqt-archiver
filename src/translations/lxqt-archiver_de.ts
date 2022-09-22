@@ -22,7 +22,8 @@
         <location filename="../about.ui" line="67"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/lxqt/lxqt-archiver&quot;&gt;https://github.com/lxqt/lxqt-archiver&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/lxqt/lxqt-archiver&quot;&gt;https://github.com/lxqt/lxqt-archiver&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+</translation>
     </message>
     <message>
         <location filename="../about.ui" line="91"/>
@@ -305,7 +306,7 @@ MA 02110, USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="221"/>
         <source>Ctrl+Shift+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Strg+Shift+S</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="230"/>
@@ -320,7 +321,7 @@ MA 02110, USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="238"/>
         <source>Ctrl+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Strg+T</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="246"/>
@@ -451,7 +452,7 @@ MA 02110, USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="402"/>
         <source>Ctrl+Shift+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Strg+Shift+D</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="410"/>
@@ -461,7 +462,7 @@ MA 02110, USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="413"/>
         <source>Ctrl+Shift+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Strg+Shift+A</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="422"/>
@@ -506,12 +507,12 @@ MA 02110, USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="462"/>
         <source>Ctrl+Shift+E</source>
-        <translation type="unfinished"></translation>
+        <translation>Strg+Shift+E</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="473"/>
         <source>Ctrl+Shift+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Strg+Shift+C</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="470"/>
