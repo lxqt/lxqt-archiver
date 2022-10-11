@@ -304,7 +304,7 @@ Foundation, Inc., 51 Franklin Street, Quinto piano, Boston, MA  02110-1301, USA.
     <message>
         <location filename="../mainwindow.ui" line="221"/>
         <source>Ctrl+Shift+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="230"/>
