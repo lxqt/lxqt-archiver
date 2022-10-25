@@ -662,7 +662,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <name>QObject</name>
     <message>
         <location filename="../main.cpp" line="248"/>
-        <location filename="../main.cpp" line="298"/>
+        <location filename="../main.cpp" line="300"/>
         <source>Error</source>
         <translation></translation>
     </message>
@@ -833,7 +833,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="40"/>
         <location filename="../corestrs.h" line="49"/>
         <location filename="../corestrs.h" line="64"/>
-        <location filename="../main.cpp" line="280"/>
+        <location filename="../main.cpp" line="282"/>
         <source>Extracting file: </source>
         <translation></translation>
     </message>
