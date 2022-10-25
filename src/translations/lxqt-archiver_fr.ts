@@ -75,18 +75,18 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
 
 Copyright (C) 2020 l&apos;équipe LXQt
 
-Ce programme est un logiciel libre ; vous pouvez le redistribuer et / ou
+Ce programme est un logiciel libre&#x202f;; vous pouvez le redistribuer et / ou
 le modifier selon les termes de la licence publique générale GNU
-tel que publié par la Free Software Foundation ; soit la version 2
+tel que publié par la Free Software Foundation&#x202f;; soit la version 2
 de la Licence, ou (à votre choix) toute version ultérieure.
 
 Ce programme est distribué dans l&apos;espoir qu&apos;il sera utile,
-mais SANS AUCUNE GARANTIE ; sans même la garantie implicite de
+mais SANS AUCUNE GARANTIE&#x202f;; sans même la garantie implicite de
 QUALITÉ MARCHANDE ou ADAPTATION À UN USAGE PARTICULIER. Voir le
 GNU General Public License pour plus de détails.
 
 Vous devriez avoir reçu une copie de la licence publique générale GNU
-avec ce programme ; si ce n&apos;est pas le cas, consultez &lt;http://www.gnu.org/licenses&gt;.</translation>
+avec ce programme&#x202f;; si ce n&apos;est pas le cas, consultez &lt;http://www.gnu.org/licenses&gt;.</translation>
     </message>
 </context>
 <context>
@@ -681,7 +681,7 @@ avec ce programme ; si ce n&apos;est pas le cas, consultez &lt;http://www.gnu.
     <name>QObject</name>
     <message>
         <location filename="../main.cpp" line="248"/>
-        <location filename="../main.cpp" line="298"/>
+        <location filename="../main.cpp" line="300"/>
         <source>Error</source>
         <translation>Erreur</translation>
     </message>
@@ -852,7 +852,7 @@ avec ce programme ; si ce n&apos;est pas le cas, consultez &lt;http://www.gnu.
         <location filename="../corestrs.h" line="40"/>
         <location filename="../corestrs.h" line="49"/>
         <location filename="../corestrs.h" line="64"/>
-        <location filename="../main.cpp" line="280"/>
+        <location filename="../main.cpp" line="282"/>
         <source>Extracting file: </source>
         <translation>Extraction du fichier : </translation>
     </message>
