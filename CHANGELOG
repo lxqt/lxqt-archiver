@@ -1,3 +1,8 @@
+lxqt-archiver-0.7.0 / 2022-11-05
+===================================
+ * Removed the redundant function `n_fields()` from `glib-utils`.
+ * Silenced some compilation warnings.
+
 lxqt-archiver-0.6.0 / 2022-04-15
 ===================================
  * Allow changing of view icon size.
