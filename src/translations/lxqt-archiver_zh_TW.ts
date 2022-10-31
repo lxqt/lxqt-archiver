@@ -259,7 +259,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="121"/>
         <source>&amp;Icon Size</source>
-        <translation type="unfinished"></translation>
+        <translation>圖示大小(&amp;I)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="147"/>
@@ -500,7 +500,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="459"/>
         <source>&amp;Expand</source>
-        <translation type="unfinished"></translation>
+        <translation>展開 (&amp;E)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="462"/>
@@ -515,7 +515,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="470"/>
         <source>&amp;Collapse</source>
-        <translation type="unfinished"></translation>
+        <translation>折疊 (&amp;C)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="481"/>
@@ -629,8 +629,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1088"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n 個檔案</numerusform>
         </translation>
     </message>
 </context>
@@ -828,7 +828,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../corestrs.h" line="34"/>
         <source>Tar compressed with zstd (.tar.zst)</source>
-        <translation type="unfinished"></translation>
+        <translation>使用 zstd 壓縮的 Tar 檔案 (.tar.zst)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="35"/>
