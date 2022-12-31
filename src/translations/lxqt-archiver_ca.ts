@@ -71,7 +71,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation type="unfinished">Arxivador de LXQt
+        <translation>Arxivador de LXQt
 
 Drets d&apos;autor (C) 2018 l&apos;equip de LXQt
 
@@ -88,8 +88,7 @@ Vegeu la Llicència general pública de GNU per a més detalls.
 
 Hauríeu d&apos;haver rebut una còpia de la Llicència Pública General de
 GNU; si no és així, escriviu a la Free Software Foundation, Inc., 51
-Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. {2020 ?} {2
-?} {51 ?} {02110-1301,?}</translation>
+Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</translation>
     </message>
 </context>
 <context>
