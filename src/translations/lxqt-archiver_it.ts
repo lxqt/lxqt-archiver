@@ -304,7 +304,7 @@ Foundation, Inc., 51 Franklin Street, Quinto piano, Boston, MA  02110-1301, USA.
     <message>
         <location filename="../mainwindow.ui" line="221"/>
         <source>Ctrl+Shift+S</source>
-        <translation>Ctrl+Maiusc+S</translation>
+        <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="230"/>
@@ -450,7 +450,7 @@ Foundation, Inc., 51 Franklin Street, Quinto piano, Boston, MA  02110-1301, USA.
     <message>
         <location filename="../mainwindow.ui" line="402"/>
         <source>Ctrl+Shift+D</source>
-        <translation>Ctrl+Maiusc+D</translation>
+        <translation>Ctrl+Shift+D</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="410"/>
@@ -505,7 +505,7 @@ Foundation, Inc., 51 Franklin Street, Quinto piano, Boston, MA  02110-1301, USA.
     <message>
         <location filename="../mainwindow.ui" line="462"/>
         <source>Ctrl+Shift+E</source>
-        <translation>Ctrl+Maiusc+E</translation>
+        <translation>Ctrl+Shift+E</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="473"/>
