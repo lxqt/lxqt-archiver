@@ -390,7 +390,7 @@ Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="313"/>
         <source>Del</source>
-        <translation>Supr</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="318"/>

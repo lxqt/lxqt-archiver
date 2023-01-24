@@ -384,7 +384,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</
     <message>
         <location filename="../mainwindow.ui" line="310"/>
         <source>&amp;Delete</source>
-        <translation>A&amp;pagar</translation>
+        <translation>&amp;Eliminar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="313"/>
