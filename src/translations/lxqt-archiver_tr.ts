@@ -390,7 +390,7 @@ Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.ui" line="313"/>
         <source>Del</source>
-        <translation>Sil</translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="318"/>
@@ -631,6 +631,7 @@ Free Software Foundation, Inc.,
         <location filename="../mainwindow.cpp" line="1088"/>
         <source>%n file(s)</source>
         <translation>
+            <numerusform>%n dosya</numerusform>
             <numerusform>%n dosya</numerusform>
         </translation>
     </message>
