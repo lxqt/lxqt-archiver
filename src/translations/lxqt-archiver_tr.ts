@@ -632,7 +632,6 @@ Free Software Foundation, Inc.,
         <source>%n file(s)</source>
         <translation>
             <numerusform>%n dosya</numerusform>
-            <numerusform>%n dosya</numerusform>
         </translation>
     </message>
 </context>
