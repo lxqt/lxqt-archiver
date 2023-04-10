@@ -1,3 +1,7 @@
+lxqt-archiver-0.8.0 / 2023-04-15
+===================================
+ * Updated translations and dependencies and bumped the version.
+
 lxqt-archiver-0.7.0 / 2022-11-05
 ===================================
  * Removed the redundant function `n_fields()` from `glib-utils`.
