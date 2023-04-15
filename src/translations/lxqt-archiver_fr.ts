@@ -16,7 +16,7 @@
     <message>
         <location filename="../about.ui" line="57"/>
         <source>A simple and desktop-agnostic Qt file archiver</source>
-        <translation>Un gestionnaire d&apos;archives Qt simple et indépendant du bureau</translation>
+        <translation>Un gestionnaire d’archives Qt simple et indépendant du bureau</translation>
     </message>
     <message>
         <location filename="../about.ui" line="67"/>
@@ -73,20 +73,20 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
         <translation>LXQt Archiver
 
-Copyright (C) 2020 l&apos;équipe LXQt
+Copyright (C) 2020 l’équipe LXQt
 
-Ce programme est un logiciel libre&#x202f;; vous pouvez le redistribuer et / ou
+Ce programme est un logiciel libre ; vous pouvez le redistribuer et / ou
 le modifier selon les termes de la licence publique générale GNU
-tel que publié par la Free Software Foundation&#x202f;; soit la version 2
+tel que publié par la Free Software Foundation ; soit la version 2
 de la Licence, ou (à votre choix) toute version ultérieure.
 
-Ce programme est distribué dans l&apos;espoir qu&apos;il sera utile,
-mais SANS AUCUNE GARANTIE&#x202f;; sans même la garantie implicite de
+Ce programme est distribué dans l’espoir qu’il sera utile,
+mais SANS AUCUNE GARANTIE ; sans même la garantie implicite de
 QUALITÉ MARCHANDE ou ADAPTATION À UN USAGE PARTICULIER. Voir le
 GNU General Public License pour plus de détails.
 
 Vous devriez avoir reçu une copie de la licence publique générale GNU
-avec ce programme&#x202f;; si ce n&apos;est pas le cas, consultez &lt;http://www.gnu.org/licenses&gt;.</translation>
+avec ce programme ; si ce n’est pas le cas, consultez &lt;http://www.gnu.org/licenses&gt;.</translation>
     </message>
 </context>
 <context>
@@ -94,7 +94,7 @@ avec ce programme&#x202f;; si ce n&apos;est pas le cas, consultez &lt;http://www
     <message>
         <location filename="../archiver.cpp" line="66"/>
         <source>Archive type not supported.</source>
-        <translation>Type d&apos;archive non supporté.</translation>
+        <translation>Type d’archive non supporté.</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="310"/>
@@ -112,7 +112,7 @@ avec ce programme&#x202f;; si ce n&apos;est pas le cas, consultez &lt;http://www
     <message>
         <location filename="../archivererror.cpp" line="25"/>
         <source>Failed to execute the command.</source>
-        <translation>Échec de l&apos;exécution de la commande.</translation>
+        <translation>Échec de l’exécution de la commande.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
@@ -122,7 +122,7 @@ avec ce programme&#x202f;; si ce n&apos;est pas le cas, consultez &lt;http://www
     <message>
         <location filename="../archivererror.cpp" line="31"/>
         <source>The command exited abnormally.</source>
-        <translation>La commande s&apos;est terminée anormalement.</translation>
+        <translation>La commande s’est terminée anormalement.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="34"/>
@@ -233,7 +233,7 @@ avec ce programme&#x202f;; si ce n&apos;est pas le cas, consultez &lt;http://www
         <location filename="../mainwindow.ui" line="14"/>
         <location filename="../mainwindow.cpp" line="314"/>
         <source>File Archiver</source>
-        <translation>Gestionnaire d&apos;archives</translation>
+        <translation>Gestionnaire d’archives</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="62"/>
@@ -258,7 +258,7 @@ avec ce programme&#x202f;; si ce n&apos;est pas le cas, consultez &lt;http://www
     <message>
         <location filename="../mainwindow.ui" line="121"/>
         <source>&amp;Icon Size</source>
-        <translation>Taille d&apos;&amp;Icône</translation>
+        <translation>Taille d’&amp;icône</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="147"/>
@@ -268,7 +268,7 @@ avec ce programme&#x202f;; si ce n&apos;est pas le cas, consultez &lt;http://www
     <message>
         <location filename="../mainwindow.ui" line="158"/>
         <source>Main Toolbar</source>
-        <translation>Barre d&apos;outils principale</translation>
+        <translation>Barre d’outils principale</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="186"/>
@@ -429,12 +429,12 @@ avec ce programme&#x202f;; si ce n&apos;est pas le cas, consultez &lt;http://www
     <message>
         <location filename="../mainwindow.ui" line="366"/>
         <source>&amp;Toolbar</source>
-        <translation>Barre d&apos;ou&amp;tils</translation>
+        <translation>Barre d’ou&amp;tils</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="377"/>
         <source>&amp;Statusbar</source>
-        <translation>&amp;Barre d&apos;état</translation>
+        <translation>&amp;Barre d’état</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="388"/>
@@ -577,7 +577,7 @@ avec ce programme&#x202f;; si ce n&apos;est pas le cas, consultez &lt;http://www
     <message>
         <location filename="../mainwindow.cpp" line="934"/>
         <source>No errors have been found.</source>
-        <translation>Aucune erreur n&apos;a été trouvée.</translation>
+        <translation>Aucune erreur n’a été trouvée.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="912"/>
@@ -661,7 +661,7 @@ avec ce programme&#x202f;; si ce n&apos;est pas le cas, consultez &lt;http://www
     <message>
         <location filename="../passworddialog.ui" line="61"/>
         <source>&lt;i&gt;&lt;b&gt;Note:&lt;/b&gt; the password will be used to encrypt files you add to the current archive, and to decrypt files you extract from the current archive. When the archive is closed the password will be deleted.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;&lt;b&gt;Note :&lt;/b&gt; le mot de passe sera utilisé pour crypter les fichiers que vous ajoutez à l&apos;archive actuelle et pour décrypter les fichiers que vous extrayez de l&apos;archive actuelle. Lorsque l&apos;archive est fermée, le mot de passe sera supprimé.&lt;/i&gt;</translation>
+        <translation>&lt;i&gt;&lt;b&gt;Note :&lt;/b&gt; le mot de passe sera utilisé pour crypter les fichiers que vous ajoutez à l’archive actuelle et pour décrypter les fichiers que vous extrayez de l’archive actuelle. Lorsque l’archive est fermée, le mot de passe sera supprimé.&lt;/i&gt;</translation>
     </message>
 </context>
 <context>
@@ -870,17 +870,17 @@ avec ce programme&#x202f;; si ce n&apos;est pas le cas, consultez &lt;http://www
     <message>
         <location filename="../corestrs.h" line="48"/>
         <source>Deleting files from archive</source>
-        <translation>Suppression de fichiers de l&apos;archive</translation>
+        <translation>Suppression de fichiers de l’archive</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="50"/>
         <source>Recompressing archive</source>
-        <translation>Recompression de l&apos;archive</translation>
+        <translation>Recompression de l’archive</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="51"/>
         <source>Decompressing archive</source>
-        <translation>Décompresser l&apos;archive</translation>
+        <translation>Décompresser l’archive</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="54"/>
@@ -890,7 +890,7 @@ avec ce programme&#x202f;; si ce n&apos;est pas le cas, consultez &lt;http://www
     <message>
         <location filename="../corestrs.h" line="55"/>
         <source>Archive type not supported.</source>
-        <translation>Type d&apos;archive non pris en charge.</translation>
+        <translation>Type d’archive non pris en charge.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="56"/>
@@ -900,12 +900,12 @@ avec ce programme&#x202f;; si ce n&apos;est pas le cas, consultez &lt;http://www
     <message>
         <location filename="../corestrs.h" line="57"/>
         <source>You don&apos;t have the right permissions.</source>
-        <translation>Vous n&apos;avez pas les bonnes autorisations.</translation>
+        <translation>Vous n’avez pas les bonnes autorisations.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="58"/>
         <source>This archive type cannot be modified</source>
-        <translation>Ce type d&apos;archive ne peut pas être modifié</translation>
+        <translation>Ce type d’archive ne peut pas être modifié</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="59"/>
