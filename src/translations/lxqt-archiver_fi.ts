@@ -404,7 +404,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="329"/>
         <source>&amp;Find</source>
-        <translation type="unfinished">&amp;Hae</translation>
+        <translation>&amp;Haku</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="332"/>
