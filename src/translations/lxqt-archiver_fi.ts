@@ -274,7 +274,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="186"/>
         <source>&amp;About</source>
-        <translation>&amp;Tietoa</translation>
+        <translation>&amp;Tietoja</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="195"/>
