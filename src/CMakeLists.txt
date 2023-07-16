@@ -50,6 +50,9 @@ lxqt_translate_desktop(DESKTOP_FILES
 		USE_YAML
 )
 
+# Follow freedesktop specifications
+set(DNS_DESKTOP_FILENAME "org.lxqt_project.Lxqt_Archiver.desktop")
+
 add_executable(lxqt-archiver
     ${lxqt-archiver_SRCS}
     ${lxqt-archiver_QM_FILES}
@@ -81,7 +84,7 @@ install(TARGETS
 
 install(FILES
     ${DESKTOP_FILES}
-    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/applications"
+    DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/applications RENAME ${DNS_DESKTOP_FILENAME}
     COMPONENT Runtime
 )
 
