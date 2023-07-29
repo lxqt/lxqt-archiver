@@ -753,7 +753,7 @@ Foundation، Inc.، 51 Franklin Street، Fifth Floor، Boston، MA 02110-1301، 
     <message>
         <location filename="../corestrs.h" line="18"/>
         <source>Ear (.ear)</source>
-        <translation>Ear ‏(.ear)</translation>
+        <translation>نوع ‏(.ear)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="19"/>

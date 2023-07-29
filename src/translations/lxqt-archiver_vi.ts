@@ -6,7 +6,7 @@
     <message>
         <location filename="../about.ui" line="14"/>
         <source>About</source>
-        <translation>Về</translation>
+        <translation>Thông tin</translation>
     </message>
     <message>
         <location filename="../about.ui" line="34"/>
@@ -22,7 +22,8 @@
         <location filename="../about.ui" line="67"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/lxqt/lxqt-archiver&quot;&gt;https://github.com/lxqt/lxqt-archiver&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/lxqt/lxqt-archiver&quot;&gt;https://github.com/lxqt/lxqt-archiver&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+</translation>
     </message>
     <message>
         <location filename="../about.ui" line="91"/>
@@ -94,7 +95,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archiver.cpp" line="66"/>
         <source>Archive type not supported.</source>
-        <translation>Loại lưu trữ không được hỗ trợ.</translation>
+        <translation>Loại tập tin lưu trữ không được hỗ trợ.</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="310"/>
@@ -191,12 +192,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="29"/>
         <source>E&amp;xtract all files</source>
-        <translation>Giải nén tất cả tập tin</translation>
+        <translation>Giải nén tất cả tập tin (&amp;X)</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="36"/>
         <source>Ex&amp;tract selected files</source>
-        <translation>Giải nén tập tin đã lựa chọn</translation>
+        <translation>Giải nén tập tin đã lựa chọn (&amp;T)</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="59"/>
@@ -243,27 +244,27 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="83"/>
         <source>&amp;File</source>
-        <translation>Tập tin</translation>
+        <translation>Tập tin (&amp;F)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="98"/>
         <source>&amp;Edit</source>
-        <translation>Chỉnh sửa</translation>
+        <translation>Chỉnh sửa (&amp;E)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="117"/>
         <source>&amp;View</source>
-        <translation>Xem</translation>
+        <translation>Xem (&amp;V)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="121"/>
         <source>&amp;Icon Size</source>
-        <translation>Cỡ biểu tượng</translation>
+        <translation>Cỡ biểu tượng (&amp;I)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="147"/>
         <source>&amp;Help</source>
-        <translation>Trợ giúp</translation>
+        <translation>Trợ giúp (&amp;H)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="158"/>
@@ -273,12 +274,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="186"/>
         <source>&amp;About</source>
-        <translation>Về</translation>
+        <translation>Thông tin (&amp;A)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="195"/>
         <source>&amp;New</source>
-        <translation>&amp;Mới</translation>
+        <translation>Tạo mới (&amp;N)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="198"/>
@@ -288,7 +289,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="207"/>
         <source>&amp;Open</source>
-        <translation>&amp;Mở</translation>
+        <translation>Mở (&amp;O)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="210"/>
@@ -298,32 +299,32 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="218"/>
         <source>Save &amp;As</source>
-        <translation>Lưu nơi khác</translation>
+        <translation>Lưu nơi khác (&amp;A)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="221"/>
         <source>Ctrl+Shift+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="230"/>
         <source>&amp;Extract</source>
-        <translation>&amp;Giải nén</translation>
+        <translation>Giải nén (&amp;E)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="235"/>
         <source>&amp;Test</source>
-        <translation>&amp;Kiểm tra</translation>
+        <translation>Kiểm tra (&amp;T)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="238"/>
         <source>Ctrl+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+T</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="246"/>
         <source>&amp;Properties</source>
-        <translation>&amp;Thuộc tính</translation>
+        <translation>Thuộc tính (&amp;P)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="249"/>
@@ -333,7 +334,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="258"/>
         <source>&amp;Close</source>
-        <translation>Đóng</translation>
+        <translation>Đóng (&amp;C)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="261"/>
@@ -343,7 +344,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="269"/>
         <source>Cu&amp;t</source>
-        <translation>Cắ&amp;t</translation>
+        <translation>Cắt (&amp;T)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="272"/>
@@ -353,7 +354,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="280"/>
         <source>&amp;Copy</source>
-        <translation>&amp;Sao chép</translation>
+        <translation>Sao chép (&amp;C)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
@@ -363,7 +364,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="291"/>
         <source>&amp;Paste</source>
-        <translation>&amp;Dán</translation>
+        <translation>Dán (&amp;P)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="294"/>
@@ -373,7 +374,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="302"/>
         <source>&amp;Rename</source>
-        <translation>&amp;Đổi tên</translation>
+        <translation>Đổi tên (&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="305"/>
@@ -383,17 +384,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="310"/>
         <source>&amp;Delete</source>
-        <translation>Xóa</translation>
+        <translation>Xóa (&amp;D)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="313"/>
         <source>Del</source>
-        <translation>Xóa</translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="318"/>
         <source>&amp;Select All</source>
-        <translation>&amp;Chọn tất cả</translation>
+        <translation>Chọn tất cả (&amp;S)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="321"/>
@@ -403,7 +404,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="329"/>
         <source>&amp;Find</source>
-        <translation>&amp;Tìm kiếm</translation>
+        <translation>Tìm kiếm (&amp;F)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="332"/>
@@ -414,57 +415,57 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="341"/>
         <source>&amp;Add Files</source>
-        <translation>&amp;Thêm tập tin</translation>
+        <translation>Thêm tập tin (&amp;A)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="350"/>
         <source>Add F&amp;older</source>
-        <translation>Thêm thư &amp;mục</translation>
+        <translation>Thêm thư mục (&amp;O)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="355"/>
         <source>Pass&amp;word</source>
-        <translation>Mật &amp;khẩu</translation>
+        <translation>Mật khẩu (&amp;W)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="366"/>
         <source>&amp;Toolbar</source>
-        <translation>&amp;Thanh công cụ</translation>
+        <translation>Thanh công cụ (&amp;T)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="377"/>
         <source>&amp;Statusbar</source>
-        <translation>&amp;Thanh trạng thái</translation>
+        <translation>Thanh trạng thái (&amp;S)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="388"/>
         <source>&amp;Directory Tree</source>
-        <translation>&amp;Cây thư mục</translation>
+        <translation>Cây thư mục (&amp;D)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="399"/>
         <source>S&amp;how as Folder</source>
-        <translation>X&amp;em như thư mục</translation>
+        <translation>Xem như thư mục (&amp;H)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="402"/>
         <source>Ctrl+Shift+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+D</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="410"/>
         <source>Show &amp;All Files</source>
-        <translation>Xem &amp;Tất cả Tập tin</translation>
+        <translation>Xem Tất cả Tập tin (&amp;A)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="413"/>
         <source>Ctrl+Shift+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+A</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="422"/>
         <source>St&amp;op</source>
-        <translation>Dừ&amp;ng</translation>
+        <translation>Dừng (&amp;O)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="425"/>
@@ -474,7 +475,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="430"/>
         <source>&amp;Reload</source>
-        <translation>&amp;Tải lại</translation>
+        <translation>Tải lại (&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="433"/>
@@ -484,37 +485,37 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="438"/>
         <source>Filename &amp;Encoding</source>
-        <translation>Mã hóa kí tự &amp;Tên tập tin</translation>
+        <translation>Mã hóa kí tự Tên tập tin (&amp;E)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="443"/>
         <source>&amp;View Selected Items</source>
-        <translation>&amp;Xem Các mục Đã chọn</translation>
+        <translation>Xem Các mục Đã chọn (&amp;V)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="448"/>
         <source>&amp;Filter</source>
-        <translation>&amp;Lọc</translation>
+        <translation>Lọc (&amp;F)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="459"/>
         <source>&amp;Expand</source>
-        <translation>&amp;Mở rộng</translation>
+        <translation>Mở rộng (&amp;E)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="462"/>
         <source>Ctrl+Shift+E</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+E</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="473"/>
         <source>Ctrl+Shift+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+C</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="470"/>
         <source>&amp;Collapse</source>
-        <translation>&amp;Thu lại</translation>
+        <translation>Thu lại (&amp;C)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="481"/>
@@ -547,7 +548,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../mainwindow.cpp" line="392"/>
         <location filename="../mainwindow.cpp" line="425"/>
         <source>Add only if &amp;newer</source>
-        <translation>Chỉ thêm nếu như &amp;mới hơn</translation>
+        <translation>Chỉ thêm nếu như mới hơn (&amp;N)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="450"/>
@@ -567,7 +568,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="830"/>
         <source>%p %</source>
-        <translation type="unfinished">%p %</translation>
+        <translation>%p %</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="934"/>
@@ -673,7 +674,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../progressdialog.cpp" line="16"/>
         <source>%p %</source>
-        <translation type="unfinished">%p %</translation>
+        <translation>%p %</translation>
     </message>
 </context>
 <context>
@@ -692,7 +693,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="7"/>
         <source>Tar compressed with 7z (.tar.7z)</source>
-        <translation>Tar nén bằng 7z (.tar.7z)</translation>
+        <translation>Tar nén bằng 7-Zip (.tar.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="8"/>
@@ -727,17 +728,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="14"/>
         <source>Cabinet (.cab)</source>
-        <translation type="unfinished"></translation>
+        <translation>Cabinet (.cab)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="15"/>
         <source>Rar Archived Comic Book (.cbr)</source>
-        <translation type="unfinished"></translation>
+        <translation>Rar lưu trữ truyện tranh (.cbr)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="16"/>
         <source>Zip Archived Comic Book (.cbz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Zip lưu trữ truyện tranh (.cbz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="17"/>
@@ -747,27 +748,27 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="18"/>
         <source>Ear (.ear)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ứng dụng Doanh nghiệp đã đóng gói (.ear)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="19"/>
         <source>Self-extracting zip (.exe)</source>
-        <translation>zip tự giải nén (.exe)</translation>
+        <translation>Zip tự giải nén (.exe)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="20"/>
         <source>Jar (.jar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Java đã đóng gói (.jar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="21"/>
         <source>Lha (.lzh)</source>
-        <translation type="unfinished"></translation>
+        <translation>Lha (.lzh)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="22"/>
         <source>Lrzip (.lrz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Lrzip (.lrz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="23"/>
@@ -792,12 +793,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="27"/>
         <source>Windows Imaging Format (.wim)</source>
-        <translation type="unfinished"></translation>
+        <translation>Định dạng Hình ảnh đĩa Windows (.wim)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="28"/>
         <source>Rar (.rar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Rar (.rar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="29"/>
@@ -812,12 +813,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="31"/>
         <source>War (.war)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ứng dụng Web đã đóng gói (.war)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="32"/>
         <source>Xz (.xz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Xz (.xz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="33"/>
@@ -832,12 +833,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="35"/>
         <source>Zoo (.zoo)</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoo (.zoo)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="36"/>
         <source>Zip (.zip)</source>
-        <translation type="unfinished"></translation>
+        <translation>Zip (.zip)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="39"/>
@@ -858,7 +859,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="43"/>
         <source>%d %B %Y, %H:%M</source>
-        <translation type="unfinished"></translation>
+        <translation>%d %B %Y, %H:%M</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="47"/>
