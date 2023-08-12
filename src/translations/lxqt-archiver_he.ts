@@ -75,16 +75,16 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
 
 כל הזכויות שמורות (C) 2020 לצוות LXQt
 
-תכנית זו מוגשת במסגרת תכנה חופשית, ניתן להפיץ ו/או לשנות
+תוכנית זו היא תוכנה חופשית, ניתן להפיץ ו/או לשנות
 תחת תנאי הרישיון הציבורי הכללי של GNU כפי שמופץ על ידי
-קרן התכנה החופשית; בין אם גרסה 2 או כל גרסה עדכנית יותר
+קרן התוכנה החופשית; בין אם גרסה 2 או כל גרסה עדכנית יותר
 של הרישיון (לשיקולך).
 
-תכנית זו מופצת בתקווה שתביא תועלת, אך ללא כל אחריות, אפילו לא
+תוכנית זו מופצת בתקווה שתביא תועלת, אך ללא כל אחריות, אפילו לא
 מרומזת לשימוש מסחרי או התאמה לצרכים מסוימים.  נא לעיין
 ברישיון הציבורי הכללי של GNU לפרטים נוספים.
 
-לתכנית זו אמור היה להיות מצורף הרישיון הציבורי הכללי של GNU,
+לתוכנית זו אמור להיות מצורף עותק של הרישיון הציבורי הכללי של GNU,
 אם לא, מוטב לשלוח מכתב אל Free Software Foundation, Inc.,‎
 51‎ Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.‎</translation>
     </message>
@@ -630,6 +630,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <source>%n file(s)</source>
         <translation>
             <numerusform>קובץ אחד</numerusform>
+            <numerusform>שני קבצים</numerusform>
+            <numerusform>%n קבצים</numerusform>
             <numerusform>%n קבצים</numerusform>
         </translation>
     </message>
