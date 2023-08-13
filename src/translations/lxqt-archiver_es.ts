@@ -133,7 +133,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="37"/>
         <source>Missing volume.</source>
-        <translation>Falta el volumen.</translation>
+        <translation>Volumen no encontrado.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="40"/>
@@ -259,7 +259,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="121"/>
         <source>&amp;Icon Size</source>
-        <translation>Tamaño del &amp;icono</translation>
+        <translation>&amp;Tamaño de Icono</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="147"/>
