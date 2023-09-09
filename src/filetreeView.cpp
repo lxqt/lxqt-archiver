@@ -27,6 +27,18 @@ void FileTreeView::mousePressEvent(QMouseEvent* event) {
     dragStarted_ = false;
 }
 
+void FileTreeView::mouseReleaseEvent(QMouseEvent* event)
+{
+    // Do not activate by right clicking because
+    // context menus may be shown on releasing right mouse button.
+    if(event->button() == Qt::RightButton) {
+        event->ignore();
+        return;
+    }
+
+    QTreeView::mouseReleaseEvent(event);
+}
+
 void FileTreeView::mouseMoveEvent(QMouseEvent* event) {
     if(dragStartPosition_.isNull()) {
         QTreeView::mouseMoveEvent(event);

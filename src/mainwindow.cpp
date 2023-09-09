@@ -1040,7 +1040,7 @@ QList<QStandardItem *> MainWindow::createFileListRow(const ArchiverItem *file) {
     sizeItem->setData(QStringLiteral("size"), ArchiverItemRole);
     sizeItem->setEditable(false);
 
-    auto mtimeItem = new QStandardItem(QLocale::system().toString(mtime, QLocale::ShortFormat));
+    auto mtimeItem = new QStandardItem(locale().toString(mtime, QLocale::ShortFormat));
     mtimeItem->setData(QStringLiteral("mTime"), ArchiverItemRole);
     mtimeItem->setEditable(false);
 
