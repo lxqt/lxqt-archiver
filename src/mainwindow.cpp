@@ -80,6 +80,14 @@ MainWindow::MainWindow(QWidget* parent):
     viewModeGroup->addAction(ui_->actionDirTreeMode);
     viewModeGroup->addAction(ui_->actionFlatListMode);
 
+    // icons are set here for having fallbacks
+    ui_->actionExtract->setIcon(QIcon::fromTheme(QStringLiteral("archive-extract"),
+                                                 QIcon::fromTheme(QStringLiteral("go-up"))));
+    ui_->actionAddFiles->setIcon(QIcon::fromTheme(QStringLiteral("archive-insert"),
+                                                  QIcon::fromTheme(QStringLiteral("insert-object"))));
+    ui_->actionAddFolder->setIcon(QIcon::fromTheme(QStringLiteral("archive-insert-directory"),
+                                                   QIcon::fromTheme(QStringLiteral("insert-object"))));
+
     // views icon size
     auto viewsIconSizeGroup = new QActionGroup{this};
     ui_->action16px->setData(16);
