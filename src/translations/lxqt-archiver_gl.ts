@@ -270,7 +270,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="158"/>
         <source>Main Toolbar</source>
-        <translation type="unfinished">Barra de ferramentas principal</translation>
+        <translation>Barra de ferramentas principal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="186"/>
@@ -380,7 +380,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="305"/>
         <source>F2</source>
-        <translation type="unfinished">F2</translation>
+        <translation>F2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="310"/>
@@ -511,7 +511,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
     <message>
         <location filename="../mainwindow.ui" line="473"/>
         <source>Ctrl+Shift+C</source>
-        <translation type="unfinished">Ctrl+Maiús+C</translation>
+        <translation>Ctrl+Maiús+C</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="470"/>
@@ -685,7 +685,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA. 
         <location filename="../main.cpp" line="248"/>
         <location filename="../main.cpp" line="300"/>
         <source>Error</source>
-        <translation type="unfinished">Erro</translation>
+        <translation>Erro</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="6"/>
