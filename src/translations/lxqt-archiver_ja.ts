@@ -233,7 +233,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <name>MainWindow</name>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
-        <location filename="../mainwindow.cpp" line="314"/>
+        <location filename="../mainwindow.cpp" line="323"/>
         <source>File Archiver</source>
         <translation>ファイルアーカイバー</translation>
     </message>
@@ -308,327 +308,327 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="230"/>
+        <location filename="../mainwindow.ui" line="226"/>
         <source>&amp;Extract</source>
         <translation>展開(&amp;E)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="235"/>
+        <location filename="../mainwindow.ui" line="231"/>
         <source>&amp;Test</source>
         <translation>テスト(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="238"/>
+        <location filename="../mainwindow.ui" line="234"/>
         <source>Ctrl+T</source>
         <translation>Ctrl+T</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="246"/>
+        <location filename="../mainwindow.ui" line="242"/>
         <source>&amp;Properties</source>
         <translation>プロパティ(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="249"/>
+        <location filename="../mainwindow.ui" line="245"/>
         <source>Alt+Return</source>
         <translation>Alt+Return</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="258"/>
+        <location filename="../mainwindow.ui" line="254"/>
         <source>&amp;Close</source>
         <translation>閉じる(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="261"/>
+        <location filename="../mainwindow.ui" line="257"/>
         <source>Ctrl+Q</source>
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="269"/>
+        <location filename="../mainwindow.ui" line="265"/>
         <source>Cu&amp;t</source>
         <translation>切り取り(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="272"/>
+        <location filename="../mainwindow.ui" line="268"/>
         <source>Ctrl+X</source>
         <translation>Ctrl+X</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="280"/>
+        <location filename="../mainwindow.ui" line="276"/>
         <source>&amp;Copy</source>
         <translation>コピー(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="283"/>
+        <location filename="../mainwindow.ui" line="279"/>
         <source>Ctrl+C</source>
         <translation>Ctrl+C</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="291"/>
+        <location filename="../mainwindow.ui" line="287"/>
         <source>&amp;Paste</source>
         <translation>貼り付け(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="294"/>
+        <location filename="../mainwindow.ui" line="290"/>
         <source>Ctrl+V</source>
         <translation>Ctrl+V</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="302"/>
+        <location filename="../mainwindow.ui" line="298"/>
         <source>&amp;Rename</source>
         <translation>名前の変更(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="305"/>
+        <location filename="../mainwindow.ui" line="301"/>
         <source>F2</source>
         <translation>F2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="310"/>
+        <location filename="../mainwindow.ui" line="306"/>
         <source>&amp;Delete</source>
         <translation>削除(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="313"/>
+        <location filename="../mainwindow.ui" line="309"/>
         <source>Del</source>
         <translation>Del</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="318"/>
+        <location filename="../mainwindow.ui" line="314"/>
         <source>&amp;Select All</source>
         <translation>すべて選択(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="321"/>
+        <location filename="../mainwindow.ui" line="317"/>
         <source>Ctrl+A</source>
         <translation>Ctrl+A</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="329"/>
+        <location filename="../mainwindow.ui" line="325"/>
         <source>&amp;Find</source>
         <translation>検索(&amp;F)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="332"/>
-        <location filename="../mainwindow.ui" line="451"/>
+        <location filename="../mainwindow.ui" line="328"/>
+        <location filename="../mainwindow.ui" line="439"/>
         <source>Ctrl+F</source>
         <translation>Ctrl+F</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="341"/>
+        <location filename="../mainwindow.ui" line="333"/>
         <source>&amp;Add Files</source>
         <translation>ファイルの追加(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="350"/>
+        <location filename="../mainwindow.ui" line="338"/>
         <source>Add F&amp;older</source>
         <translation>フォルダーの追加(&amp;O)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="355"/>
+        <location filename="../mainwindow.ui" line="343"/>
         <source>Pass&amp;word</source>
         <translation>パスワード(&amp;W)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="366"/>
+        <location filename="../mainwindow.ui" line="354"/>
         <source>&amp;Toolbar</source>
         <translation>ツールバー(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="377"/>
+        <location filename="../mainwindow.ui" line="365"/>
         <source>&amp;Statusbar</source>
         <translation>ステータスバー(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="388"/>
+        <location filename="../mainwindow.ui" line="376"/>
         <source>&amp;Directory Tree</source>
         <translation>ディレクトリ ツリー(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="399"/>
+        <location filename="../mainwindow.ui" line="387"/>
         <source>S&amp;how as Folder</source>
         <translation>フォルダー毎の表示(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="402"/>
+        <location filename="../mainwindow.ui" line="390"/>
         <source>Ctrl+Shift+D</source>
         <translation>Ctrl+Shift+D</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="410"/>
+        <location filename="../mainwindow.ui" line="398"/>
         <source>Show &amp;All Files</source>
         <translation>全ファイルの表示(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="413"/>
+        <location filename="../mainwindow.ui" line="401"/>
         <source>Ctrl+Shift+A</source>
         <translation>Ctrl+Shift+A</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="422"/>
+        <location filename="../mainwindow.ui" line="410"/>
         <source>St&amp;op</source>
         <translation>停止(&amp;O)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="425"/>
+        <location filename="../mainwindow.ui" line="413"/>
         <source>Esc</source>
         <translation>Esc</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="430"/>
+        <location filename="../mainwindow.ui" line="418"/>
         <source>&amp;Reload</source>
         <translation>再読み込み(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="433"/>
+        <location filename="../mainwindow.ui" line="421"/>
         <source>F5</source>
         <translation>F5</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="438"/>
+        <location filename="../mainwindow.ui" line="426"/>
         <source>Filename &amp;Encoding</source>
         <translation>ファイル名のエンコーディング(&amp;E)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="443"/>
+        <location filename="../mainwindow.ui" line="431"/>
         <source>&amp;View Selected Items</source>
         <translation>選択したアイテムの表示</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="448"/>
+        <location filename="../mainwindow.ui" line="436"/>
         <source>&amp;Filter</source>
         <translation>フィルター(&amp;F)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="459"/>
+        <location filename="../mainwindow.ui" line="447"/>
         <source>&amp;Expand</source>
         <translation>広げる(&amp;E)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="462"/>
+        <location filename="../mainwindow.ui" line="450"/>
         <source>Ctrl+Shift+E</source>
         <translation>Ctrl+Shift+E</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="473"/>
+        <location filename="../mainwindow.ui" line="461"/>
         <source>Ctrl+Shift+C</source>
         <translation>Ctrl+Shift+C</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="470"/>
+        <location filename="../mainwindow.ui" line="458"/>
         <source>&amp;Collapse</source>
         <translation>折りたたむ(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="481"/>
+        <location filename="../mainwindow.ui" line="469"/>
         <source>16 px</source>
         <translation>16 ピクセル</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="489"/>
+        <location filename="../mainwindow.ui" line="477"/>
         <source>24 px</source>
         <translation>24 ピクセル</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="497"/>
+        <location filename="../mainwindow.ui" line="485"/>
         <source>32 px</source>
         <translation>32 ピクセル</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="505"/>
+        <location filename="../mainwindow.ui" line="493"/>
         <source>48 px</source>
         <translation>48 ピクセル</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="358"/>
-        <location filename="../mainwindow.cpp" line="387"/>
-        <location filename="../mainwindow.cpp" line="420"/>
+        <location filename="../mainwindow.cpp" line="367"/>
+        <location filename="../mainwindow.cpp" line="396"/>
+        <location filename="../mainwindow.cpp" line="429"/>
         <source>All files (*)</source>
         <translation>すべてのファイル (*)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="392"/>
-        <location filename="../mainwindow.cpp" line="425"/>
+        <location filename="../mainwindow.cpp" line="401"/>
+        <location filename="../mainwindow.cpp" line="434"/>
         <source>Add only if &amp;newer</source>
         <translation>新しい場合にのみ追加する(&amp;N)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="450"/>
+        <location filename="../mainwindow.cpp" line="459"/>
         <source>Confirm</source>
         <translation>確認</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="450"/>
+        <location filename="../mainwindow.cpp" line="459"/>
         <source>Are you sure you want to delete selected files?</source>
         <translation>本当に選択したファイルを削除しますか？</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="743"/>
+        <location filename="../mainwindow.cpp" line="752"/>
         <source>Version: %1</source>
         <translation>バージョン: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="830"/>
+        <location filename="../mainwindow.cpp" line="839"/>
         <source>%p %</source>
         <translation>%p %</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="934"/>
+        <location filename="../mainwindow.cpp" line="943"/>
         <source>Success</source>
         <translation>成功</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="934"/>
+        <location filename="../mainwindow.cpp" line="943"/>
         <source>No errors have been found.</source>
         <translation>エラーは見つかりませんでした。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="912"/>
-        <location filename="../mainwindow.cpp" line="969"/>
+        <location filename="../mainwindow.cpp" line="921"/>
+        <location filename="../mainwindow.cpp" line="978"/>
         <source>Error</source>
         <translation>エラー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="997"/>
+        <location filename="../mainwindow.cpp" line="1006"/>
         <source>N/A</source>
         <translation>該当なし</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1001"/>
+        <location filename="../mainwindow.cpp" line="1010"/>
         <source>Uncompressed Size:</source>
         <translation>圧縮前のサイズ:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1003"/>
+        <location filename="../mainwindow.cpp" line="1012"/>
         <source>Compression Ratio:</source>
         <translation>圧縮率:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1058"/>
+        <location filename="../mainwindow.cpp" line="1067"/>
         <source>File name</source>
         <translation>ファイル名</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1059"/>
+        <location filename="../mainwindow.cpp" line="1068"/>
         <source>File Type</source>
         <translation>ファイルの種類</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1060"/>
+        <location filename="../mainwindow.cpp" line="1069"/>
         <source>File Size</source>
         <translation>サイズ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1061"/>
+        <location filename="../mainwindow.cpp" line="1070"/>
         <source>Modified</source>
         <translation>更新</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1062"/>
+        <location filename="../mainwindow.cpp" line="1071"/>
         <source>Encrypted</source>
         <translation>暗号化</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="1088"/>
+        <location filename="../mainwindow.cpp" line="1097"/>
         <source>%n file(s)</source>
         <translation>
             <numerusform>%n 個のファイル</numerusform>
