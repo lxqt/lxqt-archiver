@@ -1,3 +1,8 @@
+lxqt-archiver-0.9.0 / 2023-11-05
+===================================
+ * Ported away from deprecated time format.
+ * Added appropriate fallback icons to toolbar and menu.
+
 lxqt-archiver-0.8.0 / 2023-04-15
 ===================================
  * Updated translations and dependencies and bumped the version.
