@@ -259,7 +259,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="121"/>
         <source>&amp;Icon Size</source>
-        <translation>&amp;Tamaño de Icono</translation>
+        <translation>Tamaño de &amp;Icono</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="147"/>
