@@ -279,7 +279,7 @@ ky&apos;egisinga obupya egifaananya erinnya</translation>
     <message>
         <location filename="../mainwindow.ui" line="186"/>
         <source>&amp;About</source>
-        <translation>&amp;Ebifa ku LXQt-Archiver</translation>
+        <translation>&amp;Ebifa ku LXImage-Qt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="195"/>
