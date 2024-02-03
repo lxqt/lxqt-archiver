@@ -199,7 +199,7 @@ fr_command_iso_extract (FrCommand  *comm,
 }
 
 
-const char *iso_mime_type[] = { "application/x-cd-image", NULL };
+const char *iso_mime_type[] = { "application/vnd.efi.iso", NULL };
 
 
 static const char **

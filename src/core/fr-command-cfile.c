@@ -233,7 +233,7 @@ fr_command_cfile_add (FrCommand     *comm,
 		fr_process_end_command (comm->process);
 		compressed_filename = g_strconcat (filename, ".gz", NULL);
 	}
-	else if (is_mime_type (comm->mime_type, "application/x-bzip")) {
+	else if (is_mime_type (comm->mime_type, "application/x-bzip2")) {
 		fr_process_begin_command (comm->process, "bzip2");
 		fr_process_set_working_dir (comm->process, temp_dir);
 		fr_process_add_arg (comm->process, "--");
@@ -372,7 +372,7 @@ fr_command_cfile_extract (FrCommand  *comm,
 		fr_process_add_arg (comm->process, temp_file);
 		fr_process_end_command (comm->process);
 	}
-	else if (is_mime_type (comm->mime_type, "application/x-bzip")) {
+	else if (is_mime_type (comm->mime_type, "application/x-bzip2")) {
 		fr_process_begin_command (comm->process, "bzip2");
 		fr_process_add_arg (comm->process, "-f");
 		fr_process_add_arg (comm->process, "-d");
@@ -471,7 +471,7 @@ fr_command_cfile_extract (FrCommand  *comm,
 
 
 const char *cfile_mime_type[] = { "application/gzip",
-				  "application/x-bzip",
+				  "application/x-bzip2",
 				  "application/x-compress",
 				  "application/x-lzip",
 				  "application/x-lzma",
@@ -501,7 +501,7 @@ fr_command_cfile_get_capabilities (FrCommand  *comm,
 		if (is_program_available ("gzip", check_command))
 			capabilities |= FR_COMMAND_CAN_READ_WRITE;
 	}
-	else if (is_mime_type (mime_type, "application/x-bzip")) {
+	else if (is_mime_type (mime_type, "application/x-bzip2")) {
 		if (is_program_available ("bzip2", check_command))
 			capabilities |= FR_COMMAND_CAN_READ_WRITE;
 	}
@@ -558,7 +558,7 @@ fr_command_cfile_get_packages (FrCommand  *comm,
 {
 	if (is_mime_type (mime_type, "application/gzip"))
 		return PACKAGES ("gzip");
-	else if (is_mime_type (mime_type, "application/x-bzip"))
+	else if (is_mime_type (mime_type, "application/x-bzip2"))
 		return PACKAGES ("bzip2");
 	else if (is_mime_type (mime_type, "application/x-compress"))
 		return PACKAGES ("ncompress");
