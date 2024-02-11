@@ -345,7 +345,10 @@ fr_command_7z_add (FrCommand     *comm,
 	if (spd_support) fr_process_add_arg (comm->process, "-spd");
 	fr_process_add_arg (comm->process, "-bd");
 	fr_process_add_arg (comm->process, "-y");
+#ifndef USE_7Z
+	Unlike p7zip, 7zip does not support '-l'. Define USE_7Z to disable '-l'. */
 	fr_process_add_arg (comm->process, "-l");
+#endif
 	add_password_arg (comm, comm->password, FALSE);
 	if ((comm->password != NULL)
 	    && (*comm->password != 0)
