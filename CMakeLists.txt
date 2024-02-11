@@ -8,6 +8,10 @@ project(lxqt-archiver)
 
 option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
 
+option(USE_7Z "Building with 7z" OFF)
+if(USE_7Z)
+    add_definitions(-DUSE_7Z)
+endif()
 
 set(GLIB_MINIMUM_VERSION "2.50.0")
 set(LIBFMQT_MINIMUM_VERSION "1.4.0")
