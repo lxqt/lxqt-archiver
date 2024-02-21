@@ -331,8 +331,8 @@ static int runApp(QApplication& app) {
                 };
             });
             dlg.exec();
-            return 0;
         }
+        return 0;
     }
     else { /* Open each archive in a window */
         const char* filename = nullptr;
