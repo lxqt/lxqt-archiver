@@ -1,3 +1,9 @@
+lxqt-archiver-0.9.1 / 2024-02-21
+===================================
+ * Support the use of 7zip instead of p7zip with the new option `USE_7Z` (`OFF` by default), especially for Debian-based systems.
+ * Updated to new mimetype names of shared-mime-info ≥ 2.3.
+ * Fixed extraction of multiple archives.
+
 lxqt-archiver-0.9.0 / 2023-11-05
 ===================================
  * Ported away from deprecated time format.
