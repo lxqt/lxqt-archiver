@@ -8,7 +8,7 @@ project(lxqt-archiver)
 
 option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
 
-option(USE_7Z "Building with 7z" OFF)
+option(USE_7Z "Building with 7zip instead of p7zip" OFF)
 if(USE_7Z)
     add_definitions(-DUSE_7Z)
 endif()
