@@ -100,7 +100,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</
     <message>
         <location filename="../archiver.cpp" line="310"/>
         <source>*%1 files (*%1)</source>
-        <translation>pliki *%1 (*%1)</translation>
+        <translation>Pliki *%1 (*%1)</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="314"/>
@@ -589,7 +589,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</
     <message>
         <location filename="../mainwindow.cpp" line="1006"/>
         <source>N/A</source>
-        <translation></translation>
+        <translation>Niedostępne</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1010"/>
