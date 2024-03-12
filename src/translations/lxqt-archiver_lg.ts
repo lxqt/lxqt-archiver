@@ -480,7 +480,7 @@ ky&apos;egisinga obupya egifaananya erinnya</translation>
     <message>
         <location filename="../mainwindow.ui" line="418"/>
         <source>&amp;Reload</source>
-        <translation>&amp;Ddamu okukebera ekipakire</translation>
+        <translation>&amp;Ddamu okubikkula</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="421"/>
