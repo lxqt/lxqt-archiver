@@ -66,8 +66,8 @@ target_compile_definitions(lxqt-archiver
 )
 
 target_link_libraries(lxqt-archiver
-    Qt5::Widgets
-    fm-qt
+    Qt6::Widgets
+    fm-qt6
     lxqt-archiver-core
     ${GLIB_LIBRARIES}
     ${GLIB_JSON_LDFLAGS}

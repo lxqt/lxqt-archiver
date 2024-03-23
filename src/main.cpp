@@ -39,7 +39,7 @@
 #include <glib.h>
 #include <gio/gio.h>
 
-#include <libfm-qt/libfmqt.h>
+#include <libfm-qt6/libfmqt.h>
 
 #include <QApplication>
 #include <QFileDialog>
@@ -113,7 +113,7 @@ static const GOptionEntry options[] = {
         nullptr
     },
 
-    { nullptr }
+    { nullptr, 0, 0, G_OPTION_ARG_NONE, nullptr, nullptr, nullptr }
 };
 
 
@@ -369,18 +369,19 @@ int main(int argc, char** argv) {
     QApplication app(argc, argv);
     app.setApplicationVersion(QStringLiteral(LXQT_ARCHIVER_VERSION));
     app.setQuitOnLastWindowClosed(true);
-    app.setAttribute(Qt::AA_UseHighDpiPixmaps);
 
     // load translations
     // install the translations built-into Qt itself
     QTranslator qtTranslator;
-    qtTranslator.load(QStringLiteral("qt_") + QLocale::system().name(), QLibraryInfo::location(QLibraryInfo::TranslationsPath));
-    app.installTranslator(&qtTranslator);
+    if(qtTranslator.load(QStringLiteral("qt_") + QLocale::system().name(), QLibraryInfo::path(QLibraryInfo::TranslationsPath))) {
+        app.installTranslator(&qtTranslator);
+    }
 
     // install our own tranlations
     QTranslator translator;
-    translator.load(QStringLiteral("lxqt-archiver_") + QLocale::system().name(), QStringLiteral(LXQT_ARCHIVER_DATA_DIR) + QStringLiteral("/translations"));
-    app.installTranslator(&translator);
+    if(translator.load(QStringLiteral("lxqt-archiver_") + QLocale::system().name(), QStringLiteral(LXQT_ARCHIVER_DATA_DIR) + QStringLiteral("/translations"))) {
+        app.installTranslator(&translator);
+    }
 
     // initialize libfm-qt
     Fm::LibFmQt libfmQt;
