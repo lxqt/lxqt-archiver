@@ -22,7 +22,6 @@
 #include <QProgressBar>
 #include <QLabel>
 #include <QLocale>
-#include <QTextCodec>
 #include <QActionGroup>
 #include <QLineEdit>
 #include <QToolBar>
@@ -40,15 +39,15 @@
 
 #include <QDebug>
 
-#include <libfm-qt/core/mimetype.h>
-#include <libfm-qt/core/iconinfo.h>
-#include <libfm-qt/core/gioptrs.h>
-#include <libfm-qt/core/fileinfojob.h>
-#include <libfm-qt/utilities.h>
-#include <libfm-qt/filepropsdialog.h>
-#include <libfm-qt/filedialog.h>
-#include <libfm-qt/filelauncher.h>
-// #include <libfm-qt/pathbar.h>
+#include <libfm-qt6/core/mimetype.h>
+#include <libfm-qt6/core/iconinfo.h>
+#include <libfm-qt6/core/gioptrs.h>
+#include <libfm-qt6/core/fileinfojob.h>
+#include <libfm-qt6/utilities.h>
+#include <libfm-qt6/filepropsdialog.h>
+#include <libfm-qt6/filedialog.h>
+#include <libfm-qt6/filelauncher.h>
+// #include <libfm-qt6/pathbar.h>
 
 #include <map>
 

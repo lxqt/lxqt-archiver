@@ -1,7 +1,7 @@
 #ifndef CREATEFILEDIALOG_H
 #define CREATEFILEDIALOG_H
 
-#include <libfm-qt/filedialog.h>
+#include <libfm-qt6/filedialog.h>
 #include <memory>
 
 namespace Ui {

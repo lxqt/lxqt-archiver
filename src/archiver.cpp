@@ -565,7 +565,7 @@ void Archiver::onStart(FrArchive*, FrAction action, Archiver* _this) {
     //qDebug("start");
 
     _this->busy_ = true;
-    QMetaObject::invokeMethod(_this, "start", Qt::QueuedConnection, QGenericReturnArgument(), Q_ARG(FrAction, action));
+    QMetaObject::invokeMethod(_this, "start", Qt::QueuedConnection, Q_ARG(FrAction, action));
 }
 
 void Archiver::onDone(FrArchive*, FrAction action, FrProcError* error, Archiver* _this) {
@@ -584,21 +584,21 @@ void Archiver::onDone(FrArchive*, FrAction action, FrProcError* error, Archiver*
 
     _this->busy_ = false;
 
-    QMetaObject::invokeMethod(_this, "finish", Qt::QueuedConnection, QGenericReturnArgument(), Q_ARG(FrAction, action), Q_ARG(ArchiverError, error));
+    QMetaObject::invokeMethod(_this, "finish", Qt::QueuedConnection, Q_ARG(FrAction, action), Q_ARG(ArchiverError, error));
 }
 
 void Archiver::onProgress(FrArchive*, double fraction, Archiver* _this) {
-    QMetaObject::invokeMethod(_this, "progress", Qt::QueuedConnection, QGenericReturnArgument(), Q_ARG(double, fraction));
+    QMetaObject::invokeMethod(_this, "progress", Qt::QueuedConnection, Q_ARG(double, fraction));
     //qDebug("progress: %lf", fraction);
 }
 
 void Archiver::onMessage(FrArchive*, const char* msg, Archiver* _this) {
     //qDebug("message: %s", msg);
-    QMetaObject::invokeMethod(_this, "message", Qt::QueuedConnection, QGenericReturnArgument(), Q_ARG(QString, QString::fromUtf8(msg)));
+    QMetaObject::invokeMethod(_this, "message", Qt::QueuedConnection, Q_ARG(QString, QString::fromUtf8(msg)));
 }
 
 void Archiver::onStoppable(FrArchive*, gboolean value, Archiver* _this) {
-    QMetaObject::invokeMethod(_this, "stoppableChanged", Qt::QueuedConnection, QGenericReturnArgument(), Q_ARG(bool, bool(value)));
+    QMetaObject::invokeMethod(_this, "stoppableChanged", Qt::QueuedConnection, Q_ARG(bool, bool(value)));
 }
 
 void Archiver::onWorkingArchive(FrCommand* /*comm*/, const char* filename, Archiver* _this) {

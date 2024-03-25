@@ -4,7 +4,7 @@
 #include "core/fr-archive.h"
 #include "archivererror.h"
 
-#include <libfm-qt/core/filepath.h>
+#include <libfm-qt6/core/filepath.h>
 
 #include <QObject>
 #include <QUrl>
