@@ -1,3 +1,7 @@
+lxqt-archiver-1.0.0 / 2024-04-17
+===================================
+ * Ported to Qt6.
+
 lxqt-archiver-0.9.1 / 2024-02-21
 ===================================
  * Support the use of 7zip instead of p7zip with the new option `USE_7Z` (`OFF` by default), especially for Debian-based systems.
