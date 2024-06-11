@@ -257,7 +257,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="121"/>
         <source>&amp;Icon Size</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ikon Méret</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="147"/>
@@ -468,7 +468,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="413"/>
         <source>Esc</source>
-        <translation>Esc</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="418"/>
@@ -629,6 +629,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
         <source>%n file(s)</source>
         <translation>
             <numerusform>%n fájl</numerusform>
+            <numerusform>%n fájlok</numerusform>
         </translation>
     </message>
 </context>

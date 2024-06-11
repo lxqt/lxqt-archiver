@@ -39,7 +39,7 @@ LXQt Archiver is derived from the following programs:
 * Engrampa of MATE desktop
 * File Roller of Gnome desktop
 </source>
-        <translation>Прорамиране:
+        <translation>Програмиране:
 * Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;
 
 LXQt Archiverе разработен на базата на следните програми:
@@ -146,7 +146,7 @@ Foundation, Inc., ул. Франклин 51, пети етаж, Бостън, М
     <message>
         <location filename="../archivererror.cpp" line="46"/>
         <source>Unknown errors happened.</source>
-        <translation>Възниканаха неизвестни грешки.</translation>
+        <translation>Възникнаха неизвестни грешки.</translation>
     </message>
 </context>
 <context>
@@ -190,12 +190,12 @@ Foundation, Inc., ул. Франклин 51, пети етаж, Бостън, М
     <message>
         <location filename="../extract.ui" line="29"/>
         <source>E&amp;xtract all files</source>
-        <translation>Разархиране на &amp;всички файлове</translation>
+        <translation>Разархивиране на &amp;всички файлове</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="36"/>
         <source>Ex&amp;tract selected files</source>
-        <translation>Разархиране на &amp;избрани файлове</translation>
+        <translation>Разархивиране на &amp;избрани файлове</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="59"/>
@@ -628,8 +628,8 @@ Foundation, Inc., ул. Франклин 51, пети етаж, Бостън, М
         <location filename="../mainwindow.cpp" line="1097"/>
         <source>%n file(s)</source>
         <translation>
-            <numerusform>%n file</numerusform>
-            <numerusform>%n files</numerusform>
+            <numerusform>%n файл</numerusform>
+            <numerusform>%n файла</numerusform>
         </translation>
     </message>
 </context>
@@ -752,7 +752,7 @@ Foundation, Inc., ул. Франклин 51, пети етаж, Бостън, М
     <message>
         <location filename="../corestrs.h" line="19"/>
         <source>Self-extracting zip (.exe)</source>
-        <translation>Саморазархивиращ се zip (.exe)</translation>
+        <translation>Саморазархижиращ се zip (.exe)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="20"/>
@@ -874,7 +874,7 @@ Foundation, Inc., ул. Франклин 51, пети етаж, Бостън, М
     <message>
         <location filename="../corestrs.h" line="50"/>
         <source>Recompressing archive</source>
-        <translation>Рекомресиране на архива</translation>
+        <translation>Рекомпресиране на архива</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="51"/>
@@ -899,7 +899,7 @@ Foundation, Inc., ул. Франклин 51, пети етаж, Бостън, М
     <message>
         <location filename="../corestrs.h" line="57"/>
         <source>You don&apos;t have the right permissions.</source>
-        <translation>Нямате необхомите разрешения.</translation>
+        <translation>Нямате необходимите разрешения.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="58"/>
