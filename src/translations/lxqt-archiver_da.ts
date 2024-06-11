@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pa">
+<TS version="2.1" language="da">
 <context>
     <name>AboutDialog</name>
     <message>
         <location filename="../about.ui" line="14"/>
         <source>About</source>
-        <translation>ਇਸ ਬਾਰੇ</translation>
+        <translation>Om</translation>
     </message>
     <message>
         <location filename="../about.ui" line="34"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt ਅਕਾਇਵਰ&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Arkivhåndtering&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="57"/>
         <source>A simple and desktop-agnostic Qt file archiver</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">En simpel skrivebordsuafhængig, Qt baseret arkivhåndtering</translation>
     </message>
     <message>
         <location filename="../about.ui" line="67"/>
@@ -28,7 +28,7 @@
     <message>
         <location filename="../about.ui" line="91"/>
         <source>Authors</source>
-        <translation>ਲੇਖਕ</translation>
+        <translation>Udviklere</translation>
     </message>
     <message>
         <location filename="../about.ui" line="100"/>
@@ -39,12 +39,18 @@ LXQt Archiver is derived from the following programs:
 * Engrampa of MATE desktop
 * File Roller of Gnome desktop
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Programmering:
+* Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;
+
+LXQt Arkivhåndtering er afledt fra følgende programmer:
+* Engrampa fra MATE desktop
+* File Roller fra Gnome desktop
+</translation>
     </message>
     <message>
         <location filename="../about.ui" line="117"/>
         <source>License</source>
-        <translation>ਲਸੰਸ</translation>
+        <translation>Licens</translation>
     </message>
     <message>
         <location filename="../about.ui" line="126"/>
@@ -65,7 +71,23 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">LXQt Arkivhåndtering
+
+Copyright (C) 2020 the LXQt Team
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation>
     </message>
 </context>
 <context>
@@ -73,17 +95,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archiver.cpp" line="66"/>
         <source>Archive type not supported.</source>
-        <translation>ਅਕਾਇਵ ਕਿਸਮ ਸਹਾਇਕ ਨਹੀਂ ਹੈ।</translation>
+        <translation>Arkivtype ikke understøttet.</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="310"/>
         <source>*%1 files (*%1)</source>
-        <translation>*%1 ਫਾਇਲਾਂ (*%1)</translation>
+        <translation>*%1 filer (*%1)</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="314"/>
         <source>All supported formats</source>
-        <translation>ਸਾਰੇ ਸਹਾਇਕ ਫਾਰਮੈਟ</translation>
+        <translation>Alle understøttede formater</translation>
     </message>
 </context>
 <context>
@@ -91,42 +113,42 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="25"/>
         <source>Failed to execute the command.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan ikke udføre kommandoen.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
         <source>Command is not found.</source>
-        <translation>ਕਮਾਂਡ ਨਹੀਂ ਲੱਭੀ।</translation>
+        <translation>Ukendt kommando.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="31"/>
         <source>The command exited abnormally.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kommandoen ikke afsluttet korrekt.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="34"/>
         <source>Password is required.</source>
-        <translation>ਪਾਸਵਰਡ ਚਾਹੀਦਾ ਹੈ।</translation>
+        <translation>Adgangskode påkrævet.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="37"/>
         <source>Missing volume.</source>
-        <translation type="unfinished"></translation>
+        <translation>Delarkiv mangler.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="40"/>
         <source>Bad charset.</source>
-        <translation type="unfinished"></translation>
+        <translation>Forkert tegnsæt.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="43"/>
         <source>Unsupported file format.</source>
-        <translation type="unfinished"></translation>
+        <translation>Filformat ikke understøttet.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="46"/>
         <source>Unknown errors happened.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukendt fejl opstod.</translation>
     </message>
 </context>
 <context>
@@ -134,22 +156,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../create.ui" line="26"/>
         <source> MiB</source>
-        <translation> MiB</translation>
+        <translation type="unfinished"> MiB</translation>
     </message>
     <message>
         <location filename="../create.ui" line="36"/>
         <source>Split into volumes of</source>
-        <translation type="unfinished"></translation>
+        <translation>Split i delarkiver på</translation>
     </message>
     <message>
         <location filename="../create.ui" line="43"/>
         <source>Password:</source>
-        <translation>ਪਾਸਵਰਡ:</translation>
+        <translation>Adgangskode:</translation>
     </message>
     <message>
         <location filename="../create.ui" line="50"/>
         <source>Encrypt the file list too</source>
-        <translation type="unfinished"></translation>
+        <translation>Kryptér også indholdslisten</translation>
     </message>
 </context>
 <context>
@@ -157,7 +179,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../createfiledialog.cpp" line="13"/>
         <source>All files (*)</source>
-        <translation>ਸਭ ਫ਼ਾਇਲਾਂ (*)</translation>
+        <translation>Alle filer (*)</translation>
     </message>
 </context>
 <context>
@@ -165,37 +187,37 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="23"/>
         <source>Extract</source>
-        <translation>ਖਿਲਾਰੋ</translation>
+        <translation>Pak ud</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="29"/>
         <source>E&amp;xtract all files</source>
-        <translation>ਸਾਰੀਆਂ ਫਾਇਲਾਂ ਨੂੰ ਖਿਲਾਰੋ</translation>
+        <translation>Pak all&amp;e filer ud</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="36"/>
         <source>Ex&amp;tract selected files</source>
-        <translation type="unfinished"></translation>
+        <translation>Pak valgt&amp;e filer ud</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="59"/>
         <source>Actions</source>
-        <translation>ਕਾਰਵਾਈਆਂ</translation>
+        <translation>Handlinger</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="65"/>
         <source>Re-create folders</source>
-        <translation type="unfinished"></translation>
+        <translation>Genskab foldere</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="72"/>
         <source>Overwrite existing files</source>
-        <translation>ਮੌਜੂਦਾਂ ਫਾਇਲਾਂ ਉੱਤੇ ਲਿਖੋ</translation>
+        <translation>Overskriv eksisterende filer</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="79"/>
         <source>Do not extract older files</source>
-        <translation type="unfinished"></translation>
+        <translation>Pak ikke ældre filer ud</translation>
     </message>
 </context>
 <context>
@@ -203,7 +225,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extractfiledialog.cpp" line="12"/>
         <source>All files (*)</source>
-        <translation>ਸਾਰੀਆਂ ਫਾਇਲਾਂ (*)</translation>
+        <translation>Alle filer (*)</translation>
     </message>
 </context>
 <context>
@@ -212,52 +234,52 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../mainwindow.ui" line="14"/>
         <location filename="../mainwindow.cpp" line="323"/>
         <source>File Archiver</source>
-        <translation>ਫਾਇਲ ਅਕਾਇਵਰ</translation>
+        <translation type="unfinished">Filarkivhåndtering</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="62"/>
         <source>Filter Files...</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtrer filer...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="83"/>
         <source>&amp;File</source>
-        <translation>ਫਾਇਲ(&amp;F)</translation>
+        <translation>&amp;Fil</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="98"/>
         <source>&amp;Edit</source>
-        <translation>ਸੋਧੋ(&amp;E)</translation>
+        <translation>R&amp;ediger</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="117"/>
         <source>&amp;View</source>
-        <translation>ਵੇਖੋ(&amp;V)</translation>
+        <translation>&amp;Vis</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="121"/>
         <source>&amp;Icon Size</source>
-        <translation>ਆਈਕਾਰ ਆਕਾਰ(&amp;I)</translation>
+        <translation>&amp;Ikonstørrelse</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="147"/>
         <source>&amp;Help</source>
-        <translation>ਮਦਦ(&amp;H)</translation>
+        <translation>&amp;Hjælp</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="158"/>
         <source>Main Toolbar</source>
-        <translation>ਮੁੱਖ ਟੂਲਬਾਰ</translation>
+        <translation>Hovedværktøjslinje</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="186"/>
         <source>&amp;About</source>
-        <translation>ਇਸ ਬਾਰੇ(&amp;A)</translation>
+        <translation>&amp;Om</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="195"/>
         <source>&amp;New</source>
-        <translation>ਨਵਾਂ(&amp;N)</translation>
+        <translation>&amp;Ny</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="198"/>
@@ -267,7 +289,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="207"/>
         <source>&amp;Open</source>
-        <translation>ਖੋਲ੍ਹੋ(&amp;O)</translation>
+        <translation>&amp;Åben</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="210"/>
@@ -277,42 +299,42 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="218"/>
         <source>Save &amp;As</source>
-        <translation>ਇੰਝ ਸੰਭਾਲੋ(&amp;A)</translation>
+        <translation>Gem &amp;Som</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="221"/>
         <source>Ctrl+Shift+S</source>
-        <translation>Ctrl+Shift+S</translation>
+        <translation>Ctrl+Skift+S</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="226"/>
         <source>&amp;Extract</source>
-        <translation>ਖਿਲਾਰੋ(&amp;E)</translation>
+        <translation>Pak &amp;Ud</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="231"/>
         <source>&amp;Test</source>
-        <translation>ਟੈਸਟ(&amp;T)</translation>
+        <translation>&amp;Test</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="234"/>
         <source>Ctrl+T</source>
-        <translation>Ctrl+T</translation>
+        <translation type="unfinished">Ctrl+T</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="242"/>
         <source>&amp;Properties</source>
-        <translation>ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ(&amp;P)</translation>
+        <translation type="unfinished">&amp;Egenskaber</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="245"/>
         <source>Alt+Return</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Retur</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="254"/>
         <source>&amp;Close</source>
-        <translation>ਬੰਦ ਕਰੋ(&amp;C)</translation>
+        <translation>&amp;Luk</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="257"/>
@@ -322,7 +344,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="265"/>
         <source>Cu&amp;t</source>
-        <translation>ਕੱਟੋ(&amp;t)</translation>
+        <translation>&amp;Klip</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="268"/>
@@ -332,7 +354,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="276"/>
         <source>&amp;Copy</source>
-        <translation>ਕਾਪੀ(&amp;C)</translation>
+        <translation>&amp;Kopér</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="279"/>
@@ -342,7 +364,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="287"/>
         <source>&amp;Paste</source>
-        <translation>ਚੇਪੋ(&amp;P)</translation>
+        <translation>&amp;Indsæt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="290"/>
@@ -352,22 +374,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="298"/>
         <source>&amp;Rename</source>
-        <translation>ਨਾਂ ਬਦਲੋ(&amp;R)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="301"/>
         <source>F2</source>
-        <translation>F2</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="306"/>
         <source>&amp;Delete</source>
-        <translation>ਹਟਾਓ(&amp;D)</translation>
+        <translation>&amp;Slet</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="309"/>
         <source>Del</source>
-        <translation type="unfinished"></translation>
+        <translation>Slet</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="314"/>
@@ -377,7 +399,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="317"/>
         <source>Ctrl+A</source>
-        <translation>Ctrl+A</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="325"/>
@@ -388,27 +410,27 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../mainwindow.ui" line="328"/>
         <location filename="../mainwindow.ui" line="439"/>
         <source>Ctrl+F</source>
-        <translation>Ctrl+F</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="333"/>
         <source>&amp;Add Files</source>
-        <translation>ਫ਼ਾਇਲਾਂ ਜੋੜੋ(&amp;A)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="338"/>
         <source>Add F&amp;older</source>
-        <translation>ਫੋਲਡਰ ਨੂੰ ਜੋੜੋ(&amp;o)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="343"/>
         <source>Pass&amp;word</source>
-        <translation>ਪਾਸਵਰਡ(&amp;w)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="354"/>
         <source>&amp;Toolbar</source>
-        <translation>ਟੂਲਬਾਰ(&amp;T)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="365"/>
@@ -423,7 +445,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="387"/>
         <source>S&amp;how as Folder</source>
-        <translation>ਫੋਲਡਰ ਵਜੋਂ ਵੇਖਾਓ(&amp;h)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="390"/>
@@ -433,32 +455,32 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="398"/>
         <source>Show &amp;All Files</source>
-        <translation>ਸਭ ਫ਼ਾਇਲਾਂ ਵੇਖਾਓ(&amp;A)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="401"/>
         <source>Ctrl+Shift+A</source>
-        <translation>Ctrl+Shift+A</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="410"/>
         <source>St&amp;op</source>
-        <translation>ਰੋਕੋ(&amp;o)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="413"/>
         <source>Esc</source>
-        <translation>Esc</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="418"/>
         <source>&amp;Reload</source>
-        <translation>ਮੁੜ-ਲੋਡ ਕਰੋ(&amp;R)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="421"/>
         <source>F5</source>
-        <translation>F5</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="426"/>
@@ -483,12 +505,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="450"/>
         <source>Ctrl+Shift+E</source>
-        <translation>Ctrl+Shift+E</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="461"/>
         <source>Ctrl+Shift+C</source>
-        <translation>Ctrl+Shift+C</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="458"/>
@@ -498,29 +520,29 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="469"/>
         <source>16 px</source>
-        <translation>16 px</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="477"/>
         <source>24 px</source>
-        <translation>24 px</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="485"/>
         <source>32 px</source>
-        <translation>32 px</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="493"/>
         <source>48 px</source>
-        <translation>48 px</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="367"/>
         <location filename="../mainwindow.cpp" line="396"/>
         <location filename="../mainwindow.cpp" line="429"/>
         <source>All files (*)</source>
-        <translation>ਸਭ ਫ਼ਾਇਲਾਂ (*)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="401"/>
@@ -541,12 +563,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="752"/>
         <source>Version: %1</source>
-        <translation>ਵਰਜ਼ਨ: %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="839"/>
         <source>%p %</source>
-        <translation>%p %</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="943"/>
