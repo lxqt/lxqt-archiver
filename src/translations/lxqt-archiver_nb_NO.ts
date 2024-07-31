@@ -254,7 +254,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../mainwindow.ui" line="117"/>
         <source>&amp;View</source>
-        <translation>&amp;Visning</translation>
+        <translation>&amp;Vis</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="121"/>
