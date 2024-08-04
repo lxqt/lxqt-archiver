@@ -249,7 +249,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../mainwindow.ui" line="98"/>
         <source>&amp;Edit</source>
-        <translation>R&amp;ediger</translation>
+        <translation>&amp;Rediger</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="117"/>
@@ -269,7 +269,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../mainwindow.ui" line="158"/>
         <source>Main Toolbar</source>
-        <translation>Hovedverktøyfelt</translation>
+        <translation>Hovedverktøylinje</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="186"/>
@@ -646,7 +646,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../passworddialog.ui" line="20"/>
         <source>Encrypt the file list</source>
-        <translation>Krypter filen først</translation>
+        <translation>Krypter fillisten</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="34"/>
@@ -694,7 +694,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../corestrs.h" line="7"/>
         <source>Tar compressed with 7z (.tar.7z)</source>
-        <translation>Tar-pakke med 7z (.tar.7z)</translation>
+        <translation>Tar komprimert med 7z (.tar.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="8"/>
@@ -719,12 +719,12 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../corestrs.h" line="12"/>
         <source>Tar compressed with bzip2 (.tar.bz2)</source>
-        <translation>Tar-pakke med bzip2 (.tar.bz2)</translation>
+        <translation>Tar komprimert med bzip2 (.tar.bz2)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="13"/>
         <source>Tar compressed with bzip (.tar.bz)</source>
-        <translation>Tar-pakke med bzip (.tar.bz)</translation>
+        <translation>Tar komprimert med bzip (.tar.bz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="14"/>
@@ -744,7 +744,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../corestrs.h" line="17"/>
         <source>Tar compressed with gzip (.tar.gz)</source>
-        <translation>Tar-pakke med gzip (.tar.gz)</translation>
+        <translation>Tar komprimert med gzip (.tar.gz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="18"/>
@@ -774,22 +774,22 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../corestrs.h" line="23"/>
         <source>Tar compressed with lrzip (.tar.lrz)</source>
-        <translation>Tar-pakke med lrzip (.tar.lrz)</translation>
+        <translation>Tar komprimert med lrzip (.tar.lrz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="24"/>
         <source>Tar compressed with lzip (.tar.lz)</source>
-        <translation>Tar-pakke med lzip (.tar.lz)</translation>
+        <translation>Tar komprimert med lzip (.tar.lz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="25"/>
         <source>Tar compressed with lzma (.tar.lzma)</source>
-        <translation>Tar-pakke med lzma (.tar.lzma)</translation>
+        <translation>Tar komprimert med lzma (.tar.lzma)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="26"/>
         <source>Tar compressed with lzop (.tar.lzo)</source>
-        <translation>Tar-pakke med lzop (.tar.lzo)</translation>
+        <translation>Tar komprimert med lzop (.tar.lzo)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="27"/>
@@ -809,7 +809,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../corestrs.h" line="30"/>
         <source>Tar compressed with compress (.tar.Z)</source>
-        <translation>Tar-pakke med compress (.tar.Z)</translation>
+        <translation>Tar komprimert med compress (.tar.Z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="31"/>
@@ -824,12 +824,12 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../corestrs.h" line="33"/>
         <source>Tar compressed with xz (.tar.xz)</source>
-        <translation>Tar-pakke med xz (.tar.xz)</translation>
+        <translation>Tar komprimert med xz (.tar.xz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="34"/>
         <source>Tar compressed with zstd (.tar.zst)</source>
-        <translation>TAR-komprimert med zstd (.tar.zst)</translation>
+        <translation>Tar komprimert med zstd (.tar.zst)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="35"/>
