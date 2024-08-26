@@ -71,9 +71,9 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</source>
-        <translation>LXQt Archiver
+        <translation>LXQt Arşivleyici
 
-Telif Hakkı (C) 2018 LXQt Ekibi
+Telif Hakkı (C) 2020 LXQt Ekibi
 
 Bu program ücretsiz bir yazılımdır; Özgür Yazılım Vakfı tarafından
 yayınlanan GNU Genel Kamu Lisansı (Lisansın Sürüm 2 
@@ -139,7 +139,7 @@ Free Software Foundation, Inc.,
     <message>
         <location filename="../archivererror.cpp" line="40"/>
         <source>Bad charset.</source>
-        <translation>Kötü karakter.</translation>
+        <translation>Hatalı karakter.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="43"/>
@@ -554,7 +554,7 @@ Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.cpp" line="459"/>
         <source>Confirm</source>
-        <translation>Doğrula</translation>
+        <translation>Onayla</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="459"/>
@@ -804,7 +804,7 @@ Free Software Foundation, Inc.,
     <message>
         <location filename="../corestrs.h" line="29"/>
         <source>Tar uncompressed (.tar)</source>
-        <translation>Tar sıkıştırılmamış (.tar)</translation>
+        <translation>Sıkıştırılmamış tar (.tar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="30"/>
@@ -881,7 +881,7 @@ Free Software Foundation, Inc.,
     <message>
         <location filename="../corestrs.h" line="51"/>
         <source>Decompressing archive</source>
-        <translation>Arşiv açılıyor</translation>
+        <translation>Arşiv çıkartılıyor</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="54"/>
