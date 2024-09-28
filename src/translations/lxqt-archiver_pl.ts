@@ -269,7 +269,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</
     <message>
         <location filename="../mainwindow.ui" line="158"/>
         <source>Main Toolbar</source>
-        <translation>Główny pasek narzędzi</translation>
+        <translation>Główny pasek narzędziowy</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="186"/>
@@ -515,7 +515,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</
     <message>
         <location filename="../mainwindow.ui" line="458"/>
         <source>&amp;Collapse</source>
-        <translation>&amp;Zwiń</translation>
+        <translation>Z&amp;wiń</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="469"/>
