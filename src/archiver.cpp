@@ -351,8 +351,12 @@ std::string Archiver::stripTrailingSlash(std::string dirPath) {
     return dirPath;
 }
 
+// To avoid incompatible cast to GFunc:
+static inline void g_free_wrapper(void* data, void* /*userdata*/) {
+    g_free(data);
+}
 void Archiver::freeStrsGList(GList* strs) {
-    g_list_foreach(strs, (GFunc)g_free, nullptr);
+    g_list_foreach(strs, (GFunc)g_free_wrapper, nullptr);
 }
 
 void Archiver::rebuildDirTree() {
