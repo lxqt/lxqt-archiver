@@ -207,7 +207,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../extract.ui" line="65"/>
         <source>Re-create folders</source>
-        <translation>Gjenskap mapper</translation>
+        <translation>Opprett mapper på nytt</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="72"/>
@@ -394,7 +394,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../mainwindow.ui" line="314"/>
         <source>&amp;Select All</source>
-        <translation>&amp;Velg alt</translation>
+        <translation>&amp;Velg alle</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="317"/>

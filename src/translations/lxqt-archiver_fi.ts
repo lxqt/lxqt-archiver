@@ -299,7 +299,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="218"/>
         <source>Save &amp;As</source>
-        <translation>&amp;Tallenna nimellä</translation>
+        <translation>Tallenna &amp;nimellä</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="221"/>
