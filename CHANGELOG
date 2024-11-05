@@ -1,3 +1,9 @@
+lxqt-archiver-1.1.0 / 2024-11-05
+===================================
+ * Added `application/vnd.rar` to the supported mime types.
+ * Add clear button to filter bar.
+ * Silenced a compilation warning about `GList`.
+
 lxqt-archiver-1.0.0 / 2024-04-17
 ===================================
  * Ported to Qt6.
