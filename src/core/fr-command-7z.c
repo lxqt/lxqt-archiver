@@ -556,7 +556,8 @@ fr_command_7z_handle_error (FrCommand   *comm,
 		return;
 	}
 
-	if ((error->status <= 1) || (unexpected_end_of_archive)) {
+	/* WARNING: error->status <= 1 may happen when the list is password-protected. */
+	if (/*error->status <= 1 || */unexpected_end_of_archive) {
 		error->type = FR_PROC_ERROR_NONE;
 	}
 	else {
@@ -575,9 +576,11 @@ fr_command_7z_handle_error (FrCommand   *comm,
 			    || (strstr (line, "Enter password") != NULL))
 			{
 				error->type = FR_PROC_ERROR_ASK_PASSWORD;
-				break;
+				return;
 			}
 		}
+
+		error->type = FR_PROC_ERROR_NONE; /* when error->status <= 1 */
 	}
 }
 
