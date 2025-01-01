@@ -556,7 +556,7 @@ get_mime_type_from_magic_numbers (GFile *file)
 		{ 0,  2, "\037\213",                             "application/gzip"            },
 		{ 0,  4, "LZIP",                                 "application/x-lzip"          },
 		{ 0,  9, "\x89\x4c\x5a\x4f\x00\x0d\x0a\x1a\x0a", "application/x-lzop",         },
-		{ 0,  4, "Rar!",                                 "application/x-rar"           },
+		{ 0,  4, "Rar!",                                 "application/vnd.rar"         },
 		{ 0,  4, "RZIP",                                 "application/x-rzip"          },
 		{ 0,  6, "\3757zXZ\000",                         "application/x-xz"            },
 		{ 0,  4, "\x28\xB5\x2F\xFD",                     "application/zstd"            },

@@ -591,7 +591,7 @@ const char *sevenz_mime_types[] = { "application/x-7z-compressed",
 				    "application/x-cbz",
 				    "application/x-ms-dos-executable",
 				    "application/x-ms-wim",
-				    "application/x-rar",
+				    "application/vnd.rar",
 				    "application/zip",
 				    NULL };
 
@@ -625,15 +625,7 @@ fr_command_7z_get_capabilities (FrCommand  *comm,
 			capabilities |= FR_COMMAND_CAN_ENCRYPT | FR_COMMAND_CAN_ENCRYPT_HEADER;
 	}
 	else if (is_program_available ("7z", check_command)) {
-		if (is_mime_type (mime_type, "application/x-rar")
-		    || is_mime_type (mime_type, "application/x-cbr"))
-		{
-			if (! check_command || g_file_test ("/usr/lib/p7zip/Codecs/Rar29.so", G_FILE_TEST_EXISTS) || g_file_test ("/usr/lib/p7zip/Codecs/Rar.so", G_FILE_TEST_EXISTS)
-			    || g_file_test ("/usr/libexec/p7zip/Codecs/Rar29.so", G_FILE_TEST_EXISTS) || g_file_test ("/usr/libexec/p7zip/Codecs/Rar.so", G_FILE_TEST_EXISTS))
-				capabilities |= FR_COMMAND_CAN_READ;
-		}
-		else
-			capabilities |= FR_COMMAND_CAN_READ;
+		capabilities |= FR_COMMAND_CAN_READ;
 
 		if (is_mime_type (mime_type, "application/x-cbz")
 		    || is_mime_type (mime_type, "application/x-ms-dos-executable")
@@ -665,12 +657,12 @@ static const char *
 fr_command_7z_get_packages (FrCommand  *comm,
 			    const char *mime_type)
 {
-	if (is_mime_type (mime_type, "application/x-rar"))
-		return PACKAGES ("p7zip,p7zip-rar");
+	if (is_mime_type (mime_type, "application/vnd.rar"))
+		return PACKAGES ("p7zip,p7zip-rar,7zip");
 	else if (is_mime_type (mime_type, "application/zip") || is_mime_type (mime_type, "application/vnd.ms-cab-compressed"))
-		return PACKAGES ("p7zip,p7zip-full");
+		return PACKAGES ("p7zip,p7zip-full,7zip");
 	else
-		return PACKAGES ("p7zip");
+		return PACKAGES ("p7zip,7zip");
 }
 
 
