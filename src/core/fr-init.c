@@ -33,12 +33,12 @@
 #include "fr-command-cfile.h"
 #include "fr-command-cpio.h"
 #include "fr-command-dpkg.h"
-/*#include "fr-command-iso.h"*/
-#include "fr-command-img.h"
+/*#include "fr-command-iso.h"
+#include "fr-command-img.h"*/
 #include "fr-command-jar.h"
 #include "fr-command-lha.h"
 #include "fr-command-rar.h"
-#include "fr-command-rpm.h"
+#include "fr-command-bsdtar.h"
 #include "fr-command-tar.h"
 #if HAVE_JSON_GLIB
   #include "fr-command-unarchiver.h"
@@ -106,6 +106,7 @@ FrMimeTypeDescription mime_type_desc[] = {
 	{ "application/x-zstd-compressed-tar",  ".tar.zst",  N_("Tar compressed with zstd"), 0 },
 	{ "application/x-zoo",                  ".zoo",      N_("Zoo (.zoo)"), 0 },
 	{ "application/zip",                    ".zip",      N_("Zip (.zip)"), 0 },
+	{ "application/vnd.android.package-archive", ".apk", NULL, 0 },
 	/* this is a virtual type for compressed disk images, which bsdtar can handle but 7z cannot */
 	{ "compressed-disk-image",              NULL,        NULL, 0 },
 	{ NULL, NULL, NULL, 0 }
@@ -169,6 +170,7 @@ FrExtensionType file_ext_type[] = {
 	{ ".z", "application/gzip" },
 	{ ".Z", "application/x-compress" },
 	{ ".zip", "application/zip" },
+	{ ".apk", "application/vnd.android.package-archive" },
 	{ ".zoo", "application/x-zoo" },
 	{ NULL, NULL }
 };
@@ -360,11 +362,11 @@ register_commands (void)
 	register_command (FR_TYPE_COMMAND_AR);
 	register_command (FR_TYPE_COMMAND_ARJ);
 	register_command (FR_TYPE_COMMAND_CPIO);
-	/*register_command (FR_TYPE_COMMAND_ISO);*/
-	register_command (FR_TYPE_COMMAND_IMG);
+	/*register_command (FR_TYPE_COMMAND_ISO);
+	register_command (FR_TYPE_COMMAND_IMG);*/
 	register_command (FR_TYPE_COMMAND_JAR);
 	register_command (FR_TYPE_COMMAND_LHA);
-	register_command (FR_TYPE_COMMAND_RPM);
+	register_command (FR_TYPE_COMMAND_BSDTAR);
 	register_command (FR_TYPE_COMMAND_UNSTUFF);
 	register_command (FR_TYPE_COMMAND_ZIP);
 	register_command (FR_TYPE_COMMAND_LRZIP);
