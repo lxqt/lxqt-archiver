@@ -14,16 +14,15 @@ add_library(lxqt-archiver-core STATIC
     fr-command-alz.c
     fr-command-ar.c
     fr-command-arj.c
+    fr-command-bsdtar.c
     fr-command.c
     fr-command-cfile.c
     fr-command-cpio.c
     fr-command-dpkg.c
-    fr-command-img.c
     fr-command-jar.c
     fr-command-lha.c
     fr-command-lrzip.c
     fr-command-rar.c
-    fr-command-rpm.c
     fr-command-tar.c
     fr-command-unarchiver.c
     fr-command-unstuff.c

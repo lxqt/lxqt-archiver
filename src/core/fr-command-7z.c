@@ -586,17 +586,18 @@ fr_command_7z_handle_error (FrCommand   *comm,
 
 
 const char *sevenz_mime_types[] = { "application/x-7z-compressed",
-				    "application/x-arj",
-				    "application/vnd.ms-cab-compressed",
-				    "application/vnd.efi.iso",
-				    "application/vnd.efi.img",
-				    /*"application/x-cbr",*/
-				    "application/x-cbz",
-				    "application/x-ms-dos-executable",
-				    "application/x-ms-wim",
-				    "application/vnd.rar",
-				    "application/zip",
-				    NULL };
+				"application/x-arj",
+				"application/vnd.ms-cab-compressed",
+				"application/vnd.efi.iso",
+				"application/vnd.efi.img",
+				/*"application/x-cbr",*/
+				"application/x-cbz",
+				"application/x-ms-dos-executable",
+				"application/x-ms-wim",
+				"application/vnd.rar",
+				"application/zip",
+				"application/vnd.android.package-archive",
+				NULL };
 
 
 static const char **
