@@ -14,6 +14,9 @@ FileTreeView::FileTreeView(QWidget* parent) : QTreeView(parent) {
     header()->setStretchLastSection(false);
     header()->setSortIndicatorShown(true);
     header()->setSortIndicator(0, Qt::AscendingOrder);
+    // NOTE:This not only enables optimizations, but it also prevents wrong
+    // heights if the view is scrolled while the first column is not visible.
+    setUniformRowHeights(true);
 }
 
 void FileTreeView::mousePressEvent(QMouseEvent* event) {

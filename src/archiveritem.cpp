@@ -37,6 +37,9 @@ const char *ArchiverItem::fullPath() const {
     return data_ ? data_->full_path : nullptr;
 }
 
+const char *ArchiverItem::link() const {
+    return data_ ? data_->link : nullptr;
+}
 
 qint64 ArchiverItem::modifiedTime() const {
     return data_ ? static_cast<quint64>(data_->modified) : 0LL; // data_->modified is time_t

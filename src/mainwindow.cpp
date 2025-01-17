@@ -1026,6 +1026,9 @@ QList<QStandardItem *> MainWindow::createFileListRow(const ArchiverItem *file) {
     if(mimeType) {
         auto iconInfo = mimeType->icon();
         desc = QString::fromUtf8(mimeType->desc());
+        if(auto link = file->link()) {
+            desc += QStringLiteral(" (%1)").arg(tr("Link to") + QChar(QChar::Space) + QString::fromUtf8(link));
+        }
         if(iconInfo) {
             icon = iconInfo->qicon();
         }
@@ -1036,7 +1039,7 @@ QList<QStandardItem *> MainWindow::createFileListRow(const ArchiverItem *file) {
 
     // FIXME: filename might not be UTF-8
     QString name = viewMode_ == ViewMode::FlatList ? QString::fromUtf8(file->fullPath()) : QString::fromUtf8(file->name());
-    auto nameItem = new QStandardItem{icon, name};
+    auto nameItem = new QStandardItem{icon, name.simplified()}; // no newline (fixed height)
     nameItem->setData(QVariant::fromValue(file), ArchiverItemRole); // store the item pointer on the first column
     nameItem->setEditable(false);
 

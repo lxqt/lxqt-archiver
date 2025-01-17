@@ -25,6 +25,8 @@ public:
 
     const char* fullPath() const;
 
+    const char* link() const;
+
     qint64 modifiedTime() const;
 
     size_t size() const;
