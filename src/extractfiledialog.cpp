@@ -8,6 +8,7 @@ ExtractFileDialog::ExtractFileDialog(QWidget *parent, Fm::FilePath path):
     Fm::FileDialog{parent, std::move(path)},
     ui_{new Ui::ExtractArchiveExtraWidget{}} {
 
+    setWindowTitle(tr("Extract"));
     setOptions(QFileDialog::ShowDirsOnly | QFileDialog::HideNameFilterDetails);
     setNameFilters(QStringList{} << tr("All files (*)"));
     setAcceptMode(QFileDialog::AcceptOpen);
