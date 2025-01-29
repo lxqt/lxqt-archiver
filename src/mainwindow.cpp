@@ -362,6 +362,7 @@ void MainWindow::on_actionCreateNew_triggered(bool /*checked*/) {
 void MainWindow::on_actionOpen_triggered(bool /*checked*/) {
     //qDebug("open");
     Fm::FileDialog dlg{this};
+    dlg.setWindowTitle(tr("Open"));
     dlg.setFileMode(QFileDialog::ExistingFile);
     dlg.setNameFilters(Archiver::supportedOpenNameFilters() << tr("All files (*)"));
     //qDebug() << Archiver::supportedOpenMimeTypes();
@@ -391,6 +392,7 @@ void MainWindow::on_actionArchiveProperties_triggered(bool /*checked*/) {
 
 void MainWindow::on_actionAddFiles_triggered(bool /*checked*/) {
     Fm::FileDialog dlg{this};
+    dlg.setWindowTitle(tr("Add Files"));
     dlg.setFileMode(QFileDialog::ExistingFiles);
     dlg.setNameFilters(QStringList{} << tr("All files (*)"));
     dlg.setAcceptMode(QFileDialog::AcceptOpen);
@@ -423,6 +425,7 @@ void MainWindow::on_actionAddFiles_triggered(bool /*checked*/) {
 
 void MainWindow::on_actionAddFolder_triggered(bool /*checked*/) {
     Fm::FileDialog dlg{this};
+    dlg.setWindowTitle(tr("Add Folder"));
     dlg.setOptions(QFileDialog::ShowDirsOnly | QFileDialog::HideNameFilterDetails);
     dlg.setFileMode(QFileDialog::Directory);
     dlg.setNameFilters(QStringList{} << tr("All files (*)"));

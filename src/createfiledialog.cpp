@@ -9,6 +9,7 @@ CreateFileDialog::CreateFileDialog(QWidget *parent, Fm::FilePath path):
     Fm::FileDialog{parent, std::move(path)},
     ui_{new Ui::CreateArchiveExtraWidget{}} {
 
+    setWindowTitle(tr("Create Archive"));
     setAcceptMode(QFileDialog::AcceptSave);
     setNameFilters(Archiver::supportedCreateNameFilters() << tr("All files (*)"));
 
