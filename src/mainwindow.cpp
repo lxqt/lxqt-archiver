@@ -392,7 +392,7 @@ void MainWindow::on_actionArchiveProperties_triggered(bool /*checked*/) {
 
 void MainWindow::on_actionAddFiles_triggered(bool /*checked*/) {
     Fm::FileDialog dlg{this};
-    dlg.setWindowTitle(tr("Add File(s)"));
+    dlg.setWindowTitle(tr("Add Files"));
     dlg.setFileMode(QFileDialog::ExistingFiles);
     dlg.setNameFilters(QStringList{} << tr("All files (*)"));
     dlg.setAcceptMode(QFileDialog::AcceptOpen);
