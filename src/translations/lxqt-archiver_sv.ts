@@ -179,7 +179,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../createfiledialog.cpp" line="12"/>
         <source>Create Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Skapa arkiv</translation>
     </message>
     <message>
         <location filename="../createfiledialog.cpp" line="14"/>
@@ -230,7 +230,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../extractfiledialog.cpp" line="11"/>
         <source>Extract</source>
-        <translation type="unfinished">Extrahera</translation>
+        <translation>Extrahera</translation>
     </message>
     <message>
         <location filename="../extractfiledialog.cpp" line="13"/>
@@ -599,17 +599,17 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.cpp" line="365"/>
         <source>Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Öppna</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="395"/>
         <source>Add Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Lägg till filer</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="428"/>
         <source>Add Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Lägg till mapp</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1008"/>
@@ -629,7 +629,7 @@ med detta program. Om inte, skriv till Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.cpp" line="1033"/>
         <source>Link to</source>
-        <translation type="unfinished"></translation>
+        <translation>Länk till</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1072"/>

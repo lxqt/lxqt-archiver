@@ -181,7 +181,7 @@ Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  021
     <message>
         <location filename="../createfiledialog.cpp" line="12"/>
         <source>Create Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolawo Ekipakire</translation>
     </message>
     <message>
         <location filename="../createfiledialog.cpp" line="14"/>
@@ -235,7 +235,7 @@ ky&apos;egisinga obupya egifaananya erinnya</translation>
     <message>
         <location filename="../extractfiledialog.cpp" line="11"/>
         <source>Extract</source>
-        <translation type="unfinished">Pakulula</translation>
+        <translation>Pakulula</translation>
     </message>
     <message>
         <location filename="../extractfiledialog.cpp" line="13"/>
@@ -604,17 +604,17 @@ ky&apos;egisinga obupya egifaananya erinnya</translation>
     <message>
         <location filename="../mainwindow.cpp" line="365"/>
         <source>Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Bikkula</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="395"/>
         <source>Add Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Yongeramu Fayiro</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="428"/>
         <source>Add Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Yongeramu Tterekero</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1008"/>
@@ -634,7 +634,7 @@ ky&apos;egisinga obupya egifaananya erinnya</translation>
     <message>
         <location filename="../mainwindow.cpp" line="1033"/>
         <source>Link to</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolawo enyunzi egguka ku</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1072"/>

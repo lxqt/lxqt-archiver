@@ -179,12 +179,12 @@ Street, Fifth Floor, Boston, MA 02110-1301, USA.</translation>
     <message>
         <location filename="../createfiledialog.cpp" line="12"/>
         <source>Create Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Створити архів</translation>
     </message>
     <message>
         <location filename="../createfiledialog.cpp" line="14"/>
         <source>All files (*)</source>
-        <translation>Всі файли (*)</translation>
+        <translation>Усі файли (*)</translation>
     </message>
 </context>
 <context>
@@ -230,7 +230,7 @@ Street, Fifth Floor, Boston, MA 02110-1301, USA.</translation>
     <message>
         <location filename="../extractfiledialog.cpp" line="11"/>
         <source>Extract</source>
-        <translation type="unfinished">Видобути</translation>
+        <translation>Видобути</translation>
     </message>
     <message>
         <location filename="../extractfiledialog.cpp" line="13"/>
@@ -599,17 +599,17 @@ Street, Fifth Floor, Boston, MA 02110-1301, USA.</translation>
     <message>
         <location filename="../mainwindow.cpp" line="365"/>
         <source>Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Відкрити</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="395"/>
         <source>Add Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Додати файли</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="428"/>
         <source>Add Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Додати теку</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1008"/>
@@ -629,7 +629,7 @@ Street, Fifth Floor, Boston, MA 02110-1301, USA.</translation>
     <message>
         <location filename="../mainwindow.cpp" line="1033"/>
         <source>Link to</source>
-        <translation type="unfinished"></translation>
+        <translation>Посилання на</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1072"/>

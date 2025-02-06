@@ -181,7 +181,7 @@ MA 02110, USA.</translation>
     <message>
         <location filename="../createfiledialog.cpp" line="12"/>
         <source>Create Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Archiv erstellen</translation>
     </message>
     <message>
         <location filename="../createfiledialog.cpp" line="14"/>
@@ -601,17 +601,17 @@ MA 02110, USA.</translation>
     <message>
         <location filename="../mainwindow.cpp" line="365"/>
         <source>Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Öffnen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="395"/>
         <source>Add Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateien hinzufügen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="428"/>
         <source>Add Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordner hinzufügen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1008"/>

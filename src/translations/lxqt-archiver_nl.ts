@@ -161,7 +161,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../create.ui" line="36"/>
         <source>Split into volumes of</source>
-        <translation>Splitsen in volumes van</translation>
+        <translation>Opdelen in volumes van</translation>
     </message>
     <message>
         <location filename="../create.ui" line="43"/>
@@ -179,7 +179,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../createfiledialog.cpp" line="12"/>
         <source>Create Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Archief samenstellen</translation>
     </message>
     <message>
         <location filename="../createfiledialog.cpp" line="14"/>
@@ -230,7 +230,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extractfiledialog.cpp" line="11"/>
         <source>Extract</source>
-        <translation type="unfinished">Uitpakken</translation>
+        <translation>Uitpakken</translation>
     </message>
     <message>
         <location filename="../extractfiledialog.cpp" line="13"/>
@@ -568,7 +568,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="461"/>
         <source>Are you sure you want to delete selected files?</source>
-        <translation>Weet u zeker dat u de geselecteerde bestanden wilt verwijderen?</translation>
+        <translation>Weet u zeker dat u de selectie wilt verwijderen?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="754"/>
@@ -599,17 +599,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="365"/>
         <source>Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Openen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="395"/>
         <source>Add Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestanden toevoegen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="428"/>
         <source>Add Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Map toevoegen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1008"/>
@@ -619,7 +619,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="1012"/>
         <source>Uncompressed Size:</source>
-        <translation>Uitgepakte grootte:</translation>
+        <translation>Grootte na uitpakken:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1014"/>
@@ -629,7 +629,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="1033"/>
         <source>Link to</source>
-        <translation type="unfinished"></translation>
+        <translation>Koppelen aan</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1072"/>
