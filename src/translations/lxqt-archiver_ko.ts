@@ -44,7 +44,7 @@ LXQt Archiver is derived from the following programs:
 
 LXQt Archiver는 다음 프로그램에서 파생되었습니다:
 * MATE 데스크톱의 Engrampa
-* Gnome 데스크톱의 파일 롤러
+* Gnome 데스크톱의 File Roller
 
 한국어 번역:
 * 이정희 &lt;daemul72@gmail.com&gt;
@@ -181,7 +181,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../createfiledialog.cpp" line="12"/>
         <source>Create Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>압축파일 만들기</translation>
     </message>
     <message>
         <location filename="../createfiledialog.cpp" line="14"/>
@@ -232,7 +232,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extractfiledialog.cpp" line="11"/>
         <source>Extract</source>
-        <translation type="unfinished">압축풀기</translation>
+        <translation>압축풀기</translation>
     </message>
     <message>
         <location filename="../extractfiledialog.cpp" line="13"/>
@@ -560,7 +560,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../mainwindow.cpp" line="402"/>
         <location filename="../mainwindow.cpp" line="436"/>
         <source>Add only if &amp;newer</source>
-        <translation>더 새 파일인 경우만 추가하기</translation>
+        <translation>새 파일만 추가하기(&amp;N)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="461"/>
@@ -601,17 +601,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="365"/>
         <source>Open</source>
-        <translation type="unfinished"></translation>
+        <translation>열기</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="395"/>
         <source>Add Files</source>
-        <translation type="unfinished"></translation>
+        <translation>파일 추가하기</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="428"/>
         <source>Add Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>폴더 추가하기</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1008"/>
@@ -621,17 +621,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="1012"/>
         <source>Uncompressed Size:</source>
-        <translation>압축되지 않은 크기:</translation>
+        <translation>비압축 크기:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1014"/>
         <source>Compression Ratio:</source>
-        <translation>압축 비율:</translation>
+        <translation>압축율:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1033"/>
         <source>Link to</source>
-        <translation type="unfinished"></translation>
+        <translation>링크하기</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1072"/>
