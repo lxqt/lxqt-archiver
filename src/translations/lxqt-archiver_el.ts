@@ -181,7 +181,7 @@ USA.</translation>
     <message>
         <location filename="../createfiledialog.cpp" line="12"/>
         <source>Create Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Δημιουργία αρχειοθήκης</translation>
     </message>
     <message>
         <location filename="../createfiledialog.cpp" line="14"/>
@@ -232,7 +232,7 @@ USA.</translation>
     <message>
         <location filename="../extractfiledialog.cpp" line="11"/>
         <source>Extract</source>
-        <translation type="unfinished">Εξαγωγή</translation>
+        <translation>Εξαγωγή</translation>
     </message>
     <message>
         <location filename="../extractfiledialog.cpp" line="13"/>
@@ -601,17 +601,17 @@ USA.</translation>
     <message>
         <location filename="../mainwindow.cpp" line="365"/>
         <source>Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Άνοιγμα</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="395"/>
         <source>Add Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Προσθήκη αρχείων</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="428"/>
         <source>Add Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Προσθήκη φακέλου</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1008"/>
@@ -631,7 +631,7 @@ USA.</translation>
     <message>
         <location filename="../mainwindow.cpp" line="1033"/>
         <source>Link to</source>
-        <translation type="unfinished"></translation>
+        <translation>Σύνδεσμος σε</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1072"/>
