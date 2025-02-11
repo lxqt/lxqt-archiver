@@ -262,7 +262,7 @@ Boston, MA 02110-1301, USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="120"/>
         <source>&amp;View</source>
-        <translation>&amp;Vaata</translation>
+        <translation>&amp;Vaade</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="124"/>
@@ -632,7 +632,7 @@ Boston, MA 02110-1301, USA.</translation>
     <message>
         <location filename="../mainwindow.cpp" line="1072"/>
         <source>File name</source>
-        <translation>Faili nimi</translation>
+        <translation>Failinimi</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1073"/>
