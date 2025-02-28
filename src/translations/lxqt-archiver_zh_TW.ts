@@ -95,7 +95,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archiver.cpp" line="66"/>
         <source>Archive type not supported.</source>
-        <translation>不支援該壓縮檔格式。</translation>
+        <translation>該壓縮檔格式未被支援。</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="310"/>
@@ -105,7 +105,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archiver.cpp" line="314"/>
         <source>All supported formats</source>
-        <translation>所有支援的格式</translation>
+        <translation>全部支援的格式</translation>
     </message>
 </context>
 <context>
@@ -128,7 +128,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="34"/>
         <source>Password is required.</source>
-        <translation>密碼為必須項目。</translation>
+        <translation>密碼為必須。</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="37"/>
@@ -179,12 +179,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../createfiledialog.cpp" line="12"/>
         <source>Create Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>建立壓縮檔案</translation>
     </message>
     <message>
         <location filename="../createfiledialog.cpp" line="14"/>
         <source>All files (*)</source>
-        <translation>所有檔案 (*)</translation>
+        <translation>全部檔案 (*)</translation>
     </message>
 </context>
 <context>
@@ -230,7 +230,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extractfiledialog.cpp" line="11"/>
         <source>Extract</source>
-        <translation type="unfinished">解壓縮</translation>
+        <translation>解壓縮</translation>
     </message>
     <message>
         <location filename="../extractfiledialog.cpp" line="13"/>
@@ -425,12 +425,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="348"/>
         <source>&amp;Add Files</source>
-        <translation>加入檔案(&amp;A)</translation>
+        <translation>溱加檔案(&amp;A)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="353"/>
         <source>Add F&amp;older</source>
-        <translation>加入資料夾(&amp;O)</translation>
+        <translation>增加資料夾(&amp;O)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="362"/>
@@ -455,7 +455,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="406"/>
         <source>S&amp;how as Folder</source>
-        <translation>顯示成資料夾(&amp;F)</translation>
+        <translation>顯示成資料夾(&amp;H)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="409"/>
@@ -525,7 +525,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="481"/>
         <source>&amp;Collapse</source>
-        <translation>折疊 (&amp;C)</translation>
+        <translation>縮合(&amp;C)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="492"/>
@@ -552,7 +552,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../mainwindow.cpp" line="397"/>
         <location filename="../mainwindow.cpp" line="431"/>
         <source>All files (*)</source>
-        <translation>所有檔案 (*)</translation>
+        <translation>全部檔案 (*)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="402"/>
@@ -588,7 +588,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="945"/>
         <source>No errors have been found.</source>
-        <translation>未發現錯誤.</translation>
+        <translation>未發現錯誤。</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="923"/>
@@ -599,17 +599,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="365"/>
         <source>Open</source>
-        <translation type="unfinished"></translation>
+        <translation>開啟</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="395"/>
         <source>Add Files</source>
-        <translation type="unfinished"></translation>
+        <translation>增加檔案</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="428"/>
         <source>Add Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>增加資料夾</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1008"/>
@@ -629,7 +629,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="1033"/>
         <source>Link to</source>
-        <translation type="unfinished"></translation>
+        <translation>連結至</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1072"/>
