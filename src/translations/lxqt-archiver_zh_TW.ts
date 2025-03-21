@@ -133,7 +133,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="37"/>
         <source>Missing volume.</source>
-        <translation>儲存區遺失。</translation>
+        <translation>容量遺失。</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="40"/>
@@ -166,12 +166,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../create.ui" line="43"/>
         <source>Password:</source>
-        <translation>密碼:</translation>
+        <translation>密碼：</translation>
     </message>
     <message>
         <location filename="../create.ui" line="50"/>
         <source>Encrypt the file list too</source>
-        <translation>檔案清單也加密</translation>
+        <translation>檔案清單同時加密</translation>
     </message>
 </context>
 <context>
@@ -249,7 +249,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="62"/>
         <source>Filter Files...</source>
-        <translation>篩選檔案...</translation>
+        <translation>篩選檔案…</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="86"/>
@@ -279,7 +279,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="161"/>
         <source>Main Toolbar</source>
-        <translation>主選單列</translation>
+        <translation>主工具列</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="189"/>
@@ -289,7 +289,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="198"/>
         <source>&amp;New</source>
-        <translation>新增(&amp;N)</translation>
+        <translation>新建(&amp;N)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="201"/>
@@ -425,7 +425,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="348"/>
         <source>&amp;Add Files</source>
-        <translation>溱加檔案(&amp;A)</translation>
+        <translation>增加檔案(&amp;A)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="353"/>
@@ -510,7 +510,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="470"/>
         <source>&amp;Expand</source>
-        <translation>展開 (&amp;E)</translation>
+        <translation>展開(&amp;E)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="473"/>
@@ -568,12 +568,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="461"/>
         <source>Are you sure you want to delete selected files?</source>
-        <translation>你確定要刪除選取的檔案?</translation>
+        <translation>確定要刪除選取的檔案嗎？</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="754"/>
         <source>Version: %1</source>
-        <translation>版本: %1</translation>
+        <translation>版本： %1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="841"/>
@@ -588,7 +588,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="945"/>
         <source>No errors have been found.</source>
-        <translation>未發現錯誤。</translation>
+        <translation>未有錯誤發現。</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="923"/>
@@ -619,12 +619,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="1012"/>
         <source>Uncompressed Size:</source>
-        <translation>壓縮前大小:</translation>
+        <translation>未壓縮大小：</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1014"/>
         <source>Compression Ratio:</source>
-        <translation>壓縮比率:</translation>
+        <translation>壓縮比率：</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1033"/>
@@ -691,7 +691,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../passworddialog.ui" line="61"/>
         <source>&lt;i&gt;&lt;b&gt;Note:&lt;/b&gt; the password will be used to encrypt files you add to the current archive, and to decrypt files you extract from the current archive. When the archive is closed the password will be deleted.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;&lt;b&gt;注意:&lt;/b&gt; 這個密碼會被用來加密你加入這個壓縮檔的檔案，以及用來解密你從目前壓縮檔解壓縮的檔案。當這個壓縮檔案被關閉，密碼將會被刪除&lt;/i&gt;</translation>
+        <translation>&lt;i&gt;&lt;b&gt;注意:&lt;/b&gt; 這個密碼會被用來加密所加入這個壓縮檔的檔案，以及用來解密從目前壓縮檔解壓縮的檔案。當這個壓縮檔案關閉時，密碼將會刪除。&lt;/i&gt;</translation>
     </message>
 </context>
 <context>
@@ -723,12 +723,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="7"/>
         <source>Tar compressed with 7z (.tar.7z)</source>
-        <translation>使用 7z 壓縮的 Tar 檔案 (.tar.7z)</translation>
+        <translation>使用 7z 壓縮的 Tar (.tar.7z)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="8"/>
         <source>Ace (.ace)</source>
-        <translation>Ace (.ace) 檔案</translation>
+        <translation>Ace (.ace)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="9"/>
@@ -743,12 +743,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="11"/>
         <source>Arj (.arj)</source>
-        <translation>Arj (.arj) 檔案</translation>
+        <translation>Arj (.arj)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="12"/>
         <source>Tar compressed with bzip2 (.tar.bz2)</source>
-        <translation>使用 bzip2 壓縮的 Tar 檔案 (.tar.bz2)</translation>
+        <translation>使用 bzip2 壓縮的 Tar (.tar.bz2)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="13"/>
@@ -758,7 +758,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="14"/>
         <source>Cabinet (.cab)</source>
-        <translation>Cabinet (.cab) 檔案</translation>
+        <translation>Cabinet (.cab)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="15"/>
@@ -778,27 +778,27 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="18"/>
         <source>Ear (.ear)</source>
-        <translation>Ear (.ear) 檔案</translation>
+        <translation>Ear (.ear)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="19"/>
         <source>Self-extracting zip (.exe)</source>
-        <translation>自解壓 ZIP (.exe)</translation>
+        <translation>自解壓縮 ZIP (.exe)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="20"/>
         <source>Jar (.jar)</source>
-        <translation>Jar (.jar) 檔案</translation>
+        <translation>Jar (.jar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="21"/>
         <source>Lha (.lzh)</source>
-        <translation>Lha (.lzh) 檔案</translation>
+        <translation>Lha (.lzh)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="22"/>
         <source>Lrzip (.lrz)</source>
-        <translation>Lrzip (.lrz) 檔案</translation>
+        <translation>Lrzip (.lrz)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="23"/>
@@ -823,17 +823,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="27"/>
         <source>Windows Imaging Format (.wim)</source>
-        <translation>Windows 鏡像格式 (.wim)</translation>
+        <translation>Windows 映像檔案格式 (.wim)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="28"/>
         <source>Rar (.rar)</source>
-        <translation>Rar (.rar) 檔案</translation>
+        <translation>Rar (.rar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="29"/>
         <source>Tar uncompressed (.tar)</source>
-        <translation>未壓縮 Tar (.tar)</translation>
+        <translation>未壓縮的 Tar (.tar)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="30"/>
@@ -858,7 +858,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="34"/>
         <source>Tar compressed with zstd (.tar.zst)</source>
-        <translation>使用 zstd 壓縮的 Tar 檔案 (.tar.zst)</translation>
+        <translation>使用 zstd 壓縮的 Tar (.tar.zst)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="35"/>
@@ -876,7 +876,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="62"/>
         <location filename="../main.cpp" line="240"/>
         <source>Adding file: </source>
-        <translation>正在加入檔案: </translation>
+        <translation>正在加入檔案： </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="40"/>
@@ -884,7 +884,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="64"/>
         <location filename="../main.cpp" line="282"/>
         <source>Extracting file: </source>
-        <translation>正在解壓縮檔案: </translation>
+        <translation>正在解壓縮檔案： </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="43"/>
@@ -895,12 +895,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="47"/>
         <location filename="../corestrs.h" line="63"/>
         <source>Removing file: </source>
-        <translation>正在移除檔案: </translation>
+        <translation>正在移除檔案： </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="48"/>
         <source>Deleting files from archive</source>
-        <translation>從壓縮檔刪除</translation>
+        <translation>從壓縮檔刪除檔案</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="50"/>
@@ -920,7 +920,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="55"/>
         <source>Archive type not supported.</source>
-        <translation>壓縮檔案格式不支援。</translation>
+        <translation>壓縮檔案格式並未支援。</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="56"/>
@@ -930,7 +930,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="57"/>
         <source>You don&apos;t have the right permissions.</source>
-        <translation>沒有正確權限。</translation>
+        <translation>您沒有正確權限。</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="58"/>
@@ -945,7 +945,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="65"/>
         <source>Could not find the volume: %s</source>
-        <translation>查無分卷： %s</translation>
+        <translation>查無容量： %s</translation>
     </message>
 </context>
 </TS>
