@@ -11,12 +11,12 @@
     <message>
         <location filename="../about.ui" line="34"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;LXQt Archiver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Compresor/Descompresor LXQt&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="57"/>
         <source>A simple and desktop-agnostic Qt file archiver</source>
-        <translation>Un archivador sencillo e independiente del escritorio, hecho con Qt</translation>
+        <translation>Un compresor sencillo e independiente del escritorio, hecho con Qt</translation>
     </message>
     <message>
         <location filename="../about.ui" line="67"/>
@@ -28,7 +28,7 @@
     <message>
         <location filename="../about.ui" line="91"/>
         <source>Authors</source>
-        <translation>Autores</translation>
+        <translation>Desarrolladores</translation>
     </message>
     <message>
         <location filename="../about.ui" line="100"/>
@@ -42,7 +42,7 @@ LXQt Archiver is derived from the following programs:
         <translation>Programación:
 * Hong Jen Yee (PCMan) &lt;pcman.tw@gmail.com&gt;
 
-LXQt Archiver está basado en los siguientes programas:
+El compresor de archivos de LXQt, está basado en los siguientes programas:
 * Engrampa del escritorio MATE
 * File Roller del escritorio Gnome
 </translation>
@@ -95,7 +95,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archiver.cpp" line="66"/>
         <source>Archive type not supported.</source>
-        <translation>Tipo de archivador no admitido.</translation>
+        <translation>Tipo de archivo comprimido no admitido.</translation>
     </message>
     <message>
         <location filename="../archiver.cpp" line="310"/>
@@ -113,22 +113,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="25"/>
         <source>Failed to execute the command.</source>
-        <translation>No se pudo ejecutar la orden.</translation>
+        <translation>Falló la ejecución de la orden.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="28"/>
         <source>Command is not found.</source>
-        <translation>No se encuentra la orden.</translation>
+        <translation>Orden no encontrada.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="31"/>
         <source>The command exited abnormally.</source>
-        <translation>La orden ha terminado de forma anormal.</translation>
+        <translation>Falló la ejecución de la orden.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="34"/>
         <source>Password is required.</source>
-        <translation>Se necesita una contraseña.</translation>
+        <translation>Contraseña obligatoria.</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="37"/>
@@ -179,7 +179,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../createfiledialog.cpp" line="12"/>
         <source>Create Archive</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Crear un archivo</translation>
     </message>
     <message>
         <location filename="../createfiledialog.cpp" line="14"/>
@@ -197,12 +197,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="29"/>
         <source>E&amp;xtract all files</source>
-        <translation>E&amp;xtraer todos los archivos</translation>
+        <translation>Extraer todos los archivos</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="36"/>
         <source>Ex&amp;tract selected files</source>
-        <translation>Ex&amp;traer los archivos seleccionados</translation>
+        <translation>Extraer los archivos seleccionados</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="59"/>
@@ -212,17 +212,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="65"/>
         <source>Re-create folders</source>
-        <translation>Volver a crear carpetas</translation>
+        <translation>Recrear carpetas</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="72"/>
         <source>Overwrite existing files</source>
-        <translation>Sobrescribir los archivos existentes</translation>
+        <translation>Sobrescribir archivos existentes</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="79"/>
         <source>Do not extract older files</source>
-        <translation>No extraer los archivos más viejos</translation>
+        <translation>No extraer archivos antiguos</translation>
     </message>
 </context>
 <context>
@@ -230,7 +230,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extractfiledialog.cpp" line="11"/>
         <source>Extract</source>
-        <translation type="unfinished">Extraer</translation>
+        <translation>Extraer</translation>
     </message>
     <message>
         <location filename="../extractfiledialog.cpp" line="13"/>
@@ -244,7 +244,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../mainwindow.ui" line="14"/>
         <location filename="../mainwindow.cpp" line="322"/>
         <source>File Archiver</source>
-        <translation>Archivador</translation>
+        <translation>Compresor de archivos</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="62"/>
@@ -274,7 +274,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="150"/>
         <source>&amp;Help</source>
-        <translation>Ay&amp;uda</translation>
+        <translation>&amp;Ayuda</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="161"/>
@@ -599,17 +599,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="365"/>
         <source>Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="395"/>
         <source>Add Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Agregar Archivos</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="428"/>
         <source>Add Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir Carpeta</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1008"/>
@@ -629,7 +629,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="1033"/>
         <source>Link to</source>
-        <translation type="unfinished"></translation>
+        <translation>Vincular</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1072"/>
@@ -692,7 +692,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../passworddialog.ui" line="61"/>
         <source>&lt;i&gt;&lt;b&gt;Note:&lt;/b&gt; the password will be used to encrypt files you add to the current archive, and to decrypt files you extract from the current archive. When the archive is closed the password will be deleted.&lt;/i&gt;</source>
-        <translation>&lt;i&gt;&lt;b&gt;Nota:&lt;/b&gt; la contraseña se usa para cifrar los archivos que añada al archivo comprimido actual y para descifrar los archivos que extraiga de él. Al cerrar el archivo comprimido, la contraseña se borra.&lt;/i&gt;</translation>
+        <translation>&lt;i&gt;&lt;b&gt;Nota:&lt;/b&gt; La contraseña se utilizará para cifrar los archivos que añada al archivo actual, y para descifrar los archivos que extraiga del archivo actual. Cuando el archivo se cierre, la contraseña se eliminará.&lt;/i&gt;</translation>
     </message>
 </context>
 <context>
@@ -901,22 +901,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="48"/>
         <source>Deleting files from archive</source>
-        <translation>Borrando archivos del archivo comprimido</translation>
+        <translation>Borrando archivos del archivador</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="50"/>
         <source>Recompressing archive</source>
-        <translation>Recomprimiendo el archivo comprimido</translation>
+        <translation>Recomprimiendo el archivo</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="51"/>
         <source>Decompressing archive</source>
-        <translation>Descomprimiendo el archivo comprimido</translation>
+        <translation>Descomprimiendo el archivo</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="54"/>
         <source>File not found.</source>
-        <translation>No se encuentra el archivo.</translation>
+        <translation>Archivo no encontrado.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="55"/>
@@ -926,17 +926,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="56"/>
         <source>Archive not found</source>
-        <translation>No se encuentra el archivo comprimido</translation>
+        <translation>Archivo no encontrado</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="57"/>
         <source>You don&apos;t have the right permissions.</source>
-        <translation>No tiene los permisos necesarios.</translation>
+        <translation>Usted tiene permisos insuficientes.</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="58"/>
         <source>This archive type cannot be modified</source>
-        <translation>Este tipo de archivo comprimido no se puede modificar</translation>
+        <translation>Este tipo de archivo no es modificable</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="59"/>
@@ -946,7 +946,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="65"/>
         <source>Could not find the volume: %s</source>
-        <translation>No se encuentra el volumen: %s</translation>
+        <translation>Volumen no encontrado: %s</translation>
     </message>
 </context>
 </TS>
