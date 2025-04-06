@@ -1,3 +1,13 @@
+lxqt-archiver-1.2.0 / 2025-04-17
+===================================
+ * Building is done with 7zip by default.
+ * Use 7z to open rar archives.
+ * Show password prompt with list-protected 7z archives.
+ * Added dedicated support for bsdtar.
+ * Show targets of link items.
+ * Added some menu bar icons.
+ * Added window titles to dialogs.
+
 lxqt-archiver-1.1.0 / 2024-11-05
 ===================================
  * Added `application/vnd.rar` to the supported mime types.
