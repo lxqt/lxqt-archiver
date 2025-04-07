@@ -180,7 +180,7 @@ Free Software Foundation, Inc.,
     <message>
         <location filename="../createfiledialog.cpp" line="12"/>
         <source>Create Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Arşiv Oluştur</translation>
     </message>
     <message>
         <location filename="../createfiledialog.cpp" line="14"/>
@@ -231,7 +231,7 @@ Free Software Foundation, Inc.,
     <message>
         <location filename="../extractfiledialog.cpp" line="11"/>
         <source>Extract</source>
-        <translation type="unfinished">Çıkart</translation>
+        <translation>Çıkart</translation>
     </message>
     <message>
         <location filename="../extractfiledialog.cpp" line="13"/>
@@ -600,17 +600,17 @@ Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.cpp" line="365"/>
         <source>Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Aç</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="395"/>
         <source>Add Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya Ekle</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="428"/>
         <source>Add Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Dizin Ekle</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1008"/>
