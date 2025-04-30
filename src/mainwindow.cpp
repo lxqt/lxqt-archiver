@@ -658,13 +658,13 @@ void MainWindow::onDragStarted() {
             mimeData->setUrls(urlList);
             drag->setMimeData(mimeData);
             if(files.empty()) { // all files are already extracted
-                if(drag->exec(Qt::CopyAction) == Qt::IgnoreAction) {
+                if(drag->exec(Qt::CopyAction) == Qt::IgnoreAction && drag) {
                     drag->deleteLater();
                 }
             }
             else { // wait until all files are extracted
                 connect(archiver_.get(), &Archiver::finish, drag, [drag]() {
-                    if(drag->exec(Qt::CopyAction) == Qt::IgnoreAction) {
+                    if(drag->exec(Qt::CopyAction) == Qt::IgnoreAction && drag) {
                         drag->deleteLater();
                     }
                 });
