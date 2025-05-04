@@ -505,7 +505,7 @@ void MainWindow::on_actionExtract_triggered(bool /*checked*/) {
             archiver_->extractAll(dirUrl.toEncoded().constData(),
                                   dlg.skipOlder(),
                                   dlg.overwrite(),
-                                  dlg.reCreateFolders(),
+                                  !dlg.reCreateFolders(),
                                   password_.empty() ? nullptr : password_.c_str());
         }
         else {
@@ -521,7 +521,7 @@ void MainWindow::on_actionExtract_triggered(bool /*checked*/) {
                                     currentDirPath_.c_str(),
                                     dlg.skipOlder(),
                                     dlg.overwrite(),
-                                    dlg.reCreateFolders(),
+                                    !dlg.reCreateFolders(),
                                     password_.empty() ? nullptr : password_.c_str()
             );
         }

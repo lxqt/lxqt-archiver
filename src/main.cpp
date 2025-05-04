@@ -142,7 +142,7 @@ static int runApp(QApplication& app) {
 
     bool extractSkipOlder = false;
     bool extractOverwrite = false;
-    bool extractReCreateFolders = false;
+    bool extractReCreateFolders = true; // recreate folders by default
 
     if(extract_to != nullptr) {
         extract_to_uri = get_uri_from_command_line(extract_to);
@@ -310,7 +310,7 @@ static int runApp(QApplication& app) {
                     if(extract_here) {
                         archiver.extractHere(extractSkipOlder,
                                              extractOverwrite,
-                                             extractReCreateFolders,
+                                             !extractReCreateFolders,
                                              password_.empty() ? nullptr : password_.c_str());
                     }
                     else {
@@ -318,7 +318,7 @@ static int runApp(QApplication& app) {
                         archiver.extractAll(extract_to_uri,
                                             extractSkipOlder,
                                             extractOverwrite,
-                                            extractReCreateFolders,
+                                            !extractReCreateFolders,
                                             password_.empty() ? nullptr : password_.c_str());
                     }
                     break;
