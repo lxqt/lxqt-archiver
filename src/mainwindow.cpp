@@ -743,6 +743,9 @@ void MainWindow::on_actionReload_triggered(bool /*checked*/) {
             QDir(tempDir_).removeRecursively();
         }
         password_.clear();
+        if(auto label = ui_->statusBar->findChild<QLabel*>()) {
+            label->clear();
+        }
         archiver_->reloadArchive(nullptr);
     }
 }
