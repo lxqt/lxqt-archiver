@@ -232,7 +232,7 @@ MA 02110, USA.</translation>
     <message>
         <location filename="../extractfiledialog.cpp" line="11"/>
         <source>Extract</source>
-        <translation type="unfinished">Entpacken</translation>
+        <translation>Entpacken</translation>
     </message>
     <message>
         <location filename="../extractfiledialog.cpp" line="13"/>
@@ -631,7 +631,7 @@ MA 02110, USA.</translation>
     <message>
         <location filename="../mainwindow.cpp" line="1033"/>
         <source>Link to</source>
-        <translation type="unfinished"></translation>
+        <translation>Link zu</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1072"/>
