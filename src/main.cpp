@@ -285,6 +285,23 @@ static int runApp(QApplication& app) {
             archiver.openArchive(archive_uri.get(), nullptr);
             std::string password_;
 
+            /* NOTE:
+               7z creates an empty or incomplete file with RAR archives when a wrong
+               password is given. After that, it cannot extract the archive with the correct
+               password either when "extractOverwrite" is "false".
+
+               As a workaround, we use Archiver::extractHere with RAR when the command-line option
+               "extract-to" is given and the extraction directory is the archive folder, because
+               that function removes incomplete files immediately after 7z creates them. */
+            bool rarWorkaround = false;
+            if(extract_to && extract_to_uri) {
+                auto path = Fm::FilePath::fromPathStr(extract_to_uri);
+                if(path.isParentOf(Fm::FilePath::fromPathStr(archive_uri.get()))) {
+                    rarWorkaround = g_strcmp0(Fm::MimeType::guessFromFileName(archive_uri.get())->name(),
+                                              "application/vnd.rar") == 0;
+                }
+            }
+
             // we can only start archive extraction after its content is fully loaded
             QObject::connect(&archiver, &Archiver::finish, &dlg, [&](FrAction action, ArchiverError err) {
                 if(err.hasError()) {
@@ -302,12 +319,12 @@ static int runApp(QApplication& app) {
                     return;
                 }
                 switch(action) {
-                case FR_ACTION_LISTING_CONTENT: {            /* loading the archive from a remote location */
+                case FR_ACTION_LISTING_CONTENT: {
                     if(archiver.isEncrypted() && password_.empty()) {
                         password_ = PasswordDialog::askPassword().toStdString();
                     }
 
-                    if(extract_here) {
+                    if(extract_here || (archiver.isEncrypted() && rarWorkaround)) {
                         archiver.extractHere(extractSkipOlder,
                                              extractOverwrite,
                                              !extractReCreateFolders,
