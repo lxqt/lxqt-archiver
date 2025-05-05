@@ -70,6 +70,7 @@ QString PasswordDialog::askPasswordAndOverwrite(bool& overwrite, QWidget* parent
     dlg.setWindowTitle(tr("Password"));
     QLabel *label = new QLabel(tr("Password:"));
     QLineEdit *le = new QLineEdit();
+    le->setEchoMode(QLineEdit::Password);
     QCheckBox *check = new QCheckBox(tr("Overwrite existing files"));
     QDialogButtonBox *btns = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     QObject::connect(btns, &QDialogButtonBox::accepted, &dlg, &QDialog::accept);
