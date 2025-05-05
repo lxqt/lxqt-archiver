@@ -69,6 +69,12 @@ MainWindow::MainWindow(QWidget* parent):
 
     loadSettings();
 
+    // use a label instead of QStatusBar::showMessage to make messages permanent
+    QLabel* label = new QLabel();
+    label->setFocusPolicy(Qt::NoFocus);
+    label->setContentsMargins(4, 0, 4, 0);
+    ui_->statusBar->addWidget(label);
+
     // create a progress bar in the status bar
     progressBar_ = new QProgressBar{ui_->statusBar};
     ui_->statusBar->addPermanentWidget(progressBar_);
@@ -737,6 +743,9 @@ void MainWindow::on_actionReload_triggered(bool /*checked*/) {
             QDir(tempDir_).removeRecursively();
         }
         password_.clear();
+        if(auto label = ui_->statusBar->findChild<QLabel*>()) {
+            label->clear();
+        }
         archiver_->reloadArchive(nullptr);
     }
 }
@@ -966,6 +975,9 @@ void MainWindow::onActionFinished(FrAction action, ArchiverError err) {
             }
             Fm::FileLauncher().launchPaths(this, std::move(paths));
         }
+        else {
+            password_.clear(); // the password may have been wrong
+        }
         launchPaths_.clear();
         break;
     case FR_ACTION_COPYING_FILES_TO_REMOTE:    /* copying extracted files to a remote location */
@@ -982,7 +994,9 @@ void MainWindow::onActionFinished(FrAction action, ArchiverError err) {
 }
 
 void MainWindow::onMessage(QString message) {
-    ui_->statusBar->showMessage(message);
+    if(auto label = ui_->statusBar->findChild<QLabel*>()) {
+        label->setText(message);
+    }
 }
 
 void MainWindow::onStoppableChanged(bool stoppable) {
@@ -1099,7 +1113,9 @@ void MainWindow::showFileList(const std::vector<const ArchiverItem *> &files) {
 
     proxyModel_->setSourceModel(model);
 
-    ui_->statusBar->showMessage(tr("%n file(s)", "", files.size()));
+    if(auto label = ui_->statusBar->findChild<QLabel*>()) {
+        label->setText(tr("%n file(s)", "", files.size()));
+    }
 
     fitFileViewColumns();
 }

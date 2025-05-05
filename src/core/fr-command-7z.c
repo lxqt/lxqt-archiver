@@ -580,7 +580,8 @@ fr_command_7z_handle_error (FrCommand   *comm,
 			}
 		}
 
-		error->type = FR_PROC_ERROR_NONE; /* when error->status <= 1 */
+		if (error->status <= 1)
+			error->type = FR_PROC_ERROR_NONE;
 	}
 }
 
