@@ -291,7 +291,12 @@ static int runApp(QApplication& app) {
                     if(action == FR_ACTION_LISTING_CONTENT
                        && err.type() == FR_PROC_ERROR_ASK_PASSWORD
                        && password_.empty()) { // encrypted list
-                        password_ = PasswordDialog::askPassword().toStdString();
+                        if(extract_to || extract_here) {
+                            password_ = PasswordDialog::askPasswordAndOverwrite(extractOverwrite).toStdString();
+                        }
+                        else {
+                            password_ = PasswordDialog::askPassword().toStdString();
+                        }
                         if(!password_.empty()) {
                             archiver.reloadArchive(password_.c_str());
                             return;
@@ -304,7 +309,12 @@ static int runApp(QApplication& app) {
                 switch(action) {
                 case FR_ACTION_LISTING_CONTENT: {            /* loading the archive from a remote location */
                     if(archiver.isEncrypted() && password_.empty()) {
-                        password_ = PasswordDialog::askPassword().toStdString();
+                        if(extract_to || extract_here) {
+                            password_ = PasswordDialog::askPasswordAndOverwrite(extractOverwrite).toStdString();
+                        }
+                        else {
+                            password_ = PasswordDialog::askPassword().toStdString();
+                        }
                     }
 
                     if(extract_here) {

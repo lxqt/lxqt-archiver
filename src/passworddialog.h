@@ -36,22 +36,23 @@ class PasswordDialog : public QDialog {
 public:
 
     PasswordDialog(QWidget* parent = nullptr);
-    
+
     ~PasswordDialog();
 
     QString password() const;
 
     void setPassword(const QString& password);
-    
+
     void setEncryptFileList(bool value);
 
     bool encryptFileList() const;
 
     static QString askPassword(QWidget* parent = nullptr);
+    static QString askPasswordAndOverwrite(bool& overwrite, QWidget* parent = nullptr);
 
 private Q_SLOTS:
     void onTogglePassword(bool toggled);
-    
+
 private:
     std::unique_ptr<Ui::PasswordDialog> ui_;
 };

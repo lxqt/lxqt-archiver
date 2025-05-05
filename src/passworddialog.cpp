@@ -60,3 +60,38 @@ QString PasswordDialog::askPassword(QWidget* parent) {
     return QInputDialog::getText(parent, tr("Password"), tr("Password:"), QLineEdit::Password);
 }
 
+// static
+// NOTE: This password dialog is made especially for RAR files without an extraction dialog,
+// because 7z neither extracts them nor shows any error when there are empty or incomplete
+// extracted files, but the extraction will succeed with a correct password if files are
+// overwritten. However, it can be used anywhere no extraction dialog is shown.
+QString PasswordDialog::askPasswordAndOverwrite(bool& overwrite, QWidget* parent) {
+    QDialog dlg(parent);
+    dlg.setWindowTitle(tr("Password"));
+    QLabel *label = new QLabel(tr("Password:"));
+    QLineEdit *le = new QLineEdit();
+    QCheckBox *check = new QCheckBox(tr("Overwrite existing files"));
+    QDialogButtonBox *btns = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+    QObject::connect(btns, &QDialogButtonBox::accepted, &dlg, &QDialog::accept);
+    QObject::connect(btns, &QDialogButtonBox::rejected, &dlg, &QDialog::reject);
+    QVBoxLayout *layout = new QVBoxLayout;
+    layout->addWidget(label);
+    layout->addWidget(le);
+    layout->addWidget(check);
+    layout->addWidget(btns);
+    dlg.setLayout(layout);
+    dlg.setMaximumHeight(dlg.minimumSizeHint().height()); // no vertical resizing
+    le->setFocus(); // needed with Qt >= 6.6.1
+
+    QString psswrd;
+    switch (dlg.exec()) {
+    case QDialog::Accepted:
+        psswrd = le->text();
+        overwrite = check->isChecked();
+        break;
+    default:
+        break;
+    }
+
+    return psswrd;
+}
