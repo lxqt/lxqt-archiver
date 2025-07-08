@@ -374,6 +374,8 @@ fr_command_cfile_extract (FrCommand  *comm,
 
 	/* uncompress the file */
 
+	uncompr_file = remove_extension_from_path (temp_file);
+
 	if (is_mime_type (comm->mime_type, "application/gzip")) {
 		fr_process_begin_command (comm->process, "gzip");
 		fr_process_add_arg (comm->process, "-f");
@@ -456,8 +458,6 @@ fr_command_cfile_extract (FrCommand  *comm,
 	}
 
 	/* copy uncompress file to the dest dir */
-
-	uncompr_file = remove_extension_from_path (temp_file);
 
 	compr_file = get_uncompressed_name_from_archive (comm, comm->filename);
 	if (compr_file == NULL)
