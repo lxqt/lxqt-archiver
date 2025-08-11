@@ -630,7 +630,7 @@ Free Software Foundation, Inc.,
     <message>
         <location filename="../mainwindow.cpp" line="1033"/>
         <source>Link to</source>
-        <translation type="unfinished"></translation>
+        <translation>Bağla</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1072"/>
