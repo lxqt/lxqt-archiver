@@ -464,13 +464,18 @@ void MainWindow::on_actionAddFolder_triggered(bool /*checked*/) {
 }
 
 void MainWindow::on_actionDelete_triggered(bool /*checked*/) {
-    if(QMessageBox::question(this, tr("Confirm"), tr("Are you sure you want to delete selected files?"), QMessageBox::Yes|QMessageBox::No) != QMessageBox::Yes) {
-        return;
-    }
-    //qDebug("delete");
-    auto files = selectedFiles(true);
-    if(!files.empty()) {
-        archiver_->removeFiles(files, FR_COMPRESSION_NORMAL);
+    // to prevent Del shortcut
+    if(ui_->fileListView->selectionModel()->hasSelection())
+    {
+        if(QMessageBox::question(this, tr("Confirm"), tr("Are you sure you want to delete selected files?"),
+                                 QMessageBox::Yes|QMessageBox::No) != QMessageBox::Yes) {
+            return;
+        }
+        //qDebug("delete");
+        auto files = selectedFiles(true);
+        if(!files.empty()) {
+            archiver_->removeFiles(files, FR_COMPRESSION_NORMAL);
+        }
     }
 }
 
@@ -787,6 +792,8 @@ void MainWindow::onFileListContextMenu(const QPoint &pos) {
         QModelIndex idx = selModel->currentIndex();
         auto item = itemFromIndex(idx);
         ui_->actionView->setVisible(item && !item->isDir());
+        ui_->actionDelete->setEnabled(selModel->hasSelection());
+        ui_->actionView->setEnabled(selModel->hasSelection());
     }
     // QAbstractScrollArea and its subclasses map the context menu event to coordinates of the viewport().
     auto globalPos = ui_->fileListView->viewport()->mapToGlobal(pos);
