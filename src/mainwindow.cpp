@@ -731,10 +731,16 @@ void MainWindow::on_actionDirTree_toggled(bool checked) {
 
 void MainWindow::on_actionDirTreeMode_toggled(bool /*checked*/) {
     setViewMode(ViewMode::DirTree);
+    // Reset:
+    ui_->actionDelete->setEnabled(false);
+    ui_->actionView->setEnabled(false);
 }
 
 void MainWindow::on_actionFlatListMode_toggled(bool /*checked*/) {
     setViewMode(ViewMode::FlatList);
+    // Reset:
+    ui_->actionDelete->setEnabled(false);
+    ui_->actionView->setEnabled(false);
 }
 
 void MainWindow::on_actionReload_triggered(bool /*checked*/) {
@@ -777,17 +783,39 @@ void MainWindow::onDirTreeSelectionChanged(const QItemSelection& /*selected*/, c
         // expand the node as needed
         ui_->dirTreeView->expand(idx);
     }
+
+    // Reset:
+    ui_->actionDelete->setEnabled(false);
+    ui_->actionView->setEnabled(false);
 }
 
 void MainWindow::onFileListSelectionChanged(const QItemSelection& /*selected*/, const QItemSelection& /*deselected*/) {
+    if(archiver_->isLoaded() && !archiver_->isBusy()) {
+        if(auto selModel = ui_->fileListView->selectionModel()) {
+            ui_->actionDelete->setEnabled(selModel->hasSelection());
+            bool hasFile = false;
+            const QModelIndexList indexes = selModel->selectedRows();
+            for(const auto index : indexes) {
+                auto item = itemFromIndex(index);
+                if(item && !item->isDir()) {
+                    hasFile = true;
+                    break;
+                }
+            }
+            ui_->actionView->setEnabled(hasFile);
+        }
+        else {
+            ui_->actionDelete->setEnabled(false);
+            ui_->actionView->setEnabled(false);
+        }
+    }
+    else {
+        ui_->actionDelete->setEnabled(false);
+        ui_->actionView->setEnabled(false);
+    }
 }
 
 void MainWindow::onFileListContextMenu(const QPoint &pos) {
-    if(auto selModel = ui_->fileListView->selectionModel()) {
-        QModelIndex idx = selModel->currentIndex();
-        auto item = itemFromIndex(idx);
-        ui_->actionView->setVisible(item && !item->isDir());
-    }
     // QAbstractScrollArea and its subclasses map the context menu event to coordinates of the viewport().
     auto globalPos = ui_->fileListView->viewport()->mapToGlobal(pos);
     popupMenu_->popup(globalPos);
@@ -1185,9 +1213,11 @@ void MainWindow::updateUiStates() {
 
     ui_->actionAddFiles->setEnabled(canEdit);
     ui_->actionAddFolder->setEnabled(canEdit);
-    ui_->actionDelete->setEnabled(canEdit);
 
     ui_->actionExtract->setEnabled(canEdit);
+
+    // see onFileListSelectionChanged
+    onFileListSelectionChanged(QItemSelection(), QItemSelection());
 }
 
 std::vector<const FileData*> MainWindow::selectedFiles(bool recursive) {

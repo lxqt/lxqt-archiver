@@ -143,6 +143,8 @@
     <addaction name="actionStop"/>
     <addaction name="actionReload"/>
     <addaction name="separator"/>
+    <addaction name="actionView"/>
+    <addaction name="separator"/>
     <addaction name="actionFilter"/>
    </widget>
    <widget class="QMenu" name="menu_Help">
