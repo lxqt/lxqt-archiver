@@ -534,7 +534,7 @@ const ArchiverItem *Archiver::dirByPath(const char *path) const {
     if(dirPath.length() > 1 && dirPath.back() == '/') {
         dirPath.pop_back();
     }
-    auto it = dirMap_.find(path);
+    auto it = dirMap_.find(dirPath);
     return it != dirMap_.end() ? it->second : nullptr;
 }
 
