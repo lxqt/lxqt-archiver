@@ -1375,10 +1375,13 @@ void MainWindow::chdir(const ArchiverItem *dir) {
     auto dirTreeModel = ui_->dirTreeView->model();
     if(dirTreeModel) {
         auto dirTreeIdx = indexFromItem(dirTreeModel->index(0, 0), currentDirItem_);
+        auto selModel = ui_->dirTreeView->selectionModel();
         if(dirTreeIdx.isValid()) {
-            auto selModel = ui_->dirTreeView->selectionModel();
             selModel->select(dirTreeIdx, QItemSelectionModel::Select|QItemSelectionModel::Current);
             ui_->dirTreeView->scrollTo(dirTreeIdx);
+        }
+        else {
+            selModel->clearSelection();
         }
     }
 }
