@@ -368,6 +368,7 @@ int main(int argc, char** argv) {
 
     QApplication app(argc, argv);
     app.setApplicationVersion(QStringLiteral(LXQT_ARCHIVER_VERSION));
+    app.setWindowIcon(QIcon::fromTheme(QStringLiteral("lxqt-archiver")));
     app.setQuitOnLastWindowClosed(true);
 
     // load translations
