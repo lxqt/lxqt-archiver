@@ -48,10 +48,10 @@ mktime_from_string (char *time_s,
 		    char *month_s,
 		    char *year_s)
 {
-	static char  *months[] = { "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-				   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
-	struct tm    tm = {0, };
-	char       **fields;
+	static const char *months[] = { "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+	                                "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
+	struct tm          tm = {0, };
+	char             **fields;
 
 	tm.tm_isdst = -1;
 
@@ -277,9 +277,9 @@ fr_command_ar_handle_error (FrCommand   *comm,
 }
 
 
-const char *ar_mime_type[] = { "application/x-ar", 
-			       "application/x-deb",
-			       NULL };
+const char *ar_mime_type[] = { "application/x-ar",
+                               "application/x-deb",
+                               NULL };
 
 
 static const char **
