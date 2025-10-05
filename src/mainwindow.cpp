@@ -1190,6 +1190,7 @@ void MainWindow::setBusyState(bool busy) {
 void MainWindow::updateUiStates() {
     bool hasArchive = archiver_->isLoaded();
     bool inProgress = archiver_->isBusy();
+    ui_->actionStop->setEnabled(inProgress);
 
     bool canLoad = !hasArchive || !inProgress;
     ui_->actionCreateNew->setEnabled(canLoad);
