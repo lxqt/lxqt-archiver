@@ -179,7 +179,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../createfiledialog.cpp" line="12"/>
         <source>Create Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Vytvořit archiv</translation>
     </message>
     <message>
         <location filename="../createfiledialog.cpp" line="14"/>
@@ -202,7 +202,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="36"/>
         <source>Ex&amp;tract selected files</source>
-        <translation>Vybali&amp;t označené soubory</translation>
+        <translation>Rozbali&amp;t označené soubory</translation>
     </message>
     <message>
         <location filename="../extract.ui" line="59"/>
@@ -222,7 +222,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extract.ui" line="79"/>
         <source>Do not extract older files</source>
-        <translation>Nevybalovat soubory, které jsou starší než ty už přítomné</translation>
+        <translation>Nerozbalovat soubory, které jsou starší než ty už přítomné</translation>
     </message>
 </context>
 <context>
@@ -230,7 +230,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../extractfiledialog.cpp" line="11"/>
         <source>Extract</source>
-        <translation type="unfinished">Rozbalit</translation>
+        <translation>Rozbalit</translation>
     </message>
     <message>
         <location filename="../extractfiledialog.cpp" line="13"/>
@@ -599,17 +599,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="365"/>
         <source>Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Otevřít</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="395"/>
         <source>Add Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Přidat soubory</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="428"/>
         <source>Add Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Přidat složku</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1008"/>
@@ -629,7 +629,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.cpp" line="1033"/>
         <source>Link to</source>
-        <translation type="unfinished"></translation>
+        <translation>Odkaz na</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1072"/>
@@ -886,7 +886,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="64"/>
         <location filename="../main.cpp" line="282"/>
         <source>Extracting file: </source>
-        <translation>Vybalování souboru: </translation>
+        <translation>Rozbalování souboru: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="43"/>
