@@ -661,8 +661,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <translation>
             <numerusform>קובץ אחד</numerusform>
             <numerusform>שני קבצים</numerusform>
-            <numerusform>%n קבצים</numerusform>
-            <numerusform>%n קבצים</numerusform>
         </translation>
     </message>
 </context>
