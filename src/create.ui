@@ -92,16 +92,6 @@
    <signal>toggled(bool)</signal>
    <receiver>volumeSize</receiver>
    <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>82</x>
-     <y>84</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>231</x>
-     <y>100</y>
-    </hint>
-   </hints>
   </connection>
  </connections>
 </ui>

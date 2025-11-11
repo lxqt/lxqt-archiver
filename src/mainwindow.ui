@@ -540,48 +540,18 @@
    <signal>triggered()</signal>
    <receiver>MainWindow</receiver>
    <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>347</x>
-     <y>252</y>
-    </hint>
-   </hints>
   </connection>
   <connection>
    <sender>actionStatusbar</sender>
    <signal>toggled(bool)</signal>
    <receiver>statusBar</receiver>
    <slot>setVisible(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>347</x>
-     <y>492</y>
-    </hint>
-   </hints>
   </connection>
   <connection>
    <sender>actionToolbar</sender>
    <signal>toggled(bool)</signal>
    <receiver>toolBar</receiver>
    <slot>setVisible(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>347</x>
-     <y>49</y>
-    </hint>
-   </hints>
   </connection>
  </connections>
 </ui>
