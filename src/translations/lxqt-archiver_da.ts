@@ -179,7 +179,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</
     <message>
         <location filename="../createfiledialog.cpp" line="12"/>
         <source>Create Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Opret Arkiv</translation>
     </message>
     <message>
         <location filename="../createfiledialog.cpp" line="14"/>
@@ -230,7 +230,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</
     <message>
         <location filename="../extractfiledialog.cpp" line="11"/>
         <source>Extract</source>
-        <translation type="unfinished">Pak ud</translation>
+        <translation>Pak ud</translation>
     </message>
     <message>
         <location filename="../extractfiledialog.cpp" line="13"/>
@@ -599,17 +599,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</
     <message>
         <location filename="../mainwindow.cpp" line="371"/>
         <source>Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Åben</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="401"/>
         <source>Add Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Tilføj Filer</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="434"/>
         <source>Add Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Tilføj Folder</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1050"/>
@@ -629,7 +629,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</
     <message>
         <location filename="../mainwindow.cpp" line="1075"/>
         <source>Link to</source>
-        <translation type="unfinished"></translation>
+        <translation>Lænke til</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1114"/>
