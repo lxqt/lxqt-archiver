@@ -2913,7 +2913,7 @@ compute_base_path (const char *base_dir,
 	int         base_dir_len = strlen (base_dir);
 	int         path_len = strlen (path);
 	const char *base_path;
-	char       *name_end;
+	const char *name_end;
 	char       *new_path;
 
 	if (junk_paths) {
