@@ -22,7 +22,8 @@
         <location filename="../about.ui" line="67"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/lxqt/lxqt-archiver&quot;&gt;https://github.com/lxqt/lxqt-archiver&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/lxqt/lxqt-archiver&quot;&gt;https://github.com/lxqt/lxqt-archiver&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+</translation>
     </message>
     <message>
         <location filename="../about.ui" line="91"/>
@@ -177,7 +178,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../createfiledialog.cpp" line="12"/>
         <source>Create Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Archívum létrehozása</translation>
     </message>
     <message>
         <location filename="../createfiledialog.cpp" line="14"/>
@@ -228,7 +229,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../extractfiledialog.cpp" line="11"/>
         <source>Extract</source>
-        <translation type="unfinished">Kibontás</translation>
+        <translation>Kibontás</translation>
     </message>
     <message>
         <location filename="../extractfiledialog.cpp" line="13"/>
@@ -312,7 +313,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="226"/>
         <source>Ctrl+Shift+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="231"/>
@@ -327,7 +328,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="239"/>
         <source>Ctrl+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+T</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="251"/>
@@ -458,7 +459,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="411"/>
         <source>Ctrl+Shift+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+D</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="419"/>
@@ -468,7 +469,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="422"/>
         <source>Ctrl+Shift+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+A</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="431"/>
@@ -513,12 +514,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="475"/>
         <source>Ctrl+Shift+E</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+E</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="486"/>
         <source>Ctrl+Shift+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+C</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="483"/>
@@ -528,22 +529,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.ui" line="494"/>
         <source>16 px</source>
-        <translation type="unfinished"></translation>
+        <translation>16 px</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="502"/>
         <source>24 px</source>
-        <translation type="unfinished"></translation>
+        <translation>24 px</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="510"/>
         <source>32 px</source>
-        <translation type="unfinished"></translation>
+        <translation>32 px</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="518"/>
         <source>48 px</source>
-        <translation type="unfinished"></translation>
+        <translation>48 px</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="373"/>
@@ -597,17 +598,17 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.cpp" line="371"/>
         <source>Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Megnyitás</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="401"/>
         <source>Add Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Fájlok hozzáadása</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="434"/>
         <source>Add Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Mappa hozzáadása</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1050"/>
@@ -627,7 +628,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA c
     <message>
         <location filename="../mainwindow.cpp" line="1075"/>
         <source>Link to</source>
-        <translation type="unfinished"></translation>
+        <translation>Hivatkozás erre:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1114"/>

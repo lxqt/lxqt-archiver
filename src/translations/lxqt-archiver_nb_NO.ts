@@ -179,7 +179,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../createfiledialog.cpp" line="12"/>
         <source>Create Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Opprett arkiv</translation>
     </message>
     <message>
         <location filename="../createfiledialog.cpp" line="14"/>
@@ -230,7 +230,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../extractfiledialog.cpp" line="11"/>
         <source>Extract</source>
-        <translation type="unfinished">Pakk ut</translation>
+        <translation>Pakk ut</translation>
     </message>
     <message>
         <location filename="../extractfiledialog.cpp" line="13"/>
@@ -244,12 +244,12 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
         <location filename="../mainwindow.ui" line="14"/>
         <location filename="../mainwindow.cpp" line="328"/>
         <source>File Archiver</source>
-        <translation>Arkivhåndterer</translation>
+        <translation>Filarkivering</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="62"/>
         <source>Filter Files...</source>
-        <translation>Filrer filer...</translation>
+        <translation>Filtrer filer...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="86"/>
@@ -599,17 +599,17 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../mainwindow.cpp" line="371"/>
         <source>Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Åpne</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="401"/>
         <source>Add Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Legg til filer</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="434"/>
         <source>Add Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Legg til mappe</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1050"/>
@@ -629,7 +629,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.</translation
     <message>
         <location filename="../mainwindow.cpp" line="1075"/>
         <source>Link to</source>
-        <translation type="unfinished"></translation>
+        <translation>Lenk til</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1114"/>
