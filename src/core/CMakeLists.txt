@@ -4,6 +4,9 @@ include_directories(
     ${CMAKE_BINARY_DIR}
 )
 
+# We use GNU extensions
+set(CMAKE_C_EXTENSIONS ON)
+
 add_library(lxqt-archiver-core STATIC
     tr-wrapper.c  # our own wrapper for QTranslater
     file-data.c
