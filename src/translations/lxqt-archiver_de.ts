@@ -522,7 +522,7 @@ MA 02110, USA.</translation>
     <message>
         <location filename="../mainwindow.ui" line="486"/>
         <source>Ctrl+Shift+C</source>
-        <translation>Strg+Shift+C</translation>
+        <translation>Strg+Umschalt+C</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="483"/>
