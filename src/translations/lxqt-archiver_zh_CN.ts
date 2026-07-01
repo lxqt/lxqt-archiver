@@ -50,7 +50,7 @@ LXQt Archiver 派生自以下程序:
     <message>
         <location filename="../about.ui" line="117"/>
         <source>License</source>
-        <translation>许可</translation>
+        <translation>协议</translation>
     </message>
     <message>
         <location filename="../about.ui" line="126"/>

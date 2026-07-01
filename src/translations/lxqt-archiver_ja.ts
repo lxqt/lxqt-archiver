@@ -6,7 +6,7 @@
     <message>
         <location filename="../about.ui" line="14"/>
         <source>About</source>
-        <translation>このアプリケーションについて</translation>
+        <translation>About</translation>
     </message>
     <message>
         <location filename="../about.ui" line="34"/>
@@ -28,7 +28,7 @@
     <message>
         <location filename="../about.ui" line="91"/>
         <source>Authors</source>
-        <translation>作者</translation>
+        <translation>開発者</translation>
     </message>
     <message>
         <location filename="../about.ui" line="100"/>
@@ -105,7 +105,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archiver.cpp" line="314"/>
         <source>All supported formats</source>
-        <translation>サポートしている全てのフォーマット</translation>
+        <translation>サポートされているすべての形式</translation>
     </message>
 </context>
 <context>
@@ -143,7 +143,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../archivererror.cpp" line="43"/>
         <source>Unsupported file format.</source>
-        <translation>サポートしていないフォーマットです。</translation>
+        <translation>サポートされていないファイル形式です。</translation>
     </message>
     <message>
         <location filename="../archivererror.cpp" line="46"/>
@@ -161,7 +161,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../create.ui" line="36"/>
         <source>Split into volumes of</source>
-        <translation>分割する容量</translation>
+        <translation>次のボリュームに分割</translation>
     </message>
     <message>
         <location filename="../create.ui" line="43"/>
@@ -171,7 +171,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../create.ui" line="50"/>
         <source>Encrypt the file list too</source>
-        <translation>ファイルの一覧も暗号化する</translation>
+        <translation>ファイルリストも暗号化する</translation>
     </message>
 </context>
 <context>
@@ -385,7 +385,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="307"/>
         <source>&amp;Rename</source>
-        <translation>名前の変更(&amp;R)</translation>
+        <translation>名前を変更(&amp;R)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="310"/>
@@ -426,12 +426,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../mainwindow.ui" line="350"/>
         <source>&amp;Add Files</source>
-        <translation>ファイルの追加(&amp;A)</translation>
+        <translation>ファイルを追加(&amp;A)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="355"/>
         <source>Add F&amp;older</source>
-        <translation>フォルダーの追加(&amp;O)</translation>
+        <translation>フォルダーを追加(&amp;O)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="364"/>
@@ -676,7 +676,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../passworddialog.ui" line="20"/>
         <source>Encrypt the file list</source>
-        <translation>ファイルの一覧を暗号化する</translation>
+        <translation>ファイルリストを暗号化する</translation>
     </message>
     <message>
         <location filename="../passworddialog.ui" line="34"/>
@@ -824,7 +824,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
     <message>
         <location filename="../corestrs.h" line="27"/>
         <source>Windows Imaging Format (.wim)</source>
-        <translation>Windows イメージング フォーマット (.wim)</translation>
+        <translation>Windows イメージング形式 (.wim)</translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="28"/>
@@ -877,7 +877,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
         <location filename="../corestrs.h" line="62"/>
         <location filename="../main.cpp" line="240"/>
         <source>Adding file: </source>
-        <translation>ファイルの追加: </translation>
+        <translation>ファイルを追加中: </translation>
     </message>
     <message>
         <location filename="../corestrs.h" line="40"/>
