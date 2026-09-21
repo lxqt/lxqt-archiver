@@ -6,7 +6,7 @@
     <message>
         <location filename="../about.ui" line="14"/>
         <source>About</source>
-        <translation>Sobre</translation>
+        <translation>Acerca</translation>
     </message>
     <message>
         <location filename="../about.ui" line="34"/>
@@ -28,7 +28,7 @@
     <message>
         <location filename="../about.ui" line="91"/>
         <source>Authors</source>
-        <translation>Autores/Autoras</translation>
+        <translation>Autores</translation>
     </message>
     <message>
         <location filename="../about.ui" line="100"/>

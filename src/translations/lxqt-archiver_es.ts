@@ -28,7 +28,7 @@
     <message>
         <location filename="../about.ui" line="91"/>
         <source>Authors</source>
-        <translation>Desarrolladores</translation>
+        <translation>Autores</translation>
     </message>
     <message>
         <location filename="../about.ui" line="100"/>
